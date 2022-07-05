@@ -1,0 +1,130 @@
+.footer {
+  background-color: #f1ebe2;
+}
+.footer__container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  padding: 121px 234px 123px 92px;
+}
+.footer__contacts {
+  display: block;
+}
+.footer__logo {
+  width: 123px;
+  height: 60px;
+  margin-bottom: 20px;
+}
+.footer__tel {
+  height: 37px;
+  margin-bottom: 15px;
+  font-weight: 400;
+  font-size: 23px;
+}
+.footer__copy {
+  height: 19px;
+  margin-bottom: 32px;
+  font-weight: 400;
+  font-size: 12px;
+  color: rgba(51, 51, 51, 0.7);
+}
+.footer__social-link {
+  display: flex;
+  gap: 20px;
+}
+.footer__link {
+  width: 32px;
+  height: 32px;
+  opacity: 0.5;
+}
+.footer__nav {
+  display: flex;
+  justify-content: space-between;
+}
+.footer__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.7);
+}
+.footer__item-title {
+  font-weight: 700;
+  font-size: 16px;
+  padding-bottom: 6px;
+  text-transform: uppercase;
+  color: #333333;
+}
+.footer__click-list {
+  display: none;
+  flex-direction: column;
+  gap: 20px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.7);
+}
+.footer__click-title {
+  font-weight: 700;
+  font-size: 16px;
+  padding-bottom: 6px;
+  text-transform: uppercase;
+  color: #333333;
+}
+.footer .show {
+  display: flex;
+}
+
+@media (max-width: 1150px) {
+  .footer__container {
+    max-width: 1024px;
+    display: flex;
+    padding: 121px 124px 123px 40px;
+  }
+  .footer__contacts {
+    margin-right: 42px;
+  }
+  .footer__list:first-child {
+    margin-right: 98px;
+  }
+  .footer__list:last-child {
+    margin-left: 26px;
+  }
+}
+@media (max-width: 950px) {
+  .footer__container {
+    max-width: 768px;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 50px;
+    align-items: center;
+    padding: 60px 0px;
+  }
+  .footer__contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer__nav {
+    flex-direction: column;
+    gap: 25px;
+  }
+  .footer__item {
+    display: none;
+  }
+  .footer__click-list {
+    display: flex;
+  }
+  .footer__contacts {
+    margin: 0;
+  }
+  .footer__list:first-child {
+    margin: 0;
+  }
+  .footer__list:last-child {
+    margin: 0;
+  }
+}

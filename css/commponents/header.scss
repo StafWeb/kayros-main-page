@@ -1,0 +1,102 @@
+.header {
+  position: relative;
+  min-height: 100vh;
+  &__background {
+    position: absolute;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    padding: 27px 90px;
+  }
+  &__start {
+    display: flex;
+    gap: 38px;
+    align-items: center;
+  }
+  &__logo {
+    width: 92px;
+    height: 45px;
+  }
+  &__list {
+    display: flex;
+    gap: 35px;
+    color: white;
+  }
+  &__end {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+  }
+  &__search {
+    display: grid;
+    position: relative;
+    min-width: 219px;
+    min-height: 34px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 2px;
+    input {
+      width: 100%;
+      height: 100%;
+    }
+    &::before {
+      position: absolute;
+      content: "";
+      right: 5%;
+      top: 30%;
+      width: 16px;
+      height: 16px;
+      background: url(../../images/search.svg) no-repeat center / cover;
+      z-index: 1;
+    }
+  }
+  &__buyer {
+    width: 20px;
+    height: 20px;
+  }
+ 
+  &__burger {
+    width: 18px;
+    height: 16px;
+    margin-left: 47px;
+  }
+}
+
+@media (max-width: 1035px) {
+  .header__container {
+    padding: 27px 40px;
+  }
+  .header__burger {
+    margin-left: 27px;
+  }
+}
+@media (max-width: 950px) {
+  .header {
+    &__nav,
+    &__search {
+      display: none;
+    }
+    &__end {
+      gap: 25px;
+    }
+    &__buyer {
+      width: 40px;
+      height: 40px;
+    }
+    #user{
+      width: 40px;
+      height: 40px;
+    }
+    &__burger {
+      margin-left: 25px;
+    }
+  }
+}

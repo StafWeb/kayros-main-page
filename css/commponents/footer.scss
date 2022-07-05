@@ -1,0 +1,136 @@
+.footer {
+  background-color: #f1ebe2;
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding: 121px 234px 123px 92px;
+  }
+  &__contacts {
+    display: block;
+  }
+  &__logo {
+    width: 123px;
+    height: 60px;
+    margin-bottom: 20px;
+  }
+  &__tel {
+    height: 37px;
+    margin-bottom: 15px;
+    font-weight: 400;
+    font-size: 23px;
+  }
+  &__copy {
+    height: 19px;
+    margin-bottom: 32px;
+    font-weight: 400;
+    font-size: 12px;
+    color: rgba(51, 51, 51, 0.7);
+  }
+  &__social-link {
+    display: flex;
+    gap: 20px;
+  }
+  &__link {
+    width: 32px;
+    height: 32px;
+    opacity: 0.5;
+  }
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.7);
+  }
+  &__item-title {
+    font-weight: 700;
+    font-size: 16px;
+    padding-bottom: 6px;
+    text-transform: uppercase;
+    color: #333333;
+  }
+  &__click-list{
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.7);
+  }
+  &__click-title {
+    font-weight: 700;
+    font-size: 16px;
+    padding-bottom: 6px;
+    text-transform: uppercase;
+    color: #333333;
+  }
+  .show{
+    display: flex;
+  }
+}
+
+@media (max-width: 1150px) {
+  .footer {
+    &__container {
+      max-width: 1024px;
+      display: flex;
+      padding: 121px 124px 123px 40px;
+    }
+    &__contacts {
+      margin-right: 42px;
+    }
+    &__list:first-child {
+      margin-right: 98px;
+    }
+    &__list:last-child {
+      margin-left: 26px;
+    }
+  }
+}
+
+@media(max-width:950px){
+  .footer {
+    &__container {
+      max-width: 768px;
+      display: flex;
+      flex-direction: column-reverse;
+      gap: 50px;
+      align-items: center;
+      padding: 60px 0px;
+    }
+    &__contacts{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &__nav{
+      flex-direction: column;
+      gap: 25px;
+
+    }
+    &__item{
+      display: none;
+    }
+    &__click-list{
+      display: flex;
+    }
+    &__contacts {
+      margin: 0;
+    }
+    &__list:first-child {
+      margin: 0;
+    }
+    &__list:last-child {
+      margin: 0;
+    }
+  }
+}

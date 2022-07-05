@@ -1,0 +1,9 @@
+@import "reset.css";
+@import "base.css";
+@import "commponents/swiper-bundle.min.css";
+@import "../fonts/fonts.css";
+@import "commponents/header.css";
+@import "commponents/swiper-block.css";
+@import "commponents/cards.css";
+@import "commponents/info.css";
+@import "commponents/footer.css";

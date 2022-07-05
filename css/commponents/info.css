@@ -1,0 +1,113 @@
+.info__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  padding: 115px 90px;
+}
+.info__start {
+  display: grid;
+  gap: 38px;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  font-size: 27px;
+  overflow: hidden;
+  letter-spacing: 0.05em;
+  color: #333333;
+}
+.info__start-text {
+  visibility: hidden;
+  overflow: hidden;
+}
+.info__start-text:first-child {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+.info__start-text:nth-child(2) {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+.info__link {
+  font-family: "Open Sans", serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #b0976e;
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+}
+.info__end {
+  display: grid;
+  gap: 26px;
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 16px;
+  color: #333333;
+  opacity: 0.8;
+  overflow: hidden;
+}
+.info__end-text {
+  visibility: hidden;
+  overflow: hidden;
+}
+.info__end-text:first-child {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+.info__end-text:nth-child(2) {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+.info__end-text:nth-child(3) {
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+}
+.info__end-text:nth-child(4) {
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
+}
+
+.fadeindown {
+  -webkit-animation-name: fadeindown;
+          animation-name: fadeindown;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  visibility: visible;
+}
+
+@-webkit-keyframes fadeindown {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%) scaleY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scaleY(1);
+  }
+}
+
+@keyframes fadeindown {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%) scaleY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scaleY(1);
+  }
+}
+@media (max-width: 1200px) {
+  .info__container {
+    max-width: 1024px;
+    padding: 115px 40px;
+    gap: 40px;
+  }
+}
+@media (max-width: 870px) {
+  .info__container {
+    max-width: 768px;
+    grid-template-columns: 1fr;
+    gap: 50px;
+    padding: 70px 20px;
+  }
+}

@@ -559,6 +559,8 @@
 .cards__list {
   display: flex;
   gap: 19px;
+  overflow: hidden;
+  overflow-x: scroll;
 }
 .cards__list::-webkit-scrollbar {
   width: 0;

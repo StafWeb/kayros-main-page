@@ -73,20 +73,22 @@
           <nav class="header__nav">
             <ul class="header__list">
               <li class="header__item">
-                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle class="logo_end" cx="8.5" cy="8.5" r="1.5" fill="white" />
-                  <circle class="logo_end" cx="8.5" cy="8.5" r="1.5" fill="white" />
-                  <circle class="logo_end" cx="8.5" cy="8.5" r="1.5" fill="white" />
-                  <circle class="logo_end" cx="1.5" cy="8.5" r="1.5" fill="white" />
-                  <circle class="logo_end" cx="1.5" cy="8.5" r="1.5" fill="white" />
-                  <circle class="logo_end" cx="1.5" cy="8.5" r="1.5" fill="white" />
-                  <circle class="logo_end" cx="8.5" cy="1.5" r="1.5" fill="white" />
-                  <circle class="logo_end" cx="8.5" cy="1.5" r="1.5" fill="white" />
-                  <circle class="logo_end" cx="8.5" cy="1.5" r="1.5" fill="white" />
-                  <circle class="logo_end" cx="1.5" cy="1.5" r="1.5" fill="white" />
-                  <circle class="logo_end" cx="1.5" cy="1.5" r="1.5" fill="white" />
-                  <circle class="logo_end" cx="1.5" cy="1.5" r="1.5" fill="white" />
-                </svg>
+                <div class="header__item_img">
+                  <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle class="logo_end" cx="8.5" cy="8.5" r="1.5" fill="white" />
+                    <circle class="logo_end" cx="8.5" cy="8.5" r="1.5" fill="white" />
+                    <circle class="logo_end" cx="8.5" cy="8.5" r="1.5" fill="white" />
+                    <circle class="logo_end" cx="1.5" cy="8.5" r="1.5" fill="white" />
+                    <circle class="logo_end" cx="1.5" cy="8.5" r="1.5" fill="white" />
+                    <circle class="logo_end" cx="1.5" cy="8.5" r="1.5" fill="white" />
+                    <circle class="logo_end" cx="8.5" cy="1.5" r="1.5" fill="white" />
+                    <circle class="logo_end" cx="8.5" cy="1.5" r="1.5" fill="white" />
+                    <circle class="logo_end" cx="8.5" cy="1.5" r="1.5" fill="white" />
+                    <circle class="logo_end" cx="1.5" cy="1.5" r="1.5" fill="white" />
+                    <circle class="logo_end" cx="1.5" cy="1.5" r="1.5" fill="white" />
+                    <circle class="logo_end" cx="1.5" cy="1.5" r="1.5" fill="white" />
+                  </svg>
+                </div>
                 <a class="header__item_link catalog_link" href="#">Каталог</a>
                 <div class="dropdown">
                   <ul class="dropdown__list">
@@ -239,27 +241,81 @@
     </section>
     <section class="offer">
       <div class="container">
-        <div class="offer__title"></div>
+        <h3 class="offer__title">Лучшие предложения</h3>
         <div class="cards">
           <div class="cards__filter">
-            <ul class="offer__filter_list">
-              <li class="offer__filter_item"><a href="#"></a></li>
-              <li class="offer__filter_item"><a href="#"></a></li>
-              <li class="offer__filter_item"><a href="#"></a></li>
-            </ul>
-            <a href="#" class="offer__catalog"></a>
+            <div class="cards__filter_start">
+              <a class="cards__filter_link" href="#">Хит</a>
+              <a class="cards__filter_link" href="#">Новинка</a>
+              <a class="cards__filter_link" href="#">Акция</a>
+            </div>
+            <a href="#" class="cards__filter_link">Весь каталог</a>
           </div>
           <ul class="cards__list">
             <li class="cards__item">
-              <div class="cards__image"></div>
+              <div class="cards__image">
+                <img src="./images/offer-1.png" alt="cards">
+              </div>
               <ul class="cards__list_colors">
-                <li class="offer__list_item"><a href="#"></a></li>
-                <li class="offer__list_item"><a href="#"></a></li>
-                <li class="offer__list_item"><a href="#"></a></li>
-                <li class="offer__list_item"><a href="#"></a></li>
+                <li class="cards__item_color"> <span class="cards__item_color_inner"></span> </li>
+                <li class="cards__item_color"> <span class="cards__item_color_inner"></span> </li>
+                <li class="cards__item_color"> <span class="cards__item_color_inner"></span> </li>
+                <li class="cards__item_color"> <span class="cards__item_color_inner"></span> </li>
               </ul>
-              <span class="cards__descr"></span>
-              <span class="cards__price"></span>
+              <span class="cards__descr">9/1 платье</span>
+              <span class="cards__price">11 000 руб.</span>
+            </li>
+            <li class="cards__item">
+              <div class="cards__image">
+                <img src="./images/offer-1.png" alt="cards">
+              </div>
+              <ul class="cards__list_colors">
+                <li class="cards__item_color"> <span class="cards__item_color_inner"></span> </li>
+                <li class="cards__item_color"> <span class="cards__item_color_inner"></span> </li>
+                <li class="cards__item_color"> <span class="cards__item_color_inner"></span> </li>
+                <li class="cards__item_color"> <span class="cards__item_color_inner"></span> </li>
+              </ul>
+              <span class="cards__descr">9/1 платье</span>
+              <span class="cards__price">11 000 руб.</span>
+            </li>
+            <li class="cards__item">
+              <div class="cards__image">
+                <img src="./images/offer-1.png" alt="cards">
+              </div>
+              <ul class="cards__list_colors">
+                <li class="cards__item_color"> <span class="cards__item_color_inner"></span> </li>
+                <li class="cards__item_color"> <span class="cards__item_color_inner"></span> </li>
+                <li class="cards__item_color"> <span class="cards__item_color_inner"></span> </li>
+                <li class="cards__item_color"> <span class="cards__item_color_inner"></span> </li>
+              </ul>
+              <span class="cards__descr">9/1 платье</span>
+              <span class="cards__price">11 000 руб.</span>
+            </li>
+            <li class="cards__item">
+              <div class="cards__image">
+                <img src="./images/offer-1.png" alt="cards">
+              </div>
+              <ul class="cards__list_colors">
+                <li class="cards__item_color"> <span class="cards__item_color_inner"></span> </li>
+                <li class="cards__item_color"> <span class="cards__item_color_inner"></span> </li>
+                <li class="cards__item_color"> <span class="cards__item_color_inner"></span> </li>
+                <li class="cards__item_color"> <span class="cards__item_color_inner"></span> </li>
+              </ul>
+              <span class="cards__descr">9/1 платье</span>
+              <span class="cards__price">11 000 руб.</span>
+            </li>
+            <li class="cards__item">
+              <div class="cards__image">
+                <img src="./images/offer-1.png" alt="cards">
+              </div>
+              <ul class="cards__list_colors">
+                <li class="cards__item_color"> <span class="cards__item_color_inner"></span> </li>
+                <li class="cards__item_color"> <span class="cards__item_color_inner"></span> </li>
+                <li class="cards__item_color"> <span class="cards__item_color_inner"></span> </li>
+                <li class="cards__item_color"> <span class="cards__item_color_inner"></span> </li>
+              </ul>
+              <span class="cards__descr">9/1 платье</span>
+              <span class="cards__price">11 000 руб.</span>
             </li>
           </ul>
         </div>
@@ -267,34 +323,43 @@
       </div>
     </section>
     <section class="info">
-      <div class="container info__container">
-        <div class="info__start">
-          <p class="info__start-text" data-info>Kayros специализируется на производстве одежды из 100% натурального
-            льна.</p>
-          <p class="info__start-text" data-info>Поэтому выбирая и приобретая для себя наши качественные вещи, Вы можете
-            быть уверены, что дарите своему
-            телу здоровье и комфорт, а себе возможность выглядеть красиво и стильно.</p>
-          <a href="#" class="info__link" data-info>Подробнее о компании</a>
-        </div>
-        <div class="info__end">
-          <p class="info__end-text" data-info>Предлагаем оптовым и розничным покупателям широкий выбор одежды: платья и
-            сарафаны, блузы, жакеты и
-            ветровки, юбки, каприи брюки — повседневные и вечерние модели для женщин и мужчин всех возрастных категорий.
-            Одежда выполнена в модной цветовой гамме и имеет широкий размерный ряд.</p>
-          <p class="info__end-text" data-info>Наша одежда подчеркнет Вашу индивидуальность в любой обстановкеи прекрасно
-            подойдет для работы в офисе,
-            прогулок по городу, вечернего выхода. Вам понравилась наша одежда, и Вы решили приобрести одну модель или
-            партию? Оформите свой заказ в нашем интернет-магазине. Быстро и бесплатно доставляем заказы по всей России.
-          </p>
-          <p class="info__end-text" data-info>Наша одежда подчеркнет Вашу индивидуальность в любой обстановкеи прекрасно
-            подойдет для работы в офисе,
-            прогулок по городу, вечернего выхода. Вам понравилась наша одежда, и Вы решили приобрести одну модель или
-            партию? Оформите свой заказ в нашем интернет-магазине. Быстро и бесплатно доставляем заказы по всей России.
-          </p>
-          <p class="info__end-text" data-info>Уточнить условия оформления и доставки заказов через интернет-магазин, а
-            также получить ответы на вопросыпо
-            поводу планируемого заказа, можно по Email:​zakaz@kayrosxl.ruили позвонить по телефону лини поддержки:
-            8-800-222-37-07.</p>
+      <div class="container">
+        <div class="info__wrapper">
+          <div class="info__start">
+            <p class="info__start-text" data-info>Kayros специализируется на производстве одежды из 100% натурального
+              льна.</p>
+            <p class="info__start-text" data-info>Поэтому выбирая и приобретая для себя наши качественные вещи, Вы
+              можете
+              быть уверены, что дарите своему
+              телу здоровье и комфорт, а себе возможность выглядеть красиво и стильно.</p>
+            <a href="#" class="info__link" data-info>Подробнее о компании</a>
+          </div>
+          <div class="info__end">
+            <p class="info__end-text" data-info>Предлагаем оптовым и розничным покупателям широкий выбор одежды: платья
+              и
+              сарафаны, блузы, жакеты и
+              ветровки, юбки, каприи брюки — повседневные и вечерние модели для женщин и мужчин всех возрастных
+              категорий.
+              Одежда выполнена в модной цветовой гамме и имеет широкий размерный ряд.</p>
+            <p class="info__end-text" data-info>Наша одежда подчеркнет Вашу индивидуальность в любой обстановкеи
+              прекрасно
+              подойдет для работы в офисе,
+              прогулок по городу, вечернего выхода. Вам понравилась наша одежда, и Вы решили приобрести одну модель или
+              партию? Оформите свой заказ в нашем интернет-магазине. Быстро и бесплатно доставляем заказы по всей
+              России.
+            </p>
+            <p class="info__end-text" data-info>Наша одежда подчеркнет Вашу индивидуальность в любой обстановкеи
+              прекрасно
+              подойдет для работы в офисе,
+              прогулок по городу, вечернего выхода. Вам понравилась наша одежда, и Вы решили приобрести одну модель или
+              партию? Оформите свой заказ в нашем интернет-магазине. Быстро и бесплатно доставляем заказы по всей
+              России.
+            </p>
+            <p class="info__end-text" data-info>Уточнить условия оформления и доставки заказов через интернет-магазин, а
+              также получить ответы на вопросыпо
+              поводу планируемого заказа, можно по Email:​zakaz@kayrosxl.ruили позвонить по телефону лини поддержки:
+              8-800-222-37-07.</p>
+          </div>
         </div>
       </div>
     </section>

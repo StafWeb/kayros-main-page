@@ -1,0 +1,15 @@
+.media {
+  width: 100%;
+  margin: 0 auto;
+  &__list {
+    display: flex;
+  }
+  &__item {
+    width: 512px;
+    height: 512px;
+    &_img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

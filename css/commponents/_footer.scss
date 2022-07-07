@@ -36,10 +36,10 @@
       display: flex;
       flex-direction: column;
       gap: 20px;
-      &:first-child{
+      &:first-child {
         margin-right: 294px;
       }
-      &:last-child{
+      &:last-child {
         margin-left: 224px;
       }
     }
@@ -79,6 +79,22 @@
     }
   }
 }
-.partner__img_wrapper{
+.partner__img_wrapper {
   padding-top: 6px;
+}
+@media (max-width: 1650px) {
+  .footer {
+    .container {
+      gap: 0;
+    }
+    &__contacts{
+      margin-right: 110px;
+    }
+    &__nav_wrapper:first-child{
+      margin-right: 164px;
+    }
+    &__nav_wrapper:last-child{
+      margin-left: 93px;
+    }
+  }
 }

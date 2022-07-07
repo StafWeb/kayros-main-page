@@ -2,14 +2,24 @@
   width: 100%;
   margin: 0 auto;
   &__list {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
   }
   &__item {
-    width: 512px;
     height: 512px;
     &_img{
       width: 100%;
       height: 100%;
     }
+  }
+}
+@media(max-width:2000px){
+  .media__item{
+    height: 384px;
+  }
+}
+@media(max-width:1650px){
+  .media__item{
+    height: 280px;
   }
 }

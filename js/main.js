@@ -1,3 +1,20 @@
+const burger = document?.querySelector('[data-burger]');
+burger?.addEventListener('click', () => {
+  // body.classList.toggle('stop-scroll');
+  burger?.classList.toggle('burger--active');
+  // nav?.classList.toggle('nav--visible');
+  // overlayNav.classList.toggle('show');
+});
+
+// navItems.forEach(el => {
+//   el.addEventListener('click', () => {
+//     body.classList.remove('stop-scroll');
+//     burger?.classList.remove('burger--active');
+//     nav?.classList.remove('nav--visible');
+//     overlayNav.classList.remove('show');
+//   });
+// });
+
 let options = {
   threshold: [0.5]
 };
@@ -41,7 +58,7 @@ const swiper = new Swiper('.swiper', {
   slidesPerGroup: 2,
   // parallax: true,
   // centeredSlides: true,
-  slidesPerView: 3,
+  slidesPerView: "auto",
   // spaceBetween: 30,
   // centeredSlidesBounds:true,
   passiveListeners: true,

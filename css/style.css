@@ -3,7 +3,7 @@
 @import "commponents/swiper-bundle.min.css";
 @import "../fonts/fonts.css";
 @import "commponents/header.css";
-@import "commponents/swiper-block.css";
-@import "commponents/cards.css";
-@import "commponents/info.css";
-@import "commponents/footer.css";
+@import "commponents/collection.css";
+@import "commponents/wear.css";
+/* @import "commponents/info.css"; */
+/* @import "commponents/footer.css"; */

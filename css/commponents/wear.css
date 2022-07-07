@@ -1,0 +1,121 @@
+.wear {
+  height: 100vh;
+  background-color: #f1ebe2;
+}
+.wear__container {
+  height: 100%;
+}
+.wear__text {
+  display: none;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+.swiper-wrapper {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition-property: transform;
+  box-sizing: content-box;
+}
+.swiper-slide {
+  flex-shrink: 0;
+  max-width: 720px;
+  height: 100%;
+}
+.swiper__text, .swiper__card {
+  width: 100%;
+  height: 100%;
+}
+.swiper__text {
+  padding: 120px 321px 0px 90px;
+}
+.swiper__text_title {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  font-size: 54px;
+  line-height: 130%;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #333333;
+  margin-bottom: 80px;
+}
+.swiper__text_descr {
+  font-size: 21px;
+  line-height: 160%;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #777777;
+  margin-bottom: 120px;
+}
+.swiper__text_progress {
+  overflow: hidden;
+  position: relative;
+  height: 2px;
+  background: rgba(176, 151, 110, 0.4);
+}
+.swiper__text_progress::before {
+  content: "";
+  position: absolute;
+  left: -130%;
+  width: 100%;
+  height: 100%;
+  background: rgba(176, 151, 110, 0.9);
+  -webkit-animation: progress 4s linear infinite;
+          animation: progress 4s linear infinite;
+}
+.swiper__card {
+  position: relative;
+}
+.swiper__card_img {
+  width: 100%;
+  height: 100%;
+}
+.swiper__card_link {
+  position: absolute;
+  bottom: 75px;
+  left: 80px;
+  font-size: 30px;
+  line-height: 120%;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+@-webkit-keyframes progress {
+  0% {
+    left: -130%;
+    background: rgba(176, 151, 110, 0.9);
+  }
+  50% {
+    left: 130%;
+    background: rgba(176, 151, 110, 0.9);
+  }
+  51% {
+    background: rgba(176, 151, 110, 0.9);
+  }
+  100% {
+    background: rgba(176, 151, 110, 0.9);
+  }
+}
+
+@keyframes progress {
+  0% {
+    left: -130%;
+    background: rgba(176, 151, 110, 0.9);
+  }
+  50% {
+    left: 130%;
+    background: rgba(176, 151, 110, 0.9);
+  }
+  51% {
+    background: rgba(176, 151, 110, 0.9);
+  }
+  100% {
+    background: rgba(176, 151, 110, 0.9);
+  }
+}

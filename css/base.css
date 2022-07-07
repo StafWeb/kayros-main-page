@@ -4,6 +4,7 @@ html{
 body{
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
+    font-weight: 400;
     background-color: #ffffff;
     color: #333333;
     display: flex;
@@ -13,10 +14,10 @@ body{
 
 
 .container{
-    max-width: 1400px;
+    max-width: 1920px;
     width: 100%;
     height: 100%;
-    padding-left: 90px;
+    padding: 0 90px;
     margin: 0 auto;
 }
 main{
@@ -26,3 +27,10 @@ main{
 footer{
     flex-shrink: 0;
 }
+
+input[type=text]::-ms-clear {  display: none; width : 0; height: 0; }
+input[type=text]::-ms-reveal {  display: none; width : 0; height: 0; }
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }

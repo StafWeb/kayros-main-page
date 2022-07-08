@@ -65,21 +65,24 @@
       color: #333333;
       opacity: 0.7;
     }
-    &_partner {
-      display: flex;
-      gap: 11px;
-      &_link {
-        font-weight: 700;
-        font-size: 16px;
-        line-height: 160%;
-        letter-spacing: 0.05em;
-        text-transform: uppercase;
-        color: #333333;
-      }
+  }
+  &__partner {
+    display: flex;
+    gap: 11px;
+    &--mob{
+      display: none;
+    }
+    &-link {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 160%;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #333333;
     }
   }
 }
-.partner__img_wrapper {
+.partner-img-wrapper {
   padding-top: 6px;
 }
 @media (max-width: 1650px) {
@@ -87,14 +90,74 @@
     .container {
       gap: 0;
     }
-    &__contacts{
+    &__contacts {
       margin-right: 110px;
     }
-    &__nav_wrapper:first-child{
+    &__nav_wrapper:first-child {
       margin-right: 164px;
     }
-    &__nav_wrapper:last-child{
+    &__nav_wrapper:last-child {
       margin-left: 93px;
     }
+  }
+}
+@media (max-width: 1200px) {
+  .footer {
+    .container {
+      padding: 120px 40px;
+    }
+    &__contacts {
+      margin-right: 40px;
+    }
+    &__nav_wrapper:first-child {
+      margin-right: 95px;
+    }
+    &__nav_wrapper:last-child {
+      margin-left: 49px;
+    }
+  }
+}
+@media (max-width: 950px) {
+  .footer {
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 70px 0px;
+    }
+    &__contacts {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+      order: 1;
+    }
+    &__list{
+      margin-bottom: 27px;
+    }
+    &__nav {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 13px;
+      &_title{
+        margin-bottom: 17px;
+      }
+      &_wrapper {
+        gap: 0;
+        &:first-child,
+        &:last-child {
+          margin: 0;
+        }
+      }
+    }
+    &__partner{
+      &--deks{
+        display: none;
+      }
+      &--mob{
+        display: flex;
+      }
+    }
+    
   }
 }

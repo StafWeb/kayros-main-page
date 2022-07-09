@@ -1,10 +1,4 @@
 .collection {
-  overflow-x: overlay;
-  overflow: -moz-scrollbars-none;
-  -ms-overflow-style: none;
-  &::-webkit-scrollbar {
-    height: 0 !important;
-  }
   &__title {
     font-family: "Playfair Display", serif;
     font-style: normal;

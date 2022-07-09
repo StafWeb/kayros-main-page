@@ -193,3 +193,7 @@
 .footer__list_active{
 display: flex;
 }
+main{
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+}

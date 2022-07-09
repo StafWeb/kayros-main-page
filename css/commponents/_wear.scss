@@ -1,12 +1,8 @@
 .wear {
-  overflow: -moz-scrollbars-none;
-  -ms-overflow-style: none;
-  &::-webkit-scrollbar {
-    height: 0 !important;
-  }
   height: 100vh;
   min-height: 768px;
   background-color: #f1ebe2;
+  scroll-snap-align: center;
   &__container {
     height: 100%;
   }

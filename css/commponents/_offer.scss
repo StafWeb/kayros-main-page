@@ -148,10 +148,9 @@
       overflow: hidden;
       overflow-x: scroll;
       margin-left: 20px;
-      &::-webkit-scrollbar {
-        width: 0;
-        height: 0;
-      }
+      -ms-overflow-style: none;
+      overflow: -moz-scrollbars-none;
+      &::-webkit-scrollbar { width: 0 !important }
     }
     &__item{
       flex-shrink: 0;
@@ -172,10 +171,9 @@
     &__filter{
       overflow: hidden;
       overflow-x: scroll;
-      &::-webkit-scrollbar {
-        width: 0;
-        height: 0;
-      }
+      -ms-overflow-style: none;
+      overflow: -moz-scrollbars-none;
+      &::-webkit-scrollbar { width: 0 !important }
       &-link{
         margin-left: 20px;
       }

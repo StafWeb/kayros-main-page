@@ -1010,10 +1010,11 @@
     overflow: hidden;
     overflow-x: scroll;
     margin-left: 20px;
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
   }
   .cards__list::-webkit-scrollbar {
-    width: 0;
-    height: 0;
+    width: 0 !important;
   }
   .cards__item {
     flex-shrink: 0;
@@ -1031,10 +1032,11 @@
   .cards__filter {
     overflow: hidden;
     overflow-x: scroll;
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
   }
   .cards__filter::-webkit-scrollbar {
-    width: 0;
-    height: 0;
+    width: 0 !important;
   }
   .cards__filter-link {
     margin-left: 20px;
@@ -1218,10 +1220,11 @@
     gap: 0px;
     overflow: hidden;
     overflow-x: scroll;
+    overflow: -moz-scrollbars-none;
+    -ms-overflow-style: none;
   }
   .media__list::-webkit-scrollbar {
-    width: 0;
-    height: 0;
+    width: 0 !important;
   }
   .media__item {
     flex-shrink: 0;

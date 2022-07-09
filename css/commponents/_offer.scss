@@ -1,7 +1,8 @@
 .offer {
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none;
   &::-webkit-scrollbar {
-    width: 0;
-    height: 0;
+    width: 0 !important;
   }
   .container {
     padding: 120px 90px;
@@ -127,22 +128,22 @@
     gap: 16px;
   }
 }
-@media(max-width:950px){
-  .offer{
-    .container{
+@media (max-width: 950px) {
+  .offer {
+    .container {
       padding: 70px 0px;
     }
-    &__button{
+    &__button {
       display: none;
     }
   }
-  .cards{
+  .cards {
     margin: 0;
     margin-top: 50px;
-    &__filter{
+    &__filter {
       padding: 0 20px;
     }
-    &__list{
+    &__list {
       display: flex;
       gap: 16px;
       overflow: hidden;
@@ -150,35 +151,39 @@
       margin-left: 20px;
       -ms-overflow-style: none;
       overflow: -moz-scrollbars-none;
-      &::-webkit-scrollbar { width: 0 !important }
+      &::-webkit-scrollbar {
+        width: 0 !important;
+      }
     }
-    &__item{
+    &__item {
       flex-shrink: 0;
     }
   }
 }
-@media(max-width:750px){
-  .offer{
-    .container{
+@media (max-width: 750px) {
+  .offer {
+    .container {
       padding: 50px 0px;
     }
   }
-  .cards{
-    &__item{
+  .cards {
+    &__item {
       width: 224px;
       height: 447px;
     }
-    &__filter{
+    &__filter {
       overflow: hidden;
       overflow-x: scroll;
       -ms-overflow-style: none;
       overflow: -moz-scrollbars-none;
-      &::-webkit-scrollbar { width: 0 !important }
-      &-link{
+      &::-webkit-scrollbar {
+        width: 0 !important;
+      }
+      &-link {
         margin-left: 20px;
       }
       &-start,
-      &-link{
+      &-link {
         flex-shrink: 0;
       }
     }

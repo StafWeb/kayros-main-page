@@ -1,4 +1,9 @@
 .wear {
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    width: 0 !important;
+  }
   height: 100vh;
   min-height: 768px;
   background-color: #f1ebe2;
@@ -182,28 +187,28 @@
     }
   }
 }
-@media(max-width:750px){
-  .wear{
+@media (max-width: 750px) {
+  .wear {
     height: 624px;
     min-height: 624px;
-    &__container{
+    &__container {
       justify-content: space-between;
     }
 
-    &__text{
+    &__text {
       padding: 0px 20px;
       margin-top: 50px;
       margin-bottom: 40px;
-      &-title{
+      &-title {
         font-size: 27px;
         margin-bottom: 30px;
       }
     }
   }
-  .swiper{
+  .swiper {
     max-height: 390px;
   }
-  .swiper-slide{
+  .swiper-slide {
     max-width: 260px;
   }
 }

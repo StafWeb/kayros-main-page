@@ -1,8 +1,30 @@
+const headerNav = document.querySelector('.header__nav');
+const headerHover = document.querySelector('.header__hover')
+const searchForm = document.querySelector('.header__form');
+const userCab = document.querySelector('.header__user');
+const cart = document.querySelector('.header__cart');
 const burger = document?.querySelector('[data-burger]');
-burger?.addEventListener('click', () => {
-  // body.classList.toggle('stop-scroll');
-  burger?.classList.toggle('burger--active');
-  // nav?.classList.toggle('nav--visible');
+const nav = document?.querySelector('[dara-burger-menu]');
+const burgerLog = document.querySelector('.burger__logo');
+const headerLog = document.querySelector('.header__logo');
+// const navItems = nav?.querySelectorAll('.header__nav_link');
+// const overlayNav = document?.querySelector('.overlay-nav');
+const body = document.body;
+// const header = document?.querySelector('.header');
+// const headerHeight = header.offsetHeight;
+// document.querySelector(':root').style.setProperty('--header-height', `${headerHeight}px`);
+
+burger.addEventListener('click', () => {
+  body.classList.toggle('stop-scroll');
+  burger.classList.toggle('burger_active');
+  nav.classList.toggle('burger-menu_active');
+  headerLog.classList.toggle('none');
+  burgerLog.classList.toggle('burger__logo_active');
+  // userCab.classList.toggle('none');
+  // cart.classList.toggle('none');
+  // headerNav.classList.toggle('none');
+  // headerHover.classList.toggle('header__hover_active');
+  logo.classList.toggle('header__logo_active');
   // overlayNav.classList.toggle('show');
 });
 

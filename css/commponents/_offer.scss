@@ -174,8 +174,9 @@
       display: flex;
       gap: 16px;
       overflow: hidden;
-      overflow-x: overlay;
+      overflow-x: auto;
       margin-left: 20px;
+      scrollbar-width: none;
       -ms-overflow-style: none;
       overflow: -moz-scrollbars-none;
       &::-webkit-scrollbar {
@@ -205,9 +206,10 @@
     }
     &__filter {
       overflow: hidden;
-      overflow-x: overlay;
+      overflow-x: auto;
       -ms-overflow-style: none;
       overflow: -moz-scrollbars-none;
+      scrollbar-width: none;
       &::-webkit-scrollbar {
         height: 0 !important;
       }

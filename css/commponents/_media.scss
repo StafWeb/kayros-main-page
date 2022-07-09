@@ -40,8 +40,9 @@
       display: flex;
       gap: 0px;
       overflow: hidden;
-      overflow-x: overlay;
+      overflow-x: auto;
       overflow: -moz-scrollbars-none;
+      scrollbar-width: none;
       -ms-overflow-style: none;
       &::-webkit-scrollbar {
         height: 0 !important;

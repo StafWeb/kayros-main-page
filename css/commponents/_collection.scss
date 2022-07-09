@@ -127,7 +127,8 @@
       display: flex;
       gap: 16px;
       overflow: hidden;
-      overflow-x: overlay;
+      overflow-x: auto;
+      scrollbar-width: none;
       &::-webkit-scrollbar {
         height: 0;
       }

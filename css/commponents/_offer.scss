@@ -1,4 +1,5 @@
 .offer {
+  overflow-x: overlay;
   overflow: -moz-scrollbars-none;
   -ms-overflow-style: none;
   &::-webkit-scrollbar {
@@ -147,7 +148,7 @@
       display: flex;
       gap: 16px;
       overflow: hidden;
-      overflow-x: scroll;
+      overflow-x: overlay;
       margin-left: 20px;
       -ms-overflow-style: none;
       overflow: -moz-scrollbars-none;
@@ -173,7 +174,7 @@
     }
     &__filter {
       overflow: hidden;
-      overflow-x: scroll;
+      overflow-x: overlay;
       -ms-overflow-style: none;
       overflow: -moz-scrollbars-none;
       &::-webkit-scrollbar {

@@ -492,6 +492,7 @@
   }
 }
 .collection {
+  overflow-x: overlay;
   overflow: -moz-scrollbars-none;
   -ms-overflow-style: none;
 }
@@ -527,6 +528,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 45px;
+  scrollbar-width: none;
 }
 .collection__item {
   position: relative;
@@ -616,7 +618,7 @@
     display: flex;
     gap: 16px;
     overflow: hidden;
-    overflow-x: scroll;
+    overflow-x: overlay;
   }
   .collection__list::-webkit-scrollbar {
     width: 0;
@@ -874,6 +876,7 @@
   }
 }
 .offer {
+  overflow-x: overlay;
   overflow: -moz-scrollbars-none;
   -ms-overflow-style: none;
 }
@@ -1023,7 +1026,7 @@
     display: flex;
     gap: 16px;
     overflow: hidden;
-    overflow-x: scroll;
+    overflow-x: overlay;
     margin-left: 20px;
     -ms-overflow-style: none;
     overflow: -moz-scrollbars-none;
@@ -1046,7 +1049,7 @@
   }
   .cards__filter {
     overflow: hidden;
-    overflow-x: scroll;
+    overflow-x: overlay;
     -ms-overflow-style: none;
     overflow: -moz-scrollbars-none;
   }
@@ -1199,6 +1202,7 @@
   }
 }
 .media {
+  overflow-x: overlay;
   overflow: -moz-scrollbars-none;
   -ms-overflow-style: none;
   width: 100%;
@@ -1239,7 +1243,7 @@
     display: flex;
     gap: 0px;
     overflow: hidden;
-    overflow-x: scroll;
+    overflow-x: overlay;
     overflow: -moz-scrollbars-none;
     -ms-overflow-style: none;
   }

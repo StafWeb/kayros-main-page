@@ -324,8 +324,9 @@
     transform: rotate(0);
   }
   100% {
+    bottom: auto;
     top: 50%;
-    transform: rotate(-45deg);
+    transform: rotate(45deg);
   }
 }
 @keyframes rotate-burger-before {
@@ -333,8 +334,9 @@
     transform: rotate(0);
   }
   100% {
+    bottom: auto;
     top: 50%;
-    transform: rotate(-45deg);
+    transform: rotate(45deg);
   }
 }
 @-webkit-keyframes rotate-burger-after {
@@ -342,9 +344,8 @@
     transform: rotate(0);
   }
   100% {
-    bottom: auto;
     top: 50%;
-    transform: rotate(45deg);
+    transform: rotate(-45deg);
   }
 }
 @keyframes rotate-burger-after {
@@ -352,9 +353,8 @@
     transform: rotate(0);
   }
   100% {
-    bottom: auto;
     top: 50%;
-    transform: rotate(45deg);
+    transform: rotate(-45deg);
   }
 }
 @-webkit-keyframes scale-up-ver-top {
@@ -861,6 +861,10 @@
     max-width: 260px;
   }
 }
+.offer::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
 .offer .container {
   padding: 120px 90px;
 }
@@ -1006,6 +1010,10 @@
     overflow: hidden;
     overflow-x: scroll;
     margin-left: 20px;
+  }
+  .cards__list::-webkit-scrollbar {
+    width: 0;
+    height: 0;
   }
   .cards__item {
     flex-shrink: 0;

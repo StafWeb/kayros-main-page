@@ -1,4 +1,8 @@
 .offer {
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
   .container {
     padding: 120px 90px;
   }
@@ -144,6 +148,10 @@
       overflow: hidden;
       overflow-x: scroll;
       margin-left: 20px;
+      &::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+      }
     }
     &__item{
       flex-shrink: 0;

@@ -306,8 +306,9 @@
     transform: rotate(0);
   }
   100% {
+    bottom: auto;
     top: 50%;
-    transform: rotate(-45deg);
+    transform: rotate(45deg);
   }
 }
 @keyframes rotate-burger-after {
@@ -315,9 +316,9 @@
     transform: rotate(0);
   }
   100% {
-    bottom: auto;
+    
     top: 50%;
-    transform: rotate(45deg);
+    transform: rotate(-45deg);
   }
 }
 @keyframes scale-up-ver-top {

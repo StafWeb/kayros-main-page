@@ -15,6 +15,14 @@ burger?.addEventListener('click', () => {
 //   });
 // });
 
+const footerBtn = document.querySelectorAll("[data-footer-menu]");
+footerBtn.forEach(function (btn) {
+	btn.addEventListener("click", function () {
+    btn.classList.toggle('btn-mob_active');
+		this.nextElementSibling.classList.toggle("footer__list_active");
+	});
+});
+
 let options = {
   threshold: [0.5]
 };
@@ -40,7 +48,7 @@ function info(entry) {
   entry.forEach(change => {
     if (change.isIntersecting) {
       change.target.classList.add('fadeindown');
-    } 
+    }
   });
 };
 

@@ -43,8 +43,8 @@
                 <path class="header-logo-end"
                   d="M65.3254 39.8607C65.0134 39.9982 64.6728 40.0592 64.3323 40.0387C63.0313 40.0387 62.0879 38.9903 62.0879 36.7252C62.0879 34.0942 63.3988 33.2535 64.4515 33.2535C64.7394 33.2368 65.0269 33.2947 65.2856 33.4216L65.1168 34.0645C64.9061 33.9654 64.6745 33.9179 64.4415 33.9261C63.7265 33.9261 62.8923 34.6184 62.8923 36.656C62.8923 38.6935 63.6868 39.3661 64.5508 39.3661C64.7939 39.3687 65.0346 39.3181 65.2559 39.2178L65.3254 39.8607Z"
                   fill="white" fill-opacity="0.5" />
-                <path class="header-logo-end" d="M66.2095 33.3129H66.9742V39.3365H68.861V39.9794H66.2095V33.3129Z" fill="white"
-                  fill-opacity="0.5" />
+                <path class="header-logo-end" d="M66.2095 33.3129H66.9742V39.3365H68.861V39.9794H66.2095V33.3129Z"
+                  fill="white" fill-opacity="0.5" />
                 <path class="header-logo-end"
                   d="M72.8232 36.5967C72.8232 39.0991 71.9592 40.0585 70.837 40.0585C69.7149 40.0585 69.0396 38.8815 69.0396 36.5967C69.0396 34.3118 69.8241 33.1942 71.0257 33.1942C72.2274 33.1942 72.8232 34.4701 72.8232 36.5967ZM69.844 36.5967C69.844 37.9715 70.122 39.3365 70.9562 39.3365C71.7904 39.3365 72.0486 37.8825 72.0486 36.5769C72.0486 35.2713 71.8202 33.8568 70.9463 33.8568C70.0724 33.8568 69.8241 35.291 69.8241 36.6461L69.844 36.5967Z"
                   fill="white" fill-opacity="0.5" />
@@ -463,13 +463,24 @@
       <nav class="footer__nav">
         <div class="footer__nav-wrapper">
           <a href="#" class="footer__nav-title">Коллекции</a>
-          <ul class="footer__list">
+          <button class="btn-mob" data-footer-menu>
+            <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13 1L7 7L1 0.999999" stroke="#B0976E" />
+            </svg>
+          </button>
+          <ul data-target="collect" class="footer__list">
             <li class="footer__item"> <a href="#" class="footer__item-link">Бохо</a></li>
             <li class="footer__item"><a href="#" class="footer__item-link">Классическая</a></li>
             <li class="footer__item"><a href="#" class="footer__item-link">Мужская одежда</a></li>
           </ul>
+          <div class="footer__nav-inner">
           <a href="#" class="footer__nav-title">Каталог</a>
-          <ul class="footer__list">
+          <button class="btn-mob btn-mob-second" data-footer-menu>
+            <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13 1L7 7L1 0.999999" stroke="#B0976E" />
+            </svg>
+          </button>
+          <ul data-target="catalog" class="footer__list">
             <li class="footer__item"><a href="#" class="footer__item-link">Платья, сарафаны</a></li>
             <li class="footer__item"><a href="#" class="footer__item-link">Блузки, туники</a></li>
             <li class="footer__item"><a href="#" class="footer__item-link">Жакеты</a></li>
@@ -478,48 +489,59 @@
             <li class="footer__item"><a href="#" class="footer__item-link">Маски</a></li>
           </ul>
         </div>
+        </div>
         <div class="footer__nav-wrapper">
           <a href="#" class="footer__nav-title">Помощь</a>
-          <ul class="footer__list">
+          <button class="btn-mob" data-footer-menu>
+            <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13 1L7 7L1 0.999999" stroke="#B0976E" />
+            </svg>
+          </button>
+          <ul data-target="help" class="footer__list">
             <li class="footer__item"><a href="#" class="footer__item-link">Уход за одеждой из льна</a></li>
             <li class="footer__item"><a href="#" class="footer__item-link">Как заказать</a></li>
             <li class="footer__item"><a href="#" class="footer__item-link">Доставка</a></li>
             <li class="footer__item"><a href="#" class="footer__item-link">Оплата</a></li>
             <li class="footer__item"><a href="#" class="footer__item-link">Условия возврата</a></li>
             <li class="footer__item"><a href="#" class="footer__item-link">Политика конфиденциальности</a></li>
-            <li class="footer__partner footer__partner--deks">
-              <div class="partner-img-wrapper">
-                <svg class="partner-logo" width="16" height="16" viewBox="0 0 16 16" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path class="partner-logo__path"
-                    d="M15.1579 12.6316V13.4737C15.1579 14.4042 14.4042 15.1579 13.4737 15.1579H1.68421C0.753684 15.1579 0 14.4042 0 13.4737V1.68421C0 0.753684 0.753684 0 1.68421 0H13.4737C14.4042 0 15.1579 0.753684 15.1579 1.68421V2.52632H7.57895C6.64842 2.52632 5.89474 3.28 5.89474 4.21053V10.9474C5.89474 11.8779 6.64842 12.6316 7.57895 12.6316H15.1579ZM7.57895 10.9474H16V4.21053H7.57895V10.9474ZM10.9474 8.8421C10.2484 8.8421 9.68421 8.27789 9.68421 7.57895C9.68421 6.88 10.2484 6.31579 10.9474 6.31579C11.6463 6.31579 12.2105 6.88 12.2105 7.57895C12.2105 8.27789 11.6463 8.8421 10.9474 8.8421Z"
-                    fill="#333333" />
-                </svg>
-              </div>
-              <a href="#" class="footer__partner-link">Стать партнёром</a>
-            </li>
           </ul>
+          <div class="footer__partner footer__partner--deks">
+            <div class="partner-img-wrapper">
+              <svg class="partner-logo" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path class="partner-logo__path"
+                  d="M15.1579 12.6316V13.4737C15.1579 14.4042 14.4042 15.1579 13.4737 15.1579H1.68421C0.753684 15.1579 0 14.4042 0 13.4737V1.68421C0 0.753684 0.753684 0 1.68421 0H13.4737C14.4042 0 15.1579 0.753684 15.1579 1.68421V2.52632H7.57895C6.64842 2.52632 5.89474 3.28 5.89474 4.21053V10.9474C5.89474 11.8779 6.64842 12.6316 7.57895 12.6316H15.1579ZM7.57895 10.9474H16V4.21053H7.57895V10.9474ZM10.9474 8.8421C10.2484 8.8421 9.68421 8.27789 9.68421 7.57895C9.68421 6.88 10.2484 6.31579 10.9474 6.31579C11.6463 6.31579 12.2105 6.88 12.2105 7.57895C12.2105 8.27789 11.6463 8.8421 10.9474 8.8421Z"
+                  fill="#333333" />
+              </svg>
+            </div>
+            <a href="#" class="footer__partner-link">Стать партнёром</a>
+          </div>
         </div>
         <div class="footer__nav-wrapper">
           <a href="#" class="footer__nav-title">О компании</a>
-          <ul class="footer__list">
+          <button class="btn-mob" data-footer-menu>
+            <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13 1L7 7L1 0.999999" stroke="#B0976E" />
+            </svg>
+          </button>
+          <ul data-target="company" class="footer__list">
             <li class="footer__item"><a href="#" class="footer__item-link">О компании Kayros</a></li>
             <li class="footer__item"><a href="#" class="footer__item-link">Новости</a></li>
             <li class="footer__item"><a href="#" class="footer__item-link">Производство</a></li>
             <li class="footer__item"><a href="#" class="footer__item-link">Реквизиты</a></li>
             <li class="footer__item"><a href="#" class="footer__item-link">Контакты</a></li>
-            <li class="footer__partner footer__partner--mob">
-              <div class="partner-img-wrapper">
-                <svg class="partner-logo" width="16" height="16" viewBox="0 0 16 16" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path class="partner-logo__path"
-                    d="M15.1579 12.6316V13.4737C15.1579 14.4042 14.4042 15.1579 13.4737 15.1579H1.68421C0.753684 15.1579 0 14.4042 0 13.4737V1.68421C0 0.753684 0.753684 0 1.68421 0H13.4737C14.4042 0 15.1579 0.753684 15.1579 1.68421V2.52632H7.57895C6.64842 2.52632 5.89474 3.28 5.89474 4.21053V10.9474C5.89474 11.8779 6.64842 12.6316 7.57895 12.6316H15.1579ZM7.57895 10.9474H16V4.21053H7.57895V10.9474ZM10.9474 8.8421C10.2484 8.8421 9.68421 8.27789 9.68421 7.57895C9.68421 6.88 10.2484 6.31579 10.9474 6.31579C11.6463 6.31579 12.2105 6.88 12.2105 7.57895C12.2105 8.27789 11.6463 8.8421 10.9474 8.8421Z"
-                    fill="#333333" />
-                </svg>
-              </div>
-              <a href="#" class="footer__partner-link">Стать партнёром</a>
-            </li>
           </ul>
+          <div class="footer__partner footer__partner--mob">
+            <div class="partner-img-wrapper">
+              <svg class="partner-logo" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path class="partner-logo__path"
+                  d="M15.1579 12.6316V13.4737C15.1579 14.4042 14.4042 15.1579 13.4737 15.1579H1.68421C0.753684 15.1579 0 14.4042 0 13.4737V1.68421C0 0.753684 0.753684 0 1.68421 0H13.4737C14.4042 0 15.1579 0.753684 15.1579 1.68421V2.52632H7.57895C6.64842 2.52632 5.89474 3.28 5.89474 4.21053V10.9474C5.89474 11.8779 6.64842 12.6316 7.57895 12.6316H15.1579ZM7.57895 10.9474H16V4.21053H7.57895V10.9474ZM10.9474 8.8421C10.2484 8.8421 9.68421 8.27789 9.68421 7.57895C9.68421 6.88 10.2484 6.31579 10.9474 6.31579C11.6463 6.31579 12.2105 6.88 12.2105 7.57895C12.2105 8.27789 11.6463 8.8421 10.9474 8.8421Z"
+                  fill="#333333" />
+              </svg>
+            </div>
+            <a href="#" class="footer__partner-link">Стать партнёром</a>
+          </div>
         </div>
       </nav>
     </div>

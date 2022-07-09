@@ -112,7 +112,7 @@
   align-items: center;
   width: 40px;
   height: 40px;
-  cursor: pointer-;
+  cursor: pointer;
 }
 .header__cart {
   position: relative;
@@ -483,7 +483,7 @@
     transition: 0.3s;
   }
 
-  .header__item-link:first-child:hover .dropdown {
+  .header__item:first-child:hover .dropdown {
     display: flex;
     opacity: 1;
     transition: opacity 0.4s cubic-bezier(0.22, 1, 0.36, 1);

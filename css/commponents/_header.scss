@@ -55,9 +55,6 @@
       margin-right: 9px;
       width: 10px;
       height: 10px;
-      svg{
-      
-      }
     }
     &-link {
       font-family: "Open Sans";
@@ -110,7 +107,7 @@
     align-items: center;
     width: 40px;
     height: 40px;
-    cursor: pointer-;
+    cursor: pointer;
   }
   &__cart {
     position: relative;
@@ -379,31 +376,31 @@
     }
   }
 }
-@media(max-width:750px){
-  .header{
-    &__logo{
+@media (max-width: 750px) {
+  .header {
+    &__logo {
       margin-right: 0;
     }
-    &__burger{
+    &__burger {
       margin-left: 30px;
     }
-    &__text{
+    &__text {
       justify-content: flex-start;
       margin-top: 45px;
       height: 100%;
       max-height: 100%;
     }
-    &__title{
+    &__title {
       font-size: 32px;
       margin-bottom: 30px;
     }
-    &__descr{
+    &__descr {
       margin-bottom: 35px;
     }
   }
 }
-@media(min-width:950px){
-  .header__top{
+@media (min-width: 950px) {
+  .header__top {
     &:hover .header__hover {
       opacity: 1;
       transition: opacity 0.5s;
@@ -448,12 +445,10 @@
       transition: 0.3s;
     }
   }
-  .header__item-link{
-    &:first-child:hover .dropdown {
-      display: flex;
-      opacity: 1;
-      transition: opacity 0.4s cubic-bezier(0.22, 1, 0.36, 1);
-      animation: scale-up-ver-top 0.6s cubic-bezier(0.22, 1, 0.36, 1) both 0.1s;
-    }
+  .header__item:first-child:hover .dropdown {
+    display: flex;
+    opacity: 1;
+    transition: opacity 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    animation: scale-up-ver-top 0.6s cubic-bezier(0.22, 1, 0.36, 1) both 0.1s;
   }
 }

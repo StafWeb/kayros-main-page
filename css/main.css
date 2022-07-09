@@ -1002,12 +1002,7 @@
   }
 }
 .offer {
-  overflow-x: overlay;
-  overflow: -moz-scrollbars-none;
-  -ms-overflow-style: none;
-}
-.offer::-webkit-scrollbar {
-  height: 0 !important;
+  scroll-snap-align: center;
 }
 .offer .container {
   padding: 120px 90px;

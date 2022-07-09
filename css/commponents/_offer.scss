@@ -1,10 +1,5 @@
 .offer {
-  overflow-x: overlay;
-  overflow: -moz-scrollbars-none;
-  -ms-overflow-style: none;
-  &::-webkit-scrollbar {
-    height: 0 !important;
-  }
+  scroll-snap-align: center;
   .container {
     padding: 120px 90px;
   }

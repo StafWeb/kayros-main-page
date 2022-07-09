@@ -3,7 +3,7 @@
   overflow: -moz-scrollbars-none;
   -ms-overflow-style: none;
   &::-webkit-scrollbar {
-    width: 0 !important;
+    height: 0 !important;
   }
   .container {
     padding: 120px 90px;
@@ -58,7 +58,6 @@
     grid-template-columns: repeat(5, 1fr);
     gap: 19px;
     &::-webkit-scrollbar {
-      width: 0;
       height: 0;
     }
     &-colors {
@@ -75,8 +74,11 @@
       width: 20px;
       height: 20px;
       border-radius: 50%;
-      border: 1px solid rgba(176, 151, 110, 0.7);
+      border: 1px solid transparent;
       margin-bottom: 15px;
+      &_active{
+        border: 1px solid rgba(176, 151, 110, 0.7);
+      }
       &-inner {
         position: absolute;
         content: "";
@@ -87,6 +89,30 @@
         border-radius: 50%;
         background-color: rgba(176, 151, 110);
       }
+    }
+  }
+  &__button {
+    width: 140px;
+    height: 100px;
+    display: none;
+    flex-shrink: 0;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    margin: 120px 20px 0 0;
+    & > svg{
+      width: 40px;
+      height: 40px;
+      margin-bottom: 20px;
+    }
+    &-text {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 120%;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #333333;
+      border-bottom: 1px solid rgba(176, 151, 110, 0.5);
     }
   }
   &__image {
@@ -153,11 +179,16 @@
       -ms-overflow-style: none;
       overflow: -moz-scrollbars-none;
       &::-webkit-scrollbar {
-        width: 0 !important;
+        height: 0 !important;
       }
     }
     &__item {
       flex-shrink: 0;
+    }
+    &__button{
+      display: flex;
+      margin: 200px 20px 0 0;
+
     }
   }
 }
@@ -178,15 +209,21 @@
       -ms-overflow-style: none;
       overflow: -moz-scrollbars-none;
       &::-webkit-scrollbar {
-        width: 0 !important;
+        height: 0 !important;
       }
       &-link {
         margin-left: 20px;
+        &_active{
+          border-bottom: 1px solid rgba(176, 151, 110, 0.5);
+        }
       }
       &-start,
       &-link {
         flex-shrink: 0;
       }
+    }
+    &__button{
+      margin: 120px 20px 0 0;
     }
   }
 }

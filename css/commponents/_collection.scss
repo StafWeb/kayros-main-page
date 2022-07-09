@@ -3,7 +3,7 @@
   overflow: -moz-scrollbars-none;
   -ms-overflow-style: none;
   &::-webkit-scrollbar {
-    width: 0 !important;
+    height: 0 !important;
   }
   &__title {
     font-family: "Playfair Display", serif;
@@ -129,7 +129,6 @@
       overflow: hidden;
       overflow-x: overlay;
       &::-webkit-scrollbar {
-        width: 0;
         height: 0;
       }
     }

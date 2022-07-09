@@ -600,6 +600,10 @@
   }
 }
 @media (max-width: 750px) {
+  html, body {
+    overflow-x: hidden;
+  }
+
   .collection .container {
     padding: 0;
   }

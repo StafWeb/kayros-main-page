@@ -7,7 +7,7 @@
   }
   &__item {
     height: 512px;
-    &_img {
+    &-img {
       width: 100%;
       height: 100%;
     }
@@ -29,8 +29,8 @@
   }
 }
 @media (max-width: 950px) {
-  .media{
-    &__list{
+  .media {
+    &__list {
       display: flex;
       gap: 0px;
       overflow: hidden;
@@ -46,5 +46,12 @@
       height: 280px;
     }
   }
-  
+}
+@media (max-width: 750px) {
+  .media {
+    &__item {
+      width: 260px;
+      height: 260px;
+    }
+  }
 }

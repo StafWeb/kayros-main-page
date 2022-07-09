@@ -107,3 +107,10 @@
     gap: 50px;
   }
 }
+@media(max-width:750px){
+  .info{
+    &__start{
+      font-size: 20px;
+    }
+  }
+}

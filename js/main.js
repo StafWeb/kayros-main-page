@@ -27,7 +27,6 @@ function onEntry(entry) {
   entry.forEach(change => {
     if (change.isIntersecting) {
       change.target.classList.add('slideinup');
-      console.log(change.target);
     }
   });
 };
@@ -41,16 +40,9 @@ function info(entry) {
   entry.forEach(change => {
     if (change.isIntersecting) {
       change.target.classList.add('fadeindown');
-      // console.log(change.target);
     } 
   });
 };
-
-
-
-
-
-
 
 const swiper = new Swiper('.swiper', {
   direction: "horizontal",
@@ -61,6 +53,7 @@ const swiper = new Swiper('.swiper', {
   slidesPerView: "auto",
   // spaceBetween: 30,
   // centeredSlidesBounds:true,
+
   passiveListeners: true,
   mousewheel: {
     releaseOnEdges: true,
@@ -68,9 +61,9 @@ const swiper = new Swiper('.swiper', {
     // thresholdTime: 100,
     // thresholdDelta: 0.3,
   },
-  pagination: {
-    el: '.swiper-pagination',
-    type: 'progressbar',
-    // clickable: true,
-  },
+  // pagination: {
+  //   el: '.swiper-pagination',
+  //   type: 'progressbar',
+  //   // clickable: true,
+  // },
 });

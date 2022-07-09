@@ -24,7 +24,7 @@
   &__social {
     display: flex;
     gap: 20px;
-    &_link {
+    &-link {
       width: 32px;
       height: 32px;
       opacity: 0.5;
@@ -32,7 +32,7 @@
   }
   &__nav {
     display: flex;
-    &_wrapper {
+    &-wrapper {
       display: flex;
       flex-direction: column;
       gap: 20px;
@@ -43,7 +43,7 @@
         margin-left: 224px;
       }
     }
-    &_title {
+    &-title {
       font-weight: 700;
       font-size: 16px;
       line-height: 160%;
@@ -58,7 +58,7 @@
     gap: 20px;
   }
   &__item {
-    &_link {
+    &-link {
       font-weight: 400;
       font-size: 14px;
       line-height: 140%;
@@ -93,10 +93,10 @@
     &__contacts {
       margin-right: 110px;
     }
-    &__nav_wrapper:first-child {
+    &__nav-wrapper:first-child {
       margin-right: 164px;
     }
-    &__nav_wrapper:last-child {
+    &__nav-wrapper:last-child {
       margin-left: 93px;
     }
   }
@@ -109,10 +109,10 @@
     &__contacts {
       margin-right: 40px;
     }
-    &__nav_wrapper:first-child {
+    &__nav-wrapper:first-child {
       margin-right: 95px;
     }
-    &__nav_wrapper:last-child {
+    &__nav-wrapper:last-child {
       margin-left: 49px;
     }
   }
@@ -139,10 +139,10 @@
       display: flex;
       flex-direction: column;
       margin-bottom: 13px;
-      &_title{
+      &-title{
         margin-bottom: 17px;
       }
-      &_wrapper {
+      &-wrapper {
         gap: 0;
         &:first-child,
         &:last-child {

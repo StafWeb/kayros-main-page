@@ -34,11 +34,11 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 30px;
-    &_start {
+    &-start {
       display: flex;
       gap: 20px;
     }
-    &_link {
+    &-link {
       font-weight: 400;
       font-size: 14px;
       line-height: 160%;
@@ -55,7 +55,7 @@
       width: 0;
       height: 0;
     }
-    &_colors {
+    &-colors {
       display: flex;
       gap: 3px;
     }
@@ -64,14 +64,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    &_color {
+    &-color {
       position: relative;
       width: 20px;
       height: 20px;
       border-radius: 50%;
       border: 1px solid rgba(176, 151, 110, 0.7);
       margin-bottom: 15px;
-      &_inner {
+      &-inner {
         position: absolute;
         content: "";
         left: 1px;
@@ -147,6 +147,34 @@
     }
     &__item{
       flex-shrink: 0;
+    }
+  }
+}
+@media(max-width:750px){
+  .offer{
+    .container{
+      padding: 50px 0px;
+    }
+  }
+  .cards{
+    &__item{
+      width: 224px;
+      height: 447px;
+    }
+    &__filter{
+      overflow: hidden;
+      overflow-x: scroll;
+      &::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+      }
+      &-link{
+        margin-left: 20px;
+      }
+      &-start,
+      &-link{
+        flex-shrink: 0;
+      }
     }
   }
 }

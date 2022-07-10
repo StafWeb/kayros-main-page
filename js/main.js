@@ -4,15 +4,13 @@ const searchForm = document.querySelector('.header__form');
 const userCab = document.querySelector('.header__user');
 const cart = document.querySelector('.header__cart');
 const burger = document?.querySelector('[data-burger]');
-const nav = document?.querySelector('[dara-burger-menu]');
+const nav = document?.querySelector('[data-burger-menu]');
 const burgerLog = document.querySelector('.burger__logo');
 const headerLog = document.querySelector('.header__logo');
-// const navItems = nav?.querySelectorAll('.header__nav_link');
-// const overlayNav = document?.querySelector('.overlay-nav');
+const navItems = nav?.querySelectorAll('.burger-menu__item');
 const body = document.body;
-// const header = document?.querySelector('.header');
-// const headerHeight = header.offsetHeight;
-// document.querySelector(':root').style.setProperty('--header-height', `${headerHeight}px`);
+const headerItem = document.querySelectorAll('.header__item');
+
 
 burger.addEventListener('click', () => {
   body.classList.toggle('stop-scroll');
@@ -20,43 +18,57 @@ burger.addEventListener('click', () => {
   nav.classList.toggle('burger-menu_active');
   headerLog.classList.toggle('none');
   burgerLog.classList.toggle('burger__logo_active');
-  // userCab.classList.toggle('none');
-  // cart.classList.toggle('none');
-  // headerNav.classList.toggle('none');
-  // headerHover.classList.toggle('header__hover_active');
-  logo.classList.toggle('header__logo_active');
-  // overlayNav.classList.toggle('show');
 });
 
-// navItems.forEach(el => {
-//   el.addEventListener('click', () => {
-//     body.classList.remove('stop-scroll');
-//     burger?.classList.remove('burger--active');
-//     nav?.classList.remove('nav--visible');
-//     overlayNav.classList.remove('show');
-//   });
-// });
+navItems.forEach(el => {
+  el.addEventListener('click', () => {
+    body.classList.remove('stop-scroll');
+    burger.classList.remove('burger_active');
+    nav.classList.remove('burger-menu_active');
+    headerLog.classList.remove('none');
+    burgerLog.classList.remove('burger__logo_active');
+  });
+});
 
-const footerBtn = document.querySelectorAll("[data-footer-menu]");
+const footerBtn = document.querySelectorAll("[data-menu]");
 footerBtn.forEach(function (btn) {
-	btn.addEventListener("click", function () {
+  btn.addEventListener("click", function () {
     btn.classList.toggle('btn-mob_active');
-		this.nextElementSibling.classList.toggle("footer__list_active");
-	});
+    this.nextElementSibling.classList.toggle("list_active");
+  });
 });
 
 let options = {
   threshold: [0.5]
 };
-let observer = new IntersectionObserver(onEntry, options);
-let swiperDescr = document.querySelectorAll('.swiper-slide');
-for (let des of swiperDescr) {
-  observer.observe(des);
-};
-function onEntry(entry) {
+let observerHead = new IntersectionObserver(headerAnim, options);
+observerHead.observe(headerLog);
+for(let i of headerItem){
+  observerHead.observe(i);
+}
+observerHead.observe(searchForm);
+observerHead.observe(userCab);
+observerHead.observe(cart);
+observerHead.observe(burger);
+function headerAnim(entry) {
   entry.forEach(change => {
     if (change.isIntersecting) {
-      change.target.classList.add('slideinup');
+      change.target.classList.add('header-anim');
+    }
+  });
+};
+
+const headerTitle = document.querySelector('.header__title');
+const headerDescr = document.querySelector('.header__descr');
+const headerThumb = document.querySelector('.header__thumb');
+let observerText = new IntersectionObserver(textAnim, options);
+observerText.observe(headerTitle);
+observerText.observe(headerDescr);
+observerText.observe(headerThumb);
+function textAnim(entry) {
+  entry.forEach(change => {
+    if (change.isIntersecting) {
+      change.target.classList.add('header-text-anim');
     }
   });
 };

@@ -48,6 +48,7 @@
       position: relative;
       display: flex;
       flex-direction: column;
+      gap: 20px;
     }
     &-title {
       font-weight: 700;
@@ -159,6 +160,9 @@
           margin: 0;
         }
       }
+      &-inner{
+        gap: 20px;
+      }
     }
     &__partner{
       &--deks{
@@ -190,7 +194,7 @@
     }
   }
 }
-.footer__list_active{
+.list_active{
 display: flex;
 }
 main{

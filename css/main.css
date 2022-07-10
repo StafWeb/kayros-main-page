@@ -593,9 +593,6 @@
             animation: scale-up-ver-top 0.6s cubic-bezier(0.22, 1, 0.36, 1) both 0.1s;
   }
 }
-.collection {
-  margin-top: 40px;
-}
 .collection__title {
   font-family: "Playfair Display", serif;
   font-style: normal;
@@ -605,6 +602,7 @@
   text-align: center;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  margin-top: 40px;
 }
 .collection__descr {
   font-weight: 400;
@@ -765,7 +763,11 @@
   z-index: 1;
   transition-property: transform;
   box-sizing: content-box;
-  overflow-x: auto;
+  overflow-x: scroll;
+  scrollbar-width: none;
+}
+.swiper-wrapper::-webkit-scrollbar {
+  height: 0;
 }
 .swiper-slide {
   flex-shrink: 0;

@@ -1,7 +1,6 @@
 .collection {
   // position: relative;
   // z-index: 1;
-  margin-top: 40px;
   &__title {
     font-family: "Playfair Display", serif;
     font-style: normal;
@@ -11,7 +10,7 @@
     text-align: center;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    // margin-top: 40px;
+    margin-top: 40px;
   }
   &__descr {
     font-weight: 400;

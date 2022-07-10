@@ -2,14 +2,15 @@
 gsap.registerPlugin(ScrollTrigger);
 gsap.utils.toArray('.panel').forEach((panel, i) => {
   ScrollTrigger.create({
-    trigger: panel,
+    trigger: ".collection",
     start: "top top",
-    end: "+=50px",
-    pinSpacing:true,
     pin:true,
-    scrub: 1,
+    pinSpacing:false,
+    scrub: 2,
+    snap: 1,
   });
 });
+
 
 
 
@@ -101,24 +102,25 @@ function info(entry) {
   });
 };
 
-const swiper = new Swiper('.swiper', {
+let swiper = new Swiper('.swiper', {
   direction: "horizontal",
-  speed: 850,
+  speed: 600,
   // parallax: true,
   // centeredSlides: true,
   slidesPerView: "auto",
   effect: "slide",
   // spaceBetween: 30,
   // centeredSlidesBounds:true,
-
   passiveListeners: true,
   mousewheel: {
     releaseOnEdges: true,
-    sensitivity: 1.3,
+    // sensitivity: 1.3,
     // thresholdTime: 100,
     // thresholdDelta: 0.3,
   }
 });
+
+
 // ScrollTrigger.normalizeScroll({
 //   type: "touch,wheel,pointer", // now the page will be drag-scrollable on desktop because "pointer" is in the list
 //   momentum: self => Math.min(3, self.velocityY / 1000) // dynamically control the duration of the momentum when flick-scrolling

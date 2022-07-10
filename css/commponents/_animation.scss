@@ -50,7 +50,7 @@
   }
 }
 .header-anim{
-  animation: header-anim 0.3s ease-in-out both;
+  animation: header-anim 0.3s ease-in-out none;
 }
 @keyframes header-anim{
   0%{

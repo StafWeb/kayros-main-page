@@ -77,10 +77,10 @@
       padding-bottom: 40px;
       animation-delay: 100ms;
     }
-    &:nth-child(2){
+    &:nth-child(2) {
       animation-delay: 120ms;
     }
-    &:last-child{
+    &:last-child {
       animation-delay: 130ms;
     }
     &:first-child svg {
@@ -122,7 +122,7 @@
     height: 40px;
     cursor: pointer;
   }
-  &__user{
+  &__user {
     animation-delay: 170ms;
   }
   &__cart {
@@ -216,7 +216,7 @@
     margin-bottom: 64px;
     animation-delay: 180ms;
   }
-  &__thumb{
+  &__thumb {
     animation-delay: 190ms;
   }
 }
@@ -297,10 +297,10 @@
       opacity: 0.5;
     }
   }
-  &__partner_mob{
+  &__partner_mob {
     display: none;
   }
-  &__links{
+  &__links {
     display: flex;
     gap: 20px;
   }
@@ -434,7 +434,6 @@
   animation: burger-anim 0.4s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
-
 @media (max-width: 1650px) {
   .header__title {
     font-size: 72px;
@@ -491,7 +490,7 @@
     }
     &__partner {
       display: none;
-      &_mob{
+      &_mob {
         display: flex;
         margin: 0;
       }
@@ -501,10 +500,10 @@
     }
     &__social {
       display: flex;
-      flex-direction: initial;
-      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
     }
-    &__tel{
+    &__tel {
       margin: 0;
     }
   }

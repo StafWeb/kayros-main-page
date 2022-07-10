@@ -514,8 +514,8 @@
   }
   .burger-menu__social {
     display: flex;
-    flex-direction: initial;
-    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
   }
   .burger-menu__tel {
     margin: 0;

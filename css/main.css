@@ -763,7 +763,6 @@
   z-index: 1;
   transition-property: transform;
   box-sizing: content-box;
-  overflow-x: scroll;
   scrollbar-width: none;
 }
 .swiper-wrapper::-webkit-scrollbar {

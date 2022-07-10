@@ -165,7 +165,7 @@
   background-color: transparent;
   margin-left: 50px;
   cursor: pointer;
-  z-index: 2;
+  z-index: 4;
   -webkit-animation-delay: 180ms;
           animation-delay: 180ms;
 }
@@ -242,7 +242,7 @@
   opacity: 0;
   transform: translateX(-100%);
   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-  z-index: 1;
+  z-index: 3;
 }
 .burger-menu_active {
   visibility: visible;
@@ -333,7 +333,7 @@
 }
 .burger__logo_active {
   display: block;
-  z-index: 2;
+  z-index: 4;
   opacity: 1;
   transition: opacity 0.3s ease-in-out;
 }
@@ -527,6 +527,9 @@
   }
   .header__burger {
     margin-left: 30px;
+  }
+  .header__burger-wrapper {
+    padding: 0 20px;
   }
   .header__text {
     justify-content: flex-start;

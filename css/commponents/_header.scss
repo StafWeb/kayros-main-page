@@ -154,7 +154,7 @@
     background-color: transparent;
     margin-left: 50px;
     cursor: pointer;
-    z-index: 2;
+    z-index: 4;
     animation-delay: 180ms;
     &-line {
       position: absolute;
@@ -231,7 +231,7 @@
   opacity: 0;
   transform: translateX(-100%);
   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-  z-index: 1;
+  z-index: 3;
   &_active {
     visibility: visible;
     opacity: 1;
@@ -322,7 +322,7 @@
   transition: opacity 0.3s ease-in-out;
   &_active {
     display: block;
-    z-index: 2;
+    z-index: 4;
     opacity: 1;
     transition: opacity 0.3s ease-in-out;
   }
@@ -515,6 +515,9 @@
     }
     &__burger {
       margin-left: 30px;
+      &-wrapper{
+        padding: 0 20px;
+      }
     }
     &__text {
       justify-content: flex-start;

@@ -1,7 +1,7 @@
 @import "reset.css";
 @import "base.css";
 @import "commponents/swiper-bundle.min.css";
-@import "../fonts/fonts.css";
+/* @import "../fonts/fonts.css"; */
 @import "commponents/header.css";
 @import "commponents/collection.css";
 @import "commponents/wear.css";

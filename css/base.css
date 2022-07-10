@@ -1,8 +1,10 @@
 html{
     height: 100%;
+    scroll-snap-type: y proximity;
+
 }
 body{
-    font-family: 'Open Sans', serif;
+    font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: 400;
     background-color: #ffffff;

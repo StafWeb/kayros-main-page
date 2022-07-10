@@ -1,8 +1,8 @@
 .wear {
   height: 100vh;
-  min-height: 768px;
+  min-height: 780px;
   background-color: #f1ebe2;
-  scroll-snap-align: center;
+  z-index: 2;
   &__container {
     height: 100%;
   }
@@ -21,6 +21,7 @@
     z-index: 1;
     transition-property: transform;
     box-sizing: content-box;
+    overflow-x: auto;
   }
   &-slide {
     flex-shrink: 0;

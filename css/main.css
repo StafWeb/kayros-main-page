@@ -1,7 +1,7 @@
 @import "reset.css";
+@import "../fonts/fonts.css";
 @import "base.css";
 @import "commponents/swiper-bundle.min.css";
-@import "../fonts/fonts.css";
 .header {
   position: relative;
   height: 100vh;
@@ -594,7 +594,7 @@
   }
 }
 .collection {
-  scroll-snap-align: start;
+  margin-top: 40px;
 }
 .collection__title {
   font-family: "Playfair Display", serif;
@@ -605,7 +605,6 @@
   text-align: center;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  margin-top: 120px;
 }
 .collection__descr {
   font-weight: 400;
@@ -743,9 +742,9 @@
 }
 .wear {
   height: 100vh;
-  min-height: 768px;
+  min-height: 780px;
   background-color: #f1ebe2;
-  scroll-snap-align: center;
+  z-index: 2;
 }
 .wear__container {
   height: 100%;
@@ -766,6 +765,7 @@
   z-index: 1;
   transition-property: transform;
   box-sizing: content-box;
+  overflow-x: auto;
 }
 .swiper-slide {
   flex-shrink: 0;
@@ -980,9 +980,6 @@
   .swiper-slide {
     max-width: 260px;
   }
-}
-.offer {
-  scroll-snap-align: center;
 }
 .offer .container {
   padding: 120px 90px;
@@ -1747,4 +1744,35 @@ main {
     transform: translateX(0px);
     opacity: 1;
   }
+}
+.swiper-page {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.swiper-page-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  transition-property: transform;
+  box-sizing: content-box;
+}
+.swiper-page-slide {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  box-sizing: border-box;
+  border-radius: 0px;
+}
+
+.scroll {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }

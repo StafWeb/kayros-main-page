@@ -422,8 +422,8 @@
 }
 
 .burger_active::before {
-  -webkit-animation: rotate-burger-before 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards 0.4s, burger-anim 0.4s cubic-bezier(0.22, 1, 0.36, 1) none;
-          animation: rotate-burger-before 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards 0.4s, burger-anim 0.4s cubic-bezier(0.22, 1, 0.36, 1) none;
+  -webkit-animation: rotate-burger-before 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards 405ms, burger-anim 0.4s cubic-bezier(0.22, 1, 0.36, 1) none;
+          animation: rotate-burger-before 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards 405ms, burger-anim 0.4s cubic-bezier(0.22, 1, 0.36, 1) none;
 }
 
 .burger_active .header__burger-line {
@@ -432,8 +432,8 @@
 }
 
 .burger_active::after {
-  -webkit-animation: rotate-burger-after 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards 0.4s, burger-anim 0.4s cubic-bezier(0.22, 1, 0.36, 1) none 0.1s;
-          animation: rotate-burger-after 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards 0.4s, burger-anim 0.4s cubic-bezier(0.22, 1, 0.36, 1) none 0.1s;
+  -webkit-animation: rotate-burger-after 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards 415ms, burger-anim 0.4s cubic-bezier(0.22, 1, 0.36, 1) none 150ms;
+          animation: rotate-burger-after 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards 415ms, burger-anim 0.4s cubic-bezier(0.22, 1, 0.36, 1) none 150ms;
 }
 
 .rotate-anim {
@@ -442,8 +442,8 @@
 }
 
 .burger-anim {
-  -webkit-animation: burger-anim 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
-          animation: burger-anim 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+  -webkit-animation: burger-anim 0.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+          animation: burger-anim 0.4s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 @media (max-width: 1650px) {

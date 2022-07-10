@@ -408,8 +408,8 @@
   }
 }
 .burger_active::before {
-  animation: rotate-burger-before 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards
-      0.4s,
+  animation: rotate-burger-before 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards
+      405ms,
     burger-anim 0.4s cubic-bezier(0.22, 1, 0.36, 1) none;
   // top: 50%;
   // transform: rotate(45deg);
@@ -420,9 +420,9 @@
   animation: burger-anim 0.4s cubic-bezier(0.22, 1, 0.36, 1) both 0.1s;
 }
 .burger_active::after {
-  animation: rotate-burger-after 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards
-      0.4s,
-    burger-anim 0.4s cubic-bezier(0.22, 1, 0.36, 1) none 0.1s;
+  animation: rotate-burger-after 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards
+      415ms,
+    burger-anim 0.4s cubic-bezier(0.22, 1, 0.36, 1) none 150ms;
   // bottom: auto;
   // top: 50%;
   // transform: rotate(-45deg);
@@ -431,7 +431,7 @@
   animation: rotate-anim 1.5s linear infinite both;
 }
 .burger-anim {
-  animation: burger-anim 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation: burger-anim 0.4s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 

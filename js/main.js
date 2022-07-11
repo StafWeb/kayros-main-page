@@ -4,17 +4,17 @@ if (window.innerWidth > 950) {
     ScrollTrigger.create({
       trigger: ".collection",
       start: "bottom bottom",
-      pin:true,
+      pin: true,
       fastScrollEnd: 3000,
-      pinSpacing:false,
+      pinSpacing: false,
       scrub: 3,
       snap: 2,
     });
     ScrollTrigger.create({
       trigger: ".wear",
       start: "center center",
-      pin:true,
-      pinSpacing:false,
+      pin: true,
+      pinSpacing: false,
       scrub: 3,
       snap: 2,
     });
@@ -41,33 +41,33 @@ if (window.innerWidth > 950) {
 
 
 const headerNav = document.querySelector('.header__nav');
-const headerHover = document.querySelector('.header__hover')
 const searchForm = document.querySelector('.header__form');
 const userCab = document.querySelector('.header__user');
 const cart = document.querySelector('.header__cart');
 const burger = document?.querySelector('[data-burger]');
 const nav = document?.querySelector('[data-burger-menu]');
 const burgerLog = document.querySelector('.burger__logo');
-const headerLog = document.querySelector('.header__logo');
 const navItems = nav?.querySelectorAll('.burger-menu__item');
 const body = document.body;
+const scrollMain = document.querySelector('.main');
 const headerItem = document.querySelectorAll('.header__item');
+const headerLog = document.querySelector('.header__logo')
 
 
 burger.addEventListener('click', () => {
   body.classList.toggle('stop-scroll');
+  scrollMain.classList.toggle('stop-scroll');
   burger.classList.toggle('burger_active');
   nav.classList.toggle('burger-menu_active');
-  headerLog.classList.toggle('none');
   burgerLog.classList.toggle('burger__logo_active');
 });
 
 navItems.forEach(el => {
   el.addEventListener('click', () => {
     body.classList.remove('stop-scroll');
+    scrollMain.classList.remove('stop-scroll');
     burger.classList.remove('burger_active');
     nav.classList.remove('burger-menu_active');
-    headerLog.classList.remove('none');
     burgerLog.classList.remove('burger__logo_active');
   });
 });
@@ -128,6 +128,25 @@ function info(entry) {
   });
 };
 
+const btnTop = document.querySelector('.footer__bottom-btn');
+let rootElement = document.documentElement;
+function scrollToTop() {
+  rootElement.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  })
+};
+btnTop.addEventListener('click', scrollToTop);
+
+const btnSection = document.querySelector('.header__thumb');
+const block = document.querySelector('.collection');
+btnSection.addEventListener('click', function (e) {
+  e.preventDefault();
+  block.scrollIntoView({
+    behavior: "smooth",
+    block: "start"
+  });
+});
 
 
 // ScrollTrigger.normalizeScroll({

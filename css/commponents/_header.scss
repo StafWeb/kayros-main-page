@@ -7,13 +7,12 @@
     content: "";
     top: 0;
     left: 0;
-    z-index: -1;
     width: 100%;
     height: 91px;
     max-height: 91px;
     background-color: #ffffff;
-    opacity: 0;
-    transition: opacity 0.3s;
+    transform: translateY(-100%);
+    transition: transform 0.4s ease-in-out;
     &_active {
       opacity: 1;
       transition: opacity 0.3s;
@@ -41,6 +40,7 @@
     width: 92px;
     height: 45px;
     margin-right: 58px;
+    z-index: 1;
     svg {
       width: 100%;
       height: 100%;
@@ -54,9 +54,11 @@
     display: flex;
     align-items: center;
     will-change: animation;
+    z-index: 1;
     &-img {
       display: flex;
-      padding-bottom: 1px;
+      align-items: center;
+      justify-content: center;
       margin-right: 9px;
       width: 10px;
       height: 10px;
@@ -96,7 +98,7 @@
     position: relative;
     width: 219px;
     height: 34px;
-    z-index: 2;
+    z-index: 1;
     margin-right: 15px;
     animation-delay: 140ms;
     &-search {
@@ -124,6 +126,7 @@
     width: 40px;
     height: 40px;
     cursor: pointer;
+    z-index: 1;
   }
   &__user {
     animation-delay: 170ms;
@@ -157,7 +160,7 @@
     background-color: transparent;
     margin-left: 50px;
     cursor: pointer;
-    z-index: 4;
+    z-index: 7;
     animation-delay: 180ms;
     &-line {
       position: absolute;
@@ -230,19 +233,18 @@
   width: 100%;
   height: 100vh;
   visibility: hidden;
-  background-color: #ffffff;
   opacity: 0;
-  transform: translateX(-100%);
-  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-  z-index: 3;
+  background-color: #ffffff;
+  transition: all 0.7s ease-in-out;
+  z-index: 6;
   &_active {
     visibility: visible;
     opacity: 1;
-    transform: translateX(0);
-    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    transition: all 0.7s ease-in-out;
   }
   &__wrapper {
     display: flex;
+    position: relative;
     max-width: 1920px;
     padding: 0 90px;
     margin: 0 auto;
@@ -287,7 +289,7 @@
       line-height: 160%;
       letter-spacing: 0.05em;
       text-transform: uppercase;
-      color: #b0976e;
+      color: #333333;
     }
   }
   &__social {
@@ -317,17 +319,19 @@
   }
 }
 .burger__logo {
-  display: none;
-  opacity: 0;
+  visibility: visible;
+  position: absolute;
+  top: 23px;
+  left: 90px;
+  opacity: 1;
   width: 92px;
   height: 45px;
   margin-right: 58px;
-  transition: opacity 0.3s ease-in-out;
+  transition: all 0.3s ease;
   &_active {
-    display: block;
-    z-index: 4;
+    visibility: visible;
     opacity: 1;
-    transition: opacity 0.3s ease-in-out;
+    transition: all 0.3s ease;
   }
 }
 .logo-top_active {
@@ -346,7 +350,7 @@
 }
 
 .dropdown {
-  display: none;
+  display: flex;
   position: absolute;
   max-height: 230px;
   top: 91px;
@@ -355,8 +359,9 @@
   width: 100vw;
   background-color: #fff;
   border-top: 1px solid rgba(51, 51, 51, 0.1);
-  opacity: 0;
-  transition: opacity 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  transform: scaleY(0);
+  transform-origin: 100% 0%;
+  transition: transform 0.4s ease-in-out;
   &__wrapper {
     display: flex;
     justify-content: space-between;
@@ -370,6 +375,9 @@
     gap: 18px;
     font-family: "Open Sans";
     font-weight: 400;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+    transition-delay: 200ms;
   }
   &__title {
     font-family: "Open Sans";
@@ -379,7 +387,6 @@
     text-transform: uppercase;
     color: rgba(119, 119, 119, 0.7);
     margin-bottom: 5px;
-    cursor: default;
   }
   &__item {
     font-size: 15px;
@@ -398,6 +405,9 @@
   &__offer {
     width: 300px;
     height: 140px;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+    transition-delay: 200ms;
     & > img {
       width: 100%;
       height: 100%;
@@ -445,18 +455,23 @@
   .header__descr {
     font-size: 14px;
   }
-  .dropdown__wrapper {
+  .dropdown__wrapper,
+  .burger-menu__wrapper {
     max-width: 1400px;
   }
 }
 @media (max-width: 1200px) {
-  .container {
+  .container,
+  .burger-menu__wrapper {
     max-width: 1024px;
     padding: 0px 40px;
   }
   .dropdown__wrapper {
     max-width: 1024px;
     padding: 70px 40px;
+  }
+  .burger__logo {
+    left: 40px;
   }
 }
 @media (max-width: 950px) {
@@ -483,14 +498,18 @@
   .burger-menu {
     &__inner {
       margin-top: 20px;
+      & .btn-mob{
+        right: 0;
+      }
     }
     &__title {
       margin-bottom: 20px;
     }
     &__wrapper {
+      max-width: 768px;
       display: flex;
       flex-direction: column;
-      margin-top: 100px;
+      padding: 100px 20px 0 20px;
     }
     &__partner {
       display: none;
@@ -510,6 +529,9 @@
     &__tel {
       margin: 0;
     }
+  }
+  .burger__logo {
+    left: 20px;
   }
 }
 @media (max-width: 750px) {
@@ -541,9 +563,9 @@
 @media (min-width: 950px) {
   .header__top {
     &:hover .header__hover {
-      opacity: 1;
-      transition: opacity 0.5s;
-      animation: scale-up-ver-top 0.6s cubic-bezier(0.22, 1, 0.36, 1) both 0.1s;
+      visibility: visible;
+      transform: translateY(0);
+      transition: visibility 0.2s ease, transform 0.4s ease-in-out;
     }
     &:hover .header-logo-top {
       fill: #333333;
@@ -592,9 +614,16 @@
     }
   }
   .header__item:first-child:hover .dropdown {
-    display: flex;
-    opacity: 1;
-    transition: opacity 0.4s cubic-bezier(0.22, 1, 0.36, 1);
-    animation: scale-up-ver-top 0.6s cubic-bezier(0.22, 1, 0.36, 1) both 0.1s;
+    transform: scaleY(1);
+    transform-origin: 100% 0%;
+    transition: transform 0.4s ease-in-out;
+  }
+  .header__item:first-child:hover {
+    & .dropdown__list,
+    & .dropdown__offer {
+      opacity: 1;
+      transition: opacity 0.4s ease-in-out;
+      transition-delay: 200ms;
+    }
   }
 }

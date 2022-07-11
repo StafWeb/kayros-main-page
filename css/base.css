@@ -1,6 +1,5 @@
 html{
     height: 100%;
-    scroll-snap-type: y proximity;
 
 }
 body{

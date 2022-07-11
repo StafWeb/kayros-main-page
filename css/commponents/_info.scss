@@ -35,6 +35,7 @@
     align-items: center;
     .info-arrow {
       transition: all 0.3s ease;
+      margin-top: 3px;
     }
   }
   &__link {
@@ -146,6 +147,10 @@
       color:#b0976e;
       border-bottom: 1px solid rgb(176, 151, 110, 0.8);
       transition: all 0.3s ease;
+    }
+    &__end-link:active{
+      color: #927d54;
+      border-bottom-color: rgba(176, 151, 110, 1);
     }
   }
 }

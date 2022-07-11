@@ -12,15 +12,11 @@ if (window.innerWidth > 950) {
     });
     ScrollTrigger.create({
       trigger: ".wear",
-      start: "bottom bottom",
+      start: "center center",
       pin:true,
       pinSpacing:false,
       scrub: 3,
       snap: 2,
-    });
-    ScrollTrigger.create({
-      horizontal: true,
-      scroller: ".swiper-wrapper",
     });
   });
   let swiper = new Swiper('.swiper', {

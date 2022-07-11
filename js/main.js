@@ -5,6 +5,7 @@ if (window.innerWidth > 950) {
       trigger: ".collection",
       start: "bottom bottom",
       pin:true,
+      fastScrollEnd: 3000,
       pinSpacing:false,
       scrub: 3,
       snap: 2,
@@ -16,6 +17,10 @@ if (window.innerWidth > 950) {
       pinSpacing:false,
       scrub: 3,
       snap: 2,
+    });
+    ScrollTrigger.create({
+      horizontal: true,
+      scroller: ".swiper-wrapper",
     });
   });
   let swiper = new Swiper('.swiper', {

@@ -152,6 +152,15 @@
       display: none;
     }
   }
+  .swiper-wrapper{
+    overflow: hidden;
+    overflow-x: auto;
+    scrollbar-width: none;
+    scroll-snap-type: x mandatory;
+    &::-webkit-scrollbar {
+      height: 0;
+    }
+  }
   .swiper__card-link {
     font-size: 20px;
     bottom: 25px;

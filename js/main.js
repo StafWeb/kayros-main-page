@@ -1,15 +1,40 @@
-
 gsap.registerPlugin(ScrollTrigger);
-gsap.utils.toArray('.panel').forEach((panel, i) => {
-  ScrollTrigger.create({
-    trigger: "[data-trig]",
-    start: "bottom bottom",
-    pin:true,
-    pinSpacing:false,
-    scrub: 3,
-    snap: 2,
+if (window.innerWidth > 950) {
+  gsap.utils.toArray('.panel').forEach((panel, i) => {
+    ScrollTrigger.create({
+      trigger: ".collection",
+      start: "bottom bottom",
+      pin:true,
+      pinSpacing:false,
+      scrub: 3,
+      snap: 2,
+    });
+    ScrollTrigger.create({
+      trigger: ".wear",
+      start: "bottom bottom",
+      pin:true,
+      pinSpacing:false,
+      scrub: 3,
+      snap: 2,
+    });
   });
-});
+  let swiper = new Swiper('.swiper', {
+    direction: "horizontal",
+    speed: 1300,
+    slidesPerGroup: 2,
+    slidesPerView: "auto",
+    effect: "slide",
+    passiveListeners: true,
+    mousewheel: {
+      releaseOnEdges: true,
+      sensitivity: 1.3,
+      // thresholdTime: 100,
+      // thresholdDelta: 0.3,
+    }
+  });
+}
+
+
 
 
 
@@ -102,23 +127,6 @@ function info(entry) {
   });
 };
 
-let swiper = new Swiper('.swiper', {
-  direction: "horizontal",
-  speed: 600,
-  // parallax: true,
-  // centeredSlides: true,
-  slidesPerView: "auto",
-  effect: "slide",
-  // spaceBetween: 30,
-  // centeredSlidesBounds:true,
-  passiveListeners: true,
-  mousewheel: {
-    releaseOnEdges: true,
-    sensitivity: 1.3,
-    // thresholdTime: 100,
-    // thresholdDelta: 0.3,
-  }
-});
 
 
 // ScrollTrigger.normalizeScroll({

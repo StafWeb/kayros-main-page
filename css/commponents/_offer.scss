@@ -1,6 +1,6 @@
 .offer {
   // z-index: 3;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   position: relative;
   .container {
     padding: 120px 90px;
@@ -29,6 +29,12 @@
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: #b0976e;
+    transition: all 250ms ease;
+    &:active{
+      border-color: #927D54;
+      background-color: #927D54;
+      transition: all 250ms ease;
+    }
   }
 }
 .cards {
@@ -73,7 +79,7 @@
       border-radius: 50%;
       border: 1px solid transparent;
       margin-bottom: 15px;
-      &_active{
+      &_active {
         border: 1px solid rgba(176, 151, 110, 0.7);
       }
       &-inner {
@@ -97,7 +103,7 @@
     align-items: center;
     align-content: center;
     margin: 120px 20px 0 0;
-    & > svg{
+    & > svg {
       width: 40px;
       height: 40px;
       margin-bottom: 20px;
@@ -183,10 +189,9 @@
     &__item {
       flex-shrink: 0;
     }
-    &__button{
+    &__button {
       display: flex;
       margin: 200px 20px 0 0;
-
     }
   }
 }
@@ -212,7 +217,7 @@
       }
       &-link {
         margin-left: 20px;
-        &_active{
+        &_active {
           border-bottom: 1px solid rgba(176, 151, 110, 0.5);
         }
       }
@@ -221,8 +226,18 @@
         flex-shrink: 0;
       }
     }
-    &__button{
+    &__button {
       margin: 120px 20px 0 0;
+    }
+  }
+}
+
+@media (min-width: 950px) {
+  .offer {
+    &__button:hover {
+      background: #b0976e;
+      color: #FFFFFF;
+      transition: all 500ms ease;
     }
   }
 }

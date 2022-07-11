@@ -2,12 +2,12 @@
 gsap.registerPlugin(ScrollTrigger);
 gsap.utils.toArray('.panel').forEach((panel, i) => {
   ScrollTrigger.create({
-    trigger: ".collection",
-    start: "top top",
+    trigger: ".trig",
+    start: "bottom bottom",
     pin:true,
     pinSpacing:false,
-    scrub: 2,
-    snap: 1,
+    scrub: 3,
+    snap: 2,
   });
 });
 
@@ -114,7 +114,7 @@ let swiper = new Swiper('.swiper', {
   passiveListeners: true,
   mousewheel: {
     releaseOnEdges: true,
-    // sensitivity: 1.3,
+    sensitivity: 1.3,
     // thresholdTime: 100,
     // thresholdDelta: 0.3,
   }

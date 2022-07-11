@@ -597,6 +597,9 @@
   position: relative;
   background-color: #FFFFFF;
 }
+.collection .container {
+  padding: 40px 40px;
+}
 .collection__title {
   font-family: "Playfair Display", serif;
   font-style: normal;
@@ -606,7 +609,6 @@
   text-align: center;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  margin-top: 40px;
 }
 .collection__descr {
   font-weight: 400;

@@ -255,3 +255,8 @@
     background-color: rgba(176, 151, 110, 0.75);
   }
 }
+.stop-scroll {
+  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}

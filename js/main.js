@@ -8,7 +8,7 @@ if (window.innerWidth > 950) {
       pin: true,
       fastScrollEnd: 3000,
       pinSpacing: false,
-      scrub: 3,
+      // scrub: 1,
       snap: 2,
     });
     ScrollTrigger.create({
@@ -16,7 +16,7 @@ if (window.innerWidth > 950) {
       start: "center center",
       pin: true,
       pinSpacing: false,
-      scrub: 3,
+      // scrub: 1,
       snap: 2,
     });
     let swiper = new Swiper('.swiper', {

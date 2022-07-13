@@ -725,6 +725,12 @@
       width: 100%;
       margin-top: 39px;
       margin-bottom: 20px;
+      & > input {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 160%;
+        color: #333333;
+      }
     }
     &__account {
       position: relative;
@@ -750,8 +756,8 @@
       right: -10px;
       top: -7px;
       background-color: transparent;
-      &_active{
-        .inner-btn-icon::before{
+      &_active {
+        .inner-btn-icon::before {
           transform: rotate(90deg);
           transition: transform 0.3s ease-in-out;
         }

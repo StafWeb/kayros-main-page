@@ -861,6 +861,12 @@ input[type=search]::-webkit-search-results-decoration {
     margin-top: 39px;
     margin-bottom: 20px;
   }
+  .burger-menu__form > input {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 160%;
+    color: #333333;
+  }
   .burger-menu__account {
     position: relative;
     display: flex;

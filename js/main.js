@@ -1,43 +1,23 @@
-
 gsap.registerPlugin(ScrollTrigger);
-if (window.innerWidth > 950) {
-  gsap.utils.toArray('.panel').forEach((panel, i) => {
-    ScrollTrigger.create({
-      trigger: ".collection",
-      start: "bottom bottom",
-      pin: true,
-      fastScrollEnd: 3000,
-      pinSpacing: false,
-      // scrub: 1,
-      snap: 2,
-    });
-    ScrollTrigger.create({
-      trigger: ".wear",
-      start: "center center",
-      pin: true,
-      pinSpacing: false,
-      // scrub: 1,
-      snap: 2,
-    });
-    let swiper = new Swiper('.swiper', {
-      direction: "horizontal",
-      speed: 1300,
-      slidesPerGroup: 2,
-      slidesPerView: "auto",
-      effect: "slide",
-      passiveListeners: true,
-      mousewheel: {
-        releaseOnEdges: true,
-        sensitivity: 1.3,
-        // thresholdTime: 100,
-        // thresholdDelta: 0.3,
-      }
-    });
-  });
- 
-};
 
 
+
+const tl = gsap.timeline();
+tl.fromTo(".swiper-wrapper", { x: 0, y: 0 }, { x: '-50%' })
+const swiperBlock = document.querySelector(".wear");
+ScrollTrigger.create({
+  animation: tl,
+  trigger: ".wear",
+  // scroller:".swiper-block",
+  start: 'bottom bottom',
+  end: () => swiperBlock.offsetWidth / 1,
+  // snap: true,
+  scrub: true,
+  pin: true,
+  onUpdate() {
+    console.log("Update")
+  }
+});
 
 
 
@@ -91,8 +71,8 @@ footerBtn.forEach(function (btn) {
   });
 });
 const burgerBtn = document.querySelectorAll(".inner-btn");
-burgerBtn.forEach(function (btn){
-  btn.addEventListener('click', function (){
+burgerBtn.forEach(function (btn) {
+  btn.addEventListener('click', function () {
     btn.classList.toggle('inner-btn_active');
     this.nextElementSibling.classList.toggle("list_active");
   })
@@ -164,42 +144,3 @@ btnSection.addEventListener('click', function (e) {
     block: "start"
   });
 });
-
-
-// ScrollTrigger.normalizeScroll({
-//   type: "touch,wheel,pointer", // now the page will be drag-scrollable on desktop because "pointer" is in the list
-//   momentum: self => Math.min(3, self.velocityY / 1000) // dynamically control the duration of the momentum when flick-scrolling
-//  });
-
-// (function() {
-
-//   function scrollHorizontally(e) {
-
-//     var scrollPos = this.scrollLeft;  // Сколько прокручено по горизонтали, до прокрутки (не перемещать эту строку!)
-
-//     // Горизонтальная прокрутка
-//     e = window.event || e;
-//     var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
-//     this.scrollLeft -= (delta*10); // Multiplied by 10
-
-//     var widthElem = this.scrollWidth; // Ширина всего элемента
-//     var widthBrowser = document.documentElement.clientWidth;  // Ширина окна минус размер вертикального скролла
-
-
-//     // Прокрутка вверх, но элемент уже в крайней левой позиции, то двигаемся вверх
-//     if ((delta == 1 ) && (this.scrollLeft == 0)) return;
-//     // Прокрутка вниз, но элемент виден полностью. Или элемент до конца прокручен в правый край
-//     if ((widthBrowser >= widthElem) || (scrollPos == this.scrollLeft)) return;
-
-//     e.preventDefault(); // запрещает прокрутку по вертикали
-
-//   }
-
-
-//   var elems = document.querySelectorAll('.swiper-wrapper');
-//   for (var a = 0; a < elems.length; a++) {
-//     elems[a].addEventListener("mousewheel", scrollHorizontally, false);     // IE9, Chrome, Safari, Opera
-//     elems[a].addEventListener("DOMMouseScroll", scrollHorizontally, false); // Firefox
-//   }
-
-// })();

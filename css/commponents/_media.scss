@@ -13,14 +13,11 @@
   }
   &__item {
     position: relative;
-    overflow: hidden;
     height: 512px;
-    &-img {
-      position: absolute;
-      top: 0;
-      width: 100%;
-      transition: all 0.3s ease;
-    }
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    object-fit: cover;
   }
 }
 @media (max-width: 2000px) {

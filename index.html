@@ -129,12 +129,13 @@
         <div class="header__end">
           <form class="header__form">
             <input class="header__form-search" type="search">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle class="search-logo" cx="6.5" cy="6.5" r="5.5" stroke="white" stroke-width="2" />
-              <rect class="search-logo-rec" x="9" y="10.4142" width="2" height="7" transform="rotate(-45 9 10.4142)"
-                fill="white" />
-            </svg>
-
+            <button class="header__form-btn">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle class="search-logo" cx="6.5" cy="6.5" r="5.5" stroke="white" stroke-width="2" />
+                <rect class="search-logo-rec" x="9" y="10.4142" width="2" height="7" transform="rotate(-45 9 10.4142)"
+                  fill="white" />
+              </svg>
+            </button>
           </form>
           <div class="header__user">
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -233,10 +234,12 @@
           <div class="burger-menu__wrapper">
             <form class="burger-menu__form">
               <input class="burger-menu__form-search" type="search">
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="6.5" cy="6.5" r="5.5" stroke="#333333" stroke-width="2" />
-                <rect x="9" y="10.4142" width="2" height="7" transform="rotate(-45 9 10.4142)" fill="#333333" />
-              </svg>
+              <button class="burger-menu__form-btn">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="6.5" cy="6.5" r="5.5" stroke="#333333" stroke-width="2" />
+                  <rect x="9" y="10.4142" width="2" height="7" transform="rotate(-45 9 10.4142)" fill="#333333" />
+                </svg>
+              </button>
             </form>
             <button class="burger-menu__account">
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -263,8 +266,10 @@
                     <div class="inner-btn-icon"></div>
                   </button>
                   <ul class="burger-menu__list-one-inner first">
-                    <li class="burger-menu__item"><a href="#" class="burger-menu__item-link item-link">Вся одежда</a></li>
-                    <li class="burger-menu__item"><a href="#" class="burger-menu__item-link item-link">Коллекция 2022</a>
+                    <li class="burger-menu__item"><a href="#" class="burger-menu__item-link item-link">Вся одежда</a>
+                    </li>
+                    <li class="burger-menu__item"><a href="#" class="burger-menu__item-link item-link">Коллекция
+                        2022</a>
                     </li>
                     <li class="burger-menu__item"><a href="#" class="burger-menu__item-link item-link">Распродажа</a>
                     </li>
@@ -274,14 +279,15 @@
                   <a href="#" class="burger-menu__inner-title nav-title">Коллекции</a>
                 </div>
                 <div class="wrapper-list">
-                  <button class="inner-btn inner-btn-second" >
+                  <button class="inner-btn inner-btn-second">
                     <div class="inner-btn-icon"></div>
                   </button>
                   <ul class="burger-menu__list-one-inner">
                     <li class="burger-menu__item"><a href="#" class="burger-menu__item-link item-link">Бохо</a></li>
                     <li class="burger-menu__item"><a href="#" class="burger-menu__item-link item-link">Классическая</a>
                     </li>
-                    <li class="burger-menu__item"><a href="#" class="burger-menu__item-link item-link">Мужская одежда</a>
+                    <li class="burger-menu__item"><a href="#" class="burger-menu__item-link item-link">Мужская
+                        одежда</a>
                     </li>
                   </ul>
                 </div>
@@ -295,7 +301,8 @@
                   <ul class="burger-menu__list-one-inner">
                     <li class="burger-menu__item"><a href="#" class="burger-menu__item-link item-link">Платья,
                         сарафаны</a></li>
-                    <li class="burger-menu__item"><a href="#" class="burger-menu__item-link item-link">Блузки, туники</a>
+                    <li class="burger-menu__item"><a href="#" class="burger-menu__item-link item-link">Блузки,
+                        туники</a>
                     </li>
                     <li class="burger-menu__item"><a href="#" class="burger-menu__item-link item-link">Жакеты</a></li>
                     <li class="burger-menu__item"><a href="#" class="burger-menu__item-link item-link">Брюки, капри,
@@ -395,25 +402,22 @@
             </div>
             <div class="burger-menu__partner burger-menu__partner_mob">
               <div class="partner-img-wrapper">
-                <svg class="partner-logo" width="16" height="16" viewBox="0 0 16 16" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path class="partner-logo__path"
-                    d="M15.1579 12.6316V13.4737C15.1579 14.4042 14.4042 15.1579 13.4737 15.1579H1.68421C0.753684 15.1579 0 14.4042 0 13.4737V1.68421C0 0.753684 0.753684 0 1.68421 0H13.4737C14.4042 0 15.1579 0.753684 15.1579 1.68421V2.52632H7.57895C6.64842 2.52632 5.89474 3.28 5.89474 4.21053V10.9474C5.89474 11.8779 6.64842 12.6316 7.57895 12.6316H15.1579ZM7.57895 10.9474H16V4.21053H7.57895V10.9474ZM10.9474 8.8421C10.2484 8.8421 9.68421 8.27789 9.68421 7.57895C9.68421 6.88 10.2484 6.31579 10.9474 6.31579C11.6463 6.31579 12.2105 6.88 12.2105 7.57895C12.2105 8.27789 11.6463 8.8421 10.9474 8.8421Z"
-                    fill="#333333" />
-                </svg>
+                <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20.8421 17.3684V18.5263C20.8421 19.8058 19.8058 20.8421 18.5263 20.8421H2.31579C1.03632 20.8421 0 19.8058 0 18.5263V2.31579C0 1.03632 1.03632 0 2.31579 0H18.5263C19.8058 0 20.8421 1.03632 20.8421 2.31579V3.47368H10.4211C9.14158 3.47368 8.10526 4.51 8.10526 5.78947V15.0526C8.10526 16.3321 9.14158 17.3684 10.4211 17.3684H20.8421ZM10.4211 15.0526H22V5.78947H10.4211V15.0526ZM15.0526 12.1579C14.0916 12.1579 13.3158 11.3821 13.3158 10.4211C13.3158 9.46 14.0916 8.68421 15.0526 8.68421C16.0137 8.68421 16.7895 9.46 16.7895 10.4211C16.7895 11.3821 16.0137 12.1579 15.0526 12.1579Z" fill="#333333"/>
+                </svg>                  
               </div>
               <a href="#" class="burger-menu__partner-link partner-link">Стать партнёром</a>
             </div>
             <div class="burger-menu__social burger-menu__social_mob">
               <div class="burger-menu__links">
-                <a href="#" class="burger-menu__social-link social-link"><svg width="32" height="32"
-                    viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <a href="#" class="burger-menu__social-link social-link"><svg width="32" height="32" viewBox="0 0 32 32"
+                    fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path class="vk-logo"
                       d="M29.3333 0H2.66667C1.95942 0 1.28115 0.280952 0.781049 0.781049C0.280952 1.28115 0 1.95942 0 2.66667L0 29.3333C0 30.0406 0.280952 30.7189 0.781049 31.219C1.28115 31.719 1.95942 32 2.66667 32H29.3333C30.0406 32 30.7189 31.719 31.219 31.219C31.719 30.7189 32 30.0406 32 29.3333V2.66667C32 1.95942 31.719 1.28115 31.219 0.781049C30.7189 0.280952 30.0406 0 29.3333 0V0ZM24.68 18.8533C26.3733 20.9333 26.6667 21.3333 26.6667 21.72C26.6667 22.6667 25.5867 22.6667 24.44 22.6667H22.2267C21.8667 22.6667 21.3867 22.2267 20.64 21.5467C19.8933 20.8667 18.7733 19.8133 18.2267 19.8133C18.0533 19.8133 18.0133 20.1333 17.96 20.8533C17.9067 21.5733 17.84 22.6667 16.8933 22.6667H15.12C11.48 22.6667 5.78667 13.72 5.34667 10.8533C5.34387 10.8223 5.34387 10.791 5.34667 10.76C5.34488 10.6994 5.35529 10.639 5.37727 10.5824C5.39925 10.5259 5.43236 10.4743 5.47464 10.4308C5.51691 10.3873 5.56749 10.3527 5.62338 10.3291C5.67927 10.3055 5.73933 10.2933 5.8 10.2933H9.33333C9.43022 10.2888 9.52589 10.3164 9.60546 10.3719C9.68503 10.4273 9.74405 10.5075 9.77333 10.6C10.5333 12.76 12.0933 15.7867 13.2267 16C13.3261 15.2086 13.3617 14.4105 13.3333 13.6133C13.3333 11.5733 12.84 11.2267 12.84 11.2267C12.7838 11.2201 12.7295 11.2024 12.6802 11.1746C12.6308 11.1468 12.5876 11.1095 12.5528 11.0648C12.5181 11.0202 12.4926 10.969 12.4778 10.9144C12.463 10.8598 12.4592 10.8028 12.4667 10.7467C12.4533 10.0667 13.3333 9.33333 15.56 9.33333C16.8267 9.33333 17.28 9.33333 17.5733 9.66667C17.758 9.92027 17.8347 10.2367 17.7867 10.5467V14.5467C17.7867 15.48 18.04 15.9733 18.2267 15.9733C19.7347 14.4324 20.942 12.6237 21.7867 10.64C21.8024 10.5339 21.8553 10.4369 21.9358 10.3661C22.0164 10.2953 22.1194 10.2553 22.2267 10.2533H26.2267C26.3481 10.2602 26.462 10.3143 26.5442 10.4039C26.6264 10.4936 26.6703 10.6118 26.6667 10.7333C26.6667 11.08 26.36 11.6533 24.6533 14.3467C24.08 15.2667 23.32 16.4933 23.12 16.92C23.3733 17.3333 24.12 18.2 24.68 18.8533Z"
                       fill="#333333" />
                   </svg></a>
-                <a href="#" class="burger-menu__social-link social-link"><svg width="32" height="32"
-                    viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <a href="#" class="burger-menu__social-link social-link"><svg width="32" height="32" viewBox="0 0 32 32"
+                    fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path class="inst-logo"
                       d="M16.0002 18.6668C17.4729 18.6668 18.6668 17.4729 18.6668 16.0002C18.6668 14.5274 17.4729 13.3335 16.0002 13.3335C14.5274 13.3335 13.3335 14.5274 13.3335 16.0002C13.3335 17.4729 14.5274 18.6668 16.0002 18.6668Z"
                       fill="#333333" />
@@ -424,8 +428,8 @@
                       d="M29.3333 0H2.66667C1.95942 0 1.28115 0.280952 0.781049 0.781049C0.280952 1.28115 0 1.95942 0 2.66667L0 29.3333C0 30.0406 0.280952 30.7189 0.781049 31.219C1.28115 31.719 1.95942 32 2.66667 32H29.3333C30.0406 32 30.7189 31.719 31.219 31.219C31.719 30.7189 32 30.0406 32 29.3333V2.66667C32 1.95942 31.719 1.28115 31.219 0.781049C30.7189 0.280952 30.0406 0 29.3333 0V0ZM26.6667 20C26.6667 21.7681 25.9643 23.4638 24.714 24.714C23.4638 25.9643 21.7681 26.6667 20 26.6667H12C10.2319 26.6667 8.5362 25.9643 7.28596 24.714C6.03571 23.4638 5.33333 21.7681 5.33333 20V12C5.33333 10.2319 6.03571 8.5362 7.28596 7.28596C8.5362 6.03571 10.2319 5.33333 12 5.33333H20C21.7681 5.33333 23.4638 6.03571 24.714 7.28596C25.9643 8.5362 26.6667 10.2319 26.6667 12V20Z"
                       fill="#333333" />
                   </svg></a>
-                <a href="#" class="burger-menu__social-link social-link"><svg width="32" height="32"
-                    viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <a href="#" class="burger-menu__social-link social-link"><svg width="32" height="32" viewBox="0 0 32 32"
+                    fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path class="fb-logo"
                       d="M29.3333 0H2.66667C1.95942 0 1.28115 0.280952 0.781049 0.781049C0.280952 1.28115 0 1.95942 0 2.66667L0 29.3333C0 30.0406 0.280952 30.7189 0.781049 31.219C1.28115 31.719 1.95942 32 2.66667 32H29.3333C30.0406 32 30.7189 31.719 31.219 31.219C31.719 30.7189 32 30.0406 32 29.3333V2.66667C32 1.95942 31.719 1.28115 31.219 0.781049C30.7189 0.280952 30.0406 0 29.3333 0V0ZM21.84 8.70667H20.3733C18.7733 8.70667 18.1867 9.06667 18.1867 10.16V13.08H21.8267L21.0933 16.72H18.1867V26.9333H13.8133V16.7333H10.1733V13.08H13.8133V10.1733C13.7521 9.48735 13.8421 8.79628 14.0771 8.14889C14.312 7.50149 14.6862 6.91356 15.1732 6.42656C15.6602 5.93957 16.2482 5.56538 16.8956 5.33041C17.5429 5.09544 18.234 5.00541 18.92 5.06667H21.84V8.70667Z"
                       fill="#333333" />
@@ -463,51 +467,46 @@
       </div>
     </section>
     <section class="wear">
-        <div class="wear__text">
-          <h2 class="wear__text-title">Льняная одежда Kayros</h2>
-          <p class="wear__text-descr">пристально изучаем направления <br> и тенденции в мировой моде</p>
-        </div>
-        <div class="swiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="swiper__text">
-                <h2 class="swiper__text-title">Льняная одежда Kayros</h2>
-                <p class="swiper__text-descr">пристально изучаем направления и тенденции в мировой моде</p>
-                <div class="swiper__text-progress"></div>
-              </div>
+      <div class="wear__text">
+        <h2 class="wear__text-title">Льняная одежда Kayros</h2>
+        <p class="wear__text-descr">пристально изучаем направления <br> и тенденции в мировой моде</p>
+      </div>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="swiper__text">
+              <h2 class="swiper__text-title">Льняная одежда Kayros</h2>
+              <p class="swiper__text-descr">пристально изучаем направления и тенденции в мировой моде</p>
+              <div class="swiper__text-progress"></div>
             </div>
-            <div class="swiper-slide">
-              <div class="swiper__card">
-                <img src="./images/swiper-1.png" alt="wear" class="swiper__card-img">
-                <a class="swiper__card-link">Платья, сарафаны</a>
-              </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="swiper__card" style="background-image: url(./images/swiper-1.png);">
+              <a class="swiper__card-link">Платья, сарафаны</a>
             </div>
-            <div class="swiper-slide">
-              <div class="swiper__card">
-                <img src="./images/swiper-2.png" alt="wear" class="swiper__card-img">
-                <a class="swiper__card-link">Блузки, туники</a>
-              </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="swiper__card" style="background-image: url(./images/swiper-2.png);">
+              <a class="swiper__card-link">Блузки, туники</a>
             </div>
-            <div class="swiper-slide">
-              <div class="swiper__card">
-                <img src="./images/swiper-3.png" alt="wear" class="swiper__card-img">
-                <a class="swiper__card-link">Жакеты</a>
-              </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="swiper__card" style="background-image: url(./images/swiper-3.png);">
+              <a class="swiper__card-link">Жакеты</a>
             </div>
-            <div class="swiper-slide">
-              <div class="swiper__card">
-                <img src="./images/swiper-4.png" alt="wear" class="swiper__card-img">
-                <a class="swiper__card-link">Брюки, капри</a>
-              </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="swiper__card" style="background-image: url(./images/swiper-4.png);">
+              <a class="swiper__card-link">Брюки, капри</a>
             </div>
-            <div class="swiper-slide">
-              <div class="swiper__card">
-                <img src="./images/swiper-5.png" alt="wear" class="swiper__card-img">
-                <a class="swiper__card-link">Юбки</a>
-              </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="swiper__card" style="background-image: url(./images/swiper-5.png);">
+              <a class="swiper__card-link">Юбки</a>
             </div>
           </div>
         </div>
+      </div>
     </section>
     <section class="offer">
       <div class="container">
@@ -523,8 +522,7 @@
           </div>
           <ul class="cards__list">
             <li class="cards__item">
-              <div class="cards__image">
-                <img src="./images/offer-1.png" alt="cards">
+              <div class="cards__image" style="background-image: url(./images/offer-1.png);">
               </div>
               <ul class="cards__list-colors">
                 <li class="cards__item-color"> <span class="cards__item-color-inner"></span> </li>
@@ -536,8 +534,7 @@
               <span class="cards__price">11 000 руб.</span>
             </li>
             <li class="cards__item">
-              <div class="cards__image">
-                <img src="./images/offer-1.png" alt="cards">
+              <div class="cards__image" style="background-image: url(./images/offer-2.png);">
               </div>
               <ul class="cards__list-colors">
                 <li class="cards__item-color"> <span class="cards__item-color-inner"></span> </li>
@@ -549,8 +546,7 @@
               <span class="cards__price">11 000 руб.</span>
             </li>
             <li class="cards__item">
-              <div class="cards__image">
-                <img src="./images/offer-1.png" alt="cards">
+              <div class="cards__image" style="background-image: url(./images/offer-3.png);">
               </div>
               <ul class="cards__list-colors">
                 <li class="cards__item-color cards__item-color_active"> <span class="cards__item-color-inner"></span>
@@ -563,8 +559,7 @@
               <span class="cards__price">11 000 руб.</span>
             </li>
             <li class="cards__item">
-              <div class="cards__image">
-                <img src="./images/offer-1.png" alt="cards">
+              <div class="cards__image" style="background-image: url(./images/offer-4.png);">
               </div>
               <ul class="cards__list-colors">
                 <li class="cards__item-color"> <span class="cards__item-color-inner"></span> </li>
@@ -576,60 +571,7 @@
               <span class="cards__price">11 000 руб.</span>
             </li>
             <li class="cards__item">
-              <div class="cards__image">
-                <img src="./images/offer-1.png" alt="cards">
-              </div>
-              <ul class="cards__list-colors">
-                <li class="cards__item-color"> <span class="cards__item-color-inner"></span> </li>
-                <li class="cards__item-color"> <span class="cards__item-color-inner"></span> </li>
-                <li class="cards__item-color"> <span class="cards__item-color-inner"></span> </li>
-                <li class="cards__item-color"> <span class="cards__item-color-inner"></span> </li>
-              </ul>
-              <span class="cards__descr">9/1 платье</span>
-              <span class="cards__price">11 000 руб.</span>
-            </li>
-            <li class="cards__item">
-              <div class="cards__image">
-                <img src="./images/offer-1.png" alt="cards">
-              </div>
-              <ul class="cards__list-colors">
-                <li class="cards__item-color"> <span class="cards__item-color-inner"></span> </li>
-                <li class="cards__item-color"> <span class="cards__item-color-inner"></span> </li>
-                <li class="cards__item-color"> <span class="cards__item-color-inner"></span> </li>
-                <li class="cards__item-color"> <span class="cards__item-color-inner"></span> </li>
-              </ul>
-              <span class="cards__descr">9/1 платье</span>
-              <span class="cards__price">11 000 руб.</span>
-            </li>
-            <li class="cards__item">
-              <div class="cards__image">
-                <img src="./images/offer-1.png" alt="cards">
-              </div>
-              <ul class="cards__list-colors">
-                <li class="cards__item-color"> <span class="cards__item-color-inner"></span> </li>
-                <li class="cards__item-color"> <span class="cards__item-color-inner"></span> </li>
-                <li class="cards__item-color"> <span class="cards__item-color-inner"></span> </li>
-                <li class="cards__item-color"> <span class="cards__item-color-inner"></span> </li>
-              </ul>
-              <span class="cards__descr">9/1 платье</span>
-              <span class="cards__price">11 000 руб.</span>
-            </li>
-            <li class="cards__item">
-              <div class="cards__image">
-                <img src="./images/offer-1.png" alt="cards">
-              </div>
-              <ul class="cards__list-colors">
-                <li class="cards__item-color"> <span class="cards__item-color-inner"></span> </li>
-                <li class="cards__item-color"> <span class="cards__item-color-inner"></span> </li>
-                <li class="cards__item-color"> <span class="cards__item-color-inner"></span> </li>
-                <li class="cards__item-color"> <span class="cards__item-color-inner"></span> </li>
-              </ul>
-              <span class="cards__descr">9/1 платье</span>
-              <span class="cards__price">11 000 руб.</span>
-            </li>
-            <li class="cards__item">
-              <div class="cards__image">
-                <img src="./images/offer-1.png" alt="cards">
+              <div class="cards__image" style="background-image: url(./images/offer-2.png);">
               </div>
               <ul class="cards__list-colors">
                 <li class="cards__item-color"> <span class="cards__item-color-inner"></span> </li>
@@ -702,11 +644,11 @@
     </section>
     <section class="media">
       <ul class="media__list">
-        <li class="media__item"><img src="./images/swiper-1.png" alt="" class="media__item-img"></li>
-        <li class="media__item"><img src="./images/swiper-2.png" alt="" class="media__item-img"></li>
-        <li class="media__item"><img src="./images/swiper-3.png" alt="" class="media__item-img"></li>
-        <li class="media__item"><img src="./images/swiper-4.png" alt="" class="media__item-img"></li>
-        <li class="media__item"><img src="./images/swiper-5.png" alt="" class="media__item-img"></li>
+        <li class="media__item" style="background-image: url(./images/swiper-1.png);"></li>
+        <li class="media__item" style="background-image: url(./images/swiper-2.png);"></li>
+        <li class="media__item" style="background-image: url(./images/swiper-3.png);"></li>
+        <li class="media__item" style="background-image: url(./images/swiper-4.png);"></li>
+        <li class="media__item" style="background-image: url(./images/swiper-5.png);"></li>
       </ul>
     </section>
   </main>

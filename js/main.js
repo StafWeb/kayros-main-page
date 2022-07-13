@@ -1,16 +1,16 @@
 gsap.registerPlugin(ScrollTrigger);
-
+// gsap.defaults({ease: "none", duration: 2,});
 
 
 const tl = gsap.timeline();
-tl.fromTo(".swiper-wrapper", { x: 0, y: 0 }, { x: '-50%' })
+tl.fromTo(".swiper-wrapper", { x: 0, y: 0 }, { x: '-50%'})
 const swiperBlock = document.querySelector(".wear");
 ScrollTrigger.create({
   animation: tl,
   trigger: ".wear",
-  // scroller:".swiper-block",
   start: 'bottom bottom',
-  end: () => swiperBlock.offsetWidth / 1,
+  // end: () => swiperBlock.offsetWidth / 1,
+  end: "+=1900",
   // snap: true,
   scrub: true,
   pin: true,

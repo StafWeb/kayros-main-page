@@ -30,9 +30,9 @@
     text-transform: uppercase;
     color: #b0976e;
     transition: all 250ms ease;
-    &:active{
-      border-color: #927D54;
-      background-color: #927D54;
+    &:active {
+      border-color: #927d54;
+      background-color: #927d54;
       transition: all 250ms ease;
     }
   }
@@ -54,7 +54,7 @@
       letter-spacing: 0.1em;
       text-transform: uppercase;
       color: #777777;
-      &_active{
+      &_active {
         border-bottom: 1px solid rgba(176, 151, 110, 0.5);
       }
     }
@@ -75,6 +75,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 608px;
     &-color {
       position: relative;
       width: 20px;
@@ -94,6 +95,10 @@
         height: 16px;
         border-radius: 50%;
         background-color: rgba(176, 151, 110);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        object-fit: cover;
       }
     }
   }
@@ -122,12 +127,16 @@
     }
   }
   &__image {
+    position: relative;
+    min-width: 224px;
+    min-height: 336px;
     width: 100%;
     height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    object-fit: cover;
     margin-bottom: 25px;
-    img {
-      height: 100%;
-    }
   }
   &__descr {
     font-size: 16px;
@@ -150,6 +159,9 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 17px;
   }
+  .cards__item{
+    height: 549px;
+  }
 }
 @media (max-width: 1200px) {
   .offer {
@@ -160,8 +172,13 @@
   .cards__list {
     gap: 16px;
   }
+  .cards__item{
+    min-height: 224px;
+    min-height: 447px;
+  }
+  
 }
-@media (max-width: 950px) {
+@media (max-width: 991px) {
   .offer {
     .container {
       padding: 70px 0px;
@@ -239,12 +256,12 @@
   .offer {
     &__button:hover {
       background: #b0976e;
-      color: #FFFFFF;
+      color: #ffffff;
       transition: all 500ms ease;
     }
-    &__button:active{
-      background-color: #927D54;
-      border-color: #927D54;
+    &__button:active {
+      background-color: #927d54;
+      border-color: #927d54;
       transition: all 300ms ease;
     }
   }

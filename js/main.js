@@ -1,3 +1,4 @@
+
 gsap.registerPlugin(ScrollTrigger);
 if (window.innerWidth > 950) {
   gsap.utils.toArray('.panel').forEach((panel, i) => {
@@ -18,22 +19,24 @@ if (window.innerWidth > 950) {
       scrub: 3,
       snap: 2,
     });
+    let swiper = new Swiper('.swiper', {
+      direction: "horizontal",
+      speed: 1300,
+      slidesPerGroup: 2,
+      slidesPerView: "auto",
+      effect: "slide",
+      passiveListeners: true,
+      mousewheel: {
+        releaseOnEdges: true,
+        sensitivity: 1.3,
+        // thresholdTime: 100,
+        // thresholdDelta: 0.3,
+      }
+    });
   });
-  let swiper = new Swiper('.swiper', {
-    direction: "horizontal",
-    speed: 1300,
-    slidesPerGroup: 2,
-    slidesPerView: "auto",
-    effect: "slide",
-    passiveListeners: true,
-    mousewheel: {
-      releaseOnEdges: true,
-      sensitivity: 1.3,
-      // thresholdTime: 100,
-      // thresholdDelta: 0.3,
-    }
-  });
-}
+ 
+};
+
 
 
 
@@ -52,7 +55,7 @@ const body = document.body;
 const scrollMain = document.querySelector('.main');
 const headerItem = document.querySelectorAll('.header__item');
 const headerLog = document.querySelector('.header__logo')
-
+const burgerInner = document.querySelector('[data-burger-inner]');
 
 burger.addEventListener('click', () => {
   body.classList.toggle('stop-scroll');
@@ -60,8 +63,16 @@ burger.addEventListener('click', () => {
   burger.classList.toggle('burger_active');
   nav.classList.toggle('burger-menu_active');
   burgerLog.classList.toggle('burger__logo_active');
+  burgerInner.classList.toggle('burger_active')
 });
-
+burgerInner.addEventListener('click', () => {
+  burgerInner.classList.remove('burger_active')
+  body.classList.remove('stop-scroll');
+  scrollMain.classList.remove('stop-scroll');
+  burger.classList.remove('burger_active');
+  nav.classList.remove('burger-menu_active');
+  burgerLog.classList.remove('burger__logo_active');
+})
 navItems.forEach(el => {
   el.addEventListener('click', () => {
     body.classList.remove('stop-scroll');
@@ -79,7 +90,13 @@ footerBtn.forEach(function (btn) {
     this.nextElementSibling.classList.toggle("list_active");
   });
 });
-
+const burgerBtn = document.querySelectorAll(".inner-btn");
+burgerBtn.forEach(function (btn){
+  btn.addEventListener('click', function (){
+    btn.classList.toggle('inner-btn_active');
+    this.nextElementSibling.classList.toggle("list_active");
+  })
+})
 let options = {
   threshold: [0.5]
 };

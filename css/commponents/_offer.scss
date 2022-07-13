@@ -54,6 +54,9 @@
       letter-spacing: 0.1em;
       text-transform: uppercase;
       color: #777777;
+      &_active{
+        border-bottom: 1px solid rgba(176, 151, 110, 0.5);
+      }
     }
   }
   &__list {
@@ -232,7 +235,7 @@
   }
 }
 
-@media (min-width: 950px) {
+@media (min-width: 1000px) {
   .offer {
     &__button:hover {
       background: #b0976e;

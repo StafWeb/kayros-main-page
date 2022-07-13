@@ -155,7 +155,7 @@
     }
   }
 }
-@media (max-width: 950px) {
+@media (max-width: 1000px) {
   .footer {
     .container {
       display: flex;
@@ -211,7 +211,7 @@
     z-index: 2;
     background: transparent;
     transition: transform 0.3s ease-in-out;
-    & svg {
+    & > svg {
       width: 14px;
       height: 8px;
       z-index: -1;

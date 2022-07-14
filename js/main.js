@@ -1,49 +1,77 @@
 gsap.registerPlugin(ScrollTrigger);
-// watch the free video on how this demo was made
-// https://www.snorkl.tv/scrolltrigger-smooth-scroll/
 
+let pageContainer = document.querySelector(".scrolsmooth");
 
-// let locoScroll = new LocomotiveScroll({
-//   el: document.querySelector(".main"),
-//   smooth: true
-// }); 
+/* SMOOTH SCROLL */
+const scroller = new LocomotiveScroll({
+  el: pageContainer,
+  smooth: true
+});
 
-// // each time Locomotive Scroll updates, tell ScrollTrigger to update too (sync positioning)
+scroller.on("scroll", ScrollTrigger.update);
 
-
-
-//        locoScroll.on("scroll", ScrollTrigger.update);
-
-// // tell ScrollTrigger to use these proxy methods for the ".smooth-scroll" element since Locomotive Scroll is hijacking things
-//     ScrollTrigger.scrollerProxy(".main", {
-//         scrollTop(value) {
-//           return arguments.length ? locoScroll.scrollTo(value, 0, 0) :    locoScroll.scroll.instance.scroll.x;
-//   }, // we don't have to define a scrollLeft because we're only scrolling vertically.
-//   getBoundingClientRect() {
-//     return {top: 0, left: 0, width: window.innerWidth, height: window.innerHeight};
-//   },
-//   // LocomotiveScroll handles things completely differently on mobile devices - it doesn't even transform the container at all! So to get the correct behavior and avoid jitters, we should pin things with position: fixed on mobile. We sense it by checking to see if there's a transform applied to the container (the LocomotiveScroll-controlled element).
-//   pinType: document.querySelector(".main").style.transform ? "transform" : "fixed"
-// });
-
-// const tl = gsap.timeline();
+ScrollTrigger.scrollerProxy(pageContainer, {
+  scrollTop(value) {
+    return arguments.length
+      ? scroller.scrollTo(value, 0, 0)
+      : scroller.scroll.instance.scroll.y;
+  },
+  getBoundingClientRect() {
+    return {
+      left: 0,
+      top: 0,
+      width: window.innerWidth,
+      height: window.innerHeight
+    };
+  },
+  pinType: pageContainer.style.transform ? "transform" : "fixed"
+});
+let pinBoxes = document.querySelectorAll(".pin-wrap > *");
+let pinWrap = document.querySelector(".pin-wrap");
+let pinWrapWidth = pinWrap.offsetWidth;
+let horizontalScrollLength = pinWrapWidth - window.innerWidth;
 let swiperBlock = document.querySelector(".swiper-wrapper");
 let mySwiperBlock = gsap.to(".swiper-wrapper", {
-  x: '-50%',
+  x: -horizontalScrollLength,
   ease: "none",
-  duration: 6,
   scrollTrigger: {
     trigger: ".wear",
     start: 'bottom bottom',
+    scroller: pageContainer,
     // end: () => swiperBlock.offsetWidth / 1,
-    scrub: true,
+    scrub: 1,
     pin: true,
-    end: `+=${swiperBlock.offsetWidth}`,
+    end: pinWrapWidth,
     onUpdate() {
       console.log("Update")
     }
   }
 });
+
+ScrollTrigger.addEventListener("refresh", () => scroller.update()); //locomotive-scroll
+
+ScrollTrigger.refresh();
+
+
+
+
+// let swiperBlock = document.querySelector(".swiper-wrapper");
+// let mySwiperBlock = gsap.to(".swiper-wrapper", {
+//   x: '-50%',
+//   ease: "none",
+//   duration: 6,
+//   scrollTrigger: {
+//     trigger: ".wear",
+//     start: 'bottom bottom',
+//     // end: () => swiperBlock.offsetWidth / 1,
+//     scrub: 0.4,
+//     pin: true,
+//     end: `+=${swiperBlock.offsetWidth}`,
+//     onUpdate() {
+//       console.log("Update")
+//     }
+//   }
+// });
 // ScrollTrigger.create({
 //   animation: tl ,
 //   trigger: ".wear",

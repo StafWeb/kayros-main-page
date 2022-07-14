@@ -196,7 +196,7 @@ input[type=search]::-webkit-search-results-decoration {
   height: 10px;
   padding-bottom: 1px;
   transform: rotate(0);
-  transition: transform 0.4s ease-in-out;
+  transition: transform 0.3s ease;
 }
 .header__item-link {
   font-family: "Open Sans";
@@ -447,6 +447,7 @@ input[type=search]::-webkit-search-results-decoration {
   align-items: center;
   width: 100%;
   height: 91px;
+  flex-shrink: 0;
 }
 .burger-menu__header > span {
   font-weight: 400;
@@ -1033,8 +1034,8 @@ input[type=search]::-webkit-search-results-decoration {
     transition-delay: 200ms;
   }
   .header__item:first-child:hover .header__item-img {
-    transform: rotate(90deg);
-    transition: transform 0.4s ease-in-out;
+    -webkit-animation: rotate-list-img 0.3s ease both;
+            animation: rotate-list-img 0.3s ease both;
   }
   .header__item:first-child:hover .dropdown__list, .header__item:first-child:hover .dropdown__offer {
     opacity: 1;
@@ -2236,6 +2237,22 @@ input[type=search]::-webkit-search-results-decoration {
   100% {
     transform: translateY(3px) scaleY(0.2);
     transform-origin: 100% 0%;
+  }
+}
+@-webkit-keyframes rotate-list-img {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
+}
+@keyframes rotate-list-img {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(90deg);
   }
 }
 @-webkit-keyframes info-arrow {

@@ -44,6 +44,14 @@
   transform-origin: 100% 0%;
 }
 }
+@keyframes rotate-list-img{
+  0%{
+    transform: rotate(0);
+  }
+  100%{
+    transform: rotate(90deg);
+  }
+}
 // @keyframes scale-up-ver-top {
 //   0% {
 //     // height: 0;

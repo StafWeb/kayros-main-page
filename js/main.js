@@ -3,7 +3,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 if (window.screen.width > 1000) {
   const tl = gsap.timeline();
-  tl.fromTo(".swiper-wrapper", { x: 0, y: 0 }, { x: '-50%', delay: 0.3 });
+  tl.fromTo(".swiper-wrapper", { x: 0, y: 0 }, { x: '-50%', delay: 0.1});
   const swiperBlock = document.querySelector(".wear");
   ScrollTrigger.create({
     animation: tl,

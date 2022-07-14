@@ -3,7 +3,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 if (window.screen.width > 1000) {
   const tl = gsap.timeline();
-  tl.fromTo(".swiper-wrapper", { x: 0, y: 0 }, { x: '-50%' });
+  tl.fromTo(".swiper-wrapper", { x: 0, y: 0 }, { x: '-50%', delay: 0.6 });
   const swiperBlock = document.querySelector(".wear");
   ScrollTrigger.create({
     animation: tl,
@@ -21,7 +21,7 @@ if (window.screen.width > 1000) {
   // hedAnim.delay(1);
   hedAnim.from(".header__logo", { opacity: 0, duration: 0.6, ease: "power4.out" })
     .from(".header__item-img", { opacity: 0, rotate: -90, duration: 0.4, ease: "power4.out" }, "-=0.5")
-    .from(".first-link", { opacity: 0, duration: 0.4, ease: "expo.out" }, "-=0.3")
+    .from(".first-link", { opacity: 0, duration: 0.5, ease: "expo.out" }, "-=0.4")
     .from(".second-link", { opacity: 0, x: -5, duration: 0.6, ease: "power4.out", })
     .from(".header__form", { opacity: 0, x: -5, duration: 0.6, ease: "power4.out" }, "-=0.5")
     .from(".header__user", { opacity: 0, x: -5, duration: 0.6, ease: "power4.out" }, "-=0.5")

@@ -1169,6 +1169,10 @@ input[type=search]::-webkit-search-results-decoration {
   height: 100vh;
   background-color: #f1ebe2;
 }
+.wear__container {
+  width: 100%;
+  height: 100%;
+}
 .wear__text {
   display: none;
 }
@@ -2070,6 +2074,7 @@ input[type=search]::-webkit-search-results-decoration {
   }
   .footer__list {
     display: none;
+    transition: all 0.4s ease-in-out;
     margin-bottom: 27px;
   }
   .footer__nav {
@@ -2118,8 +2123,31 @@ input[type=search]::-webkit-search-results-decoration {
 }
 .list_active {
   display: flex;
+  -webkit-animation: list-active 0.3s ease-in-out both;
+          animation: list-active 0.3s ease-in-out both;
 }
 
+@-webkit-keyframes list-active {
+  0% {
+    transform: scaleY(0);
+    transform-origin: 100% 0%;
+  }
+  100% {
+    transform: scaleY(1);
+    transform-origin: 100% 0%;
+  }
+}
+
+@keyframes list-active {
+  0% {
+    transform: scaleY(0);
+    transform-origin: 100% 0%;
+  }
+  100% {
+    transform: scaleY(1);
+    transform-origin: 100% 0%;
+  }
+}
 .social-link {
   transition: opacity 0.3s ease;
 }

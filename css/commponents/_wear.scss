@@ -2,7 +2,10 @@
   width: 200vw;
   height: 100vh;
   background-color: #f1ebe2;
-
+  &__container{
+    width: 100%;
+    height: 100%;
+  }
   &__text {
     display: none;
   }

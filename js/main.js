@@ -17,8 +17,8 @@ if (window.screen.width > 1000) {
       console.log("Update")
     }
   });
-  let hedAnim = gsap.timeline();
-  hedAnim.delay(1);
+  let hedAnim = gsap.timeline({delay: 0.7});
+  // hedAnim.delay(1);
   hedAnim.from(".header__logo", { opacity: 0, duration: 0.6, ease: "power4.out" })
     .from(".header__item-img", { opacity: 0, rotate: -90, duration: 0.4, ease: "power4.out" }, "-=0.5")
     .from(".first-link", { opacity: 0, duration: 0.4, ease: "expo.out" }, "-=0.3")

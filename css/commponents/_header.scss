@@ -927,4 +927,7 @@
       transition-delay: 400ms;
     }
   }
+  .head-thumb{
+    animation: head-thumb 0.6s linear infinite both;
+  }
 }

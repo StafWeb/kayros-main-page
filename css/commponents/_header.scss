@@ -230,6 +230,7 @@
 }
 .burger-menu {
   position: fixed;
+  z-index: -10;
   top: 0;
   left: 0;
   width: 100%;
@@ -245,6 +246,7 @@
     overflow-y: auto;
     opacity: 1;
     transition: all 0.7s ease-in-out;
+    z-index: 5;
   }
   &__btn {
     display: block;
@@ -297,6 +299,12 @@
     justify-content: space-around;
     overflow-y: auto;
     margin: auto 0;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
+    &::-webkit-scrollbar {
+      height: 0 !important;
+    }
   }
   &__header {
     display: flex;
@@ -630,6 +638,7 @@
     overflow-x: hidden;
     &__header {
       height: 60px;
+      flex-shrink: 0;
     }
     &::before {
       position: absolute;
@@ -643,6 +652,7 @@
     &__inner {
       width: 100%;
       margin: 0;
+      flex-shrink: 0;
       &-title {
         font-weight: 400;
         font-size: 16px;
@@ -676,6 +686,7 @@
       align-items: center;
       width: 100%;
       height: 40px;
+      flex-shrink: 0;
       &_mob {
         display: flex;
         & > .partner-img-wrapper {
@@ -695,6 +706,7 @@
       gap: 14px;
       margin-bottom: 20px;
       margin-left: 20px;
+      transition: all 0.3s ease;
       &-one > .burger-menu__title-wrapper:nth-child(1) {
         display: block;
       }
@@ -707,6 +719,7 @@
           gap: 14px;
           margin-bottom: 20px;
           margin-left: 20px;
+          transition: all 0.3s ease;
         }
       }
     }
@@ -731,14 +744,18 @@
       display: flex;
       flex-direction: column;
       align-items: start;
+      justify-content: flex-start;
       overflow-x: hidden;
+      overflow-y: auto;
       margin: 0;
+      height: 100%;
     }
     &__form {
       display: block;
       width: 100%;
       margin-top: 39px;
       margin-bottom: 20px;
+      flex-shrink: 0;
       & > input {
         font-weight: 400;
         font-size: 14px;
@@ -753,6 +770,7 @@
       width: 100%;
       height: 40px;
       margin-bottom: 42px;
+      flex-shrink: 0;
       &::after {
         position: absolute;
         content: "";
@@ -899,7 +917,7 @@
     transition-delay: 200ms;
   }
   .header__item:first-child:hover .header__item-img {
-    transform: rotate(180deg);
+    transform: rotate(90deg);
     transition: transform 0.4s ease-in-out;
   }
   .header__item:first-child:hover {

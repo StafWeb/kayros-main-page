@@ -11,29 +11,27 @@ if (window.screen.width > 1000) {
     start: 'bottom bottom',
     // end: () => swiperBlock.offsetWidth / 1,
     end: "+=1900",
-    snap: true,
-    duration: 2,
     scrub: true,
     pin: true,
     onUpdate() {
       console.log("Update")
     }
   });
+  let hedAnim = gsap.timeline();
+  hedAnim.delay(1);
+  hedAnim.from(".header__logo", { opacity: 0, duration: 0.6, ease: "power4.out" })
+    .from(".header__item-img", { opacity: 0, rotate: -90, duration: 0.4, ease: "power4.out" }, "-=0.5")
+    .from(".first-link", { opacity: 0, duration: 0.4, ease: "expo.out" }, "-=0.3")
+    .from(".second-link", { opacity: 0, x: -5, duration: 0.6, ease: "power4.out", })
+    .from(".header__form", { opacity: 0, x: -5, duration: 0.6, ease: "power4.out" }, "-=0.5")
+    .from(".header__user", { opacity: 0, x: -5, duration: 0.6, ease: "power4.out" }, "-=0.5")
+    .from(".header__cart", { opacity: 0, x: -5, duration: 0.6, ease: "power4.out" }, "-=0.5")
+    .from(".header__burger", { opacity: 0, x: -5, duration: 0.6, ease: "power4.out" }, "-=0.5")
+    .from(".header__title", { opacity: 0, y: 40, duration: 0.6, ease: "power4.out" }, "-=0.6")
+    .from(".header__descr", { opacity: 0, y: 30, duration: 0.6, ease: "power4.out" }, "-=0.5")
+    .from(".header__thumb", { opacity: 0, y: 20, duration: 0.6, ease: "power4.out" }, "-=0.5");
 };
-let hedAnim = gsap.timeline();
-hedAnim.delay(0.7);
-hedAnim.from(".header__background", {scale: 0, duration: 0.4})
-.from(".header__logo", {opacity: 0, duration: 0.6, ease: "power4.out"})
-.from(".header__item-img", {opacity:0, rotate: -90, duration: 0.4, ease: "power4.out"}, "-=0.5")
-.from(".first-link", {opacity:0, duration:0.4, ease: "expo.out"}, "-=0.3")
-.from(".second-link", {opacity:0, x: -5, duration:0.6, ease: "power4.out",})
-.from(".header__form", {opacity:0, x: -5, duration:0.6, ease: "power4.out" }, "-=0.5")
-.from(".header__user", {opacity:0, x: -5, duration:0.6, ease: "power4.out" }, "-=0.5")
-.from(".header__cart", {opacity:0, x: -5, duration:0.6, ease: "power4.out" }, "-=0.5")
-.from(".header__burger", {opacity:0, x: -5, duration:0.6, ease: "power4.out" }, "-=0.5")
-.from(".header__title", {opacity:0, y: 40, duration:0.6, ease: "power4.out"}, "-=0.6")
-.from(".header__descr", {opacity:0, y: 30, duration:0.6, ease: "power4.out"}, "-=0.5")
-.from(".header__thumb", {opacity:0, y: 20, duration:0.6, ease: "power4.out"}, "-=0.5")
+
 
 
 
@@ -91,9 +89,9 @@ burgerBtn.forEach(function (btn) {
     this.nextElementSibling.classList.toggle("list_active");
   })
 })
-let options = {
-  threshold: [0.5]
-};
+// let options = {
+//   threshold: [0.5]
+// };
 // let observerHead = new IntersectionObserver(headerAnim, options);
 // observerHead.observe(headerLog);
 // for (let i of headerItem) {
@@ -111,33 +109,33 @@ let options = {
 //   });
 // };
 
-const headerTitle = document.querySelector('.header__title');
-const headerDescr = document.querySelector('.header__descr');
-const headerThumb = document.querySelector('.header__thumb');
-let observerText = new IntersectionObserver(textAnim, options);
-observerText.observe(headerTitle);
-observerText.observe(headerDescr);
-observerText.observe(headerThumb);
-function textAnim(entry) {
-  entry.forEach(change => {
-    if (change.isIntersecting) {
-      change.target.classList.add('header-text-anim');
-    }
-  });
-};
+// const headerTitle = document.querySelector('.header__title');
+// const headerDescr = document.querySelector('.header__descr');
+// const headerThumb = document.querySelector('.header__thumb');
+// let observerText = new IntersectionObserver(textAnim, options);
+// observerText.observe(headerTitle);
+// observerText.observe(headerDescr);
+// observerText.observe(headerThumb);
+// function textAnim(entry) {
+//   entry.forEach(change => {
+//     if (change.isIntersecting) {
+//       change.target.classList.add('header-text-anim');
+//     }
+//   });
+// };
 
-let observerTwo = new IntersectionObserver(info, options);
-let titles = document.querySelectorAll('[data-info]');
-for (let tit of titles) {
-  observerTwo.observe(tit);
-};
-function info(entry) {
-  entry.forEach(change => {
-    if (change.isIntersecting) {
-      change.target.classList.add('fadeindown');
-    }
-  });
-};
+// let observerTwo = new IntersectionObserver(info, options);
+// let titles = document.querySelectorAll('[data-info]');
+// for (let tit of titles) {
+//   observerTwo.observe(tit);
+// };
+// function info(entry) {
+//   entry.forEach(change => {
+//     if (change.isIntersecting) {
+//       change.target.classList.add('fadeindown');
+//     }
+//   });
+// };
 
 const btnTop = document.querySelector('.footer__bottom-btn');
 let rootElement = document.documentElement;

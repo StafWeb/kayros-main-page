@@ -140,13 +140,18 @@
   }
 }
 @media (max-width: 1000px) {
+  .swiper{
+    width: 100%;
+  }
   .swiper-slide {
+    flex-shrink: 0;
     max-width: 307px;
     &:first-child {
       display: none;
     }
   }
   .swiper-wrapper {
+    display: flex;
     overflow: hidden;
     overflow-x: auto;
     scrollbar-width: none;
@@ -165,7 +170,7 @@
     flex-direction: column;
   }
   .wear {
-    max-height: 722px;
+    width: 100%;
     &__text {
       display: flex;
       flex-direction: column;

@@ -138,8 +138,7 @@
     margin-left: 8px;
     animation-delay: 175ms;
     span {
-      width: 18px;
-      height: 19px;
+      padding: 1px 5px;
       position: absolute;
       top: 0;
       right: 0;
@@ -147,7 +146,7 @@
       justify-items: center;
       align-items: center;
       background-color: #bf5151;
-      border-radius: 50%;
+      border-radius: 50px;
       font-weight: 400;
       font-size: 12px;
       text-transform: uppercase;

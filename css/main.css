@@ -275,8 +275,7 @@ input[type=search]::-webkit-search-results-decoration {
           animation-delay: 175ms;
 }
 .header__cart span {
-  width: 18px;
-  height: 19px;
+  padding: 1px 5px;
   position: absolute;
   top: 0;
   right: 0;
@@ -284,7 +283,7 @@ input[type=search]::-webkit-search-results-decoration {
   justify-items: center;
   align-items: center;
   background-color: #bf5151;
-  border-radius: 50%;
+  border-radius: 50px;
   font-weight: 400;
   font-size: 12px;
   text-transform: uppercase;

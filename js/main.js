@@ -1,39 +1,91 @@
 gsap.registerPlugin(ScrollTrigger);
-// gsap.defaults({ease: "none", duration: 2,});
+// watch the free video on how this demo was made
+// https://www.snorkl.tv/scrolltrigger-smooth-scroll/
 
-if (window.screen.width > 1000) {
-  const tl = gsap.timeline();
-  tl.fromTo(".swiper-wrapper", { x: 0, y: 0 }, { x: '-50%', delay: 0.1});
-  const swiperBlock = document.querySelector(".wear");
-  ScrollTrigger.create({
-    animation: tl,
+
+// let locoScroll = new LocomotiveScroll({
+//   el: document.querySelector(".main"),
+//   smooth: true
+// }); 
+
+// // each time Locomotive Scroll updates, tell ScrollTrigger to update too (sync positioning)
+
+
+
+//        locoScroll.on("scroll", ScrollTrigger.update);
+
+// // tell ScrollTrigger to use these proxy methods for the ".smooth-scroll" element since Locomotive Scroll is hijacking things
+//     ScrollTrigger.scrollerProxy(".main", {
+//         scrollTop(value) {
+//           return arguments.length ? locoScroll.scrollTo(value, 0, 0) :    locoScroll.scroll.instance.scroll.x;
+//   }, // we don't have to define a scrollLeft because we're only scrolling vertically.
+//   getBoundingClientRect() {
+//     return {top: 0, left: 0, width: window.innerWidth, height: window.innerHeight};
+//   },
+//   // LocomotiveScroll handles things completely differently on mobile devices - it doesn't even transform the container at all! So to get the correct behavior and avoid jitters, we should pin things with position: fixed on mobile. We sense it by checking to see if there's a transform applied to the container (the LocomotiveScroll-controlled element).
+//   pinType: document.querySelector(".main").style.transform ? "transform" : "fixed"
+// });
+
+// const tl = gsap.timeline();
+let swiperBlock = document.querySelector(".swiper-wrapper");
+let mySwiperBlock = gsap.to(".swiper-wrapper", {
+  x: '-50%',
+  ease: "none",
+  duration: 6,
+  scrollTrigger: {
     trigger: ".wear",
     start: 'bottom bottom',
     // end: () => swiperBlock.offsetWidth / 1,
-    end: "+=1900",
     scrub: true,
     pin: true,
+    end: `+=${swiperBlock.offsetWidth}`,
     onUpdate() {
       console.log("Update")
     }
+  }
+});
+// ScrollTrigger.create({
+//   animation: tl ,
+//   trigger: ".wear",
+//   // scroller:".swiper-wrapper",
+//   start: 'bottom bottom',
+//   // end: () => swiperBlock.offsetWidth / 1,
+//   end: "+=1500",
+//   scrub: true,
+
+//   pin: true,
+//   onUpdate() {
+//     console.log("Update")
+//   }
+// });
+// ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+// ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+// ScrollTrigger.refresh();
+
+if (window.screen.width > 1000) {
+  function animHead() {
+    let hedAnim = gsap.timeline({ delay: 0.9 });
+    // hedAnim.delay(1);
+    hedAnim.from(".header__logo", { opacity: 0, duration: 0.6, ease: "power1.out" })
+      .from(".header__item-img", { opacity: 0, rotate: -90, duration: 0.4, ease: "power1.out" }, "-=0.5")
+      .from(".first-link", { opacity: 0, duration: 0.5, ease: "expo.out" }, "-=0.4")
+      .from(".second-link", { opacity: 0, x: -5, duration: 0.6, ease: "power1.out" }, "-=0.3")
+      .from(".header__form", { opacity: 0, x: -5, duration: 0.6, ease: "power1.out" }, "-=0.5")
+      .from(".header__user", { opacity: 0, x: -5, duration: 0.6, ease: "power1.out" }, "-=0.5")
+      .from(".header__cart", { opacity: 0, x: -5, duration: 0.6, ease: "power1.out" }, "-=0.5")
+      .from(".header__burger", { opacity: 0, x: -5, duration: 0.6, ease: "power1.out" }, "-=0.5")
+      .from(".header__title", { opacity: 0, y: 40, duration: 0.6, ease: "power1.out" }, "-=0.6")
+      .from(".header__descr", { opacity: 0, y: 30, duration: 0.6, ease: "power1.out" }, "-=0.5")
+      .from(".header__thumb", { opacity: 0, y: 20, duration: 0.6, ease: "power1.out" }, "-=0.5");
+  };
+  let collectionAnim = gsap.timeline({ delay: 0.4, ease: "power1.out" });
+  collectionAnim.from(".collection__title", { opacity: 0, y: 10, duration: 1, })
+  ScrollTrigger.create({
+    animation: collectionAnim,
+    trigger: ".collection",
+    start: "top bottom",
   });
-  let hedAnim = gsap.timeline({delay: 0.7});
-  // hedAnim.delay(1);
-  hedAnim.from(".header__logo", { opacity: 0, duration: 0.6, ease: "power4.out" })
-    .from(".header__item-img", { opacity: 0, rotate: -90, duration: 0.4, ease: "power4.out" }, "-=0.5")
-    .from(".first-link", { opacity: 0, duration: 0.5, ease: "expo.out" }, "-=0.4")
-    .from(".second-link", { opacity: 0, x: -5, duration: 0.6, ease: "power4.out", })
-    .from(".header__form", { opacity: 0, x: -5, duration: 0.6, ease: "power4.out" }, "-=0.5")
-    .from(".header__user", { opacity: 0, x: -5, duration: 0.6, ease: "power4.out" }, "-=0.5")
-    .from(".header__cart", { opacity: 0, x: -5, duration: 0.6, ease: "power4.out" }, "-=0.5")
-    .from(".header__burger", { opacity: 0, x: -5, duration: 0.6, ease: "power4.out" }, "-=0.5")
-    .from(".header__title", { opacity: 0, y: 40, duration: 0.6, ease: "power4.out" }, "-=0.6")
-    .from(".header__descr", { opacity: 0, y: 30, duration: 0.6, ease: "power4.out" }, "-=0.5")
-    .from(".header__thumb", { opacity: 0, y: 20, duration: 0.6, ease: "power4.out" }, "-=0.5");
 };
-
-
-
 
 const headerNav = document.querySelector('.header__nav');
 const searchForm = document.querySelector('.header__form');
@@ -137,22 +189,22 @@ burgerBtn.forEach(function (btn) {
 //   });
 // };
 
-const btnTop = document.querySelector('.footer__bottom-btn');
-let rootElement = document.documentElement;
-function scrollToTop() {
-  rootElement.scrollTo({
-    top: 0,
-    behavior: "smooth"
-  })
-};
-btnTop.addEventListener('click', scrollToTop);
+// const btnTop = document.querySelector('.footer__bottom-btn');
+// let rootElement = document.documentElement;
+// function scrollToTop() {
+//   rootElement.scrollTo({
+//     top: 0,
+//     behavior: "smooth"
+//   })
+// };
+// btnTop.addEventListener('click', scrollToTop);
 
-const btnSection = document.querySelector('.header__thumb');
-const block = document.querySelector('.collection');
-btnSection.addEventListener('click', function (e) {
-  e.preventDefault();
-  block.scrollIntoView({
-    behavior: "smooth",
-    block: "start"
-  });
-});
+// const btnSection = document.querySelector('.header__thumb');
+// const block = document.querySelector('.collection');
+// btnSection.addEventListener('click', function (e) {
+//   e.preventDefault();
+//   block.scrollIntoView({
+//     behavior: "smooth",
+//     block: "start"
+//   });
+// });

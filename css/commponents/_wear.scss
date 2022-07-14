@@ -13,6 +13,7 @@
 .swiper {
   width: 200vw;
   height: 100%;
+  position: relative;
   &-wrapper {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -91,6 +92,9 @@
       color: #ffffff;
       z-index: 1;
     }
+  }
+  &__overlay{
+
   }
 }
 

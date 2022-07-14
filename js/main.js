@@ -3,7 +3,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 if (window.screen.width > 1000) {
   const tl = gsap.timeline();
-  tl.fromTo(".swiper-wrapper", { x: 0, y: 0 }, { x: '-50%' })
+  tl.fromTo(".swiper-wrapper", { x: 0, y: 0 }, { x: '-50%' });
   const swiperBlock = document.querySelector(".wear");
   ScrollTrigger.create({
     animation: tl,
@@ -20,8 +20,20 @@ if (window.screen.width > 1000) {
     }
   });
 };
-
-
+let hedAnim = gsap.timeline();
+hedAnim.delay(0.7);
+hedAnim.from(".header__background", {scale: 0, duration: 0.4})
+.from(".header__logo", {opacity: 0, duration: 0.6, ease: "power4.out"})
+.from(".header__item-img", {opacity:0, rotate: -90, duration: 0.4, ease: "power4.out"}, "-=0.5")
+.from(".first-link", {opacity:0, duration:0.4, ease: "expo.out"}, "-=0.3")
+.from(".second-link", {opacity:0, x: -5, duration:0.6, ease: "power4.out",})
+.from(".header__form", {opacity:0, x: -5, duration:0.6, ease: "power4.out" }, "-=0.5")
+.from(".header__user", {opacity:0, x: -5, duration:0.6, ease: "power4.out" }, "-=0.5")
+.from(".header__cart", {opacity:0, x: -5, duration:0.6, ease: "power4.out" }, "-=0.5")
+.from(".header__burger", {opacity:0, x: -5, duration:0.6, ease: "power4.out" }, "-=0.5")
+.from(".header__title", {opacity:0, y: 40, duration:0.6, ease: "power4.out"}, "-=0.6")
+.from(".header__descr", {opacity:0, y: 30, duration:0.6, ease: "power4.out"}, "-=0.5")
+.from(".header__thumb", {opacity:0, y: 20, duration:0.6, ease: "power4.out"}, "-=0.5")
 
 
 
@@ -82,22 +94,22 @@ burgerBtn.forEach(function (btn) {
 let options = {
   threshold: [0.5]
 };
-let observerHead = new IntersectionObserver(headerAnim, options);
-observerHead.observe(headerLog);
-for (let i of headerItem) {
-  observerHead.observe(i);
-}
-observerHead.observe(searchForm);
-observerHead.observe(userCab);
-observerHead.observe(cart);
-observerHead.observe(burger);
-function headerAnim(entry) {
-  entry.forEach(change => {
-    if (change.isIntersecting) {
-      change.target.classList.add('header-anim');
-    }
-  });
-};
+// let observerHead = new IntersectionObserver(headerAnim, options);
+// observerHead.observe(headerLog);
+// for (let i of headerItem) {
+//   observerHead.observe(i);
+// }
+// observerHead.observe(searchForm);
+// observerHead.observe(userCab);
+// observerHead.observe(cart);
+// observerHead.observe(burger);
+// function headerAnim(entry) {
+//   entry.forEach(change => {
+//     if (change.isIntersecting) {
+//       change.target.classList.add('header-anim');
+//     }
+//   });
+// };
 
 const headerTitle = document.querySelector('.header__title');
 const headerDescr = document.querySelector('.header__descr');

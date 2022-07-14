@@ -2280,58 +2280,6 @@ input[type=search]::-webkit-search-results-decoration {
     transform-origin: 100% 0%;
   }
 }
-.header-anim {
-  -webkit-animation: header-anim 0.3s ease-in-out none;
-          animation: header-anim 0.3s ease-in-out none;
-}
-
-@-webkit-keyframes header-anim {
-  0% {
-    transform: translateX(-7px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0px);
-    opacity: 1;
-  }
-}
-
-@keyframes header-anim {
-  0% {
-    transform: translateX(-7px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0px);
-    opacity: 1;
-  }
-}
-.header-text-anim {
-  -webkit-animation: header-text-anim 0.4s ease-in-out both;
-          animation: header-text-anim 0.4s ease-in-out both;
-}
-
-@-webkit-keyframes header-text-anim {
-  0% {
-    transform: translateY(20px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0px);
-    opacity: 1;
-  }
-}
-
-@keyframes header-text-anim {
-  0% {
-    transform: translateY(20px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0px);
-    opacity: 1;
-  }
-}
 @-webkit-keyframes info-arrow {
   0% {
     transform: translateX(0) scaleX(1);

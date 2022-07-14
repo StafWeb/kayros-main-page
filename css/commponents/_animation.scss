@@ -49,32 +49,32 @@
     transform-origin: 100% 0%;
   }
 }
-.header-anim{
-  animation: header-anim 0.3s ease-in-out none;
-}
-@keyframes header-anim{
-  0%{
-    transform: translateX(-7px);
-    opacity: 0;
-  }
-  100%{
-    transform: translateX(0px);
-    opacity: 1;
-  }
-}
-.header-text-anim{
-  animation: header-text-anim 0.4s ease-in-out both;
-}
-@keyframes header-text-anim{
-  0%{
-    transform: translateY(20px);
-    opacity: 0;
-  }
-  100%{
-    transform: translateX(0px);
-    opacity: 1;
-  }
-}
+// .header-anim{
+//   animation: header-anim 0.3s ease-in-out none;
+// }
+// @keyframes header-anim{
+//   0%{
+//     transform: translateX(-7px);
+//     opacity: 0;
+//   }
+//   100%{
+//     transform: translateX(0px);
+//     opacity: 1;
+//   }
+// }
+// .header-text-anim{
+//   animation: header-text-anim 0.4s ease-in-out both;
+// }
+// @keyframes header-text-anim{
+//   0%{
+//     transform: translateY(20px);
+//     opacity: 0;
+//   }
+//   100%{
+//     transform: translateX(0px);
+//     opacity: 1;
+//   }
+// }
 @keyframes info-arrow {
   0%{
     transform: translateX(0) scaleX(1);

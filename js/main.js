@@ -94,25 +94,40 @@ let mySwiperBlock = gsap.to(".swiper-wrapper", {
     }
   }
 });
-
-
-  let collect = gsap.timeline({});
-  collect.from(".collection__title", {
-    opacity: 0,
-    y: 30,
-    duration:0.5,
-    ease: "none",
-    scrollTrigger: {
-      trigger: ".collection__title",
-      start: "+=70 bottom",
-      scroller: pageContainer,
-      end: "+=100",
-      scrub: true,
-      onUpdate() {
-        console.log("Update2")
-      }
-    }
-  });
+let colletctionTl = gsap.timeline({ ease: "power1.inout", delay: 0.3 });
+colletctionTl.from(".collection__title", { opacity: 0, y: 10, duration:1 })
+  .from(".collection__descr", { opacity: 0, y: 7, duration:0.6 }, "-=0.5")
+  // .from(".collection__overlay", {scaleY: 0, transformOrigin:"center bottom", duration: 0.7, stagger: 0.5})
+  .from(".collection__item", {scaleY:0, y:10, transformOrigin:"center bottom", duration: 0.7, stagger:0.1}, "-=0.2")
+  .from(".collection__item-link", {opacity:0 , y:7, stagger:0.1, duration:0.5}, "-=0.4")
+let collectionTrig = ScrollTrigger.create({
+  animation: colletctionTl,
+  trigger: ".collection",
+  start: "top bottom",
+  scroller: pageContainer,
+  // end: "+=800",
+  // scrub: 5,
+  onUpdate() {
+    console.log("Update2")
+  }
+});
+// let collect = gsap.timeline();
+// collect.from(".colletction__title", {
+//   opacity: 0,
+//   y: 50,
+//   duration: 3,
+//   ease: "none",
+//   ScrollTrigger: {
+//     trigger: ".collection",
+//     start: "bottom bottom",
+//     scroller: pageContainer,
+//     end: "+=800",
+//     scrub: 0.3,
+//     onUpdate() {
+//       console.log("Update2")
+//     }
+//   }
+// });
 
 
 function animHead() {
@@ -128,7 +143,7 @@ function animHead() {
     .from(".header__title", { opacity: 0, y: 40, duration: 0.6, ease: "power1.out" }, "-=0.6")
     .from(".header__descr", { opacity: 0, y: 30, duration: 0.6, ease: "power1.out" }, "-=0.5")
     .from(".header__thumb", { opacity: 0, y: 20, duration: 0.6, ease: "power1.out" }, "-=0.5")
-    // .from(".collection__title", {opacity:0, y: 30, duration: 1, ease: "power1.out"}, "+=3")
+  // .from(".collection__title", {opacity:0, y: 30, duration: 1, ease: "power1.out"}, "+=3")
 };
 animHead();
 ScrollTrigger.addEventListener("refresh", () => scroller.update()); //locomotive-scroll
@@ -202,7 +217,6 @@ const headerLog = document.querySelector('.header__logo')
 const burgerInner = document.querySelector('[data-burger-inner]');
 
 burger.addEventListener('click', () => {
-  stopOverscroll(".main");
   // body.classList.toggle('stop-scroll');
   burger.classList.toggle('burger_active');
   nav.classList.toggle('burger-menu_active');

@@ -1,4 +1,5 @@
 gsap.registerPlugin(ScrollTrigger);
+
 // function stopOverscroll(element) {
 //   element = gsap.utils.toArray(element)[0] || window;
 //   (element === document.body || element === document.documentElement) && (element = window);
@@ -47,13 +48,14 @@ gsap.registerPlugin(ScrollTrigger);
 //   }
 //   scroller.style.overscrollBehavior = "none";
 // }
-if (document.querySelector(".scrolsmooth").offsetWidth > 1000){
+if (window.onload || document.querySelector(".scrolsmooth").offsetWidth > 1000){
 let pageContainer = document.querySelector(".scrolsmooth");
 
 /* SMOOTH SCROLL */
 const scroller = new LocomotiveScroll({
   el: pageContainer,
   smooth: true,
+  resetNativeScroll: false
   // scrollbarContainer: false
 });
 
@@ -107,6 +109,7 @@ let mySwiperBlock = gsap.to(".swiper-wrapper", {
 });
 let swiperAnim = gsap.timeline({ease:"none"});
 swiperAnim.from(".wear__text-title",{opacity:0, y:-30})
+.from(".wear__text-descr",{})
 let colletctionTl = gsap.timeline({ ease: "none" });
 colletctionTl.from(".collection__title", { opacity: 0, y: 10, duration:1 })
   .from(".collection__descr", { opacity: 0, y: 7, duration:0.6 }, "-=0.9")
@@ -335,7 +338,7 @@ burgerBtn.forEach(function (btn) {
 //     behavior: "smooth"
 //   })
 // };
-// btnTop.addEventListener('click', scrollToTop);
+// btnTop.addEventListener('click', scrollToTop());
 
 // const btnSection = document.querySelector('.header__thumb');
 // const block = document.querySelector('.collection');

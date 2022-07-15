@@ -80,7 +80,7 @@ ScrollTrigger.scrollerProxy(pageContainer, {
 ScrollTrigger.addEventListener("refresh", () => scroller.update()); //locomotive-scroll
 ScrollTrigger.refresh();
 ScrollTrigger.defaults({
-  toggleActions:"restart complete reverse reset",
+  // toggleActions:"restart complete reverse reset",
   markers:{
     startColor : "green",
     endColor: "red",
@@ -145,7 +145,7 @@ function animHead() {
     .from(".header__thumb", { opacity: 0, y: 20, duration: 0.6, ease: "power1.out" }, "-=0.5")
   // .from(".collection__title", {opacity:0, y: 30, duration: 1, ease: "power1.out"}, "+=3")
 };
-animHead();
+// animHead();
 }
 
 // let collect = gsap.timeline();
@@ -207,9 +207,10 @@ animHead();
 
 if (window.screen.width > 1000) {
   function animHead() {
-    let hedAnim = gsap.timeline({ delay: 0.9 });
+    let hedAnim = gsap.timeline({delay: 0.2});
     // hedAnim.delay(1);
-    hedAnim.from(".header__logo", { opacity: 0, duration: 0.6, ease: "power1.out" })
+    hedAnim.fromTo(".header__background",{opacity:0, scale: 1.2}, {opacity: 1, scale: 1, duration:1.3, ease:"power3.inOut"})
+      .from(".header__logo", { opacity: 0, duration: 0.6, ease: "power1.out" })
       .from(".header__item-img", { opacity: 0, rotate: -90, duration: 0.4, ease: "power1.out" }, "-=0.5")
       .from(".first-link", { opacity: 0, duration: 0.5, ease: "expo.out" }, "-=0.4")
       .from(".second-link", { opacity: 0, x: -5, duration: 0.6, ease: "power1.out" }, "-=0.3")
@@ -222,7 +223,7 @@ if (window.screen.width > 1000) {
       .from(".header__thumb", { opacity: 0, y: 20, duration: 0.6, ease: "power1.out" }, "-=0.5");
   };
 };
-
+window.onload = animHead();
 const headerNav = document.querySelector('.header__nav');
 const searchForm = document.querySelector('.header__form');
 const userCab = document.querySelector('.header__user');

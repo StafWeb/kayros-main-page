@@ -47,8 +47,8 @@ gsap.registerPlugin(ScrollTrigger);
 //   }
 //   scroller.style.overscrollBehavior = "none";
 // }
-if (innerWidth > 1000){
-  let pageContainer = document.querySelector(".scrolsmooth");
+if (document.querySelector(".scrolsmooth").offsetWidth > 1000){
+let pageContainer = document.querySelector(".scrolsmooth");
 
 /* SMOOTH SCROLL */
 const scroller = new LocomotiveScroll({

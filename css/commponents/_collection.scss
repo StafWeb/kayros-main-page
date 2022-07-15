@@ -124,6 +124,9 @@
     &__list {
       gap: 16px;
     }
+    &__overlay{
+      z-index: 0;
+    }
   }
 }
 @media (max-width: 750px) {

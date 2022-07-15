@@ -14,14 +14,14 @@ body {
   overflow-x: hidden;
   min-height: 100vh;
   transition: 0.3s ease-out;
-  -ms-scroll-chaining: none;
-      overscroll-behavior: none;
-  overflow: overlay;
-  scrollbar-gutter: stable;
 }
 
 html,
 body {
+  -ms-scroll-chaining: none;
+      overscroll-behavior: none;
+  overflow: overlay;
+  scrollbar-gutter: stable;
   scrollbar-width: none;
   scrollbar-color: rgba(255, 255, 255, 0);
   /* для Chrome/Edge/Safari */

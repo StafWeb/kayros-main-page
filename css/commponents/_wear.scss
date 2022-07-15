@@ -148,6 +148,8 @@ section{
 }
 @media (max-width: 1000px) {
   .wear{
+    width: 100%;
+    min-height: 624px;
     &__container{
       width: 100%;
       height: 100%;
@@ -159,12 +161,15 @@ section{
   .swiper-slide {
     flex-shrink: 0;
     max-width: 307px;
+    min-height: 390px;
     width: 100%;
     &:first-child {
       display: none;
     }
   }
   .swiper-wrapper {
+    width: 100%;
+    height: 100%;
     display: flex;
     overflow: hidden;
     overflow-x: auto;

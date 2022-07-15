@@ -92,12 +92,14 @@ body {
   overflow-x: hidden;
   min-height: 100vh;
   transition: 0.3s ease-out;
-  -ms-scroll-chaining: none;
-      overscroll-behavior: none;
 }
 
 html,
 body {
+  -ms-scroll-chaining: none;
+      overscroll-behavior: none;
+  overflow: overlay;
+  scrollbar-gutter: stable;
   scrollbar-width: none;
   scrollbar-color: rgba(255, 255, 255, 0);
   /* для Chrome/Edge/Safari */
@@ -1405,6 +1407,10 @@ section {
   }
 }
 @media (max-width: 1000px) {
+  .wear {
+    width: 100%;
+    min-height: 624px;
+  }
   .wear__container {
     width: 100%;
     height: 100%;
@@ -1415,12 +1421,15 @@ section {
   .swiper-slide {
     flex-shrink: 0;
     max-width: 307px;
+    min-height: 390px;
     width: 100%;
   }
   .swiper-slide:first-child {
     display: none;
   }
   .swiper-wrapper {
+    width: 100%;
+    height: 100%;
     display: flex;
     overflow: hidden;
     overflow-x: auto;
@@ -2229,6 +2238,12 @@ section {
     background-color: rgba(176, 151, 110, 0.75);
   }
 }
+.scrollsmooth.stop-scroll {
+  overflow: hidden !important;
+  overflow-x: hidden !important;
+  overflow-y: hidden !important;
+}
+
 .stop-scroll {
   overflow: hidden !important;
   overflow-x: hidden !important;

@@ -10,11 +10,31 @@ body {
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
+  overflow: hidden;
   min-height: 100vh;
   transition: 0.3s ease-out;
   overscroll-behavior: none;
 }
-
+html,
+body {
+  scrollbar-width: none;
+  scrollbar-color:rgb(255, 255, 255, 0);
+/* для Chrome/Edge/Safari */
+&::-webkit-scrollbar {
+  height: 0;
+  width: 0;
+}
+&::-webkit-scrollbar-track {
+  width: 0;
+  height: 0;
+  background: none !important;
+}
+&::-webkit-scrollbar-thumb {
+  width: 0;
+  height: 0;
+  border: none;
+}
+}
 h1 {
   font-family: "Playfair Display", sans-serif;
 }

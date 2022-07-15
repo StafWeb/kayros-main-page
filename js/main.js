@@ -53,7 +53,7 @@ if (innerWidth > 1000){
 /* SMOOTH SCROLL */
 const scroller = new LocomotiveScroll({
   el: pageContainer,
-  smooth: true
+  smooth: true,
 });
 
 scroller.on("scroll", ScrollTrigger.update);
@@ -78,11 +78,11 @@ ScrollTrigger.addEventListener("refresh", () => scroller.update()); //locomotive
 ScrollTrigger.refresh();
 ScrollTrigger.defaults({
   toggleActions:"restart complete reverse reset",
-  // markers:{
-  //   startColor : "green",
-  //   endColor: "red",
-  //   fontSize: "26px",
-  // },
+  markers:{
+    startColor : "green",
+    endColor: "red",
+    fontSize: "26px",
+  },
 });
 let pinBoxes = document.querySelectorAll(".pin-wrap > *");
 let pinWrap = document.querySelector(".pin-wrap");
@@ -109,13 +109,13 @@ swiperAnim.from(".wear__text-title",{opacity:0, y:-30})
 let colletctionTl = gsap.timeline({ ease: "none" });
 colletctionTl.from(".collection__title", { opacity: 0, y: 10, duration:1 })
   .from(".collection__descr", { opacity: 0, y: 7, duration:0.6 }, "-=0.9")
-  .fromTo(".collection__overlay", {scaleY: 1}, {scaleY:0, transformOrigin:"center top", duration: 0.7, stagger: 0.1},"-=0.9")
-  .from(".collection__item", {opacity: 0, y:30, transformOrigin:"center top", duration: 0.7, stagger:0.1}, "-=0.7")
-  .from(".collection__item-link", {opacity:0 , y:15, stagger:0.1, duration:0.5}, "-=0.6");
+  .fromTo(".collection__overlay", {scaleY: 1}, {scaleY:0, transformOrigin:"center top", duration: 0.7, stagger: 0.1},"-=0.7")
+  .from(".collection__item", {opacity:0, y:30, transformOrigin:"center top", duration: 0.7, stagger:0.1}, "-=0.5")
+  .from(".collection__item-link", {opacity:0 , y:15, stagger:0.1, duration:0.5}, "-=0.5");
 let collectionTrig = ScrollTrigger.create({
   animation: colletctionTl,
   trigger: ".collection",
-  start: "top 75%",
+  start: "10% 65%",
   scroller: pageContainer,
   reverse: true,
   endTrigger:".wear",

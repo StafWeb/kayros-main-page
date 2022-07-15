@@ -1,5 +1,52 @@
 gsap.registerPlugin(ScrollTrigger);
-
+// function stopOverscroll(element) {
+//   element = gsap.utils.toArray(element)[0] || window;
+//   (element === document.body || element === document.documentElement) && (element = window);
+//   let lastScroll = 0,
+//     lastTouch, forcing,
+//     forward = true,
+//     isRoot = element === window,
+//     scroller = isRoot ? document.scrollingElement : element,
+//     ua = window.navigator.userAgent + "",
+//     getMax = isRoot ? () => scroller.scrollHeight - window.innerHeight : () => scroller.scrollHeight - scroller.clientHeight,
+//     addListener = (type, func) => element.addEventListener(type, func, { passive: false }),
+//     revert = () => {
+//       scroller.style.overflowY = "auto";
+//       forcing = false;
+//     },
+//     kill = () => {
+//       forcing = true;
+//       scroller.style.overflowY = "hidden";
+//       (!forward && scroller.scrollTop < 1) ? (scroller.scrollTop = 1) : (scroller.scrollTop = getMax() - 1);
+//       setTimeout(revert, 1);
+//     },
+//     handleTouch = e => {
+//       let evt = e.changedTouches ? e.changedTouches[0] : e,
+//         forward = evt.pageY <= lastTouch;
+//       if (((!forward && scroller.scrollTop <= 1) || (forward && scroller.scrollTop >= getMax() - 1)) && e.type === "touchmove") {
+//         e.preventDefault();
+//       } else {
+//         lastTouch = evt.pageY;
+//       }
+//     },
+//     handleScroll = e => {
+//       if (!forcing) {
+//         let scrollTop = scroller.scrollTop;
+//         forward = scrollTop > lastScroll;
+//         if ((!forward && scrollTop < 1) || (forward && scrollTop >= getMax() - 1)) {
+//           e.preventDefault();
+//           kill();
+//         }
+//         lastScroll = scrollTop;
+//       }
+//     };
+//   if ("ontouchend" in document && !!ua.match(/Version\/[\d\.]+.*Safari/)) {
+//     addListener('scroll', handleScroll);
+//     addListener('touchstart', handleTouch);
+//     addListener('touchmove', handleTouch);
+//   }
+//   scroller.style.overscrollBehavior = "none";
+// }
 let pageContainer = document.querySelector(".scrolsmooth");
 
 /* SMOOTH SCROLL */
@@ -39,7 +86,7 @@ let mySwiperBlock = gsap.to(".swiper-wrapper", {
     start: 'bottom bottom',
     scroller: pageContainer,
     // end: () => swiperBlock.offsetWidth / 1,
-    scrub: 1,
+    scrub: true,
     pin: true,
     end: pinWrapWidth,
     onUpdate() {
@@ -48,11 +95,44 @@ let mySwiperBlock = gsap.to(".swiper-wrapper", {
   }
 });
 
+
+  let collect = gsap.timeline({});
+  collect.from(".collection__title", {
+    opacity: 0,
+    y: 30,
+    duration:0.5,
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".collection__title",
+      start: "+=70 bottom",
+      scroller: pageContainer,
+      end: "+=100",
+      scrub: true,
+      onUpdate() {
+        console.log("Update2")
+      }
+    }
+  });
+
+
+function animHead() {
+  let hedAnim = gsap.timeline({ delay: 0.9 });
+  hedAnim.from(".header__logo", { opacity: 0, duration: 0.6, ease: "power1.out" })
+    .from(".header__item-img", { opacity: 0, rotate: -90, duration: 0.4, ease: "power1.out" }, "-=0.5")
+    .from(".first-link", { opacity: 0, duration: 0.5, ease: "expo.out" }, "-=0.4")
+    .from(".second-link", { opacity: 0, x: -5, duration: 0.6, ease: "power1.out" }, "-=0.3")
+    .from(".header__form", { opacity: 0, x: -5, duration: 0.6, ease: "power1.out" }, "-=0.5")
+    .from(".header__user", { opacity: 0, x: -5, duration: 0.6, ease: "power1.out" }, "-=0.5")
+    .from(".header__cart", { opacity: 0, x: -5, duration: 0.6, ease: "power1.out" }, "-=0.5")
+    .from(".header__burger", { opacity: 0, x: -5, duration: 0.6, ease: "power1.out" }, "-=0.5")
+    .from(".header__title", { opacity: 0, y: 40, duration: 0.6, ease: "power1.out" }, "-=0.6")
+    .from(".header__descr", { opacity: 0, y: 30, duration: 0.6, ease: "power1.out" }, "-=0.5")
+    .from(".header__thumb", { opacity: 0, y: 20, duration: 0.6, ease: "power1.out" }, "-=0.5")
+    // .from(".collection__title", {opacity:0, y: 30, duration: 1, ease: "power1.out"}, "+=3")
+};
+animHead();
 ScrollTrigger.addEventListener("refresh", () => scroller.update()); //locomotive-scroll
-
 ScrollTrigger.refresh();
-
-
 
 
 // let swiperBlock = document.querySelector(".swiper-wrapper");
@@ -106,13 +186,6 @@ if (window.screen.width > 1000) {
       .from(".header__descr", { opacity: 0, y: 30, duration: 0.6, ease: "power1.out" }, "-=0.5")
       .from(".header__thumb", { opacity: 0, y: 20, duration: 0.6, ease: "power1.out" }, "-=0.5");
   };
-  let collectionAnim = gsap.timeline({ delay: 0.4, ease: "power1.out" });
-  collectionAnim.from(".collection__title", { opacity: 0, y: 10, duration: 1, })
-  ScrollTrigger.create({
-    animation: collectionAnim,
-    trigger: ".collection",
-    start: "top bottom",
-  });
 };
 
 const headerNav = document.querySelector('.header__nav');
@@ -124,14 +197,13 @@ const nav = document?.querySelector('[data-burger-menu]');
 const burgerLog = document.querySelector('.burger__logo');
 const navItems = nav?.querySelectorAll('.burger-menu__item');
 const body = document.body;
-const scrollMain = document.querySelector('.main');
 const headerItem = document.querySelectorAll('.header__item');
 const headerLog = document.querySelector('.header__logo')
 const burgerInner = document.querySelector('[data-burger-inner]');
 
 burger.addEventListener('click', () => {
-  body.classList.toggle('stop-scroll');
-  scrollMain.classList.toggle('stop-scroll');
+  stopOverscroll(".main");
+  // body.classList.toggle('stop-scroll');
   burger.classList.toggle('burger_active');
   nav.classList.toggle('burger-menu_active');
   burgerLog.classList.toggle('burger__logo_active');
@@ -140,7 +212,6 @@ burger.addEventListener('click', () => {
 burgerInner.addEventListener('click', () => {
   burgerInner.classList.remove('burger_active')
   body.classList.remove('stop-scroll');
-  scrollMain.classList.remove('stop-scroll');
   burger.classList.remove('burger_active');
   nav.classList.remove('burger-menu_active');
   burgerLog.classList.remove('burger__logo_active');
@@ -148,7 +219,6 @@ burgerInner.addEventListener('click', () => {
 navItems.forEach(el => {
   el.addEventListener('click', () => {
     body.classList.remove('stop-scroll');
-    scrollMain.classList.remove('stop-scroll');
     burger.classList.remove('burger_active');
     nav.classList.remove('burger-menu_active');
     burgerLog.classList.remove('burger__logo_active');
@@ -170,21 +240,23 @@ burgerBtn.forEach(function (btn) {
   })
 })
 // let options = {
-//   threshold: [0.5]
+//   threshold: [0.3]
 // };
-// let observerHead = new IntersectionObserver(headerAnim, options);
-// observerHead.observe(headerLog);
-// for (let i of headerItem) {
-//   observerHead.observe(i);
-// }
-// observerHead.observe(searchForm);
-// observerHead.observe(userCab);
-// observerHead.observe(cart);
-// observerHead.observe(burger);
-// function headerAnim(entry) {
+// let coll = document.querySelector(".collection__title");
+// let observerHead = new IntersectionObserver(sec, options);
+// // observerHead.observe(headerLog);
+// // for (let i of headerItem) {
+// //   observerHead.observe(i);
+// // }
+// // observerHead.observe(searchForm);
+// // observerHead.observe(userCab);
+// // observerHead.observe(cart);
+// // observerHead.observe(burger);
+// observerHead.observe(coll);
+// function sec(entry) {
 //   entry.forEach(change => {
 //     if (change.isIntersecting) {
-//       change.target.classList.add('header-anim');
+//       sa.play();
 //     }
 //   });
 // };

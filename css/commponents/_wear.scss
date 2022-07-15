@@ -7,7 +7,7 @@ section{
   overflow: hidden;
   background-color: #f1ebe2;
   &__container {
-    width: 200vw;
+    width: 230vw;
     height: 100vh;
     display: flex;
 
@@ -33,7 +33,7 @@ section{
   }
   &-slide {
     flex-shrink: 0;
-    width: 34vw;
+    width: 40vw;
     // max-width: 920px;
     height: 100%;
   }

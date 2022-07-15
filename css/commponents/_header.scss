@@ -232,17 +232,17 @@
   z-index: -10;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   visibility: hidden;
   opacity: 0;
   background-color: #ffffff;
   transition: all 0.7s ease-in-out;
-  overflow-y: hidden;
   z-index: 6;
   &_active {
+    overflow-y: hidden;
+    overflow-x: hidden;
     visibility: visible;
-    overflow-y: auto;
     opacity: 1;
     transition: all 0.7s ease-in-out;
     z-index: 5;

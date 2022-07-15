@@ -1,4 +1,3 @@
-@charset "UTF-8";
 html {
   height: 100%;
 }
@@ -14,34 +13,6 @@ body {
   overflow-x: hidden;
   min-height: 100vh;
   transition: 0.3s ease-out;
-}
-
-html,
-body {
-  -ms-scroll-chaining: none;
-      overscroll-behavior: none;
-  overflow: overlay;
-  scrollbar-gutter: stable;
-  scrollbar-width: none;
-  scrollbar-color: rgba(255, 255, 255, 0);
-  /* для Chrome/Edge/Safari */
-}
-html::-webkit-scrollbar,
-body::-webkit-scrollbar {
-  height: 0;
-  width: 0;
-}
-html::-webkit-scrollbar-track,
-body::-webkit-scrollbar-track {
-  width: 0;
-  height: 0;
-  background: none;
-}
-html::-webkit-scrollbar-thumb,
-body::-webkit-scrollbar-thumb {
-  width: 0;
-  height: 0;
-  border: none;
 }
 
 h1 {

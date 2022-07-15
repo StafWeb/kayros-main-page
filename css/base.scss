@@ -13,29 +13,29 @@ body {
   min-height: 100vh;
   transition: 0.3s ease-out;
 }
-html,
-body {
-  overscroll-behavior: none;
-  overflow: overlay;
-  scrollbar-gutter: stable;
-  scrollbar-width: none;
-  scrollbar-color:rgba(255, 255, 255, 0);
-/* для Chrome/Edge/Safari */
-&::-webkit-scrollbar {
-  height: 0;
-  width: 0;
-}
-&::-webkit-scrollbar-track {
-  width: 0;
-  height: 0;
-  background: none;
-}
-&::-webkit-scrollbar-thumb {
-  width: 0;
-  height: 0;
-  border: none;
-}
-}
+// html,
+// body {
+//   overscroll-behavior: none;
+//   overflow: overlay;
+//   scrollbar-gutter: stable;
+//   scrollbar-width: none;
+//   scrollbar-color:rgba(255, 255, 255, 0);
+// /* для Chrome/Edge/Safari */
+// &::-webkit-scrollbar {
+//   height: 0;
+//   width: 0;
+// }
+// &::-webkit-scrollbar-track {
+//   width: 0;
+//   height: 0;
+//   background: none;
+// }
+// &::-webkit-scrollbar-thumb {
+//   width: 0;
+//   height: 0;
+//   border: none;
+// }
+// }
 h1 {
   font-family: "Playfair Display", sans-serif;
 }

@@ -232,27 +232,31 @@ const body = document.body;
 const headerItem = document.querySelectorAll('.header__item');
 const headerLog = document.querySelector('.header__logo')
 const burgerInner = document.querySelector('[data-burger-inner]');
-let pageContainer = document.querySelector("#viewport");
+let stop1 = document.documentElement;
+let stop2 = document.querySelector(".main");
 burger.addEventListener('click', () => {
-  body.classList.toggle('stop-scroll');
-  pageContainer.classList.toggle('.stop-sroll');
+  // body.classList.toggle('stop-scroll');
+  stop1.classList.toggle('stop-scroll');
+  // stop2.classList.toggle('stop-sroll');
   burger.classList.toggle('burger_active');
   nav.classList.toggle('burger-menu_active');
   burgerLog.classList.toggle('burger__logo_active');
   burgerInner.classList.toggle('burger_active')
 });
 burgerInner.addEventListener('click', () => {
-  pageContainer.classList.remove('.stop-sroll');
+  stop1.classList.remove('stop-scroll');
+  // stop2.classList.remove('stop-sroll');
   burgerInner.classList.remove('burger_active')
-  body.classList.remove('stop-scroll');
+  // body.classList.remove('stop-scroll');
   burger.classList.remove('burger_active');
   nav.classList.remove('burger-menu_active');
   burgerLog.classList.remove('burger__logo_active');
 })
 navItems.forEach(el => {
   el.addEventListener('click', () => {
-    pageContainer.classList.remove('.stop-sroll');
-    body.classList.remove('stop-scroll');
+    stop1.classList.remove('stop-scroll');
+    // stop2.classList.remove('stop-sroll');
+    // body.classList.remove('stop-scroll');
     burger.classList.remove('burger_active');
     nav.classList.remove('burger-menu_active');
     burgerLog.classList.remove('burger__logo_active');

@@ -408,7 +408,6 @@ input[type=search]::-webkit-search-results-decoration {
   opacity: 0;
   background-color: #ffffff;
   transition: all 0.7s ease-in-out;
-  z-index: 6;
 }
 .burger-menu_active {
   overflow-y: hidden;
@@ -800,7 +799,10 @@ input[type=search]::-webkit-search-results-decoration {
     left: 20px;
   }
   .burger-menu {
-    overflow-x: hidden;
+    overflow: hidden;
+  }
+  .burger-menu__container {
+    overflow-y: auto;
   }
   .burger-menu__header {
     height: 60px;
@@ -2238,12 +2240,6 @@ section {
     background-color: rgba(176, 151, 110, 0.75);
   }
 }
-.scrollsmooth.stop-scroll {
-  overflow: hidden !important;
-  overflow-x: hidden !important;
-  overflow-y: hidden !important;
-}
-
 .stop-scroll {
   overflow: hidden !important;
   overflow-x: hidden !important;

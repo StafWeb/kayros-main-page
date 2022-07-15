@@ -268,13 +268,6 @@
     background-color: rgba(176, 151, 110, 0.75);
   }
 }
-.scrollsmooth{
-  &.stop-scroll {
-    overflow: hidden !important;
-    overflow-x: hidden !important;
-    overflow-y: hidden !important;
-  }
-}
 .stop-scroll {
   overflow: hidden !important;
   overflow-x: hidden !important;

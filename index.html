@@ -292,7 +292,7 @@
     <div class="scrolsmooth" id="viewport">
       <header class="header">
         <div class="container">
-          <div class="header__top">
+          <div class="header__top" id="header">
             <div class="header__hover"></div>
             <div class="header__start">
               <svg class="header__logo" width="92" height="45" viewBox="0 0 92 45" fill="none"
@@ -445,7 +445,7 @@
           <div class="header__text">
             <h1 class="header__title">Одежда из льна</h1>
             <p class="header__descr">Комфорт всегда рядом</p>
-            <a class="header__thumb" href="#btn-sect">
+            <a class="header__thumb" href="#btn-sect" data-scroll-to>
               <svg class="thumb-logo" width="22" height="34" viewBox="0 0 22 34" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <rect class="thumb-rect" x="0.5" y="0.5" width="21" height="33" rx="10.5" stroke="white"
@@ -462,7 +462,7 @@
           </video>
         </div>
       </header>
-      <section class="collection" id="btn-colect">
+      <section class="collection" id="btn-sect">
         <div class="container">
           <h2 class="collection__title">Коллекции одежды из льна</h2>
           <p class="collection__descr">Элегантный образ нужен каждому,<br>у нас есть все необходимое</p>
@@ -816,11 +816,11 @@
           </nav>
         </div>
         <div class="footer__bottom">
-          <button class="footer__bottom-btn">
+          <a class="footer__bottom-btn" href="#header" data-scroll-to>
             <svg width="28" height="17" viewBox="0 0 28 17" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M2 15L14 3L26 15" stroke="white" stroke-width="3" />
             </svg>
-          </button>
+          </a>
           <div class="footer__bottom-descr">Создание сайта: <span>Criteria.RU</span></div>
         </div>
       </footer>
@@ -828,6 +828,7 @@
   </main>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollToPlugin.min.js"></script>
   <!-- <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script> -->
   <script src="./js/locomotive-scroll.min.js"></script>
   <script src="./js/main.js"></script>
@@ -843,7 +844,7 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background: rgba(0, 0, 0, .6);
+      background: rgba(0, 0, 0, 0.962);
       z-index: 99
     }
 

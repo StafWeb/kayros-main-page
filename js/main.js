@@ -1,61 +1,63 @@
 gsap.registerPlugin(ScrollTrigger);
-
-// function stopOverscroll(element) {
-//   element = gsap.utils.toArray(element)[0] || window;
-//   (element === document.body || element === document.documentElement) && (element = window);
-//   let lastScroll = 0,
-//     lastTouch, forcing,
-//     forward = true,
-//     isRoot = element === window,
-//     scroller = isRoot ? document.scrollingElement : element,
-//     ua = window.navigator.userAgent + "",
-//     getMax = isRoot ? () => scroller.scrollHeight - window.innerHeight : () => scroller.scrollHeight - scroller.clientHeight,
-//     addListener = (type, func) => element.addEventListener(type, func, { passive: false }),
-//     revert = () => {
-//       scroller.style.overflowY = "auto";
-//       forcing = false;
-//     },
-//     kill = () => {
-//       forcing = true;
-//       scroller.style.overflowY = "hidden";
-//       (!forward && scroller.scrollTop < 1) ? (scroller.scrollTop = 1) : (scroller.scrollTop = getMax() - 1);
-//       setTimeout(revert, 1);
-//     },
-//     handleTouch = e => {
-//       let evt = e.changedTouches ? e.changedTouches[0] : e,
-//         forward = evt.pageY <= lastTouch;
-//       if (((!forward && scroller.scrollTop <= 1) || (forward && scroller.scrollTop >= getMax() - 1)) && e.type === "touchmove") {
-//         e.preventDefault();
-//       } else {
-//         lastTouch = evt.pageY;
-//       }
-//     },
-//     handleScroll = e => {
-//       if (!forcing) {
-//         let scrollTop = scroller.scrollTop;
-//         forward = scrollTop > lastScroll;
-//         if ((!forward && scrollTop < 1) || (forward && scrollTop >= getMax() - 1)) {
-//           e.preventDefault();
-//           kill();
-//         }
-//         lastScroll = scrollTop;
-//       }
-//     };
-//   if ("ontouchend" in document && !!ua.match(/Version\/[\d\.]+.*Safari/)) {
-//     addListener('scroll', handleScroll);
-//     addListener('touchstart', handleTouch);
-//     addListener('touchmove', handleTouch);
-//   }
-//   scroller.style.overscrollBehavior = "none";
-// }
-if (window.onload || document.querySelector(".scrolsmooth").offsetWidth > 1000){
+gsap.registerPlugin(ScrollToPlugin);
+function stopOverscroll(element) {
+  element = gsap.utils.toArray(element)[0] || window;
+  (element === document.body || element === document.documentElement) && (element = window);
+  let lastScroll = 0,
+    lastTouch, forcing,
+    forward = true,
+    isRoot = element === window,
+    scroller = isRoot ? document.scrollingElement : element,
+    ua = window.navigator.userAgent + "",
+    getMax = isRoot ? () => scroller.scrollHeight - window.innerHeight : () => scroller.scrollHeight - scroller.clientHeight,
+    addListener = (type, func) => element.addEventListener(type, func, { passive: false }),
+    revert = () => {
+      scroller.style.overflowY = "auto";
+      forcing = false;
+    },
+    kill = () => {
+      forcing = true;
+      scroller.style.overflowY = "hidden";
+      (!forward && scroller.scrollTop < 1) ? (scroller.scrollTop = 1) : (scroller.scrollTop = getMax() - 1);
+      setTimeout(revert, 1);
+    },
+    handleTouch = e => {
+      let evt = e.changedTouches ? e.changedTouches[0] : e,
+        forward = evt.pageY <= lastTouch;
+      if (((!forward && scroller.scrollTop <= 1) || (forward && scroller.scrollTop >= getMax() - 1)) && e.type === "touchmove") {
+        e.preventDefault();
+      } else {
+        lastTouch = evt.pageY;
+      }
+    },
+    handleScroll = e => {
+      if (!forcing) {
+        let scrollTop = scroller.scrollTop;
+        forward = scrollTop > lastScroll;
+        if ((!forward && scrollTop < 1) || (forward && scrollTop >= getMax() - 1)) {
+          e.preventDefault();
+          kill();
+        }
+        lastScroll = scrollTop;
+      }
+    };
+  if ("ontouchend" in document && !!ua.match(/Version\/[\d\.]+.*Safari/)) {
+    addListener('scroll', handleScroll);
+    addListener('touchstart', handleTouch);
+    addListener('touchmove', handleTouch);
+  }
+  scroller.style.overscrollBehavior = "none";
+}
+// if (window.onload || document.querySelector(".scrolsmooth").offsetWidth > 1000) {
 let pageContainer = document.querySelector(".scrolsmooth");
 
 /* SMOOTH SCROLL */
 const scroller = new LocomotiveScroll({
   el: pageContainer,
   smooth: true,
-  resetNativeScroll: false
+  // resetNativeScroll: true,
+  getSpeed: true,
+  getDirection: true
   // scrollbarContainer: false
 });
 
@@ -80,7 +82,7 @@ ScrollTrigger.scrollerProxy(pageContainer, {
 ScrollTrigger.addEventListener("refresh", () => scroller.update()); //locomotive-scroll
 ScrollTrigger.refresh();
 ScrollTrigger.defaults({
-  toggleActions:"restart complete reverse reset",
+  toggleActions: "restart complete reverse reset",
   // markers:{
   //   startColor : "green",
   //   endColor: "red",
@@ -107,22 +109,22 @@ let mySwiperBlock = gsap.to(".swiper-wrapper", {
     }
   }
 });
-let swiperAnim = gsap.timeline({ease:"none"});
-swiperAnim.from(".wear__text-title",{opacity:0, y:-30})
-.from(".wear__text-descr",{})
+let swiperAnim = gsap.timeline({ ease: "none" });
+swiperAnim.from(".wear__text-title", { opacity: 0, y: -30 })
+  .from(".wear__text-descr", {})
 let colletctionTl = gsap.timeline({ ease: "none" });
-colletctionTl.from(".collection__title", { opacity: 0, y: 10, duration:1 })
-  .from(".collection__descr", { opacity: 0, y: 7, duration:0.6 }, "-=0.9")
-  .fromTo(".collection__overlay", {scaleY: 1}, {scaleY:0, transformOrigin:"center top", duration: 0.7, stagger: 0.1},"-=0.7")
-  .from(".collection__item", {opacity:0, y:30, transformOrigin:"center top", duration: 0.7, stagger:0.1}, "-=0.65")
-  .from(".collection__item-link", {opacity:0 , y:15, stagger:0.1, duration:0.5}, "-=0.55");
+colletctionTl.from(".collection__title", { opacity: 0, y: 10, duration: 1 })
+  .from(".collection__descr", { opacity: 0, y: 7, duration: 0.6 }, "-=0.9")
+  .fromTo(".collection__overlay", { scaleY: 1 }, { scaleY: 0, transformOrigin: "center top", duration: 0.7, stagger: 0.1 }, "-=0.7")
+  .from(".collection__item", { opacity: 0, y: 30, transformOrigin: "center top", duration: 0.7, stagger: 0.1 }, "-=0.65")
+  .from(".collection__item-link", { opacity: 0, y: 15, stagger: 0.1, duration: 0.5 }, "-=0.55");
 let collectionTrig = ScrollTrigger.create({
   animation: colletctionTl,
   trigger: ".collection",
   start: "7% 65%",
   scroller: pageContainer,
   reverse: true,
-  endTrigger:".wear",
+  endTrigger: ".wear",
   end: "top 95%",
   // markerks: true,
   scrub: 1,
@@ -145,7 +147,8 @@ function animHead() {
     .from(".header__thumb", { opacity: 0, y: 20, duration: 0.6, ease: "power1.out" }, "-=0.5")
   // .from(".collection__title", {opacity:0, y: 30, duration: 1, ease: "power1.out"}, "+=3")
 };
-}
+stopOverscroll(document.querySelector(".header"));
+// }
 
 // let collect = gsap.timeline();
 // collect.from(".colletction__title", {
@@ -206,9 +209,9 @@ function animHead() {
 
 if (window.screen.width > 1000) {
   function animHead() {
-    let hedAnim = gsap.timeline({delay: 0.5});
+    let hedAnim = gsap.timeline({ delay: 0.5 });
     // hedAnim.delay(1);
-    hedAnim.fromTo(".header__background",{opacity:0, scale: 1.2}, {opacity: 1, scale: 1, duration:1.3, ease:"power3.inOut"})
+    hedAnim.fromTo(".header__background", { opacity: 0, scale: 1.2 }, { opacity: 1, scale: 1, duration: 1.3, ease: "power3.inOut" })
       .from(".header__logo", { opacity: 0, duration: 0.6, ease: "power1.out" })
       .from(".header__item-img", { opacity: 0, rotate: -90, duration: 0.4, ease: "power1.out" }, "-=0.5")
       .from(".first-link", { opacity: 0, duration: 0.5, ease: "expo.out" }, "-=0.4")
@@ -329,17 +332,24 @@ burgerBtn.forEach(function (btn) {
 //     }
 //   });
 // };
+// let scrolhed = () => {
+//   let scrolToHed = window.scrollTo(0,0);
+//   return scrolToHed;
+// };
+// const btnTop = document.getElementById('topbtn');
 
-// const btnTop = document.querySelector('.footer__bottom-btn');
 // let rootElement = document.documentElement;
 // function scrollToTop() {
 //   rootElement.scrollTo({
 //     top: 0,
-//     behavior: "smooth"
+//     // behavior: "smooth"
 //   })
 // };
-// btnTop.addEventListener('click', scrollToTop());
-
+// btnTop.addEventListener('click', () => {
+//   scrollToTop();
+//   console.log("click")
+// });
+// stopOverscroll(rootElement);
 // const btnSection = document.querySelector('.header__thumb');
 // const block = document.querySelector('.collection');
 // btnSection.addEventListener('click', function (e) {

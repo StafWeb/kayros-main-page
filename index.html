@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/commponents/locomotive-scroll.min.css">
   <link rel="stylesheet" href="./fonts/fonts.css">
   <link href="./css/main.css" rel="stylesheet">
-  <link rel="stylesheet" href="./css/locomotive-scroll.min.css">
   <title>Kayros</title>
 </head>
 <div class="burger-menu" data-burger-menu>
@@ -829,9 +829,19 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollToPlugin.min.js"></script>
-  <!-- <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script> -->
   <script src="./js/locomotive-scroll.min.js"></script>
   <script src="./js/main.js"></script>
+  <script type="text/javascript">
+
+    window.onload = function () {
+
+      setTimeout(function () {
+
+        document.getElementById("preloader").style.display = "none";
+
+      }, 900);
+    };
+  </script>
   <div id="preloader">
 
     <div class="loader">Loading...</div>
@@ -920,18 +930,6 @@
       }
     }
   </style>
-
-  <script type="text/javascript">
-
-    window.onload = function () {
-
-      setTimeout(function () {
-
-        document.getElementById("preloader").style.display = "none";
-
-      }, 400);
-    };
-  </script>
 </body>
 
 </html>

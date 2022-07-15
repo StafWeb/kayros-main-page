@@ -241,7 +241,7 @@ stopOverscroll(document.querySelector(".header"));
 
 if (window.screen.width > 1000) {
   function animHead() {
-    let hedAnim = gsap.timeline({ delay: 0.5 });
+    let hedAnim = gsap.timeline({ delay: 0.7 });
     // hedAnim.delay(1);
     hedAnim.fromTo(".header__background", { opacity: 0, scale: 1.2 }, { opacity: 1, scale: 1, duration: 1.3, ease: "power3.inOut" })
       .from(".header__logo", { opacity: 0, duration: 0.6, ease: "power1.out" })
@@ -258,6 +258,14 @@ if (window.screen.width > 1000) {
   };
 };
 animHead();
+// window.onload = function () {
+
+//   setTimeout(function () {
+
+    
+
+//   }, 1000);
+// };
 const headerNav = document.querySelector('.header__nav');
 const searchForm = document.querySelector('.header__form');
 const userCab = document.querySelector('.header__user');

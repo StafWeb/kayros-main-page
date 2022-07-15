@@ -179,7 +179,7 @@ function animHead() {
     .from(".header__thumb", { opacity: 0, y: 20, duration: 0.6, ease: "power1.out" }, "-=0.5")
   // .from(".collection__title", {opacity:0, y: 30, duration: 1, ease: "power1.out"}, "+=3")
 };
-// stopOverscroll(document.querySelector(".header"));
+stopOverscroll(document.querySelector(".header"));
 // }
 
 // let collect = gsap.timeline();

@@ -1,5 +1,12 @@
 html {
   height: 100%;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+  /* This is the magic bit for WebKit */
+  display: none;
 }
 
 body {
@@ -13,6 +20,7 @@ body {
   overflow-x: hidden;
   min-height: 100vh;
   transition: 0.3s ease-out;
+  overflow: overlay;
 }
 
 h1 {

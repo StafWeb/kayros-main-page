@@ -1,6 +1,13 @@
 html {
   height: 100%;
+  overflow-y: scroll;
+  scrollbar-width: none;
 }
+html::-webkit-scrollbar {
+  /* This is the magic bit for WebKit */
+  display: none;
+}
+
 body {
   font-family: "Open Sans", sans-serif;
   font-style: normal;
@@ -12,6 +19,7 @@ body {
   overflow-x: hidden;
   min-height: 100vh;
   transition: 0.3s ease-out;
+  overflow: overlay;
 }
 // html,
 // body {

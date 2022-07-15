@@ -147,13 +147,19 @@ section{
   }
 }
 @media (max-width: 1000px) {
-
+  .wear{
+    &__container{
+      width: 100%;
+      height: 100%;
+    }
+  }
   .swiper {
     width: 100%;
   }
   .swiper-slide {
     flex-shrink: 0;
     max-width: 307px;
+    width: 100%;
     &:first-child {
       display: none;
     }
@@ -175,6 +181,7 @@ section{
   }
   .wear__container {
     width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
   }

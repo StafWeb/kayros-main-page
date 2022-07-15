@@ -47,7 +47,8 @@ gsap.registerPlugin(ScrollTrigger);
 //   }
 //   scroller.style.overscrollBehavior = "none";
 // }
-let pageContainer = document.querySelector(".scrolsmooth");
+if (innerWidth > 1000){
+  let pageContainer = document.querySelector(".scrolsmooth");
 
 /* SMOOTH SCROLL */
 const scroller = new LocomotiveScroll({
@@ -73,11 +74,12 @@ ScrollTrigger.scrollerProxy(pageContainer, {
   },
   pinType: pageContainer.style.transform ? "transform" : "fixed"
 });
+ScrollTrigger.addEventListener("refresh", () => scroller.update()); //locomotive-scroll
+ScrollTrigger.refresh();
 let pinBoxes = document.querySelectorAll(".pin-wrap > *");
 let pinWrap = document.querySelector(".pin-wrap");
 let pinWrapWidth = pinWrap.offsetWidth;
 let horizontalScrollLength = pinWrapWidth - window.innerWidth;
-let swiperBlock = document.querySelector(".swiper-wrapper");
 let mySwiperBlock = gsap.to(".swiper-wrapper", {
   x: -horizontalScrollLength,
   ease: "none",
@@ -94,23 +96,43 @@ let mySwiperBlock = gsap.to(".swiper-wrapper", {
     }
   }
 });
-let colletctionTl = gsap.timeline({ ease: "power1.inout", delay: 0.3 });
+let colletctionTl = gsap.timeline({ ease: "none" });
 colletctionTl.from(".collection__title", { opacity: 0, y: 10, duration:1 })
-  .from(".collection__descr", { opacity: 0, y: 7, duration:0.6 }, "-=0.5")
-  // .from(".collection__overlay", {scaleY: 0, transformOrigin:"center bottom", duration: 0.7, stagger: 0.5})
-  .from(".collection__item", {scaleY:0, y:10, transformOrigin:"center bottom", duration: 0.7, stagger:0.1}, "-=0.2")
-  .from(".collection__item-link", {opacity:0 , y:7, stagger:0.1, duration:0.5}, "-=0.4")
+  .from(".collection__descr", { opacity: 0, y: 7, duration:0.6 }, "-=0.9")
+  .fromTo(".collection__overlay", {scaleY: 1}, {scaleY:0, transformOrigin:"center top", duration: 0.7, stagger: 0.1},"-=0.9")
+  .from(".collection__item", {opacity: 0, y:30, transformOrigin:"center top", duration: 0.7, stagger:0.1}, "-=0.7")
+  .from(".collection__item-link", {opacity:0 , y:15, stagger:0.1, duration:0.5}, "-=0.6")
 let collectionTrig = ScrollTrigger.create({
   animation: colletctionTl,
   trigger: ".collection",
-  start: "top bottom",
+  start: "top 75%",
   scroller: pageContainer,
-  // end: "+=800",
-  // scrub: 5,
+  reverse: true,
+  end: "bottom 75%",
+  toggleActions:"restart complete reverse reset",
+  scrub: 1,
   onUpdate() {
     console.log("Update2")
   }
 });
+function animHead() {
+  let hedAnim = gsap.timeline({ delay: 0.9 });
+  hedAnim.from(".header__logo", { opacity: 0, duration: 0.6, ease: "power1.out" })
+    .from(".header__item-img", { opacity: 0, rotate: -90, duration: 0.4, ease: "power1.out" }, "-=0.5")
+    .from(".first-link", { opacity: 0, duration: 0.5, ease: "expo.out" }, "-=0.4")
+    .from(".second-link", { opacity: 0, x: -5, duration: 0.6, ease: "power1.out" }, "-=0.3")
+    .from(".header__form", { opacity: 0, x: -5, duration: 0.6, ease: "power1.out" }, "-=0.5")
+    .from(".header__user", { opacity: 0, x: -5, duration: 0.6, ease: "power1.out" }, "-=0.5")
+    .from(".header__cart", { opacity: 0, x: -5, duration: 0.6, ease: "power1.out" }, "-=0.5")
+    .from(".header__burger", { opacity: 0, x: -5, duration: 0.6, ease: "power1.out" }, "-=0.5")
+    .from(".header__title", { opacity: 0, y: 40, duration: 0.6, ease: "power1.out" }, "-=0.6")
+    .from(".header__descr", { opacity: 0, y: 30, duration: 0.6, ease: "power1.out" }, "-=0.5")
+    .from(".header__thumb", { opacity: 0, y: 20, duration: 0.6, ease: "power1.out" }, "-=0.5")
+  // .from(".collection__title", {opacity:0, y: 30, duration: 1, ease: "power1.out"}, "+=3")
+};
+animHead();
+}
+
 // let collect = gsap.timeline();
 // collect.from(".colletction__title", {
 //   opacity: 0,
@@ -130,24 +152,7 @@ let collectionTrig = ScrollTrigger.create({
 // });
 
 
-function animHead() {
-  let hedAnim = gsap.timeline({ delay: 0.9 });
-  hedAnim.from(".header__logo", { opacity: 0, duration: 0.6, ease: "power1.out" })
-    .from(".header__item-img", { opacity: 0, rotate: -90, duration: 0.4, ease: "power1.out" }, "-=0.5")
-    .from(".first-link", { opacity: 0, duration: 0.5, ease: "expo.out" }, "-=0.4")
-    .from(".second-link", { opacity: 0, x: -5, duration: 0.6, ease: "power1.out" }, "-=0.3")
-    .from(".header__form", { opacity: 0, x: -5, duration: 0.6, ease: "power1.out" }, "-=0.5")
-    .from(".header__user", { opacity: 0, x: -5, duration: 0.6, ease: "power1.out" }, "-=0.5")
-    .from(".header__cart", { opacity: 0, x: -5, duration: 0.6, ease: "power1.out" }, "-=0.5")
-    .from(".header__burger", { opacity: 0, x: -5, duration: 0.6, ease: "power1.out" }, "-=0.5")
-    .from(".header__title", { opacity: 0, y: 40, duration: 0.6, ease: "power1.out" }, "-=0.6")
-    .from(".header__descr", { opacity: 0, y: 30, duration: 0.6, ease: "power1.out" }, "-=0.5")
-    .from(".header__thumb", { opacity: 0, y: 20, duration: 0.6, ease: "power1.out" }, "-=0.5")
-  // .from(".collection__title", {opacity:0, y: 30, duration: 1, ease: "power1.out"}, "+=3")
-};
-animHead();
-ScrollTrigger.addEventListener("refresh", () => scroller.update()); //locomotive-scroll
-ScrollTrigger.refresh();
+
 
 
 // let swiperBlock = document.querySelector(".swiper-wrapper");

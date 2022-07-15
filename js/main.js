@@ -80,12 +80,12 @@ ScrollTrigger.scrollerProxy(pageContainer, {
 ScrollTrigger.addEventListener("refresh", () => scroller.update()); //locomotive-scroll
 ScrollTrigger.refresh();
 ScrollTrigger.defaults({
-  // toggleActions:"restart complete reverse reset",
-  markers:{
-    startColor : "green",
-    endColor: "red",
-    fontSize: "26px",
-  },
+  toggleActions:"restart complete reverse reset",
+  // markers:{
+  //   startColor : "green",
+  //   endColor: "red",
+  //   fontSize: "26px",
+  // },
 });
 let pinBoxes = document.querySelectorAll(".pin-wrap > *");
 let pinWrap = document.querySelector(".pin-wrap");
@@ -114,17 +114,17 @@ let colletctionTl = gsap.timeline({ ease: "none" });
 colletctionTl.from(".collection__title", { opacity: 0, y: 10, duration:1 })
   .from(".collection__descr", { opacity: 0, y: 7, duration:0.6 }, "-=0.9")
   .fromTo(".collection__overlay", {scaleY: 1}, {scaleY:0, transformOrigin:"center top", duration: 0.7, stagger: 0.1},"-=0.7")
-  .from(".collection__item", {opacity:0, y:30, transformOrigin:"center top", duration: 0.7, stagger:0.1}, "-=0.5")
-  .from(".collection__item-link", {opacity:0 , y:15, stagger:0.1, duration:0.5}, "-=0.5");
+  .from(".collection__item", {opacity:0, y:30, transformOrigin:"center top", duration: 0.7, stagger:0.1}, "-=0.65")
+  .from(".collection__item-link", {opacity:0 , y:15, stagger:0.1, duration:0.5}, "-=0.55");
 let collectionTrig = ScrollTrigger.create({
   animation: colletctionTl,
   trigger: ".collection",
-  start: "10% 65%",
+  start: "7% 65%",
   scroller: pageContainer,
   reverse: true,
   endTrigger:".wear",
-  end: "top 75%",
-  markerks: true,
+  end: "top 95%",
+  // markerks: true,
   scrub: 1,
   onUpdate() {
     console.log("Update2")
@@ -145,7 +145,6 @@ function animHead() {
     .from(".header__thumb", { opacity: 0, y: 20, duration: 0.6, ease: "power1.out" }, "-=0.5")
   // .from(".collection__title", {opacity:0, y: 30, duration: 1, ease: "power1.out"}, "+=3")
 };
-// animHead();
 }
 
 // let collect = gsap.timeline();

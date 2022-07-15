@@ -206,7 +206,7 @@ function animHead() {
 
 if (window.screen.width > 1000) {
   function animHead() {
-    let hedAnim = gsap.timeline({delay: 0.2});
+    let hedAnim = gsap.timeline({delay: 0.5});
     // hedAnim.delay(1);
     hedAnim.fromTo(".header__background",{opacity:0, scale: 1.2}, {opacity: 1, scale: 1, duration:1.3, ease:"power3.inOut"})
       .from(".header__logo", { opacity: 0, duration: 0.6, ease: "power1.out" })
@@ -222,7 +222,7 @@ if (window.screen.width > 1000) {
       .from(".header__thumb", { opacity: 0, y: 20, duration: 0.6, ease: "power1.out" }, "-=0.5");
   };
 };
-window.onload = animHead();
+animHead();
 const headerNav = document.querySelector('.header__nav');
 const searchForm = document.querySelector('.header__form');
 const userCab = document.querySelector('.header__user');

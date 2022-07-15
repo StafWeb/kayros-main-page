@@ -459,7 +459,7 @@
         <div class="header__background">
           <video poster="./images/background-header.png" loop autoplay muted>
             <source type="video/mp4" src="./images/kayros-102.mp4">
-            </video>   
+          </video>
         </div>
       </header>
       <section class="collection" id="btn-colect">
@@ -831,6 +831,107 @@
   <!-- <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script> -->
   <script src="./js/locomotive-scroll.min.js"></script>
   <script src="./js/main.js"></script>
+  <div id="preloader">
+
+    <div class="loader">Loading...</div>
+
+  </div>
+  <style type="text/css">
+    #preloader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, .6);
+      z-index: 99
+    }
+
+    /* #preloader div {
+		background: #fff;
+		width: 260px;
+		height: 40px;
+		line-height: 40px;
+		border-radius: 8px;
+		font-family: arial;
+		font-size: 15px;
+		color: #111;
+		text-align: center;
+		box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+		position: fixed;
+		z-index: 999;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto
+	} */
+    .loader {
+      color: grey;
+      font-family: sans-serif;
+      height: 5vh;
+      left: 50%;
+      overflow-x: hidden;
+      padding-top: 7vh;
+      position: absolute;
+      text-align: center;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 50vw;
+    }
+
+    .loader::before {
+      animation: left-to-right 3s alternate infinite linear;
+      background-image: linear-gradient(to right, transparent, red, transparent);
+      bottom: 0;
+      content: "";
+      height: 5vh;
+      left: 0;
+      overflow: hidden;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    .loader:after {
+      background-image: repeating-linear-gradient(90deg,
+          white,
+          white 1vw,
+          transparent 1vw,
+          transparent 10vw);
+      content: "";
+      height: 5vh;
+      left: 0;
+      overflow: hidden;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+
+    @keyframes left-to-right {
+      0% {
+        transform: translateX(-100%);
+      }
+
+      100% {
+        transform: translateX(100%);
+      }
+    }
+  </style>
+
+  <script type="text/javascript">
+
+    window.onload = function () {
+
+      setTimeout(function () {
+
+        document.getElementById("preloader").style.display = "none";
+
+      }, 400);
+    };
+
+  </script>
 </body>
 
 </html>

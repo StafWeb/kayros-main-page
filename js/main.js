@@ -54,7 +54,7 @@ let pageContainer = document.querySelector(".scrolsmooth");
 const scroller = new LocomotiveScroll({
   el: pageContainer,
   smooth: true,
-  
+  // scrollbarContainer: false
 });
 
 scroller.on("scroll", ScrollTrigger.update);

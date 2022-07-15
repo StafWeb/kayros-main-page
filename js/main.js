@@ -48,6 +48,38 @@ function stopOverscroll(element) {
   }
   scroller.style.overscrollBehavior = "none";
 }
+
+(function() {
+
+  document.documentElement.classList.add('is-loaded');
+  document.documentElement.classList.remove('is-loading');
+  
+  setTimeout(() => {
+      document.documentElement.classList.add('is-ready');
+  },300)
+  
+  let options = {
+      el: document.querySelector('#viewport'),
+      smooth: true,
+      getSpeed: true,
+      getDirection: true
+  }
+  
+  if(document.querySelector('#viewport').getAttribute('data-horizontal') == 'true') {
+      options.direction = 'horizontal';
+      options.gestureDirection = 'both';
+      options.tablet = {
+          smooth: true,
+          direction: 'horizontal',
+          horizontalGesture: true
+      }
+      options.smartphone = {
+          smooth: false
+      }
+      options.reloadOnContextChange = true
+  }
+  
+  })();
 // if (window.onload || document.querySelector(".scrolsmooth").offsetWidth > 1000) {
 let pageContainer = document.querySelector(".scrolsmooth");
 
@@ -147,7 +179,7 @@ function animHead() {
     .from(".header__thumb", { opacity: 0, y: 20, duration: 0.6, ease: "power1.out" }, "-=0.5")
   // .from(".collection__title", {opacity:0, y: 30, duration: 1, ease: "power1.out"}, "+=3")
 };
-stopOverscroll(document.querySelector(".header"));
+// stopOverscroll(document.querySelector(".header"));
 // }
 
 // let collect = gsap.timeline();

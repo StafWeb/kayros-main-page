@@ -11,6 +11,7 @@ body {
   color: #333333;
   display: flex;
   flex-direction: column;
+  overflow-y: scroll;
   overflow-x: hidden;
   overflow: hidden;
   min-height: 100vh;
@@ -34,7 +35,7 @@ html::-webkit-scrollbar-track,
 body::-webkit-scrollbar-track {
   width: 0;
   height: 0;
-  background: none !important;
+  background: none;
 }
 html::-webkit-scrollbar-thumb,
 body::-webkit-scrollbar-thumb {

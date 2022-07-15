@@ -16,6 +16,8 @@ body {
   transition: 0.3s ease-out;
   -ms-scroll-chaining: none;
       overscroll-behavior: none;
+  overflow: overlay;
+  scrollbar-gutter: stable;
 }
 
 html,

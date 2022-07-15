@@ -275,5 +275,7 @@
 }
 .c-scrollbar{
     width: 0px !important;
-
+  &_thumb{
+    background-color: transparent;
+  }
 }

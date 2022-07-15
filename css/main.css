@@ -2238,6 +2238,9 @@ section {
 .c-scrollbar {
   width: 0px !important;
 }
+.c-scrollbar_thumb {
+  background-color: transparent;
+}
 
 @-webkit-keyframes burger-anim {
   0% {

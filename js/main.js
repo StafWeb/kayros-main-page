@@ -54,6 +54,7 @@ let pageContainer = document.querySelector(".scrolsmooth");
 const scroller = new LocomotiveScroll({
   el: pageContainer,
   smooth: true,
+  
 });
 
 scroller.on("scroll", ScrollTrigger.update);
@@ -233,7 +234,7 @@ const headerLog = document.querySelector('.header__logo')
 const burgerInner = document.querySelector('[data-burger-inner]');
 
 burger.addEventListener('click', () => {
-  // body.classList.toggle('stop-scroll');
+  body.classList.toggle('stop-scroll');
   burger.classList.toggle('burger_active');
   nav.classList.toggle('burger-menu_active');
   burgerLog.classList.toggle('burger__logo_active');

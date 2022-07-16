@@ -8,7 +8,7 @@ html::-webkit-scrollbar {
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-style: normal;
   font-weight: 400;
   background-color: #ffffff;
@@ -24,31 +24,9 @@ body::-webkit-scrollbar {
   /* This is the magic bit for WebKit */
   display: none;
 }
-// html,
-// body {
-//   overscroll-behavior: none;
-//   overflow: overlay;
-//   scrollbar-gutter: stable;
-//   scrollbar-width: none;
-//   scrollbar-color:rgba(255, 255, 255, 0);
-// /* для Chrome/Edge/Safari */
-// &::-webkit-scrollbar {
-//   height: 0;
-//   width: 0;
-// }
-// &::-webkit-scrollbar-track {
-//   width: 0;
-//   height: 0;
-//   background: none;
-// }
-// &::-webkit-scrollbar-thumb {
-//   width: 0;
-//   height: 0;
-//   border: none;
-// }
-// }
-h1 {
-  font-family: "Playfair Display", sans-serif;
+
+h1, h2 {
+font-family: 'Playfair Display', serif;
 }
 .container {
   max-width: 1920px;

@@ -145,19 +145,19 @@ let swiperAnim = gsap.timeline({ ease: "none" });
 swiperAnim.from(".wear__text-title", { opacity: 0, y: -30 })
   .from(".wear__text-descr", {})
 let colletctionTl = gsap.timeline({ ease: "none" });
-colletctionTl.from(".collection__title", { opacity: 0, y: 10, duration: 1 })
-  .from(".collection__descr", { opacity: 0, y: 7, duration: 0.6 }, "-=0.9")
+colletctionTl.from(".collection__title", { opacity: 0, y: 20, duration: 1 })
+  .from(".collection__descr", { opacity: 0, y: 15, duration: 0.6 }, "-=0.9")
   .fromTo(".collection__overlay", { scaleY: 1 }, { scaleY: 0, transformOrigin: "center top", duration: 0.7, stagger: 0.1 }, "-=0.7")
   .from(".collection__item", { opacity: 0, y: 30, transformOrigin: "center top", duration: 0.7, stagger: 0.1 }, "-=0.65")
   .from(".collection__item-link", { opacity: 0, y: 15, stagger: 0.1, duration: 0.5 }, "-=0.55");
 let collectionTrig = ScrollTrigger.create({
   animation: colletctionTl,
   trigger: ".collection",
-  start: "7% 65%",
+  start: "7% 85%",
   scroller: pageContainer,
   reverse: true,
-  endTrigger: ".wear",
-  end: "top 95%",
+  endTrigger: ".collection__list",
+  end: "bottom 95%",
   // markerks: true,
   scrub: 1,
   onUpdate() {

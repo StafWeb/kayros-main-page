@@ -1,6 +1,7 @@
 .collection {
   position: relative;
   background-color: #FFFFFF;
+  overflow: hidden;
   &__title {
     font-family: "Playfair Display", sans-serif;
     font-style: normal;

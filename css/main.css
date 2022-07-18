@@ -1093,6 +1093,7 @@ input[type=search]::-webkit-search-results-decoration {
 .collection {
   position: relative;
   background-color: #FFFFFF;
+  overflow: hidden;
 }
 .collection__title {
   font-family: "Playfair Display", sans-serif;
@@ -1557,6 +1558,7 @@ section {
 .offer {
   background-color: #ffffff;
   position: relative;
+  overflow: hidden;
 }
 .offer .container {
   padding: 120px 90px;

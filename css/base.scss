@@ -21,7 +21,6 @@ body {
   scrollbar-width: none;
 }
 body::-webkit-scrollbar {
-  /* This is the magic bit for WebKit */
   display: none;
 }
 

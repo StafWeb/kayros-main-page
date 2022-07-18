@@ -1,5 +1,241 @@
+(function () {
+  document.documentElement.classList.add('is-loaded');
+  document.documentElement.classList.remove('is-loading');
+
+  setTimeout(() => {
+    document.documentElement.classList.add('is-ready');
+  }, 300)
+
+  let options = {
+    el: document.querySelector('#viewport'),
+    smooth: true,
+    getSpeed: true,
+    getDirection: true
+  }
+
+  if (document.querySelector('#viewport').getAttribute('data-horizontal') == 'true') {
+    options.direction = 'horizontal';
+    options.gestureDirection = 'both';
+    options.tablet = {
+      smooth: true,
+      direction: 'horizontal',
+      horizontalGesture: true
+    }
+    options.smartphone = {
+      smooth: false
+    }
+    options.reloadOnContextChange = true
+  }
+
+})();
+
+
 gsap.registerPlugin(ScrollTrigger);
-gsap.registerPlugin(ScrollToPlugin);
+let pageContainer = document.querySelector(".scrolsmooth");
+  /* SMOOTH SCROLL */
+  const scroller = new LocomotiveScroll({
+    el: pageContainer,
+    smooth: true,
+    getSpeed: true,
+    getDirection: true
+  });
+  scroller.on("scroll", ScrollTrigger.update);
+  ScrollTrigger.scrollerProxy(pageContainer, {
+    scrollTop(value) {
+      return arguments.length
+        ? scroller.scrollTo(value, 0, 0)
+        : scroller.scroll.instance.scroll.y;
+    },
+    getBoundingClientRect() {
+      return {
+        left: 0,
+        top: 0,
+        width: window.innerWidth,
+        height: window.innerHeight
+      };
+    },
+    pinType: pageContainer.style.transform ? "transform" : "fixed"
+  });
+  ScrollTrigger.defaults({
+    toggleActions: "restart complete reverse reset",
+    markers: {
+      startColor: "green",
+      endColor: "red",
+      fontSize: "26px",
+    },
+  });
+if (window.innerWidth > 1000) {
+  let pinBoxes = document.querySelectorAll(".pin-wrap > *");
+  let pinWrap = document.querySelector(".pin-wrap");
+  let pinWrapWidth = pinWrap.offsetWidth;
+  let horizontalScrollLength = pinWrapWidth - window.innerWidth;
+  let mySwiperBlock = gsap.to(".swiper-wrapper", {
+    x: "-50%",
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".wear",
+      start: 'bottom bottom',
+      scroller: pageContainer,
+      scrub: true,
+      pin: true,
+      end: pinWrapWidth,
+      onUpdate() {
+        console.log("Update")
+      }
+    }
+  });
+  let swiperAnim = gsap.timeline({
+    ease: "none",
+    scrollTrigger: {
+      scroller: pageContainer,
+      trigger: ".swiper-wrapper",
+      start: "25% 85%",
+      end: "bottom bottom",
+      scrub: true,
+    }
+  });
+  swiperAnim.from(".swiper__text-title", { opacity: 0, y: 30, duration: 0.6 })
+    .from(".swiper__text-descr", { opacity: 0, y: 30, duration: 0.6 }, "-=0.5")
+    .fromTo(".swiper__card", { opacity: 0, scale: 1.1 }, { opacity: 1, scale: 1, stagger: 0.1 }, "-=0.5");
+  // let swiperTrig = ScrollTrigger.create({
+  //   animation: swiperAnim,
+  //   scroller: pageContainer,
+  //   trigger: ".swiper-wrapper",
+  //   start: "25% 85%",
+  //   end: "bottom bottom",
+  //   scrub: true,
+  // });
+  let colletctionTl = gsap.timeline({
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".collection",
+      start: "7% 85%",
+      scroller: pageContainer,
+      endTrigger: ".collection__list",
+      end: "bottom 95%",
+      scrub: 1,
+      onUpdate() {
+        console.log("Update2")
+      }
+    }
+  });
+  colletctionTl.from(".collection__title", { opacity: 0, y: 20, duration: 1 })
+    .from(".collection__descr", { opacity: 0, y: 15, duration: 0.6 }, "-=0.9")
+    .fromTo(".collection__overlay", { scaleY: 1 }, { scaleY: 0, transformOrigin: "center top", duration: 0.7, stagger: 0.1 }, "-=0.7")
+    .from(".collection__item", { opacity: 0, y: 40, transformOrigin: "center top", duration: 0.7, stagger: 0.1 }, "-=0.65")
+    .from(".collection__item-link", { opacity: 0, y: 15, stagger: 0.1, duration: 0.5 }, "-=0.55");
+  // let collectionTrig = ScrollTrigger.create({
+  //   animation: colletctionTl,
+  //   trigger: ".collection",
+  //   start: "7% 85%",
+  //   scroller: pageContainer,
+  //   endTrigger: ".collection__list",
+  //   end: "bottom 95%",
+  //   scrub: 1,
+  //   onUpdate() {
+  //     console.log("Update2")
+  //   }
+  // });
+  let offerTl = gsap.timeline({
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".offer",
+      start: "20% 95%",
+      scroller: pageContainer,
+      end: "bottom bottom",
+      scrub: 1,
+      onUpdate() {
+        console.log("Update2")
+      }
+    }
+  });
+  offerTl.from(".offer__title", { opacity: 0, y: 20, duration: 1 })
+    .from(".cards__filter-link", { opacity: 0, y: 15, duration: 0.6 }, "-=0.8")
+    .from(".cards__item", { opacity: 0, y: 20, duration: 0.3, stagger: 0.1 }, "-=0.8");
+  // let offerTrig = ScrollTrigger.create({
+  //   animation: offerTl,
+  //   trigger: ".offer",
+  //   start: "20% 95%",
+  //   scroller: pageContainer,
+  //   end: "bottom bottom",
+  //   scrub: 1,
+  //   onUpdate() {
+  //     console.log("Update2")
+  //   }
+  // });
+
+  let infoTl = gsap.timeline({
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".info",
+      start: "20% 85%",
+      scroller: pageContainer,
+      endTrigger: ".footer",
+      end: "10% bottom",
+      scrub: 1,
+    }
+  });
+  infoTl.from(".info__start-text", { opacity: 0, y: 30, duration: 0.65, stagger: 0.1 })
+    .from(".info__company", { opacity: 0, y: 10, duration: 0.65 }, "-=0.6")
+    .from(".info__end-text", { opacity: 0, y: 30, duration: 0.65, stagger: 0.1 }, "-=0.35")
+    .from(".media__list", { opacity: 0, y: 10, duration: 0.65 });
+  // let infoTrig = ScrollTrigger.create({
+  //   animation: infoTl,
+  //   trigger: ".info",
+  //   start: "20% 85%",
+  //   scroller: pageContainer,
+  //   endTrigger: ".footer",
+  //   end: "10% bottom",
+  //   scrub: 1,
+  // });
+  let footeTl = gsap.timeline({
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".footer",
+      start: "20% 85%",
+      scroller: pageContainer,
+      endTrigger: ".footer",
+      end: "bottom bottom",
+      scrub: true,
+    }
+  });
+  footeTl.from(".footer__contacts", { opacity: 0, y: 10, duration: 0.65 })
+    .from(".footer__nav", { opacity: 0, y: 10, duration: 0.65 }, "-=0.65")
+    .from(".footer__bottom-btn", { opacity: 0, y: 30, duration: 0.65 }, "+=0.8")
+    .from(".footer__bottom-descr", { opacity: 0, y: 30, duration: 0.65 }, "-=0.8");
+  // let footerTrig = ScrollTrigger.create({
+  //   animation: footeTl,
+  //   trigger: ".footer",
+  //   start: "20% 85%",
+  //   scroller: pageContainer,
+  //   endTrigger: ".footer",
+  //   end: "bottom bottom",
+  //   scrub: true,
+  // });
+
+  let headAnim = gsap.timeline({ delay: 0.7 });
+  headAnim.fromTo(".header__background", { opacity: 0, scale: 1.2 }, { opacity: 1, scale: 1, duration: 1.3, ease: "power3.inOut" })
+    .from(".header__logo", { opacity: 0, duration: 0.6, ease: "power1.out" })
+    .from(".header__item-img", { opacity: 0, rotate: -90, duration: 0.4, ease: "power1.out" }, "-=0.5")
+    .from(".first-link", { opacity: 0, duration: 0.5, ease: "expo.out" }, "-=0.4")
+    .from(".second-link", { opacity: 0, x: -5, duration: 0.6, ease: "power1.out" }, "-=0.3")
+    .from(".header__form", { opacity: 0, x: -5, duration: 0.6, ease: "power1.out" }, "-=0.5")
+    .from(".header__user", { opacity: 0, x: -5, duration: 0.6, ease: "power1.out" }, "-=0.5")
+    .from(".header__cart", { opacity: 0, x: -5, duration: 0.6, ease: "power1.out" }, "-=0.5")
+    .from(".header__burger", { opacity: 0, x: -5, duration: 0.6, ease: "power1.out" }, "-=0.5")
+    .from(".header__title", { opacity: 0, y: 40, duration: 0.6, ease: "power1.out" }, "-=0.6")
+    .from(".header__descr", { opacity: 0, y: 30, duration: 0.6, ease: "power1.out" }, "-=0.5")
+    .from(".header__thumb", { opacity: 0, y: 20, duration: 0.6, ease: "power1.out" }, "-=0.5");
+  // window.addEventListener('resize', function () {
+  //   if(window.innerWidth < 1000) {
+  //     colletctionTl.paused();
+  //     console.log("sdasdsa")
+  //   }
+  // });
+ 
+};
+ScrollTrigger.addEventListener("refresh", () => scroller.update());
+ScrollTrigger.refresh();
 function stopOverscroll(element) {
   element = gsap.utils.toArray(element)[0] || window;
   (element === document.body || element === document.documentElement) && (element = window);
@@ -47,229 +283,25 @@ function stopOverscroll(element) {
     addListener('touchmove', handleTouch);
   }
   scroller.style.overscrollBehavior = "none";
-}
-
-(function() {
-
-  document.documentElement.classList.add('is-loaded');
-  document.documentElement.classList.remove('is-loading');
-  
-  setTimeout(() => {
-      document.documentElement.classList.add('is-ready');
-  },300)
-  
-  let options = {
-      el: document.querySelector('#viewport'),
-      smooth: true,
-      getSpeed: true,
-      getDirection: true
-  }
-  
-  if(document.querySelector('#viewport').getAttribute('data-horizontal') == 'true') {
-      options.direction = 'horizontal';
-      options.gestureDirection = 'both';
-      options.tablet = {
-          smooth: true,
-          direction: 'horizontal',
-          horizontalGesture: true
-      }
-      options.smartphone = {
-          smooth: false
-      }
-      options.reloadOnContextChange = true
-  }
-  
-  })();
-// if (window.onload || document.querySelector(".scrolsmooth").offsetWidth > 1000) {
-let pageContainer = document.querySelector(".scrolsmooth");
-
-/* SMOOTH SCROLL */
-const scroller = new LocomotiveScroll({
-  el: pageContainer,
-  smooth: true,
-  // resetNativeScroll: true,
-  getSpeed: true,
-  getDirection: true
-  // scrollbarContainer: false
-});
-
-scroller.on("scroll", ScrollTrigger.update);
-
-ScrollTrigger.scrollerProxy(pageContainer, {
-  scrollTop(value) {
-    return arguments.length
-      ? scroller.scrollTo(value, 0, 0)
-      : scroller.scroll.instance.scroll.y;
-  },
-  getBoundingClientRect() {
-    return {
-      left: 0,
-      top: 0,
-      width: window.innerWidth,
-      height: window.innerHeight
-    };
-  },
-  pinType: pageContainer.style.transform ? "transform" : "fixed"
-});
-ScrollTrigger.addEventListener("refresh", () => scroller.update()); //locomotive-scroll
-ScrollTrigger.refresh();
-ScrollTrigger.defaults({
-  toggleActions: "restart complete reverse reset",
-  // markers:{
-  //   startColor : "green",
-  //   endColor: "red",
-  //   fontSize: "26px",
-  // },
-});
-let pinBoxes = document.querySelectorAll(".pin-wrap > *");
-let pinWrap = document.querySelector(".pin-wrap");
-let pinWrapWidth = pinWrap.offsetWidth;
-let horizontalScrollLength = pinWrapWidth - window.innerWidth;
-let mySwiperBlock = gsap.to(".swiper-wrapper", {
-  x: -horizontalScrollLength,
-  ease: "none",
-  scrollTrigger: {
-    trigger: ".wear",
-    start: 'bottom bottom',
-    scroller: pageContainer,
-    // end: () => swiperBlock.offsetWidth / 1,
-    scrub: true,
-    pin: true,
-    end: pinWrapWidth,
-    onUpdate() {
-      console.log("Update")
-    }
-  }
-});
-let swiperAnim = gsap.timeline({ ease: "none" });
-swiperAnim.from(".wear__text-title", { opacity: 0, y: -30 })
-  .from(".wear__text-descr", {})
-let colletctionTl = gsap.timeline({ ease: "none" });
-colletctionTl.from(".collection__title", { opacity: 0, y: 20, duration: 1 })
-  .from(".collection__descr", { opacity: 0, y: 15, duration: 0.6 }, "-=0.9")
-  .fromTo(".collection__overlay", { scaleY: 1 }, { scaleY: 0, transformOrigin: "center top", duration: 0.7, stagger: 0.1 }, "-=0.7")
-  .from(".collection__item", { opacity: 0, y: 30, transformOrigin: "center top", duration: 0.7, stagger: 0.1 }, "-=0.65")
-  .from(".collection__item-link", { opacity: 0, y: 15, stagger: 0.1, duration: 0.5 }, "-=0.55");
-let collectionTrig = ScrollTrigger.create({
-  animation: colletctionTl,
-  trigger: ".collection",
-  start: "7% 85%",
-  scroller: pageContainer,
-  reverse: true,
-  endTrigger: ".collection__list",
-  end: "bottom 95%",
-  // markerks: true,
-  scrub: 1,
-  onUpdate() {
-    console.log("Update2")
-  }
-});
-function animHead() {
-  let hedAnim = gsap.timeline({ delay: 0.9 });
-  hedAnim.from(".header__logo", { opacity: 0, duration: 0.6, ease: "power1.out" })
-    .from(".header__item-img", { opacity: 0, rotate: -90, duration: 0.4, ease: "power1.out" }, "-=0.5")
-    .from(".first-link", { opacity: 0, duration: 0.5, ease: "expo.out" }, "-=0.4")
-    .from(".second-link", { opacity: 0, x: -5, duration: 0.6, ease: "power1.out" }, "-=0.3")
-    .from(".header__form", { opacity: 0, x: -5, duration: 0.6, ease: "power1.out" }, "-=0.5")
-    .from(".header__user", { opacity: 0, x: -5, duration: 0.6, ease: "power1.out" }, "-=0.5")
-    .from(".header__cart", { opacity: 0, x: -5, duration: 0.6, ease: "power1.out" }, "-=0.5")
-    .from(".header__burger", { opacity: 0, x: -5, duration: 0.6, ease: "power1.out" }, "-=0.5")
-    .from(".header__title", { opacity: 0, y: 40, duration: 0.6, ease: "power1.out" }, "-=0.6")
-    .from(".header__descr", { opacity: 0, y: 30, duration: 0.6, ease: "power1.out" }, "-=0.5")
-    .from(".header__thumb", { opacity: 0, y: 20, duration: 0.6, ease: "power1.out" }, "-=0.5")
-  // .from(".collection__title", {opacity:0, y: 30, duration: 1, ease: "power1.out"}, "+=3")
 };
-stopOverscroll(document.querySelector(".header"));
+
+// let box = document.querySelectorAll('.cards__item');
+// let btnOffer = document.querySelector('.offer__button');
+// for (let i = 4; i < box.length; i++) {
+//   box[i].style.display = "none";
 // }
-
-// let collect = gsap.timeline();
-// collect.from(".colletction__title", {
-//   opacity: 0,
-//   y: 50,
-//   duration: 3,
-//   ease: "none",
-//   ScrollTrigger: {
-//     trigger: ".collection",
-//     start: "bottom bottom",
-//     scroller: pageContainer,
-//     end: "+=800",
-//     scrub: 0.3,
-//     onUpdate() {
-//       console.log("Update2")
+// let countD = 4;
+// btnOffer.addEventListener("click", function () {
+//   countD += 4;
+//   if (countD <= box.length) {
+//     for (let i = 0; i < countD; i++) {
+//       box[i].style.display = "flex";
 //     }
 //   }
 // });
 
+stopOverscroll(document.querySelector(".header"));
 
-
-
-
-// let swiperBlock = document.querySelector(".swiper-wrapper");
-// let mySwiperBlock = gsap.to(".swiper-wrapper", {
-//   x: '-50%',
-//   ease: "none",
-//   duration: 6,
-//   scrollTrigger: {
-//     trigger: ".wear",
-//     start: 'bottom bottom',
-//     // end: () => swiperBlock.offsetWidth / 1,
-//     scrub: 0.4,
-//     pin: true,
-//     end: `+=${swiperBlock.offsetWidth}`,
-//     onUpdate() {
-//       console.log("Update")
-//     }
-//   }
-// });
-// ScrollTrigger.create({
-//   animation: tl ,
-//   trigger: ".wear",
-//   // scroller:".swiper-wrapper",
-//   start: 'bottom bottom',
-//   // end: () => swiperBlock.offsetWidth / 1,
-//   end: "+=1500",
-//   scrub: true,
-
-//   pin: true,
-//   onUpdate() {
-//     console.log("Update")
-//   }
-// });
-// ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
-// ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
-// ScrollTrigger.refresh();
-
-if (window.screen.width > 1000) {
-  function animHead() {
-    let hedAnim = gsap.timeline({ delay: 0.7 });
-    // hedAnim.delay(1);
-    hedAnim.fromTo(".header__background", { opacity: 0, scale: 1.2 }, { opacity: 1, scale: 1, duration: 1.3, ease: "power3.inOut" })
-      .from(".header__logo", { opacity: 0, duration: 0.6, ease: "power1.out" })
-      .from(".header__item-img", { opacity: 0, rotate: -90, duration: 0.4, ease: "power1.out" }, "-=0.5")
-      .from(".first-link", { opacity: 0, duration: 0.5, ease: "expo.out" }, "-=0.4")
-      .from(".second-link", { opacity: 0, x: -5, duration: 0.6, ease: "power1.out" }, "-=0.3")
-      .from(".header__form", { opacity: 0, x: -5, duration: 0.6, ease: "power1.out" }, "-=0.5")
-      .from(".header__user", { opacity: 0, x: -5, duration: 0.6, ease: "power1.out" }, "-=0.5")
-      .from(".header__cart", { opacity: 0, x: -5, duration: 0.6, ease: "power1.out" }, "-=0.5")
-      .from(".header__burger", { opacity: 0, x: -5, duration: 0.6, ease: "power1.out" }, "-=0.5")
-      .from(".header__title", { opacity: 0, y: 40, duration: 0.6, ease: "power1.out" }, "-=0.6")
-      .from(".header__descr", { opacity: 0, y: 30, duration: 0.6, ease: "power1.out" }, "-=0.5")
-      .from(".header__thumb", { opacity: 0, y: 20, duration: 0.6, ease: "power1.out" }, "-=0.5");
-  };
-};
-animHead();
-// window.onload = function () {
-
-//   setTimeout(function () {
-
-    
-
-//   }, 1000);
-// };
-const headerNav = document.querySelector('.header__nav');
-const searchForm = document.querySelector('.header__form');
-const userCab = document.querySelector('.header__user');
-const cart = document.querySelector('.header__cart');
 const burger = document?.querySelector('[data-burger]');
 const nav = document?.querySelector('[data-burger-menu]');
 const burgerLog = document.querySelector('.burger__logo');
@@ -279,11 +311,8 @@ const headerItem = document.querySelectorAll('.header__item');
 const headerLog = document.querySelector('.header__logo')
 const burgerInner = document.querySelector('[data-burger-inner]');
 let stop1 = document.documentElement;
-let stop2 = document.querySelector(".main");
 burger.addEventListener('click', () => {
-  // body.classList.toggle('stop-scroll');
   stop1.classList.toggle('stop-scroll');
-  // stop2.classList.toggle('stop-sroll');
   burger.classList.toggle('burger_active');
   nav.classList.toggle('burger-menu_active');
   burgerLog.classList.toggle('burger__logo_active');
@@ -291,9 +320,7 @@ burger.addEventListener('click', () => {
 });
 burgerInner.addEventListener('click', () => {
   stop1.classList.remove('stop-scroll');
-  // stop2.classList.remove('stop-sroll');
   burgerInner.classList.remove('burger_active')
-  // body.classList.remove('stop-scroll');
   burger.classList.remove('burger_active');
   nav.classList.remove('burger-menu_active');
   burgerLog.classList.remove('burger__logo_active');
@@ -301,8 +328,6 @@ burgerInner.addEventListener('click', () => {
 navItems.forEach(el => {
   el.addEventListener('click', () => {
     stop1.classList.remove('stop-scroll');
-    // stop2.classList.remove('stop-sroll');
-    // body.classList.remove('stop-scroll');
     burger.classList.remove('burger_active');
     nav.classList.remove('burger-menu_active');
     burgerLog.classList.remove('burger__logo_active');
@@ -322,80 +347,5 @@ burgerBtn.forEach(function (btn) {
     btn.classList.toggle('inner-btn_active');
     this.nextElementSibling.classList.toggle("list_active");
   })
-})
-// let options = {
-//   threshold: [0.3]
-// };
-// let coll = document.querySelector(".collection__title");
-// let observerHead = new IntersectionObserver(sec, options);
-// // observerHead.observe(headerLog);
-// // for (let i of headerItem) {
-// //   observerHead.observe(i);
-// // }
-// // observerHead.observe(searchForm);
-// // observerHead.observe(userCab);
-// // observerHead.observe(cart);
-// // observerHead.observe(burger);
-// observerHead.observe(coll);
-// function sec(entry) {
-//   entry.forEach(change => {
-//     if (change.isIntersecting) {
-//       sa.play();
-//     }
-//   });
-// };
+});
 
-// const headerTitle = document.querySelector('.header__title');
-// const headerDescr = document.querySelector('.header__descr');
-// const headerThumb = document.querySelector('.header__thumb');
-// let observerText = new IntersectionObserver(textAnim, options);
-// observerText.observe(headerTitle);
-// observerText.observe(headerDescr);
-// observerText.observe(headerThumb);
-// function textAnim(entry) {
-//   entry.forEach(change => {
-//     if (change.isIntersecting) {
-//       change.target.classList.add('header-text-anim');
-//     }
-//   });
-// };
-
-// let observerTwo = new IntersectionObserver(info, options);
-// let titles = document.querySelectorAll('[data-info]');
-// for (let tit of titles) {
-//   observerTwo.observe(tit);
-// };
-// function info(entry) {
-//   entry.forEach(change => {
-//     if (change.isIntersecting) {
-//       change.target.classList.add('fadeindown');
-//     }
-//   });
-// };
-// let scrolhed = () => {
-//   let scrolToHed = window.scrollTo(0,0);
-//   return scrolToHed;
-// };
-// const btnTop = document.getElementById('topbtn');
-
-// let rootElement = document.documentElement;
-// function scrollToTop() {
-//   rootElement.scrollTo({
-//     top: 0,
-//     // behavior: "smooth"
-//   })
-// };
-// btnTop.addEventListener('click', () => {
-//   scrollToTop();
-//   console.log("click")
-// });
-// stopOverscroll(rootElement);
-// const btnSection = document.querySelector('.header__thumb');
-// const block = document.querySelector('.collection');
-// btnSection.addEventListener('click', function (e) {
-//   e.preventDefault();
-//   block.scrollIntoView({
-//     behavior: "smooth",
-//     block: "start"
-//   });
-// });

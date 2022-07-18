@@ -1,3 +1,21 @@
+@font-face {
+  font-family: "Open Sans";
+  src: local("../fonts/") url("../fonts/OpenSans-Regular.woff2") format("woff2") url("../fonts/OpenSans-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/OpenSans-Bold.woff2") format("woff2") url("../fonts/OpenSans-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Playfair Display";
+  src: url("../fonts/PlayfairDisplay-Regular.woff2") format("woff2") url("../fonts/PlayfairDisplay-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
 *,
 *::before,
 *::after {
@@ -101,7 +119,6 @@ body {
 }
 
 body::-webkit-scrollbar {
-  /* This is the magic bit for WebKit */
   display: none;
 }
 
@@ -1065,7 +1082,7 @@ input[type=search]::-webkit-search-results-decoration {
   .header__item:first-child:hover .dropdown__list, .header__item:first-child:hover .dropdown__offer {
     opacity: 1;
     transition: opacity 0.6s cubic-bezier(0.8, 0, 0.8, 1);
-    transition-delay: 0.6s;
+    transition-delay: 0.8s;
   }
   .head-thumb {
     -webkit-animation: head-thumb 1s ease-in-out infinite forwards;
@@ -1151,6 +1168,7 @@ input[type=search]::-webkit-search-results-decoration {
   height: 100%;
   background-color: #ffffff;
   z-index: 2;
+  transform: scaleY(0);
 }
 
 @media (max-width: 1650px) {
@@ -1246,7 +1264,8 @@ section {
   background-color: #f1ebe2;
 }
 .wear__container {
-  width: 230vw;
+  width: 210vw;
+  max-width: 8640px;
   height: 100vh;
   display: flex;
 }
@@ -1261,6 +1280,7 @@ section {
 .swiper-wrapper {
   display: flex;
   overflow: hidden;
+  width: 100%;
   height: 100%;
   z-index: 1;
   transition-property: transform;
@@ -1271,15 +1291,25 @@ section {
 }
 .swiper-slide {
   flex-shrink: 0;
-  width: 40vw;
+  width: 35vw;
+  max-width: 1440px;
   height: 100%;
+  transition: transform 0.5s ease-in;
+}
+.swiper-slide:hover:not(:first-child) {
+  transform: scale(1.05);
+  transition: transform 0.5s ease-in-out;
+}
+.swiper-slide:hover .swiper__card::after {
+  opacity: 1;
+  transition: opacity 0.4s ease-in-out;
 }
 .swiper__text, .swiper__card {
   width: 100%;
   height: 100%;
 }
 .swiper__text {
-  padding: 120px 321px 0px 90px;
+  padding: 120px 800px 0px 90px;
 }
 .swiper__text-title {
   font-family: "Playfair Display", serif;
@@ -1321,9 +1351,19 @@ section {
   height: 100%;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: top;
+  background-position: top center;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.swiper__card::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+  transition: opacity 0.6s ease-in-out;
 }
 .swiper__card-link {
   position: absolute;
@@ -1368,6 +1408,16 @@ section {
   }
   100% {
     background: rgba(176, 151, 110, 0.9);
+  }
+}
+@media (max-width: 3100px) {
+  .swiper__text {
+    padding: 120px 454px 0px 90px;
+  }
+}
+@media (max-width: 2200px) {
+  .swiper__text {
+    padding: 120px 263px 0px 90px;
   }
 }
 @media (max-width: 1650px) {
@@ -1874,6 +1924,7 @@ section {
   overflow-x: overlay;
   overflow: -moz-scrollbars-none;
   -ms-overflow-style: none;
+  background-color: #f1ebe2;
   width: 100%;
   margin: 0 auto;
 }

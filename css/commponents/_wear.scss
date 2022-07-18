@@ -7,7 +7,8 @@ section{
   overflow: hidden;
   background-color: #f1ebe2;
   &__container {
-    width: 230vw;
+    width: 210vw;
+    max-width: 8640px;
     height: 100vh;
     display: flex;
 
@@ -22,6 +23,7 @@ section{
   &-wrapper {
     display: flex;
     overflow: hidden;
+    width: 100%;
     // grid-template-columns: repeat(6, 1fr);
     height: 100%;
     z-index: 1;
@@ -30,12 +32,21 @@ section{
     &::-webkit-scrollbar {
       height: 0;
     }
-  }
+  } 
   &-slide {
     flex-shrink: 0;
-    width: 40vw;
-    // max-width: 920px;
+    width: 35vw;
+    max-width: 1440px;
     height: 100%;
+    transition: transform 0.5s ease-in;
+    &:hover:not(:first-child){
+      transform: scale(1.05);
+      transition: transform 0.5s ease-in-out;
+    }
+    &:hover .swiper__card::after{
+      opacity: 1;
+      transition: opacity 0.4s ease-in-out;
+    }
   }
   &__text,
   &__card {
@@ -43,7 +54,7 @@ section{
     height: 100%;
   }
   &__text {
-    padding: 120px 321px 0px 90px;
+    padding: 120px 800px 0px 90px;
     &-title {
       font-family: "Playfair Display", serif;
       font-weight: 400;
@@ -84,9 +95,18 @@ section{
     height: 100%;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: top;
+    background-position: top center;
     object-fit: cover;
-
+    &::after{
+      position: absolute;
+      content: "";
+      top: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.2;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+      transition: opacity 0.6s ease-in-out;
+    }
     &-link {
       position: absolute;
       bottom: 75px;
@@ -115,6 +135,16 @@ section{
   }
   100% {
     background: rgba(176, 151, 110, 0.9);
+  }
+}
+@media(max-width:3100px){
+  .swiper__text{
+    padding: 120px 454px 0px 90px;
+  }
+}
+@media(max-width:2200px){
+  .swiper__text{
+    padding: 120px 263px 0px 90px;
   }
 }
 @media (max-width: 1650px) {

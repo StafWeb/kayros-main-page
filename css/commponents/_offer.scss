@@ -61,7 +61,8 @@
   &__list {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 19px;
+    column-gap: 19px;
+    row-gap: 40px;
     &::-webkit-scrollbar {
       height: 0;
     }
@@ -75,6 +76,9 @@
     flex-direction: column;
     align-items: center;
     height: 608px;
+    &:last-child{
+      display: none;
+    }
     &-color {
       position: relative;
       width: 20px;
@@ -156,7 +160,8 @@
 @media (max-width: 1650px) {
   .cards__list {
     grid-template-columns: repeat(4, 1fr);
-    gap: 17px;
+    column-gap: 17px;
+    row-gap: 40px;
   }
   .cards__item{
     height: 549px;
@@ -224,6 +229,9 @@
     &__item {
       width: 224px;
       height: 447px;
+      &:last-child{
+        display: flex;
+      }
     }
     &__filter {
       overflow: hidden;

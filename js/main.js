@@ -140,7 +140,7 @@ if (window.innerWidth > 1000) {
     ease: "none",
     scrollTrigger: {
       trigger: ".offer",
-      start: "20% 95%",
+      start: "10% 95%",
       scroller: pageContainer,
       end: "bottom bottom",
       scrub: 1,

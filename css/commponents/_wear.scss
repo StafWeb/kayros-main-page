@@ -165,6 +165,10 @@ section{
   }
 }
 @media (max-width: 1200px) {
+  .wear{
+    display: flex;
+    overflow-x: auto;
+  }
   .swiper-slide {
     max-width: 512px;
     &:first-child {

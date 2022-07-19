@@ -29,7 +29,6 @@
 
 })();
 
-
 gsap.registerPlugin(ScrollTrigger);
 let pageContainer = document.querySelector(".scrolsmooth");
   /* SMOOTH SCROLL */
@@ -97,14 +96,7 @@ if (window.innerWidth > 1000) {
   swiperAnim.from(".swiper__text-title", { opacity: 0, y: 30, duration: 0.6 })
     .from(".swiper__text-descr", { opacity: 0, y: 30, duration: 0.6 }, "-=0.5")
     .fromTo(".swiper__card", { opacity: 0, scale: 1.1 }, { opacity: 1, scale: 1, stagger: 0.1 }, "-=0.5");
-  // let swiperTrig = ScrollTrigger.create({
-  //   animation: swiperAnim,
-  //   scroller: pageContainer,
-  //   trigger: ".swiper-wrapper",
-  //   start: "25% 85%",
-  //   end: "bottom bottom",
-  //   scrub: true,
-  // });
+
   let colletctionTl = gsap.timeline({
     ease: "none",
     scrollTrigger: {
@@ -124,23 +116,12 @@ if (window.innerWidth > 1000) {
     .fromTo(".collection__overlay", { scaleY: 1 }, { scaleY: 0, transformOrigin: "center top", duration: 0.7, stagger: 0.1 }, "-=0.7")
     .from(".collection__item", { opacity: 0, y: 40, transformOrigin: "center top", duration: 0.7, stagger: 0.1 }, "-=0.65")
     .from(".collection__item-link", { opacity: 0, y: 15, stagger: 0.1, duration: 0.5 }, "-=0.55");
-  // let collectionTrig = ScrollTrigger.create({
-  //   animation: colletctionTl,
-  //   trigger: ".collection",
-  //   start: "7% 85%",
-  //   scroller: pageContainer,
-  //   endTrigger: ".collection__list",
-  //   end: "bottom 95%",
-  //   scrub: 1,
-  //   onUpdate() {
-  //     console.log("Update2")
-  //   }
-  // });
+
   let offerTl = gsap.timeline({
     ease: "none",
     scrollTrigger: {
       trigger: ".offer",
-      start: "10% 95%",
+      start: "5% bottom",
       scroller: pageContainer,
       end: "bottom bottom",
       scrub: 1,
@@ -152,17 +133,6 @@ if (window.innerWidth > 1000) {
   offerTl.from(".offer__title", { opacity: 0, y: 20, duration: 1 })
     .from(".cards__filter-link", { opacity: 0, y: 15, duration: 0.6 }, "-=0.8")
     .from(".cards__item", { opacity: 0, y: 20, duration: 0.3, stagger: 0.1 }, "-=0.8");
-  // let offerTrig = ScrollTrigger.create({
-  //   animation: offerTl,
-  //   trigger: ".offer",
-  //   start: "20% 95%",
-  //   scroller: pageContainer,
-  //   end: "bottom bottom",
-  //   scrub: 1,
-  //   onUpdate() {
-  //     console.log("Update2")
-  //   }
-  // });
 
   let infoTl = gsap.timeline({
     ease: "none",
@@ -175,19 +145,11 @@ if (window.innerWidth > 1000) {
       scrub: 1,
     }
   });
-  infoTl.from(".info__start-text", { opacity: 0, y: 30, duration: 0.65, stagger: 0.1 })
+  infoTl.from(".info__start-text", { opacity: 0, y: 30, duration: 0.65, stagger: 0.2 })
     .from(".info__company", { opacity: 0, y: 10, duration: 0.65 }, "-=0.6")
-    .from(".info__end-text", { opacity: 0, y: 30, duration: 0.65, stagger: 0.1 }, "-=0.35")
+    .from(".info__end-text", { opacity: 0, y: 30, duration: 0.65, stagger: 0.2 }, "-=0.35")
     .from(".media__list", { opacity: 0, y: 10, duration: 0.65 });
-  // let infoTrig = ScrollTrigger.create({
-  //   animation: infoTl,
-  //   trigger: ".info",
-  //   start: "20% 85%",
-  //   scroller: pageContainer,
-  //   endTrigger: ".footer",
-  //   end: "10% bottom",
-  //   scrub: 1,
-  // });
+
   let footeTl = gsap.timeline({
     ease: "none",
     scrollTrigger: {
@@ -203,16 +165,7 @@ if (window.innerWidth > 1000) {
     .from(".footer__nav", { opacity: 0, y: 10, duration: 0.65 }, "-=0.65")
     .from(".footer__bottom-btn", { opacity: 0, y: 30, duration: 0.65 }, "+=0.8")
     .from(".footer__bottom-descr", { opacity: 0, y: 30, duration: 0.65 }, "-=0.8");
-  // let footerTrig = ScrollTrigger.create({
-  //   animation: footeTl,
-  //   trigger: ".footer",
-  //   start: "20% 85%",
-  //   scroller: pageContainer,
-  //   endTrigger: ".footer",
-  //   end: "bottom bottom",
-  //   scrub: true,
-  // });
-
+ 
   let headAnim = gsap.timeline({ delay: 0.7 });
   headAnim.fromTo(".header__background", { opacity: 0, scale: 1.2 }, { opacity: 1, scale: 1, duration: 1.3, ease: "power3.inOut" })
     .from(".header__logo", { opacity: 0, duration: 0.6, ease: "power1.out" })
@@ -226,16 +179,10 @@ if (window.innerWidth > 1000) {
     .from(".header__title", { opacity: 0, y: 40, duration: 0.6, ease: "power1.out" }, "-=0.6")
     .from(".header__descr", { opacity: 0, y: 30, duration: 0.6, ease: "power1.out" }, "-=0.5")
     .from(".header__thumb", { opacity: 0, y: 20, duration: 0.6, ease: "power1.out" }, "-=0.5");
-  // window.addEventListener('resize', function () {
-  //   if(window.innerWidth < 1000) {
-  //     colletctionTl.paused();
-  //     console.log("sdasdsa")
-  //   }
-  // });
- 
 };
 ScrollTrigger.addEventListener("refresh", () => scroller.update());
 ScrollTrigger.refresh();
+
 function stopOverscroll(element) {
   element = gsap.utils.toArray(element)[0] || window;
   (element === document.body || element === document.documentElement) && (element = window);
@@ -284,22 +231,6 @@ function stopOverscroll(element) {
   }
   scroller.style.overscrollBehavior = "none";
 };
-
-// let box = document.querySelectorAll('.cards__item');
-// let btnOffer = document.querySelector('.offer__button');
-// for (let i = 4; i < box.length; i++) {
-//   box[i].style.display = "none";
-// }
-// let countD = 4;
-// btnOffer.addEventListener("click", function () {
-//   countD += 4;
-//   if (countD <= box.length) {
-//     for (let i = 0; i < countD; i++) {
-//       box[i].style.display = "flex";
-//     }
-//   }
-// });
-
 stopOverscroll(document.querySelector(".header"));
 
 const burger = document?.querySelector('[data-burger]');
@@ -341,6 +272,7 @@ footerBtn.forEach(function (btn) {
     this.nextElementSibling.classList.toggle("list_active");
   });
 });
+
 const burgerBtn = document.querySelectorAll(".inner-btn");
 burgerBtn.forEach(function (btn) {
   btn.addEventListener('click', function () {

@@ -1,4 +1,4 @@
-// --- Header --- // 
+// --- Header --- //
 .header {
   position: relative;
   height: 100vh;
@@ -713,24 +713,33 @@
       }
     }
     &__list {
-      display: none;
+      // display: none;
       gap: 14px;
-      margin-bottom: 20px;
-      margin-left: 20px;
-      transition: all 0.3s ease;
+      // margin-bottom: 20px;
+      // margin-left: 20px;
+      // transition: all 0.3s ease;
+      height: 0;
+      overflow: hidden;
+      transition: all 0.3s ease-in-out;
+      animation: list-deactive 0.3s ease-in-out both;
       &-one > .burger-menu__title-wrapper:nth-child(1) {
         display: block;
       }
       &-one {
-        display: none;
+        height: 0;
+        overflow: hidden;
+        transition: all 0.3s ease-in-out;
+        animation: list-deactive 0.3s ease-in-out both;
         margin-left: 20px;
         &-inner {
-          display: none;
+          height: 0;
+          overflow: hidden;
+          transition: all 0.3s ease-in-out;
+          animation: list-deactive 0.3s ease-in-out both;
           margin: 0px;
           gap: 14px;
-          margin-bottom: 20px;
+          // margin-bottom: 20px;
           margin-left: 20px;
-          transition: all 0.3s ease;
         }
       }
     }
@@ -836,6 +845,10 @@
     }
     .wrapper-list {
       position: relative;
+      // height: 0;
+      // &_active{
+      //   height: 100%;
+      // }
     }
     // .first {
     //   display: block;
@@ -946,4 +959,11 @@
     animation-direction: alternate-reverse;
     // animation-delay: -1s;
   }
+}
+.burger__list_active{
+  overflow: visible;
+  height: 100%;
+  animation: list-active 0.3s ease-in-out both;
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 15px;
 }

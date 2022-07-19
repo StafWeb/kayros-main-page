@@ -31,38 +31,39 @@
 
 gsap.registerPlugin(ScrollTrigger);
 let pageContainer = document.querySelector(".scrolsmooth");
-  /* SMOOTH SCROLL */
-  const scroller = new LocomotiveScroll({
-    el: pageContainer,
-    smooth: true,
-    getSpeed: true,
-    getDirection: true
-  });
-  scroller.on("scroll", ScrollTrigger.update);
-  ScrollTrigger.scrollerProxy(pageContainer, {
-    scrollTop(value) {
-      return arguments.length
-        ? scroller.scrollTo(value, 0, 0)
-        : scroller.scroll.instance.scroll.y;
-    },
-    getBoundingClientRect() {
-      return {
-        left: 0,
-        top: 0,
-        width: window.innerWidth,
-        height: window.innerHeight
-      };
-    },
-    pinType: pageContainer.style.transform ? "transform" : "fixed"
-  });
-  ScrollTrigger.defaults({
-    toggleActions: "restart complete reverse reset",
-    // markers: {
-    //   startColor: "green",
-    //   endColor: "red",
-    //   fontSize: "26px",
-    // },
-  });
+/* SMOOTH SCROLL */
+const scroller = new LocomotiveScroll({
+  el: pageContainer,
+  smooth: true,
+  getSpeed: true,
+  getDirection: true
+});
+scroller.on("scroll", ScrollTrigger.update);
+ScrollTrigger.scrollerProxy(pageContainer, {
+  scrollTop(value) {
+    return arguments.length
+      ? scroller.scrollTo(value, 0, 0)
+      : scroller.scroll.instance.scroll.y;
+  },
+  getBoundingClientRect() {
+    return {
+      left: 0,
+      top: 0,
+      width: window.innerWidth,
+      height: window.innerHeight
+    };
+  },
+  pinType: pageContainer.style.transform ? "transform" : "fixed"
+});
+ScrollTrigger.defaults({
+  // toggleActions: "restart complete reverse reset",
+  toggleActions: "play none none none",
+  // markers: {
+  //   startColor: "green",
+  //   endColor: "red",
+  //   fontSize: "26px",
+  // },
+});
 if (window.innerWidth > 1000) {
   let pinBoxes = document.querySelectorAll(".pin-wrap > *");
   let pinWrap = document.querySelector(".pin-wrap");
@@ -101,6 +102,7 @@ if (window.innerWidth > 1000) {
     ease: "none",
     scrollTrigger: {
       trigger: ".collection",
+      // toggleActions: "play none none none",
       start: "7% 85%",
       scroller: pageContainer,
       endTrigger: ".collection__list",
@@ -165,7 +167,7 @@ if (window.innerWidth > 1000) {
     .from(".footer__nav", { opacity: 0, y: 10, duration: 0.65 }, "-=0.65")
     .from(".footer__bottom-btn", { opacity: 0, y: 30, duration: 0.65 }, "+=0.8")
     .from(".footer__bottom-descr", { opacity: 0, y: 30, duration: 0.65 }, "-=0.8");
- 
+
   let headAnim = gsap.timeline({ delay: 0.7 });
   headAnim.fromTo(".header__background", { opacity: 0, scale: 1.2 }, { opacity: 1, scale: 1, duration: 1.3, ease: "power3.inOut" })
     .from(".header__logo", { opacity: 0, duration: 0.6, ease: "power1.out" })

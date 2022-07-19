@@ -13,9 +13,6 @@ body {
   font-weight: 400;
   background-color: #ffffff;
   color: #333333;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
   transition: 0.3s ease-out;
   overflow-x: hidden;
   scrollbar-width: none;
@@ -23,7 +20,11 @@ body {
 body::-webkit-scrollbar {
   display: none;
 }
-
+.scrollsmooth{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 h1, h2 {
 font-family: 'Playfair Display', serif;
 }

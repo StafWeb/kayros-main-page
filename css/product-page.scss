@@ -16,16 +16,13 @@
 	font-weight: 400;
 	font-style: normal;
 }
+
 @import "reset";
 @import "base";
 @import "commponents/header-main";
-@import "commponents/collection-main";
-@import "commponents/wear-main";
+@import "commponents/product";
+@import "commponents/filters";
 @import "commponents/offer-main";
 @import "commponents/info-main";
-@import "commponents/media-main";
 @import "commponents/footer";
 @import "commponents/animation";
-
-
-

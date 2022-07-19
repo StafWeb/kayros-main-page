@@ -1,0 +1,21 @@
+.filters {
+  &__container {
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 400px;
+    width: 260px;
+  }
+  &__btn{
+    width: 235px;
+    height: 40px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+}

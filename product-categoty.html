@@ -6,13 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./fonts/fonts.css" rel="stylesheet">
   <link rel="stylesheet" href="./css/commponents/locomotive-scroll.min.css">
-  <link href="./css/main.css" rel="stylesheet">
-  <title>Kayros</title>
+  <link href="./css/product-page.css" rel="stylesheet">
+  <title>Kayros-product</title>
 </head>
 
 <body>
   <div class="scrolsmooth" id="viewport">
-    <header class="header">
+    <header class="header header-product">
       <div class="container">
         <div class="header__top" id="header">
           <div class="header__hover"></div>
@@ -91,7 +91,7 @@
                       <circle class="item-logo" cx="1.5" cy="1.5" r="1.5" fill="white" />
                     </svg>
                   </div>
-                  <a class="header__item-link header-link first-link" href="./product-categoty.html">Каталог</a>
+                  <a class="header__item-link header-link first-link" href="#">Каталог</a>
                   <div class="dropdown">
                     <div class="dropdown__wrapper">
                       <ul class="dropdown__list">
@@ -164,314 +164,421 @@
             </button>
           </div>
         </div>
-        <div class="header__text">
-          <h1 class="header__title">Одежда из льна</h1>
-          <p class="header__descr">Комфорт всегда рядом</p>
-          <a class="header__thumb" href="#btn-sect" data-scroll-to>
-            <svg class="thumb-logo" width="22" height="34" viewBox="0 0 22 34" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <rect class="thumb-rect" x="0.5" y="0.5" width="21" height="33" rx="10.5" stroke="white"
-                stroke-opacity="0.5" />
-              <rect class="thumb-rect head-thumb" x="10.5" y="8.5" width="1" height="7" stroke="white"
-                stroke-opacity="0.5" />
-            </svg>
-          </a>
-        </div>
-      </div>
-      <div class="header__background">
-        <video poster="./images/background-header.png" loop autoplay muted>
-          <source type="video/mp4" src="./images/kayros-102.mp4">
-        </video>
       </div>
     </header>
-    <main class="main">
-      <section class="collection">
-        <div class="container">
-          <h2 class="collection__title" id="btn-sect">Коллекции одежды из льна</h2>
-          <p class="collection__descr">Элегантный образ нужен каждому,<br>у нас есть все необходимое</p>
-          <div class="collection__gallery">
-            <ul class="collection__list">
-              <li class="collection__item">
-                <div class="collection__overlay"></div>
-                <img class="collection__item-img" src="./images/collection-3.png" alt="boho">
-                <a class="collection__item-link" href="#">Бохо</a>
-              </li>
-              <li class="collection__item">
-                <div class="collection__overlay"></div>
-                <img class="collection__item-img" src="./images/collection-2.png" alt="classic">
-                <a class="collection__item-link" href="#">Классика</a>
-              </li>
-              <li class="collection__item">
-                <div class="collection__overlay"></div>
-                <img class="collection__item-img" src="./images/collection-1.png" alt="for men">
-                <a class="collection__item-link" href="#">Для мужчин</a>
-              </li>
-            </ul>
-          </div>
+    <main class="product">
+      <section class="filters">
+        <div class="filters__container" style="overflow-x: hidden; overflow-y: auto; height: 400px; width: 260px;">
+          <buttom class="filters__btn">
+            <span class="filters__title">Каталог</span>
+            <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14 8L8 2L2 8" stroke="#333333" stroke-width="2" stroke-linecap="square" />
+            </svg>
+          </buttom>
+          <ul class="filters__catalog-list">
+            <li class="filters__catalog-item">Вся одежда</li>
+            <li class="filters__catalog-item">Коллекция 2022 New <span></span> </li>
+            <li class="filters__catalog-item">Распродажа <span></span> </li>
+          </ul>
+          <buttom class="filters__btn">
+            <span class="filters__title">Коллекции</span>
+            <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14 8L8 2L2 8" stroke="#333333" stroke-width="2" stroke-linecap="square" />
+            </svg>
+          </buttom>
+          <ul class="filters__collection-list">
+            <li class="filters__collection-item">
+              <label>
+                <input type="checkbox" name="boho" value="yes">
+                <span>Бохо</span>
+              </label>
+            </li>
+            <li class="filters__collection-item">
+              <label>
+                <input type="checkbox" name="classic" value="yes">
+                <span>Классическая</span>
+              </label>
+            </li>
+            <li class="filters__collection-item">
+              <label>
+                <input type="checkbox" name="male" value="yes">
+                <span>Мужская</span>
+              </label>
+            </li>
+          </ul>
+          <buttom class="filters__btn">
+            <span class="filters__title">Категории</span>
+            <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14 8L8 2L2 8" stroke="#333333" stroke-width="2" stroke-linecap="square" />
+            </svg>
+          </buttom>
+          <ul class="filters__category-list">
+            <li class="filters__category-item">
+              <label>
+                <input type="checkbox" name="boho" value="yes"><span>Платья, сарафаны</span>
+              </label>
+            </li>
+            <li class="filters__category-item">
+              <label>
+                <input type="checkbox" name="classic" value="yes"><span>Блузки, туники</span>
+              </label>
+            </li>
+            <li class="filters__category-item">
+              <label>
+                <input type="checkbox" name="male" value="yes"><span>Жакеты</span>
+              </label>
+            </li>
+            <li class="filters__category-item">
+              <label>
+                <input type="checkbox" name="male" value="yes"><span>Брюки, капри, шорты</span>
+              </label>
+            </li>
+            <li class="filters__category-item">
+              <label>
+                <input type="checkbox" name="male" value="yes"><span>Юбки</span>
+              </label>
+            </li>
+            <li class="filters__category-item">
+              <label>
+                <input type="checkbox" name="male" value="yes"> <span>Маски</span>
+              </label>
+            </li>
+          </ul>
+          <buttom class="filters__btn">
+            <span class="filters__title">цвет</span>
+            <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14 8L8 2L2 8" stroke="#333333" stroke-width="2" stroke-linecap="square" />
+            </svg>
+          </buttom>
+          <ul class="filters__colors-list">
+            <li class="filters__colors-item">
+              <label style="background-image: url(./images/offer-colors1.png);">
+                <input type="checkbox" name="yellow" value="yes">
+              </label>
+            </li>
+            <li class="filters__colors-item">
+              <label style="background-image: url(./images/offer-colors3.png);">
+                <input type="checkbox" name="black" value="yes">
+              </label>
+            </li>
+            <li class="filters__colors-item">
+              <label style="background-image: url(./images/offer-colors4.png);">
+                <input type="checkbox" name="orange" value="yes">
+              </label>
+            </li>
+            <li class="filters__colors-item">
+              <label style="background-image: url(./images/offer-colors5.png);">
+                <input type="checkbox" name="purple" value="yes">
+              </label>
+            </li>
+            <li class="filters__colors-item">
+              <label style="background-image: url(./images/offer-colors3.png);">
+                <input type="checkbox" name="blue" value="yes">
+              </label>
+            </li>
+            <li class="filters__colors-item">
+              <label style="background-image: url(./images/offer-colors1.png);">
+                <input type="checkbox" name="green" value="yes">
+              </label>
+            </li>
+            <li class="filters__colors-item">
+              <label style="background-image: url(./images/offer-colors4.png);">
+                <input type="checkbox" name="green" value="yes">
+              </label>
+            </li>
+            <li class="filters__colors-item">
+              <label style="background-image: url(./images/offer-colors3.png);">
+                <input type="checkbox" name="blue" value="yes">
+              </label>
+            </li>
+            <li class="filters__colors-item">
+              <label style="background-image: url(./images/offer-colors2.png);">
+                <input type="checkbox" name="black" value="yes">
+              </label>
+            </li>
+            <li class="filters__colors-item">
+              <label style="background-image: url(./images/offer-colors1.png);">
+                <input type="checkbox" name="orange" value="yes">
+              </label>
+            </li>
+          </ul>
+          <buttom class="filters__btn">
+            <span class="filters__title">Размер</span>
+            <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14 8L8 2L2 8" stroke="#333333" stroke-width="2" stroke-linecap="square" />
+            </svg>
+          </buttom>
+          <ul class="filters__size-list">
+            <li class="filters__size-item">
+              <label>
+                <input type="checkbox" name="41" value="yes">
+                <span>41</span>
+              </label>
+            </li>
+            <li class="filters__size-item">
+              <label>
+                <input type="checkbox" name="42" value="yes">
+                <span>41</span>
+              </label>
+            </li>
+            <li class="filters__size-item">
+              <label>
+                <input type="checkbox" name="orange" value="yes">
+                <span>41</span>
+              </label>
+            </li>
+            <li class="filters__size-item">
+              <label>
+                <input type="checkbox" name="purple" value="yes">
+                <span>42</span>
+              </label>
+            </li>
+            <li class="filters__size-item">
+              <label>
+                <input type="checkbox" name="blue" value="yes">
+                <span>43</span>
+              </label>
+            </li>
+            <li class="filters__size-item">
+              <label>
+                <input type="checkbox" name="green" value="yes">
+                <span>44</span>
+              </label>
+            </li>
+            <li class="filters__size-item">
+              <label>
+                <input type="checkbox" name="green" value="yes">
+                <span>45</span>
+              </label>
+            </li>
+            <li class="filters__size-item">
+              <label>
+                <input type="checkbox" name="blue" value="yes">
+                <span>41-42</span>
+              </label>
+            </li>
+            <li class="filters__size-item">
+              <label>
+                <input type="checkbox" name="black" value="yes">
+                <span>43-35</span>
+              </label>
+            </li>
+            <li class="filters__size-item">
+              <label>
+                <input type="checkbox" name="orange" value="yes">
+                <span>Oversize</span>
+              </label>
+            </li>
+          </ul>
         </div>
       </section>
-      <section class="wear" id="sectionPin">
-        <div class="wear__container pin-wrap">
-          <div class="wear__text">
-            <h2 class="wear__text-title">Льняная одежда Kayros</h2>
-            <p class="wear__text-descr">пристально изучаем направления <br> и тенденции в мировой моде</p>
-          </div>
-          <div class="swiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide ">
-                <div class="swiper__text">
-                  <h2 class="swiper__text-title">Льняная одежда Kayros</h2>
-                  <p class="swiper__text-descr">пристально изучаем направления и тенденции в мировой моде</p>
-                  <div class="swiper__text-progress"></div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="swiper__card" style="background-image: url(./images/swiper-1.png);">
-                  <a class="swiper__card-link">Платья, сарафаны</a>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="swiper__card" style="background-image: url(./images/swiper-2.png);">
-                  <a class="swiper__card-link">Блузки, туники</a>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="swiper__card" style="background-image: url(./images/swiper-3.png);">
-                  <a class="swiper__card-link">Жакеты</a>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="swiper__card" style="background-image: url(./images/swiper-4.png);">
-                  <a class="swiper__card-link">Брюки, капри</a>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="swiper__card" style="background-image: url(./images/swiper-5.png);">
-                  <a class="swiper__card-link">Юбки</a>
-                </div>
-              </div>
+      <section class="product__content">
+        <section class="offer">
+          <div class="container" style="padding: 0px 20px;">
+            <h2 class="offer__title">Лучшие предложения</h2>
+            <div class="cards">
+              <ul class="cards__list">
+                <li class="cards__item">
+                  <div class="cards__image" style="background-image: url(./images/offer-1.png);">
+                  </div>
+                  <ul class="cards__list-colors">
+                    <li class="cards__item-color"> <span class="cards__item-color-inner"
+                        style="background-image: url(./images/offer-colors1.png);"></span> </li>
+                    <li class="cards__item-color"> <span class="cards__item-color-inner"
+                        style="background-image: url(./images/offer-colors2.png);"></span> </li>
+                    <li class="cards__item-color"> <span class="cards__item-color-inner"
+                        style="background-image: url(./images/offer-colors3.png);"></span> </li>
+                    <li class="cards__item-color"> <span class="cards__item-color-inner"
+                        style="background-image: url(./images/offer-colors4.png);"></span> </li>
+                  </ul>
+                  <span class="cards__descr">9/1 платье</span>
+                  <span class="cards__price">11 000 руб.</span>
+                </li>
+                <li class="cards__item">
+                  <div class="cards__image" style="background-image: url(./images/offer-2.png);">
+                  </div>
+                  <ul class="cards__list-colors">
+                    <li class="cards__item-color"> <span class="cards__item-color-inner"
+                        style="background-image: url(./images/offer-colors2.png);"></span> </li>
+                    <li class="cards__item-color"> <span class="cards__item-color-inner"
+                        style="background-image: url(./images/offer-colors3.png);"></span> </li>
+                    <li class="cards__item-color"> <span class="cards__item-color-inner"
+                        style="background-image: url(./images/offer-colors4.png);"></span> </li>
+                    <li class="cards__item-color"> <span class="cards__item-color-inner"
+                        style="background-image: url(./images/offer-colors1.png);"></span> </li>
+                  </ul>
+                  <span class="cards__descr">9/1 платье</span>
+                  <span class="cards__price">11 000 руб.</span>
+                </li>
+                <li class="cards__item">
+                  <div class="cards__image" style="background-image: url(./images/offer-3.png);">
+                  </div>
+                  <ul class="cards__list-colors">
+                    <li class="cards__item-color cards__item-color_active"> <span
+                        class="cards__item-color-inner"></span>
+                    </li>
+                    <li class="cards__item-color"> <span class="cards__item-color-inner"
+                        style="background-image: url(./images/offer-colors1.png);"></span> </li>
+                    <li class="cards__item-color"> <span class="cards__item-color-inner"
+                        style="background-image: url(./images/offer-colors2.png);"></span> </li>
+                    <li class="cards__item-color"> <span class="cards__item-color-inner"
+                        style="background-image: url(./images/offer-colors3.png);"></span> </li>
+                  </ul>
+                  <span class="cards__descr">9/1 платье</span>
+                  <span class="cards__price">11 000 руб.</span>
+                </li>
+                <li class="cards__item">
+                  <div class="cards__image" style="background-image: url(./images/offer-4.png);">
+                  </div>
+                  <ul class="cards__list-colors">
+                    <li class="cards__item-color"> <span class="cards__item-color-inner"
+                        style="background-image: url(./images/offer-colors1.png);"></span> </li>
+                    <li class="cards__item-color"> <span class="cards__item-color-inner"
+                        style="background-image: url(./images/offer-colors2.png);"></span> </li>
+                    <li class="cards__item-color"> <span class="cards__item-color-inner"
+                        style="background-image: url(./images/offer-colors3.png);"></span> </li>
+                    <li class="cards__item-color"> <span class="cards__item-color-inner"
+                        style="background-image: url(./images/offer-colors4.png);"></span> </li>
+                  </ul>
+                  <span class="cards__descr">9/1 платье</span>
+                  <span class="cards__price">11 000 руб.</span>
+                </li>
+                <li class="cards__item">
+                  <div class="cards__image" style="background-image: url(./images/offer-2.png);">
+                  </div>
+                  <ul class="cards__list-colors">
+                    <li class="cards__item-color"> <span class="cards__item-color-inner"
+                        style="background-image: url(./images/offer-colors1.png);"></span> </li>
+                    <li class="cards__item-color"> <span class="cards__item-color-inner"
+                        style="background-image: url(./images/offer-colors2.png);"></span> </li>
+                    <li class="cards__item-color"> <span class="cards__item-color-inner"
+                        style="background-image: url(./images/offer-colors3.png);"></span> </li>
+                    <li class="cards__item-color"> <span class="cards__item-color-inner"
+                        style="background-image: url(./images/offer-colors4.png);"></span> </li>
+                  </ul>
+                  <span class="cards__descr">9/1 платье</span>
+                  <span class="cards__price">11 000 руб.</span>
+                </li>
+                <li class="cards__item">
+                  <div class="cards__image" style="background-image: url(./images/offer-2.png);">
+                  </div>
+                  <ul class="cards__list-colors">
+                    <li class="cards__item-color"> <span class="cards__item-color-inner"
+                        style="background-image: url(./images/offer-colors1.png);"></span> </li>
+                    <li class="cards__item-color"> <span class="cards__item-color-inner"
+                        style="background-image: url(./images/offer-colors2.png);"></span> </li>
+                    <li class="cards__item-color"> <span class="cards__item-color-inner"
+                        style="background-image: url(./images/offer-colors3.png);"></span> </li>
+                    <li class="cards__item-color"> <span class="cards__item-color-inner"
+                        style="background-image: url(./images/offer-colors4.png);"></span> </li>
+                  </ul>
+                  <span class="cards__descr">9/1 платье</span>
+                  <span class="cards__price">11 000 руб.</span>
+                </li>
+                <li class="cards__item">
+                  <div class="cards__image" style="background-image: url(./images/offer-2.png);">
+                  </div>
+                  <ul class="cards__list-colors">
+                    <li class="cards__item-color"> <span class="cards__item-color-inner"
+                        style="background-image: url(./images/offer-colors1.png);"></span> </li>
+                    <li class="cards__item-color"> <span class="cards__item-color-inner"
+                        style="background-image: url(./images/offer-colors2.png);"></span> </li>
+                    <li class="cards__item-color"> <span class="cards__item-color-inner"
+                        style="background-image: url(./images/offer-colors3.png);"></span> </li>
+                    <li class="cards__item-color"> <span class="cards__item-color-inner"
+                        style="background-image: url(./images/offer-colors4.png);"></span> </li>
+                  </ul>
+                  <span class="cards__descr">9/1 платье</span>
+                  <span class="cards__price">11 000 руб.</span>
+                </li>
+                <li class="cards__item">
+                  <div class="cards__image" style="background-image: url(./images/offer-2.png);">
+                  </div>
+                  <ul class="cards__list-colors">
+                    <li class="cards__item-color"> <span class="cards__item-color-inner"
+                        style="background-image: url(./images/offer-colors1.png);"></span> </li>
+                    <li class="cards__item-color"> <span class="cards__item-color-inner"
+                        style="background-image: url(./images/offer-colors2.png);"></span> </li>
+                    <li class="cards__item-color"> <span class="cards__item-color-inner"
+                        style="background-image: url(./images/offer-colors3.png);"></span> </li>
+                    <li class="cards__item-color"> <span class="cards__item-color-inner"
+                        style="background-image: url(./images/offer-colors4.png);"></span> </li>
+                  </ul>
+                  <span class="cards__descr">9/1 платье</span>
+                  <span class="cards__price">11 000 руб.</span>
+                </li>
+                <li class="cards__item">
+                  <button class="cards__button">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M20 27.3L27.3 20L20 12.7L17.9 14.8L21.6 18.5H12.5V21.5H21.6L17.9 25.2L20 27.3ZM20 40C17.2667 40 14.6833 39.475 12.25 38.425C9.81667 37.375 7.69167 35.9417 5.875 34.125C4.05833 32.3083 2.625 30.1833 1.575 27.75C0.525 25.3167 0 22.7333 0 20C0 17.2333 0.525 14.6333 1.575 12.2C2.625 9.76667 4.05833 7.65 5.875 5.85C7.69167 4.05 9.81667 2.625 12.25 1.575C14.6833 0.525 17.2667 0 20 0C22.7667 0 25.3667 0.525 27.8 1.575C30.2333 2.625 32.35 4.05 34.15 5.85C35.95 7.65 37.375 9.76667 38.425 12.2C39.475 14.6333 40 17.2333 40 20C40 22.7333 39.475 25.3167 38.425 27.75C37.375 30.1833 35.95 32.3083 34.15 34.125C32.35 35.9417 30.2333 37.375 27.8 38.425C25.3667 39.475 22.7667 40 20 40ZM20 37C24.7333 37 28.75 35.3417 32.05 32.025C35.35 28.7083 37 24.7 37 20C37 15.2667 35.35 11.25 32.05 7.95C28.75 4.65 24.7333 3 20 3C15.3 3 11.2917 4.65 7.975 7.95C4.65833 11.25 3 15.2667 3 20C3 24.7 4.65833 28.7083 7.975 32.025C11.2917 35.3417 15.3 37 20 37Z"
+                        fill="#E3DDD4" />
+                    </svg>
+                    <span class="cards__button-text">Загрузить ещё</span>
+                  </button>
+                </li>
+              </ul>
             </div>
+            <button class="offer__button" id="offer-button">Показать еще</button>
           </div>
-        </div>
-      </section>
-      <section class="offer">
-        <div class="container">
-          <h2 class="offer__title">Лучшие предложения</h2>
-          <div class="cards">
-            <div class="cards__filter">
-              <div class="cards__filter-start">
-                <a class="cards__filter-link cards__filter-link_active" href="#">Хит</a>
-                <a class="cards__filter-link" href="#">Новинка</a>
-                <a class="cards__filter-link" href="#">Акция</a>
-              </div>
-              <a href="#" class="cards__filter-link">Весь каталог</a>
-            </div>
-            <ul class="cards__list">
-              <li class="cards__item">
-                <div class="cards__image" style="background-image: url(./images/offer-1.png);">
-                </div>
-                <ul class="cards__list-colors">
-                  <li class="cards__item-color"> <span class="cards__item-color-inner"
-                      style="background-image: url(./images/offer-colors1.png);"></span> </li>
-                  <li class="cards__item-color"> <span class="cards__item-color-inner"
-                      style="background-image: url(./images/offer-colors2.png);"></span> </li>
-                  <li class="cards__item-color"> <span class="cards__item-color-inner"
-                      style="background-image: url(./images/offer-colors3.png);"></span> </li>
-                  <li class="cards__item-color"> <span class="cards__item-color-inner"
-                      style="background-image: url(./images/offer-colors4.png);"></span> </li>
-                </ul>
-                <span class="cards__descr">9/1 платье</span>
-                <span class="cards__price">11 000 руб.</span>
-              </li>
-              <li class="cards__item">
-                <div class="cards__image" style="background-image: url(./images/offer-2.png);">
-                </div>
-                <ul class="cards__list-colors">
-                  <li class="cards__item-color"> <span class="cards__item-color-inner"
-                      style="background-image: url(./images/offer-colors2.png);"></span> </li>
-                  <li class="cards__item-color"> <span class="cards__item-color-inner"
-                      style="background-image: url(./images/offer-colors3.png);"></span> </li>
-                  <li class="cards__item-color"> <span class="cards__item-color-inner"
-                      style="background-image: url(./images/offer-colors4.png);"></span> </li>
-                  <li class="cards__item-color"> <span class="cards__item-color-inner"
-                      style="background-image: url(./images/offer-colors1.png);"></span> </li>
-                </ul>
-                <span class="cards__descr">9/1 платье</span>
-                <span class="cards__price">11 000 руб.</span>
-              </li>
-              <li class="cards__item">
-                <div class="cards__image" style="background-image: url(./images/offer-3.png);">
-                </div>
-                <ul class="cards__list-colors">
-                  <li class="cards__item-color cards__item-color_active"> <span class="cards__item-color-inner"></span>
-                  </li>
-                  <li class="cards__item-color"> <span class="cards__item-color-inner"
-                      style="background-image: url(./images/offer-colors1.png);"></span> </li>
-                  <li class="cards__item-color"> <span class="cards__item-color-inner"
-                      style="background-image: url(./images/offer-colors2.png);"></span> </li>
-                  <li class="cards__item-color"> <span class="cards__item-color-inner"
-                      style="background-image: url(./images/offer-colors3.png);"></span> </li>
-                </ul>
-                <span class="cards__descr">9/1 платье</span>
-                <span class="cards__price">11 000 руб.</span>
-              </li>
-              <li class="cards__item">
-                <div class="cards__image" style="background-image: url(./images/offer-4.png);">
-                </div>
-                <ul class="cards__list-colors">
-                  <li class="cards__item-color"> <span class="cards__item-color-inner"
-                      style="background-image: url(./images/offer-colors1.png);"></span> </li>
-                  <li class="cards__item-color"> <span class="cards__item-color-inner"
-                      style="background-image: url(./images/offer-colors2.png);"></span> </li>
-                  <li class="cards__item-color"> <span class="cards__item-color-inner"
-                      style="background-image: url(./images/offer-colors3.png);"></span> </li>
-                  <li class="cards__item-color"> <span class="cards__item-color-inner"
-                      style="background-image: url(./images/offer-colors4.png);"></span> </li>
-                </ul>
-                <span class="cards__descr">9/1 платье</span>
-                <span class="cards__price">11 000 руб.</span>
-              </li>
-              <li class="cards__item">
-                <div class="cards__image" style="background-image: url(./images/offer-2.png);">
-                </div>
-                <ul class="cards__list-colors">
-                  <li class="cards__item-color"> <span class="cards__item-color-inner"
-                      style="background-image: url(./images/offer-colors1.png);"></span> </li>
-                  <li class="cards__item-color"> <span class="cards__item-color-inner"
-                      style="background-image: url(./images/offer-colors2.png);"></span> </li>
-                  <li class="cards__item-color"> <span class="cards__item-color-inner"
-                      style="background-image: url(./images/offer-colors3.png);"></span> </li>
-                  <li class="cards__item-color"> <span class="cards__item-color-inner"
-                      style="background-image: url(./images/offer-colors4.png);"></span> </li>
-                </ul>
-                <span class="cards__descr">9/1 платье</span>
-                <span class="cards__price">11 000 руб.</span>
-              </li>
-              <li class="cards__item">
-                <div class="cards__image" style="background-image: url(./images/offer-2.png);">
-                </div>
-                <ul class="cards__list-colors">
-                  <li class="cards__item-color"> <span class="cards__item-color-inner"
-                      style="background-image: url(./images/offer-colors1.png);"></span> </li>
-                  <li class="cards__item-color"> <span class="cards__item-color-inner"
-                      style="background-image: url(./images/offer-colors2.png);"></span> </li>
-                  <li class="cards__item-color"> <span class="cards__item-color-inner"
-                      style="background-image: url(./images/offer-colors3.png);"></span> </li>
-                  <li class="cards__item-color"> <span class="cards__item-color-inner"
-                      style="background-image: url(./images/offer-colors4.png);"></span> </li>
-                </ul>
-                <span class="cards__descr">9/1 платье</span>
-                <span class="cards__price">11 000 руб.</span>
-              </li>
-              <li class="cards__item">
-                <div class="cards__image" style="background-image: url(./images/offer-2.png);">
-                </div>
-                <ul class="cards__list-colors">
-                  <li class="cards__item-color"> <span class="cards__item-color-inner"
-                      style="background-image: url(./images/offer-colors1.png);"></span> </li>
-                  <li class="cards__item-color"> <span class="cards__item-color-inner"
-                      style="background-image: url(./images/offer-colors2.png);"></span> </li>
-                  <li class="cards__item-color"> <span class="cards__item-color-inner"
-                      style="background-image: url(./images/offer-colors3.png);"></span> </li>
-                  <li class="cards__item-color"> <span class="cards__item-color-inner"
-                      style="background-image: url(./images/offer-colors4.png);"></span> </li>
-                </ul>
-                <span class="cards__descr">9/1 платье</span>
-                <span class="cards__price">11 000 руб.</span>
-              </li>
-              <li class="cards__item">
-                <div class="cards__image" style="background-image: url(./images/offer-2.png);">
-                </div>
-                <ul class="cards__list-colors">
-                  <li class="cards__item-color"> <span class="cards__item-color-inner"
-                      style="background-image: url(./images/offer-colors1.png);"></span> </li>
-                  <li class="cards__item-color"> <span class="cards__item-color-inner"
-                      style="background-image: url(./images/offer-colors2.png);"></span> </li>
-                  <li class="cards__item-color"> <span class="cards__item-color-inner"
-                      style="background-image: url(./images/offer-colors3.png);"></span> </li>
-                  <li class="cards__item-color"> <span class="cards__item-color-inner"
-                      style="background-image: url(./images/offer-colors4.png);"></span> </li>
-                </ul>
-                <span class="cards__descr">9/1 платье</span>
-                <span class="cards__price">11 000 руб.</span>
-              </li>
-              <li class="cards__item">
-                <button class="cards__button">
-                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        </section>
+        <section class="info" style="background-color: #ffff;">
+          <div class="container">
+            <div class="info__wrapper">
+              <div class="info__start">
+                <p class="info__start-text" data-info>Kayros специализируется на производстве одежды из 100%
+                  натурального
+                  льна.</p>
+                <p class="info__start-text" data-info>Поэтому выбирая и приобретая для себя наши качественные вещи, Вы
+                  можете
+                  быть уверены, что дарите своему
+                  телу здоровье и комфорт, а себе возможность выглядеть красиво и стильно.</p>
+                <a href="#" class="info__company">
+                  <span class="info__link" data-info>Подробнее о компании</span>
+                  <svg class="info-arrow" width="47" height="8" viewBox="0 0 47 8" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
                     <path
-                      d="M20 27.3L27.3 20L20 12.7L17.9 14.8L21.6 18.5H12.5V21.5H21.6L17.9 25.2L20 27.3ZM20 40C17.2667 40 14.6833 39.475 12.25 38.425C9.81667 37.375 7.69167 35.9417 5.875 34.125C4.05833 32.3083 2.625 30.1833 1.575 27.75C0.525 25.3167 0 22.7333 0 20C0 17.2333 0.525 14.6333 1.575 12.2C2.625 9.76667 4.05833 7.65 5.875 5.85C7.69167 4.05 9.81667 2.625 12.25 1.575C14.6833 0.525 17.2667 0 20 0C22.7667 0 25.3667 0.525 27.8 1.575C30.2333 2.625 32.35 4.05 34.15 5.85C35.95 7.65 37.375 9.76667 38.425 12.2C39.475 14.6333 40 17.2333 40 20C40 22.7333 39.475 25.3167 38.425 27.75C37.375 30.1833 35.95 32.3083 34.15 34.125C32.35 35.9417 30.2333 37.375 27.8 38.425C25.3667 39.475 22.7667 40 20 40ZM20 37C24.7333 37 28.75 35.3417 32.05 32.025C35.35 28.7083 37 24.7 37 20C37 15.2667 35.35 11.25 32.05 7.95C28.75 4.65 24.7333 3 20 3C15.3 3 11.2917 4.65 7.975 7.95C4.65833 11.25 3 15.2667 3 20C3 24.7 4.65833 28.7083 7.975 32.025C11.2917 35.3417 15.3 37 20 37Z"
-                      fill="#E3DDD4" />
+                      d="M46.3536 4.35355C46.5488 4.15829 46.5488 3.84171 46.3536 3.64645L43.1716 0.464466C42.9763 0.269204 42.6597 0.269204 42.4645 0.464466C42.2692 0.659728 42.2692 0.976311 42.4645 1.17157L45.2929 4L42.4645 6.82843C42.2692 7.02369 42.2692 7.34027 42.4645 7.53553C42.6597 7.7308 42.9763 7.7308 43.1716 7.53553L46.3536 4.35355ZM0 4.5H46V3.5H0V4.5Z"
+                      fill="#B0976E" />
                   </svg>
-                  <span class="cards__button-text">Загрузить ещё</span>
-                </button>
-              </li>
-            </ul>
-          </div>
-          <button class="offer__button" id="offer-button">Показать еще</button>
-        </div>
-      </section>
-      <section class="info">
-        <div class="container">
-          <div class="info__wrapper">
-            <div class="info__start">
-              <p class="info__start-text" data-info>Kayros специализируется на производстве одежды из 100% натурального
-                льна.</p>
-              <p class="info__start-text" data-info>Поэтому выбирая и приобретая для себя наши качественные вещи, Вы
-                можете
-                быть уверены, что дарите своему
-                телу здоровье и комфорт, а себе возможность выглядеть красиво и стильно.</p>
-              <a href="#" class="info__company">
-                <span class="info__link" data-info>Подробнее о компании</span>
-                <svg class="info-arrow" width="47" height="8" viewBox="0 0 47 8" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M46.3536 4.35355C46.5488 4.15829 46.5488 3.84171 46.3536 3.64645L43.1716 0.464466C42.9763 0.269204 42.6597 0.269204 42.4645 0.464466C42.2692 0.659728 42.2692 0.976311 42.4645 1.17157L45.2929 4L42.4645 6.82843C42.2692 7.02369 42.2692 7.34027 42.4645 7.53553C42.6597 7.7308 42.9763 7.7308 43.1716 7.53553L46.3536 4.35355ZM0 4.5H46V3.5H0V4.5Z"
-                    fill="#B0976E" />
-                </svg>
-              </a>
-            </div>
-            <div class="info__end">
-              <p class="info__end-text" data-info>Предлагаем оптовым и розничным покупателям широкий выбор одежды:
-                платья
-                и
-                сарафаны, блузы, жакеты и
-                ветровки, юбки, каприи брюки — повседневные и вечерние модели для женщин и мужчин всех возрастных
-                категорий.
-                Одежда выполнена в модной цветовой гамме и имеет широкий размерный ряд.</p>
-              <p class="info__end-text" data-info>Наша одежда подчеркнет Вашу индивидуальность в любой обстановкеи
-                прекрасно
-                подойдет для работы в офисе,
-                прогулок по городу, вечернего выхода. Вам понравилась наша одежда, и Вы решили приобрести одну модель
-                или
-                партию? Оформите свой заказ в нашем интернет-магазине. Быстро и бесплатно доставляем заказы по всей
-                России.
-              </p>
-              <p class="info__end-text" data-info>Уточнить условия оформления и доставки заказов через интернет-магазин,
-                а
-                также получить ответы на вопросыпо
-                поводу планируемого заказа, можно по Email:​<a class="info__end-link" href="#">zakaz@kayrosxl.ru</a> или
-                позвонить по телефону лини поддержки:
-                <a class="info__end-link" href="#">8-800-222-37-07</a>.
-              </p>
+                </a>
+              </div>
+              <div class="info__end">
+                <p class="info__end-text" data-info>Предлагаем оптовым и розничным покупателям широкий выбор одежды:
+                  платья
+                  и
+                  сарафаны, блузы, жакеты и
+                  ветровки, юбки, каприи брюки — повседневные и вечерние модели для женщин и мужчин всех возрастных
+                  категорий.
+                  Одежда выполнена в модной цветовой гамме и имеет широкий размерный ряд.</p>
+                <p class="info__end-text" data-info>Наша одежда подчеркнет Вашу индивидуальность в любой обстановкеи
+                  прекрасно
+                  подойдет для работы в офисе,
+                  прогулок по городу, вечернего выхода. Вам понравилась наша одежда, и Вы решили приобрести одну модель
+                  или
+                  партию? Оформите свой заказ в нашем интернет-магазине. Быстро и бесплатно доставляем заказы по всей
+                  России.
+                </p>
+                <p class="info__end-text" data-info>Уточнить условия оформления и доставки заказов через
+                  интернет-магазин,
+                  а
+                  также получить ответы на вопросыпо
+                  поводу планируемого заказа, можно по Email:​<a class="info__end-link" href="#">zakaz@kayrosxl.ru</a>
+                  или
+                  позвонить по телефону лини поддержки:
+                  <a class="info__end-link" href="#">8-800-222-37-07</a>.
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
-      <section class="media">
-        <ul class="media__list">
-          <li class="media__item" style="background-image: url(./images/swiper-1.png);"></li>
-          <li class="media__item" style="background-image: url(./images/swiper-2.png);"></li>
-          <li class="media__item" style="background-image: url(./images/swiper-3.png);"></li>
-          <li class="media__item" style="background-image: url(./images/swiper-4.png);"></li>
-          <li class="media__item" style="background-image: url(./images/swiper-5.png);"></li>
-        </ul>
+        </section>
       </section>
     </main>
     <footer class="footer ">
       <div class="container">
         <section class="footer__contacts">
           <div class="footer__logo" style="background-image: url(./images/footer-logo.svg); width: 122.79px;
-              height: 60px;">
+                height: 60px;">
           </div>
           <a class="footer__tel" href="#">8 (800) 222-37-07</a>
           <div class="footer__copy">Copyright © 2009-2020 Кайрос</div>
@@ -880,102 +987,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
   <script src="./js/locomotive-scroll.min.js"></script>
-  <script src="./js/main.js"></script>
-  <script type="text/javascript">
-    window.onload = function () {
-      setTimeout(function () {
-        document.getElementById("preloader").style.display = "none";
-      }, 800);
-    };
-  </script>
-  <div id="preloader">
-    <div class="loader">Loading...</div>
-  </div>
-  <style type="text/css">
-    #preloader {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(0, 0, 0, 0.962);
-      z-index: 99;
-      cursor: progress;
-    }
-
-    /* #preloader div {
-		background: #fff;
-		width: 260px;
-		height: 40px;
-		line-height: 40px;
-		border-radius: 8px;
-		font-family: arial;
-		font-size: 15px;
-		color: #111;
-		text-align: center;
-		box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
-		position: fixed;
-		z-index: 999;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		margin: auto
-	} */
-    .loader {
-      color: grey;
-      font-family: sans-serif;
-      height: 5vh;
-      left: 50%;
-      overflow-x: hidden;
-      padding-top: 7vh;
-      position: absolute;
-      text-align: center;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      width: 50vw;
-      cursor: progress;
-    }
-
-    .loader::before {
-      animation: left-to-right 3s alternate infinite linear;
-      background-image: linear-gradient(to right, transparent, red, transparent);
-      bottom: 0;
-      content: "";
-      height: 5vh;
-      left: 0;
-      overflow: hidden;
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-
-    .loader:after {
-      background-image: repeating-linear-gradient(90deg,
-          white,
-          white 1vw,
-          transparent 1vw,
-          transparent 10vw);
-      content: "";
-      height: 5vh;
-      left: 0;
-      overflow: hidden;
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-
-
-    @keyframes left-to-right {
-      0% {
-        transform: translateX(-100%);
-      }
-
-      100% {
-        transform: translateX(100%);
-      }
-    }
-  </style>
+  <script src="./js/product.js"></script>
 </body>
 
 </html>

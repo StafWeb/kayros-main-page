@@ -57,11 +57,11 @@ let pageContainer = document.querySelector(".scrolsmooth");
   });
   ScrollTrigger.defaults({
     toggleActions: "restart complete reverse reset",
-    markers: {
-      startColor: "green",
-      endColor: "red",
-      fontSize: "26px",
-    },
+    // markers: {
+    //   startColor: "green",
+    //   endColor: "red",
+    //   fontSize: "26px",
+    // },
   });
 if (window.innerWidth > 1000) {
   let pinBoxes = document.querySelectorAll(".pin-wrap > *");

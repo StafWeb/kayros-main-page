@@ -1457,7 +1457,7 @@ section {
 @media (max-width: 1000px) {
   .wear {
     width: 100%;
-    min-height: 624px;
+    height: 624px;
   }
   .wear__container {
     width: 100%;

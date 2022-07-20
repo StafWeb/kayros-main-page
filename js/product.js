@@ -212,3 +212,6 @@ filterBtn.forEach(function (btn) {
     this.nextElementSibling.classList.toggle("filters__list_active");
   })
 });
+document.querySelectorAll(".simple-scroll").forEach(el => {
+  new SimpleBar(el);
+});

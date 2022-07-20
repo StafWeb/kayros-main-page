@@ -247,6 +247,7 @@ const burgerInner = document.querySelector('[data-burger-inner]');
 let stop1 = document.documentElement;
 burger.addEventListener('click', () => {
   stop1.classList.toggle('stop-scroll');
+  body.classList.toggle('stop-scroll');
   burger.classList.toggle('burger_active');
   nav.classList.toggle('burger-menu_active');
   burgerLog.classList.toggle('burger__logo_active');
@@ -254,6 +255,7 @@ burger.addEventListener('click', () => {
 });
 burgerInner.addEventListener('click', () => {
   stop1.classList.remove('stop-scroll');
+  body.classList.remove('stop-scroll');
   burgerInner.classList.remove('burger_active')
   burger.classList.remove('burger_active');
   nav.classList.remove('burger-menu_active');
@@ -262,6 +264,7 @@ burgerInner.addEventListener('click', () => {
 navItems.forEach(el => {
   el.addEventListener('click', () => {
     stop1.classList.remove('stop-scroll');
+    body.classList.remove('stop-scroll');
     burger.classList.remove('burger_active');
     nav.classList.remove('burger-menu_active');
     burgerLog.classList.remove('burger__logo_active');

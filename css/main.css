@@ -2500,7 +2500,7 @@ section {
   margin-left: 10px;
 }
 .filters__catalog-item:first-child {
-  color: #B0976E;
+  color: #b0976e;
 }
 .filters__catalog-item:nth-child(2)::after {
   position: absolute;
@@ -2581,6 +2581,46 @@ section {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 50% 50%;
+}
+.filters__colors-list {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.filters__colors-item {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+}
+.filters__colors-item label {
+  width: 32px;
+  height: 32px;
+  border-radius: 100px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+.filters__colors-item label > input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.filters__colors-item label > input:checked + span {
+  border-color: #B0976E;
+}
+.filters__colors-item label > input:disabled + span {
+  border-color: #c4c4c4;
+}
+.filters__colors-item label > span {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid transparent;
 }
 
 @-webkit-keyframes burger-anim {

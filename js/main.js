@@ -287,7 +287,3 @@ burgerBtn.forEach(function (btn) {
 
   })
 });
-
-document.querySelectorAll(".simple-scroll").forEach(el => {
-  new SimpleBar(el);
-});

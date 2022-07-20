@@ -1103,6 +1103,7 @@ input[type=search]::-webkit-search-results-decoration {
 
 .header-product {
   height: 91px;
+  border-bottom: 1px solid rgba(51, 51, 51, 0.1);
 }
 .header-product .header__hover {
   display: none;
@@ -2417,32 +2418,28 @@ section {
 .product {
   display: flex;
   flex-wrap: nowrap;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 70px 90px 90px;
 }
-.product__content {
-  position: relative;
+
+.filters {
+  position: -webkit-sticky;
+  position: sticky;
+  width: 100%;
+  max-width: 260px;
+  height: 80vh;
+  top: 0;
+  margin-bottom: 70px;
 }
-.product__content-wrapper {
+.filters__container {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   overflow-x: hidden;
   overflow-y: auto;
-  width: 100%;
-  min-height: 100%;
-}
-
-.filters {
-  position: relative;
-}
-.filters__container {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  height: 80vh;
-  width: 260px;
+  height: 100%;
+  width: 235px;
 }
 .filters__btn {
   flex-shrink: 0;
@@ -2453,17 +2450,135 @@ section {
   justify-content: space-between;
   cursor: pointer;
 }
+.filters__title {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 120%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #333333;
+}
 .filters__list {
+  position: relative;
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
   overflow: hidden;
   max-height: 0;
   transition: 0.5s ease;
 }
 .filters__list_active {
   max-height: 100vh;
+  margin-bottom: 42px;
   transition: 0.5s ease;
+}
+.filters__list > li {
+  position: relative;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  color: #333333;
+}
+.filters__catalog-item {
+  display: flex;
+  align-items: center;
+}
+.filters__catalog-item span {
+  padding: 2px 7px;
+  background: #b0976e;
+  border-radius: 2px;
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 160%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-left: 10px;
+}
+.filters__catalog-item:first-child {
+  color: #B0976E;
+}
+.filters__catalog-item:nth-child(2)::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  width: 125px;
+  height: 0;
+  border-bottom: 1px solid rgba(176, 151, 110, 0.5);
+}
+.filters__catalog-item:last-child::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  width: 95px;
+  height: 0;
+  border-bottom: 1px solid rgba(176, 151, 110, 0.5);
+}
+.filters__collection-item label > input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.filters__collection-item label > input:checked + span::before {
+  background-color: #b0976e;
+  border-color: #b0976e;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+}
+.filters__collection-item label > span {
+  display: inline-flex;
+  align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.filters__collection-item label > span::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid #bbbbbb;
+  margin-right: 10px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+.filters__category-item label > input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.filters__category-item label > input:checked + span::before {
+  background-color: #b0976e;
+  border-color: #b0976e;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+}
+.filters__category-item label > span {
+  display: inline-flex;
+  align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.filters__category-item label > span::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid #bbbbbb;
+  margin-right: 10px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
 }
 
 @-webkit-keyframes burger-anim {

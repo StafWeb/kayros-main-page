@@ -713,29 +713,23 @@
       }
     }
     &__list {
-      // display: none;
       gap: 14px;
-      // margin-bottom: 20px;
-      // margin-left: 20px;
-      // transition: all 0.3s ease;
-      height: 0;
+      margin-left: 20px;
       overflow: hidden;
-      transition: all 0.3s ease-in-out;
-      animation: list-deactive 0.3s ease-in-out both;
+      max-height: 0;
+      transition: 0.3s ease-in-out;
       &-one > .burger-menu__title-wrapper:nth-child(1) {
         display: block;
       }
       &-one {
-        height: 0;
         overflow: hidden;
-        transition: all 0.3s ease-in-out;
-        animation: list-deactive 0.3s ease-in-out both;
+        max-height: 0;
+        transition: 0.3s ease-in-out;
         margin-left: 20px;
         &-inner {
-          height: 0;
           overflow: hidden;
-          transition: all 0.3s ease-in-out;
-          animation: list-deactive 0.3s ease-in-out both;
+          max-height: 0;
+          transition: 0.3s ease-in-out;
           margin: 0px;
           gap: 14px;
           // margin-bottom: 20px;
@@ -804,9 +798,10 @@
       }
     }
     .inner-btn {
-      display: block;
-      right: -10px;
-      top: -7px;
+      display: flex;
+      justify-content: end;
+      width: 100%;
+      z-index: 2;
       background-color: transparent;
       &_active {
         .inner-btn-icon::before {
@@ -961,16 +956,15 @@
   }
 }
 .burger__list_active {
-  overflow: visible;
-  height: 100%;
-  animation: list-active 0.3s ease-in-out both;
-  transition: all 0.3s ease-in-out;
-  margin-bottom: 15px;
+  max-height: 100vh;
+  transition: 0.3s ease-in-out;
+  margin-bottom: 20px;
 }
 
 .header-product {
   height: 91px;
   .header__hover {
+    display: none;
     visibility: visible;
     transform: translateY(0);
     transition: visibility 0.2s ease,

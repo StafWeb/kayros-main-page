@@ -1,41 +1,42 @@
-(function () {
-  document.documentElement.classList.add('is-loaded');
-  document.documentElement.classList.remove('is-loading');
+// (function () {
+//   document.documentElement.classList.add('is-loaded');
+//   document.documentElement.classList.remove('is-loading');
 
-  setTimeout(() => {
-    document.documentElement.classList.add('is-ready');
-  }, 300)
+//   setTimeout(() => {
+//     document.documentElement.classList.add('is-ready');
+//   }, 300)
 
-  let options = {
-    el: document.querySelector('#viewport'),
-    smooth: true,
-    getSpeed: true,
-    getDirection: true
-  }
+//   let options = {
+//     el: document.querySelector('#viewport'),
+//     smooth: true,
+//     getSpeed: true,
+//     getDirection: true
+//   }
 
-  if (document.querySelector('#viewport').getAttribute('data-horizontal') == 'true') {
-    options.direction = 'horizontal';
-    options.gestureDirection = 'both';
-    options.tablet = {
-      smooth: true,
-      direction: 'horizontal',
-      horizontalGesture: true
-    }
-    options.smartphone = {
-      smooth: false
-    }
-    options.reloadOnContextChange = true
-  }
+//   if (document.querySelector('#viewport').getAttribute('data-horizontal') == 'true') {
+//     options.direction = 'horizontal';
+//     options.gestureDirection = 'both';
+//     options.tablet = {
+//       smooth: true,
+//       direction: 'horizontal',
+//       horizontalGesture: true
+//     }
+//     options.smartphone = {
+//       smooth: false
+//     }
+//     options.reloadOnContextChange = true
+//   }
 
-})();
+// })();
 
 gsap.registerPlugin(ScrollTrigger);
-let pageContainer = document.querySelector(".scrolsmooth");
+let pageContainer = document.querySelector("#viewport");
 /* SMOOTH SCROLL */
 const scroller = new LocomotiveScroll({
   el: pageContainer,
   smooth: true,
   getSpeed: true,
+  reloadOnContextChange: true,
   getDirection: true
 });
 scroller.on("scroll", ScrollTrigger.update);

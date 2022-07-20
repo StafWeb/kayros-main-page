@@ -6,12 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./fonts/fonts.css" rel="stylesheet">
   <link rel="stylesheet" href="./css/commponents/locomotive-scroll.min.css">
-  <link href="./css/product-page.css" rel="stylesheet">
+  <link href="./css/main.css" rel="stylesheet">
   <title>Kayros-product</title>
 </head>
 
 <body>
-  <div class="scrolsmooth" id="viewport">
+  <div class="scrolsmooth" id="viewport" data-scroll-speed="1">
     <header class="header header-product">
       <div class="container">
         <div class="header__top" id="header">
@@ -168,14 +168,14 @@
     </header>
     <main class="product">
       <section class="filters">
-        <div class="filters__container" style="overflow-x: hidden; overflow-y: auto; height: 400px; width: 260px;">
+        <div class="filters__container" >
           <buttom class="filters__btn">
             <span class="filters__title">Каталог</span>
             <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M14 8L8 2L2 8" stroke="#333333" stroke-width="2" stroke-linecap="square" />
             </svg>
           </buttom>
-          <ul class="filters__catalog-list">
+          <ul class="filters__catalog-list filters__list">
             <li class="filters__catalog-item">Вся одежда</li>
             <li class="filters__catalog-item">Коллекция 2022 New <span></span> </li>
             <li class="filters__catalog-item">Распродажа <span></span> </li>
@@ -186,7 +186,7 @@
               <path d="M14 8L8 2L2 8" stroke="#333333" stroke-width="2" stroke-linecap="square" />
             </svg>
           </buttom>
-          <ul class="filters__collection-list">
+          <ul class="filters__collection-list filters__list">
             <li class="filters__collection-item">
               <label>
                 <input type="checkbox" name="boho" value="yes">
@@ -212,7 +212,7 @@
               <path d="M14 8L8 2L2 8" stroke="#333333" stroke-width="2" stroke-linecap="square" />
             </svg>
           </buttom>
-          <ul class="filters__category-list">
+          <ul class="filters__category-list filters__list">
             <li class="filters__category-item">
               <label>
                 <input type="checkbox" name="boho" value="yes"><span>Платья, сарафаны</span>
@@ -250,7 +250,7 @@
               <path d="M14 8L8 2L2 8" stroke="#333333" stroke-width="2" stroke-linecap="square" />
             </svg>
           </buttom>
-          <ul class="filters__colors-list">
+          <ul class="filters__colors-list filters__list">
             <li class="filters__colors-item">
               <label style="background-image: url(./images/offer-colors1.png);">
                 <input type="checkbox" name="yellow" value="yes">
@@ -308,7 +308,7 @@
               <path d="M14 8L8 2L2 8" stroke="#333333" stroke-width="2" stroke-linecap="square" />
             </svg>
           </buttom>
-          <ul class="filters__size-list">
+          <ul class="filters__size-list filters__list">
             <li class="filters__size-item">
               <label>
                 <input type="checkbox" name="41" value="yes">
@@ -986,8 +986,8 @@
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
-  <script src="./js/locomotive-scroll.min.js"></script>
   <script src="./js/product.js"></script>
+  <!-- <script src="./js/main.js"></script> -->
 </body>
 
 </html>

@@ -13,14 +13,13 @@ body {
   font-weight: 400;
   background-color: #ffffff;
   color: #333333;
-  transition: 0.3s ease-out;
   overflow-x: hidden;
   scrollbar-width: none;
 }
 body::-webkit-scrollbar {
   display: none;
 }
-.scrollsmooth{
+.scrolsmooth{
   display: flex;
   flex-direction: column;
   min-height: 100vh;

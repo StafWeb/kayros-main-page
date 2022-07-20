@@ -36,7 +36,7 @@ const scroller = new LocomotiveScroll({
   el: pageContainer,
   smooth: true,
   getSpeed: true,
-  reloadOnContextChange: true,
+  // reloadOnContextChange: true,
   getDirection: true
 });
 scroller.on("scroll", ScrollTrigger.update);

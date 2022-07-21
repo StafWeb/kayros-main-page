@@ -1017,3 +1017,12 @@ opacity: 0;
     transition: 0.3s;
   }
 }
+
+@media(max-width:1000px){
+  .header-product{
+    height: 59px;
+  }
+  .header__top{
+    height: 59px;
+  }
+}

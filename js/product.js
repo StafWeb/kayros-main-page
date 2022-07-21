@@ -206,12 +206,39 @@ burgerBtn.forEach(function (btn) {
   })
 });
 
-const filterBtn = document.querySelectorAll(".filters__btn");
-filterBtn.forEach(function (btn) {
+const filtersBtn = document.querySelectorAll(".filters__btn");
+filtersBtn.forEach(function (btn) {
   btn.addEventListener('click', function () {
     this.nextElementSibling.classList.toggle("filters__list_active");
+    btn.classList.toggle("filters__btn_active");
   })
 });
 document.querySelectorAll(".simple-scroll").forEach(el => {
   new SimpleBar(el);
+});
+
+const filter = document.querySelector(".filters");
+const filterBtn = document.querySelector(".filter-btn");
+const filterShow = document.querySelector(".filters__btn-show");
+const filterClose = document.querySelector("[data-filter-close]");
+
+filterBtn.addEventListener('click', function() {
+  stop1.classList.add('stop-scroll');
+  body.classList.add('stop-scroll');
+  filter.classList.add("filters_active");
+  filterClose.classList.add("burger_active");
+
+});
+filterShow.addEventListener('click', function() {
+  stop1.classList.remove('stop-scroll');
+  body.classList.remove('stop-scroll');
+  filter.classList.remove("filters_active");
+  filterClose.classList.remove("burger_active");
+});
+
+filterClose.addEventListener('click', function () {
+  stop1.classList.remove('stop-scroll');
+  body.classList.remove('stop-scroll');
+  filter.classList.remove("filters_active");
+  filterClose.classList.remove("burger_active");
 });

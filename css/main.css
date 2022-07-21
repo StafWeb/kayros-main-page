@@ -2433,7 +2433,7 @@ input[type=search]::-webkit-search-results-decoration {
   position: -webkit-sticky !important;
   position: sticky !important;
   top: 70px;
-  height: 75vh;
+  height: 85vh;
   width: 260px;
   margin-right: 50px;
 }

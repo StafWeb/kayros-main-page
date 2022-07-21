@@ -1796,7 +1796,6 @@ input[type=search]::-webkit-search-results-decoration {
     gap: 16px;
   }
   .cards__item {
-    width: 288px;
     min-height: 432px;
   }
 }
@@ -1830,6 +1829,9 @@ input[type=search]::-webkit-search-results-decoration {
   .cards__item {
     flex-shrink: 0;
   }
+  .cards__item:last-child {
+    display: flex;
+  }
   .cards__button {
     display: flex;
     margin: 200px 20px 0 0;
@@ -1842,9 +1844,6 @@ input[type=search]::-webkit-search-results-decoration {
   .cards__item {
     width: 224px;
     height: 447px;
-  }
-  .cards__item:last-child {
-    display: flex;
   }
   .cards__filter {
     overflow: hidden;

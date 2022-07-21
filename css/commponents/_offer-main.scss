@@ -178,7 +178,6 @@
     gap: 16px;
   }
   .cards__item {
-    width: 288px;
     min-height: 432px;
   }
 }
@@ -212,6 +211,9 @@
     }
     &__item {
       flex-shrink: 0;
+      &:last-child {
+        display: flex;
+      }
     }
     &__button {
       display: flex;
@@ -229,9 +231,6 @@
     &__item {
       width: 224px;
       height: 447px;
-      &:last-child {
-        display: flex;
-      }
     }
     &__filter {
       overflow: hidden;

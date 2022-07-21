@@ -644,9 +644,6 @@
   }
   .burger-menu {
     overflow: hidden;
-    &__container {
-      overflow-y: auto;
-    }
     &__header {
       height: 60px;
       flex-shrink: 0;
@@ -741,6 +738,7 @@
       display: none;
       align-items: flex-start;
       margin-top: 20px;
+      margin-bottom: 70px;
       &_mob {
         display: flex;
       }

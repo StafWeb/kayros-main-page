@@ -26,7 +26,7 @@
     align-self: flex-start;
     .info-arrow {
       transform: scaleX(1);
-      // transform-origin: left left;
+      transform-origin: left;
       transition: all 0.3s ease;
       margin-top: 3px;
     }

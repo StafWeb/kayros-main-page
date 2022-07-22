@@ -71,7 +71,7 @@ if (window.innerWidth > 1000) {
   let pinWrapWidth = pinWrap.offsetWidth;
   let horizontalScrollLength = pinWrapWidth - window.innerWidth;
   let mySwiperBlock = gsap.to(".swiper-wrapper", {
-    x: "-50%",
+    x: "-51%",
     ease: "none",
     scrollTrigger: {
       trigger: ".wear",

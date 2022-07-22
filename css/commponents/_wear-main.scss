@@ -167,12 +167,15 @@
 @media (max-width: 1200px) {
   .wear{
     display: flex;
-    overflow-x: auto;
+    // overflow-x: auto;
+    &__container{
+      width: 240vw;
+    }
   }
   .swiper-slide {
-    max-width: 512px;
+      width: 40vw;
     &:first-child {
-      max-width: 350px;
+      width: 30vw;
     }
   }
   .swiper__text {

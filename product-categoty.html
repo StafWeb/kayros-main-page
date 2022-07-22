@@ -179,7 +179,7 @@
             </button>
           </div>
           <div class="filters__container ">
-            <buttom class="filters__btn">
+            <buttom class="filters__btn filters__btn_active">
               <span class="filters__title">Каталог</span>
               <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M14 8L8 2L2 8" stroke="#333333" stroke-width="2" stroke-linecap="square" />
@@ -190,7 +190,7 @@
               <li class="filters__catalog-item"><a class="catalog-link" href="#">Коллекция 2022</a><span>New</span></li>
               <li class="filters__catalog-item"><a class="catalog-link" href="#">Распродажа</a><span>% sale</span></li>
             </ul>
-            <buttom class="filters__btn">
+            <buttom class="filters__btn filters__btn_active">
               <span class="filters__title">Коллекции</span>
               <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M14 8L8 2L2 8" stroke="#333333" stroke-width="2" stroke-linecap="square" />
@@ -216,7 +216,7 @@
                 </label>
               </li>
             </ul>
-            <buttom class="filters__btn">
+            <buttom class="filters__btn filters__btn_active">
               <span class="filters__title">Категории</span>
               <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M14 8L8 2L2 8" stroke="#333333" stroke-width="2" stroke-linecap="square" />
@@ -329,66 +329,72 @@
               </svg>
             </buttom>
             <ul class="filters__size-list filters__list">
-              <li class="filters__size-item">
-                <label>
-                  <input type="checkbox" name="41" value="yes">
-                  <span>41</span>
-                </label>
-              </li>
-              <li class="filters__size-item">
-                <label>
-                  <input type="checkbox" name="42" value="yes">
-                  <span>41</span>
-                </label>
-              </li>
-              <li class="filters__size-item">
-                <label>
-                  <input type="checkbox" name="orange" value="yes">
-                  <span>41</span>
-                </label>
-              </li>
-              <li class="filters__size-item">
-                <label>
-                  <input type="checkbox" name="purple" value="yes">
-                  <span>42</span>
-                </label>
-              </li>
-              <li class="filters__size-item">
-                <label>
-                  <input type="checkbox" name="blue" value="yes">
-                  <span>43</span>
-                </label>
-              </li>
-              <li class="filters__size-item">
-                <label>
-                  <input type="checkbox" name="green" value="yes">
-                  <span>44</span>
-                </label>
-              </li>
-              <li class="filters__size-item">
-                <label>
-                  <input type="checkbox" name="green" value="yes">
-                  <span>45</span>
-                </label>
-              </li>
-              <li class="filters__size-item">
-                <label>
-                  <input type="checkbox" name="blue" value="yes">
-                  <span>41-42</span>
-                </label>
-              </li>
-              <li class="filters__size-item">
-                <label>
-                  <input type="checkbox" name="black" value="yes">
-                  <span>43-35</span>
-                </label>
-              </li>
-              <li class="filters__size-item">
-                <label>
-                  <input type="checkbox" name="orange" value="yes">
-                  <span>Oversize</span>
-                </label>
-              </li>
+              <ul class="filters__size-inner">
+                <li class="filters__size-item">
+                  <label>
+                    <input type="checkbox" name="41" value="yes">
+                    <span>41</span>
+                  </label>
+                </li>
+                <li class="filters__size-item">
+                  <label>
+                    <input type="checkbox" name="42" value="yes">
+                    <span>41</span>
+                  </label>
+                </li>
+                <li class="filters__size-item">
+                  <label>
+                    <input type="checkbox" name="orange" value="yes">
+                    <span>41</span>
+                  </label>
+                </li>
+                <li class="filters__size-item">
+                  <label>
+                    <input type="checkbox" name="purple" value="yes">
+                    <span>42</span>
+                  </label>
+                </li>
+                <li class="filters__size-item">
+                  <label>
+                    <input type="checkbox" name="blue" value="yes">
+                    <span>43</span>
+                  </label>
+                </li>
+                <li class="filters__size-item">
+                  <label>
+                    <input type="checkbox" name="green" value="yes">
+                    <span>44</span>
+                  </label>
+                </li>
+                <li class="filters__size-item">
+                  <label>
+                    <input type="checkbox" name="green" value="yes">
+                    <span>45</span>
+                  </label>
+                </li>
+              </ul>
+              <ul class="filters__size-inner">
+                <li class="filters__size-item">
+                  <label>
+                    <input type="checkbox" name="blue" value="yes">
+                    <span>41-42</span>
+                  </label>
+                </li>
+                <li class="filters__size-item">
+                  <label>
+                    <input type="checkbox" name="black" value="yes">
+                    <span>43-35</span>
+                  </label>
+                </li>
+              </ul>
+              <ul class="filters__size-inner">
+                <li class="filters__size-item">
+                  <label>
+                    <input type="checkbox" name="orange" value="yes">
+                    <span>Oversize</span>
+                  </label>
+                </li>
+              </ul>
             </ul>
           </div>
           <button class="filters__btn-show">Показать</button>
@@ -551,60 +557,6 @@
                   </ul>
                 </div>
                 <button class="offer__button" id="offer-button">Показать еще</button>
-              </div>
-            </section>
-            <section class="info" style="background-color: #ffff;">
-              <div class="container">
-                <div class="info__wrapper">
-                  <div class="info__start">
-                    <p class="info__start-text" data-info>Kayros специализируется на производстве одежды из 100%
-                      натурального
-                      льна.</p>
-                    <p class="info__start-text" data-info>Поэтому выбирая и приобретая для себя наши качественные вещи,
-                      Вы
-                      можете
-                      быть уверены, что дарите своему
-                      телу здоровье и комфорт, а себе возможность выглядеть красиво и стильно.</p>
-                    <a href="#" class="info__company">
-                      <span class="info__link" data-info>Подробнее о компании</span>
-                      <svg class="info-arrow" width="47" height="8" viewBox="0 0 47 8" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M46.3536 4.35355C46.5488 4.15829 46.5488 3.84171 46.3536 3.64645L43.1716 0.464466C42.9763 0.269204 42.6597 0.269204 42.4645 0.464466C42.2692 0.659728 42.2692 0.976311 42.4645 1.17157L45.2929 4L42.4645 6.82843C42.2692 7.02369 42.2692 7.34027 42.4645 7.53553C42.6597 7.7308 42.9763 7.7308 43.1716 7.53553L46.3536 4.35355ZM0 4.5H46V3.5H0V4.5Z"
-                          fill="#B0976E" />
-                      </svg>
-                    </a>
-                  </div>
-                  <div class="info__end">
-                    <p class="info__end-text" data-info>Предлагаем оптовым и розничным покупателям широкий выбор одежды:
-                      платья
-                      и
-                      сарафаны, блузы, жакеты и
-                      ветровки, юбки, каприи брюки — повседневные и вечерние модели для женщин и мужчин всех возрастных
-                      категорий.
-                      Одежда выполнена в модной цветовой гамме и имеет широкий размерный ряд.</p>
-                    <p class="info__end-text" data-info>Наша одежда подчеркнет Вашу индивидуальность в любой обстановкеи
-                      прекрасно
-                      подойдет для работы в офисе,
-                      прогулок по городу, вечернего выхода. Вам понравилась наша одежда, и Вы решили приобрести одну
-                      модель
-                      или
-                      партию? Оформите свой заказ в нашем интернет-магазине. Быстро и бесплатно доставляем заказы по
-                      всей
-                      России.
-                    </p>
-                    <p class="info__end-text" data-info>Уточнить условия оформления и доставки заказов через
-                      интернет-магазин,
-                      а
-                      также получить ответы на вопросыпо
-                      поводу планируемого заказа, можно по Email:​<a class="info__end-link"
-                        href="#">zakaz@kayrosxl.ru</a>
-                      или
-                      позвонить по телефону лини поддержки:
-                      <a class="info__end-link" href="#">8-800-222-37-07</a>.
-                    </p>
-                  </div>
-                </div>
               </div>
             </section>
           </div>

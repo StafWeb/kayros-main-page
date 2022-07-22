@@ -97,7 +97,7 @@
     transition:all 0.4s ease;
     &_active {
       max-height: 100vh;
-      transition:all 0.4s ease-out;
+      transition:all 0.7s ease;
     }
     & > li {
       position: relative;

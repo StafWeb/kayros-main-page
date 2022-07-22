@@ -2538,7 +2538,7 @@ input[type=search]::-webkit-search-results-decoration {
 }
 .filters__list_active {
   max-height: 100vh;
-  transition: all 0.4s ease-out;
+  transition: all 0.7s ease;
 }
 .filters__list > li {
   position: relative;

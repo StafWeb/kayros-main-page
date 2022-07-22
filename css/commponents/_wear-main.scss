@@ -11,7 +11,6 @@
     max-width: 8640px;
     height: 100vh;
     display: flex;
-
   }
   &__text {
     display: none;
@@ -32,21 +31,13 @@
     &::-webkit-scrollbar {
       height: 0;
     }
-  } 
+  }
   &-slide {
     flex-shrink: 0;
     width: 35vw;
     max-width: 1440px;
     height: 100%;
     transition: transform 0.5s ease-in;
-    &:hover:not(:first-child){
-      transform: scale(1.05);
-      transition: transform 0.5s ease-in-out;
-    }
-    &:hover .swiper__card::after{
-      opacity: 1;
-      transition: opacity 0.4s ease-in-out;
-    }
   }
   &__text,
   &__card {
@@ -97,7 +88,7 @@
     background-repeat: no-repeat;
     background-position: top center;
     object-fit: cover;
-    &::after{
+    &::after {
       position: absolute;
       content: "";
       top: 0;
@@ -137,13 +128,13 @@
     background: rgba(176, 151, 110, 0.9);
   }
 }
-@media(max-width:3100px){
-  .swiper__text{
+@media (max-width: 3100px) {
+  .swiper__text {
     padding: 120px 454px 0px 90px;
   }
 }
-@media(max-width:2200px){
-  .swiper__text{
+@media (max-width: 2200px) {
+  .swiper__text {
     padding: 120px 263px 0px 90px;
   }
 }
@@ -165,15 +156,15 @@
   }
 }
 @media (max-width: 1200px) {
-  .wear{
+  .wear {
     display: flex;
     // overflow-x: auto;
-    &__container{
+    &__container {
       width: 240vw;
     }
   }
   .swiper-slide {
-      width: 40vw;
+    width: 40vw;
     &:first-child {
       width: 30vw;
     }
@@ -184,10 +175,10 @@
   }
 }
 @media (max-width: 1000px) {
-  .wear{
+  .wear {
     width: 100%;
     height: 624px;
-    &__container{
+    &__container {
       width: 100%;
       height: 100%;
     }
@@ -211,9 +202,26 @@
     overflow: hidden;
     overflow-x: auto;
     scrollbar-width: none;
-    scroll-snap-type: x mandatory;
-    &::-webkit-scrollbar {
-      height: 0;
+    ::-webkit-scrollbar {
+      width: 0px;
+      height: 0px;
+    }
+    
+    ::-webkit-scrollbar-track {
+      background: transparent;
+      width: 0px;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      background: transparent;
+      width: 0px;
+      visibility: hidden;
+    }
+    
+    ::-webkit-scrollbar-thumb:window-inactive {
+      background: transparent;
+      width: 0;
+      visibility: hidden;
     }
   }
   .swiper__card-link {
@@ -282,5 +290,17 @@
   }
   .swiper-slide {
     max-width: 260px;
+  }
+}
+@media (min-width: 1000px) {
+  .swiper-slide {
+    &:hover:not(:first-child) {
+      transform: scale(1.05);
+      transition: transform 0.5s ease-in-out;
+    }
+    &:hover .swiper__card::after {
+      opacity: 1;
+      transition: opacity 0.4s ease-in-out;
+    }
   }
 }

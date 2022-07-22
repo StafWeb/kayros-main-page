@@ -1525,8 +1525,44 @@ input[type=search]::-webkit-search-results-decoration {
     width: 100%;
     height: 100%;
   }
+  .wear__container::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+  }
+  .wear__container::-webkit-scrollbar-track {
+    background: transparent;
+    width: 0px;
+  }
+  .wear__container::-webkit-scrollbar-thumb {
+    background: transparent;
+    width: 0px;
+    visibility: hidden;
+  }
+  .wear__container::-webkit-scrollbar-thumb:window-inactive {
+    background: transparent;
+    width: 0;
+    visibility: hidden;
+  }
   .swiper {
     width: 100%;
+  }
+  .swiper::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+  }
+  .swiper::-webkit-scrollbar-track {
+    background: transparent;
+    width: 0px;
+  }
+  .swiper::-webkit-scrollbar-thumb {
+    background: transparent;
+    width: 0px;
+    visibility: hidden;
+  }
+  .swiper::-webkit-scrollbar-thumb:window-inactive {
+    background: transparent;
+    width: 0;
+    visibility: hidden;
   }
   .swiper-slide {
     flex-shrink: 0;
@@ -1545,20 +1581,20 @@ input[type=search]::-webkit-search-results-decoration {
     overflow-x: auto;
     scrollbar-width: none;
   }
-  .swiper-wrapper ::-webkit-scrollbar {
+  .swiper-wrapper::-webkit-scrollbar {
     width: 0px;
     height: 0px;
   }
-  .swiper-wrapper ::-webkit-scrollbar-track {
+  .swiper-wrapper::-webkit-scrollbar-track {
     background: transparent;
     width: 0px;
   }
-  .swiper-wrapper ::-webkit-scrollbar-thumb {
+  .swiper-wrapper::-webkit-scrollbar-thumb {
     background: transparent;
     width: 0px;
     visibility: hidden;
   }
-  .swiper-wrapper ::-webkit-scrollbar-thumb:window-inactive {
+  .swiper-wrapper::-webkit-scrollbar-thumb:window-inactive {
     background: transparent;
     width: 0;
     visibility: hidden;

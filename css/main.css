@@ -1303,6 +1303,9 @@ input[type=search]::-webkit-search-results-decoration {
   .collection__overlay {
     z-index: 0;
   }
+  .collection__title, .collection__descr {
+    padding: 0 20px;
+  }
 }
 @media (max-width: 750px) {
   .collection .container {

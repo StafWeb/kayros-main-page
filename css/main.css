@@ -2375,23 +2375,23 @@ input[type=search]::-webkit-search-results-decoration {
     display: flex;
     width: 100%;
     justify-content: end;
+    align-items: center;
     position: absolute;
     top: 0;
     right: 0;
     height: 40px;
     z-index: 2;
     background: transparent;
-    transition: transform 0.4s ease;
   }
   .btn-mob > svg {
     width: 14px;
     height: 8px;
     z-index: -1;
-    margin-top: 5px;
+    transition: transform 0.4s ease;
   }
   .btn-mob_active svg {
     transform: rotate(180deg);
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.4s ease;
   }
 }
 .footer__list_active {

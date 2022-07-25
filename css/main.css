@@ -684,6 +684,7 @@ input[type=search]::-webkit-search-results-decoration {
   background-color: #fff;
   border-top: 1px solid rgba(51, 51, 51, 0.1);
   border-bottom: 1px solid rgba(51, 51, 51, 0.1);
+  max-width: 1920px;
   margin: 0 auto;
   padding: 40px 90px;
 }

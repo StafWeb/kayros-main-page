@@ -113,8 +113,9 @@
       font-size: 14px;
       line-height: 140%;
       color: rgba(51, 51, 51, 0.7);
-      & > span{
+      & > a{
         text-transform: uppercase;
+        color: rgba(51, 51, 51, 0.7);
       }
     }
   }

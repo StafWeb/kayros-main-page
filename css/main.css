@@ -2742,7 +2742,6 @@ input[type=search]::-webkit-search-results-decoration {
 }
 .simple-scroll {
   height: 100vh;
-  overflow: auto;
   scroll-behavior: smooth;
 }
 

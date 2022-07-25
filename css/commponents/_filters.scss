@@ -3,7 +3,6 @@
   top: 70px;
   height: 85vh;
   width: 260px;
-  // margin-bottom: 20px;
   margin-right: 50px;
   & > .simplebar-track{
     width: 8px !important;
@@ -62,15 +61,16 @@
     overflow-y: auto;
     width: 235px;
     height: auto;
+    padding-bottom: 70px;
   }
   &__btn {
     flex-shrink: 0;
     width: 235px;
-    height: 40px;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-between;
     cursor: pointer;
+    margin-bottom: 25px;
     &_active {
       & > svg {
         transform: rotate(180deg);
@@ -258,7 +258,7 @@
     width: 100%;
     gap: 8px;
     &:last-child{
-      margin-bottom: 26px;
+      // margin-bottom: 70px;
     }
   }
   &__size-item {

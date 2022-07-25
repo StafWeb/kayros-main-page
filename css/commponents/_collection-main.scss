@@ -102,7 +102,7 @@
     left: 35px;
   }
   .collection__item {
-    height: 432px;
+    min-height: 432px;
   }
 }
 @media (max-width: 1000px) {

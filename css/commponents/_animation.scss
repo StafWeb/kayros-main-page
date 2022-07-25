@@ -60,6 +60,14 @@
     transform: rotate(90deg);
   }
 }
+@keyframes rotate-list-img-rev{
+  0%{
+    transform: rotate(90deg);
+  }
+  100%{
+    transform: rotate(0);
+  }
+}
 @keyframes dropdown-menu-scale{
   0%{
     transform: scaleY(0);

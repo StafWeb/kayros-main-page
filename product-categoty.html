@@ -168,7 +168,7 @@
       </div>
     </header>
     <main>
-      <div class="product">
+      <section class="product">
         <section class="filters simple-scroll">
           <div class="filters__header">
             <button class="filters__btn-reset">Сбросить</button>
@@ -400,10 +400,22 @@
           <button class="filters__btn-show">Показать</button>
         </section>
         <section class="product__content">
-          <div class="product__content-wrapper">
-            <section class="offer">
+          <div class="breadcrumbs">
+            <ul class="breadcrumbs__list">
+              <li class="breadcrumbs__item">
+                <span>Главная страница</span>
+              </li>
+              <li class="breadcrumbs__item">
+                <span>Каталог</span>
+              </li>
+              <li class="breadcrumbs__item">
+                <span>Одежда из льна</span>
+              </li>
+            </ul>
+          </div>
+            <section class="product__cards">
               <div class="container" style="padding: 0px 20px;">
-                <h2 class="offer__title">Лучшие предложения</h2>
+                <h2 class="offer__title">Одежда из льна</h2>
                 <button class="filter-btn">
                   <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <line x1="-4.37114e-08" y1="9.5" x2="16" y2="9.5" stroke="#B0976E" />
@@ -559,9 +571,8 @@
                 <button class="offer__button" id="offer-button">Показать еще</button>
               </div>
             </section>
-          </div>
         </section>
-      </div>
+      </section>
     </main>
     <footer class="footer ">
       <div class="container">

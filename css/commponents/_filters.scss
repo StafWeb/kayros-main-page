@@ -1,11 +1,13 @@
 // Product Filters //
 .simple-scroll{
   height: 100vh;
+  overflow: auto;
+  scroll-behavior: smooth;
 }
 .filters {
   position: sticky !important;
   top: 70px;
-  height: 85vh;
+  height: 88vh;
   width: 260px;
   margin-right: 50px;
   & > .simplebar-track{
@@ -261,9 +263,9 @@
     flex-wrap: wrap;
     width: 100%;
     gap: 8px;
-    &:last-child{
-      // margin-bottom: 70px;
-    }
+    // &:last-child{
+    //   // margin-bottom: 70px;
+    // }
   }
   &__size-item {
     display: flex;

@@ -5,16 +5,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./fonts/fonts.css" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="./css/commponents/locomotive-scroll.min.css"> -->
+  <link rel="stylesheet" href="./css/commponents/simplebar.min.css">
   <link href="./css/main.css" rel="stylesheet">
-  <link rel="stylesheet" href="./css/commponents/simplebar.css">
   <title>Kayros-product</title>
 </head>
 
 <body>
-  <div class="simple-scroll">
-    <header class="header header-product">
+  <div class="simple-scroll" >
+    <header class="header header-product" id="header">
       <div class="container">
-        <div class="header__top" id="header">
+        <div class="header__top" >
           <div class="header__hover"></div>
           <div class="header__start">
             <a class="header__logo" href="./index.html">
@@ -168,7 +169,7 @@
       </div>
     </header>
     <main>
-      <section class="product">
+      <div class="product">
         <section class="filters simple-scroll">
           <div class="filters__header">
             <button class="filters__btn-reset">Сбросить</button>
@@ -372,12 +373,42 @@
                     <span>45</span>
                   </label>
                 </li>
+                <li class="filters__size-item">
+                  <label>
+                    <input type="checkbox" name="41" value="yes">
+                    <span>41</span>
+                  </label>
+                </li>
+                <li class="filters__size-item">
+                  <label>
+                    <input type="checkbox" name="41" value="yes">
+                    <span>41</span>
+                  </label>
+                </li>
               </ul>
               <ul class="filters__size-inner">
                 <li class="filters__size-item">
                   <label>
                     <input type="checkbox" name="blue" value="yes">
                     <span>41-42</span>
+                  </label>
+                </li>
+                <li class="filters__size-item">
+                  <label>
+                    <input type="checkbox" name="black" value="yes">
+                    <span>43-35</span>
+                  </label>
+                </li>
+                <li class="filters__size-item">
+                  <label>
+                    <input type="checkbox" name="black" value="yes">
+                    <span>43-35</span>
+                  </label>
+                </li>
+                <li class="filters__size-item">
+                  <label>
+                    <input type="checkbox" name="black" value="yes">
+                    <span>43-35</span>
                   </label>
                 </li>
                 <li class="filters__size-item">
@@ -413,168 +444,215 @@
               </li>
             </ul>
           </div>
-            <section class="product__cards">
-              <div class="container" style="padding: 0px 20px;">
-                <h2 class="offer__title">Одежда из льна</h2>
-                <button class="filter-btn">
-                  <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <line x1="-4.37114e-08" y1="9.5" x2="16" y2="9.5" stroke="#B0976E" />
-                    <line y1="2.5" x2="16" y2="2.5" stroke="#B0976E" />
-                    <circle cx="10.5" cy="2.5" r="2" fill="white" stroke="#B0976E" />
-                    <circle cx="5.5" cy="9.5" r="2" fill="white" stroke="#B0976E" />
-                  </svg>
-                  <span>Фильтры</span>
-                </button>
-                <div class="cards">
-                  <ul class="cards__list">
-                    <li class="cards__item">
-                      <div class="cards__image" style="background-image: url(./images/offer-1.png);">
-                      </div>
-                      <ul class="cards__list-colors">
-                        <li class="cards__item-color"> <span class="cards__item-color-inner"
-                            style="background-image: url(./images/offer-colors1.png);"></span> </li>
-                        <li class="cards__item-color"> <span class="cards__item-color-inner"
-                            style="background-image: url(./images/offer-colors2.png);"></span> </li>
-                        <li class="cards__item-color"> <span class="cards__item-color-inner"
-                            style="background-image: url(./images/offer-colors3.png);"></span> </li>
-                        <li class="cards__item-color"> <span class="cards__item-color-inner"
-                            style="background-image: url(./images/offer-colors4.png);"></span> </li>
-                      </ul>
-                      <span class="cards__descr">9/1 платье</span>
-                      <span class="cards__price">11 000 руб.</span>
-                    </li>
-                    <li class="cards__item">
-                      <div class="cards__image" style="background-image: url(./images/offer-2.png);">
-                      </div>
-                      <ul class="cards__list-colors">
-                        <li class="cards__item-color"> <span class="cards__item-color-inner"
-                            style="background-image: url(./images/offer-colors2.png);"></span> </li>
-                        <li class="cards__item-color"> <span class="cards__item-color-inner"
-                            style="background-image: url(./images/offer-colors3.png);"></span> </li>
-                        <li class="cards__item-color"> <span class="cards__item-color-inner"
-                            style="background-image: url(./images/offer-colors4.png);"></span> </li>
-                        <li class="cards__item-color"> <span class="cards__item-color-inner"
-                            style="background-image: url(./images/offer-colors1.png);"></span> </li>
-                      </ul>
-                      <span class="cards__descr">9/1 платье</span>
-                      <span class="cards__price">11 000 руб.</span>
-                    </li>
-                    <li class="cards__item">
-                      <div class="cards__image" style="background-image: url(./images/offer-3.png);">
-                      </div>
-                      <ul class="cards__list-colors">
-                        <li class="cards__item-color cards__item-color_active"> <span
-                            class="cards__item-color-inner"></span>
-                        </li>
-                        <li class="cards__item-color"> <span class="cards__item-color-inner"
-                            style="background-image: url(./images/offer-colors1.png);"></span> </li>
-                        <li class="cards__item-color"> <span class="cards__item-color-inner"
-                            style="background-image: url(./images/offer-colors2.png);"></span> </li>
-                        <li class="cards__item-color"> <span class="cards__item-color-inner"
-                            style="background-image: url(./images/offer-colors3.png);"></span> </li>
-                      </ul>
-                      <span class="cards__descr">9/1 платье</span>
-                      <span class="cards__price">11 000 руб.</span>
-                    </li>
-                    <li class="cards__item">
-                      <div class="cards__image" style="background-image: url(./images/offer-4.png);">
-                      </div>
-                      <ul class="cards__list-colors">
-                        <li class="cards__item-color"> <span class="cards__item-color-inner"
-                            style="background-image: url(./images/offer-colors1.png);"></span> </li>
-                        <li class="cards__item-color"> <span class="cards__item-color-inner"
-                            style="background-image: url(./images/offer-colors2.png);"></span> </li>
-                        <li class="cards__item-color"> <span class="cards__item-color-inner"
-                            style="background-image: url(./images/offer-colors3.png);"></span> </li>
-                        <li class="cards__item-color"> <span class="cards__item-color-inner"
-                            style="background-image: url(./images/offer-colors4.png);"></span> </li>
-                      </ul>
-                      <span class="cards__descr">9/1 платье</span>
-                      <span class="cards__price">11 000 руб.</span>
-                    </li>
-                    <li class="cards__item">
-                      <div class="cards__image" style="background-image: url(./images/offer-2.png);">
-                      </div>
-                      <ul class="cards__list-colors">
-                        <li class="cards__item-color"> <span class="cards__item-color-inner"
-                            style="background-image: url(./images/offer-colors1.png);"></span> </li>
-                        <li class="cards__item-color"> <span class="cards__item-color-inner"
-                            style="background-image: url(./images/offer-colors2.png);"></span> </li>
-                        <li class="cards__item-color"> <span class="cards__item-color-inner"
-                            style="background-image: url(./images/offer-colors3.png);"></span> </li>
-                        <li class="cards__item-color"> <span class="cards__item-color-inner"
-                            style="background-image: url(./images/offer-colors4.png);"></span> </li>
-                      </ul>
-                      <span class="cards__descr">9/1 платье</span>
-                      <span class="cards__price">11 000 руб.</span>
-                    </li>
-                    <li class="cards__item">
-                      <div class="cards__image" style="background-image: url(./images/offer-2.png);">
-                      </div>
-                      <ul class="cards__list-colors">
-                        <li class="cards__item-color"> <span class="cards__item-color-inner"
-                            style="background-image: url(./images/offer-colors1.png);"></span> </li>
-                        <li class="cards__item-color"> <span class="cards__item-color-inner"
-                            style="background-image: url(./images/offer-colors2.png);"></span> </li>
-                        <li class="cards__item-color"> <span class="cards__item-color-inner"
-                            style="background-image: url(./images/offer-colors3.png);"></span> </li>
-                        <li class="cards__item-color"> <span class="cards__item-color-inner"
-                            style="background-image: url(./images/offer-colors4.png);"></span> </li>
-                      </ul>
-                      <span class="cards__descr">9/1 платье</span>
-                      <span class="cards__price">11 000 руб.</span>
-                    </li>
-                    <li class="cards__item">
-                      <div class="cards__image" style="background-image: url(./images/offer-2.png);">
-                      </div>
-                      <ul class="cards__list-colors">
-                        <li class="cards__item-color"> <span class="cards__item-color-inner"
-                            style="background-image: url(./images/offer-colors1.png);"></span> </li>
-                        <li class="cards__item-color"> <span class="cards__item-color-inner"
-                            style="background-image: url(./images/offer-colors2.png);"></span> </li>
-                        <li class="cards__item-color"> <span class="cards__item-color-inner"
-                            style="background-image: url(./images/offer-colors3.png);"></span> </li>
-                        <li class="cards__item-color"> <span class="cards__item-color-inner"
-                            style="background-image: url(./images/offer-colors4.png);"></span> </li>
-                      </ul>
-                      <span class="cards__descr">9/1 платье</span>
-                      <span class="cards__price">11 000 руб.</span>
-                    </li>
-                    <li class="cards__item">
-                      <div class="cards__image" style="background-image: url(./images/offer-2.png);">
-                      </div>
-                      <ul class="cards__list-colors">
-                        <li class="cards__item-color"> <span class="cards__item-color-inner"
-                            style="background-image: url(./images/offer-colors1.png);"></span> </li>
-                        <li class="cards__item-color"> <span class="cards__item-color-inner"
-                            style="background-image: url(./images/offer-colors2.png);"></span> </li>
-                        <li class="cards__item-color"> <span class="cards__item-color-inner"
-                            style="background-image: url(./images/offer-colors3.png);"></span> </li>
-                        <li class="cards__item-color"> <span class="cards__item-color-inner"
-                            style="background-image: url(./images/offer-colors4.png);"></span> </li>
-                      </ul>
-                      <span class="cards__descr">9/1 платье</span>
-                      <span class="cards__price">11 000 руб.</span>
-                    </li>
-                    <li class="cards__item">
-                      <button class="cards__button">
-                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path
-                            d="M20 27.3L27.3 20L20 12.7L17.9 14.8L21.6 18.5H12.5V21.5H21.6L17.9 25.2L20 27.3ZM20 40C17.2667 40 14.6833 39.475 12.25 38.425C9.81667 37.375 7.69167 35.9417 5.875 34.125C4.05833 32.3083 2.625 30.1833 1.575 27.75C0.525 25.3167 0 22.7333 0 20C0 17.2333 0.525 14.6333 1.575 12.2C2.625 9.76667 4.05833 7.65 5.875 5.85C7.69167 4.05 9.81667 2.625 12.25 1.575C14.6833 0.525 17.2667 0 20 0C22.7667 0 25.3667 0.525 27.8 1.575C30.2333 2.625 32.35 4.05 34.15 5.85C35.95 7.65 37.375 9.76667 38.425 12.2C39.475 14.6333 40 17.2333 40 20C40 22.7333 39.475 25.3167 38.425 27.75C37.375 30.1833 35.95 32.3083 34.15 34.125C32.35 35.9417 30.2333 37.375 27.8 38.425C25.3667 39.475 22.7667 40 20 40ZM20 37C24.7333 37 28.75 35.3417 32.05 32.025C35.35 28.7083 37 24.7 37 20C37 15.2667 35.35 11.25 32.05 7.95C28.75 4.65 24.7333 3 20 3C15.3 3 11.2917 4.65 7.975 7.95C4.65833 11.25 3 15.2667 3 20C3 24.7 4.65833 28.7083 7.975 32.025C11.2917 35.3417 15.3 37 20 37Z"
-                            fill="#E3DDD4" />
-                        </svg>
-                        <span class="cards__button-text">Загрузить ещё</span>
-                      </button>
-                    </li>
-                  </ul>
-                </div>
-                <button class="offer__button" id="offer-button">Показать еще</button>
+          <h1 class="product__title">Одежда из льна</h1>
+          <button class="filter-btn">
+            <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <line x1="-4.37114e-08" y1="9.5" x2="16" y2="9.5" stroke="#B0976E" />
+              <line y1="2.5" x2="16" y2="2.5" stroke="#B0976E" />
+              <circle cx="10.5" cy="2.5" r="2" fill="white" stroke="#B0976E" />
+              <circle cx="5.5" cy="9.5" r="2" fill="white" stroke="#B0976E" />
+            </svg>
+            <span>Фильтры</span>
+          </button>
+          <div class="cards">
+            <div class="cards__top">
+              <ul class="cards__breadcrumbs">
+                <li><button class="cards__breadcrumbs-btn"><span>Бохо</span><span></span></button></li>
+                <li><button class="cards__breadcrumbs-btn"><span>Платья</span><span></span></button></li>
+                <li><button class="cards__breadcrumbs-btn"><span>Блузки</span><span></span></button></li>
+              </ul>
+              <div class="cards__sort none">
+                <button class="cards__sort-btn"><span>Сортировка</span></button>
+                <ul class="cards__sort-list">
+                  <li class="cards__sort-item"><span></span></li>
+                  <li class="cards__sort-item"><span></span></li>
+                  <li class="cards__sort-item"><span></span></li>
+                </ul>
               </div>
-            </section>
+            </div>
+            <ul class="cards__list">
+              <li class="cards__item">
+                <div class="cards__image" style="background-image: url(./images/offer-1.png);">
+                </div>
+                <ul class="cards__list-colors">
+                  <li class="cards__item-color">
+                    <span class="cards__item-color-inner"
+                      style="background-image: url(./images/offer-colors1.png);"></span>
+                  </li>
+                  <li class="cards__item-color">
+                    <span class="cards__item-color-inner"
+                      style="background-image: url(./images/offer-colors2.png);"></span>
+                  </li>
+                  <li class="cards__item-color">
+                    <span class="cards__item-color-inner"
+                      style="background-image: url(./images/offer-colors3.png);"></span>
+                  </li>
+                  <li class="cards__item-color">
+                    <span class="cards__item-color-inner"
+                      style="background-image: url(./images/offer-colors4.png);"></span>
+                  </li>
+                </ul>
+                <span class="cards__descr">9/1 платье</span>
+                <span class="cards__price">11 000 руб.</span>
+              </li>
+              <li class="cards__item">
+                <div class="cards__image" style="background-image: url(./images/offer-2.png);">
+                </div>
+                <ul class="cards__list-colors">
+                  <li class="cards__item-color"> <span class="cards__item-color-inner"
+                      style="background-image: url(./images/offer-colors2.png);"></span> </li>
+                  <li class="cards__item-color"> <span class="cards__item-color-inner"
+                      style="background-image: url(./images/offer-colors3.png);"></span> </li>
+                  <li class="cards__item-color"> <span class="cards__item-color-inner"
+                      style="background-image: url(./images/offer-colors4.png);"></span> </li>
+                  <li class="cards__item-color"> <span class="cards__item-color-inner"
+                      style="background-image: url(./images/offer-colors1.png);"></span> </li>
+                </ul>
+                <span class="cards__descr">9/1 платье</span>
+                <span class="cards__price">11 000 руб.</span>
+              </li>
+              <li class="cards__item">
+                <div class="cards__image" style="background-image: url(./images/offer-3.png);">
+                </div>
+                <ul class="cards__list-colors">
+                  <li class="cards__item-color cards__item-color_active"> <span class="cards__item-color-inner"></span>
+                  </li>
+                  <li class="cards__item-color"> <span class="cards__item-color-inner"
+                      style="background-image: url(./images/offer-colors1.png);"></span> </li>
+                  <li class="cards__item-color"> <span class="cards__item-color-inner"
+                      style="background-image: url(./images/offer-colors2.png);"></span> </li>
+                  <li class="cards__item-color"> <span class="cards__item-color-inner"
+                      style="background-image: url(./images/offer-colors3.png);"></span> </li>
+                </ul>
+                <span class="cards__descr">9/1 платье</span>
+                <span class="cards__price">11 000 руб.</span>
+              </li>
+              <li class="cards__item">
+                <div class="cards__image" style="background-image: url(./images/offer-4.png);">
+                </div>
+                <ul class="cards__list-colors">
+                  <li class="cards__item-color"> <span class="cards__item-color-inner"
+                      style="background-image: url(./images/offer-colors1.png);"></span> </li>
+                  <li class="cards__item-color"> <span class="cards__item-color-inner"
+                      style="background-image: url(./images/offer-colors2.png);"></span> </li>
+                  <li class="cards__item-color"> <span class="cards__item-color-inner"
+                      style="background-image: url(./images/offer-colors3.png);"></span> </li>
+                  <li class="cards__item-color"> <span class="cards__item-color-inner"
+                      style="background-image: url(./images/offer-colors4.png);"></span> </li>
+                </ul>
+                <span class="cards__descr">9/1 платье</span>
+                <span class="cards__price">11 000 руб.</span>
+              </li>
+              <li class="cards__item">
+                <div class="cards__image" style="background-image: url(./images/offer-2.png);">
+                </div>
+                <ul class="cards__list-colors">
+                  <li class="cards__item-color"> <span class="cards__item-color-inner"
+                      style="background-image: url(./images/offer-colors1.png);"></span> </li>
+                  <li class="cards__item-color"> <span class="cards__item-color-inner"
+                      style="background-image: url(./images/offer-colors2.png);"></span> </li>
+                  <li class="cards__item-color"> <span class="cards__item-color-inner"
+                      style="background-image: url(./images/offer-colors3.png);"></span> </li>
+                  <li class="cards__item-color"> <span class="cards__item-color-inner"
+                      style="background-image: url(./images/offer-colors4.png);"></span> </li>
+                </ul>
+                <span class="cards__descr">9/1 платье</span>
+                <span class="cards__price">11 000 руб.</span>
+              </li>
+              <li class="cards__item">
+                <div class="cards__image" style="background-image: url(./images/offer-2.png);">
+                </div>
+                <ul class="cards__list-colors">
+                  <li class="cards__item-color"> <span class="cards__item-color-inner"
+                      style="background-image: url(./images/offer-colors1.png);"></span> </li>
+                  <li class="cards__item-color"> <span class="cards__item-color-inner"
+                      style="background-image: url(./images/offer-colors2.png);"></span> </li>
+                  <li class="cards__item-color"> <span class="cards__item-color-inner"
+                      style="background-image: url(./images/offer-colors3.png);"></span> </li>
+                  <li class="cards__item-color"> <span class="cards__item-color-inner"
+                      style="background-image: url(./images/offer-colors4.png);"></span> </li>
+                </ul>
+                <span class="cards__descr">9/1 платье</span>
+                <span class="cards__price">11 000 руб.</span>
+              </li>
+              <li class="cards__item">
+                <div class="cards__image" style="background-image: url(./images/offer-2.png);">
+                </div>
+                <ul class="cards__list-colors">
+                  <li class="cards__item-color"> <span class="cards__item-color-inner"
+                      style="background-image: url(./images/offer-colors1.png);"></span> </li>
+                  <li class="cards__item-color"> <span class="cards__item-color-inner"
+                      style="background-image: url(./images/offer-colors2.png);"></span> </li>
+                  <li class="cards__item-color"> <span class="cards__item-color-inner"
+                      style="background-image: url(./images/offer-colors3.png);"></span> </li>
+                  <li class="cards__item-color"> <span class="cards__item-color-inner"
+                      style="background-image: url(./images/offer-colors4.png);"></span> </li>
+                </ul>
+                <span class="cards__descr">9/1 платье</span>
+                <span class="cards__price">11 000 руб.</span>
+              </li>
+              <li class="cards__item">
+                <div class="cards__image" style="background-image: url(./images/offer-2.png);">
+                </div>
+                <ul class="cards__list-colors">
+                  <li class="cards__item-color"> <span class="cards__item-color-inner"
+                      style="background-image: url(./images/offer-colors1.png);"></span> </li>
+                  <li class="cards__item-color"> <span class="cards__item-color-inner"
+                      style="background-image: url(./images/offer-colors2.png);"></span> </li>
+                  <li class="cards__item-color"> <span class="cards__item-color-inner"
+                      style="background-image: url(./images/offer-colors3.png);"></span> </li>
+                  <li class="cards__item-color"> <span class="cards__item-color-inner"
+                      style="background-image: url(./images/offer-colors4.png);"></span> </li>
+                </ul>
+                <span class="cards__descr">9/1 платье</span>
+                <span class="cards__price">11 000 руб.</span>
+              </li>
+            </ul>
+          </div>
+          <button class="offer__button">Показать еще</button>
+          <div class="count-page">
+            <div class="count-page__top">Товары: <span>1-15</span> из <span>378</span></div>
+            <ul class="count-page__list">
+              <li class="count-page__item_active"><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li><a href="#">...</a></li>
+              <li><a href="#">125</a></li>
+            </ul>
+          </div>
+          <section class="product__info">
+            <h2>Льняная одежда — обязательный элемент модного гардероба</h2>
+            <p>Модельеры уверены: этот предмет гардероба уместен и в деловом образе, и для создания вечернего ансамбля.
+              Речь идет о жакетах, которые сегодня представлены в широком разнообразии фасонов. Выбирайте в
+              интернет-магазине Kayros стильные жакеты из льна собственного производства. К вашему вниманию — изделия
+              разного кроя, оттенков и размеров. Но есть кое-что, что их всех объединяет, — это высокое качество ткани и
+              пошива.</p>
+            <h2>Почему лён?</h2>
+            <p>У одежды из льна множество достоинств, которые объясняются уникальными свойствами этого удивительного
+              растения. В льняных жакетах вы будете чувствовать себя комфортно в любую погоду, поскольку ткань
+              обеспечивает хорошую вентиляцию. А еще она быстро впитывает и отводит влагу, поэтому в любую жару такая
+              одежда гарантирует ощущение свежести и прохлады.</p>
+            <p>Обладательницы льняных изделий знают, что эта красивая гладкая ткань хорошо отстирывается и долгое время
+              сохраняет первоначальный внешний вид. Чтобы ухаживать за изделием было как можно проще, ткань и готовые
+              жакеты проходят специальную технологическую обработку, позволяющую свести к минимуму усадку и сминаемость.
+            </p>
+            <h2>Богатство фасонов</h2>
+            <p>Льняные платья выглядят деликатно и благородно. Из этой ткани сегодня создаются модные модели на любой
+              вкус и случай — от этнических вариантов до строгих платьев для офиса. Одним из самых универсальных
+              вариантов является платье-халат, которое в зависимости от цвета и кроя можно надеть на деловую встречу или
+              прогулку по городу. Кокетливо и раскрепощено смотрится льняной сарафан — этот наряд сделает образ
+              задорным, романтичным и бесконечно женственным. Если впереди вас ждет пляжный отдых, непременно захватите
+              с собой открытый легкий сарафан яркого оттенка.</p>
+            <p>Льняная одежда подходит и для особых случаев — в элегантном приталенном платье вы будете восхитительно
+              выглядеть и на ужине в ресторане, и на первом свидании. Свободный крой льняных изделий делает их уместными
+              для представительниц прекрасного пола любой комплекции. Дизайнеры компании Kayros в своих моделях сочетают
+              лен с другими натуральными материалами, что позволяет получать эффектные комбинации.</p>
+          </section>
         </section>
-      </section>
+      </div>
     </main>
-    <footer class="footer ">
+    <footer class="footer">
       <div class="container">
         <section class="footer__contacts">
           <div class="footer__logo" style="background-image: url(./images/footer-logo.svg); width: 122.79px;
@@ -697,7 +775,7 @@
         </nav>
       </div>
       <div class="footer__bottom">
-        <a class="footer__bottom-btn" href="#header" data-scroll-to>
+        <a class="footer__bottom-btn" href="#header">
           <svg width="28" height="17" viewBox="0 0 28 17" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M2 15L14 3L26 15" stroke="white" stroke-width="3" />
           </svg>
@@ -986,8 +1064,10 @@
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+  <!-- <script src="./js/locomotive-scroll.min.js"></script> -->
   <script src="./js/simplebar.min.js"></script>
   <script src="./js/product.js"></script>
+
 </body>
 
 </html>

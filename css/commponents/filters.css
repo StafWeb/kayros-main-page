@@ -1,4 +1,7 @@
-/* Filters */
+.simple-scroll {
+  height: 100vh;
+}
+
 .filters {
   position: -webkit-sticky !important;
   position: sticky !important;

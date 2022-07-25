@@ -845,7 +845,9 @@ input[type=search]::-webkit-search-results-decoration {
   .burger-menu__title-wrapper {
     display: flex;
     position: relative;
-    margin-bottom: 24px;
+    align-items: center;
+    height: 40px;
+    margin-bottom: 10px;
   }
   .burger-menu__item-link {
     font-weight: 400;
@@ -883,7 +885,7 @@ input[type=search]::-webkit-search-results-decoration {
     transition: 0.4s ease;
   }
   .burger-menu__list-one > .burger-menu__title-wrapper:nth-child(1) {
-    display: block;
+    display: flex;
   }
   .burger-menu__list-one {
     overflow: hidden;

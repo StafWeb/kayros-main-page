@@ -421,6 +421,9 @@
     &__size-list {
       gap: 8px;
     }
+    &__size-inner:last-child{
+      margin-bottom: 20px;
+    }
   }
   .filter-btn {
     display: flex;

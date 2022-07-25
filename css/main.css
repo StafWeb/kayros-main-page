@@ -3152,6 +3152,9 @@ input[type=search]::-webkit-search-results-decoration {
   .filters__colors-list, .filters__size-list {
     gap: 8px;
   }
+  .filters__size-inner:last-child {
+    margin-bottom: 20px;
+  }
   .filter-btn {
     display: flex;
     width: 100%;

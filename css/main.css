@@ -2569,11 +2569,13 @@ input[type=search]::-webkit-search-results-decoration {
   display: flex;
   align-items: center;
 }
+.breadcrumbs__item a,
 .breadcrumbs__item span {
   font-weight: 400;
   font-size: 11px;
   line-height: 120%;
   color: #333333;
+  cursor: pointer;
 }
 .breadcrumbs__item:not(:last-child) {
   border-bottom: 1px solid rgba(176, 151, 110, 0.5);
@@ -2589,6 +2591,10 @@ input[type=search]::-webkit-search-results-decoration {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+.breadcrumbs__item:last-child a,
+.breadcrumbs__item:last-child span {
+  cursor: default;
 }
 
 .count-page {
@@ -3223,8 +3229,7 @@ input[type=search]::-webkit-search-results-decoration {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, 0.5);
-  opacity: 0.5;
+  background: rgba(0, 0, 0, 0.4);
   border-radius: 10px;
 }
 

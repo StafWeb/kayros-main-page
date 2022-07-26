@@ -2658,7 +2658,7 @@ input[type=search]::-webkit-search-results-decoration {
   cursor: default !important;
 }
 
-@media (max-width: 1650px) {
+@media (max-width: 1500px) {
   .product .cards__list {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -2666,7 +2666,7 @@ input[type=search]::-webkit-search-results-decoration {
     height: 438px;
   }
 }
-@media (max-width: 1250px) {
+@media (max-width: 1100px) {
   .product {
     padding: 70px 40px 0px;
   }

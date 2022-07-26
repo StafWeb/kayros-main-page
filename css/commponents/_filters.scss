@@ -504,6 +504,9 @@
     border-radius: 10px;
     // visibility: visible;
   }
+  ::-webkit-scrollbar-thumb:window-inactive {
+    opacity: 0;
+  }
   * {
     scrollbar-width: thin;
     scrollbar-color: #000;

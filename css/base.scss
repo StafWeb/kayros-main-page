@@ -1,31 +1,32 @@
 html {
   height: 100%;
   // scrollbar-width: thin;
-  // scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 // html::-webkit-scrollbar {
 //   display: none;
 // }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: 400;
   background-color: #ffffff;
   color: #333333;
-  // overflow-x: hidden;
-  // min-height: 100vh;
+  overflow-y: overlay;
+  overflow-x: hidden;
 }
 // body::-webkit-scrollbar {
 //   display: none;
 // }
-.scrolsmooth{
+.scrolsmooth {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
-h1, h2 {
-font-family: 'Playfair Display', serif;
+h1,
+h2 {
+  font-family: "Playfair Display", serif;
 }
 .container {
   max-width: 1920px;

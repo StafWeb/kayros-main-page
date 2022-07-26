@@ -1,11 +1,6 @@
 html {
   height: 100%;
-  scrollbar-width: none;
   scroll-behavior: smooth;
-}
-
-html::-webkit-scrollbar {
-  /* This is the magic bit for WebKit */
 }
 
 body {
@@ -15,7 +10,7 @@ body {
   background-color: #ffffff;
   color: #333333;
   overflow-x: hidden;
-  scrollbar-width: none;
+  min-height: 100vh;
 }
 
 .scrolsmooth {

@@ -120,6 +120,7 @@ document.querySelectorAll(".filters").forEach(el => {
 });
 // new SimpleBar(document.querySelector('#simple-scroll'));
 
+
 const footerBtn = document.querySelectorAll("[data-menu]");
 footerBtn.forEach(function (btn) {
   btn.addEventListener("click", function () {

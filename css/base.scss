@@ -1,7 +1,7 @@
 html {
   height: 100%;
-  // scrollbar-width: none;
-  scroll-behavior: smooth;
+  // scrollbar-width: thin;
+  // scroll-behavior: smooth;
 }
 // html::-webkit-scrollbar {
 //   display: none;
@@ -13,8 +13,8 @@ body {
   font-weight: 400;
   background-color: #ffffff;
   color: #333333;
-  overflow-x: hidden;
-  min-height: 100vh;
+  // overflow-x: hidden;
+  // min-height: 100vh;
 }
 // body::-webkit-scrollbar {
 //   display: none;

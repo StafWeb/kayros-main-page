@@ -42,6 +42,7 @@
         height: 40px;
         background-color: #e7e7e7;
         border-radius: 4px;
+        transition: all 0.3s ease;
         & > span:first-child {
           display: flex;
           font-weight: 400;
@@ -53,7 +54,6 @@
         & > span:last-child {
           width: 10px;
           height: 10px;
-          margin-top: 4px;
           background-image: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M5 4.28568L0.714358 0L7.77904e-05 0.714285L4.28572 4.99996L0 9.28571L0.71428 10L5 5.71425L9.28572 9.99999L10 9.28571L5.71428 4.99996L9.99992 0.714291L9.28564 5.90056e-06L5 4.28568Z' fill='%23333333'/%3E%3C/svg%3E");
           background-repeat: no-repeat;
           background-position: center;
@@ -64,6 +64,17 @@
     &__list {
       grid-template-columns: repeat(4, 1fr);
       row-gap: 50px;
+    }
+    &__item-color{
+      transition: all 0.3s ease;
+    }
+    &__item-color-inner {
+      & > img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50px;
+        object-fit: cover;
+      }
     }
     &__image {
       min-height: 261px;
@@ -277,15 +288,15 @@
       &__list {
         grid-template-columns: repeat(2, 173px);
         row-gap: 26px;
-        &-colors{
+        &-colors {
           display: none;
         }
       }
-      &__colors{
+      &__colors {
         display: flex;
         margin-top: 5px;
       }
-      &__descr{
+      &__descr {
         margin-bottom: 5px;
       }
       &__item {
@@ -295,7 +306,6 @@
       &__image {
         height: 261px;
       }
-
     }
   }
   .breadcrumbs {
@@ -313,6 +323,19 @@
     }
     &__item {
       flex-shrink: 0;
+    }
+  }
+}
+
+@media(min-width:1000px){
+  .cards{
+    &__item-color:not(.cards__item-color_active):hover {
+      border: 1px solid #c4c4c4;
+      transition: all 0.3s ease;
+    }
+    &__breadcrumbs-btn:hover{
+      background-color: rgba(51, 51, 51, 0.2);
+      transition: all 0.3s ease;
     }
   }
 }

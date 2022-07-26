@@ -5,7 +5,7 @@ html {
 }
 html::-webkit-scrollbar {
   /* This is the magic bit for WebKit */
-  display: none;
+  // display: none;
 }
 
 body {
@@ -18,7 +18,7 @@ body {
   scrollbar-width: none;
 }
 body::-webkit-scrollbar {
-  display: none;
+  // display: none;
 }
 .scrolsmooth{
   display: flex;

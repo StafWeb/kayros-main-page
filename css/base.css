@@ -6,7 +6,6 @@ html {
 
 html::-webkit-scrollbar {
   /* This is the magic bit for WebKit */
-  display: none;
 }
 
 body {
@@ -17,10 +16,6 @@ body {
   color: #333333;
   overflow-x: hidden;
   scrollbar-width: none;
-}
-
-body::-webkit-scrollbar {
-  display: none;
 }
 
 .scrolsmooth {

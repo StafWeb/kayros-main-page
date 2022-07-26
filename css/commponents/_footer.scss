@@ -285,9 +285,8 @@
   overflow-y: hidden !important;
 }
 
-body{
   ::-webkit-scrollbar {
-    width: 0px;
+    width: 8px;
     height: 0px;
   }
   
@@ -297,9 +296,10 @@ body{
   }
   
   ::-webkit-scrollbar-thumb {
-    background: transparent;
-    width: 0px;
-    visibility: hidden;
+    background: rgba(51, 51, 51, 0.5);
+      border-radius: 10px;
+    width: 8px;
+    visibility: visible;
   }
   
   ::-webkit-scrollbar-thumb:window-inactive {
@@ -307,4 +307,4 @@ body{
     width: 0;
     visibility: hidden;
   }
-}
+

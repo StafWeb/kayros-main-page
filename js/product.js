@@ -65,19 +65,25 @@ footeTl.from(".footer__contacts", { opacity: 0, y: 10, duration: 0.65 })
   .from(".footer__nav", { opacity: 0, y: 10, duration: 0.65 }, "-=0.65")
   .from(".footer__bottom-btn", { opacity: 0, y: 30, duration: 0.65 }, "+=0.8")
   .from(".footer__bottom-descr", { opacity: 0, y: 30, duration: 0.65 }, "-=0.8");
+  let observerInfoAnim = new IntersectionObserver(infoAnim, options);
+  let infoTitles = document.querySelectorAll('.product__info > h2');
+  let infoDescrs = document.querySelectorAll('.product__info > p');
 
-let productInfoTl = gsap.timeline({
-  ease: "power1.out",
-  scrollTrigger: {
-    trigger: ".product__info > h2",
-    start: "20% 85%",
-    toggleActions: "play none none none",
-    // endTrigger: ".footer",
-    // end: "bottom bottom",
-    scrub: false,
-  }
-});
-productInfoTl.from(".product__info > h2", { opacity: 0, y: 10, duration: 0.65 })
+  for (let infoTitle of infoTitles) {
+    observerInfoAnim.observe(infoTitle);
+  };
+  for (let infoDescr of infoDescrs) {
+    observerInfoAnim.observe(infoDescr);
+  };
+  function infoAnim(entry) {
+    entry.forEach(change => {
+      if (change.isIntersecting) {
+        change.target.classList.add("cards-item-anim");
+      }
+    });
+  };
+
+
 
 ScrollTrigger.refresh();
 let rootElement = document.documentElement;

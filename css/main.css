@@ -2468,12 +2468,87 @@ input[type=search]::-webkit-search-results-decoration {
   margin: 0;
   margin-bottom: 50px;
 }
+.product .cards__top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.product .cards__sort {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-width: 185px;
+}
+.product .cards__sort-btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 40px;
+}
+.product .cards__sort-list {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  display: flex;
+  min-width: 185px;
+  padding: 8px 0;
+  flex-direction: column;
+  overflow: hidden;
+  visibility: hidden;
+  background-color: #ffffff;
+  max-height: 0;
+  transition: all 0.6s ease;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+.product .cards__sort-list_active {
+  max-height: 100vh;
+  visibility: visible;
+  transition: all 0.6s ease;
+}
+.product .cards__sort-item {
+  display: flex;
+  height: 40px;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+}
+.product .cards__sort-item::after {
+  position: absolute;
+  content: "";
+  right: 16px;
+  top: 15.5px;
+  width: 13px;
+  height: 9px;
+  opacity: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='15' height='12' viewBox='0 0 15 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.5 2V10.5' stroke='%23333333' stroke-linecap='round'/%3E%3Cpath d='M9 4C9 4 10.5237 2.47631 11.5 1.5L14 4' stroke='%23333333' stroke-linecap='round'/%3E%3Cpath d='M3.5 10L3.5 1.5' stroke='%23333333' stroke-linecap='round'/%3E%3Cpath d='M6 8C6 8 4.47631 9.52369 3.5 10.5L1 8' stroke='%23333333' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  transition: all 0.3s ease;
+}
+.product .cards__sort-item:hover {
+  background-color: #e7e7e7;
+  transition: all 0.3s ease;
+}
+.product .cards__sort-item:hover::after {
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+.product .cards__sort-item a {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 140%;
+  text-align: right;
+  color: #333333;
+  margin-right: 39px;
+}
 .product .cards__breadcrumbs {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  flex-wrap: wrap;
   gap: 10px;
-  margin-bottom: 30px;
 }
 .product .cards__breadcrumbs-btn {
   position: relative;
@@ -2579,6 +2654,7 @@ input[type=search]::-webkit-search-results-decoration {
 }
 .breadcrumbs__item:not(:last-child) {
   border-bottom: 1px solid rgba(176, 151, 110, 0.5);
+  transition: all 0.3s ease;
 }
 .breadcrumbs__item:not(:last-child)::after {
   position: absolute;
@@ -2776,6 +2852,11 @@ input[type=search]::-webkit-search-results-decoration {
     transition: all 0.3s ease;
   }
 }
+.breadcrumbs__item:not(:last-child):hover {
+  border-bottom: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+
 .filters {
   position: -webkit-sticky !important;
   position: sticky !important;

@@ -37,7 +37,7 @@ ScrollTrigger.defaults({
   //   fontSize: "26px",
   // },
 });
-let headAnim = gsap.timeline({ delay: 0.5});
+let headAnim = gsap.timeline({ delay: 0.5 });
 
 headAnim.from(".header__logo", { opacity: 0, duration: 0.6, ease: "power1.out" })
   .from(".header__item-img", { opacity: 0, rotate: -90, duration: 0.4, ease: "power1.out" }, "-=0.3")
@@ -47,6 +47,19 @@ headAnim.from(".header__logo", { opacity: 0, duration: 0.6, ease: "power1.out" }
   .from(".header__user", { opacity: 0, x: -5, duration: 0.6, ease: "power1.out" }, "-=0.5")
   .from(".header__cart", { opacity: 0, x: -5, duration: 0.6, ease: "power1.out" }, "-=0.5")
   .from(".header__burger", { opacity: 0, x: -5, duration: 0.6, ease: "power1.out" }, "-=0.5");
+
+let offerTl = gsap.timeline({
+  ease: "power1.out",
+  delay: 1,
+  scrollTrigger: {
+    trigger: ".cards__item",
+    toggleActions: "play none none none",
+    start: "5% bottom",
+    endTrigger: ".cards__list",
+    end:"bottom bottom"
+  }
+});
+offerTl.from(".cards__item", { opacity: 0, y: 20, duration: 1});
 
 let footeTl = gsap.timeline({
   ease: "power1.out",
@@ -143,6 +156,25 @@ filtersBtn.forEach(function (btn) {
     this.nextElementSibling.classList.toggle("filters__list_active");
     btn.classList.toggle("filters__btn_active");
   })
+});
+
+const sortBtn = document.querySelector(".cards__sort-btn");
+const sortList = document.querySelector(".cards__sort-list");
+const sort = document.querySelector(".cards__sort");
+const sortItem = document.querySelectorAll(".cards__sort-item");
+sortBtn.addEventListener('click', () => {
+  sortList.classList.add("cards__sort-list_active");
+});
+body.addEventListener("click", function () {
+  sortList.classList.remove("cards__sort-list_active");
+});
+sort.addEventListener("click", function (evt) {
+  evt.stopPropagation();
+});
+sortItem.forEach(function (btn) {
+  btn.addEventListener("click", function () {
+    sortList.classList.remove('cards__sort-list_active');
+  });
 });
 
 const filter = document.querySelector(".filters");

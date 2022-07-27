@@ -1,33 +1,5 @@
 
 gsap.registerPlugin(ScrollTrigger);
-
-// let pageContainer = document.querySelector("#simple-scroll");
-// /* SMOOTH SCROLL */
-// const scroller = new LocomotiveScroll({
-//   el: pageContainer,
-//   smooth: true,
-//   getSpeed: 3,
-//   // reloadOnContextChange: true,
-//   getDirection: true,
-//   resetNativeScroll: true,
-// });
-// scroller.on("scroll", ScrollTrigger.update);
-// ScrollTrigger.scrollerProxy(pageContainer, {
-//   scrollTop(value) {
-//     return arguments.length
-//       ? scroller.scrollTo(value, 0, 0)
-//       : scroller.scroll.instance.scroll.y;
-//   },
-//   getBoundingClientRect() {
-//     return {
-//       left: 0,
-//       top: 0,
-//       width: window.innerWidth,
-//       height: window.innerHeight
-//     };
-//   },
-//   pinType: pageContainer.style.transform ? "transform" : "fixed"
-// });
 ScrollTrigger.defaults({
   // toggleActions: "restart complete reverse reset",
   toggleActions: "play none none none",
@@ -37,8 +9,8 @@ ScrollTrigger.defaults({
   //   fontSize: "26px",
   // },
 });
-let headAnim = gsap.timeline({ delay: 0.5 });
 
+let headAnim = gsap.timeline({ delay: 0.5 });
 headAnim.from(".header__logo", { opacity: 0, duration: 0.6, ease: "power1.out" })
   .from(".header__item-img", { opacity: 0, rotate: -90, duration: 0.4, ease: "power1.out" }, "-=0.3")
   .from(".first-link", { opacity: 0, duration: 0.5, ease: "expo.out" }, "-=0.4")
@@ -48,18 +20,35 @@ headAnim.from(".header__logo", { opacity: 0, duration: 0.6, ease: "power1.out" }
   .from(".header__cart", { opacity: 0, x: -5, duration: 0.6, ease: "power1.out" }, "-=0.5")
   .from(".header__burger", { opacity: 0, x: -5, duration: 0.6, ease: "power1.out" }, "-=0.5");
 
-let offerTl = gsap.timeline({
-  ease: "power1.out",
-  delay: 1,
-  scrollTrigger: {
-    trigger: ".cards__item",
-    toggleActions: "play none none none",
-    start: "5% bottom",
-    endTrigger: ".cards__list",
-    end:"bottom bottom"
-  }
-});
-offerTl.from(".cards__item", { opacity: 0, y: 20, duration: 1});
+let options = {
+  threshold: [0.4]
+};
+let observer = new IntersectionObserver(onEntry, options);
+let swiperDescr = document.querySelectorAll('.cards__item');
+for (let des of swiperDescr) {
+  observer.observe(des);
+};
+function onEntry(entry) {
+  entry.forEach(change => {
+    if (change.isIntersecting) {
+      change.target.classList.add("cards-item-anim");
+    }
+  });
+};
+// let cardsItem = gsap.utils.toArray(".cards__item");
+// let offerTl = gsap.timeline({
+//   ease: "power1.out",
+//   delay: 1,
+//   scrollTrigger: {
+//     trigger: cardsItem,
+//     toggleActions: "play none none none",
+//     start: "5% 70%",
+//     endTrigger: ".cards__list",
+//     end: "bottom bottom",
+//     // scrub:true
+//   }
+// });
+// offerTl.fromTo(cardsItem, { opacity: 0, y: 20, }, { opacity: 1, y: 0, duration: 1, stagger:0.2 });
 
 let footeTl = gsap.timeline({
   ease: "power1.out",
@@ -76,6 +65,19 @@ footeTl.from(".footer__contacts", { opacity: 0, y: 10, duration: 0.65 })
   .from(".footer__nav", { opacity: 0, y: 10, duration: 0.65 }, "-=0.65")
   .from(".footer__bottom-btn", { opacity: 0, y: 30, duration: 0.65 }, "+=0.8")
   .from(".footer__bottom-descr", { opacity: 0, y: 30, duration: 0.65 }, "-=0.8");
+
+let productInfoTl = gsap.timeline({
+  ease: "power1.out",
+  scrollTrigger: {
+    trigger: ".product__info > h2",
+    start: "20% 85%",
+    toggleActions: "play none none none",
+    // endTrigger: ".footer",
+    // end: "bottom bottom",
+    scrub: false,
+  }
+});
+productInfoTl.from(".product__info > h2", { opacity: 0, y: 10, duration: 0.65 })
 
 ScrollTrigger.refresh();
 let rootElement = document.documentElement;

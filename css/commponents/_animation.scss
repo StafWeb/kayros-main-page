@@ -28,6 +28,19 @@
     transform: rotate(-45deg);
   }
 }
+.cards-item-anim{
+  animation: cards-item-anim 0.6s ease-in-out both;
+}
+@keyframes cards-item-anim {
+  0% {
+    opacity: 0;
+    transform: translateY(30);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 @keyframes head-thumb{
 0%{
   transform: scaleY(1);

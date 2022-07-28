@@ -3493,7 +3493,6 @@ input[type=search]::-webkit-search-results-decoration {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 368px;
   height: 52px;
   background: #b0976e;
   border: 1px solid #b0976e;
@@ -3653,12 +3652,12 @@ input[type=search]::-webkit-search-results-decoration {
   cursor: default;
 }
 
-@media (max-wdith: 1600px) {
+@media (max-width: 1600px) {
   .slider {
     margin-right: 50px;
   }
 }
-@media (max-width: 1300px) {
+@media (max-width: 1350px) {
   .slider {
     margin-right: 40px;
     max-height: 569px;

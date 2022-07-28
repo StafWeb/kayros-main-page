@@ -3533,7 +3533,7 @@ input[type=search]::-webkit-search-results-decoration {
 }
 .cards-info__list {
   list-style: disc;
-  margin-left: 15px;
+  margin-left: 28px;
 }
 .cards-info__list:not(:last-child) {
   margin-bottom: 35px;

@@ -3437,6 +3437,7 @@ input[type=search]::-webkit-search-results-decoration {
   display: flex;
   flex-direction: column;
   margin-bottom: 34px;
+  max-width: 368px;
 }
 .cards-info__colors .color {
   font-weight: 700;
@@ -3461,6 +3462,7 @@ input[type=search]::-webkit-search-results-decoration {
   display: flex;
   flex-direction: column;
   margin-bottom: 25px;
+  max-width: 369px;
 }
 .cards-info__sizes-top {
   display: flex;
@@ -3493,6 +3495,7 @@ input[type=search]::-webkit-search-results-decoration {
   display: flex;
   align-items: center;
   justify-content: center;
+  max-width: 368px;
   height: 52px;
   background: #b0976e;
   border: 1px solid #b0976e;

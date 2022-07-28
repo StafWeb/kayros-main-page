@@ -5,7 +5,8 @@ if (window.innerWidth > 1000) {
     // задаем параметры
     direction: 'vertical', // вертикальная прокрутка
     slidesPerView: 'auto', // показывать по 3 превью
-    spaceBetween: 17, // расстояние между слайдами
+    spaceBetween: 17,
+    grabCursor: true, // расстояние между слайдами
     navigation: { // задаем кнопки навигации
       nextEl: '.slider__next', // кнопка Next
       prevEl: '.slider__prev' // кнопка Prev
@@ -28,7 +29,6 @@ if (window.innerWidth > 1000) {
       nextEl: '.slider__next',
       prevEl: '.slider__prev'
     },
-    grabCursor: true,
     thumbs: {
       swiper: sliderThumbs
     },

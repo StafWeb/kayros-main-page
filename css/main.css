@@ -3618,7 +3618,7 @@ input[type=search]::-webkit-search-results-decoration {
 }
 .slider__zoom_active .swiper-container {
   width: 45%;
-  height: 80%;
+  height: 90%;
 }
 .slider__thumbs {
   min-height: 1px;

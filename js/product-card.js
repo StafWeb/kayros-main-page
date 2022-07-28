@@ -1,20 +1,18 @@
 
 
 if (window.innerWidth > 1000) {
-  const sliderThumbs = new Swiper('.slider__thumbs .swiper-container', { // ищем слайдер превью по селектору
-    // задаем параметры
-    direction: 'vertical', // вертикальная прокрутка
-    slidesPerView: 'auto', // показывать по 3 превью
+  const sliderThumbs = new Swiper('.slider__thumbs .swiper-container', { 
+    direction: 'vertical', 
+    slidesPerView: 'auto', 
     spaceBetween: 17,
-    grabCursor: true, // расстояние между слайдами
-    navigation: { // задаем кнопки навигации
-      nextEl: '.slider__next', // кнопка Next
-      prevEl: '.slider__prev' // кнопка Prev
+    grabCursor: true,
+    navigation: {
+      nextEl: '.slider__next',
+      prevEl: '.slider__prev' 
     },
-    // freeMode: true, // при перетаскивании превью ведет себя как при скролле
-    breakpoints: { // условия для разных размеров окна браузера
+    breakpoints: {
       0: { // при 0px и выше
-        direction: 'horizontal', // горизонтальная прокрутка
+        // direction: 'horizontal', // горизонтальная прокрутка
       },
       1000: { // при 768px и выше
         // direction: 'vertical', // вертикальная прокрутка
@@ -32,14 +30,14 @@ if (window.innerWidth > 1000) {
     thumbs: {
       swiper: sliderThumbs
     },
-    breakpoints: {
-      0: {
-        direction: 'horizontal',
-      },
-      1000: {
-        direction: 'vertical',
-      }
-    }
+    // breakpoints: {
+    //   0: {
+    //     direction: 'horizontal',
+    //   },
+    //   1000: {
+    //     direction: 'vertical',
+    //   }
+    // }
   });
 };
 

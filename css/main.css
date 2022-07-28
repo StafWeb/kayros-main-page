@@ -3478,7 +3478,10 @@ input[type=search]::-webkit-search-results-decoration {
 .cards-info__sizes-top .size > * {
   font-weight: 400;
 }
-.cards-info__sizes-top .table-size span {
+.cards-info__sizes-top .table-size-btn {
+  display: flex;
+}
+.cards-info__sizes-top .table-size-btn span {
   font-weight: 400;
   font-size: 14px;
   line-height: 120%;

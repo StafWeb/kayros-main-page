@@ -33,7 +33,7 @@
         spaceBetween: 10,
         allowTouchMove: true,
       },
-      580: {
+      1000: {
         spaceBetween: 32,
         direction: 'vertical',
         navigation: {

@@ -3492,23 +3492,6 @@ input[type=search]::-webkit-search-results-decoration {
   color: #333333;
   border-bottom: 1px solid rgba(176, 151, 110, 0.5);
 }
-.cards-info .add-shop-cart {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  max-width: 368px;
-  height: 52px;
-  background: #b0976e;
-  border: 1px solid #b0976e;
-  border-radius: 4px;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 120%;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: #ffffff;
-  margin-bottom: 50px;
-}
 .cards-info .cards-info__descr p {
   font-style: normal;
   font-weight: 400;
@@ -3547,6 +3530,25 @@ input[type=search]::-webkit-search-results-decoration {
   list-style: disc;
 }
 
+.add-shop-cart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 368px;
+  height: 52px;
+  background: #b0976e;
+  border: 1px solid #b0976e;
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 50px;
+  transition: all 500ms ease;
+}
+
 @media (max-width: 1000px) {
   .product-card-container {
     padding: 0px 15px;
@@ -3561,6 +3563,18 @@ input[type=search]::-webkit-search-results-decoration {
   }
   .cards-info {
     padding: 0px 15px;
+  }
+}
+@media (min-width: 1000px) {
+  .add-shop-cart:hover {
+    background: #b0976e;
+    color: #ffffff;
+    transition: all 500ms ease;
+  }
+  .add-shop-cart:active {
+    background-color: #927d54;
+    border-color: #927d54;
+    transition: all 300ms ease;
   }
 }
 .card-product {
@@ -3606,6 +3620,15 @@ input[type=search]::-webkit-search-results-decoration {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+.slider__prev > svg > path, .slider__next > svg > path {
+  opacity: 1;
+}
+.slider .swiper-button-disabled {
+  cursor: default;
+}
+.slider .swiper-button-disabled > svg > path {
+  opacity: 0.2;
 }
 .slider__next > svg {
   transform: rotate(180deg);
@@ -3658,19 +3681,27 @@ input[type=search]::-webkit-search-results-decoration {
   margin: 17px 0px;
 }
 .slider__thumbs .slider__image {
+  position: relative;
   width: 140px;
   height: 210px;
-  transition: 0.25s;
-  filter: sepia(0.6);
-  opacity: 0.5;
+  transition: all 0.25s ease;
+}
+.slider__thumbs .slider__image::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border: 2px solid transparent;
+  transition: all 0.25s ease;
 }
 .slider__thumbs .swiper-container {
   max-height: inherit;
 }
-.slider__thumbs .swiper-slide-thumb-active .slider__image {
+.slider__thumbs .swiper-slide-thumb-active .slider__image::after {
   border: 2px solid #b0976e;
-  filter: sepia(0);
-  opacity: 1;
+  transition: all 0.25s ease;
 }
 .slider__thumbs .swiper-button-disabled {
   cursor: default;
@@ -3683,6 +3714,9 @@ input[type=search]::-webkit-search-results-decoration {
 }
 @media (max-width: 1350px) {
   .slider {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 40px;
     margin-right: 40px;
     max-height: 569px;
   }
@@ -3704,9 +3738,18 @@ input[type=search]::-webkit-search-results-decoration {
     padding: 0px 15px;
   }
   .slider {
+    position: relative;
+    top: 0;
     margin: 0;
   }
+  .slider__col {
+    display: none;
+  }
+  .slider .swiper-slide {
+    max-width: 330px;
+  }
   .slider__zoom {
+    width: 100%;
     height: 495px;
   }
   .slider__zoom_active .slider__zoom-inner {
@@ -3714,17 +3757,6 @@ input[type=search]::-webkit-search-results-decoration {
     padding-top: 70px;
   }
   .slider__zoom_active .swiper-container {
-    width: 100%;
-  }
-}
-@media (max-width: 580px) {
-  .slider__col {
-    display: none;
-  }
-  .slider .swiper-slide {
-    max-width: 80vw;
-  }
-  .slider__zoom {
     width: 100%;
   }
   .slider__zoom_active .swiper-slide {
@@ -3740,9 +3772,13 @@ input[type=search]::-webkit-search-results-decoration {
   }
 }
 @media (min-width: 1000px) {
-  .slider__thumbs .slider__image:hover {
-    opacity: 1;
-    transition: all 0.3s ease;
+  .slider__thumbs .slider__image:hover::after {
+    border: 2px solid #b0976e;
+    transition: all 0.25s ease;
+  }
+  .slider__prev:hover:not(.swiper-button-disabled) > svg > path, .slider__next:hover:not(.swiper-button-disabled) > svg > path {
+    fill: #b0976e;
+    transition: 0.2s ease;
   }
 }
 .offer-2 {

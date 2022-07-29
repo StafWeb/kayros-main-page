@@ -3648,7 +3648,7 @@ input[type=search]::-webkit-search-results-decoration {
 }
 .slider__zoom_active .swiper-container {
   width: 900px;
-  height: 1200px;
+  height: 100%;
 }
 .slider__thumbs {
   min-height: 1px;
@@ -3707,6 +3707,13 @@ input[type=search]::-webkit-search-results-decoration {
   }
   .slider__zoom {
     height: 495px;
+  }
+  .slider__zoom_active .slider__zoom-inner {
+    padding: 0;
+    padding-top: 70px;
+  }
+  .slider__zoom_active .swiper-container {
+    width: 100%;
   }
 }
 @media (max-width: 580px) {

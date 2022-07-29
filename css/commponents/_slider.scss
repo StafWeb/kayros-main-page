@@ -85,7 +85,7 @@
       }
       .swiper-container {
         width: 900px;
-        height: 1200px;
+        height: 100%;
       }
     }
   }
@@ -148,6 +148,15 @@
     margin: 0;
     &__zoom{
       height: 495px;
+      &_active{
+        .slider__zoom-inner{
+          padding: 0;
+          padding-top: 70px;
+        }
+        .swiper-container{
+          width: 100%;
+        }
+      }
     }
   }
 }

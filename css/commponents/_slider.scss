@@ -84,7 +84,8 @@
         padding: 20px;
       }
       .swiper-container {
-        width: 900px;
+        width: 50vw;
+        max-width: 900px;
         height: 100%;
       }
     }
@@ -166,12 +167,18 @@
     &__col{
       display: none;
     }
+    .swiper-slide{
+      max-width: 90vw;
+    }
     &__zoom{
       width: 100%;
+      &_active{
+        .swiper-slide{
+          max-width: 100vw;
+        }
+      }
     }
-    .swiper-slide{
-      max-width: 330px;
-    }
+   
   }
 }
 @media(max-height: 495px){

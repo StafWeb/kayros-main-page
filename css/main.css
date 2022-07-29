@@ -3647,7 +3647,8 @@ input[type=search]::-webkit-search-results-decoration {
   padding: 20px;
 }
 .slider__zoom_active .swiper-container {
-  width: 900px;
+  width: 50vw;
+  max-width: 900px;
   height: 100%;
 }
 .slider__thumbs {
@@ -3720,11 +3721,14 @@ input[type=search]::-webkit-search-results-decoration {
   .slider__col {
     display: none;
   }
+  .slider .swiper-slide {
+    max-width: 90vw;
+  }
   .slider__zoom {
     width: 100%;
   }
-  .slider .swiper-slide {
-    max-width: 330px;
+  .slider__zoom_active .swiper-slide {
+    max-width: 100vw;
   }
 }
 @media (max-height: 495px) {

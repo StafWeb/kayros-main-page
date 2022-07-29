@@ -133,3 +133,21 @@
     }
   }
 }
+@media (max-width: 1000px) {
+  .product-card-container {
+    padding: 0px 15px;
+  }
+  .cards-info {
+    & > .breadcrumbs {
+      display: none;
+    }
+  }
+}
+@media (max-width: 580px) {
+  .product-card-container {
+    padding: 0px;
+  }
+  .cards-info {
+    padding: 0px 15px;
+  }
+}

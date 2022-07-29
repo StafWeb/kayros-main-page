@@ -4,6 +4,9 @@
   justify-content: flex-start;
   flex-wrap: nowrap;
   margin-top: 70px;
+  & > .breadcrumbs {
+    display: none;
+  }
 }
 .slider {
   margin-right: 78px;
@@ -129,6 +132,35 @@
     &__zoom {
       width: 379px;
       height: 569px;
+    }
+  }
+}
+@media(max-width: 1000px) {
+  .card-product{
+    flex-direction: column;
+    margin-top: 20px;
+    & > .breadcrumbs{
+      display: flex;
+      padding: 0px 15px;
+    }
+  }
+  .slider{
+    margin: 0;
+    &__zoom{
+      height: 495px;
+    }
+  }
+}
+@media(max-width: 580px){
+  .slider{
+    &__col{
+      display: none;
+    }
+    &__zoom{
+      width: 100%;
+    }
+    .swiper-slide{
+      max-width: 330px;
     }
   }
 }

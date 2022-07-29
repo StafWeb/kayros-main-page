@@ -1,6 +1,6 @@
 
 
-if (window.innerWidth > 1000) {
+if (window.innerWidth > 580) {
   const sliderThumbs = new Swiper('.slider__thumbs .swiper-container', { 
     direction: 'vertical', 
     slidesPerView: 'auto', 
@@ -30,6 +30,29 @@ if (window.innerWidth > 1000) {
     thumbs: {
       swiper: sliderThumbs
     },
+    breakpoints: {
+      0: {
+        direction: 'horizontal',
+      },
+      580: {
+        direction: 'vertical',
+      }
+    }
+  });
+};
+if (window.innerWidth < 580) {
+  const sliderImages = new Swiper('.slider__zoom .swiper-container', {
+    direction: 'horizontal',
+    slidesPerView: 'auto',
+    spaceBetween: 10,
+    allowTouchMove: true,
+    // navigation: {
+    //   nextEl: '.slider__next',
+    //   prevEl: '.slider__prev'
+    // },
+    // thumbs: {
+    //   swiper: sliderThumbs
+    // },
     // breakpoints: {
     //   0: {
     //     direction: 'horizontal',

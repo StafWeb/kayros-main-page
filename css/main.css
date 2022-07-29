@@ -3722,7 +3722,7 @@ input[type=search]::-webkit-search-results-decoration {
     display: none;
   }
   .slider .swiper-slide {
-    max-width: 90vw;
+    max-width: 80vw;
   }
   .slider__zoom {
     width: 100%;

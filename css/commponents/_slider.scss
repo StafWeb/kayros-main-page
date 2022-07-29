@@ -160,6 +160,7 @@
     }
   }
 }
+
 @media(max-width: 580px){
   .slider{
     &__col{
@@ -170,6 +171,20 @@
     }
     .swiper-slide{
       max-width: 330px;
+    }
+  }
+}
+@media(max-height: 495px){
+  .slider{
+    &__zoom{
+      &_active{
+        .slider__zoom-inner{
+          padding-top: 15px;
+        }
+        .swiper-container{
+          width: 40vw;
+        }
+      }
     }
   }
 }

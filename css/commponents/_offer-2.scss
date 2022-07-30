@@ -12,25 +12,71 @@
   }
   .cards {
     margin: 0;
-    &__list{
+    &__list {
       grid-template-columns: repeat(4, 1fr);
     }
-    &__item{
-      &:last-child{
+    &__item {
+      &:last-child {
         display: flex;
       }
     }
-    &__image{
+    &__image {
       height: 630px;
     }
   }
 }
 
-@media(max-width:1650px){
-  .offer-2{
-    .cards{
-      &__image{
+@media (max-width: 1550px) {
+  .offer-2 {
+    .cards {
+      &__image {
         height: 438px;
+      }
+    }
+  }
+}
+@media (max-width: 1350px) {
+  .offer-2 {
+    .cards {
+      overflow: hidden;
+      overflow-x: auto;
+      &__list {
+        display: flex;
+        margin-bottom: 30px;
+      }
+      &__item{
+        flex-shrink: 0;
+      }
+      &__image{
+        width: 292px;
+      }
+    }
+  }
+}
+@media(max-width:1000px){
+  .offer-2 {
+    margin-top: 30px;
+    margin-bottom: 50px;
+    padding: 0 15px;
+    h2{
+      font-size: 23px;
+      margin-bottom: 25px;
+    }
+    .cards {
+      overflow: hidden;
+      &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0;
+      }
+      &__item{
+        width: 173px;
+        flex-shrink: 0;
+      }
+      &__image{
+        width: 173px;
+        height: 260px;
       }
     }
   }

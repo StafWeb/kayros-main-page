@@ -3722,11 +3722,11 @@ input[type=search]::-webkit-search-results-decoration {
   left: 0;
   top: 0;
   z-index: 2;
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(0, 0, 0, 0.95);
   padding: 20px;
 }
 .slider__zoom_active .swiper-container {
-  width: 50vw;
+  width: 45vw;
   max-width: 900px;
   max-height: 1200px;
   height: 100%;

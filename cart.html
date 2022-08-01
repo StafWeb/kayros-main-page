@@ -5,511 +5,150 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./fonts/fonts.css" rel="stylesheet">
-  <link rel="stylesheet" href="./css/commponents/swiper-bundle.min.css">
-  <link rel="stylesheet" href="./css/commponents/simplebar.min.css">
   <link href="./css/main.css" rel="stylesheet">
-  <title>Product-cards</title>
+  <title>Cart</title>
 </head>
 
 <body>
-  <header class="header header-product" id="header">
+  <header class="cart-header" id="header">
     <div class="container">
-      <div class="header__top">
-        <div class="header__hover"></div>
-        <div class="header__start">
-          <a class="header__logo" href="./index.html">
-            <svg width="92" height="45" viewBox="0 0 92 45" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <g clip-path="url(#clip0_283_160)">
-                <path class="header-logo-top"
-                  d="M17.7664 1.90896C17.6969 1.49354 15.3631 0.811062 14.2211 1.74081C12.3342 3.28381 0.635579 23.7384 0 29.1586C0.0177106 29.8362 0.277421 30.4853 0.732476 30.9893C1.18753 31.4933 1.80811 31.8191 2.48273 31.9083C2.16494 27.586 15.1446 2.42329 17.7664 1.90896Z"
-                  fill="white" />
-                <path class="header-logo-top"
-                  d="M22.8413 25.2814C19.157 25.8451 14.8966 18.6049 14.3405 16.4883C21.5007 9.69316 34.6988 1.0979 36.546 2.23536C36.546 1.44408 35.6323 -0.0593488 33.4773 -2.84775e-06C30.657 0.0791251 15.4329 11.7208 10.6362 16.1619C12.9501 21.8789 17.6475 27.042 19.6833 27.2892C20.3694 27.4394 21.0872 27.3124 21.6793 26.9359C22.2714 26.5595 22.6893 25.9644 22.8413 25.2814Z"
-                  fill="white" />
-                <path class="header-logo-top"
-                  d="M61.4424 22.2844C56.3235 21.7551 51.1565 21.9114 46.0793 22.7493C48.2738 17.9472 50.1029 12.9878 51.5513 7.91279C51.9882 6.40936 49.5651 5.75656 49.2274 6.53794C47.5094 10.8504 42.3453 17.418 41.531 17.0125C40.1506 16.3696 43.7654 9.61404 44.401 8.70407C45.0366 7.7941 42.7723 6.17198 41.9878 7.41824C40.4584 9.89099 34.8872 18.2291 33.6756 17.7049C32.8116 17.3389 34.1722 14.8563 34.7283 13.9463C35.1851 13.1847 33.189 11.7208 32.5435 12.6605C31.6994 13.8672 26.6743 20.5733 25.8898 19.5842C25.6316 19.238 26.4161 17.2301 27.9852 14.9848C32.2654 8.91178 34.3112 10.0888 34.0232 12.1362C35.2943 10.4251 34.8772 8.08094 33.2287 7.97214C29.4649 7.71497 20.388 18.9709 23.2978 21.9184C25.0357 23.6691 28.3924 20.9986 30.5573 18.5852C30.617 18.9608 30.7639 19.3173 30.9863 19.6264C31.2087 19.9354 31.5005 20.1886 31.8384 20.3655C33.6657 21.2458 36.496 18.3181 38.5815 15.331C38.1544 17.5565 38.4524 19.782 40.6471 19.9106C42.8418 20.0391 45.3842 16.4487 46.9135 13.976C45.7948 17.1871 44.4679 20.3226 42.9412 23.3625C26.3069 26.8244 12.3937 36.0428 18.4515 42.9665C22.4239 47.5361 34.6687 45.1721 44.689 25.6572C50.1739 24.6729 55.7718 24.4731 61.3133 25.0638C66.1795 25.6177 69.6851 26.8441 70.9761 28.219C71.86 25.1429 67.8479 23.0163 61.4424 22.2844ZM20.8548 41.1366C17.2201 36.9824 27.2304 29.584 41.2926 26.3001C33.3975 40.1179 23.9036 44.5787 20.8548 41.1366Z"
-                  fill="white" />
-                <path class="header-logo-top"
-                  d="M90.2622 9.29754C89.1102 9.16896 83.5688 10.9098 79.9738 11.9879C80.1327 9.41624 79.9738 6.68632 80.6987 5.25212C81.7911 4.85648 82.6849 4.07509 82.8438 3.37283C83.0027 2.67057 81.4336 1.55288 79.3084 3.02664C77.0442 4.62899 73.9854 8.11062 71.2842 9.08983C71.3542 8.70031 71.404 8.30744 71.4332 7.9128C71.5027 5.50929 70.1322 4.41139 68.2752 4.64877C66.6068 4.86637 64.3028 7.52705 62.9721 10.4746C60.7872 13.5705 57.6292 16.4784 57.0135 16.1322C56.1992 15.6674 59.3671 12.4033 59.526 10.9296C59.6154 10.0097 58.384 8.62496 58.3045 7.42814C58.3045 6.98305 59.2976 6.19177 59.4068 5.70711C59.3797 5.31103 59.2335 4.93225 58.9874 4.62002C58.7412 4.30779 58.4064 4.07656 58.0265 3.9564C57.2022 5.3807 54.2527 8.9019 52.5942 9.19863C52.5942 10.1185 53.2397 11.068 53.9051 11.0878C54.5705 11.1076 55.6828 9.891 56.4971 8.9019C56.7527 9.44738 56.9267 10.0272 57.0135 10.6229C57.0135 11.7406 53.8058 14.7969 53.5377 17.1016C53.4956 17.3518 53.5051 17.608 53.5656 17.8545C53.6262 18.1009 53.7364 18.3326 53.8898 18.5352C54.0431 18.7379 54.2362 18.9073 54.4574 19.0333C54.6785 19.1592 54.9232 19.2389 55.1763 19.2677C57.1625 19.4952 60.0126 16.7949 61.8101 14.6881C61.8101 14.8365 61.8101 14.9849 61.8101 15.1233C61.7936 15.537 61.8627 15.9496 62.0132 16.3355C62.1636 16.7214 62.3922 17.0723 62.6847 17.3664C62.9772 17.6605 63.3274 17.8915 63.7134 18.0451C64.0994 18.1986 64.513 18.2713 64.9284 18.2588C67.0239 18.2588 69.2782 15.0047 70.5096 11.7703C72.0092 11.5923 75.3162 9.05027 77.64 6.82479C77.3719 8.53594 77.5109 10.7812 77.362 12.6704C75.8915 13.142 74.3212 13.2137 72.8136 12.8781C72.029 12.5814 70.9466 14.3914 71.5424 15.2519C74.045 18.8424 76.8058 18.8127 78.4941 16.8839C79.1586 16.0543 79.5812 15.0585 79.7156 14.0057C82.9133 13.1353 87.9483 11.7109 89.9246 11.2955C90.6396 11.1373 91.3447 11.068 91.593 11.345C91.7221 10.979 91.5036 9.44591 90.2622 9.29754ZM64.9086 15.8256C64.2333 15.6377 64.7795 12.9671 65.9017 10.7515C66.8948 8.77332 68.3248 6.79512 69.01 6.91381C69.3477 6.98305 69.3974 7.49738 69.2583 8.25899C69.0002 8.37201 68.7692 8.53846 68.5807 8.74728C68.3922 8.95611 68.2505 9.20251 68.165 9.47011C68.0795 9.73772 68.0522 10.0204 68.0849 10.2993C68.1176 10.5782 68.2095 10.847 68.3546 11.0878C67.3019 13.5111 65.7527 16.0531 64.9086 15.8256ZM75.7234 15.8948C75.331 15.9458 74.9324 15.8788 74.5785 15.7026C74.2246 15.5264 73.9317 15.2489 73.7372 14.9057C74.8352 15.0071 75.9426 14.9269 77.0144 14.6684C76.9346 14.972 76.7716 15.2475 76.5436 15.4641C76.3156 15.6807 76.0316 15.8298 75.7234 15.8948Z"
-                  fill="white" />
-                <path class="header-logo-end"
-                  d="M45.3447 33.3129H47.887V33.9755H46.0995V36.3098H47.7678V36.9527H46.0995V39.9794H45.3447V33.3129Z"
-                  fill="white" fill-opacity="0.5" />
-                <path class="header-logo-end" d="M48.8701 33.3129H49.6547V39.3365H51.5415V39.9794H48.8701V33.3129Z"
-                  fill="white" fill-opacity="0.5" />
-                <path class="header-logo-end"
-                  d="M53.2199 37.9814L52.763 39.9596H52.0381L53.5575 33.2931H54.4016L55.8913 39.9596H55.1365L54.6896 37.9814H53.2199ZM54.6201 37.3681L54.2725 35.6768C54.1732 35.202 54.0838 34.6877 54.0044 34.1536C53.925 34.658 53.8256 35.2317 53.7462 35.6768L53.3986 37.3681H54.6201Z"
-                  fill="white" fill-opacity="0.5" />
-                <path class="header-logo-end"
-                  d="M59.1086 39.9794L58.5028 38.377C58.3638 38.0111 58.2446 37.6649 58.1056 37.2099C57.9566 37.655 57.8275 38.0407 57.6984 38.3968L57.1324 39.9794H56.3081L57.6885 36.5967L56.3578 33.3326H57.1522L57.7382 34.8756C57.8673 35.1823 57.9765 35.4988 58.1453 35.934C58.3042 35.4691 58.3936 35.1724 58.5028 34.846L59.049 33.3326H59.8336L58.5326 36.5967L59.913 40.0189L59.1086 39.9794Z"
-                  fill="white" fill-opacity="0.5" />
-                <path class="header-logo-end"
-                  d="M65.3254 39.8607C65.0134 39.9982 64.6728 40.0592 64.3323 40.0387C63.0313 40.0387 62.0879 38.9903 62.0879 36.7252C62.0879 34.0942 63.3988 33.2535 64.4515 33.2535C64.7394 33.2368 65.0269 33.2947 65.2856 33.4216L65.1168 34.0645C64.9061 33.9654 64.6745 33.9179 64.4415 33.9261C63.7265 33.9261 62.8923 34.6184 62.8923 36.656C62.8923 38.6935 63.6868 39.3661 64.5508 39.3661C64.7939 39.3687 65.0346 39.3181 65.2559 39.2178L65.3254 39.8607Z"
-                  fill="white" fill-opacity="0.5" />
-                <path class="header-logo-end" d="M66.2095 33.3129H66.9742V39.3365H68.861V39.9794H66.2095V33.3129Z"
-                  fill="white" fill-opacity="0.5" />
-                <path class="header-logo-end"
-                  d="M72.8232 36.5967C72.8232 39.0991 71.9592 40.0585 70.837 40.0585C69.7149 40.0585 69.0396 38.8815 69.0396 36.5967C69.0396 34.3118 69.8241 33.1942 71.0257 33.1942C72.2274 33.1942 72.8232 34.4701 72.8232 36.5967ZM69.844 36.5967C69.844 37.9715 70.122 39.3365 70.9562 39.3365C71.7904 39.3365 72.0486 37.8825 72.0486 36.5769C72.0486 35.2713 71.8202 33.8568 70.9463 33.8568C70.0724 33.8568 69.8241 35.291 69.8241 36.6461L69.844 36.5967Z"
-                  fill="white" fill-opacity="0.5" />
-                <path class="header-logo-end"
-                  d="M74.3924 33.9953H73.1709V33.3129H76.3686V33.9953H75.1471V39.9794H74.3924V33.9953Z" fill="white"
-                  fill-opacity="0.5" />
-                <path class="header-logo-end"
-                  d="M77.9774 33.3129V36.1713H79.8543V33.3129H80.619V39.9794H79.8543V36.8637H77.9774V39.9794H77.2227V33.3129H77.9774Z"
-                  fill="white" fill-opacity="0.5" />
-                <path class="header-logo-end" d="M82.6846 33.3129V39.9794H81.9199V33.3129H82.6846Z" fill="white"
-                  fill-opacity="0.5" />
-                <path class="header-logo-end"
-                  d="M83.9956 39.9794V33.3129H84.7106L85.9421 36.4384C86.2201 37.1506 86.5677 38.0407 86.7961 38.7628C86.7365 37.7143 86.7067 36.8538 86.7067 35.6966V33.3129H87.392V39.9794H86.667L85.4058 36.7747C85.1377 36.1021 84.8596 35.3405 84.6212 34.5097C84.6808 35.3998 84.6908 36.2505 84.6908 37.6748V39.9794H83.9956Z"
-                  fill="white" fill-opacity="0.5" />
-                <path class="header-logo-end"
-                  d="M92.0001 39.8112C91.6195 39.9569 91.216 40.0339 90.8084 40.0387C90.513 40.0539 90.2179 40.0031 89.9448 39.8902C89.6716 39.7773 89.4272 39.605 89.2294 39.3859C88.6472 38.6293 88.3644 37.6859 88.4349 36.7351C88.4349 34.1437 89.7657 33.2535 90.9474 33.2535C91.2888 33.2353 91.6296 33.2998 91.9405 33.4414L91.7717 34.0942C91.5298 33.9808 91.2642 33.9265 90.9971 33.936C90.1728 33.936 89.2592 34.5987 89.2592 36.6659C89.2592 38.7331 90.0437 39.3859 90.8481 39.3859C91.0076 39.3938 91.167 39.3668 91.3149 39.3068V37.1308H90.3714V36.4978H91.9604L92.0001 39.8112Z"
-                  fill="white" fill-opacity="0.5" />
-              </g>
-              <defs>
-                <clipPath id="clip0_283_160">
-                  <rect class="header-logo-top" width="92" height="44.9545" fill="white" />
-                </clipPath>
-              </defs>
-            </svg>
-          </a>
-          <nav class="header__nav">
-            <ul class="header__list">
-              <li class="header__item">
-                <div class="header__item-img">
-                  <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle class="item-logo" cx="8.5" cy="8.5" r="1.5" fill="white" />
-                    <circle class="item-logo" cx="8.5" cy="8.5" r="1.5" fill="white" />
-                    <circle class="item-logo" cx="8.5" cy="8.5" r="1.5" fill="white" />
-                    <circle class="item-logo" cx="1.5" cy="8.5" r="1.5" fill="white" />
-                    <circle class="item-logo" cx="1.5" cy="8.5" r="1.5" fill="white" />
-                    <circle class="item-logo" cx="1.5" cy="8.5" r="1.5" fill="white" />
-                    <circle class="item-logo" cx="8.5" cy="1.5" r="1.5" fill="white" />
-                    <circle class="item-logo" cx="8.5" cy="1.5" r="1.5" fill="white" />
-                    <circle class="item-logo" cx="8.5" cy="1.5" r="1.5" fill="white" />
-                    <circle class="item-logo" cx="1.5" cy="1.5" r="1.5" fill="white" />
-                    <circle class="item-logo" cx="1.5" cy="1.5" r="1.5" fill="white" />
-                    <circle class="item-logo" cx="1.5" cy="1.5" r="1.5" fill="white" />
-                  </svg>
-                </div>
-                <a class="header__item-link header-link first-link" href="#">Каталог</a>
-                <div class="dropdown">
-                  <div class="dropdown__wrapper">
-                    <ul class="dropdown__list">
-                      <li><span class="dropdown__title">Каталог</span></li>
-                      <li><a class="dropdown__item item-link" href="#">Вся одежда</a></li>
-                      <li><a class="dropdown__item item-link" href="#">Коллекция 2022</a></li>
-                      <li><a class="dropdown__item item-link" href="#">Распродажа</a></li>
-                    </ul>
-                    <ul class="dropdown__list">
-                      <li><span class="dropdown__title">Коллекции</span></li>
-                      <li><a class="dropdown__item item-link" href="#">Бохо</a></li>
-                      <li><a class="dropdown__item item-link" href="#">Классика</a></li>
-                      <li><a class="dropdown__item item-link" href="#">Мужская</a></li>
-                    </ul>
-                    <ul class="dropdown__list">
-                      <li><span class="dropdown__title">Категории</span></li>
-                      <li><a class="dropdown__item item-link" href="#">Платья, сарафаны</a></li>
-                      <li><a class="dropdown__item item-link" href="#">Блузки, туники</a></li>
-                      <li><a class="dropdown__item item-link" href="#">Жакеты</a></li>
-                    </ul>
-                    <ul class="dropdown__list">
-                      <li><a class="dropdown__item item-link" href="#">Брюки, капри, шорты</a></li>
-                      <li><a class="dropdown__item item-link" href="#">Юбки</a></li>
-                      <li><a class="dropdown__item item-link" href="#">Маски</a></li>
-                    </ul>
-                    <a href="#" class="dropdown__offer">
-                      <img src="./images/discount.png" alt="discount">
-                    </a>
-                  </div>
-                </div>
-              </li>
-              <li class="header__item"><a class="header__item-link header-link second-link" href="#">Распродажа</a>
-              </li>
-              <li class="header__item"><a class="header__item-link header-link second-link" href="#">Партнерам</a>
-              </li>
-            </ul>
-          </nav>
+      <div class="cart-header__wrapper">
+        <a href="./product-cards.html"><span></span>Вернуться к покупкам</a>
+        <div class="cart-header__logo">
+          <svg width="92" height="45" viewBox="0 0 92 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M17.7662 1.90901C17.6967 1.49359 15.3629 0.811111 14.2209 1.74086C12.334 3.28386 0.635395 23.7384 -0.000183105 29.1587C0.0175275 29.8363 0.277237 30.4853 0.732293 30.9893C1.18735 31.4933 1.80793 31.8192 2.48255 31.9084C2.16476 27.586 15.1445 2.42334 17.7662 1.90901Z"
+              fill="#333333" />
+            <path
+              d="M22.8411 25.2814C19.1568 25.8452 14.8964 18.6049 14.3403 16.4883C21.5005 9.69317 34.6987 1.0979 36.5458 2.23536C36.5458 1.44409 35.6322 -0.059345 33.4772 9.66946e-07C30.6568 0.0791289 15.4327 11.7208 10.636 16.1619C12.95 21.8789 17.6473 27.042 19.6831 27.2892C20.3692 27.4394 21.0871 27.3124 21.6791 26.9359C22.2712 26.5595 22.6891 25.9644 22.8411 25.2814Z"
+              fill="#333333" />
+            <path
+              d="M61.4426 22.2844C56.3237 21.7551 51.1567 21.9114 46.0795 22.7493C48.274 17.9472 50.1031 12.9878 51.5514 7.91279C51.9884 6.40936 49.5653 5.75656 49.2276 6.53794C47.5096 10.8504 42.3455 17.418 41.5311 17.0125C40.1507 16.3696 43.7656 9.61404 44.4012 8.70407C45.0368 7.7941 42.7725 6.17198 41.988 7.41824C40.4586 9.89099 34.8874 18.2291 33.6758 17.7049C32.8118 17.3389 34.1723 14.8563 34.7285 13.9463C35.1853 13.1847 33.1892 11.7208 32.5437 12.6605C31.6995 13.8672 26.6745 20.5733 25.89 19.5842C25.6317 19.238 26.4163 17.2301 27.9854 14.9848C32.2656 8.91178 34.3114 10.0888 34.0234 12.1362C35.2945 10.4251 34.8774 8.08094 33.2289 7.97214C29.4651 7.71497 20.3882 18.9709 23.298 21.9184C25.0359 23.6691 28.3925 20.9986 30.5575 18.5852C30.6172 18.9608 30.7641 19.3173 30.9865 19.6264C31.2089 19.9354 31.5006 20.1886 31.8386 20.3655C33.6659 21.2458 36.4962 18.3181 38.5817 15.331C38.1546 17.5565 38.4526 19.782 40.6473 19.9106C42.842 20.0391 45.3843 16.4487 46.9137 13.976C45.7949 17.1871 44.468 20.3226 42.9413 23.3625C26.3071 26.8244 12.3938 36.0428 18.4517 42.9665C22.4241 47.5361 34.6689 45.1721 44.6892 25.6572C50.1741 24.6729 55.7719 24.4731 61.3135 25.0638C66.1797 25.6177 69.6853 26.8441 70.9763 28.219C71.8602 25.1429 67.8481 23.0163 61.4426 22.2844ZM20.855 41.1366C17.2203 36.9824 27.2306 29.584 41.2928 26.3001C33.3977 40.1179 23.9038 44.5787 20.855 41.1366Z"
+              fill="#333333" />
+            <path
+              d="M90.2621 9.29754C89.1101 9.16896 83.5687 10.9098 79.9737 11.9879C80.1326 9.41624 79.9737 6.68632 80.6986 5.25212C81.791 4.85648 82.6848 4.07509 82.8437 3.37283C83.0026 2.67057 81.4335 1.55288 79.3083 3.02664C77.044 4.62899 73.9853 8.11062 71.2841 9.08983C71.3541 8.70031 71.4038 8.30744 71.4331 7.9128C71.5026 5.50929 70.1321 4.41139 68.275 4.64877C66.6066 4.86637 64.3027 7.52705 62.9719 10.4746C60.7871 13.5705 57.6291 16.4784 57.0134 16.1322C56.199 15.6674 59.367 12.4033 59.5259 10.9296C59.6153 10.0097 58.3838 8.62496 58.3044 7.42814C58.3044 6.98305 59.2975 6.19177 59.4067 5.70711C59.3796 5.31103 59.2334 4.93225 58.9872 4.62002C58.741 4.30779 58.4062 4.07656 58.0263 3.9564C57.2021 5.3807 54.2526 8.9019 52.5941 9.19863C52.5941 10.1185 53.2396 11.068 53.905 11.0878C54.5704 11.1076 55.6826 9.891 56.497 8.9019C56.7526 9.44738 56.9266 10.0272 57.0134 10.6229C57.0134 11.7406 53.8057 14.7969 53.5376 17.1016C53.4955 17.3518 53.505 17.608 53.5655 17.8545C53.626 18.1009 53.7363 18.3326 53.8896 18.5352C54.0429 18.7379 54.2361 18.9073 54.4572 19.0333C54.6784 19.1592 54.923 19.2389 55.1762 19.2677C57.1623 19.4952 60.0125 16.7949 61.81 14.6881C61.81 14.8365 61.81 14.9849 61.81 15.1233C61.7935 15.537 61.8626 15.9496 62.013 16.3355C62.1635 16.7214 62.3921 17.0723 62.6846 17.3664C62.9771 17.6605 63.3273 17.8915 63.7133 18.0451C64.0993 18.1986 64.5129 18.2713 64.9283 18.2588C67.0237 18.2588 69.2781 15.0047 70.5095 11.7703C72.0091 11.5923 75.3161 9.05027 77.6399 6.82479C77.3718 8.53594 77.5108 10.7812 77.3618 12.6704C75.8914 13.142 74.3211 13.2137 72.8135 12.8781C72.0289 12.5814 70.9465 14.3914 71.5423 15.2519C74.0449 18.8424 76.8057 18.8127 78.494 16.8839C79.1585 16.0543 79.581 15.0585 79.7155 14.0057C82.9132 13.1353 87.9482 11.7109 89.9244 11.2955C90.6395 11.1373 91.3446 11.068 91.5928 11.345C91.7219 10.979 91.5035 9.44591 90.2621 9.29754ZM64.9085 15.8256C64.2332 15.6377 64.7794 12.9671 65.9016 10.7515C66.8946 8.77332 68.3247 6.79512 69.0099 6.91381C69.3476 6.98305 69.3972 7.49738 69.2582 8.25899C69.0001 8.37201 68.7691 8.53846 68.5806 8.74728C68.3921 8.95611 68.2504 9.20251 68.1649 9.47011C68.0794 9.73772 68.0521 10.0204 68.0848 10.2993C68.1175 10.5782 68.2094 10.847 68.3545 11.0878C67.3018 13.5111 65.7526 16.0531 64.9085 15.8256ZM75.7232 15.8948C75.3309 15.9458 74.9323 15.8788 74.5784 15.7026C74.2245 15.5264 73.9315 15.2489 73.737 14.9057C74.8351 15.0071 75.9425 14.9269 77.0143 14.6684C76.9345 14.972 76.7715 15.2475 76.5435 15.4641C76.3155 15.6807 76.0315 15.8298 75.7232 15.8948Z"
+              fill="#333333" />
+            <path d="M45.3446 33.3129H47.8869V33.9755H46.0993V36.3098H47.7677V36.9527H46.0993V39.9794H45.3446V33.3129Z"
+              fill="#B0976E" />
+            <path d="M48.8701 33.3129H49.6546V39.3365H51.5415V39.9794H48.8701V33.3129Z" fill="#B0976E" />
+            <path
+              d="M53.2199 37.9814L52.763 39.9596H52.0381L53.5575 33.2931H54.4016L55.8913 39.9596H55.1365L54.6896 37.9814H53.2199ZM54.6201 37.3682L54.2725 35.6768C54.1732 35.202 54.0838 34.6877 54.0044 34.1536C53.925 34.658 53.8256 35.2317 53.7462 35.6768L53.3986 37.3682H54.6201Z"
+              fill="#B0976E" />
+            <path
+              d="M59.1089 39.9794L58.5031 38.377C58.364 38.0111 58.2449 37.6649 58.1058 37.2099C57.9569 37.655 57.8278 38.0407 57.6987 38.3968L57.1326 39.9794H56.3083L57.6887 36.5967L56.358 33.3326H57.1525L57.7384 34.8756C57.8675 35.1822 57.9767 35.4988 58.1456 35.934C58.3045 35.4691 58.3938 35.1724 58.5031 34.846L59.0493 33.3326H59.8338L58.5329 36.5967L59.9133 40.0189L59.1089 39.9794Z"
+              fill="#B0976E" />
+            <path
+              d="M65.3256 39.8607C65.0136 39.9982 64.673 40.0592 64.3325 40.0387C63.0315 40.0387 62.0881 38.9903 62.0881 36.7252C62.0881 34.0942 63.399 33.2535 64.4516 33.2535C64.7396 33.2368 65.027 33.2947 65.2858 33.4216L65.117 34.0646C64.9062 33.9654 64.6747 33.9179 64.4417 33.9261C63.7267 33.9261 62.8925 34.6185 62.8925 36.656C62.8925 38.6935 63.687 39.3661 64.5509 39.3661C64.7941 39.3687 65.0348 39.3181 65.256 39.2178L65.3256 39.8607Z"
+              fill="#B0976E" />
+            <path d="M66.2095 33.3129H66.9742V39.3365H68.861V39.9794H66.2095V33.3129Z" fill="#B0976E" />
+            <path
+              d="M72.8234 36.5967C72.8234 39.0991 71.9594 40.0585 70.8372 40.0585C69.715 40.0585 69.0397 38.8815 69.0397 36.5967C69.0397 34.3118 69.8243 33.1942 71.0259 33.1942C72.2276 33.1942 72.8234 34.4701 72.8234 36.5967ZM69.8441 36.5967C69.8441 37.9715 70.1222 39.3365 70.9564 39.3365C71.7906 39.3365 72.0488 37.8825 72.0488 36.5769C72.0488 35.2713 71.8204 33.8569 70.9465 33.8569C70.0726 33.8569 69.8243 35.291 69.8243 36.6461L69.8441 36.5967Z"
+              fill="#B0976E" />
+            <path d="M74.3925 33.9953H73.171V33.3129H76.3688V33.9953H75.1473V39.9794H74.3925V33.9953Z" fill="#B0976E" />
+            <path
+              d="M77.9776 33.3129V36.1713H79.8545V33.3129H80.6192V39.9794H79.8545V36.8637H77.9776V39.9794H77.2228V33.3129H77.9776Z"
+              fill="#B0976E" />
+            <path d="M82.6849 33.3129V39.9794H81.9202V33.3129H82.6849Z" fill="#B0976E" />
+            <path
+              d="M83.9957 39.9794V33.3129H84.7108L85.9422 36.4384C86.2202 37.1506 86.5678 38.0407 86.7962 38.7628C86.7367 37.7143 86.7069 36.8538 86.7069 35.6966V33.3129H87.3921V39.9794H86.6671L85.4059 36.7747C85.1378 36.1021 84.8597 35.3405 84.6214 34.5097C84.681 35.3998 84.6909 36.2505 84.6909 37.6748V39.9794H83.9957Z"
+              fill="#B0976E" />
+            <path
+              d="M92 39.8112C91.6195 39.9569 91.216 40.0339 90.8083 40.0387C90.5129 40.0539 90.2179 40.0031 89.9447 39.8902C89.6715 39.7773 89.4271 39.605 89.2293 39.3859C88.6471 38.6293 88.3644 37.6859 88.4349 36.7351C88.4349 34.1437 89.7656 33.2535 90.9474 33.2535C91.2888 33.2353 91.6295 33.2998 91.9404 33.4414L91.7716 34.0942C91.5298 33.9808 91.2642 33.9265 90.997 33.936C90.1727 33.936 89.2591 34.5987 89.2591 36.6659C89.2591 38.7331 90.0437 39.3859 90.8481 39.3859C91.0076 39.3939 91.1669 39.3668 91.3148 39.3068V37.1308H90.3714V36.4978H91.9603L92 39.8112Z"
+              fill="#B0976E" />
+          </svg>
         </div>
-        <div class="header__end">
-          <form class="header__form">
-            <input class="header__form-search" type="search">
-            <button class="header__form-btn">
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle class="search-logo" cx="6.5" cy="6.5" r="5.5" stroke="white" stroke-width="2" />
-                <rect class="search-logo-rec" x="9" y="10.4142" width="2" height="7" transform="rotate(-45 9 10.4142)"
-                  fill="white" />
-              </svg>
-            </button>
-          </form>
-          <div class="header__user">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path class="user-logo" fill-rule="evenodd" clip-rule="evenodd"
-                d="M18 20H20C20 15.5817 15.5228 12 10 12C4.47715 12 0 15.5817 0 20H2C2 17.0797 5.14219 14 10 14C14.8578 14 18 17.0797 18 20Z"
-                fill="white" />
-              <circle class="user-logo-cir" cx="10" cy="5" r="4" stroke="white" stroke-width="2" />
-            </svg>
-          </div>
-          <div class="header__cart">
-            <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path class="cart-logo"
-                d="M2 6H18C18.5523 6 19 6.44772 19 7V19C19 19.5523 18.5523 20 18 20H2C1.44772 20 1 19.5523 1 19V7C1 6.44772 1.44772 6 2 6Z"
-                stroke="white" stroke-width="2" />
-              <path class="cart-logo" d="M8 1H12C13.1046 1 14 1.89543 14 3V6H6V3C6 1.89543 6.89543 1 8 1Z"
-                stroke="white" stroke-width="2" />
-            </svg>
-            <span>0</span>
-          </div>
-          <button class="header__burger" data-burger aria-label="Открыть меню" aria-expanded="false">
-            <span class="header__burger-line"></span>
-          </button>
-        </div>
+        <a href="#">8 (800) 222-37-07</a>
       </div>
     </div>
   </header>
-  <main>
-    <div class="container product-card-container">
-      <section class="card-product">
-        <div class="breadcrumbs">
-          <ul class="breadcrumbs__list">
-            <li class="breadcrumbs__item">
-              <a href="#">Главная страница</a>
-            </li>
-            <li class="breadcrumbs__item">
-              <a href="#">Каталог</a>
-            </li>
-            <li class="breadcrumbs__item">
-              <a href="#">Платья Бохо</a>
-            </li>
-            <li class="breadcrumbs__item">
-              <a href="#">Платье 9/1</a>
-            </li>
-          </ul>
+  <main class="cart">
+    <div class="container">
+      <h1>Моя корзина</h1>
+      <h2>Товары в заказе</h2>
+      <section class="order">
+        <div class="order__cards">
+          <div class="order-card">
+            <div class="order-card__product">
+              <div class="order-card__photo">
+                <img src="./images/product-card1.jpeg" alt="">
+              </div>
+              <div class="order-card__descr">
+                <span>Платье 9/1</span>
+                <span>Размер: 46</span>
+                <span>Цвет: Зелёный</span>
+                <button class="order-card__btn">Удалить</button>
+              </div>
+            </div>
+            <div class="order-card__wrapper">
+              <div class="order-card__inner">
+                <span>цена за шт.</span>
+                <div class="order-card__price order-card__price_disc">
+                  <span>8 500 ₽</span>
+                  <span>11 000 ₽</span>
+                </div>
+              </div>
+              <div class="order-card__inner">
+                <span>шт.</span>
+                <div class="order-card__count">
+                  <button><span></span></button>
+                  <label><input type="text" placeholder="1"></label>
+                  <button><span></span></button>
+                </div>
+              </div>
+              <div class="order-card__inner">
+                <span>цена итого</span>
+                <div class="order-card__price order-card__price_disc">
+                  <span>8 500 ₽</span>
+                  <span>11 000 ₽</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="order-card">
+            <div class="order-card__product">
+              <div class="order-card__photo">
+                <img src="./images/product-card1.jpeg" alt="">
+              </div>
+              <div class="order-card__descr">
+                <span>Платье 9/1</span>
+                <span>Размер: 46</span>
+                <span>Цвет: Зелёный</span>
+                <button class="order-card__btn">Удалить</button>
+              </div>
+            </div>
+            <div class="order-card__wrapper">
+              <div class="order-card__inner">
+                <span>цена за шт.</span>
+                <div class="order-card__price">
+                  <span>11 000 ₽</span>
+                </div>
+              </div>
+              <div class="order-card__inner">
+                <span>шт.</span>
+                <div class="order-card__count">
+                  <button><span></span></button>
+                  <label><input type="text" placeholder="1"></label>
+                  <button><span></span></button>
+                </div>
+              </div>
+              <div class="order-card__inner">
+                <span>цена итого</span>
+                <div class="order-card__price">
+                  <span>11 000 ₽</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <section class="slider">
-          <div class="slider__flex">
-            <div class="slider__col">
-              <div class="slider__prev"><svg width="16" height="21" viewBox="0 0 16 21" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path opacity="0.2"
-                    d="M7.29289 0.292892C7.68342 -0.0976315 8.31658 -0.0976314 8.70711 0.292892L15.0711 6.65685C15.4616 7.04738 15.4616 7.68054 15.0711 8.07107C14.6805 8.46159 14.0474 8.46159 13.6569 8.07107L8 2.41421L2.34315 8.07107C1.95262 8.46159 1.31946 8.46159 0.928933 8.07107C0.538408 7.68054 0.538408 7.04738 0.928933 6.65685L7.29289 0.292892ZM7 21L7 1L9 1L9 21L7 21Z"
-                    fill="#333333" />
-                </svg></div>
-              <div class="slider__thumbs">
-                <div class="swiper-container">
-                  <!-- Слайдер с превью -->
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <div class="slider__image"><img
-                          src="./images/product-card1.jpeg" alt="" />
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="slider__image"><img
-                          src="./images/product-card2.jpeg" alt="" />
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="slider__image"><img
-                          src="./images/product-card3.jpeg" alt="" />
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="slider__image"><img
-                          src="./images/product-card4.jpeg" alt="" />
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="slider__image"><img
-                          src="./images/product-card5.jpeg" alt="" />
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="slider__image"><img
-                          src="./images/product-card6.jpeg" alt="" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="slider__next"><svg width="16" height="21" viewBox="0 0 16 21" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M7.29289 0.292892C7.68342 -0.0976315 8.31658 -0.0976314 8.70711 0.292892L15.0711 6.65685C15.4616 7.04738 15.4616 7.68054 15.0711 8.07107C14.6805 8.46159 14.0474 8.46159 13.6569 8.07107L8 2.41421L2.34315 8.07107C1.95262 8.46159 1.31946 8.46159 0.928933 8.07107C0.538408 7.68054 0.538408 7.04738 0.928933 6.65685L7.29289 0.292892ZM7 21L7 1L9 1L9 21L7 21Z"
-                    fill="#333333" />
-                </svg></div>
-            </div>
-            <div class="slider__zoom">
-              <div class="slider__zoom-inner">
-                <div class="swiper-container">
-                  <!-- Слайдер с изображениями -->
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <div class="slider__image"><img
-                          src="./images/product-card1.jpeg" alt="" />
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="slider__image"><img
-                          src="./images/product-card2.jpeg" alt="" />
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="slider__image"><img
-                          src="./images/product-card23.jpeg" alt="" />
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="slider__image"><img
-                          src="./images/product-card4.jpeg" alt="" />
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="slider__image"><img
-                          src="./images/product-card5.jpeg" alt="" />
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="slider__image"><img
-                          src="./images/product-card6.jpeg" alt="" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+        <div class="order__place">
+          <span>Ваш заказ</span>
+          <div class="order__place-wrapper">
+            <div class="order__place-inner"><span>Товаров на сумму:</span> <span>30 910 ₽</span></div>
+            <div class="order__place-inner"><span>Скидка 10% на сумму заказа:</span> <span>-3 091 ₽</span></div>
           </div>
-        </section>
-        <section class="cards-info">
-          <div class="breadcrumbs">
-            <ul class="breadcrumbs__list">
-              <li class="breadcrumbs__item">
-                <a href="#">Главная страница</a>
-              </li>
-              <li class="breadcrumbs__item">
-                <a href="#">Каталог</a>
-              </li>
-              <li class="breadcrumbs__item">
-                <a href="#">Платья Бохо</a>
-              </li>
-              <li class="breadcrumbs__item">
-                <a href="#">Платье 9/1</a>
-              </li>
-            </ul>
-          </div>
-          <h1>Платье 9/1</h1>
-          <span class="cards-info__price">11 000 ₽</span>
-          <div class="cards-info__colors">
-            <span class="color">Цвет: <span>лиловый</span></span>
-            <ul class="filters__colors-list filters__list">
-              <li class="filters__colors-item">
-                <label style="background-image: url(./images/offer-colors1.png);" title="color-1">
-                  <input type="radio" name="color" value="yellow" checked>
-                  <span></span>
-                </label>
-              </li>
-              <li class="filters__colors-item">
-                <label style="background-image: url(./images/offer-colors3.png);" title="black">
-                  <input type="radio" name="color" value="black">
-                  <span></span>
-                </label>
-              </li>
-              <li class="filters__colors-item">
-                <label style="background-image: url(./images/offer-colors4.png);" title="orange">
-                  <input type="radio" name="color" value="orange">
-                  <span></span>
-                </label>
-              </li>
-              <li class="filters__colors-item">
-                <label style="background-image: url(./images/offer-colors5.png);" title="purple">
-                  <input type="radio" name="color" value="purple">
-                  <span></span>
-                </label>
-              </li>
-              <li class="filters__colors-item">
-                <label style="background-image: url(./images/offer-colors3.png);" title="yeblues">
-                  <input type="radio" name="color" value="yeblues">
-                  <span></span>
-                </label>
-              </li>
-              <li class="filters__colors-item">
-                <label style="background-image: url(./images/offer-colors1.png);" title="green">
-                  <input type="radio" name="color" value="green">
-                  <span></span>
-                </label>
-              </li>
-              <li class="filters__colors-item">
-                <label style="background-image: url(./images/offer-colors4.png);" title="green">
-                  <input type="radio" name="color" value="green">
-                  <span></span>
-                </label>
-              </li>
-              <li class="filters__colors-item">
-                <label style="background-image: url(./images/offer-colors3.png);" title="blue">
-                  <input type="radio" name="color" value="blue">
-                  <span></span>
-                </label>
-              </li>
-              <li class="filters__colors-item">
-                <label style="background-image: url(./images/offer-colors2.png);" title="black">
-                  <input type="radio" name="color" value="black">
-                  <span></span>
-                </label>
-              </li>
-              <li class="filters__colors-item">
-                <label style="background-image: url(./images/offer-colors1.png);" title="pink">
-                  <input type="radio" name="color" value="pink">
-                  <span></span>
-                </label>
-              </li>
-            </ul>
-          </div>
-          <div class="cards-info__sizes">
-            <div class="cards-info__sizes-top">
-              <span class="size">Размер: <span>41</span></span>
-              <button class="table-size-btn"><span>Таблица размеров</span></button>
-            </div>
-            <ul class="filters__size-list filters__list">
-              <ul class="filters__size-inner">
-                <li class="filters__size-item">
-                  <label>
-                    <input type="radio" name="size" value="41" checked>
-                    <span>41</span>
-                  </label>
-                </li>
-                <li class="filters__size-item">
-                  <label>
-                    <input type="radio" name="size" value="42">
-                    <span>42</span>
-                  </label>
-                </li>
-                <li class="filters__size-item">
-                  <label>
-                    <input type="radio" name="size" value="43">
-                    <span>43</span>
-                  </label>
-                </li>
-                <li class="filters__size-item">
-                  <label>
-                    <input type="radio" name="size" value="44">
-                    <span>44</span>
-                  </label>
-                </li>
-                <li class="filters__size-item">
-                  <label>
-                    <input type="radio" name="size" value="45">
-                    <span>45</span>
-                  </label>
-                </li>
-              </ul>
-            </ul>
-          </div>
-          <button class="add-product">Добавить в корзину</button>
-          <div class="cards-info__descr">
-            <ul class="cards-info__list">
-              <li>Артикул: 9/1</li>
-              <li>Состав: Лён 100%</li>
-            </ul>
-            <p>Наши дизайнеры привыкли «нарушать правила», провоцируя вас, на что-то новое и оригинальное. Предлагаем
-              вам
-              примерить платье, выполненное на льняной подкладке.</p>
-            <p>Благодаря этому, природные свойства льна будут окутывать вас комфортом и в холодное время года. Не
-              броский
-              декор, длину миди и свободный крой по достоинству оценят женщины в самых разнообразных ситуациях.</p>
-            <span>Уход:</span>
-            <ul class="cards-info__list">
-              <li>Машинная стирка;</li>
-              <li>Лёгкая глажка;</li>
-              <li>Всегда проверяйте этикетку.</li>
-            </ul>
-            <span>Внимание!</span>
-            <ul class="cards-info__list">
-              <li>Данная модель доступна к заказу только при оплате банковской картой.</li>
-            </ul>
-          </div>
-        </section>
-      </section>
-      <section class="offer-2">
-        <h2>Вам может понравиться</h2>
-        <div class="cards">
-          <ul class="cards__list">
-            <li class="cards__item">
-              <div class="cards__image" style="background-image: url(./images/offer-1.png);">
-              </div>
-              <ul class="cards__list-colors">
-                <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 1"> <img
-                      src="./images/offer-colors1.png" alt="Цвет 1"> </a> </li>
-                <li class="cards__item-color cards__item-color_active"> <a class="cards__item-color-inner"
-                    title="Цвет 2"> <img src="./images/offer-colors2.png" alt="Цвет 2"> </a> </li>
-                <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 3"> <img
-                      src="./images/offer-colors3.png" alt="Цвет 3"> </a> </li>
-                <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 4"> <img
-                      src="./images/offer-colors4.png" alt="Цвет 4"> </a> </li>
-                <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 5"> <img
-                      src="./images/offer-colors5.png" alt="Цвет 5"> </a> </li>
-              </ul>
-              <span class="cards__descr">9/1 платье</span>
-              <span class="cards__price">11 000 руб.</span>
-              <span class="cards__colors">3 цвета</span>
-            </li>
-            <li class="cards__item">
-              <div class="cards__image" style="background-image: url(./images/offer-2.png);">
-              </div>
-              <ul class="cards__list-colors">
-                <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 1"> <img
-                      src="./images/offer-colors1.png" alt="Цвет 1"> </a> </li>
-                <li class="cards__item-color cards__item-color_active"> <a class="cards__item-color-inner"
-                    title="Цвет 2"> <img src="./images/offer-colors2.png" alt="Цвет 2"> </a> </li>
-                <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 3"> <img
-                      src="./images/offer-colors3.png" alt="Цвет 3"> </a> </li>
-                <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 4"> <img
-                      src="./images/offer-colors4.png" alt="Цвет 4"> </a> </li>
-                <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 5"> <img
-                      src="./images/offer-colors5.png" alt="Цвет 5"> </a> </li>
-              </ul>
-              <span class="cards__descr">9/1 платье</span>
-              <span class="cards__price">11 000 руб.</span>
-              <span class="cards__colors">3 цвета</span>
-            </li>
-            <li class="cards__item">
-              <div class="cards__image" style="background-image: url(./images/offer-3.png);">
-              </div>
-              <ul class="cards__list-colors">
-                <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 1"> <img
-                      src="./images/offer-colors1.png" alt="Цвет 1"> </a> </li>
-                <li class="cards__item-color cards__item-color_active"> <a class="cards__item-color-inner"
-                    title="Цвет 2"> <img src="./images/offer-colors2.png" alt="Цвет 2"> </a> </li>
-                <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 3"> <img
-                      src="./images/offer-colors3.png" alt="Цвет 3"> </a> </li>
-                <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 4"> <img
-                      src="./images/offer-colors4.png" alt="Цвет 4"> </a> </li>
-                <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 5"> <img
-                      src="./images/offer-colors5.png" alt="Цвет 5"> </a> </li>
-              </ul>
-              <span class="cards__descr">9/1 платье</span>
-              <span class="cards__price">11 000 руб.</span>
-              <span class="cards__colors">3 цвета</span>
-            </li>
-            <li class="cards__item">
-              <div class="cards__image" style="background-image: url(./images/offer-4.png);">
-              </div>
-              <ul class="cards__list-colors">
-                <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 1"> <img
-                      src="./images/offer-colors1.png" alt="Цвет 1"> </a> </li>
-                <li class="cards__item-color cards__item-color_active"> <a class="cards__item-color-inner"
-                    title="Цвет 2"> <img src="./images/offer-colors2.png" alt="Цвет 2"> </a> </li>
-                <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 3"> <img
-                      src="./images/offer-colors3.png" alt="Цвет 3"> </a> </li>
-                <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 4"> <img
-                      src="./images/offer-colors4.png" alt="Цвет 4"> </a> </li>
-                <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 5"> <img
-                      src="./images/offer-colors5.png" alt="Цвет 5"> </a> </li>
-              </ul>
-              <span class="cards__descr">9/1 платье</span>
-              <span class="cards__price">11 000 руб.</span>
-              <span class="cards__colors">3 цвета</span>
-            </li>
-          </ul>
+          <div class="order__place-total"><span>Итого к оплате:</span><span>27 819 <i>₽</i></span></div>
+          <button class="order__place-btn">оформить заказ</button>
+          <p>Доступные способы доставки и оплаты можно будет выбрать при оформлении заказа</p>
         </div>
       </section>
     </div>
@@ -992,13 +631,11 @@
       </div>
       <div class="cart-modal__btns">
         <a class="cart-modal__btn" href="./product-categoty.html">Продолжить покупки</a>
-        <a class="cart-modal__btn" href="./cart.html">Перейти в корзину</a>
+        <a class="cart-modal__btn" href="#">Перейти в корзину</a>
       </div>
     </div>
   </div>
-  <script src="./js/swiper-bundle.min.js"></script>
-  <script src="./js/simplebar.min.js"></script>
-  <script src="./js/product-card.js"></script>
+  <script src="./js/cart.js"></script>
 </body>
 
 </html>

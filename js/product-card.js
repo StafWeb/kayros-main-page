@@ -53,6 +53,33 @@ imgZoomWrapper.addEventListener('click', () => {
   sliderBlock.classList.remove('zindex');
 });
 
+let addCartBtn = document.querySelector(".add-product");
+let cartModal = document.querySelector(".cart-modal");
+let cartModalContain = document.querySelector(".cart-modal__container");
+let cartModalClose = document.querySelector(".cart-modal__close");
+let cartModalBtn = document.querySelectorAll(".cart-modal__btn");
+addCartBtn.addEventListener('click', () => {
+  cartModal.classList.add("cart-modal_active");
+  body.classList.add('stop-scroll');
+});
+cartModalContain.addEventListener('click', (evt) => {
+  evt.stopPropagation();
+});
+cartModal.addEventListener('click', () => {
+  cartModal.classList.remove("cart-modal_active");
+  body.classList.remove('stop-scroll');
+});
+cartModalClose.addEventListener('click', () => {
+  cartModal.classList.remove("cart-modal_active");
+  body.classList.remove('stop-scroll');
+});
+cartModalBtn.forEach(el => {
+  el.addEventListener('click', () => {
+    cartModal.classList.remove("cart-modal_active");
+    body.classList.remove('stop-scroll');
+  })
+});
+
 document.querySelectorAll(".cards").forEach(el => {
   new SimpleBar(el, { autoHide: false });
 });

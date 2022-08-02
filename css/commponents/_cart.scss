@@ -423,6 +423,20 @@
     margin-bottom: 50px;
     &__place {
       padding: 30px 20px;
+      & > *:first-child{
+        font-size: 25px;
+      }
+      &-total{
+        & > * {
+          font-size: 16px;
+        }
+        & > *:last-child{
+          font-size: 20px;
+        }
+      }
+      &-inner:first-child{
+        margin-bottom: 10px;
+      }
     }
   }
   .cart-header {
@@ -471,6 +485,11 @@
 }
 
 @media (max-width: 800px) {
+  .cart{
+    & > .container{
+      padding: 0px 15px;
+    }
+  }
   .cart-header {
     &__wrapper {
       & > a:first-child{
@@ -509,5 +528,9 @@
   .promo-disc {
     margin-bottom: 30px;
     align-self: center;
+    width: 100%;
+    & > label{
+      width: 100%;
+    }
   }
 }

@@ -4473,6 +4473,18 @@ input[type=search]::-webkit-search-results-decoration {
   .order__place {
     padding: 30px 20px;
   }
+  .order__place > *:first-child {
+    font-size: 25px;
+  }
+  .order__place-total > * {
+    font-size: 16px;
+  }
+  .order__place-total > *:last-child {
+    font-size: 20px;
+  }
+  .order__place-inner:first-child {
+    margin-bottom: 10px;
+  }
   .cart-header {
     height: 62px;
   }
@@ -4516,6 +4528,9 @@ input[type=search]::-webkit-search-results-decoration {
   }
 }
 @media (max-width: 800px) {
+  .cart > .container {
+    padding: 0px 15px;
+  }
   .cart-header__wrapper > a:first-child {
     width: 20px;
     height: 20px;
@@ -4546,6 +4561,10 @@ input[type=search]::-webkit-search-results-decoration {
   .promo-disc {
     margin-bottom: 30px;
     align-self: center;
+    width: 100%;
+  }
+  .promo-disc > label {
+    width: 100%;
   }
 }
 @-webkit-keyframes burger-anim {

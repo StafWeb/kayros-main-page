@@ -4125,6 +4125,8 @@ input[type=search]::-webkit-search-results-decoration {
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
+  flex-grow: 1;
+  margin-right: 30px;
 }
 .order__place {
   display: flex;
@@ -4146,10 +4148,22 @@ input[type=search]::-webkit-search-results-decoration {
 .order__place-wrapper {
   display: flex;
   flex-direction: column;
+  position: relative;
+  margin-bottom: 20px;
+}
+.order__place-wrapper::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(51, 51, 51, 0.1);
 }
 .order__place-inner {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 20px;
 }
 .order__place-inner > * {
   font-weight: 400;
@@ -4161,6 +4175,8 @@ input[type=search]::-webkit-search-results-decoration {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  align-items: flex-start;
+  margin-bottom: 25px;
 }
 .order__place-total > * {
   font-weight: 700;
@@ -4188,6 +4204,7 @@ input[type=search]::-webkit-search-results-decoration {
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: #ffffff;
+  margin-bottom: 25px;
 }
 .order__place > p {
   font-weight: 400;
@@ -4197,9 +4214,20 @@ input[type=search]::-webkit-search-results-decoration {
 }
 
 .order-card {
+  position: relative;
   display: flex;
+  justify-content: space-between;
   height: 160px;
   margin-bottom: 60px;
+}
+.order-card::after {
+  position: absolute;
+  content: "";
+  bottom: -30px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(51, 51, 51, 0.1);
 }
 .order-card__product {
   display: flex;
@@ -4276,6 +4304,9 @@ input[type=search]::-webkit-search-results-decoration {
   line-height: 120%;
   color: rgba(119, 119, 119, 0.7);
 }
+.order-card__inner:not(:last-child) {
+  margin-right: 50px;
+}
 .order-card__count {
   display: flex;
   height: 40px;
@@ -4348,6 +4379,69 @@ input[type=search]::-webkit-search-results-decoration {
   -webkit-text-decoration-color: #d83244;
           text-decoration-color: #d83244;
   margin-top: 5px;
+}
+
+.promo-disc {
+  display: flex;
+  text-align: center;
+  justify-content: flex-start;
+  margin-bottom: 90px;
+}
+.promo-disc > label {
+  position: relative;
+  width: 260px;
+  height: 52px;
+  border: 1px solid rgba(51, 51, 51, 0.2);
+  border-radius: 4px;
+  margin-right: 12px;
+}
+.promo-disc > label > input {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  padding: 0px 15px;
+  color: #333333;
+}
+.promo-disc > label > input::-moz-placeholder {
+  color: #333333;
+  opacity: 1;
+}
+.promo-disc > label > input:-ms-input-placeholder {
+  color: #333333;
+  opacity: 1;
+}
+.promo-disc > label > input::placeholder {
+  color: #333333;
+  opacity: 1;
+}
+.promo-disc > label > input::-moz-placeholder {
+  color: #333333;
+  opacity: 1;
+}
+.promo-disc > label > input::-webkit-input-placeholder {
+  color: #333333;
+  opacity: 1;
+}
+.promo-disc__btn {
+  padding: 0px 25px;
+  width: 150px;
+  height: 52px;
+  background: #b0976e;
+  border: 1px solid #b0976e;
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 160%;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #ffffff;
 }
 
 @-webkit-keyframes burger-anim {

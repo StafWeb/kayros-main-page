@@ -7,7 +7,7 @@
   width: 260px;
   margin-right: 50px;
   scrollbar-width: none;
-  ::-webkit-scrollbar {
+  &::-webkit-scrollbar {
     height: 0px !important;
     width: 0px !important;
   }
@@ -515,9 +515,8 @@
   }
 }
 
-.scrollbar {
-  scrollbar-width: thin;
-  scrollbar-color: rgba(0, 0, 0, 0.4);
+
+ 
   ::-webkit-scrollbar {
     height: 12px;
     width: 7px;
@@ -529,4 +528,7 @@
   ::-webkit-scrollbar-thumb:window-inactive {
     opacity: 0;
   }
-}
+  // *{
+  //   scrollbar-width: thin;
+  //   scrollbar-color: rgba(0, 0, 0, 0.4);
+  // }

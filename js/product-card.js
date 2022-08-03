@@ -113,6 +113,21 @@ navItems.forEach(el => {
   });
 });
 
+const footerBtn = document.querySelectorAll("[data-menu]");
+footerBtn.forEach(function (btn) {
+  btn.addEventListener("click", function () {
+    btn.classList.toggle('btn-mob_active');
+    this.nextElementSibling.classList.toggle("footer__list_active");
+  });
+});
+const burgerBtn = document.querySelectorAll(".inner-btn");
+burgerBtn.forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    btn.classList.toggle('inner-btn_active');
+    this.nextElementSibling.classList.toggle("burger__list_active");
+  })
+});
+
 document.querySelectorAll(".cards").forEach(el => {
   new SimpleBar(el, { autoHide: false });
 });

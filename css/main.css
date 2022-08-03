@@ -2921,7 +2921,7 @@ input[type=search]::-webkit-search-results-decoration {
   margin-right: 50px;
   scrollbar-width: none;
 }
-.filters ::-webkit-scrollbar {
+.filters::-webkit-scrollbar {
   height: 0px !important;
   width: 0px !important;
 }
@@ -3402,19 +3402,17 @@ input[type=search]::-webkit-search-results-decoration {
     border-color: transparent;
   }
 }
-.scrollbar {
-  scrollbar-width: thin;
-  scrollbar-color: rgba(0, 0, 0, 0.4);
-}
-.scrollbar ::-webkit-scrollbar {
+::-webkit-scrollbar {
   height: 12px;
   width: 7px;
 }
-.scrollbar ::-webkit-scrollbar-thumb {
+
+::-webkit-scrollbar-thumb {
   background: rgba(0, 0, 0, 0.4);
   border-radius: 10px;
 }
-.scrollbar ::-webkit-scrollbar-thumb:window-inactive {
+
+::-webkit-scrollbar-thumb:window-inactive {
   opacity: 0;
 }
 
@@ -3862,6 +3860,10 @@ input[type=search]::-webkit-search-results-decoration {
 }
 .offer-2 .cards {
   margin: 0;
+}
+.offer-2 .cards::-webkit-scrollbar {
+  height: 0px !important;
+  width: 0px !important;
 }
 .offer-2 .cards > .simplebar-track {
   pointer-events: all;

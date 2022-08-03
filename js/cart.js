@@ -38,3 +38,11 @@ modalAll.forEach(el => {
     body.classList.remove('stop-scroll');
   })
 });
+
+const footerBtn = document.querySelectorAll("[data-menu]");
+footerBtn.forEach(function (btn) {
+  btn.addEventListener("click", function () {
+    btn.classList.toggle('btn-mob_active');
+    this.nextElementSibling.classList.toggle("footer__list_active");
+  });
+});

@@ -93,13 +93,12 @@ toTopBtn.addEventListener('click', () => {
 
 
 
-const burger = document?.querySelector('[data-burger]');
-const nav = document?.querySelector('[data-burger-menu]');
-const burgerLog = document.querySelector('.burger__logo');
-const navItems = nav?.querySelectorAll('.burger-menu__item');
-const burgerInner = document.querySelector('[data-burger-inner]');
+let burger = document?.querySelector('[data-burger]');
+let burgerLog = document.querySelector('.burger__logo');
+let navItems = nav?.querySelectorAll('.burger-menu__item');
+let burgerInner = document.querySelector('[data-burger-inner]');
 let stop1 = document.documentElement;
-const body = document.body;
+let body = document.body;
 burger.addEventListener('click', () => {
   stop1.classList.toggle('stop-scroll');
   body.classList.toggle('stop-scroll');

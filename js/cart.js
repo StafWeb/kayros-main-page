@@ -5,18 +5,21 @@ let modalContain = document.querySelectorAll(".modal__container");
 let modalAll = document.querySelectorAll(".modal-cart");
 let modalDel = document.querySelector("[data-modal-delete]");
 let modalLim = document.querySelector("[data-modal-limit]");
+let stop1 = document.documentElement;
 let body = document.body;
 
 delProductBtn.forEach(el => {
   el.addEventListener('click', () => {
     modalDel.classList.add("modal-cart_active")
     body.classList.add('stop-scroll');
+    stop1.classList.add('stop-scroll');
   })
 });
 limitProductBtn.forEach(el => {
   el.addEventListener('click', () => {
     modalLim.classList.add("modal-cart_active")
     body.classList.add('stop-scroll');
+    stop1.classList.add('stop-scroll');
   })
 });
 modalContain.forEach(el => {
@@ -29,6 +32,7 @@ modalClose.forEach(el => {
     modalDel.classList.remove('modal-cart_active');
     modalLim.classList.remove('modal-cart_active');
     body.classList.remove('stop-scroll');
+    stop1.classList.remove('stop-scroll');
   })
 });
 modalAll.forEach(el => {
@@ -36,6 +40,7 @@ modalAll.forEach(el => {
     modalDel.classList.remove('modal-cart_active');
     modalLim.classList.remove('modal-cart_active');
     body.classList.remove('stop-scroll');
+    stop1.classList.remove('stop-scroll');
   })
 });
 

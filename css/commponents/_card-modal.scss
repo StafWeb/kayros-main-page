@@ -159,7 +159,7 @@
       height: 60px;
       position: relative;
       margin-bottom: 25px;
-      &::after{
+      &::after {
         position: fixed;
         content: "";
         top: 60px;
@@ -190,6 +190,13 @@
       & > span:first-child {
         display: flex;
         margin-right: 13px;
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 140%;
+        text-align: right;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: rgba(0, 0, 0, 0.7);
       }
       & > span:last-child {
         display: flex;
@@ -201,14 +208,14 @@
         background-size: cover;
       }
     }
-    &__btns{
+    &__btns {
       flex-direction: column;
       height: auto;
       & > * {
         height: 52px;
       }
     }
-    &__product{
+    &__product {
       margin-bottom: 30px;
       gap: 20px;
     }
@@ -216,7 +223,7 @@
     // &__btns{
     //   padding: 0 15px;
     // }
-    &__btn{
+    &__btn {
       max-width: 320px;
     }
   }

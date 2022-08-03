@@ -1,0 +1,40 @@
+let delProductBtn = document.querySelectorAll(".order-card__btn");
+let limitProductBtn = document.querySelectorAll(".order-card__count > button:last-child");
+let modalClose = document.querySelectorAll("[data-modal-close]");
+let modalContain = document.querySelectorAll(".modal__container");
+let modalAll = document.querySelectorAll(".modal-cart");
+let modalDel = document.querySelector("[data-modal-delete]");
+let modalLim = document.querySelector("[data-modal-limit]");
+let body = document.body;
+
+delProductBtn.forEach(el => {
+  el.addEventListener('click', () => {
+    modalDel.classList.add("modal-cart_active")
+    body.classList.add('stop-scroll');
+  })
+});
+limitProductBtn.forEach(el => {
+  el.addEventListener('click', () => {
+    modalLim.classList.add("modal-cart_active")
+    body.classList.add('stop-scroll');
+  })
+});
+modalContain.forEach(el => {
+  el.addEventListener('click', (e) => {
+    e.stopPropagation();
+  })
+});
+modalClose.forEach(el => {
+  el.addEventListener('click', () => {
+    modalDel.classList.remove('modal-cart_active');
+    modalLim.classList.remove('modal-cart_active');
+    body.classList.remove('stop-scroll');
+  })
+});
+modalAll.forEach(el => {
+  el.addEventListener('click', () => {
+    modalDel.classList.remove('modal-cart_active');
+    modalLim.classList.remove('modal-cart_active');
+    body.classList.remove('stop-scroll');
+  })
+});

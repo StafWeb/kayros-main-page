@@ -5,7 +5,6 @@
   &__wrapper {
     display: flex;
     align-items: center;
-    justify-content: center;
     width: 100%;
     height: 100%;
     & > a {
@@ -43,6 +42,9 @@
     }
   }
   &__logo {
+    position: absolute;
+    top: 24px;
+    left: 45%;
     width: 92px;
     height: 45px;
     & > svg {
@@ -397,6 +399,81 @@
   }
 }
 
+.modal-cart {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -2;
+  &_active {
+    visibility: visible;
+    z-index: 2;
+  }
+  &__container {
+    position: relative;
+    width: 458px;
+    background-color: #fff;
+    padding: 40px 30px;
+    & > p {
+      margin-bottom: 30px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 120%;
+      color: #333333;
+    }
+  }
+  &__header {
+    display: none;
+    width: 100%;
+    height: 60px;
+    position: relative;
+  }
+  &__close {
+    position: absolute;
+    top: 30px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    & > span:first-child {
+      display: none;
+    }
+    & > span:last-child {
+      display: flex;
+      width: 14px;
+      height: 14px;
+      background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='1.39996' y='3.05176e-05' width='17.8191' height='1.9799' transform='rotate(45 1.39996 3.05176e-05)' fill='%23333333'/%3E%3Crect x='0.00012207' y='12.6' width='17.8191' height='1.9799' transform='rotate(-45 0.00012207 12.6)' fill='%23333333'/%3E%3C/svg%3E%0A");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+  }
+  &__btn {
+    display: flex;
+    width: 100%;
+    height: 52px;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 160%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #ffffff;
+    background: #b0976e;
+    border: 1px solid #b0976e;
+    border-radius: 4px;
+  }
+}
+
 @media (max-width: 1200px) {
   .order-card {
     &__inner {
@@ -423,24 +500,29 @@
     margin-bottom: 50px;
     &__place {
       padding: 30px 20px;
-      & > *:first-child{
+      & > *:first-child {
         font-size: 25px;
       }
-      &-total{
+      &-total {
         & > * {
           font-size: 16px;
         }
-        & > *:last-child{
+        & > *:last-child {
           font-size: 20px;
         }
       }
-      &-inner:first-child{
+      &-inner:first-child {
         margin-bottom: 10px;
       }
     }
   }
   .cart-header {
     height: 62px;
+    &__logo {
+      width: 74px;
+      height: 36px;
+      top: 15px;
+    }
   }
   .order-card {
     height: auto;
@@ -482,28 +564,92 @@
       }
     }
   }
+  .modal-cart {
+    &__container {
+      width: 100%;
+      height: 100%;
+      padding: 0 15px;
+      & > p {
+        text-align: center;
+      }
+      & > .modal-cart__close {
+        display: none;
+      }
+    }
+    &__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      height: 60px;
+      position: relative;
+      margin-bottom: 25px;
+      &::after{
+        position: fixed;
+        content: "";
+        top: 60px;
+        left: 0;
+        width: 100vw;
+        height: 1px;
+        background-color: rgba(51, 51, 51, 0.1);
+      }
+    }
+    &__logo {
+      display: flex;
+      width: 74px;
+      height: 36px;
+      object-fit: cover;
+    }
+    &__close {
+      position: relative;
+      display: flex;
+      top: 0;
+      right: 0;
+      width: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      & > span:first-child {
+        display: flex;
+        margin-right: 13px;
+      }
+      & > span:last-child {
+        display: flex;
+        width: 14px;
+        height: 14px;
+        background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='1.39996' y='3.05176e-05' width='17.8191' height='1.9799' transform='rotate(45 1.39996 3.05176e-05)' fill='%23333333'/%3E%3Crect x='0.00012207' y='12.6' width='17.8191' height='1.9799' transform='rotate(-45 0.00012207 12.6)' fill='%23333333'/%3E%3C/svg%3E%0A");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+    }
+    &__btn {
+      max-width: 320px;
+      margin: 0 auto;
+    }
+  }
 }
 
 @media (max-width: 800px) {
-  .cart{
-    & > .container{
+  .cart {
+    & > .container {
       padding: 0px 15px;
     }
   }
   .cart-header {
     &__wrapper {
-      & > a:first-child{
+      & > a:first-child {
         width: 20px;
         height: 20px;
       }
       & > a:first-child > span {
         display: none;
       }
-      & > a:last-child{
+      & > a:last-child {
         display: none;
       }
     }
-    &__logo{
+    &__logo {
       margin-right: auto;
     }
   }
@@ -518,9 +664,9 @@
       margin: 0;
     }
   }
-  .order-card{
-    &__inner{
-      &:not(:last-child){
+  .order-card {
+    &__inner {
+      &:not(:last-child) {
         margin: 0;
       }
     }
@@ -529,7 +675,7 @@
     margin-bottom: 30px;
     align-self: center;
     width: 100%;
-    & > label{
+    & > label {
       width: 100%;
     }
   }

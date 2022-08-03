@@ -54,28 +54,28 @@ imgZoomWrapper.addEventListener('click', () => {
 });
 
 let addCartBtn = document.querySelector(".add-product");
-let cartModal = document.querySelector(".cart-modal");
-let cartModalContain = document.querySelector(".cart-modal__container");
-let cartModalClose = document.querySelector(".cart-modal__close");
-let cartModalBtn = document.querySelectorAll(".cart-modal__btn");
+let cardModal = document.querySelector(".card-modal");
+let cardModalContain = document.querySelector(".card-modal__container");
+let cardModalClose = document.querySelector(".card-modal__close");
+let cardModalBtn = document.querySelectorAll(".card-modal__btn");
 let modalClose = () => {
-  cartModal.classList.remove("cart-modal_active");
+  cardModal.classList.remove("card-modal_active");
   body.classList.remove('stop-scroll');
 };
 addCartBtn.addEventListener('click', () => {
-  cartModal.classList.add("cart-modal_active");
+  cardModal.classList.add("card-modal_active");
   body.classList.add('stop-scroll');
 });
-cartModalContain.addEventListener('click', (evt) => {
+cardModalContain.addEventListener('click', (evt) => {
   evt.stopPropagation();
 });
-cartModal.addEventListener('click', () => {
+cardModal.addEventListener('click', () => {
  modalClose();
 });
-cartModalClose.addEventListener('click', () => {
+cardModalClose.addEventListener('click', () => {
  modalClose();
 });
-cartModalBtn.forEach(el => {
+cardModalBtn.forEach(el => {
   el.addEventListener('click', () => {
     modalClose();
   })

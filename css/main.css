@@ -3963,6 +3963,7 @@ input[type=search]::-webkit-search-results-decoration {
 .card-modal_active {
   visibility: visible;
   z-index: 2;
+  overflow: hidden;
 }
 .card-modal__container {
   min-width: 600px;
@@ -4589,6 +4590,7 @@ input[type=search]::-webkit-search-results-decoration {
 .modal-cart_active {
   visibility: visible;
   z-index: 2;
+  overflow: hidden;
 }
 .modal-cart__container {
   position: relative;

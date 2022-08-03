@@ -1,13 +1,12 @@
 let delProductBtn = document.querySelectorAll(".order-card__btn");
 let limitProductBtn = document.querySelectorAll(".order-card__count > button:last-child");
 let modalClose = document.querySelectorAll("[data-modal-close]");
-let modalContain = document.querySelectorAll(".modal__container");
 let modalAll = document.querySelectorAll(".modal-cart");
 let modalDel = document.querySelector("[data-modal-delete]");
 let modalLim = document.querySelector("[data-modal-limit]");
+let modalContain = document.querySelectorAll(".modal-cart__container");
 let stop1 = document.documentElement;
 let body = document.body;
-
 delProductBtn.forEach(el => {
   el.addEventListener('click', () => {
     modalDel.classList.add("modal-cart_active")
@@ -23,8 +22,8 @@ limitProductBtn.forEach(el => {
   })
 });
 modalContain.forEach(el => {
-  el.addEventListener('click', (e) => {
-    e.stopPropagation();
+  el.addEventListener('click', (evt) => {
+    evt.stopPropagation();
   })
 });
 modalClose.forEach(el => {

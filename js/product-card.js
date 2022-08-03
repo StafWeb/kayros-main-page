@@ -36,10 +36,12 @@ let imgZoomBtn = document.querySelectorAll(".slider__zoom .slider__image");
 let imgZoomWrapper = document.querySelector(".slider__zoom");
 let swapperWrapper = document.querySelector(".slider__zoom .swiper-container");
 let sliderBlock = document.querySelector(".slider");
+let stop1 = document.documentElement;
 const body = document.body;
 imgZoomBtn.forEach(el => {
   el.addEventListener('click', () => {
     body.classList.add('stop-scroll');
+    stop1.classList.add('stop-scroll');
     imgZoomWrapper.classList.add('slider__zoom_active');
     sliderBlock.classList.add('zindex');
   });
@@ -49,6 +51,7 @@ swapperWrapper.addEventListener("click", function (evt) {
 });
 imgZoomWrapper.addEventListener('click', () => {
   body.classList.remove('stop-scroll');
+  stop1.classList.remove('stop-scroll');
   imgZoomWrapper.classList.remove('slider__zoom_active');
   sliderBlock.classList.remove('zindex');
 });
@@ -61,10 +64,12 @@ let cardModalBtn = document.querySelectorAll(".card-modal__btn");
 let modalClose = () => {
   cardModal.classList.remove("card-modal_active");
   body.classList.remove('stop-scroll');
+  stop1.classList.remove('stop-scroll');
 };
 addCartBtn.addEventListener('click', () => {
   cardModal.classList.add("card-modal_active");
   body.classList.add('stop-scroll');
+  stop1.classList.add('stop-scroll');
 });
 cardModalContain.addEventListener('click', (evt) => {
   evt.stopPropagation();
@@ -86,7 +91,6 @@ const nav = document?.querySelector('[data-burger-menu]');
 const burgerLog = document.querySelector('.burger__logo');
 const navItems = nav?.querySelectorAll('.burger-menu__item');
 const burgerInner = document.querySelector('[data-burger-inner]');
-let stop1 = document.documentElement;
 burger.addEventListener('click', () => {
   stop1.classList.toggle('stop-scroll');
   body.classList.toggle('stop-scroll');

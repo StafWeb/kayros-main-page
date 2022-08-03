@@ -56,27 +56,28 @@ footeTl.from(".footer__contacts", { opacity: 0, y: 10, duration: 0.65 })
   .from(".footer__nav", { opacity: 0, y: 10, duration: 0.65 }, "-=0.65")
   .from(".footer__bottom-btn", { opacity: 0, y: 30, duration: 0.65 }, "+=0.8")
   .from(".footer__bottom-descr", { opacity: 0, y: 30, duration: 0.65 }, "-=0.8");
-  let observerInfoAnim = new IntersectionObserver(infoAnim, options);
-  let infoTitles = document.querySelectorAll('.product__info > h2');
-  let infoDescrs = document.querySelectorAll('.product__info > p');
+let observerInfoAnim = new IntersectionObserver(infoAnim, options);
+let infoTitles = document.querySelectorAll('.product__info > h2');
+let infoDescrs = document.querySelectorAll('.product__info > p');
 
-  for (let infoTitle of infoTitles) {
-    observerInfoAnim.observe(infoTitle);
-  };
-  for (let infoDescr of infoDescrs) {
-    observerInfoAnim.observe(infoDescr);
-  };
-  function infoAnim(entry) {
-    entry.forEach(change => {
-      if (change.isIntersecting) {
-        change.target.classList.add("cards-item-anim");
-      }
-    });
-  };
+for (let infoTitle of infoTitles) {
+  observerInfoAnim.observe(infoTitle);
+};
+for (let infoDescr of infoDescrs) {
+  observerInfoAnim.observe(infoDescr);
+};
+function infoAnim(entry) {
+  entry.forEach(change => {
+    if (change.isIntersecting) {
+      change.target.classList.add("cards-item-anim");
+    }
+  });
+};
 
 
 
 ScrollTrigger.refresh();
+
 let rootElement = document.documentElement;
 let toTopBtn = document.querySelector(".footer__bottom-btn");
 function scrollToTop() {
@@ -93,12 +94,14 @@ toTopBtn.addEventListener('click', () => {
 
 
 
-let burger = document?.querySelector('[data-burger]');
-let burgerLog = document.querySelector('.burger__logo');
-let navItems = nav?.querySelectorAll('.burger-menu__item');
-let burgerInner = document.querySelector('[data-burger-inner]');
+
+const burger = document?.querySelector('[data-burger]');
+const nav = document?.querySelector('[data-burger-menu]');
+const burgerLog = document.querySelector('.burger__logo');
+const navItems = nav?.querySelectorAll('.burger-menu__item');
+const burgerInner = document.querySelector('[data-burger-inner]');
 let stop1 = document.documentElement;
-let body = document.body;
+const body = document.body;
 burger.addEventListener('click', () => {
   stop1.classList.toggle('stop-scroll');
   body.classList.toggle('stop-scroll');

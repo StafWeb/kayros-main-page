@@ -12,6 +12,13 @@
   }
   .cards {
     margin: 0;
+   & > .simplebar-track{
+    pointer-events: all;
+    cursor: grab;
+    &:active{
+      cursor: grabbing;
+    }
+   }
     &__list {
       grid-template-columns: repeat(4, 1fr);
     }

@@ -11,6 +11,11 @@ body {
   color: #333333;
   overflow-y: overlay;
   overflow-x: hidden;
+  scrollbar-width: none;
+}
+body ::-webkit-scrollbar {
+  height: 0px;
+  width: 0px;
 }
 
 .scrolsmooth {

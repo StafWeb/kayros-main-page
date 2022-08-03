@@ -81,6 +81,38 @@ cardModalBtn.forEach(el => {
   })
 });
 
+const burger = document?.querySelector('[data-burger]');
+const nav = document?.querySelector('[data-burger-menu]');
+const burgerLog = document.querySelector('.burger__logo');
+const navItems = nav?.querySelectorAll('.burger-menu__item');
+const burgerInner = document.querySelector('[data-burger-inner]');
+let stop1 = document.documentElement;
+burger.addEventListener('click', () => {
+  stop1.classList.toggle('stop-scroll');
+  body.classList.toggle('stop-scroll');
+  burger.classList.toggle('burger_active');
+  nav.classList.toggle('burger-menu_active');
+  burgerLog.classList.toggle('burger__logo_active');
+  burgerInner.classList.toggle('burger_active')
+});
+burgerInner.addEventListener('click', () => {
+  stop1.classList.remove('stop-scroll');
+  body.classList.remove('stop-scroll');
+  burgerInner.classList.remove('burger_active')
+  burger.classList.remove('burger_active');
+  nav.classList.remove('burger-menu_active');
+  burgerLog.classList.remove('burger__logo_active');
+})
+navItems.forEach(el => {
+  el.addEventListener('click', () => {
+    stop1.classList.remove('stop-scroll');
+    body.classList.remove('stop-scroll');
+    burger.classList.remove('burger_active');
+    nav.classList.remove('burger-menu_active');
+    burgerLog.classList.remove('burger__logo_active');
+  });
+});
+
 document.querySelectorAll(".cards").forEach(el => {
   new SimpleBar(el, { autoHide: false });
 });

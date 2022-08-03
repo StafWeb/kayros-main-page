@@ -1,11 +1,7 @@
 html {
   height: 100%;
-  // scrollbar-width: thin;
   scroll-behavior: smooth;
 }
-// html::-webkit-scrollbar {
-//   display: none;
-// }
 
 body {
   font-family: "Open Sans", sans-serif;
@@ -15,10 +11,13 @@ body {
   color: #333333;
   overflow-y: overlay;
   overflow-x: hidden;
+  scrollbar-width: none;
+  ::-webkit-scrollbar {
+    height: 0px;
+    width: 0px;
+  }
 }
-// body::-webkit-scrollbar {
-//   display: none;
-// }
+
 .scrolsmooth {
   display: flex;
   flex-direction: column;
@@ -40,7 +39,6 @@ i{
 }
 main {
   flex-grow: 1;
-  // overflow: hidden;
 }
 
 footer {

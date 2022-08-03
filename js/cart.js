@@ -50,3 +50,4 @@ footerBtn.forEach(function (btn) {
     this.nextElementSibling.classList.toggle("footer__list_active");
   });
 });
+

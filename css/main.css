@@ -424,6 +424,7 @@ input[type=search]::-webkit-search-results-decoration {
 .burger-menu_active {
   overflow-y: hidden;
   overflow-x: hidden;
+  -webkit-overflow-scrolling: auto;
   visibility: visible;
   opacity: 1;
   transition: all 0.7s ease-in-out;
@@ -2468,7 +2469,6 @@ input[type=search]::-webkit-search-results-decoration {
 .stop-scroll {
   overflow: hidden !important;
   z-index: -1;
-  -webkit-overflow-scrolling: auto;
 }
 
 .product {
@@ -3966,6 +3966,7 @@ input[type=search]::-webkit-search-results-decoration {
   visibility: visible;
   z-index: 2;
   overflow: hidden;
+  -webkit-overflow-scrolling: auto;
 }
 .card-modal__container {
   min-width: 600px;
@@ -4593,6 +4594,7 @@ input[type=search]::-webkit-search-results-decoration {
   visibility: visible;
   z-index: 2;
   overflow: hidden;
+  -webkit-overflow-scrolling: auto;
 }
 .modal-cart__container {
   position: relative;

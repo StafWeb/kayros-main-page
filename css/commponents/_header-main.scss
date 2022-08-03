@@ -250,6 +250,7 @@
   &_active {
     overflow-y: hidden;
     overflow-x: hidden;
+    -webkit-overflow-scrolling: auto;
     visibility: visible;
     opacity: 1;
     transition: all 0.7s ease-in-out;

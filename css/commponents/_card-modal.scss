@@ -14,6 +14,7 @@
     visibility: visible;
     z-index: 2;
     overflow: hidden;
+    -webkit-overflow-scrolling: auto;
   }
   &__container {
     min-width: 600px;

@@ -35,20 +35,11 @@ function onEntry(entry) {
     }
   });
 };
-// let cardsItem = gsap.utils.toArray(".cards__item");
-// let offerTl = gsap.timeline({
-//   ease: "power1.out",
-//   delay: 1,
-//   scrollTrigger: {
-//     trigger: cardsItem,
-//     toggleActions: "play none none none",
-//     start: "5% 70%",
-//     endTrigger: ".cards__list",
-//     end: "bottom bottom",
-//     // scrub:true
-//   }
-// });
-// offerTl.fromTo(cardsItem, { opacity: 0, y: 20, }, { opacity: 1, y: 0, duration: 1, stagger:0.2 });
+let offerTl = gsap.timeline({
+  ease: "power1.out",
+  delay: 1.3,
+});
+offerTl.fromTo(".cards", { opacity: 0, y: 20, }, { opacity: 1, y: 0, duration: 1 });
 
 let footeTl = gsap.timeline({
   ease: "power1.out",

@@ -942,7 +942,6 @@ input[type=search]::-webkit-search-results-decoration {
   }
   .burger-menu__form > input {
     font-weight: 400;
-    font-size: 16px;
     line-height: 160%;
     color: #333333;
   }

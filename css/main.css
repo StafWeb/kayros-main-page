@@ -4595,8 +4595,6 @@ input[type=search]::-webkit-search-results-decoration {
 .modal-cart_active {
   visibility: visible;
   z-index: 2;
-  overflow: hidden;
-  -webkit-overflow-scrolling: auto;
 }
 .modal-cart__container {
   position: relative;

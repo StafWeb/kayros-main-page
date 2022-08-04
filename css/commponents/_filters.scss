@@ -7,10 +7,10 @@
   width: 260px;
   margin-right: 50px;
   scrollbar-width: none;
-  &::-webkit-scrollbar {
-    height: 0px !important;
-    width: 0px !important;
-  }
+  // &::-webkit-scrollbar {
+  //   height: 0px !important;
+  //   width: 0px !important;
+  // }
   & > .simplebar-track {
     width: 8px !important;
     & > .simplebar-scrollbar:before {

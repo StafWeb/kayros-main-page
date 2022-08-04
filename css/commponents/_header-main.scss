@@ -248,8 +248,8 @@
   background-color: #ffffff;
   transition: all 0.7s ease-in-out;
   &_active {
-    // overflow-y: hidden;
-    // overflow-x: hidden;
+    overflow-y: hidden;
+    overflow-x: hidden;
     // -webkit-overflow-scrolling: auto;
     visibility: visible;
     opacity: 1;
@@ -316,7 +316,8 @@
     display: flex;
     position: relative;
     justify-content: space-around;
-    overflow-y: auto;
+    overflow-x: hidden;
+    overflow-y: overlay;
     margin: auto 0;
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -649,7 +650,7 @@
     left: 20px;
   }
   .burger-menu {
-    // overflow: hidden;
+    overflow: hidden;
     &__header {
       height: 60px;
       flex-shrink: 0;
@@ -768,7 +769,7 @@
       overflow-x: hidden;
       overflow-y: auto;
       margin: 0;
-      height: 100vh;
+      height: 100%;
     }
     &__form {
       display: block;

@@ -25,8 +25,9 @@
     z-index: 1;
     transition-property: transform;
     scrollbar-width: none;
-    &::-webkit-scrollbar {
-      height: 0;
+    ::-webkit-scrollbar {
+      height: 0px;
+      width: 0px;
     }
   }
   &-slide {

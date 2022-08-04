@@ -1375,8 +1375,9 @@ input[type=search]::-webkit-search-results-decoration {
   transition-property: transform;
   scrollbar-width: none;
 }
-.gallery-wrapper::-webkit-scrollbar {
-  height: 0;
+.gallery-wrapper ::-webkit-scrollbar {
+  height: 0px;
+  width: 0px;
 }
 .gallery-slide {
   flex-shrink: 0;

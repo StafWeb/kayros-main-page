@@ -525,10 +525,10 @@
     background: rgba(0, 0, 0, 0.4);
     border-radius: 10px;
   }
-  ::-webkit-scrollbar-thumb:window-inactive {
-    opacity: 0;
+  ::-webkit-scrollbar:window-inactive {
+    height: 0;
   }
-  // *{
-  //   scrollbar-width: thin;
-  //   scrollbar-color: rgba(0, 0, 0, 0.4);
-  // }
+  *{
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.4);
+  }

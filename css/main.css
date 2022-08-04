@@ -422,8 +422,6 @@ input[type=search]::-webkit-search-results-decoration {
   transition: all 0.7s ease-in-out;
 }
 .burger-menu_active {
-  overflow-y: hidden;
-  overflow-x: hidden;
   visibility: visible;
   opacity: 1;
   transition: all 0.7s ease-in-out;
@@ -809,9 +807,6 @@ input[type=search]::-webkit-search-results-decoration {
   }
   .burger__logo {
     left: 20px;
-  }
-  .burger-menu {
-    overflow: hidden;
   }
   .burger-menu__header {
     height: 60px;
@@ -2465,7 +2460,7 @@ input[type=search]::-webkit-search-results-decoration {
   }
 }
 .stop-scroll {
-  overflow: hidden !important;
+  overflow: hidden;
   z-index: -1;
   position: fixed;
   height: 100%;

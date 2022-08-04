@@ -280,7 +280,7 @@
   }
 }
 .stop-scroll {
-  overflow: hidden !important;
+  overflow: hidden;
   z-index: -1;
   position: fixed;
   height: 100%;

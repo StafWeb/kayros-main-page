@@ -248,8 +248,9 @@
   background-color: #ffffff;
   transition: all 0.7s ease-in-out;
   &_active {
-    overflow-y: hidden;
-    overflow-x: hidden;
+    // overflow-y: hidden;
+    // overflow-x: hidden;
+    // -webkit-overflow-scrolling: auto;
     visibility: visible;
     opacity: 1;
     transition: all 0.7s ease-in-out;
@@ -648,7 +649,7 @@
     left: 20px;
   }
   .burger-menu {
-    overflow: hidden;
+    // overflow: hidden;
     &__header {
       height: 60px;
       flex-shrink: 0;

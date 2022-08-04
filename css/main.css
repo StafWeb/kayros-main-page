@@ -424,7 +424,6 @@ input[type=search]::-webkit-search-results-decoration {
 .burger-menu_active {
   overflow-y: hidden;
   overflow-x: hidden;
-  -webkit-overflow-scrolling: auto;
   visibility: visible;
   opacity: 1;
   transition: all 0.7s ease-in-out;
@@ -3815,6 +3814,9 @@ input[type=search]::-webkit-search-results-decoration {
   .slider__col {
     display: none;
   }
+  .slider .swiper-wrapper {
+    z-index: 2;
+  }
   .slider .swiper-slide {
     max-width: 330px;
   }
@@ -3967,8 +3969,6 @@ input[type=search]::-webkit-search-results-decoration {
 .card-modal_active {
   visibility: visible;
   z-index: 2;
-  overflow: hidden;
-  -webkit-overflow-scrolling: auto;
 }
 .card-modal__container {
   min-width: 600px;

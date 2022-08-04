@@ -197,6 +197,7 @@
   }
   .gallery-slide {
     flex-shrink: 0;
+    z-index: 2;
     width: 307px;
     height: 390px;
 
@@ -278,7 +279,7 @@
     max-height: 390px;
   }
   .gallery-slide {
-    max-width: 260px;
+    width: 260px;
   }
 }
 @media (min-width: 1000px) {

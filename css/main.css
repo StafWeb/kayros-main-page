@@ -1555,6 +1555,12 @@ input[type=search]::-webkit-search-results-decoration {
   }
   .gallery {
     width: 100%;
+    overflow: hidden;
+    scrollbar-width: none;
+  }
+  .gallery::-webkit-scrollbar {
+    width: 0px !important;
+    height: 0px !important;
   }
   .gallery-slide {
     flex-shrink: 0;

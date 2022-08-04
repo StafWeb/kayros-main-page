@@ -1574,6 +1574,7 @@ input[type=search]::-webkit-search-results-decoration {
     width: auto;
     height: auto;
     display: flex;
+    z-index: 0;
     overflow: hidden;
     overflow-x: auto;
     scrollbar-width: none;

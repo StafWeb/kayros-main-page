@@ -4924,7 +4924,7 @@ input[type=search]::-webkit-search-results-decoration {
   color: #333333;
   transition: all 0.3s ease;
 }
-.order-form__inner label > sup {
+.order-form__inner label > span {
   color: rgb(176, 151, 110);
 }
 .order-form__error {

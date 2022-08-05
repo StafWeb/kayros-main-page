@@ -4839,7 +4839,6 @@ input[type=search]::-webkit-search-results-decoration {
   gap: 20px;
 }
 .login__wrapper > a, .login__wrapper > p {
-  display: block;
   font-weight: 400;
   font-size: 16px;
   line-height: 140%;

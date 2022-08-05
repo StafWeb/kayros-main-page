@@ -5,24 +5,24 @@ let reqFields = orderForm.querySelectorAll(".required");
 orderForm.addEventListener('submit', (event) => {
   event.preventDefault();
 });
-reqFields.forEach(el => {
-  el.addEventListener('focus', () => {
-    let elWrapper = el.parentNode;
-    let fieldWrapper = elWrapper.parentNode;
-    el.value.length < 4 ? (fieldWrapper.classList.add("required_active"), console.log("click1")) : (fieldWrapper.classList.remove("required_active"), console.log("click2"));
-  })
-});
+// reqFields.forEach(el => {
+//   el.addEventListener('focus', () => {
+//     chekForm(el);
+//   })
+// });
 reqFields.forEach(el => {
   el.addEventListener('focusout', () => {
-    let elWrapper = el.parentNode;
-    let fieldWrapper = elWrapper.parentNode;
-    el.value.length < 4 ? (fieldWrapper.classList.add("required_active"), console.log("focusout1")) : (fieldWrapper.classList.remove("required_active"), console.log("focusout2"));
+    chekForm(el);
   })
 });
 orderFormBtn.addEventListener('click', () => {
-  for (let i = 0; i < reqFields.length; i++){
-    let elWrapper = reqFields[i].parentNode;
-    let fieldWrapper = elWrapper.parentNode;
-    reqFields[i].value.length < 4 ? (fieldWrapper.classList.add("required_active"), console.log("focusout1")) : (fieldWrapper.classList.remove("required_active"), console.log("focusout2"));
+  for (let i = 0; i < reqFields.length; i++) {
+    let elem = reqFields[i];
+    chekForm(elem);
   }
 })
+let chekForm = (elem) => {
+  let elWrapper = elem.parentNode;
+  let fieldWrapper = elWrapper.parentNode;
+  elem.value.length < 4 ? (fieldWrapper.classList.add("required_active"), console.log("focusout1")) : (fieldWrapper.classList.remove("required_active"), console.log("focusout2"));
+};

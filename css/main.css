@@ -4889,6 +4889,24 @@ input[type=search]::-webkit-search-results-decoration {
   padding: 31px 0px 12px 20px;
   transition: background-color 0.3s ease;
 }
+.order-form__inner input::-moz-placeholder {
+  color: transparent;
+}
+.order-form__inner input:-ms-input-placeholder {
+  color: transparent;
+}
+.order-form__inner input::placeholder {
+  color: transparent;
+}
+.order-form__inner input:hover::-moz-placeholder {
+  color: rgba(51, 51, 51, 0.5);
+}
+.order-form__inner input:hover:-ms-input-placeholder {
+  color: rgba(51, 51, 51, 0.5);
+}
+.order-form__inner input:hover::placeholder {
+  color: rgba(51, 51, 51, 0.5);
+}
 .order-form__inner input:not(:-moz-placeholder-shown) ~ label {
   top: 10px;
   font-size: 12px;
@@ -4905,7 +4923,7 @@ input[type=search]::-webkit-search-results-decoration {
   -ms-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-.order-form__inner input:focus ~ label, .order-form__inner input:not(:placeholder-shown) ~ label {
+.order-form__inner input:hover ~ label, .order-form__inner input:focus ~ label, .order-form__inner input:not(:placeholder-shown) ~ label {
   top: 10px;
   font-size: 12px;
   line-height: 120%;

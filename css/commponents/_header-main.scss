@@ -35,7 +35,7 @@
       background-repeat: no-repeat;
     }
   }
-  
+
   &__top {
     height: 91px;
     display: flex;
@@ -782,6 +782,15 @@
         line-height: 160%;
         color: #333333;
       }
+      &-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 0;
+        right: 0;
+        width: 40px;
+        height: 100%;
+      }
     }
     &__account {
       position: relative;
@@ -847,7 +856,7 @@
     .wrapper-list {
       position: relative;
     }
-    &__item:last-child{
+    &__item:last-child {
       margin-bottom: 20px;
     }
   }
@@ -953,7 +962,7 @@
     animation: head-thumb 1s ease-in-out infinite forwards;
     animation-direction: alternate-reverse;
   }
-  .header-product{
+  .header-product {
     .header__item:first-child:hover .dropdown {
       max-height: 100vh;
       transition: all 0.7s cubic-bezier(0.8, 0, 0.8, 1);
@@ -971,7 +980,7 @@
 }
 .burger__list_active {
   max-height: 100vh;
-  transition:all 0.7s ease;
+  transition: all 0.7s ease;
 }
 
 .header-product {

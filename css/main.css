@@ -946,6 +946,15 @@ input[type=search]::-webkit-search-results-decoration {
     line-height: 160%;
     color: #333333;
   }
+  .burger-menu__form-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 100%;
+  }
   .burger-menu__account {
     position: relative;
     display: flex;

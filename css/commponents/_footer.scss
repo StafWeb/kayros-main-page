@@ -184,6 +184,9 @@
       height: 40px;
       display: flex;
       align-items: center;
+      &:last-child{
+        margin-bottom: 10px;
+      }
     }
     &__nav {
       display: flex;
@@ -248,7 +251,6 @@
 .footer__list_active {
   max-height: 100vh;
   transition: all 0.7s ease;
-  margin-bottom: 10px;
 }
 
 .social-link {

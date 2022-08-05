@@ -37,7 +37,7 @@ let imgZoomWrapper = document.querySelector(".slider__zoom");
 let swapperWrapper = document.querySelector(".slider__zoom .swiper-container");
 let sliderBlock = document.querySelector(".slider");
 let stop1 = document.documentElement;
-const body = document.body;
+let body = document.body;
 imgZoomBtn.forEach(el => {
   el.addEventListener('click', () => {
     body.classList.add('stop-scroll');
@@ -61,11 +61,7 @@ let cardModal = document.querySelector(".card-modal");
 let cardModalContain = document.querySelector(".card-modal__container");
 let cardModalClose = document.querySelector(".card-modal__close");
 let cardModalBtn = document.querySelectorAll(".card-modal__btn");
-let modalClose = () => {
-  cardModal.classList.remove("card-modal_active");
-  body.classList.remove('stop-scroll');
-  stop1.classList.remove('stop-scroll');
-};
+let modalClose = () => { cardModal.classList.remove("card-modal_active"); body.classList.remove('stop-scroll'); stop1.classList.remove('stop-scroll'); };
 addCartBtn.addEventListener('click', () => {
   cardModal.classList.add("card-modal_active");
   body.classList.add('stop-scroll');
@@ -75,10 +71,10 @@ cardModalContain.addEventListener('click', (evt) => {
   evt.stopPropagation();
 });
 cardModal.addEventListener('click', () => {
- modalClose();
+  modalClose();
 });
 cardModalClose.addEventListener('click', () => {
- modalClose();
+  modalClose();
 });
 cardModalBtn.forEach(el => {
   el.addEventListener('click', () => {

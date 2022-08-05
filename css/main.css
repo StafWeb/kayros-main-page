@@ -1007,6 +1007,9 @@ input[type=search]::-webkit-search-results-decoration {
   .burger-menu .wrapper-list {
     position: relative;
   }
+  .burger-menu__item:last-child {
+    margin-bottom: 20px;
+  }
 }
 @media (max-width: 750px) {
   .header__logo {
@@ -1111,7 +1114,6 @@ input[type=search]::-webkit-search-results-decoration {
 .burger__list_active {
   max-height: 100vh;
   transition: all 0.7s ease;
-  margin-bottom: 20px;
 }
 
 .header-product {
@@ -2335,6 +2337,9 @@ input[type=search]::-webkit-search-results-decoration {
     display: flex;
     align-items: center;
   }
+  .footer__item:last-child {
+    margin-bottom: 10px;
+  }
   .footer__nav {
     display: flex;
     flex-direction: column;
@@ -2394,7 +2399,6 @@ input[type=search]::-webkit-search-results-decoration {
 .footer__list_active {
   max-height: 100vh;
   transition: all 0.7s ease;
-  margin-bottom: 10px;
 }
 
 .social-link {

@@ -26,20 +26,15 @@ modalContain.forEach(el => {
     evt.stopPropagation();
   })
 });
+let modalRemove = () => { modalDel.classList.remove('modal-cart_active'); modalLim.classList.remove('modal-cart_active'); body.classList.remove('stop-scroll'); stop1.classList.remove('stop-scroll'); };
 modalClose.forEach(el => {
   el.addEventListener('click', () => {
-    modalDel.classList.remove('modal-cart_active');
-    modalLim.classList.remove('modal-cart_active');
-    body.classList.remove('stop-scroll');
-    stop1.classList.remove('stop-scroll');
+    modalRemove();
   })
 });
 modalAll.forEach(el => {
   el.addEventListener('click', () => {
-    modalDel.classList.remove('modal-cart_active');
-    modalLim.classList.remove('modal-cart_active');
-    body.classList.remove('stop-scroll');
-    stop1.classList.remove('stop-scroll');
+    modalRemove();
   })
 });
 

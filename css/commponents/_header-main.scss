@@ -847,6 +847,9 @@
     .wrapper-list {
       position: relative;
     }
+    &__item:last-child{
+      margin-bottom: 20px;
+    }
   }
 }
 @media (max-width: 750px) {
@@ -969,7 +972,6 @@
 .burger__list_active {
   max-height: 100vh;
   transition:all 0.7s ease;
-  margin-bottom: 20px;
 }
 
 .header-product {

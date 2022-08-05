@@ -9,99 +9,81 @@ ScrollTrigger.defaults({
   //   fontSize: "26px",
   // },
 });
-
-let headAnim = gsap.timeline({ delay: 0.5 });
-headAnim.from(".header__logo", { opacity: 0, duration: 0.6, ease: "power1.out" })
-  .from(".header__item-img", { opacity: 0, rotate: -90, duration: 0.4, ease: "power1.out" }, "-=0.3")
-  .from(".first-link", { opacity: 0, duration: 0.5, ease: "expo.out" }, "-=0.4")
-  .from(".second-link", { opacity: 0, x: -5, duration: 0.6, ease: "power1.out" }, "-=0.3")
-  .from(".header__form", { opacity: 0, x: -5, duration: 0.6, ease: "power1.out" }, "-=0.5")
-  .from(".header__user", { opacity: 0, x: -5, duration: 0.6, ease: "power1.out" }, "-=0.5")
-  .from(".header__cart", { opacity: 0, x: -5, duration: 0.6, ease: "power1.out" }, "-=0.5")
-  .from(".header__burger", { opacity: 0, x: -5, duration: 0.6, ease: "power1.out" }, "-=0.5");
-
-let options = {
-  threshold: [0.4]
-};
-let observer = new IntersectionObserver(onEntry, options);
-let swiperDescr = document.querySelectorAll('.cards__item');
-for (let des of swiperDescr) {
-  observer.observe(des);
-};
-function onEntry(entry) {
-  entry.forEach(change => {
-    if (change.isIntersecting) {
-      change.target.classList.add("cards-item-anim");
+if (window.innerWidth > 1000){
+  let headAnim = gsap.timeline({ delay: 0.5 });
+  headAnim.from(".header__logo", { opacity: 0, duration: 0.6, ease: "power1.out" })
+    .from(".header__item-img", { opacity: 0, rotate: -90, duration: 0.4, ease: "power1.out" }, "-=0.3")
+    .from(".first-link", { opacity: 0, duration: 0.5, ease: "expo.out" }, "-=0.4")
+    .from(".second-link", { opacity: 0, x: -5, duration: 0.6, ease: "power1.out" }, "-=0.3")
+    .from(".header__form", { opacity: 0, x: -5, duration: 0.6, ease: "power1.out" }, "-=0.5")
+    .from(".header__user", { opacity: 0, x: -5, duration: 0.6, ease: "power1.out" }, "-=0.5")
+    .from(".header__cart", { opacity: 0, x: -5, duration: 0.6, ease: "power1.out" }, "-=0.5")
+    .from(".header__burger", { opacity: 0, x: -5, duration: 0.6, ease: "power1.out" }, "-=0.5");
+  
+  let options = {
+    threshold: [0.4]
+  };
+  let observer = new IntersectionObserver(onEntry, options);
+  let swiperDescr = document.querySelectorAll('.cards__item');
+  for (let des of swiperDescr) {
+    observer.observe(des);
+  };
+  function onEntry(entry) {
+    entry.forEach(change => {
+      if (change.isIntersecting) {
+        change.target.classList.add("cards-item-anim");
+      }
+    });
+  };
+  let offerTl = gsap.timeline({
+    ease: "power1.out",
+    delay: 1.3,
+  });
+  offerTl.fromTo(".cards", { opacity: 0, y: 20, }, { opacity: 1, y: 0, duration: 1 });
+  
+  let footeTl = gsap.timeline({
+    ease: "power1.out",
+    scrollTrigger: {
+      trigger: ".footer",
+      start: "20% 85%",
+      toggleActions: "play none none none",
+      // endTrigger: ".footer",
+      // end: "bottom bottom",
+      scrub: false,
     }
   });
+  footeTl.from(".footer__contacts", { opacity: 0, y: 10, duration: 0.65 })
+    .from(".footer__nav", { opacity: 0, y: 10, duration: 0.65 }, "-=0.65")
+    .from(".footer__bottom-btn", { opacity: 0, y: 30, duration: 0.65 }, "+=0.8")
+    .from(".footer__bottom-descr", { opacity: 0, y: 30, duration: 0.65 }, "-=0.8");
+  let observerInfoAnim = new IntersectionObserver(infoAnim, options);
+  let infoTitles = document.querySelectorAll('.product__info > h2');
+  let infoDescrs = document.querySelectorAll('.product__info > p');
+  
+  for (let infoTitle of infoTitles) {
+    observerInfoAnim.observe(infoTitle);
+  };
+  for (let infoDescr of infoDescrs) {
+    observerInfoAnim.observe(infoDescr);
+  };
+  function infoAnim(entry) {
+    entry.forEach(change => {
+      if (change.isIntersecting) {
+        change.target.classList.add("cards-item-anim");
+      }
+    });
+  };
 };
-let offerTl = gsap.timeline({
-  ease: "power1.out",
-  delay: 1.3,
-});
-offerTl.fromTo(".cards", { opacity: 0, y: 20, }, { opacity: 1, y: 0, duration: 1 });
-
-let footeTl = gsap.timeline({
-  ease: "power1.out",
-  scrollTrigger: {
-    trigger: ".footer",
-    start: "20% 85%",
-    toggleActions: "play none none none",
-    // endTrigger: ".footer",
-    // end: "bottom bottom",
-    scrub: false,
-  }
-});
-footeTl.from(".footer__contacts", { opacity: 0, y: 10, duration: 0.65 })
-  .from(".footer__nav", { opacity: 0, y: 10, duration: 0.65 }, "-=0.65")
-  .from(".footer__bottom-btn", { opacity: 0, y: 30, duration: 0.65 }, "+=0.8")
-  .from(".footer__bottom-descr", { opacity: 0, y: 30, duration: 0.65 }, "-=0.8");
-let observerInfoAnim = new IntersectionObserver(infoAnim, options);
-let infoTitles = document.querySelectorAll('.product__info > h2');
-let infoDescrs = document.querySelectorAll('.product__info > p');
-
-for (let infoTitle of infoTitles) {
-  observerInfoAnim.observe(infoTitle);
-};
-for (let infoDescr of infoDescrs) {
-  observerInfoAnim.observe(infoDescr);
-};
-function infoAnim(entry) {
-  entry.forEach(change => {
-    if (change.isIntersecting) {
-      change.target.classList.add("cards-item-anim");
-    }
-  });
-};
-
-
 
 ScrollTrigger.refresh();
 
-let rootElement = document.documentElement;
-let toTopBtn = document.querySelector(".footer__bottom-btn");
-function scrollToTop() {
-  // Scroll to top logic
-  rootElement.scrollTo({
-    top: 0,
-    behavior: "smooth"
-  });
-};
-toTopBtn.addEventListener('click', () => {
-  scrollToTop();
-  console.log('click');
-});
-
-
-
-
-const burger = document?.querySelector('[data-burger]');
-const nav = document?.querySelector('[data-burger-menu]');
-const burgerLog = document.querySelector('.burger__logo');
-const navItems = nav?.querySelectorAll('.burger-menu__item');
-const burgerInner = document.querySelector('[data-burger-inner]');
+let burger = document?.querySelector('[data-burger]');
+let nav = document?.querySelector('[data-burger-menu]');
+let burgerLog = document.querySelector('.burger__logo');
+let navItems = nav?.querySelectorAll('.burger-menu__item');
+let burgerInner = document.querySelector('[data-burger-inner]');
 let stop1 = document.documentElement;
-const body = document.body;
+let body = document.body;
 burger.addEventListener('click', () => {
   stop1.classList.toggle('stop-scroll');
   body.classList.toggle('stop-scroll');
@@ -132,14 +114,14 @@ document.querySelectorAll(".filters").forEach(el => {
   new SimpleBar(el);
 });
 
-const footerBtn = document.querySelectorAll("[data-menu]");
+let footerBtn = document.querySelectorAll("[data-menu]");
 footerBtn.forEach(function (btn) {
   btn.addEventListener("click", function () {
     btn.classList.toggle('btn-mob_active');
     this.nextElementSibling.classList.toggle("footer__list_active");
   });
 });
-const burgerBtn = document.querySelectorAll(".inner-btn");
+let burgerBtn = document.querySelectorAll(".inner-btn");
 burgerBtn.forEach(function (btn) {
   btn.addEventListener('click', function () {
     btn.classList.toggle('inner-btn_active');
@@ -147,7 +129,7 @@ burgerBtn.forEach(function (btn) {
   })
 });
 
-const filtersBtn = document.querySelectorAll(".filters__btn");
+let filtersBtn = document.querySelectorAll(".filters__btn");
 filtersBtn.forEach(function (btn) {
   btn.addEventListener('click', function () {
     this.nextElementSibling.classList.toggle("filters__list_active");
@@ -155,10 +137,10 @@ filtersBtn.forEach(function (btn) {
   })
 });
 
-const sortBtn = document.querySelector(".cards__sort-btn");
-const sortList = document.querySelector(".cards__sort-list");
-const sort = document.querySelector(".cards__sort");
-const sortItem = document.querySelectorAll(".cards__sort-item");
+let sortBtn = document.querySelector(".cards__sort-btn");
+let sortList = document.querySelector(".cards__sort-list");
+let sort = document.querySelector(".cards__sort");
+let sortItem = document.querySelectorAll(".cards__sort-item");
 sortBtn.addEventListener('click', () => {
   sortList.classList.add("cards__sort-list_active");
 });
@@ -174,10 +156,10 @@ sortItem.forEach(function (btn) {
   });
 });
 
-const filter = document.querySelector(".filters");
-const filterBtn = document.querySelector(".filter-btn");
-const filterShow = document.querySelector(".filters__btn-show");
-const filterClose = document.querySelector(".filters__btn-close");
+let filter = document.querySelector(".filters");
+let filterBtn = document.querySelector(".filter-btn");
+let filterShow = document.querySelector(".filters__btn-show");
+let filterClose = document.querySelector(".filters__btn-close");
 filterBtn.addEventListener('click', function () {
   stop1.classList.add('stop-scroll');
   body.classList.add('stop-scroll');
@@ -196,7 +178,7 @@ filterClose.addEventListener('click', function () {
   filter.classList.remove("filters_active");
 });
 
-const cardsBreadcumbsBtn = document.querySelectorAll(".cards__breadcrumbs-btn");
+let cardsBreadcumbsBtn = document.querySelectorAll(".cards__breadcrumbs-btn");
 cardsBreadcumbsBtn.forEach(el => {
   el.addEventListener('click', () => {
     el.remove('');

@@ -2260,7 +2260,7 @@ input[type=search]::-webkit-search-results-decoration {
   height: 58px;
   background-color: #e3ddd4;
   border-radius: 50%;
-  margin-bottom: 30px;
+  margin-bottom: 26px;
 }
 .footer__bottom-descr {
   font-weight: 400;
@@ -2364,6 +2364,9 @@ input[type=search]::-webkit-search-results-decoration {
     display: flex;
     height: 40px;
     align-items: center;
+  }
+  .footer__bottom-btn {
+    margin-bottom: 20px;
   }
   .btn-mob {
     display: flex;
@@ -4804,6 +4807,9 @@ input[type=search]::-webkit-search-results-decoration {
     width: 100%;
   }
 }
+.order-reg {
+  margin-top: 70px;
+}
 .order-reg h1 {
   font-weight: 400;
   font-size: 50px;
@@ -4837,10 +4843,14 @@ input[type=search]::-webkit-search-results-decoration {
   font-weight: 400;
   font-size: 16px;
   line-height: 140%;
+  transition: all 0.3s ease;
 }
 .login__wrapper > a {
   color: #333333;
   border-bottom: 1px solid rgba(176, 151, 110, 0.5);
+}
+.login__wrapper > a:active {
+  border-color: transparent;
 }
 .login__wrapper > p {
   color: #928c8c;
@@ -4848,6 +4858,9 @@ input[type=search]::-webkit-search-results-decoration {
 .login__wrapper > p > a {
   color: #333333;
   border-bottom: 1px solid rgba(176, 151, 110, 0.5);
+}
+.login__wrapper > p > a:active {
+  border-color: transparent;
 }
 
 .order-form {
@@ -4975,6 +4988,49 @@ input[type=search]::-webkit-search-results-decoration {
   transition: all 0.3s ease;
 }
 
+.footer-order .footer__contacts {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (max-width: 1000px) {
+  .order-reg {
+    margin-top: 20px;
+  }
+  .order-reg h1 {
+    font-size: 25px;
+    margin-bottom: 15px;
+  }
+  .order-reg h2 {
+    font-size: 23px;
+  }
+  .login {
+    flex-direction: column;
+    margin-top: 25px;
+    margin-bottom: 50px;
+  }
+  .login__wrapper {
+    margin-bottom: 30px;
+  }
+  .order-form {
+    width: 100%;
+  }
+  .order-form__group {
+    width: 100%;
+  }
+  .order-form__inner {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+@media (min-width: 1000px) {
+  .login__wrapper > a:hover, .login__wrapper > p > a:hover {
+    border-color: transparent;
+    transition: all 0.3s ease;
+  }
+}
 @-webkit-keyframes burger-anim {
   0% {
     transform: scaleX(1);
@@ -4985,7 +5041,6 @@ input[type=search]::-webkit-search-results-decoration {
     transform-origin: 0% 100%;
   }
 }
-
 @keyframes burger-anim {
   0% {
     transform: scaleX(1);

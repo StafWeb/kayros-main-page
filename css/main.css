@@ -4514,22 +4514,39 @@ input[type=search]::-webkit-search-results-decoration {
 .promo-disc > label > input::-moz-placeholder {
   color: #333333;
   opacity: 1;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 .promo-disc > label > input:-ms-input-placeholder {
   color: #333333;
   opacity: 1;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 .promo-disc > label > input::placeholder {
   color: #333333;
   opacity: 1;
+  transition: all 0.3s ease;
 }
-.promo-disc > label > input::-moz-placeholder {
-  color: #333333;
-  opacity: 1;
+.promo-disc > label > input:hover::-moz-placeholder {
+  transform: translateX(30%);
+  opacity: 0.5;
+  font-size: 11px;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
-.promo-disc > label > input::-webkit-input-placeholder {
-  color: #333333;
-  opacity: 1;
+.promo-disc > label > input:hover:-ms-input-placeholder {
+  transform: translateX(30%);
+  opacity: 0.5;
+  font-size: 11px;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.promo-disc > label > input:hover::placeholder {
+  transform: translateX(30%);
+  opacity: 0.5;
+  font-size: 11px;
+  transition: all 0.3s ease;
 }
 .promo-disc__btn {
   padding: 0px 25px;

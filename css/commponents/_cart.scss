@@ -372,14 +372,13 @@
       &::placeholder {
         color: #333333;
         opacity: 1;
+        transition: all .3s ease;
       }
-      &::-moz-placeholder {
-        color: #333333;
-        opacity: 1;
-      }
-      &::-webkit-input-placeholder {
-        color: #333333;
-        opacity: 1;
+      &:hover::placeholder{
+        transform: translateX(30%);
+        opacity: 0.5;
+        font-size: 11px;
+        transition: all .3s ease;
       }
     }
   }

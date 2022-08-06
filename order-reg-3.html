@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./fonts/fonts.css" rel="stylesheet">
   <link href="./css/main.css" rel="stylesheet">
-  <title>order-reg-1</title>
+  <title>order-reg-3</title>
 </head>
 
 <body>
@@ -64,28 +64,143 @@
   <main class="order-reg">
     <div class="container">
       <h1>Оформление заказа</h1>
-      <h2>Пожалуйста, войдите на сайт или создайте профиль.</h2>
-      <section class="login">
-        <div class="login__wrapper">
-         <form class="order-form" action="/">
-          <div class="order-form__group ">
-            <div class="order-form__inner">
-              <input class="required" type="email" placeholder=" ">
-              <label>Email <span>*</span></label>
+      <section class="orderReg">
+        <div class="orderReg__wrapper">
+          <div class="orderReg__inner">
+            <div class="orderReg__title">
+              <div class="orderReg__num"><span>1</span></div>Контактные данные
             </div>
-            <div class="order-form__error">Это поле обязательно для заполнения</div>
-          </div>
-          <div class="order-form__group">
-            <div class="order-form__inner">
-              <input class="required" type="password" autocomplete="on" placeholder=" ">
-              <label>Пароль <span>*</span></label>
+            <div class="form-data">
+              <div class="form-data__wrapper">
+                <div class="form-data__col">
+                  <span>Фио:</span>
+                  <span>Телефон:</span>
+                  <span>email:</span>
+                </div>
+                <div class="form-data__col">
+                  <span class="fullName">Блохин Ярослав Николаевич</span>
+                  <span class="dataTel">+7 (915) 99-33-008</span>
+                  <span class="dataEmail">mail@criteria.ru</span>
+                </div>
+              </div>
+              <button class="form-data__btn">Изменить</button>
             </div>
-            <div class="order-form__error">Это поле обязательно для заполнения</div>
           </div>
-          <a href="#" class="order-form__btn" data-reg-1>Войти</a>
-         </form>
-         <a href="#">Забыли пароль?</a>
-         <p>Впервые на нашем сайте? Пожалуйста, <a href="#">зарегистрируйтесь.</a></p>
+          <div class="orderReg__inner">
+            <div class="orderReg__title">
+              <div class="orderReg__num"><span>2</span></div>Выбрать адрес доставки
+            </div>
+            <form class="order-form" action="/">
+              <div class="order-form__group groupDelivery">
+                <div class="order-form__inner">
+                  <input class="required" type="text" placeholder=" ">
+                  <label>Город, улица, дом <span>*</span></label>
+                </div>
+                <div class="order-form__descr">Введите адрес и мы подберем для вас возможные варианты доставки.</div>
+                <div class="order-form__error">Это поле обязательно для заполнения</div>
+              </div>
+              <div class="order-form__group groupNote">
+                <div class="order-form__inner">
+                  <textarea placeholder=" "></textarea>
+                  <label>Примечание</label>
+                </div>
+              </div>
+              <div class="order-form__delivery">
+                <div class="order-form__delivery-group">
+                  <label>
+                    <div class="label-inner"> <input type="radio" name="delivery"><span></span></div>
+                    <div class="order-form__delivery-img"><img src="./images/sdek-logo.png"></div>
+                  </label>
+                  <div class="order-form__delivery-info">
+                    <div class="order-form__delivery-title">СДЭК <span>(Доставка в пункт самовывоза с примеркой)</span></div>
+                    <div class="order-form__delivery-price">
+                      <div>Стоимость: <b>390</b> ₽</div>
+                      <div>Срок доставки: <b>2</b> дня</div>
+                    </div>
+                    <div class="order-form__delivery-inner">
+                    <p>Доставка заказа с возможностью примерки и частичного выкупа товара в пункт самовывоза СДЕК.</p>
+                    <p>Вы оплачиваете только доставку банковской картой на сайте, стоимость зависит от адреса доставки. Стоимость заказа оплачивается в Пункте выдачи после осмотра и примерки изделий наличными или банковской картой.</p>
+                    <p>Вы можете выкупить заказ полностью или частично. Если не подошло ни одно изделие, Вы можете не выкупать заказ.</p>
+                    <p>Ограничения: для этого способа доставки в заказ можно добавить максимум 4 изделия.</p>
+                    <p class="delivery-alert">При заказе с примеркой скидки 10% на повторный заказ и на сумму заказа не применяются.</p>
+                    </div>
+                    <button class="order-form__delivery-btn">Выбрать пункт самовывоза</button>
+                  </div>
+                </div>
+                <div class="order-form__delivery-group">
+                  <label>
+                    <div class="label-inner"> <input type="radio" name="delivery"><span></span></div>
+                    <div class="order-form__delivery-img"><img src="./images/sdek-logo.png"></div>
+                  </label>
+                  <div class="order-form__delivery-info">
+                    <div class="order-form__delivery-title">СДЭК <span>(Бесплатная доставка в пункт самовывоза без примерки)</span></div>
+                    <div class="order-form__delivery-price">
+                      <div>Стоимость: <b>0</b> ₽</div>
+                      <div>Срок доставки: <b>2</b> дня</div>
+                    </div>
+                    <div class="order-form__delivery-inner">
+                    <p>Бесплатная доставка при оплате заказа банковской картой на сайте в один из пунктов самовывоза компании СДЭК.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="order-form__delivery-group">
+                  <label>
+                    <div class="label-inner"> <input type="radio" name="delivery"><span></span></div>
+                    <div class="order-form__delivery-img"><img src="./images/sdek-logo.png"></div>
+                  </label>
+                  <div class="order-form__delivery-info">
+                    <div class="order-form__delivery-title">СДЭК <span>(Доставка курьером до двери)</span></div>
+                    <div class="order-form__delivery-price">
+                      <div>Стоимость: <b>410</b> ₽</div>
+                      <div>Срок доставки: <b>2</b> дня</div>
+                    </div>
+                    <div class="order-form__delivery-inner">
+                    <p>Доставка заказа в один из пунктов самовывоза компании СДЭК.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="order-form__delivery-group">
+                  <label>
+                    <div class="label-inner"> <input type="radio" name="delivery"><span></span></div>
+                    <div class="order-form__delivery-img"><img src="./images/rus-post.png"></div>
+                  </label>
+                  <div class="order-form__delivery-info">
+                    <div class="order-form__delivery-title">Почта России <span>(Бесплатная доставка)</span></div>
+                    <div class="order-form__delivery-price">
+                      <div>Стоимость: <b>0</b> ₽</div>
+                    </div>
+                    <div class="order-form__delivery-inner">
+                    <p>Бесплтатная доставка при оплате заказа банковской картой на сайте.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="order-form__deliveryInfo">
+                <p>Возможные варианты доставки (зависят от вашего адреса):</p>
+                <ul class="order-form__deliveryList">
+                  <li>Курьер Major для заказов из Москвы и МО при оплате картой на сайте: 350 руб. </li>
+                  <li>Платная доставка в пункт выдачи заказов СДЭК с примеркой.
+                    <div>Оплата доставки на сайте и оплата заказа в пункте СДЭК после примерки. Если заказ не подошёл,
+                      Вы можете его не выкупать, оплачиваете доставку. Для этого способа доставки действует ограничение:
+                      максимум 4 изделия (не считая масок).
+                    </div>
+                  </li>
+                  <li>Бесплатная доставка в пункт выдачи заказов СДЭК без примерки.
+                    <div>Оплата банковской картой на сайте.</div>
+                  </li>
+                  <li>Курьер СДЭК, доставка оплачивается по тарифам компании.</li>
+                  <li>Почта России — бесплатная доставка при оплате заказа банковской картой на сайте.</li>
+                  <li>Почта России — наложенный платёж, оплачивается по тарифам компании.</li>
+                </ul>
+              </div>
+              <a href="#" class="order-form__btn">Продолжить</a>
+            </form>
+          </div>
+          <div class="orderReg__inner">
+            <div class="orderReg__title">
+              <div class="orderReg__num"><span>3</span></div>Способ оплаты
+            </div>
+          </div>
         </div>
         <div class="order__descr">
           <span>Ваш заказ</span>
@@ -94,7 +209,6 @@
             <div class="order__descr-inner"><span>Скидка 10% на сумму заказа:</span> <span>-3 091 ₽</span></div>
           </div>
           <div class="order__descr-total"><span>Итого к оплате:</span><span>27 819 <i>₽</i></span></div>
-          <p>Доступные способы доставки и оплаты можно будет выбрать при оформлении заказа</p>
         </div>
       </section>
     </div>
@@ -102,7 +216,8 @@
   <footer class="footer footer-order">
     <div class="container">
       <section class="footer__contacts">
-        <div class="footer__logo" style="background-image: url(./images/footer-logo.svg); width: 122.79px; height: 60px;">
+        <div class="footer__logo"
+          style="background-image: url(./images/footer-logo.svg); width: 122.79px; height: 60px;">
         </div>
         <a class="footer__tel" href="#">8 (800) 222-37-07</a>
         <div class="footer__copy">Copyright © 2009-2022 Кайрос</div>
@@ -249,7 +364,7 @@
       <button class="modal-cart__btn" data-modal-close>Удалить</button>
     </div>
   </div>
-  <script src="./js/order-reg-1.js"></script>
+  <script src="./js/order-reg-2.js"></script>
   <script src="./js/phoneinput.js"></script>
 </body>
 

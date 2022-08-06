@@ -265,6 +265,7 @@ navItems.forEach(el => {
   el.addEventListener('click', () => {
     stop1.classList.remove('stop-scroll');
     body.classList.remove('stop-scroll');
+    burgerInner.classList.remove('burger_active')
     burger.classList.remove('burger_active');
     nav.classList.remove('burger-menu_active');
     burgerLog.classList.remove('burger__logo_active');

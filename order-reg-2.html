@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./fonts/fonts.css" rel="stylesheet">
   <link href="./css/main.css" rel="stylesheet">
-  <title>order-reg-1</title>
+  <title>order-reg-2</title>
 </head>
 
 <body>
@@ -64,28 +64,61 @@
   <main class="order-reg">
     <div class="container">
       <h1>Оформление заказа</h1>
-      <h2>Пожалуйста, войдите на сайт или создайте профиль.</h2>
-      <section class="login">
-        <div class="login__wrapper">
-         <form class="order-form" action="/">
-          <div class="order-form__group ">
-            <div class="order-form__inner">
-              <input class="required" type="email" placeholder=" ">
-              <label>Email <span>*</span></label>
+      <section class="orderReg">
+        <div class="orderReg__wrapper">
+          <div class="orderReg__inner">
+            <div class="orderReg__title">
+              <div class="orderReg__num"><span>1</span></div>Контактные данные
             </div>
-            <div class="order-form__error">Это поле обязательно для заполнения</div>
+            <form class="order-form" action="/">
+              <div class="order-form__group ">
+                <div class="order-form__inner">
+                  <input class="required fullName" type="text" placeholder=" ">
+                  <label>Имя <span>*</span></label>
+                </div>
+                <div class="order-form__error">Это поле обязательно для заполнения</div>
+              </div>
+              <div class="order-form__group ">
+                <div class="order-form__inner">
+                  <input class="required fullName" type="text" placeholder=" ">
+                  <label>Фамилия <span>*</span></label>
+                </div>
+                <div class="order-form__error">Это поле обязательно для заполнения</div>
+              </div>
+              <div class="order-form__group ">
+                <div class="order-form__inner">
+                  <input class="fullName" type="text" placeholder=" ">
+                  <label>Отчество</label>
+                </div>
+                <div class="order-form__error">Это поле обязательно для заполнения</div>
+              </div>
+              <div class="order-form__group ">
+                <div class="order-form__inner">
+                  <input class="required" type="email" placeholder=" ">
+                  <label>Email <span>*</span></label>
+                </div>
+                <div class="order-form__error">Это поле обязательно для заполнения</div>
+              </div>
+              <div class="order-form__group">
+                <div class="order-form__inner">
+                  <input class="required" data-tel-input type="tel" placeholder="+7(000) 000-00-00 : 8(000) 000-00-00">
+                  <label>Телефон <span>*</span></label>
+                </div>
+                <div class="order-form__error">Это поле обязательно для заполнения</div>
+              </div>
+              <a href="#" class="order-form__btn">Продолжить</a>
+            </form>
           </div>
-          <div class="order-form__group">
-            <div class="order-form__inner">
-              <input class="required" type="password" autocomplete="on" placeholder=" ">
-              <label>Пароль <span>*</span></label>
+          <div class="orderReg__inner">
+            <div class="orderReg__title">
+              <div class="orderReg__num"><span>2</span></div>Выбрать адрес доставки
             </div>
-            <div class="order-form__error">Это поле обязательно для заполнения</div>
           </div>
-          <a href="#" class="order-form__btn" data-reg-1>Войти</a>
-         </form>
-         <a href="#">Забыли пароль?</a>
-         <p>Впервые на нашем сайте? Пожалуйста, <a href="#">зарегистрируйтесь.</a></p>
+          <div class="orderReg__inner">
+            <div class="orderReg__title">
+              <div class="orderReg__num"><span>3</span></div>Способ оплаты
+            </div>
+          </div>
         </div>
         <div class="order__descr">
           <span>Ваш заказ</span>
@@ -94,7 +127,6 @@
             <div class="order__descr-inner"><span>Скидка 10% на сумму заказа:</span> <span>-3 091 ₽</span></div>
           </div>
           <div class="order__descr-total"><span>Итого к оплате:</span><span>27 819 <i>₽</i></span></div>
-          <p>Доступные способы доставки и оплаты можно будет выбрать при оформлении заказа</p>
         </div>
       </section>
     </div>
@@ -102,7 +134,8 @@
   <footer class="footer footer-order">
     <div class="container">
       <section class="footer__contacts">
-        <div class="footer__logo" style="background-image: url(./images/footer-logo.svg); width: 122.79px; height: 60px;">
+        <div class="footer__logo"
+          style="background-image: url(./images/footer-logo.svg); width: 122.79px; height: 60px;">
         </div>
         <a class="footer__tel" href="#">8 (800) 222-37-07</a>
         <div class="footer__copy">Copyright © 2009-2022 Кайрос</div>
@@ -249,7 +282,7 @@
       <button class="modal-cart__btn" data-modal-close>Удалить</button>
     </div>
   </div>
-  <script src="./js/order-reg-1.js"></script>
+  <script src="./js/order-reg-2.js"></script>
   <script src="./js/phoneinput.js"></script>
 </body>
 

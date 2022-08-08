@@ -1,4 +1,4 @@
-const sliderThumbs = new Swiper('.slider__thumbs .swiper-container', {
+let sliderThumbs = new Swiper('.slider__thumbs .swiper-container', {
   direction: 'vertical',
   slidesPerView: 'auto',
   spaceBetween: 17,
@@ -8,7 +8,7 @@ const sliderThumbs = new Swiper('.slider__thumbs .swiper-container', {
     prevEl: '.slider__prev'
   },
 });
-const sliderImages = new Swiper('.slider__zoom .swiper-container', {
+let sliderImages = new Swiper('.slider__zoom .swiper-container', {
   slidesPerView: 1,
   thumbs: {
     swiper: sliderThumbs
@@ -59,34 +59,27 @@ imgZoomWrapper.addEventListener('click', () => {
 let addCartBtn = document.querySelector(".add-product");
 let cardModal = document.querySelector(".card-modal");
 let cardModalContain = document.querySelector(".card-modal__container");
-let cardModalClose = document.querySelector(".card-modal__close");
+let cardModalClose = document.querySelectorAll(".card-modal__close");
 let cardModalBtn = document.querySelectorAll(".card-modal__btn");
-let modalClose = () => { cardModal.classList.remove("card-modal_active"); body.classList.remove('stop-scroll'); stop1.classList.remove('stop-scroll'); };
-addCartBtn.addEventListener('click', () => {
-  cardModal.classList.add("card-modal_active");
-  body.classList.add('stop-scroll');
-  stop1.classList.add('stop-scroll');
-});
-cardModalContain.addEventListener('click', (evt) => {
-  evt.stopPropagation();
-});
-cardModal.addEventListener('click', () => {
-  modalClose();
-});
-cardModalClose.addEventListener('click', () => {
-  modalClose();
-});
-cardModalBtn.forEach(el => {
-  el.addEventListener('click', () => {
-    modalClose();
-  })
-});
+let tableModal = document.querySelector(".table-modal");
+let tableContainer = document.querySelector(".table-modal__container");
+let tableBtn = document.querySelector(".table-size-btn");
+let modalClose = (modal) => { modal.classList.remove("card-modal_active"); body.classList.remove('stop-scroll'); stop1.classList.remove('stop-scroll'); };
+let modalOpen = (modal) => { modal.classList.add("card-modal_active"); body.classList.add('stop-scroll'); stop1.classList.add('stop-scroll'); };
+addCartBtn.addEventListener('click', () => { modalOpen(cardModal); });
+tableBtn.addEventListener('click', () => { modalOpen(tableModal); });
+cardModalContain.addEventListener('click', (evt) => { evt.stopPropagation(); });
+tableContainer.addEventListener('click', (evt) => { evt.stopPropagation(); });
+tableModal.addEventListener('click', () => { modalClose(tableModal); });
+cardModal.addEventListener('click', () => { modalClose(cardModal); });
+cardModalClose.forEach(el => { el.addEventListener('click', () => { modalClose(cardModal); modalClose(tableModal); }) });
+cardModalBtn.forEach(el => { el.addEventListener('click', () => { modalClose(cardModal); }) });
 
-const burger = document?.querySelector('[data-burger]');
-const nav = document?.querySelector('[data-burger-menu]');
-const burgerLog = document.querySelector('.burger__logo');
-const navItems = nav?.querySelectorAll('.burger-menu__item');
-const burgerInner = document.querySelector('[data-burger-inner]');
+let burger = document?.querySelector('[data-burger]');
+let nav = document?.querySelector('[data-burger-menu]');
+let burgerLog = document.querySelector('.burger__logo');
+let navItems = nav?.querySelectorAll('.burger-menu__item');
+let burgerInner = document.querySelector('[data-burger-inner]');
 burger.addEventListener('click', () => {
   stop1.classList.toggle('stop-scroll');
   body.classList.toggle('stop-scroll');
@@ -113,14 +106,14 @@ navItems.forEach(el => {
   });
 });
 
-const footerBtn = document.querySelectorAll("[data-menu]");
+let footerBtn = document.querySelectorAll("[data-menu]");
 footerBtn.forEach(function (btn) {
   btn.addEventListener("click", function () {
     btn.classList.toggle('btn-mob_active');
     this.nextElementSibling.classList.toggle("footer__list_active");
   });
 });
-const burgerBtn = document.querySelectorAll(".inner-btn");
+let burgerBtn = document.querySelectorAll(".inner-btn");
 burgerBtn.forEach(function (btn) {
   btn.addEventListener('click', function () {
     btn.classList.toggle('inner-btn_active');
@@ -128,6 +121,6 @@ burgerBtn.forEach(function (btn) {
   })
 });
 
-document.querySelectorAll(".cards").forEach(el => {
+document.querySelectorAll(".simpScroll").forEach(el => {
   new SimpleBar(el, { autoHide: false });
 });

@@ -141,6 +141,16 @@ let sortBtn = document.querySelector(".cards__sort-btn");
 let sortList = document.querySelector(".cards__sort-list");
 let sort = document.querySelector(".cards__sort");
 let sortItem = document.querySelectorAll(".cards__sort-item");
+let sortInner = document.querySelectorAll(".cards__sort-inner");
+// let sortRadio = sortInner.querySelector("input[name='sort']");
+// console.log(sortRadio);
+window.onload = () => {
+  setTimeout(() => {
+      let a = document.querySelector(".cards__sort-inner > input[checked]");
+      let b = a.parentNode;
+      sortBtn.textContent = b.textContent;
+  }, 200);
+};
 sortBtn.addEventListener('click', () => {
   sortList.classList.add("cards__sort-list_active");
 });
@@ -155,7 +165,11 @@ sortItem.forEach(function (btn) {
     sortList.classList.remove('cards__sort-list_active');
   });
 });
-
+sortInner.forEach(el => {
+  el.addEventListener('click', () => {
+    sortBtn.textContent = el.textContent;
+  })
+});
 let filter = document.querySelector(".filters");
 let filterBtn = document.querySelector(".filter-btn");
 let filterShow = document.querySelector(".filters__btn-show");
@@ -181,7 +195,7 @@ filterClose.addEventListener('click', function () {
 let cardsBreadcumbsBtn = document.querySelectorAll(".cards__breadcrumbs-btn");
 cardsBreadcumbsBtn.forEach(el => {
   el.addEventListener('click', () => {
-    el.remove('');
+    el.parentNode.remove();
   });
 });
 

@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./fonts/fonts.css" rel="stylesheet">
   <link href="./css/main.css" rel="stylesheet">
-  <title>order-reg-1</title>
+  <title>order-reg-5</title>
 </head>
 
 <body>
@@ -64,28 +64,82 @@
   <main class="order-reg">
     <div class="container">
       <h1>Оформление заказа</h1>
-      <h2>Пожалуйста, войдите на сайт или создайте профиль.</h2>
-      <section class="login">
-        <div class="login__wrapper">
-         <form class="order-form" action="/">
-          <div class="order-form__group ">
-            <div class="order-form__inner">
-              <input class="required" type="email" placeholder=" ">
-              <label>Email <span>*</span></label>
+      <section class="orderReg">
+        <div class="orderReg__wrapper">
+          <div class="orderReg__inner">
+            <div class="orderReg__title">
+              <div class="orderReg__num"><span>1</span></div>Контактные данные
             </div>
-            <div class="order-form__error">Это поле обязательно для заполнения</div>
-          </div>
-          <div class="order-form__group">
-            <div class="order-form__inner">
-              <input class="required" type="password" autocomplete="on" placeholder=" ">
-              <label>Пароль <span>*</span></label>
+            <div class="form-data">
+              <div class="form-data__wrapper">
+                <div class="form-data__col">
+                  <span>Фио:</span>
+                  <span>Телефон:</span>
+                  <span>email:</span>
+                </div>
+                <div class="form-data__col">
+                  <span class="fullName">Блохин Ярослав Николаевич</span>
+                  <span class="dataTel">+7 (915) 99-33-008</span>
+                  <span class="dataEmail">mail@criteria.ru</span>
+                </div>
+              </div>
+              <button class="form-data__btn">Изменить</button>
             </div>
-            <div class="order-form__error">Это поле обязательно для заполнения</div>
           </div>
-          <a href="#" class="order-form__btn" data-reg-1>Войти</a>
-         </form>
-         <a href="#">Забыли пароль?</a>
-         <p>Впервые на нашем сайте? Пожалуйста, <a href="#">зарегистрируйтесь.</a></p>
+          <div class="orderReg__inner">
+            <div class="orderReg__title">
+              <div class="orderReg__num"><span>2</span></div>Выбрать адрес доставки
+            </div>
+            <div class="order-form ship">
+              <div class="order-form__delivery">
+                <div class="order-form__delivery-group">
+                  <div class="order-form__delivery-img"><img src="./images/sdek-logo.png"></div>
+                  <div class="order-form__delivery-info">
+                    <div class="order-form__delivery-title">СДЭК <span>(Доставка в пункт самовывоза с примеркой)</span>
+                    </div>
+                    <div class="order-form__delivery-price">
+                      <div>Стоимость: <b>390</b> ₽</div>
+                      <div>Срок доставки: <b>2</b> дня</div>
+                    </div>
+                    <div class="order-form__delivery-inner">
+                      <p>Доставка заказа с возможностью примерки и частичного выкупа товара в пункт самовывоза СДЕК.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button class="form-data__btn">Изменить</button>
+            </div>
+          </div>
+          <div class="orderReg__inner">
+            <div class="orderReg__title">
+              <div class="orderReg__num"><span>3</span></div>Способ оплаты
+            </div>
+            <div class="orderReg__pay-wrapper">
+              <div class="orderReg__pay-group">
+                <label>
+                  <div class="label-inner"> <input type="radio" name="delivery"><span></span></div>
+                  <div class="order-form__pay-img"><img src="./images/pay-1.png"></div>
+                </label>
+                <div class="orderReg__pay-info">
+                  <p>Банковская карта</p>
+                  <span>Безопасная оплата банковской картой через сервис ЮКасса.</span>
+                </div>
+              </div>
+              <div class="orderReg__pay-group">
+                <label>
+                  <div class="label-inner"> <input type="radio" name="delivery"><span></span></div>
+                  <div class="order-form__pay-img"><img src="./images/pay-2.png"></div>
+                </label>
+                <div class="orderReg__pay-info">
+                  <p>Наличные при получении</p>
+                  <span>Оплата заказа наличными в пункте самовывоза СДЭК</span>
+                </div>
+              </div>
+              <a href="#" class="order-form__btn">Продолжить</a>
+              <a href="./order-reg-6.html">Карта</a>
+              <a href="./order-reg-7.html">Наличные</a>
+            </div>
+          </div>
         </div>
         <div class="order__descr">
           <span>Ваш заказ</span>
@@ -94,7 +148,6 @@
             <div class="order__descr-inner"><span>Скидка 10% на сумму заказа:</span> <span>-3 091 ₽</span></div>
           </div>
           <div class="order__descr-total"><span>Итого к оплате:</span><span>27 819 <i>₽</i></span></div>
-          <p>Доступные способы доставки и оплаты можно будет выбрать при оформлении заказа</p>
         </div>
       </section>
     </div>
@@ -102,7 +155,8 @@
   <footer class="footer footer-order">
     <div class="container">
       <section class="footer__contacts">
-        <div class="footer__logo" style="background-image: url(./images/footer-logo.svg); width: 122.79px; height: 60px;">
+        <div class="footer__logo"
+          style="background-image: url(./images/footer-logo.svg); width: 122.79px; height: 60px;">
         </div>
         <a class="footer__tel" href="#">8 (800) 222-37-07</a>
         <div class="footer__copy">Copyright © 2009-2022 Кайрос</div>
@@ -143,8 +197,6 @@
       <div class="footer__bottom-descr">Вверх</div>
     </div>
   </footer>
-  <script src="./js/order-reg-1.js"></script>
-  <script src="./js/phoneinput.js"></script>
 </body>
 
 </html>

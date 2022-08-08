@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./fonts/fonts.css" rel="stylesheet">
   <link href="./css/main.css" rel="stylesheet">
-  <title>order-reg-1</title>
+  <title>order-reg-6</title>
 </head>
 
 <body>
@@ -64,28 +64,28 @@
   <main class="order-reg">
     <div class="container">
       <h1>Оформление заказа</h1>
-      <h2>Пожалуйста, войдите на сайт или создайте профиль.</h2>
-      <section class="login">
-        <div class="login__wrapper">
-         <form class="order-form" action="/">
-          <div class="order-form__group ">
-            <div class="order-form__inner">
-              <input class="required" type="email" placeholder=" ">
-              <label>Email <span>*</span></label>
-            </div>
-            <div class="order-form__error">Это поле обязательно для заполнения</div>
+      <section class="orderReg">
+        <div class="orderReg__wrapper">
+          <div class="orderReg__final">
+            <h2>Заказ оформлен</h2>
+            <p></p>
+            <p>Спасибо, что выбрали нас.</p>
+            <p>Ваш заказ <span>№13379</span> от 02.06.2022 18:55:01 успешно оформлен. Уведомления о статусе заказа Вы будете получать на Email: mail@criteria.ru.</p>
+            <p>Посмотреть детали и состояние заказа Вы можете в <a href="#">личном кабинете</a>.</p>
           </div>
-          <div class="order-form__group">
-            <div class="order-form__inner">
-              <input class="required" type="password" autocomplete="on" placeholder=" ">
-              <label>Пароль <span>*</span></label>
+          <div class="orderReg__inner">
+            <div class="orderReg__title">Способ оплаты</div>
+            <div class="orderReg__pay-wrapper pay">
+              <div class="orderReg__pay-group">
+                  <div class="order-form__img"><img src="./images/pay-1.png"></div>
+                <div class="orderReg__pay-info">
+                  <p>Банковская карта</p>
+                  <span>Безопасная оплата банковской картой через сервис ЮКасса.</span>
+                </div>
+              </div>
+              <a href="#" class="order-form__btn">Оплатить</a>
             </div>
-            <div class="order-form__error">Это поле обязательно для заполнения</div>
           </div>
-          <a href="#" class="order-form__btn" data-reg-1>Войти</a>
-         </form>
-         <a href="#">Забыли пароль?</a>
-         <p>Впервые на нашем сайте? Пожалуйста, <a href="#">зарегистрируйтесь.</a></p>
         </div>
         <div class="order__descr">
           <span>Ваш заказ</span>
@@ -94,7 +94,6 @@
             <div class="order__descr-inner"><span>Скидка 10% на сумму заказа:</span> <span>-3 091 ₽</span></div>
           </div>
           <div class="order__descr-total"><span>Итого к оплате:</span><span>27 819 <i>₽</i></span></div>
-          <p>Доступные способы доставки и оплаты можно будет выбрать при оформлении заказа</p>
         </div>
       </section>
     </div>
@@ -102,7 +101,8 @@
   <footer class="footer footer-order">
     <div class="container">
       <section class="footer__contacts">
-        <div class="footer__logo" style="background-image: url(./images/footer-logo.svg); width: 122.79px; height: 60px;">
+        <div class="footer__logo"
+          style="background-image: url(./images/footer-logo.svg); width: 122.79px; height: 60px;">
         </div>
         <a class="footer__tel" href="#">8 (800) 222-37-07</a>
         <div class="footer__copy">Copyright © 2009-2022 Кайрос</div>
@@ -143,8 +143,6 @@
       <div class="footer__bottom-descr">Вверх</div>
     </div>
   </footer>
-  <script src="./js/order-reg-1.js"></script>
-  <script src="./js/phoneinput.js"></script>
 </body>
 
 </html>

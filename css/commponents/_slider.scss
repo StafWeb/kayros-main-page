@@ -214,10 +214,10 @@
     &__zoom {
       &_active {
         .slider__zoom-inner {
-          padding-top: 15px;
+          padding-top: 0px;
         }
         .swiper-container {
-          width: 40vw;
+          width: 35vw;
         }
       }
     }

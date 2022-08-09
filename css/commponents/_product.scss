@@ -175,7 +175,7 @@
     }
     &__list {
       grid-template-columns: repeat(4, 1fr);
-      row-gap: 50px;
+      gap: 50px 17px;
     }
     &__item {
       opacity: 0;
@@ -400,11 +400,10 @@
         display: grid;
         grid-template-columns: repeat(3, 224px);
         margin: 0;
-        row-gap: 0px;
+        gap: 40px 16px;
       }
       &__item {
         opacity: 1;
-        margin-bottom: 40px;
       }
       &__image {
         width: 100%;
@@ -440,6 +439,7 @@
     .cards {
       &__list {
         grid-template-columns: repeat(2, 173px);
+        gap: 25px 14px;
         &-colors {
           display: none;
         }
@@ -453,7 +453,6 @@
       }
       &__item {
         width: 100%;
-        margin-bottom: 24px;
       }
       &__image {
         height: 261px;

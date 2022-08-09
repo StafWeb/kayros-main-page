@@ -2723,7 +2723,7 @@ input[type=search]::-webkit-search-results-decoration {
 }
 .product .cards__list {
   grid-template-columns: repeat(4, 1fr);
-  row-gap: 50px;
+  gap: 50px 17px;
 }
 .product .cards__item {
   opacity: 0;
@@ -2930,11 +2930,10 @@ input[type=search]::-webkit-search-results-decoration {
     display: grid;
     grid-template-columns: repeat(3, 224px);
     margin: 0;
-    row-gap: 0px;
+    gap: 40px 16px;
   }
   .product .cards__item {
     opacity: 1;
-    margin-bottom: 40px;
   }
   .product .cards__image {
     width: 100%;
@@ -2967,6 +2966,7 @@ input[type=search]::-webkit-search-results-decoration {
   }
   .product .cards__list {
     grid-template-columns: repeat(2, 173px);
+    gap: 25px 14px;
   }
   .product .cards__list-colors {
     display: none;
@@ -2980,7 +2980,6 @@ input[type=search]::-webkit-search-results-decoration {
   }
   .product .cards__item {
     width: 100%;
-    margin-bottom: 24px;
   }
   .product .cards__image {
     height: 261px;

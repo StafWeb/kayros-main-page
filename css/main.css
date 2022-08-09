@@ -2930,11 +2930,11 @@ input[type=search]::-webkit-search-results-decoration {
     display: grid;
     grid-template-columns: repeat(3, 224px);
     margin: 0;
-    row-gap: 40px;
+    row-gap: 0px;
   }
   .product .cards__item {
     opacity: 1;
-    min-height: 100%;
+    margin-bottom: 40px;
   }
   .product .cards__image {
     width: 100%;
@@ -2967,7 +2967,6 @@ input[type=search]::-webkit-search-results-decoration {
   }
   .product .cards__list {
     grid-template-columns: repeat(2, 173px);
-    row-gap: 26px;
   }
   .product .cards__list-colors {
     display: none;
@@ -2981,6 +2980,7 @@ input[type=search]::-webkit-search-results-decoration {
   }
   .product .cards__item {
     width: 100%;
+    margin-bottom: 24px;
   }
   .product .cards__image {
     height: 261px;

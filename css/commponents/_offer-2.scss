@@ -12,6 +12,7 @@
   }
   .cards {
     margin: 0;
+    overflow: hidden;
     &::-webkit-scrollbar {
       height: 0px !important;
       width: 0px !important;

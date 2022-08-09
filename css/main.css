@@ -3973,6 +3973,7 @@ input[type=search]::-webkit-search-results-decoration {
 }
 .offer-2 .cards {
   margin: 0;
+  overflow: hidden;
 }
 .offer-2 .cards::-webkit-scrollbar {
   height: 0px !important;

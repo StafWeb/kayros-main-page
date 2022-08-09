@@ -142,14 +142,28 @@
               </button>
             </form>
             <div class="header__user">
-              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path class="user-logo" fill-rule="evenodd" clip-rule="evenodd"
-                  d="M18 20H20C20 15.5817 15.5228 12 10 12C4.47715 12 0 15.5817 0 20H2C2 17.0797 5.14219 14 10 14C14.8578 14 18 17.0797 18 20Z"
-                  fill="white" />
-                <circle class="user-logo-cir" cx="10" cy="5" r="4" stroke="white" stroke-width="2" />
-              </svg>
+              <a href="#">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path class="user-logo" fill-rule="evenodd" clip-rule="evenodd"
+                    d="M18 20H20C20 15.5817 15.5228 12 10 12C4.47715 12 0 15.5817 0 20H2C2 17.0797 5.14219 14 10 14C14.8578 14 18 17.0797 18 20Z"
+                    fill="white" />
+                  <circle class="user-logo-cir" cx="10" cy="5" r="4" stroke="white" stroke-width="2" />
+                </svg>
+                <span>Войти</span>
+              </a>
+              <div class="header__user-hover">
+                <div class="header__user-wrapper">
+                  <div class="header__user-list">
+                    <a href="#">Настройки</a>
+                    <a href="#">История заказов</a>
+                    <a href="#">Промоакции</a>
+                    <a href="#">Удобная доставка</a>
+                  </div>
+                  <a href="#">Выход</a>
+                </div>
+              </div>
             </div>
-            <div class="header__cart">
+            <a href="./cart.html" class="header__cart">
               <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path class="cart-logo"
                   d="M2 6H18C18.5523 6 19 6.44772 19 7V19C19 19.5523 18.5523 20 18 20H2C1.44772 20 1 19.5523 1 19V7C1 6.44772 1.44772 6 2 6Z"
@@ -158,7 +172,7 @@
                   stroke="white" stroke-width="2" />
               </svg>
               <span>0</span>
-            </div>
+            </a>
             <button class="header__burger" data-burger aria-label="Открыть меню" aria-expanded="false">
               <span class="header__burger-line"></span>
             </button>

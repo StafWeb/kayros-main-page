@@ -282,6 +282,7 @@
       height: 100%;
       border: 1px solid rgba(51, 51, 51, 0.2);
       border-radius: 4px;
+      cursor: default;
       & > input {
         position: absolute;
         width: 100%;
@@ -293,6 +294,7 @@
         letter-spacing: 0.05em;
         text-transform: uppercase;
         color: #333333;
+        cursor: default;
       }
     }
     & > button {
@@ -357,6 +359,7 @@
     border: 1px solid rgba(51, 51, 51, 0.2);
     border-radius: 4px;
     margin-right: 12px;
+    cursor: default;
     & > input {
       position: absolute;
       content: "";
@@ -367,15 +370,19 @@
       font-weight: 400;
       font-size: 16px;
       line-height: 160%;
-      padding: 0px 15px;
+      padding: 0px 20px;
       color: #333333;
+      cursor: default;
       &::placeholder {
         color: #333333;
         opacity: 1;
         transition: all .3s ease;
       }
-      &:hover::placeholder{
-        transform: translateX(30%);
+      &:focus::placeholder{
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 20px;
         opacity: 0.5;
         font-size: 11px;
         transition: all .3s ease;

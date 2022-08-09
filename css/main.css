@@ -227,6 +227,7 @@ input[type=search]::-webkit-search-results-decoration {
 .header__list {
   display: flex;
   gap: 35px;
+  height: 91px;
 }
 .header__item {
   display: flex;
@@ -275,6 +276,7 @@ input[type=search]::-webkit-search-results-decoration {
 .header__end {
   display: flex;
   align-items: center;
+  height: 100%;
 }
 .header__form {
   position: relative;
@@ -316,8 +318,8 @@ input[type=search]::-webkit-search-results-decoration {
   -webkit-animation-delay: 170ms;
           animation-delay: 170ms;
   padding: 0px 7px;
-  margin-top: 40px;
-  padding-bottom: 40px;
+  margin-top: 35px;
+  padding-bottom: 35px;
   position: relative;
 }
 .header__user > a {
@@ -853,6 +855,11 @@ input[type=search]::-webkit-search-results-decoration {
   .header {
     height: 446px;
   }
+  .header__user {
+    margin-top: 0;
+    padding-bottom: 0;
+    height: 40px;
+  }
   .container,
 .burger-menu__container {
     padding: 0px 20px;
@@ -1218,7 +1225,7 @@ input[type=search]::-webkit-search-results-decoration {
   }
 }
 .burger__list_active {
-  max-height: 100vh;
+  max-height: 1000px;
   transition: all 0.7s ease;
 }
 
@@ -2704,22 +2711,20 @@ input[type=search]::-webkit-search-results-decoration {
   background-color: #e7e7e7;
   border-radius: 4px;
   transition: all 0.3s ease;
-}
-.product .cards__breadcrumbs-btn > span:first-child {
-  display: flex;
   font-weight: 400;
   font-size: 15px;
   line-height: 140%;
   color: #333333;
-  margin-right: 12px;
+  cursor: pointer;
 }
-.product .cards__breadcrumbs-btn > span:last-child {
+.product .cards__breadcrumbs-btn > span {
   width: 10px;
   height: 10px;
   background-image: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M5 4.28568L0.714358 0L7.77904e-05 0.714285L4.28572 4.99996L0 9.28571L0.71428 10L5 5.71425L9.28572 9.99999L10 9.28571L5.71428 4.99996L9.99992 0.714291L9.28564 5.90056e-06L5 4.28568Z' fill='%23333333'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  margin-left: 12px;
 }
 .product .cards__list {
   grid-template-columns: repeat(4, 1fr);
@@ -3608,6 +3613,7 @@ input[type=search]::-webkit-search-results-decoration {
   text-align: right;
   color: #333333;
   border-bottom: 1px solid rgba(176, 151, 110, 0.5);
+  transition: all 0.3s ease;
 }
 .cards-info .cards-info__descr p {
   font-style: normal;
@@ -3740,6 +3746,10 @@ input[type=search]::-webkit-search-results-decoration {
     background-color: #927d54;
     border-color: #927d54;
     transition: all 300ms ease;
+  }
+  .table-size-btn span:hover {
+    border-color: transparent;
+    transition: all 0.3s ease;
   }
 }
 .card-product {
@@ -4685,6 +4695,7 @@ input[type=search]::-webkit-search-results-decoration {
   height: 100%;
   border: 1px solid rgba(51, 51, 51, 0.2);
   border-radius: 4px;
+  cursor: default;
 }
 .order-card__count > label > input {
   position: absolute;
@@ -4697,6 +4708,7 @@ input[type=search]::-webkit-search-results-decoration {
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: #333333;
+  cursor: default;
 }
 .order-card__count > button {
   display: flex;
@@ -4758,6 +4770,7 @@ input[type=search]::-webkit-search-results-decoration {
   border: 1px solid rgba(51, 51, 51, 0.2);
   border-radius: 4px;
   margin-right: 12px;
+  cursor: default;
 }
 .promo-disc > label > input {
   position: absolute;
@@ -4769,8 +4782,9 @@ input[type=search]::-webkit-search-results-decoration {
   font-weight: 400;
   font-size: 16px;
   line-height: 160%;
-  padding: 0px 15px;
+  padding: 0px 20px;
   color: #333333;
+  cursor: default;
 }
 .promo-disc > label > input::-moz-placeholder {
   color: #333333;
@@ -4789,22 +4803,31 @@ input[type=search]::-webkit-search-results-decoration {
   opacity: 1;
   transition: all 0.3s ease;
 }
-.promo-disc > label > input:hover::-moz-placeholder {
-  transform: translateX(30%);
+.promo-disc > label > input:focus::-moz-placeholder {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 20px;
   opacity: 0.5;
   font-size: 11px;
   -moz-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-.promo-disc > label > input:hover:-ms-input-placeholder {
-  transform: translateX(30%);
+.promo-disc > label > input:focus:-ms-input-placeholder {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 20px;
   opacity: 0.5;
   font-size: 11px;
   -ms-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-.promo-disc > label > input:hover::placeholder {
-  transform: translateX(30%);
+.promo-disc > label > input:focus::placeholder {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 20px;
   opacity: 0.5;
   font-size: 11px;
   transition: all 0.3s ease;
@@ -5174,6 +5197,7 @@ input[type=search]::-webkit-search-results-decoration {
   color: #333333;
   padding: 31px 0px 12px 20px;
   transition: background-color 0.3s ease;
+  cursor: default;
 }
 .order-form__inner input::-moz-placeholder {
   color: transparent;
@@ -5184,13 +5208,13 @@ input[type=search]::-webkit-search-results-decoration {
 .order-form__inner input::placeholder {
   color: transparent;
 }
-.order-form__inner input:hover::-moz-placeholder {
+.order-form__inner input:focus::-moz-placeholder {
   color: rgba(51, 51, 51, 0.5);
 }
-.order-form__inner input:hover:-ms-input-placeholder {
+.order-form__inner input:focus:-ms-input-placeholder {
   color: rgba(51, 51, 51, 0.5);
 }
-.order-form__inner input:hover::placeholder {
+.order-form__inner input:focus::placeholder {
   color: rgba(51, 51, 51, 0.5);
 }
 .order-form__inner input:not(:-moz-placeholder-shown) ~ label {
@@ -5209,7 +5233,7 @@ input[type=search]::-webkit-search-results-decoration {
   -ms-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-.order-form__inner input:hover ~ label, .order-form__inner input:focus ~ label, .order-form__inner input:not(:placeholder-shown) ~ label {
+.order-form__inner input:focus ~ label, .order-form__inner input:not(:placeholder-shown) ~ label {
   top: 10px;
   font-size: 12px;
   line-height: 120%;
@@ -5240,6 +5264,7 @@ input[type=search]::-webkit-search-results-decoration {
   line-height: 120%;
   color: #333333;
   transition: all 0.3s ease;
+  cursor: default;
 }
 .order-form__inner label > span {
   color: rgb(176, 151, 110);
@@ -5523,7 +5548,7 @@ input[type=search]::-webkit-search-results-decoration {
   margin-bottom: 30px;
 }
 .orderReg__inner .order-form {
-  margin-left: 62px;
+  margin-left: 65px;
 }
 .orderReg__inner .order-form__btn {
   margin-bottom: 40px;
@@ -5535,7 +5560,7 @@ input[type=search]::-webkit-search-results-decoration {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-left: 62px;
+  margin-left: 65px;
 }
 .orderReg__pay-group {
   display: flex;
@@ -5606,7 +5631,7 @@ input[type=search]::-webkit-search-results-decoration {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-left: 62px;
+  margin-left: 65px;
 }
 .form-data__wrapper {
   display: flex;
@@ -5691,9 +5716,10 @@ input[type=search]::-webkit-search-results-decoration {
   font-size: 16px;
   line-height: 120%;
   padding: 20px;
-  padding-top: 22px;
+  padding-top: 25px;
   color: #333333;
   outline: none;
+  cursor: default;
 }
 .groupNote .order-form__inner > textarea:focus {
   outline: none;
@@ -5714,7 +5740,7 @@ input[type=search]::-webkit-search-results-decoration {
   -ms-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-.groupNote .order-form__inner > textarea:hover ~ label, .groupNote .order-form__inner > textarea:focus ~ label, .groupNote .order-form__inner > textarea:not(:placeholder-shown) ~ label {
+.groupNote .order-form__inner > textarea:focus ~ label, .groupNote .order-form__inner > textarea:not(:placeholder-shown) ~ label {
   top: 8px;
   font-size: 12px;
   line-height: 120%;

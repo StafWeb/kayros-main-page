@@ -195,7 +195,7 @@ filterClose.addEventListener('click', function () {
 let cardsBreadcumbsBtn = document.querySelectorAll(".cards__breadcrumbs-btn");
 cardsBreadcumbsBtn.forEach(el => {
   el.addEventListener('click', () => {
-    el.parentNode.remove();
+    el.remove();
   });
 });
 

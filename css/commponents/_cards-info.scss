@@ -76,12 +76,81 @@
           text-align: right;
           color: #333333;
           border-bottom: 1px solid rgba(176, 151, 110, 0.5);
-          transition: all .3s ease;
+          transition: all 0.3s ease;
         }
+      }
+      span {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 120%;
+        color: rgba(119, 119, 119, 0.7);
+      }
+    }
+    &-list {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+      margin-top: 20px;
+      margin-bottom: 25px;
+    }
+    &-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      height: 40px;
+      span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 55px;
+        height: 100%;
+        background: #e7e7e7;
+        border-radius: 4px;
+        margin-right: 10px;
+      }
+      .order-card__count {
+        margin: 0;
+        & > label {
+          width: 60px;
+        }
+      }
+      & > button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 151px;
+        height: 40px;
+        background: #ffffff;
+        border: 1px solid #b0976e;
+        border-radius: 4px;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 160%;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: #b0976e;
+        margin-left: 12px;
+        transition: all 0.3s ease;
+      }
+      .added {
+        background: #b0976e;
+        border: 1px solid #b0976e;
+        color: #ffffff;
       }
     }
   }
-
+  .size-opt {
+    justify-content: flex-start;
+    & > span:first-child {
+      margin-right: 73px;
+    }
+    .table-size-btn {
+      margin-left: auto;
+      justify-content: flex-end;
+    }
+  }
   .cards-info__descr {
     p {
       font-style: normal;
@@ -174,10 +243,10 @@
       }
     }
     &__descr {
-      p{
+      p {
         font-size: 15px;
       }
-      p:nth-child(3){
+      p:nth-child(3) {
         margin-bottom: 30px;
       }
     }
@@ -188,7 +257,7 @@
         line-height: 120%;
         letter-spacing: 0.03em;
       }
-      &:not(:last-child){
+      &:not(:last-child) {
         margin-bottom: 30px;
       }
     }
@@ -220,8 +289,16 @@
       transition: all 300ms ease;
     }
   }
-  .table-size-btn span:hover{
+  .table-size-btn span:hover {
     border-color: transparent;
-    transition: all .3s ease;
+    transition: all 0.3s ease;
+  }
+  .cards-info {
+    &__sizes-item > button:hover {
+      background: #b0976e;
+      border: 1px solid #b0976e;
+      color: #ffffff;
+      transition: all 0.3s ease;
+    }
   }
 }

@@ -5328,7 +5328,7 @@ input[type=search]::-webkit-search-results-decoration {
     margin-bottom: 1px;
   }
   .order-card-opt .order-card__product {
-    order: -2;
+    order: -1;
     grid-column: span 2;
     margin: 0;
     align-self: start;

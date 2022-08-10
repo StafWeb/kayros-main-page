@@ -5323,8 +5323,9 @@ input[type=search]::-webkit-search-results-decoration {
   .order-card-opt {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
-    gap: 27px 0px;
+    gap: 27px 1px;
     height: 100%;
+    margin-bottom: 1px;
   }
   .order-card-opt .order-card__product {
     order: -2;

@@ -285,9 +285,13 @@
 }
 .stop-scroll {
   overflow: hidden;
-  position: fixed;
-  height: 100%;
-  width: 100%;
+}
+@media(max-width:1000px){
+  .stop-scroll{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+  }
 }
 
  

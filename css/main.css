@@ -2554,11 +2554,15 @@ input[type=search]::-webkit-search-results-decoration {
 }
 .stop-scroll {
   overflow: hidden;
-  position: fixed;
-  height: 100%;
-  width: 100%;
 }
 
+@media (max-width: 1000px) {
+  .stop-scroll {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+  }
+}
 .product {
   display: flex;
   flex-wrap: nowrap;
@@ -4324,7 +4328,7 @@ input[type=search]::-webkit-search-results-decoration {
   height: 3px;
 }
 .table-modal table .simplebar-scrollbar:before {
-  background: #D9D9D9;
+  background: #d9d9d9;
   border-radius: 0px;
 }
 .table-modal tbody {
@@ -4401,6 +4405,8 @@ input[type=search]::-webkit-search-results-decoration {
     min-width: 100%;
     height: 100%;
     padding: 0 15px;
+    overflow-x: hidden;
+    overflow-y: auto;
   }
   .card-modal__container > p {
     display: block;
@@ -4416,10 +4422,10 @@ input[type=search]::-webkit-search-results-decoration {
     margin-bottom: 25px;
   }
   .card-modal__header::after {
-    position: fixed;
+    position: absolute;
     content: "";
     top: 60px;
-    left: 0;
+    left: -15px;
     width: 100vw;
     height: 1px;
     background-color: rgba(51, 51, 51, 0.1);
@@ -4482,6 +4488,8 @@ input[type=search]::-webkit-search-results-decoration {
     min-width: 100%;
     height: 100%;
     padding: 0 15px;
+    overflow-x: hidden;
+    overflow-y: auto;
   }
   .table-modal__container > p {
     display: block;
@@ -5202,7 +5210,6 @@ input[type=search]::-webkit-search-results-decoration {
   display: flex;
   justify-content: flex-start;
   margin-bottom: 15px;
-  max-width: 803px;
 }
 .order-opt__titles > span {
   font-weight: 400;
@@ -5218,8 +5225,8 @@ input[type=search]::-webkit-search-results-decoration {
   margin-right: 110px;
 }
 .order-opt__titles > span:last-child {
-  margin-left: 112px;
-  margin-right: 108px;
+  margin-left: 108px;
+  margin-right: 115px;
 }
 .order-opt .offer__button {
   margin-top: 47px;
@@ -5228,9 +5235,17 @@ input[type=search]::-webkit-search-results-decoration {
   margin: 0;
   margin-top: 30px;
 }
+.order-opt .order__descr {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 40px;
+  max-width: 387px;
+  max-height: 365px;
+  padding: 30px;
+  padding-bottom: 40px;
+}
 
 .order-card-opt {
-  max-width: 800px;
   height: 95px;
   margin: 0;
   border-bottom: 1px solid rgba(51, 51, 51, 0.1);
@@ -5293,9 +5308,21 @@ input[type=search]::-webkit-search-results-decoration {
 }
 
 @media (max-width: 1150px) {
+  .order-opt__titles {
+    display: none;
+  }
+  .order-opt .offer__button {
+    display: flex;
+    margin-top: 25px;
+  }
+  .order-opt .count-page {
+    margin-top: 15px;
+    gap: 15px;
+    margin-bottom: 30px;
+  }
   .order-card-opt {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 2fr 1fr;
     gap: 27px 0px;
     height: 100%;
   }
@@ -5303,18 +5330,26 @@ input[type=search]::-webkit-search-results-decoration {
     order: -2;
     grid-column: span 2;
     margin: 0;
+    align-self: start;
+    margin-top: 25px;
   }
   .order-card-opt .order-card__btn {
     order: -1;
     margin: 0;
     justify-self: end;
+    align-self: start;
+    margin-top: 25px;
   }
   .order-card-opt .order-card__price {
     margin: 0;
+    height: 40px;
+    justify-content: center;
+    align-self: end;
+    margin-bottom: 25px;
   }
   .order-card-opt .order-card__price:nth-child(4) {
-    margin: 0;
     justify-self: end;
+    margin-left: 0;
   }
   .order-card-opt .order-card__price:nth-child(2) {
     justify-self: start;
@@ -5322,6 +5357,22 @@ input[type=search]::-webkit-search-results-decoration {
   .order-card-opt .order-card__count {
     margin: 0;
     justify-self: center;
+    align-self: end;
+    margin-bottom: 25px;
+  }
+}
+@media (max-width: 1000px) {
+  .order-card-opt:first-child {
+    border-top: none;
+  }
+  .order-opt {
+    margin-bottom: 50px;
+  }
+}
+@media (max-width: 800px) {
+  .order-opt .order__descr {
+    position: relative;
+    top: 0;
   }
 }
 .order-reg {

@@ -705,7 +705,6 @@
     display: flex;
     justify-content: flex-start;
     margin-bottom: 15px;
-    max-width: 803px;
     & > span {
       font-weight: 400;
       font-size: 12px;
@@ -719,8 +718,8 @@
         margin-right: 110px;
       }
       &:last-child {
-        margin-left: 112px;
-        margin-right: 108px;
+        margin-left: 108px;
+        margin-right: 115px;    
       }
     }
   }
@@ -731,9 +730,16 @@
     margin: 0;
     margin-top: 30px;
   }
+  .order__descr {
+    position: sticky;
+    top: 40px;
+    max-width: 387px;
+    max-height: 365px;
+    padding: 30px;
+    padding-bottom: 40px;
+  }
 }
 .order-card-opt {
-  max-width: 800px;
   height: 95px;
   margin: 0;
   border-bottom: 1px solid rgba(51, 51, 51, 0.1);
@@ -800,36 +806,79 @@
 }
 
 @media (max-width: 1150px) {
+  .order-opt {
+    &__titles {
+      display: none;
+    }
+    .offer__button {
+      display: flex;
+      margin-top: 25px;
+    }
+    .count-page {
+      margin-top: 15px;
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+  }
   .order-card-opt {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 2fr 1fr;
     gap: 27px 0px;
     height: 100%;
-    .order-card{
-      &__product{
+    .order-card {
+      &__product {
         order: -2;
         grid-column: span 2;
         margin: 0;
+        align-self: start;
+        margin-top: 25px;
       }
-      &__btn{
+      &__btn {
         order: -1;
         margin: 0;
         justify-self: end;
+        align-self: start;
+        margin-top: 25px;
       }
-      &__price{
+      &__price {
         margin: 0;
-        &:nth-child(4){
-          margin: 0;
+        height: 40px;
+        justify-content: center;
+        align-self: end;
+        margin-bottom: 25px;
+        &:nth-child(4) {
           justify-self: end;
+          margin-left: 0;
         }
-        &:nth-child(2){
+        &:nth-child(2) {
           justify-self: start;
         }
       }
-      &__count{
+      &__count {
         margin: 0;
         justify-self: center;
+        align-self: end;
+        margin-bottom: 25px;
       }
+    }
+  }
+}
+@media (max-width: 1000px) {
+  .order-card-opt {
+    &:first-child {
+      border-top: none;
+    }
+  }
+  .order-opt {
+    margin-bottom: 50px;
+  }
+}
+
+@media(max-width:800px){
+  .order-opt {
+    .order__descr {
+      position: relative;
+      top: 0;
     }
   }
 }

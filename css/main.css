@@ -4756,6 +4756,10 @@ input[type=search]::-webkit-search-results-decoration {
 .order-card__wrapper {
   display: flex;
 }
+.order-card__wrapper-opt {
+  display: flex;
+  align-items: center;
+}
 .order-card__inner {
   display: flex;
   flex-direction: column;
@@ -5091,75 +5095,6 @@ input[type=search]::-webkit-search-results-decoration {
   .promo-disc__btn > span {
     display: none;
   }
-  .modal-cart__container {
-    width: 100%;
-    height: 100%;
-    padding: 0 15px;
-  }
-  .modal-cart__container > p {
-    text-align: center;
-  }
-  .modal-cart__container > .modal-cart__close {
-    display: none;
-  }
-  .modal-cart__header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    height: 60px;
-    position: relative;
-    margin-bottom: 25px;
-  }
-  .modal-cart__header::after {
-    position: fixed;
-    content: "";
-    top: 60px;
-    left: 0;
-    width: 100vw;
-    height: 1px;
-    background-color: rgba(51, 51, 51, 0.1);
-  }
-  .modal-cart__logo {
-    display: flex;
-    width: 74px;
-    height: 36px;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-  .modal-cart__close {
-    position: relative;
-    display: flex;
-    top: 0;
-    right: 0;
-    width: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .modal-cart__close > span:first-child {
-    display: flex;
-    margin-right: 13px;
-    font-weight: 400;
-    font-size: 11px;
-    line-height: 140%;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    color: rgba(0, 0, 0, 0.7);
-  }
-  .modal-cart__close > span:last-child {
-    display: flex;
-    width: 14px;
-    height: 14px;
-    background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='1.39996' y='3.05176e-05' width='17.8191' height='1.9799' transform='rotate(45 1.39996 3.05176e-05)' fill='%23333333'/%3E%3Crect x='0.00012207' y='12.6' width='17.8191' height='1.9799' transform='rotate(-45 0.00012207 12.6)' fill='%23333333'/%3E%3C/svg%3E%0A");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-  }
-  .modal-cart__btn {
-    max-width: 320px;
-    margin: 0 auto;
-  }
 }
 @media (max-width: 800px) {
   .cart > .container {
@@ -5279,6 +5214,9 @@ input[type=search]::-webkit-search-results-decoration {
   margin: 0;
   margin-right: auto;
 }
+.order-card-opt .order-card__product > .order-card__btn {
+  display: none;
+}
 .order-card-opt .order-card__inner {
   margin: 0;
   height: 100%;
@@ -5295,7 +5233,7 @@ input[type=search]::-webkit-search-results-decoration {
 .order-card-opt .order-card__price {
   margin: 0;
 }
-.order-card-opt .order-card__price:nth-child(4) {
+.order-card-opt .order-card__price:last-child {
   margin-left: 50px;
 }
 .order-card-opt .order-card__btn {
@@ -5321,45 +5259,42 @@ input[type=search]::-webkit-search-results-decoration {
     margin-bottom: 30px;
   }
   .order-card-opt {
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    gap: 27px 1px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 25px;
     height: 100%;
-    margin-bottom: 1px;
   }
   .order-card-opt .order-card__product {
-    order: -1;
-    grid-column: span 2;
     margin: 0;
-    align-self: start;
     margin-top: 25px;
+    align-items: flex-start;
+  }
+  .order-card-opt .order-card__product .order-card__btn {
+    display: flex;
+    margin: 0;
+    margin-left: auto;
   }
   .order-card-opt .order-card__btn {
-    order: -1;
-    margin: 0;
-    justify-self: end;
-    align-self: start;
-    margin-top: 25px;
+    display: none;
   }
   .order-card-opt .order-card__price {
-    display: grid;
-    align-items: center;
     margin: 0;
     height: 40px;
-    align-self: end;
-    margin-bottom: 25px;
+    flex-direction: row;
+    align-items: center;
   }
-  .order-card-opt .order-card__price:nth-child(4) {
-    justify-self: end;
-    margin-left: 0;
+  .order-card-opt .order-card__price:first-child {
+    margin: 0;
   }
-  .order-card-opt .order-card__price:nth-child(2) {
-    justify-self: start;
+  .order-card-opt .order-card__price:last-child {
+    margin: 0;
   }
   .order-card-opt .order-card__count {
     margin: 0;
-    justify-self: center;
-    align-self: end;
+  }
+  .order-card-opt .order-card__wrapper-opt {
+    justify-content: space-between;
     margin-bottom: 25px;
   }
 }
@@ -5369,6 +5304,75 @@ input[type=search]::-webkit-search-results-decoration {
   }
   .order-opt {
     margin-bottom: 50px;
+  }
+  .modal-cart__container {
+    width: 100%;
+    height: 100%;
+    padding: 0 15px;
+  }
+  .modal-cart__container > p {
+    text-align: center;
+  }
+  .modal-cart__container > .modal-cart__close {
+    display: none;
+  }
+  .modal-cart__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 60px;
+    position: relative;
+    margin-bottom: 25px;
+  }
+  .modal-cart__header::after {
+    position: fixed;
+    content: "";
+    top: 60px;
+    left: 0;
+    width: 100vw;
+    height: 1px;
+    background-color: rgba(51, 51, 51, 0.1);
+  }
+  .modal-cart__logo {
+    display: flex;
+    width: 74px;
+    height: 36px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .modal-cart__close {
+    position: relative;
+    display: flex;
+    top: 0;
+    right: 0;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .modal-cart__close > span:first-child {
+    display: flex;
+    margin-right: 13px;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 140%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.7);
+  }
+  .modal-cart__close > span:last-child {
+    display: flex;
+    width: 14px;
+    height: 14px;
+    background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='1.39996' y='3.05176e-05' width='17.8191' height='1.9799' transform='rotate(45 1.39996 3.05176e-05)' fill='%23333333'/%3E%3Crect x='0.00012207' y='12.6' width='17.8191' height='1.9799' transform='rotate(-45 0.00012207 12.6)' fill='%23333333'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  .modal-cart__btn {
+    max-width: 320px;
+    margin: 0 auto;
   }
 }
 @media (max-width: 800px) {

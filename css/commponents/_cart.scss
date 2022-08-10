@@ -842,9 +842,10 @@
         margin-top: 25px;
       }
       &__price {
+        display: grid;
+        align-items: center;
         margin: 0;
         height: 40px;
-        justify-content: center;
         align-self: end;
         margin-bottom: 25px;
         &:nth-child(4) {

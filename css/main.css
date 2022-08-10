@@ -5909,15 +5909,17 @@ input[type=search]::-webkit-search-results-decoration {
 }
 .form-data__row {
   display: flex;
+}
+.form-data__row > span {
   font-size: 16px;
   line-height: 140%;
   color: #333333;
 }
-.form-data__row span:first-child {
+.form-data__row > span:first-child {
   text-transform: uppercase;
   font-weight: 700;
 }
-.form-data__row span:last-child {
+.form-data__row > span:last-child {
   font-weight: 400;
 }
 .form-data__row .fullName {
@@ -5925,7 +5927,7 @@ input[type=search]::-webkit-search-results-decoration {
 }
 .form-data__row .dataTel {
   margin-left: 20px;
-  color: #333333;
+  color: #333333 !important;
 }
 .form-data__row .dataEmail {
   margin-left: 48px;

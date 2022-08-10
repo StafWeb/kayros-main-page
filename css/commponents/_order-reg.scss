@@ -494,22 +494,24 @@
   }
   &__row {
     display: flex;
-    font-size: 16px;
-    line-height: 140%;
-    color: #333333;
-    span:first-child {
-      text-transform: uppercase;
-      font-weight: 700;
-    }
-    span:last-child {
-      font-weight: 400;
+    & > span {
+      font-size: 16px;
+      line-height: 140%;
+      color: #333333;
+      &:first-child {
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+      &:last-child {
+        font-weight: 400;
+      }
     }
     .fullName {
       margin-left: 58px;
     }
     .dataTel {
       margin-left: 20px;
-      color: #333333;
+      color: #333333 !important;
     }
     .dataEmail {
       margin-left: 48px;

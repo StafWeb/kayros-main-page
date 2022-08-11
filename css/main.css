@@ -5927,7 +5927,12 @@ input[type=search]::-webkit-search-results-decoration {
 }
 .form-data__row .dataTel {
   margin-left: 20px;
-  color: #333333 !important;
+  color: #333333;
+  text-decoration: none;
+}
+.form-data__row .dataTel a {
+  color: #333333;
+  text-decoration: none;
 }
 .form-data__row .dataEmail {
   margin-left: 48px;

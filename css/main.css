@@ -6044,6 +6044,33 @@ input[type=search]::-webkit-search-results-decoration {
   margin-bottom: 40px;
 }
 
+.order__descr-opt {
+  padding: 30px;
+  padding-bottom: 40px;
+}
+.order__descr-opt .order__descr-total {
+  margin-bottom: 0;
+}
+
+.orderReg-final-opt .order__descr-wrapper {
+  margin-bottom: 0;
+}
+.orderReg-final-opt .order__descr-wrapper::after {
+  display: none;
+}
+.orderReg-final-opt .order__descr-inner {
+  margin-bottom: 0;
+}
+.orderReg-final-opt .orderReg__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.orderReg-final-opt .orderReg__final {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
 @media (max-width: 1000px) {
   .order-reg {
     margin-top: 20px;
@@ -6142,6 +6169,10 @@ input[type=search]::-webkit-search-results-decoration {
   .change-delivery {
     margin-top: 0;
     margin-bottom: 20px;
+  }
+  .orderReg-final-opt {
+    gap: 25px;
+    margin-bottom: 50px;
   }
 }
 @media (min-width: 1000px) {

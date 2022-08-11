@@ -17,7 +17,6 @@
   }
   .order__descr {
     width: 387px;
-    flex-shrink: 0;
   }
 }
 .login {
@@ -642,6 +641,7 @@
     }
     .order__descr {
       width: 100%;
+      align-self: flex-start;
     }
   }
   .login {

@@ -43,9 +43,9 @@
     }
   }
   &__logo {
-    // position: absolute;
-    // top: 24px;
-    // left: 45.5%;
+    position: absolute;
+    top: 24px;
+    left: 48%;
     width: 92px;
     height: 45px;
     & > svg {
@@ -530,14 +530,6 @@
       }
     }
   }
-  .cart-header {
-    height: 62px;
-    &__logo {
-      width: 74px;
-      height: 36px;
-      top: 15px;
-    }
-  }
   .order-card {
     height: auto;
     flex-direction: column;
@@ -627,6 +619,14 @@
     width: 100%;
     & > label {
       width: 100%;
+    }
+  }
+  .cart-header {
+    height: 62px;
+    &__logo {
+      width: 74px;
+      height: 36px;
+      top: 15px;
     }
   }
 }

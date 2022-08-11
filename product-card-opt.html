@@ -377,50 +377,50 @@
                 <li class="cards-info__sizes-item">
                   <span>44</span>
                   <div class="order-card__count">
-                    <button><span></span></button>
-                    <label><input type="text" placeholder="0"></label>
-                    <button ><span></span></button>
+                    <button class="step-down"><span></span></button>
+                    <label><input type="text" value="0"></label>
+                    <button class="step-up"><span></span></button>
                   </div>
                   <button>в корзину</button>
                 </li>
                 <li class="cards-info__sizes-item">
                   <span>46</span>
                   <div class="order-card__count">
-                    <button><span></span></button>
-                    <label><input type="text" placeholder="0"></label>
-                    <button ><span></span></button>
+                    <button class="step-down"><span></span></button>
+                    <label><input type="text" value="0"></label>
+                    <button class="step-up"><span></span></button>
                   </div>
                   <button class="added">в корзине</button>
                 </li>
                 <li class="cards-info__sizes-item">
                   <span>48</span>
                   <div class="order-card__count">
-                    <button><span></span></button>
-                    <label><input type="text" placeholder="0"></label>
-                    <button ><span></span></button>
+                    <button class="step-down"><span></span></button>
+                    <label><input type="text" value="0"></label>
+                    <button class="step-up"><span></span></button>
                   </div>
                   <button class="added">в корзине</button>
                 </li>
                 <li class="cards-info__sizes-item">
                   <span>50</span>
                   <div class="order-card__count">
-                    <button><span></span></button>
-                    <label><input type="text" placeholder="0"></label>
-                    <button ><span></span></button>
+                    <button class="step-down"><span></span></button>
+                    <label><input type="text" value="0"></label>
+                    <button class="step-up"><span></span></button>
                   </div>
-                  <button >в корзине</button>
+                  <button>в корзине</button>
                 </li>
                 <li class="cards-info__sizes-item">
                   <span>52</span>
                   <div class="order-card__count">
-                    <button><span></span></button>
-                    <label><input type="text" placeholder="0"></label>
-                    <button ><span></span></button>
+                    <button class="step-down"><span></span></button>
+                    <label><input type="text" value="0"></label>
+                    <button class="step-up"><span></span></button>
                   </div>
                   <button>в корзине</button>
                 </li>
               </ul>
-            </div>  
+            </div>
           </div>
           <div class="cards-info__descr">
             <ul class="cards-info__list">
@@ -936,10 +936,10 @@
       </div>
     </div>
   </div>
-  <div class="card-modal">
-    <div class="card-modal__container">
-      <div class="card-modal__header">
-        <div class="card-modal__logo">
+  <div class="modal-cart" data-modal-limit>
+    <div class="modal-cart__container">
+      <div class="modal-cart__header">
+        <div class="modal-cart__logo">
           <svg width="92" height="45" viewBox="0 0 92 45" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M17.7662 1.90901C17.6967 1.49359 15.3629 0.811111 14.2209 1.74086C12.334 3.28386 0.635395 23.7384 -0.000183105 29.1587C0.0175275 29.8363 0.277237 30.4853 0.732293 30.9893C1.18735 31.4933 1.80793 31.8192 2.48255 31.9084C2.16476 27.586 15.1445 2.42334 17.7662 1.90901Z"
@@ -982,25 +982,11 @@
               fill="#B0976E" />
           </svg>
         </div>
-        <p>Товар добавлен в корзину</p>
-        <button class="card-modal__close"><span class="none">Закрыть</span> <span></span></button>
+        <button class="modal-cart__close" data-modal-close><span>Закрыть</span><span></span></button>
       </div>
-      <p>Товар добавлен в корзину</p>
-      <div class="card-modal__product">
-        <div class="card-modal__photo">
-          <img src="https://kayrosxl.ru/upload/iblock/e9d/dlad5cs5jt1d1162l3zxb3ft01er7wkr.jpg" alt="">
-        </div>
-        <div class="card-modal__descr">
-          <span>Платье 9/1</span>
-          <span>Размер: 46</span>
-          <span>Цвет: Зелёный</span>
-          <span>8 500 руб. <span>11 000 руб.</span></span>
-        </div>
-      </div>
-      <div class="card-modal__btns">
-        <a class="card-modal__btn" href="./product-categoty.html">Продолжить покупки</a>
-        <a class="card-modal__btn" href="./cart.html">Перейти в корзину</a>
-      </div>
+      <p>Извините, достигнут лимит. Это максимальное количество товара в наличии</p>
+      <button class="modal-cart__close" data-modal-close><span>Закрыть</span><span></span></button>
+      <button class="modal-cart__btn" data-modal-close>Удалить</button>
     </div>
   </div>
   <div class="table-modal">

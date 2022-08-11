@@ -1,5 +1,4 @@
 let delProductBtn = document.querySelectorAll(".order-card__btn");
-let limitProductBtn = document.querySelectorAll(".order-card__count > button:last-child");
 let modalClose = document.querySelectorAll("[data-modal-close]");
 let modalAll = document.querySelectorAll(".modal-cart");
 let modalDel = document.querySelector("[data-modal-delete]");
@@ -10,13 +9,6 @@ let body = document.body;
 delProductBtn.forEach(el => {
   el.addEventListener('click', () => {
     modalDel.classList.add("modal-cart_active")
-    body.classList.add('stop-scroll');
-    stop1.classList.add('stop-scroll');
-  })
-});
-limitProductBtn.forEach(el => {
-  el.addEventListener('click', () => {
-    modalLim.classList.add("modal-cart_active")
     body.classList.add('stop-scroll');
     stop1.classList.add('stop-scroll');
   })
@@ -46,3 +38,18 @@ footerBtn.forEach(function (btn) {
   });
 });
 
+let countProd = document.querySelectorAll(".order-card__count input");
+let butUp = document.querySelectorAll(".step-up");
+let butDown = document.querySelectorAll(".step-down");
+butUp.forEach(el => {
+  el.addEventListener('click', () => {
+    let a = el.previousElementSibling.firstElementChild.value;
+    a == 3 ? (modalLim.classList.add("modal-cart_active"), body.classList.add('stop-scroll'), stop1.classList.add('stop-scroll')) : el.previousElementSibling.firstElementChild.value++ ;
+  })
+});
+butDown.forEach(el => {
+  el.addEventListener('click', () => {
+    let a = el.nextElementSibling.firstElementChild.value;
+    a > 0 ? el.nextElementSibling.firstElementChild.value-- : (el.style.cursor = "default", console.log(el));
+  })
+});

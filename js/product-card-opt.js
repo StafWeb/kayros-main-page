@@ -60,12 +60,12 @@ let tableModal = document.querySelector(".table-modal");
 let tableContainer = document.querySelector(".table-modal__container");
 let tableBtn = document.querySelector(".table-size-btn");
 let cardModalClose = document.querySelectorAll(".card-modal__close");
-let modalClose = (modal) => { modal.classList.remove("card-modal_active"); body.classList.remove('stop-scroll'); stop1.classList.remove('stop-scroll'); };
-let modalOpen = (modal) => { modal.classList.add("card-modal_active"); body.classList.add('stop-scroll'); stop1.classList.add('stop-scroll'); };
-tableBtn.addEventListener('click', () => { modalOpen(tableModal); });
+let tableClose = (modal) => { modal.classList.remove("card-modal_active"); body.classList.remove('stop-scroll'); stop1.classList.remove('stop-scroll'); };
+let tableOpen = (modal) => { modal.classList.add("card-modal_active"); body.classList.add('stop-scroll'); stop1.classList.add('stop-scroll'); };
+tableBtn.addEventListener('click', () => { tableOpen(tableModal); });
 tableContainer.addEventListener('click', (evt) => { evt.stopPropagation(); });
-tableModal.addEventListener('click', () => { modalClose(tableModal); });
-cardModalClose.forEach(el => { el.addEventListener('click', () => { modalClose(tableModal); }) });
+tableModal.addEventListener('click', () => { tableClose(tableModal); });
+cardModalClose.forEach(el => { el.addEventListener('click', () => { tableClose(tableModal); }) });
 
 let burger = document?.querySelector('[data-burger]');
 let nav = document?.querySelector('[data-burger-menu]');
@@ -112,6 +112,46 @@ burgerBtn.forEach(function (btn) {
     this.nextElementSibling.classList.toggle("burger__list_active");
   })
 });
+
+let countProd = document.querySelectorAll(".order-card__count input");
+let butUp = document.querySelectorAll(".step-up");
+let butDown = document.querySelectorAll(".step-down");
+let modalClose = document.querySelectorAll("[data-modal-close]");
+let modalLim = document.querySelector("[data-modal-limit]");
+let modalContain = modalLim.querySelector(".modal-cart__container");
+butUp.forEach(el => {
+  el.addEventListener('click', () => {
+    let a = el.previousElementSibling.firstElementChild.value;
+    a == 3 ? (modalLim.classList.add("modal-cart_active"), body.classList.add('stop-scroll'), stop1.classList.add('stop-scroll')) : el.previousElementSibling.firstElementChild.value++;
+  })
+});
+butDown.forEach(el => {
+  el.addEventListener('click', () => {
+    let a = el.nextElementSibling.firstElementChild.value;
+    a >= 1 ? el.nextElementSibling.firstElementChild.value-- : el.style.cursor = "default";
+  });
+  el.addEventListener('mouseenter', () => {
+    let a = el.nextElementSibling.firstElementChild.value;
+    a == 0 ? el.style.cursor = "default" : el.style.cursor = "pointer";
+  })
+});
+// butDown.forEach(el => {
+//   el.addEventListener('mouseenter', () => {
+//     let a = el.nextElementSibling.firstElementChild.value;
+//     a == 0 ? el.style.cursor = "default" : el.style.cursor = "pointer";
+//   })
+// });
+modalContain.addEventListener('click', (evt) => { evt.stopPropagation(); });
+let modalRemove = () => { modalLim.classList.remove('modal-cart_active'); body.classList.remove('stop-scroll'); stop1.classList.remove('stop-scroll'); };
+modalLim.addEventListener('click', () => {
+  modalRemove();
+});
+modalClose.forEach(el => {
+  el.addEventListener('click', () => {
+    modalRemove();
+  })
+});
+
 
 document.querySelectorAll(".simpScroll").forEach(el => {
   new SimpleBar(el, { autoHide: false });

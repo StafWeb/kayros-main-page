@@ -229,7 +229,6 @@
     margin-left: 60px;
     cursor: pointer;
     z-index: 1;
-    animation-delay: 180ms;
     &-line {
       position: absolute;
       left: 11px;
@@ -239,7 +238,7 @@
       height: 2px;
       background-color: white;
       // transform: translateY(-50%);
-      transition: opacity 0.3s ease-in-out;
+      transition: 0.3s ease;
     }
     &::before,
     &::after {
@@ -250,6 +249,7 @@
       max-width: 18px;
       height: 2px;
       background-color: white;
+      transition: 0.3s ease;
       // transition: transform 0.3s ease-in-out, top 0.3s ease-in-out,
       //   bottom 0.3s ease-in-out;
     }
@@ -332,6 +332,7 @@
       letter-spacing: 0.05em;
       text-transform: uppercase;
       color: rgba(0, 0, 0, 0.7);
+      transition: .3s ease;
     }
     &-line {
       position: absolute;
@@ -518,6 +519,7 @@
     letter-spacing: 0.05em;
     color: #333333;
     margin-top: 27px;
+    transition: color 0.3s ease;
   }
 }
 .inner-btn {
@@ -1094,6 +1096,38 @@
     color: #b0976e;
     transition: all 0.3s ease;
   }
+  .header__burger{
+    &:hover {
+      .header__burger-line{
+        background-color: #b0976e !important;
+        transition: 0.3s ease;
+      }
+    }
+    &:hover::after,
+    &:hover::before{
+      background-color: #b0976e !important;
+      transition: 0.3s ease;
+    }
+  }
+  .burger_active{
+    &:hover::after,
+    &:hover::before{
+      background-color: #b0976e !important;
+      transition: 0.3s ease;
+    }
+    &:hover span{
+      color: #b0976e;
+      transition: 0.3s ease;
+    }
+  }
+  .burger-menu__tel:hover{
+    color: #b0976e;
+    transition: color 0.3s ease;
+  }
+  .burger-menu__tel:active{
+    color: #927d54;
+    transition: color 0.3s ease;
+  }
 }
 .burger__list_active {
   max-height: 1000px;
@@ -1166,7 +1200,6 @@
     border-color: transparent;
   }
 }
-
 @media (max-width: 750px) {
   .header-product {
     height: 61px;

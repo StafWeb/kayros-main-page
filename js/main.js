@@ -97,7 +97,7 @@ if (window.innerWidth > 1000) {
   });
   swiperAnim.from(".gallery__text-title", { opacity: 0, y: 30, duration: 0.6 })
     .from(".gallery__text-descr", { opacity: 0, y: 30, duration: 0.6 }, "-=0.5")
-    .fromTo(".gallery__card", { opacity: 0, scale: 1.1 }, { opacity: 1, scale: 1, stagger: 0.1 }, "-=0.5");
+    .fromTo(".gallery-slide", { opacity: 0, scale: 1.1 }, { opacity: 1, scale: 1, stagger: 0.1 }, "-=0.5");
 
   let colletctionTl = gsap.timeline({
     ease: "none",

@@ -75,6 +75,10 @@
       height: 10px;
       // animation: rotate-list-img-rev 0.3s ease both;
       transition: all .3s ease;
+      & > svg{
+        transform: rotate(0);
+        transition: all .3s ease;
+      }
     }
     &-link {
       font-family: "Open Sans";
@@ -1056,9 +1060,9 @@
     transition: all 0.7s cubic-bezier(0.8, 0, 0.8, 1);
     transition-delay: 0.5s;
   }
-  .header__item:first-child:hover .header__item-img {
+  .header__item:first-child:hover .header__item-img > svg {
     // animation: rotate-list-img 0.3s ease both;
-    transform: rotate(190deg);
+    transform: rotate(90deg);
     transition: all .3s ease;
   }
   .header__item:first-child:hover {

@@ -10,6 +10,9 @@ let sliderThumbs = new Swiper('.slider__thumbs .swiper-container', {
 });
 let sliderImages = new Swiper('.slider__zoom .swiper-container', {
   slidesPerView: 1,
+  keyboard: {
+    enabled: true,
+  },
   thumbs: {
     swiper: sliderThumbs
   },

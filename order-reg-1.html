@@ -67,25 +67,25 @@
       <h2>Пожалуйста, войдите на сайт или создайте профиль.</h2>
       <section class="login">
         <div class="login__wrapper">
-         <form class="order-form" action="/">
-          <div class="order-form__group ">
-            <div class="order-form__inner">
-              <input class="required" type="email" placeholder=" ">
-              <label>Email <span>*</span></label>
+          <form class="order-form" action="/">
+            <div class="order-form__group ">
+              <div class="order-form__inner">
+                <input class="required" type="email" placeholder=" ">
+                <label>Email <span>*</span></label>
+              </div>
+              <div class="order-form__error">Это поле обязательно для заполнения</div>
             </div>
-            <div class="order-form__error">Это поле обязательно для заполнения</div>
-          </div>
-          <div class="order-form__group">
-            <div class="order-form__inner">
-              <input class="required" type="password" autocomplete="on" placeholder=" ">
-              <label>Пароль <span>*</span></label>
+            <div class="order-form__group">
+              <div class="order-form__inner">
+                <input class="required" type="password" autocomplete="on" placeholder=" ">
+                <label>Пароль <span>*</span></label>
+              </div>
+              <div class="order-form__error">Это поле обязательно для заполнения</div>
             </div>
-            <div class="order-form__error">Это поле обязательно для заполнения</div>
-          </div>
-          <a href="#" class="order-form__btn" data-reg-1>Войти</a>
-         </form>
-         <a href="#">Забыли пароль?</a>
-         <p>Впервые на нашем сайте? Пожалуйста, <a href="#">зарегистрируйтесь.</a></p>
+            <a href="#" class="order-form__btn" data-reg-1>Войти</a>
+          </form>
+          <a href="#">Забыли пароль?</a>
+          <p>Впервые на нашем сайте? Пожалуйста, <a href="#">зарегистрируйтесь.</a></p>
         </div>
         <div class="order__descr">
           <span>Ваш заказ</span>
@@ -102,7 +102,8 @@
   <footer class="footer footer-order">
     <div class="container">
       <section class="footer__contacts">
-        <div class="footer__logo" style="background-image: url(./images/footer-logo.svg); width: 122.79px; height: 60px;">
+        <div class="footer__logo"
+          style="background-image: url(./images/footer-logo.svg); width: 122.79px; height: 60px;">
         </div>
         <a class="footer__tel" href="#">8 (800) 222-37-07</a>
         <div class="footer__copy">Copyright © 2009-2022 Кайрос</div>
@@ -145,6 +146,14 @@
   </footer>
   <script src="./js/order-reg-1.js"></script>
   <script src="./js/phoneinput.js"></script>
+  <script type="text/javascript">
+    let fields = document.querySelectorAll("input");
+    fields.forEach(el => {
+      el.addEventListener('change', () => {
+        el.value = el.value.trim();
+      });
+    });
+  </script>
 </body>
 
 </html>

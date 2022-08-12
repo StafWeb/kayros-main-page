@@ -73,7 +73,8 @@
       margin-right: 9px;
       width: 10px;
       height: 10px;
-      animation: rotate-list-img-rev 0.3s ease both;
+      // animation: rotate-list-img-rev 0.3s ease both;
+      transition: all .3s ease;
     }
     &-link {
       font-family: "Open Sans";
@@ -1056,7 +1057,9 @@
     transition-delay: 0.5s;
   }
   .header__item:first-child:hover .header__item-img {
-    animation: rotate-list-img 0.3s ease both;
+    // animation: rotate-list-img 0.3s ease both;
+    transform: rotate(190deg);
+    transition: all .3s ease;
   }
   .header__item:first-child:hover {
     & .dropdown__list,

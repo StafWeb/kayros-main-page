@@ -242,8 +242,7 @@ input[type=search]::-webkit-search-results-decoration {
   margin-right: 9px;
   width: 10px;
   height: 10px;
-  -webkit-animation: rotate-list-img-rev 0.3s ease both;
-          animation: rotate-list-img-rev 0.3s ease both;
+  transition: all 0.3s ease;
 }
 .header__item-link {
   font-family: "Open Sans";
@@ -1197,8 +1196,8 @@ input[type=search]::-webkit-search-results-decoration {
     transition-delay: 0.5s;
   }
   .header__item:first-child:hover .header__item-img {
-    -webkit-animation: rotate-list-img 0.3s ease both;
-            animation: rotate-list-img 0.3s ease both;
+    transform: rotate(190deg);
+    transition: all 0.3s ease;
   }
   .header__item:first-child:hover .dropdown__list, .header__item:first-child:hover .dropdown__offer {
     opacity: 1;

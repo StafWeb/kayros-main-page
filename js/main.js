@@ -7,27 +7,27 @@ document.addEventListener('DOMContentLoaded', () => {
       let count = ((i * 100) / mediaFiles.length).toFixed();
       percents.textContent = count;
       window.onload = () => {
-        if (count > 80) {
+        if (count > 50) {
           console.log(i);
           console.log(mediaFiles.length);
           setTimeout(() => {
             preloader.classList.add('preloader--hide');
+            if (window.innerWidth > 1000) {
+              let headAnim = gsap.timeline({ delay: 0.2 });
+              headAnim.fromTo(".header__background", { opacity: 0, scale: 1.2 }, { opacity: 1, scale: 1, duration: 1.3, ease: "power3.inOut" })
+                .from(".header__logo", { opacity: 0, duration: 0.6, ease: "power1.out" })
+                .from(".header__item-img", { opacity: 0, rotate: -90, duration: 0.4, ease: "power1.out" }, "-=0.5")
+                .from(".first-link", { opacity: 0, duration: 0.5, ease: "expo.out" }, "-=0.4")
+                .from(".second-link", { opacity: 0, x: -5, duration: 0.6, ease: "power1.out" }, "-=0.3")
+                .from(".header__form", { opacity: 0, x: -5, duration: 0.6, ease: "power1.out" }, "-=0.5")
+                .from(".header__user", { opacity: 0, x: -5, duration: 0.6, ease: "power1.out" }, "-=0.5")
+                .from(".header__cart", { opacity: 0, x: -5, duration: 0.6, ease: "power1.out" }, "-=0.5")
+                .from(".header__burger", { opacity: 0, x: -5, duration: 0.6, ease: "power1.out" }, "-=0.5")
+                .from(".header__title", { opacity: 0, y: 40, duration: 0.6, ease: "power1.out" }, "-=0.6")
+                .from(".header__descr", { opacity: 0, y: 30, duration: 0.6, ease: "power1.out" }, "-=0.5")
+                .from(".header__thumb", { opacity: 0, y: 20, duration: 0.6, ease: "power1.out" }, "-=0.5");
+            };
           }, 600);
-          if (window.innerWidth > 1000) {
-            let headAnim = gsap.timeline({ delay: 0.2 });
-            headAnim.fromTo(".header__background", { opacity: 0, scale: 1.2 }, { opacity: 1, scale: 1, duration: 1.3, ease: "power3.inOut" })
-              .from(".header__logo", { opacity: 0, duration: 0.6, ease: "power1.out" })
-              .from(".header__item-img", { opacity: 0, rotate: -90, duration: 0.4, ease: "power1.out" }, "-=0.5")
-              .from(".first-link", { opacity: 0, duration: 0.5, ease: "expo.out" }, "-=0.4")
-              .from(".second-link", { opacity: 0, x: -5, duration: 0.6, ease: "power1.out" }, "-=0.3")
-              .from(".header__form", { opacity: 0, x: -5, duration: 0.6, ease: "power1.out" }, "-=0.5")
-              .from(".header__user", { opacity: 0, x: -5, duration: 0.6, ease: "power1.out" }, "-=0.5")
-              .from(".header__cart", { opacity: 0, x: -5, duration: 0.6, ease: "power1.out" }, "-=0.5")
-              .from(".header__burger", { opacity: 0, x: -5, duration: 0.6, ease: "power1.out" }, "-=0.5")
-              .from(".header__title", { opacity: 0, y: 40, duration: 0.6, ease: "power1.out" }, "-=0.6")
-              .from(".header__descr", { opacity: 0, y: 30, duration: 0.6, ease: "power1.out" }, "-=0.5")
-              .from(".header__thumb", { opacity: 0, y: 20, duration: 0.6, ease: "power1.out" }, "-=0.5");
-          };
         }
       };
       

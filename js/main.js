@@ -6,7 +6,9 @@ document.addEventListener('DOMContentLoaded', () => {
       i++;
       percents.textContent = ((i * 100) / mediaFiles.length).toFixed();
       window.onload = () => {
-        setTimeout(() => {
+        if (i == mediaFiles.length){
+          console.log(i);
+          console.log(mediaFiles.length);
           preloader.classList.add('preloader--hide');
         if (window.innerWidth > 1000){
           let headAnim = gsap.timeline({ delay: 0.2 });
@@ -23,7 +25,10 @@ document.addEventListener('DOMContentLoaded', () => {
           .from(".header__descr", { opacity: 0, y: 30, duration: 0.6, ease: "power1.out" }, "-=0.5")
           .from(".header__thumb", { opacity: 0, y: 20, duration: 0.6, ease: "power1.out" }, "-=0.5");
         }
-        }, 1000);
+        }
+        // setTimeout(() => {
+          
+        // }, 1000);
       };
     };
     file.onerror = () => {

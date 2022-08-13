@@ -256,13 +256,6 @@
       background-size: cover;
     }
   }
-  &__wrapper {
-    display: flex;
-    &-opt{
-      display: flex;
-      align-items: center;
-    }
-  }
   &__inner {
     display: flex;
     flex-direction: column;
@@ -346,6 +339,16 @@
       color: #d83244;
       &:last-child{
         display: none;
+      }
+    }
+  }
+  &__wrapper {
+    display: flex;
+    &-opt{
+      display: flex;
+      align-items: center;
+      .order-card__price > *:last-child{
+        display: flex;
       }
     }
   }

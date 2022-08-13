@@ -65,6 +65,7 @@
         color: #333333;
         & > * {
           font-weight: 400;
+          color: #333333
         }
       }
       .table-size-btn {
@@ -269,7 +270,6 @@
     }
   }
   .add-product {
-    max-width: 100%;
     margin-bottom: 40px;
   }
 }

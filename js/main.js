@@ -1,34 +1,36 @@
-// (function () {
-//   document.documentElement.classList.add('is-loaded');
-//   document.documentElement.classList.remove('is-loading');
-
-//   setTimeout(() => {
-//     document.documentElement.classList.add('is-ready');
-//   }, 300)
-
-//   let options = {
-//     el: document.querySelector('#viewport'),
-//     smooth: true,
-//     getSpeed: true,
-//     getDirection: true
-//   }
-
-//   if (document.querySelector('#viewport').getAttribute('data-horizontal') == 'true') {
-//     options.direction = 'horizontal';
-//     options.gestureDirection = 'both';
-//     options.tablet = {
-//       smooth: true,
-//       direction: 'horizontal',
-//       horizontalGesture: true
-//     }
-//     options.smartphone = {
-//       smooth: false
-//     }
-//     options.reloadOnContextChange = true
-//   }
-
-// })();
-
+document.addEventListener('DOMContentLoaded', () => {
+  let mediaFiles = document.querySelectorAll('img');
+  let i = 0;
+  Array.from(mediaFiles).forEach((file, index) => {
+    file.onload = () => {
+      i++;
+      percents.textContent = ((i * 100) / mediaFiles.length).toFixed();
+      window.onload = () => {
+        setTimeout(() => {
+          preloader.classList.add('preloader--hide');
+        if (window.innerWidth > 1000){
+          let headAnim = gsap.timeline({ delay: 0.2 });
+        headAnim.fromTo(".header__background", { opacity: 0, scale: 1.2 }, { opacity: 1, scale: 1, duration: 1.3, ease: "power3.inOut" })
+          .from(".header__logo", { opacity: 0, duration: 0.6, ease: "power1.out" })
+          .from(".header__item-img", { opacity: 0, rotate: -90, duration: 0.4, ease: "power1.out" }, "-=0.5")
+          .from(".first-link", { opacity: 0, duration: 0.5, ease: "expo.out" }, "-=0.4")
+          .from(".second-link", { opacity: 0, x: -5, duration: 0.6, ease: "power1.out" }, "-=0.3")
+          .from(".header__form", { opacity: 0, x: -5, duration: 0.6, ease: "power1.out" }, "-=0.5")
+          .from(".header__user", { opacity: 0, x: -5, duration: 0.6, ease: "power1.out" }, "-=0.5")
+          .from(".header__cart", { opacity: 0, x: -5, duration: 0.6, ease: "power1.out" }, "-=0.5")
+          .from(".header__burger", { opacity: 0, x: -5, duration: 0.6, ease: "power1.out" }, "-=0.5")
+          .from(".header__title", { opacity: 0, y: 40, duration: 0.6, ease: "power1.out" }, "-=0.6")
+          .from(".header__descr", { opacity: 0, y: 30, duration: 0.6, ease: "power1.out" }, "-=0.5")
+          .from(".header__thumb", { opacity: 0, y: 20, duration: 0.6, ease: "power1.out" }, "-=0.5");
+        }
+        }, 1000);
+      };
+    };
+    file.onerror = () => {
+      console.log(file, index)
+    };
+  });
+});
 gsap.registerPlugin(ScrollTrigger);
 let pageContainer = document.querySelector("#viewport");
 /* SMOOTH SCROLL */
@@ -97,8 +99,9 @@ if (window.innerWidth > 1000) {
   });
   swiperAnim.from(".gallery__text-title", { opacity: 0, y: 30, duration: 0.6 })
     .from(".gallery__text-descr", { opacity: 0, y: 30, duration: 0.6 }, "-=0.5")
-    .fromTo(".gallery__slide > img", { opacity: 0, scale: 1.1 }, { opacity: 1, scale: 1, stagger: 0.1 }, "-=0.5")
-    .from(".gallery__slide-title", {opacity:0, y:10});
+    .fromTo(".gallery__slide-img", { opacity: 0, scale: 1.1 }, { opacity: 1, scale: 1, stagger: 0.1 }, "-=0.5")
+    // .fromTo(".link-slide::after", {scale:0}, {scale: 1, duration:0.4} )
+    .from(".gallery__slide-title", { opacity: 0, y: 10 });
 
   let colletctionTl = gsap.timeline({
     ease: "none",
@@ -169,73 +172,10 @@ if (window.innerWidth > 1000) {
     .from(".footer__nav", { opacity: 0, y: 10, duration: 0.65 }, "-=0.65")
     .from(".footer__bottom-btn", { opacity: 0, y: 30, duration: 0.65 }, "+=0.8")
     .from(".footer__bottom-descr", { opacity: 0, y: 30, duration: 0.65 }, "-=0.8");
-
-  let headAnim = gsap.timeline({ delay: 0.7 });
-  headAnim.fromTo(".header__background", { opacity: 0, scale: 1.2 }, { opacity: 1, scale: 1, duration: 1.3, ease: "power3.inOut" })
-    .from(".header__logo", { opacity: 0, duration: 0.6, ease: "power1.out" })
-    .from(".header__item-img", { opacity: 0, rotate: -90, duration: 0.4, ease: "power1.out" }, "-=0.5")
-    .from(".first-link", { opacity: 0, duration: 0.5, ease: "expo.out" }, "-=0.4")
-    .from(".second-link", { opacity: 0, x: -5, duration: 0.6, ease: "power1.out" }, "-=0.3")
-    .from(".header__form", { opacity: 0, x: -5, duration: 0.6, ease: "power1.out" }, "-=0.5")
-    .from(".header__user", { opacity: 0, x: -5, duration: 0.6, ease: "power1.out" }, "-=0.5")
-    .from(".header__cart", { opacity: 0, x: -5, duration: 0.6, ease: "power1.out" }, "-=0.5")
-    .from(".header__burger", { opacity: 0, x: -5, duration: 0.6, ease: "power1.out" }, "-=0.5")
-    .from(".header__title", { opacity: 0, y: 40, duration: 0.6, ease: "power1.out" }, "-=0.6")
-    .from(".header__descr", { opacity: 0, y: 30, duration: 0.6, ease: "power1.out" }, "-=0.5")
-    .from(".header__thumb", { opacity: 0, y: 20, duration: 0.6, ease: "power1.out" }, "-=0.5");
 };
 ScrollTrigger.addEventListener("refresh", () => scroller.update());
 ScrollTrigger.refresh();
 
-function stopOverscroll(element) {
-  element = gsap.utils.toArray(element)[0] || window;
-  (element === document.body || element === document.documentElement) && (element = window);
-  let lastScroll = 0,
-    lastTouch, forcing,
-    forward = true,
-    isRoot = element === window,
-    scroller = isRoot ? document.scrollingElement : element,
-    ua = window.navigator.userAgent + "",
-    getMax = isRoot ? () => scroller.scrollHeight - window.innerHeight : () => scroller.scrollHeight - scroller.clientHeight,
-    addListener = (type, func) => element.addEventListener(type, func, { passive: false }),
-    revert = () => {
-      scroller.style.overflowY = "auto";
-      forcing = false;
-    },
-    kill = () => {
-      forcing = true;
-      scroller.style.overflowY = "hidden";
-      (!forward && scroller.scrollTop < 1) ? (scroller.scrollTop = 1) : (scroller.scrollTop = getMax() - 1);
-      setTimeout(revert, 1);
-    },
-    handleTouch = e => {
-      let evt = e.changedTouches ? e.changedTouches[0] : e,
-        forward = evt.pageY <= lastTouch;
-      if (((!forward && scroller.scrollTop <= 1) || (forward && scroller.scrollTop >= getMax() - 1)) && e.type === "touchmove") {
-        e.preventDefault();
-      } else {
-        lastTouch = evt.pageY;
-      }
-    },
-    handleScroll = e => {
-      if (!forcing) {
-        let scrollTop = scroller.scrollTop;
-        forward = scrollTop > lastScroll;
-        if ((!forward && scrollTop < 1) || (forward && scrollTop >= getMax() - 1)) {
-          e.preventDefault();
-          kill();
-        }
-        lastScroll = scrollTop;
-      }
-    };
-  if ("ontouchend" in document && !!ua.match(/Version\/[\d\.]+.*Safari/)) {
-    addListener('scroll', handleScroll);
-    addListener('touchstart', handleTouch);
-    addListener('touchmove', handleTouch);
-  }
-  scroller.style.overscrollBehavior = "none";
-};
-stopOverscroll(document.querySelector(".header"));
 
 const burger = document?.querySelector('[data-burger]');
 const nav = document?.querySelector('[data-burger-menu]');

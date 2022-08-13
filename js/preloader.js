@@ -1,0 +1,22 @@
+
+document.addEventListener('DOMContentLoaded', () => {
+  let mediaFiles = document.querySelectorAll('img');
+  let i = 0;
+  Array.from(mediaFiles).forEach((file, index) => {
+      file.onload = () => {
+          let v = i++;
+         let a = percents.textContent = ((i * 100) / mediaFiles.length).toFixed();
+        // console.log(a)
+        // console.log(i++);
+        console.log(mediaFiles.length);
+        // console.log(v)
+        if (document.readyState == "complete"){
+          preloader.classList.add('preloader--hide')
+        }
+      };
+      file.onerror = () => {
+        console.log(file, index)
+      };
+  });
+
+});

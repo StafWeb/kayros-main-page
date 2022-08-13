@@ -13,6 +13,20 @@
 </head>
 
 <body>
+  <div id="preloader" class="preloader">
+    <div class="preloader__loader">
+        <div class="loadingio-spinner-rolling-wopxwk46ahe">
+            <div class="ldio-zgxx64th47">
+                <div></div>
+            </div>
+        </div>
+
+        <span class="preloader__percents">
+            <span id="percents">0</span>%
+        </span>
+    </div>
+    <!-- /.preloader__loader -->
+</div>
   <div class="scrolsmooth" id="viewport">
     <header class="header">
       <div class="container">
@@ -243,24 +257,39 @@
                 </div>
               </div>
               <a class="gallery__slide link-slide" href="#">
-                  <img src="./images/swiper-1.png" alt="">
-                  <span class="gallery__slide-title">Платья, сарафаны</span>
+                <div class="gallery__slide-img">
+<img src="./images/swiper-1.png" alt="">
+                </div>
+                
+                <span class="gallery__slide-title">Платья, сарафаны</span>
               </a>
               <a class="gallery__slide link-slide" href="#">
-                  <img src="./images/swiper-2.png" alt="">
-                  <span class="gallery__slide-title">Блузки, туники</span>
+                <div class="gallery__slide-img">
+<img src="./images/swiper-2.png" alt="">
+                </div>
+                
+                <span class="gallery__slide-title">Блузки, туники</span>
               </a>
               <a class="gallery__slide link-slide" href="#">
-                  <img src="./images/swiper-3.png" alt="">
-                  <span class="gallery__slide-title">Жакеты</span>
+                <div class="gallery__slide-img">
+<img src="./images/swiper-3.png" alt="">
+                </div>
+                
+                <span class="gallery__slide-title">Жакеты</span>
               </a>
               <a class="gallery__slide link-slide" href="#">
-                  <img src="./images/swiper-4.png" alt="">
-                  <span class="gallery__slide-title">Брюки, капри</span>
+                <div class="gallery__slide-img">
+<img src="./images/swiper-4.png" alt="">
+                </div>
+                
+                <span class="gallery__slide-title">Брюки, капри</span>
               </a>
               <a class="gallery__slide link-slide" href="#">
-                  <img src="./images/swiper-5.png" alt="">
-                  <span class="gallery__slide-title">Юбки</span>
+                <div class="gallery__slide-img">
+<img src="./images/swiper-5.png" alt="">
+                </div>
+                
+                <span class="gallery__slide-title">Юбки</span>
               </a>
             </div>
           </div>
@@ -272,11 +301,11 @@
           <div class="cards">
             <div class="cards__filter">
               <div class="cards__filter-start">
-                <a class="cards__filter-link cards__filter-link_active" href="#">Хит</a>
-                <a class="cards__filter-link" href="#">Новинка</a>
-                <a class="cards__filter-link" href="#">Акция</a>
+                <span class="cards__filter-sort cards__filter-sort_active">Хит</span>
+                <span class="cards__filter-sort">Новинка</span>
+                <span class="cards__filter-sort">Акция</span>
               </div>
-              <a href="#" class="cards__filter-link">Весь каталог</a>
+              <a class="cards__filter-link" href="./product-categoty.html">Весь каталог</a>
             </div>
             <ul class="cards__list">
               <li class="cards__item">
@@ -442,8 +471,11 @@
         <div class="container">
           <div class="info__wrapper">
             <div class="info__start">
-              <p class="info__start-text" data-info>Kayros специализируется на&nbsp;производстве одежды из&nbsp;100% натурального льна.</p>
-              <p class="info__start-text" data-info>Поэтому выбирая и&nbsp;приобретая для себя наши качественные вещи, Вы&nbsp;можете быть уверены, что дарите своему телу здоровье и&nbsp;комфорт, а&nbsp;себе возможность выглядеть красиво и стильно.</p>
+              <p class="info__start-text" data-info>Kayros специализируется на&nbsp;производстве одежды из&nbsp;100%
+                натурального льна.</p>
+              <p class="info__start-text" data-info>Поэтому выбирая и&nbsp;приобретая для себя наши качественные вещи,
+                Вы&nbsp;можете быть уверены, что дарите своему телу здоровье и&nbsp;комфорт, а&nbsp;себе возможность
+                выглядеть красиво и стильно.</p>
               <a class="info__company" href="https://criteria.ru/" target="_blank">
                 <span class="info__link" data-info>Подробнее о компании</span>
                 <svg class="info-arrow" width="47" height="8" viewBox="0 0 47 8" fill="none"
@@ -456,17 +488,22 @@
             </div>
             <div class="info__end">
               <p class="info__end-text" data-info>Предлагаем оптовым и&nbsp;розничным покупателям широкий выбор одежды:
-                платья и&nbsp;сарафаны, блузы, жакеты и&nbsp;ветровки, юбки, каприи брюки&nbsp;&mdash; повседневные и&nbsp;вечерние модели для
-                женщин и&nbsp;мужчин всех возрастных категорий. Одежда выполнена в&nbsp;модной цветовой гамме и&nbsp;имеет широкий
+                платья и&nbsp;сарафаны, блузы, жакеты и&nbsp;ветровки, юбки, каприи брюки&nbsp;&mdash; повседневные
+                и&nbsp;вечерние модели для
+                женщин и&nbsp;мужчин всех возрастных категорий. Одежда выполнена в&nbsp;модной цветовой гамме
+                и&nbsp;имеет широкий
                 размерный ряд.</p>
               <p class="info__end-text" data-info>Наша одежда подчеркнет Вашу индивидуальность в&nbsp;любой обстановкеи
-                прекрасно подойдет для работы в&nbsp;офисе, прогулок по&nbsp;городу, вечернего выхода. Вам понравилась наша
-                одежда, и&nbsp;Вы решили приобрести одну модель или партию? Оформите свой заказ в&nbsp;нашем интернет-магазине.
+                прекрасно подойдет для работы в&nbsp;офисе, прогулок по&nbsp;городу, вечернего выхода. Вам понравилась
+                наша
+                одежда, и&nbsp;Вы решили приобрести одну модель или партию? Оформите свой заказ в&nbsp;нашем
+                интернет-магазине.
                 Быстро и&nbsp;бесплатно доставляем заказы по&nbsp;всей России.</p>
-              <p class="info__end-text" data-info>Уточнить условия оформления и&nbsp;доставки заказов через интернет-магазин,
+              <p class="info__end-text" data-info>Уточнить условия оформления и&nbsp;доставки заказов через
+                интернет-магазин,
                 а&nbsp;также получить ответы на&nbsp;вопросы по&nbsp;поводу планируемого заказа, можно по&nbsp;Email: <a
-                  class="info__end-link" href="#">zakaz@kayrosxl.ru</a> или позвонить по&nbsp;телефону линии поддержки: <a
-                  class="info__end-link" href="#">8-800-222-37-07</a>.
+                  class="info__end-link" href="#">zakaz@kayrosxl.ru</a> или позвонить по&nbsp;телефону линии поддержки:
+                <a class="info__end-link" href="#">8-800-222-37-07</a>.
               </p>
             </div>
           </div>
@@ -610,7 +647,8 @@
             <path d="M2 15L14 3L26 15" stroke="white" stroke-width="3" />
           </svg>
         </a>
-        <div class="footer__bottom-descr">Создание сайта: <a href="https://criteria.ru/" target="_blank">Criteria.RU</a></div>
+        <div class="footer__bottom-descr">Создание сайта: <a href="https://criteria.ru/" target="_blank">Criteria.RU</a>
+        </div>
       </div>
     </footer>
   </div>
@@ -894,101 +932,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
   <script src="./js/libs/locomotive-scroll.min.js"></script>
   <script src="./js/main.js"></script>
-  <script type="text/javascript">
-    window.onload = function () {
-      setTimeout(function () {
-        document.getElementById("preloader").style.display = "none";
-      }, 800);
-    };
-  </script>
-  <div id="preloader">
-    <div class="loader">Loading...</div>
-  </div>
   <style type="text/css">
-    #preloader {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(0, 0, 0, 0.962);
-      z-index: 99;
-      cursor: progress;
-    }
-
-    /* #preloader div {
-		background: #fff;
-		width: 260px;
-		height: 40px;
-		line-height: 40px;
-		border-radius: 8px;
-		font-family: arial;
-		font-size: 15px;
-		color: #111;
-		text-align: center;
-		box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
-		position: fixed;
-		z-index: 999;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		margin: auto
-	} */
-    .loader {
-      color: grey;
-      font-family: sans-serif;
-      height: 5vh;
-      left: 50%;
-      overflow-x: hidden;
-      padding-top: 7vh;
-      position: absolute;
-      text-align: center;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      width: 50vw;
-      cursor: progress;
-    }
-
-    .loader::before {
-      animation: left-to-right 3s alternate infinite linear;
-      background-image: linear-gradient(to right, transparent, red, transparent);
-      bottom: 0;
-      content: "";
-      height: 5vh;
-      left: 0;
-      overflow: hidden;
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-
-    .loader:after {
-      background-image: repeating-linear-gradient(90deg,
-          white,
-          white 1vw,
-          transparent 1vw,
-          transparent 10vw);
-      content: "";
-      height: 5vh;
-      left: 0;
-      overflow: hidden;
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-
-
-    @keyframes left-to-right {
-      0% {
-        transform: translateX(-100%);
-      }
-
-      100% {
-        transform: translateX(100%);
-      }
-    }
-
     ::-webkit-scrollbar {
       width: 0px;
       height: 0px;

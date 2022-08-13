@@ -48,15 +48,21 @@
       display: flex;
       gap: 20px;
     }
-    &-link {
+    &-sort,
+    &-link{
       font-weight: 400;
       font-size: 14px;
       line-height: 160%;
       letter-spacing: 0.1em;
       text-transform: uppercase;
       color: #777777;
+      transition: color .3s ease;
+      cursor: pointer;
+    }
+    &-sort {
       &_active {
         border-bottom: 1px solid rgba(176, 151, 110, 0.5);
+        color: #333333;
       }
     }
   }
@@ -267,12 +273,6 @@
       &::-webkit-scrollbar {
         height: 0 !important;
       }
-      &-link {
-        margin-left: 20px;
-        &_active {
-          border-bottom: 1px solid rgba(176, 151, 110, 0.5);
-        }
-      }
       &-start,
       &-link {
         flex-shrink: 0;
@@ -297,5 +297,11 @@
   .cards__image:hover > img{
     transform: scale(1.05);
     transition: transform 0.4s;
+  }
+  .cards{
+    &__filter-sort:hover,
+    &__filter-link:hover{
+      color: #333333;
+    }
   }
 }

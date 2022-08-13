@@ -70,7 +70,7 @@ if (window.innerWidth > 1000) {
   let pinWrap = document.querySelector(".pin-wrap");
   let pinWrapWidth = pinWrap.offsetWidth;
   let horizontalScrollLength = pinWrapWidth - window.innerWidth;
-  let mySwiperBlock = gsap.to(".gallery-wrapper", {
+  let mySwiperBlock = gsap.to(".gallery__wrapper", {
     x: "-51%",
     ease: "none",
     scrollTrigger: {
@@ -89,7 +89,7 @@ if (window.innerWidth > 1000) {
     ease: "none",
     scrollTrigger: {
       scroller: pageContainer,
-      trigger: ".gallery-wrapper",
+      trigger: ".gallery__wrapper",
       start: "25% 85%",
       end: "bottom bottom",
       scrub: true,
@@ -97,7 +97,8 @@ if (window.innerWidth > 1000) {
   });
   swiperAnim.from(".gallery__text-title", { opacity: 0, y: 30, duration: 0.6 })
     .from(".gallery__text-descr", { opacity: 0, y: 30, duration: 0.6 }, "-=0.5")
-    .fromTo(".gallery-slide", { opacity: 0, scale: 1.1 }, { opacity: 1, scale: 1, stagger: 0.1 }, "-=0.5");
+    .fromTo(".gallery__slide > img", { opacity: 0, scale: 1.1 }, { opacity: 1, scale: 1, stagger: 0.1 }, "-=0.5")
+    .from(".gallery__slide-title", {opacity:0, y:10});
 
   let colletctionTl = gsap.timeline({
     ease: "none",

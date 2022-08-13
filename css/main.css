@@ -1504,7 +1504,7 @@ input[type=search]::-webkit-search-results-decoration {
 }
 @media (min-width: 1000px) {
   .collection__item:hover .collection__item-img {
-    transform: scale(1.03);
+    transform: scale(1.05);
     transition: all 0.4s ease;
   }
   .collection__item:hover .collection__item-link {
@@ -1537,7 +1537,7 @@ input[type=search]::-webkit-search-results-decoration {
   height: 100%;
   position: relative;
 }
-.gallery-wrapper {
+.gallery__wrapper {
   display: flex;
   overflow: hidden;
   width: 100%;
@@ -1546,11 +1546,11 @@ input[type=search]::-webkit-search-results-decoration {
   transition-property: transform;
   scrollbar-width: none;
 }
-.gallery-wrapper::-webkit-scrollbar {
+.gallery__wrapper::-webkit-scrollbar {
   width: 0px !important;
   height: 0px !important;
 }
-.gallery-slide {
+.gallery__slide {
   position: relative;
   flex-shrink: 0;
   overflow: hidden;
@@ -1559,7 +1559,7 @@ input[type=search]::-webkit-search-results-decoration {
   height: 100%;
   transition: transform 0.5s ease-in;
 }
-.gallery-slide > img {
+.gallery__slide > img {
   position: absolute;
   left: 0;
   top: 0;
@@ -1570,7 +1570,7 @@ input[type=search]::-webkit-search-results-decoration {
   transform: scale(1);
   transition: all 0.4s ease;
 }
-.gallery-slide .gallery__card-link {
+.gallery__slide-title {
   position: absolute;
   bottom: 75px;
   left: 80px;
@@ -1582,7 +1582,7 @@ input[type=search]::-webkit-search-results-decoration {
   color: rgba(255, 255, 255, 0.7);
   transition: all 0.4s ease;
 }
-.gallery__text, .gallery__card {
+.gallery__text {
   width: 100%;
   height: 100%;
 }
@@ -1672,7 +1672,7 @@ input[type=search]::-webkit-search-results-decoration {
   }
 }
 @media (max-width: 1650px) {
-  .gallery__card-link {
+  .gallery__slide-title {
     bottom: 35px;
     left: 40px;
   }
@@ -1706,52 +1706,13 @@ input[type=search]::-webkit-search-results-decoration {
 @media (max-width: 1000px) {
   .wear {
     width: 100%;
-    height: 624px;
-  }
-  .wear__container {
-    width: 100%;
-    height: 100%;
-  }
-  .gallery {
-    width: 100%;
-    overflow: hidden;
-    scrollbar-width: none;
-  }
-  .gallery::-webkit-scrollbar {
-    width: 0px !important;
-    height: 0px !important;
-  }
-  .gallery-slide {
-    flex-shrink: 0;
-    z-index: 2;
-    width: 307px;
-    height: 390px;
-  }
-  .gallery-slide:first-child {
-    display: none;
-  }
-  .gallery-wrapper {
-    width: auto;
     height: auto;
-    display: flex;
-    z-index: 0;
-    overflow: hidden;
-    overflow-x: auto;
-    scrollbar-width: none;
-  }
-  .gallery__card-link {
-    font-size: 20px;
-    bottom: 25px;
-    left: 30px;
   }
   .wear__container {
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
-  }
-  .wear {
-    width: 100%;
   }
   .wear__text {
     display: flex;
@@ -1781,12 +1742,40 @@ input[type=search]::-webkit-search-results-decoration {
     text-transform: uppercase;
     color: #777777;
   }
+  .gallery {
+    width: 100%;
+    overflow: hidden;
+    scrollbar-width: none;
+  }
+  .gallery::-webkit-scrollbar {
+    width: 0px !important;
+    height: 0px !important;
+  }
+  .gallery__wrapper {
+    width: auto;
+    height: auto;
+    display: flex;
+    z-index: 0;
+    overflow: hidden;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .gallery__slide {
+    flex-shrink: 0;
+    z-index: 2;
+    width: 307px;
+    height: 461px;
+  }
+  .gallery__slide:first-child {
+    display: none;
+  }
+  .gallery__slide-title {
+    font-size: 20px;
+    bottom: 25px;
+    left: 30px;
+  }
 }
 @media (max-width: 750px) {
-  .wear {
-    height: 624px;
-    min-height: 624px;
-  }
   .wear__container {
     justify-content: space-between;
   }
@@ -1799,11 +1788,9 @@ input[type=search]::-webkit-search-results-decoration {
     font-size: 27px;
     margin-bottom: 30px;
   }
-  .gallery {
-    max-height: 390px;
-  }
-  .gallery-slide {
+  .gallery__slide {
     width: 260px;
+    height: 390px;
   }
 }
 @media (min-width: 1000px) {
@@ -1811,7 +1798,7 @@ input[type=search]::-webkit-search-results-decoration {
     transform: scale(1.05);
     transition: all 0.4s ease;
   }
-  .link-slide:hover .gallery__card-link {
+  .link-slide:hover .gallery__slide-title {
     color: rgb(255, 255, 255);
     transition: all 0.4s ease;
   }

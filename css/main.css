@@ -563,14 +563,14 @@ input[type=search]::-webkit-search-results-decoration {
   opacity: 0;
   z-index: -1;
   background-color: #ffffff;
-  transition: all 0.7s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 .burger-menu_active {
   overflow-y: hidden;
   overflow-x: hidden;
   visibility: visible;
   opacity: 1;
-  transition: all 0.7s ease-in-out;
+  transition: all 0.4s ease-in-out;
   z-index: 6;
 }
 .burger-menu__btn {

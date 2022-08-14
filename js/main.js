@@ -1,4 +1,4 @@
-// document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
 
 let mediaFiles = document.querySelectorAll('img');
 let i = 0;
@@ -26,7 +26,7 @@ Array.from(mediaFiles).forEach((file, index) => {
     console.log(file, index)
   };
 });
-// });
+});
 gsap.registerPlugin(ScrollTrigger);
 let pageContainer = document.querySelector("#viewport");
 /* SMOOTH SCROLL */

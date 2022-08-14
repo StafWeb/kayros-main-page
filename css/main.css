@@ -2898,16 +2898,12 @@ input[type=search]::-webkit-search-results-decoration {
   line-height: 120%;
   color: #333333;
   margin-bottom: 30px;
-  opacity: 0;
 }
 .product__info > p {
   font-weight: 400;
   font-size: 16px;
   line-height: 160%;
   color: rgba(51, 51, 51, 0.7);
-  opacity: 0;
-  -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s;
 }
 .product__info > p:nth-child(4) {
   margin-bottom: 20px;

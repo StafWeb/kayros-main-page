@@ -1,20 +1,3 @@
-document.addEventListener('DOMContentLoaded', () => {
-  window.onload = () => {
-    console.log("sds");
-    setTimeout(() => {
-      let headAnim = gsap.timeline({ delay: 0.2, ease: "power1.out" });
-      headAnim.from(".header__logo", { opacity: 0, duration: 0.6})
-        .from(".header__item-img", { opacity: 0, rotate: -90, duration: 0.5 }, "-=0.3")
-        .from(".first-link", { opacity: 0, duration: 0.5 }, "-=0.4")
-        .from(".second-link", { opacity: 0, x: -5, duration: 0.6 }, "-=0.3")
-        .from(".header__form", { opacity: 0, x: -5, duration: 0.6 }, "-=0.5")
-        .from(".header__user", { opacity: 0, x: -5, duration: 0.6 }, "-=0.5")
-        .from(".header__cart", { opacity: 0, x: -5, duration: 0.6 }, "-=0.5")
-        .from(".header__burger", { opacity: 0, x: -5, duration: 0.6 }, "-=0.5")
-        .fromTo(".cards", { opacity: 0, y: 20, }, { opacity: 1, y: 0, duration: 1 }, "-=0.5");
-    }, 50);
-  };
-});
 gsap.registerPlugin(ScrollTrigger);
 ScrollTrigger.defaults({
   // toggleActions: "restart complete reverse reset",
@@ -26,7 +9,16 @@ ScrollTrigger.defaults({
   // },
 });
 if (window.innerWidth > 1000) {
-
+  let headAnim = gsap.timeline({ delay: 0.2, ease: "power1.out" });
+  headAnim.from(".header__logo", { opacity: 0, duration: 0.6})
+    .from(".header__item-img", { opacity: 0, rotate: -90, duration: 0.5 }, "-=0.3")
+    .from(".first-link", { opacity: 0, duration: 0.5 }, "-=0.4")
+    .from(".second-link", { opacity: 0, x: -5, duration: 0.6 }, "-=0.3")
+    .from(".header__form", { opacity: 0, x: -5, duration: 0.6 }, "-=0.5")
+    .from(".header__user", { opacity: 0, x: -5, duration: 0.6 }, "-=0.5")
+    .from(".header__cart", { opacity: 0, x: -5, duration: 0.6 }, "-=0.5")
+    .from(".header__burger", { opacity: 0, x: -5, duration: 0.6 }, "-=0.5")
+    .fromTo(".cards", { opacity: 0, y: 20, }, { opacity: 1, y: 0, duration: 1 }, "-=0.5");
   let cardItem = document.querySelectorAll('.cards__item');
   for (let a = 0; a < cardItem.length; a++) {
     let trig = cardItem[a];
@@ -82,7 +74,22 @@ if (window.innerWidth > 1000) {
     .from(".footer__bottom-btn", { opacity: 0, y: 30, duration: 0.65 }, "+=0.8")
     .from(".footer__bottom-descr", { opacity: 0, y: 30, duration: 0.65 }, "-=0.8");
   // let observerInfoAnim = new IntersectionObserver(infoAnim, options);
-  // let infoTitles = document.querySelectorAll('.product__info > h2');
+  let infoTitles = document.querySelectorAll('.product__info > h2, p');
+  for (let a = 0; a < infoTitles.length; a++) {
+    let trig = infoTitles[a];
+    gsap.from(trig, {
+      opacity: 0,
+      y: 20,
+      duration: 1.5,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: trig,
+        start: "28% 90%",
+        // end: "bottom bottom",
+        // toggleActions: "play none none reset"
+      }
+    });
+  };
   // let infoDescrs = document.querySelectorAll('.product__info > p');
 
   // for (let infoTitle of infoTitles) {

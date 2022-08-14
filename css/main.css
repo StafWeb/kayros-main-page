@@ -561,6 +561,7 @@ input[type=search]::-webkit-search-results-decoration {
   height: 100%;
   visibility: hidden;
   opacity: 0;
+  z-index: -1;
   background-color: #ffffff;
   transition: all 0.7s ease-in-out;
 }

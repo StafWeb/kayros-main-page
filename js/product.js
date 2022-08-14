@@ -169,13 +169,9 @@ let sortItem = document.querySelectorAll(".cards__sort-item");
 let sortInner = document.querySelectorAll(".cards__sort-inner");
 // let sortRadio = sortInner.querySelector("input[name='sort']");
 // console.log(sortRadio);
-window.onload = () => {
-  setTimeout(() => {
     let a = document.querySelector(".cards__sort-inner > input[checked]");
     let b = a.parentNode;
     sortBtn.textContent = b.textContent;
-  }, 200);
-};
 sortBtn.addEventListener('click', () => {
   sortList.classList.add("cards__sort-list_active");
 });

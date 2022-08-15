@@ -2648,6 +2648,11 @@ input[type=search]::-webkit-search-results-decoration {
     transition: transform 0.4s ease;
   }
 }
+@media (max-width: 400px) {
+  .footer .container {
+    padding: 50px 0px;
+  }
+}
 .footer__list_active {
   max-height: 100vh;
   transition: all 0.7s ease;

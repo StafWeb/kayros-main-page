@@ -1,9 +1,9 @@
-if (window.innerWidth > 1000){
+if (window.innerWidth > 1000) {
   let headAnim = gsap.timeline({ delay: 0.5, ease: "power1.out" });
-  headAnim.from(".header__logo", { opacity: 0, duration: 0.6})
-    .from(".header__item-img", { opacity: 0, rotate: -90, duration: 0.5 }, "-=0.3")
-    .from(".first-link", { opacity: 0, duration: 0.5}, "-=0.4")
-    .from(".second-link", { opacity: 0, x: -5, duration: 0.6 }, "-=0.3")
+  headAnim.from(".header__logo", { opacity: 0, duration: 0.6 })
+    .from(".header__item-img", { opacity: 0, rotate: -90, duration: 0.4 }, "-=0.4")
+    .from(".item1", { opacity: 0, duration: 0.5 }, "-=0.4")
+    .from(".items", { opacity: 0, x: -5, duration: 0.6 }, "-=0.4")
     .from(".header__form", { opacity: 0, x: -5, duration: 0.6 }, "-=0.5")
     .from(".header__user", { opacity: 0, x: -5, duration: 0.6 }, "-=0.5")
     .from(".header__cart", { opacity: 0, x: -5, duration: 0.6 }, "-=0.5")

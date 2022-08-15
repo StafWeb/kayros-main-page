@@ -236,7 +236,7 @@
       width: 14px;
       max-width: 14px;
       height: 2px;
-      background-color: white;
+      background-color: #ffffff;
       // transform: translateY(-50%);
       transition: 0.3s ease;
     }
@@ -248,10 +248,8 @@
       width: 18px;
       max-width: 18px;
       height: 2px;
-      background-color: white;
+      background-color: #ffffff;
       transition: 0.3s ease;
-      // transition: transform 0.3s ease-in-out, top 0.3s ease-in-out,
-      //   bottom 0.3s ease-in-out;
     }
     &::before {
       top: 12px;
@@ -636,13 +634,15 @@
 .burger_active .header__burger-line {
   // opacity: 0;
   // display: none;
-  animation: burger-anim 0.4s cubic-bezier(0.22, 1, 0.36, 1) both 0.1s;
+  background-color: #333333;
+    transition: all 0.3s ease-out;
+  animation: burger-anim 0.4s cubic-bezier(0.22, 1, 0.36, 1) none 0.1s;
 }
-.burger_active .burger-menu__btn-line {
-  // opacity: 0;
-  // display: none;
-  animation: burger-anim 0.4s cubic-bezier(0.22, 1, 0.36, 1) both 0.1s;
-}
+// .burger_active .burger-menu__btn-line {
+//   // opacity: 0;
+//   // display: none;
+//   animation: burger-anim 0.4s cubic-bezier(0.22, 1, 0.36, 1) both 0.1s;
+// }
 
 .burger_active::after {
   animation: rotate-burger-after 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards

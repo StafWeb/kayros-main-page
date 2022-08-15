@@ -495,7 +495,7 @@ input[type=search]::-webkit-search-results-decoration {
   width: 14px;
   max-width: 14px;
   height: 2px;
-  background-color: white;
+  background-color: #ffffff;
   transition: 0.3s ease;
 }
 .header__burger::before, .header__burger::after {
@@ -505,7 +505,7 @@ input[type=search]::-webkit-search-results-decoration {
   width: 18px;
   max-width: 18px;
   height: 2px;
-  background-color: white;
+  background-color: #ffffff;
   transition: 0.3s ease;
 }
 .header__burger::before {
@@ -891,13 +891,10 @@ input[type=search]::-webkit-search-results-decoration {
 }
 
 .burger_active .header__burger-line {
-  -webkit-animation: burger-anim 0.4s cubic-bezier(0.22, 1, 0.36, 1) both 0.1s;
-          animation: burger-anim 0.4s cubic-bezier(0.22, 1, 0.36, 1) both 0.1s;
-}
-
-.burger_active .burger-menu__btn-line {
-  -webkit-animation: burger-anim 0.4s cubic-bezier(0.22, 1, 0.36, 1) both 0.1s;
-          animation: burger-anim 0.4s cubic-bezier(0.22, 1, 0.36, 1) both 0.1s;
+  background-color: #333333;
+  transition: all 0.3s ease-out;
+  -webkit-animation: burger-anim 0.4s cubic-bezier(0.22, 1, 0.36, 1) none 0.1s;
+          animation: burger-anim 0.4s cubic-bezier(0.22, 1, 0.36, 1) none 0.1s;
 }
 
 .burger_active::after {

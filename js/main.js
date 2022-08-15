@@ -65,22 +65,22 @@ ScrollTrigger.defaults({
 });
 if (window.innerWidth > 1000) {
   function headerAnim() {
-    let headAnim = gsap.timeline({delay: 0.2});
-    headAnim.fromTo(".header__background", { opacity: 0, scale: 1.2 }, { opacity: 1, scale: 1, duration: 1.3, ease: "power3.inOut" })
-      .from(".header__logo", { opacity: 0, duration: 0.6, ease: "power1.out" })
-      .from(".header__item-img", { opacity: 0, rotate: -90, duration: 0.4, ease: "power1.out" }, "-=0.5")
-      .from(".first-link", { opacity: 0, duration: 0.5, ease: "expo.out" }, "-=0.4")
-      .from(".second-link", { opacity: 0, x: -5, duration: 0.6, ease: "power1.out" }, "-=0.3")
-      .from(".header__form", { opacity: 0, x: -5, duration: 0.6, ease: "power1.out" }, "-=0.5")
-      .from(".header__user", { opacity: 0, x: -5, duration: 0.6, ease: "power1.out" }, "-=0.5")
-      .from(".header__cart", { opacity: 0, x: -5, duration: 0.6, ease: "power1.out" }, "-=0.5")
-      .from(".header__burger", { opacity: 0, x: -5, duration: 0.6, ease: "power1.out" }, "-=0.5")
-      .from(".header__title", { opacity: 0, y: 40, duration: 0.6, ease: "power1.out" }, "-=0.6")
-      .from(".header__descr", { opacity: 0, y: 30, duration: 0.6, ease: "power1.out" }, "-=0.5")
-      .from(".header__thumb", { opacity: 0, y: 20, duration: 0.6, ease: "power1.out" }, "-=0.5");
+    let headAnim = gsap.timeline({ delay: 0.2, ease: "power1.out" });
+    headAnim.fromTo(".header__background", { opacity: 0, scale: 1.2 }, { opacity: 1, scale: 1, duration: 1 })
+      .from(".header__logo", { opacity: 0, duration: 0.6 })
+      .from(".header__item-img", { opacity: 0, rotate: -90, duration: 0.4 }, "-=0.4")
+      .from(".item1", { opacity: 0, duration: 0.5 }, "-=0.4")
+      .from(".items", { opacity: 0, x: -5, duration: 0.6 }, "-=0.4")
+      .from(".header__form", { opacity: 0, x: -5, duration: 0.6 }, "-=0.5")
+      .from(".header__user", { opacity: 0, x: -5, duration: 0.6 }, "-=0.5")
+      .from(".header__cart", { opacity: 0, x: -5, duration: 0.6 }, "-=0.5")
+      .from(".header__burger", { opacity: 0, x: -5, duration: 0.6 }, "-=0.5")
+      .from(".header__title", { opacity: 0, y: 40, duration: 0.6 }, "-=0.6")
+      .from(".header__descr", { opacity: 0, y: 30, duration: 0.6 }, "-=0.5")
+      .from(".header__thumb", { opacity: 0, y: 20, duration: 0.6 }, "-=0.5");
     return headAnim;
   };
-headerAnim();
+  headerAnim();
   let pinBoxes = document.querySelectorAll(".pin-wrap > *");
   let pinWrap = document.querySelector(".pin-wrap");
   let pinWrapWidth = pinWrap.offsetWidth;
@@ -152,7 +152,7 @@ headerAnim();
   });
   offerTl.from(".offer__title", { opacity: 0, y: 20, duration: 1 })
     .from(".cards__filter-link", { opacity: 0, y: 15, duration: 0.6 }, "-=0.8")
-    .from(".cards__item", { opacity: 0, y: 20, duration: 0.6, stagger: 0.1}, "-=0.8");
+    .from(".cards__item", { opacity: 0, y: 20, duration: 0.6, stagger: 0.1 }, "-=0.8");
 
   let infoTl = gsap.timeline({
     ease: "none",

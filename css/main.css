@@ -956,16 +956,12 @@ input[type=search]::-webkit-search-results-decoration {
 }
 @media (max-width: 1000px) {
   .header {
-    height: 446px;
+    height: auto;
   }
   .header__user {
     margin-top: 0;
     padding-bottom: 0;
     height: 40px;
-  }
-  .container,
-.burger-menu__container {
-    padding: 0px 20px;
   }
   .header__nav, .header__form {
     display: none;
@@ -976,6 +972,16 @@ input[type=search]::-webkit-search-results-decoration {
   }
   .header__descr {
     margin-bottom: 54px;
+  }
+  .header__text {
+    justify-content: flex-start;
+    margin-top: 23px;
+    margin-bottom: 90px;
+    height: auto;
+  }
+  .container,
+.burger-menu__container {
+    padding: 0px 20px;
   }
   .burger__logo {
     left: 20px;
@@ -1201,10 +1207,8 @@ input[type=search]::-webkit-search-results-decoration {
     padding: 0 20px;
   }
   .header__text {
-    justify-content: flex-start;
-    margin-top: 45px;
-    height: 100%;
-    max-height: 100%;
+    margin-top: 53px;
+    margin-bottom: 55px;
   }
   .header__title {
     font-size: 32px;
@@ -1433,7 +1437,7 @@ input[type=search]::-webkit-search-results-decoration {
 }
 .collection {
   position: relative;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   overflow: hidden;
 }
 .collection__title {
@@ -1472,7 +1476,7 @@ input[type=search]::-webkit-search-results-decoration {
   position: relative;
   width: 100%;
   overflow: hidden;
-  min-height: 825px;
+  height: 825px;
 }
 .collection__item::after {
   position: absolute;
@@ -1522,7 +1526,7 @@ input[type=search]::-webkit-search-results-decoration {
     gap: 40px;
   }
   .collection__item {
-    min-height: 570px;
+    height: 570px;
   }
   .collection__item-link {
     bottom: 35px;
@@ -1536,7 +1540,7 @@ input[type=search]::-webkit-search-results-decoration {
     left: 35px;
   }
   .collection__item {
-    min-height: 432px;
+    height: 432px;
   }
 }
 @media (max-width: 1000px) {
@@ -1548,7 +1552,7 @@ input[type=search]::-webkit-search-results-decoration {
     margin-bottom: 70px;
   }
   .collection__item {
-    min-height: 400px;
+    height: 348px;
   }
   .collection__item-link {
     font-size: 20px;
@@ -1576,6 +1580,9 @@ input[type=search]::-webkit-search-results-decoration {
     font-size: 27px;
     margin-top: 50px;
   }
+  .collection__descr {
+    margin-top: 30px;
+  }
   .collection__gallery {
     margin-top: 40px;
     margin-bottom: 50px;
@@ -1592,7 +1599,6 @@ input[type=search]::-webkit-search-results-decoration {
   }
   .collection__item {
     width: 232px;
-    height: 348px;
     flex-shrink: 0;
   }
   .collection__item:first-child {
@@ -2034,14 +2040,10 @@ input[type=search]::-webkit-search-results-decoration {
      object-fit: cover;
 }
 .cards__button {
-  width: 140px;
-  height: 100px;
   display: none;
   flex-shrink: 0;
   flex-direction: column;
   align-items: center;
-  align-content: center;
-  margin: 120px 20px 0 0;
 }
 .cards__button > svg {
   width: 40px;
@@ -2111,7 +2113,7 @@ input[type=search]::-webkit-search-results-decoration {
     gap: 16px;
   }
   .cards__image {
-    height: 400px;
+    height: 336px;
   }
 }
 @media (max-width: 1000px) {
@@ -2147,10 +2149,12 @@ input[type=search]::-webkit-search-results-decoration {
   }
   .cards .download-btn {
     display: flex;
-    width: 130px;
+    width: 224px;
     height: 336px;
+    align-items: center;
     justify-content: center;
     margin-right: 20px;
+    border: 1px solid #E7E7E7;
   }
   .cards__button {
     display: flex;
@@ -2165,10 +2169,17 @@ input[type=search]::-webkit-search-results-decoration {
   .offer .container {
     padding: 50px 0px;
   }
+  .offer__title {
+    font-size: 27px;
+  }
+  .cards {
+    margin-top: 30px;
+  }
   .cards__item {
     width: 224px;
   }
   .cards__filter {
+    margin-bottom: 40px;
     overflow: hidden;
     overflow-x: auto;
     -ms-overflow-style: none;
@@ -2205,7 +2216,8 @@ input[type=search]::-webkit-search-results-decoration {
   background-color: #f1ebe2;
 }
 .info .container {
-  padding: 120px 330px;
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 .info__wrapper {
   display: grid;
@@ -2215,7 +2227,7 @@ input[type=search]::-webkit-search-results-decoration {
 .info__start {
   display: flex;
   flex-direction: column;
-  gap: 38px;
+  gap: 40px;
   font-family: "Playfair Display";
   font-weight: 400;
   font-size: 27px;
@@ -2249,7 +2261,7 @@ input[type=search]::-webkit-search-results-decoration {
 }
 .info__end {
   display: grid;
-  gap: 26px;
+  gap: 30px;
   font-weight: 400;
   font-size: 16px;
   color: #333333;
@@ -2266,34 +2278,43 @@ input[type=search]::-webkit-search-results-decoration {
 }
 
 @media (max-width: 1650px) {
-  .info .container {
-    padding: 120px 90px;
-  }
   .info__wrapper {
     gap: 60px;
   }
 }
 @media (max-width: 1200px) {
-  .info .container {
-    padding: 120px 40px;
-  }
   .info__wrapper {
     gap: 40px;
   }
 }
 @media (max-width: 1000px) {
   .info .container {
-    padding: 70px 20px;
+    padding-top: 70px;
+    padding-bottom: 70px;
   }
   .info__wrapper {
     display: flex;
     flex-direction: column;
     gap: 50px;
   }
+  .info__company {
+    margin-top: 10px;
+  }
+  .info__end {
+    gap: 20px;
+  }
 }
 @media (max-width: 750px) {
+  .info .container {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .info__wrapper {
+    gap: 40px;
+  }
   .info__start {
     font-size: 20px;
+    gap: 30px;
   }
 }
 @media (min-width: 950px) {
@@ -2518,7 +2539,7 @@ input[type=search]::-webkit-search-results-decoration {
   height: 58px;
   background-color: #e3ddd4;
   border-radius: 50%;
-  margin-bottom: 26px;
+  margin-bottom: 30px;
 }
 .footer__bottom-descr {
   font-weight: 400;
@@ -2652,6 +2673,9 @@ input[type=search]::-webkit-search-results-decoration {
   .footer .container {
     padding: 50px 0px;
   }
+  .footer__bottom {
+    padding: 50px 0px;
+  }
 }
 .footer__list_active {
   max-height: 100vh;
@@ -2715,6 +2739,7 @@ input[type=search]::-webkit-search-results-decoration {
   width: 100%;
 }
 .product__content .offer__button {
+  width: 344px;
   margin-bottom: 30px;
 }
 .product__title {
@@ -2917,10 +2942,10 @@ input[type=search]::-webkit-search-results-decoration {
   color: rgba(51, 51, 51, 0.7);
 }
 .product__info > p:nth-child(4) {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 .product__info > p:last-child {
-  margin-top: 20px;
+  margin-top: 30px;
 }
 .product__info > p:nth-child(2), .product__info > p:nth-child(5) {
   margin-bottom: 40px;

@@ -2,7 +2,8 @@
 .info {
   background-color: #f1ebe2;
   .container {
-    padding: 120px 330px;
+    padding-top: 120px;
+    padding-bottom: 120px;
   }
   &__wrapper {
     display: grid;
@@ -12,8 +13,8 @@
   &__start {
     display: flex;
     flex-direction: column;
-    gap: 38px;
-    font-family: 'Playfair Display';
+    gap: 40px;
+    font-family: "Playfair Display";
     font-weight: 400;
     font-size: 27px;
     line-height: 140%;
@@ -45,7 +46,7 @@
   }
   &__end {
     display: grid;
-    gap: 26px;
+    gap: 30px;
     font-weight: 400;
     font-size: 16px;
     color: #333333;
@@ -63,35 +64,46 @@
 }
 
 @media (max-width: 1650px) {
-  .info .container {
-    padding: 120px 90px;
-  }
   .info__wrapper {
     gap: 60px;
   }
 }
 @media (max-width: 1200px) {
-  .info .container {
-    padding: 120px 40px;
-  }
   .info__wrapper {
     gap: 40px;
   }
 }
 @media (max-width: 1000px) {
-  .info .container {
-    padding: 70px 20px;
-  }
-  .info__wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-  }
+  .info{
+    .container {
+      padding-top: 70px;
+      padding-bottom: 70px;
+    }
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+    }
+    &__company{
+      margin-top: 10px;
+    }
+    &__end{
+      gap: 20px;
+    }
+  } 
 }
 @media (max-width: 750px) {
   .info {
+    .container {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+    &__wrapper{
+      gap: 40px;
+    }
     &__start {
       font-size: 20px;
+      gap: 30px;
     }
   }
 }
@@ -110,12 +122,12 @@
         color: #927d54;
       }
     }
-    &__end-link:hover{
-      color:#b0976e;
+    &__end-link:hover {
+      color: #b0976e;
       border-bottom: 1px solid transparent;
       transition: all 0.3s ease;
     }
-    &__end-link:active{
+    &__end-link:active {
       color: #927d54;
       border-bottom-color: rgba(176, 151, 110, 1);
     }

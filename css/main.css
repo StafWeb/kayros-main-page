@@ -267,7 +267,7 @@ input[type=search]::-webkit-search-results-decoration {
   background-color: #ffffff;
   border-bottom: 1px solid #eaeaea;
   transform: translateY(-100%);
-  transition: transform 0.4s ease-in-out 0.37s;
+  transition: transform 0.4s ease-in-out 0.4s;
 }
 .header__hover_active {
   opacity: 1;
@@ -404,8 +404,6 @@ input[type=search]::-webkit-search-results-decoration {
   z-index: 1;
 }
 .header__user {
-  -webkit-animation-delay: 170ms;
-          animation-delay: 170ms;
   padding: 0px 7px;
   margin-top: 35px;
   padding-bottom: 35px;
@@ -917,6 +915,23 @@ input[type=search]::-webkit-search-results-decoration {
           animation: burger-anim 0.4s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
+.header-logo-top,
+.header-logo-end,
+.item-logo,
+.header__form-search,
+.search-logo,
+.cart-logo,
+.user-logo-cir,
+.search-logo-rec,
+.user-logo,
+.header-link,
+.header__user > a > span,
+.header__burger-line,
+.header__burger::after,
+.header__burger::before {
+  transition: all 0.3s ease 0.4s;
+}
+
 @media (max-width: 1650px) {
   .header__title {
     font-size: 72px;
@@ -1240,42 +1255,44 @@ input[type=search]::-webkit-search-results-decoration {
   }
   .header__top:hover .header-logo-top {
     fill: #333333;
-    transition: fill 0.3s ease;
+    transition: all 0.3s ease;
   }
   .header__top:hover .header-logo-end, .header__top:hover .item-logo {
     fill: #b0976e;
-    transition: fill 0.3 ease;
+    transition: all 0.3s ease;
   }
   .header__top:hover .header__form-search {
     border-color: rgba(51, 51, 51, 0.2);
     color: #333333;
-    transition: all 0.3 ease;
+    transition: all 0.3s ease;
   }
   .header__top:hover .header__form-search:hover {
     border-color: rgba(51, 51, 51, 0.4);
+    transition: all 0.3s ease;
   }
   .header__top:hover .header__form-search:focus {
     border-color: rgba(51, 51, 51, 0.6);
+    transition: all 0.3s ease;
   }
   .header__top:hover .search-logo, .header__top:hover .cart-logo, .header__top:hover .user-logo-cir {
     stroke: #333333;
-    transition: 0.3 ease;
+    transition: all 0.3s ease;
   }
   .header__top:hover .search-logo-rec, .header__top:hover .user-logo {
     fill: #333333;
-    transition: 0.3 ease;
+    transition: all 0.3s ease;
   }
   .header__top:hover .header-link:hover {
     color: #b0976e;
-    transition: 0.3 ease;
+    transition: all 0.3s ease;
   }
   .header__top:hover .header-link {
     color: #333333;
-    transition: 0.3 ease;
+    transition: all 0.3s ease;
   }
   .header__top:hover .header__burger-line, .header__top:hover .header__burger::after, .header__top:hover .header__burger::before {
     background-color: #333333;
-    transition: 0.3s;
+    transition: all 0.3s ease;
   }
   .header__top:hover .header__user > a > span {
     color: #333333;
@@ -1297,7 +1314,7 @@ input[type=search]::-webkit-search-results-decoration {
     max-height: 100vh;
     border: 1px solid #eaeaea;
     border-top: none;
-    transition: all 0.4s ease-in-out 0.41s;
+    transition: all 0.4s ease-in-out 0.3s;
     z-index: 1000 !important;
   }
   .header__top:hover .header__cart:hover .cart-logo {
@@ -1307,7 +1324,7 @@ input[type=search]::-webkit-search-results-decoration {
   .header__item:first-child:hover .dropdown {
     max-height: 100vh;
     border-bottom: 1px solid rgba(51, 51, 51, 0.1);
-    transition: all 0.7s ease-in-out 0.4s;
+    transition: all 0.7s ease-in-out 0.3s;
   }
   .header__item:first-child:hover .header__item-img > svg {
     transform: rotate(90deg);

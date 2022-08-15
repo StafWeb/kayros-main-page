@@ -102,6 +102,7 @@
     background-color: #f5f5f5;
     padding: 30px;
     padding-bottom: 40px;
+    flex-shrink: 0;
     & > *:first-child {
       font-family: "Playfair Display";
       font-style: normal;

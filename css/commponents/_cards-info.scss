@@ -65,7 +65,7 @@
         color: #333333;
         & > * {
           font-weight: 400;
-          color: #333333
+          color: #333333;
         }
       }
       .table-size-btn {
@@ -208,9 +208,9 @@
   text-transform: uppercase;
   color: #ffffff;
   margin-bottom: 50px;
-  transition: all 500ms ease;
+  transition: all 0.4 ease;
 }
-.size-opt__wrapper{
+.size-opt__wrapper {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -280,20 +280,19 @@
   .cards-info {
     padding: 0px 15px;
     width: 100%;
-    &__sizes{
+    &__sizes {
       max-width: 100%;
       width: 100%;
       overflow-x: auto;
     }
-    .size-opt{
+    .size-opt {
       & > * {
         flex-shrink: 0;
       }
-      &__wrapper{
+      &__wrapper {
         width: max-content;
       }
     }
-
   }
 }
 

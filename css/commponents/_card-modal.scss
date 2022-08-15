@@ -123,6 +123,7 @@
     line-height: 160%;
     letter-spacing: 0.05em;
     text-transform: uppercase;
+    transition: all 0.4s ease;
     &:first-child {
       background: #ffffff;
       border: 1px solid #b0976e;
@@ -361,4 +362,19 @@
       height: 258px;
     }
   }
+}
+@media (min-width: 1000px) {
+  .card-modal__btn:first-child:hover {
+    background: #b0976e;
+    border-color: #b0976e;
+    color: #ffffff;
+  }
+  .card-modal__btn:last-child:hover {
+    background: #927d54;
+    border-color: #927d54;
+  }
+}
+.card-modal__btn:last-child:active {
+  background: #77623a;
+  border-color: #77623a;
 }

@@ -10,7 +10,7 @@ ScrollTrigger.defaults({
 });
 if (window.innerWidth > 1000) {
   let headAnim = gsap.timeline({ delay: 0.2, ease: "power1.out" });
-  headAnim.from(".header__logo", { opacity: 0, duration: 0.6})
+  headAnim.from(".header__logo", { opacity: 0, duration: 0.6 })
     .from(".header__item-img", { opacity: 0, rotate: -90, duration: 0.5 }, "-=0.3")
     .from(".first-link", { opacity: 0, duration: 0.5 }, "-=0.4")
     .from(".second-link", { opacity: 0, x: -5, duration: 0.6 }, "-=0.3")
@@ -22,7 +22,6 @@ if (window.innerWidth > 1000) {
   let cardItem = document.querySelectorAll('.cards__item');
   for (let a = 0; a < cardItem.length; a++) {
     let trig = cardItem[a];
-    let item = cardItem;
     gsap.from(trig, {
       opacity: 0,
       y: 20,
@@ -36,28 +35,6 @@ if (window.innerWidth > 1000) {
       }
     });
   };
-
-  // let options = {
-  //   threshold: [0.4]
-  // };
-  // let observer = new IntersectionObserver(onEntry, options);
-  // for (let des of swiperDescr) {
-  //   observer.observe(des);
-  // };
-  // function onEntry(entry) {
-  //   entry.forEach(change => {
-  //     if (change.isIntersecting) {
-  //       change.target.classList.add("cards-item-anim");
-  //     }
-  //   });
-  // };
-
-  // let offerTl = gsap.timeline({
-  //   ease: "power1.out",
-  //   delay: 1,
-  // });
-  // offerTl.fromTo(".cards", { opacity: 0, y: 20, }, { opacity: 1, y: 0, duration: 1 });
-
   let footeTl = gsap.timeline({
     ease: "power1.out",
     scrollTrigger: {
@@ -73,7 +50,7 @@ if (window.innerWidth > 1000) {
     .from(".footer__nav", { opacity: 0, y: 10, duration: 0.65 }, "-=0.65")
     .from(".footer__bottom-btn", { opacity: 0, y: 30, duration: 0.65 }, "+=0.8")
     .from(".footer__bottom-descr", { opacity: 0, y: 30, duration: 0.65 }, "-=0.8");
-  // let observerInfoAnim = new IntersectionObserver(infoAnim, options);
+
   let infoTitles = document.querySelectorAll('.product__info > h2, p');
   for (let a = 0; a < infoTitles.length; a++) {
     let trig = infoTitles[a];
@@ -85,26 +62,9 @@ if (window.innerWidth > 1000) {
       scrollTrigger: {
         trigger: trig,
         start: "28% 90%",
-        // end: "bottom bottom",
-        // toggleActions: "play none none reset"
       }
     });
   };
-  // let infoDescrs = document.querySelectorAll('.product__info > p');
-
-  // for (let infoTitle of infoTitles) {
-  //   observerInfoAnim.observe(infoTitle);
-  // };
-  // for (let infoDescr of infoDescrs) {
-  //   observerInfoAnim.observe(infoDescr);
-  // };
-  // function infoAnim(entry) {
-  //   entry.forEach(change => {
-  //     if (change.isIntersecting) {
-  //       change.target.classList.add("cards-item-anim");
-  //     }
-  //   });
-  // };
 };
 
 ScrollTrigger.refresh();
@@ -174,11 +134,9 @@ let sortList = document.querySelector(".cards__sort-list");
 let sort = document.querySelector(".cards__sort");
 let sortItem = document.querySelectorAll(".cards__sort-item");
 let sortInner = document.querySelectorAll(".cards__sort-inner");
-// let sortRadio = sortInner.querySelector("input[name='sort']");
-// console.log(sortRadio);
-    let a = document.querySelector(".cards__sort-inner > input[checked]");
-    let b = a.parentNode;
-    sortBtn.textContent = b.textContent;
+let a = document.querySelector(".cards__sort-inner > input[checked]");
+let b = a.parentNode;
+sortBtn.textContent = b.textContent;
 sortBtn.addEventListener('click', () => {
   sortList.classList.add("cards__sort-list_active");
 });

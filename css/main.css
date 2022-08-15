@@ -1719,7 +1719,7 @@ input[type=search]::-webkit-search-results-decoration {
   height: 100%;
 }
 .gallery__text {
-  padding: 120px 800px 0px 90px;
+  padding: 120px 90px;
 }
 .gallery__text-title {
   font-family: "Playfair Display", serif;
@@ -1742,6 +1742,7 @@ input[type=search]::-webkit-search-results-decoration {
 .gallery__text-progress {
   overflow: hidden;
   position: relative;
+  width: 290px;
   height: 2px;
   background: rgba(176, 151, 110, 0.4);
 }
@@ -1793,23 +1794,10 @@ input[type=search]::-webkit-search-results-decoration {
     background: rgba(176, 151, 110, 0.9);
   }
 }
-@media (max-width: 3100px) {
-  .gallery__text {
-    padding: 120px 454px 0px 90px;
-  }
-}
-@media (max-width: 2200px) {
-  .gallery__text {
-    padding: 120px 263px 0px 90px;
-  }
-}
 @media (max-width: 1650px) {
   .gallery__slide-title {
     bottom: 35px;
     left: 40px;
-  }
-  .gallery__text {
-    padding-right: 190px;
   }
   .gallery__text-title {
     font-size: 36px;
@@ -1818,6 +1806,9 @@ input[type=search]::-webkit-search-results-decoration {
   .gallery__text-descr {
     font-size: 14px;
     margin-bottom: 80px;
+  }
+  .gallery__text-progress {
+    width: 210px;
   }
 }
 @media (max-width: 1200px) {
@@ -1831,7 +1822,6 @@ input[type=search]::-webkit-search-results-decoration {
     width: 250vw;
   }
   .gallery__text {
-    padding-right: 70px;
     padding-left: 40px;
   }
 }

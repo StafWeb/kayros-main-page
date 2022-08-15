@@ -75,7 +75,7 @@
     height: 100%;
   }
   &__text {
-    padding: 120px 800px 0px 90px;
+    padding: 120px 90px;
     &-title {
       font-family: "Playfair Display", serif;
       font-weight: 400;
@@ -97,6 +97,7 @@
     &-progress {
       overflow: hidden;
       position: relative;
+      width: 290px;
       height: 2px;
       background: rgba(176, 151, 110, 0.4);
       &::before {
@@ -137,16 +138,7 @@
     background: rgba(176, 151, 110, 0.9);
   }
 }
-@media (max-width: 3100px) {
-  .gallery__text {
-    padding: 120px 454px 0px 90px;
-  }
-}
-@media (max-width: 2200px) {
-  .gallery__text {
-    padding: 120px 263px 0px 90px;
-  }
-}
+
 @media (max-width: 1650px) {
   .gallery {
     &__slide-title {
@@ -154,7 +146,6 @@
       left: 40px;
     }
     &__text {
-      padding-right: 190px;
       &-title {
         font-size: 36px;
         margin-bottom: 50px;
@@ -162,6 +153,9 @@
       &-descr {
         font-size: 14px;
         margin-bottom: 80px;
+      }
+      &-progress{
+        width: 210px;
       }
     }
   }
@@ -177,7 +171,6 @@
     }
   }
   .gallery__text {
-    padding-right: 70px;
     padding-left: 40px;
   }
 }

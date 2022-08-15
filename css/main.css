@@ -1077,8 +1077,13 @@ input[type=search]::-webkit-search-results-decoration {
     max-height: 0;
     transition: 0.4s ease;
     margin: 0px;
-    gap: 14px;
+    gap: 0px;
     margin-left: 20px;
+  }
+  .burger-menu__item {
+    display: flex;
+    align-items: center;
+    height: 40px;
   }
   .burger-menu__social {
     display: none;
@@ -1179,19 +1184,19 @@ input[type=search]::-webkit-search-results-decoration {
     transform: rotate(90deg);
   }
   .burger-menu .inner-btn-first {
-    top: -55px;
+    top: -50px;
   }
   .burger-menu .inner-btn-second {
-    top: -55px;
+    top: -50px;
   }
   .burger-menu .inner-btn-third {
-    top: -55px;
+    top: -50px;
   }
   .burger-menu .wrapper-list {
     position: relative;
   }
   .burger-menu__item:last-child {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 }
 @media (max-width: 750px) {

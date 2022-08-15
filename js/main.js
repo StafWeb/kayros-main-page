@@ -141,7 +141,7 @@ headerAnim();
     ease: "none",
     scrollTrigger: {
       trigger: ".offer",
-      start: "5% bottom",
+      start: "top bottom",
       scroller: pageContainer,
       end: "bottom bottom",
       scrub: 1,
@@ -152,7 +152,7 @@ headerAnim();
   });
   offerTl.from(".offer__title", { opacity: 0, y: 20, duration: 1 })
     .from(".cards__filter-link", { opacity: 0, y: 15, duration: 0.6 }, "-=0.8")
-    .from(".cards__item", { opacity: 0, y: 20, duration: 0.3, stagger: 0.1 }, "-=0.8");
+    .from(".cards__item", { opacity: 0, y: 20, duration: 0.6, stagger: 0.1}, "-=0.8");
 
   let infoTl = gsap.timeline({
     ease: "none",

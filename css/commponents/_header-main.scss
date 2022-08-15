@@ -825,11 +825,16 @@
           max-height: 0;
           transition: 0.4s ease;
           margin: 0px;
-          gap: 14px;
+          gap: 0px;
           // margin-bottom: 20px;
           margin-left: 20px;
         }
       }
+    }
+    &__item{
+      display: flex;
+      align-items: center;
+      height: 40px;
     }
     &__social {
       display: none;
@@ -932,20 +937,20 @@
         }
       }
       &-first {
-        top: -55px;
+        top: -50px;
       }
       &-second {
-        top: -55px;
+        top: -50px;
       }
       &-third {
-        top: -55px;
+        top: -50px;
       }
     }
     .wrapper-list {
       position: relative;
     }
     &__item:last-child {
-      margin-bottom: 20px;
+      margin-bottom: 10px;
     }
   }
 }

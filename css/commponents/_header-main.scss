@@ -352,7 +352,7 @@
       width: 18px;
       max-width: 18px;
       height: 2px;
-      background-color: #ffffff;
+      background-color: #333333;
     }
     &::before {
       top: 12px;
@@ -617,12 +617,11 @@
 }
 .burger_active {
   opacity: 1;
-  transition: opacity 0.1s;
-  &::after,
-  &::before {
-    background-color: #333333;
-    transition: all 0.3s ease-out;
-  }
+  // &::after,
+  // &::before {
+  //   background-color: #333333;
+  //   transition: all 0.3s ease-out;
+  // }
 }
 .burger_active::before {
   animation: rotate-burger-before 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards
@@ -634,8 +633,8 @@
 .burger_active .header__burger-line {
   // opacity: 0;
   // display: none;
-  background-color: #333333;
-    transition: all 0.3s ease-out;
+  // background-color: #333333;
+    // transition: all 0.3s ease-out;
   animation: burger-anim 0.4s cubic-bezier(0.22, 1, 0.36, 1) none 0.1s;
 }
 // .burger_active .burger-menu__btn-line {

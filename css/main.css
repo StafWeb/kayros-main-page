@@ -610,7 +610,7 @@ input[type=search]::-webkit-search-results-decoration {
   width: 18px;
   max-width: 18px;
   height: 2px;
-  background-color: #ffffff;
+  background-color: #333333;
 }
 .burger-menu__btn::before {
   top: 12px;
@@ -878,11 +878,6 @@ input[type=search]::-webkit-search-results-decoration {
 
 .burger_active {
   opacity: 1;
-  transition: opacity 0.1s;
-}
-.burger_active::after, .burger_active::before {
-  background-color: #333333;
-  transition: all 0.3s ease-out;
 }
 
 .burger_active::before {
@@ -891,8 +886,6 @@ input[type=search]::-webkit-search-results-decoration {
 }
 
 .burger_active .header__burger-line {
-  background-color: #333333;
-  transition: all 0.3s ease-out;
   -webkit-animation: burger-anim 0.4s cubic-bezier(0.22, 1, 0.36, 1) none 0.1s;
           animation: burger-anim 0.4s cubic-bezier(0.22, 1, 0.36, 1) none 0.1s;
 }
@@ -1649,8 +1642,9 @@ input[type=search]::-webkit-search-results-decoration {
   height: 0px !important;
 }
 .wear__container {
-  width: 210vw;
-  max-width: 8640px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
   height: 100vh;
   display: flex;
 }
@@ -1716,7 +1710,11 @@ input[type=search]::-webkit-search-results-decoration {
   height: 100%;
 }
 .gallery__text {
-  padding: 120px 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 0px 90px;
+  padding-bottom: 20%;
 }
 .gallery__text-title {
   font-family: "Playfair Display", serif;
@@ -1816,7 +1814,6 @@ input[type=search]::-webkit-search-results-decoration {
   .wear__container {
     margin: auto 0px;
     height: 80vh;
-    width: 250vw;
   }
   .gallery__text {
     padding-left: 40px;

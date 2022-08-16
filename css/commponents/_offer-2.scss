@@ -11,6 +11,7 @@
     margin-bottom: 50px;
   }
   .cards {
+    width: 100%;
     margin: 0;
     overflow: hidden;
     &::-webkit-scrollbar {
@@ -25,7 +26,7 @@
     }
    }
     &__list {
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(4, 419px);
     }
     &__item {
       &:last-child {
@@ -38,29 +39,35 @@
   }
 }
 
-@media (max-width: 1550px) {
+@media (max-width: 1915px) {
   .offer-2 {
     .cards {
+      &__list{
+        justify-content: center;
+        grid-template-columns: repeat(4, 292px);
+      }
       &__image {
         height: 438px;
       }
     }
   }
 }
-@media (max-width: 1350px) {
+@media (max-width: 1395px) {
   .offer-2 {
     .cards {
       overflow: hidden;
       overflow-x: auto;
       &__list {
         display: flex;
+        justify-content: flex-start;
         margin-bottom: 30px;
       }
       &__item{
+        width: 292px;
         flex-shrink: 0;
       }
       &__image{
-        width: 292px;
+        width: 100%;
       }
     }
   }

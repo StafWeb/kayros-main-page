@@ -168,9 +168,11 @@
   .wear {
     display: flex;
     height: 100vh;
+    background-color: #ffffff;
     &__container {
-      margin: auto 0px;
-      height: 80vh;
+      background-color: #f1ebe2;
+      // margin: auto 0px;
+      height: 85vh;
     }
   }
   .gallery__text {

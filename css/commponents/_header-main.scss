@@ -617,49 +617,32 @@
 }
 .burger_active {
   opacity: 1;
-  // &::after,
-  // &::before {
-  //   background-color: #333333;
-  //   transition: all 0.3s ease-out;
-  // }
 }
 .burger_active::before {
   animation: rotate-burger-before 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards
       405ms,
     burger-anim 0.4s cubic-bezier(0.22, 1, 0.36, 1) none;
-  // top: 50%;
-  // transform: rotate(45deg);
 }
 .burger_active .header__burger-line {
-  // opacity: 0;
-  // display: none;
-  // background-color: #333333;
-    // transition: all 0.3s ease-out;
   animation: burger-anim 0.4s cubic-bezier(0.22, 1, 0.36, 1) none 0.1s;
 }
-// .burger_active .burger-menu__btn-line {
-//   // opacity: 0;
-//   // display: none;
-//   animation: burger-anim 0.4s cubic-bezier(0.22, 1, 0.36, 1) both 0.1s;
-// }
 
 .burger_active::after {
   animation: rotate-burger-after 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards
       415ms,
     burger-anim 0.4s cubic-bezier(0.22, 1, 0.36, 1) none 150ms;
-  // bottom: auto;
-  // top: 50%;
-  // transform: rotate(-45deg);
 }
+
 .rotate-anim {
   animation: rotate-anim 1.5s linear infinite both;
 }
+
 .burger-anim {
   animation: burger-anim 0.4s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 .header-logo-top,
 .header-logo-end,
-.item-logo ,
+.item-logo,
 .header__form-search,
 .search-logo,
 .cart-logo,
@@ -670,7 +653,7 @@
 .header__user > a > span,
 .header__burger-line,
 .header__burger::after,
-.header__burger::before{
+.header__burger::before {
   transition: all 0.3s ease 0.4s;
 }
 @media (max-width: 1650px) {
@@ -723,6 +706,9 @@
       margin-top: 0;
       padding-bottom: 0;
       height: 40px;
+      & > a span{
+        display: none;
+      }
     }
     &__nav,
     &__form {
@@ -1095,10 +1081,9 @@
   .header__item:first-child:hover .dropdown {
     max-height: 100vh;
     border-bottom: 1px solid rgba(51, 51, 51, 0.1);
-    transition: all 0.7s ease-in-out 0.3s;
+    transition: all 0.7s ease-in-out 0.35s;
   }
   .header__item:first-child:hover .header__item-img > svg {
-    // animation: rotate-list-img 0.3s ease both;
     transform: rotate(90deg);
     transition: all 0.3s ease;
   }

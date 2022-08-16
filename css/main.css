@@ -73,6 +73,9 @@ button, input {
   box-shadow: none;
   border-color: transparent;
   background: none;
+}
+
+button, a {
   cursor: pointer;
 }
 
@@ -84,10 +87,6 @@ button:focus, button:active {
 button::-moz-focus-inner {
   padding: 0;
   margin: 0;
-}
-
-label {
-  cursor: pointer;
 }
 
 legend {
@@ -3436,6 +3435,9 @@ input[type=search]::-webkit-search-results-decoration {
 .filters__list > li:last-child {
   margin-bottom: 42px;
 }
+.filters__list label {
+  cursor: pointer;
+}
 .filters__catalog-item {
   display: flex;
   align-items: center;
@@ -5795,7 +5797,6 @@ input[type=search]::-webkit-search-results-decoration {
   color: #333333;
   padding: 31px 0px 12px 20px;
   transition: background-color 0.3s ease;
-  cursor: default;
 }
 .order-form__inner input::-moz-placeholder {
   color: transparent;
@@ -5862,7 +5863,6 @@ input[type=search]::-webkit-search-results-decoration {
   line-height: 120%;
   color: #333333;
   transition: all 0.3s ease;
-  cursor: default;
 }
 .order-form__inner label > span {
   color: rgb(176, 151, 110);
@@ -5948,6 +5948,7 @@ input[type=search]::-webkit-search-results-decoration {
   gap: 20px;
   margin-right: 16px;
   height: 45px;
+  cursor: pointer;
 }
 .order-form__delivery-img {
   width: 94px;
@@ -6325,7 +6326,6 @@ input[type=search]::-webkit-search-results-decoration {
   padding-top: 25px;
   color: #333333;
   outline: none;
-  cursor: default;
 }
 .groupNote .order-form__inner > textarea:focus {
   outline: none;

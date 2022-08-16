@@ -142,6 +142,9 @@
     & > li:last-child {
       margin-bottom: 42px;
     }
+    label{
+      cursor: pointer;
+    }
   }
   &__catalog-item {
     display: flex;

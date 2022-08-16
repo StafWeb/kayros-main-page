@@ -56,9 +56,10 @@ button, input{
     box-shadow: none;
     border-color: transparent;
     background: none;
-    cursor: pointer;
 }
-
+button, a {
+  cursor: pointer;
+}
 input:focus, input:active,
 button:focus, button:active{
     outline:none;
@@ -67,10 +68,6 @@ button:focus, button:active{
 button::-moz-focus-inner{
     padding: 0;
     margin: 0;
-}
-
-label{
-    cursor: pointer;
 }
 
 legend{

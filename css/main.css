@@ -6170,6 +6170,7 @@ input[type=search]::-webkit-search-results-decoration {
   display: flex;
   align-items: center;
   gap: 20px;
+  cursor: pointer;
 }
 .orderReg__pay-info {
   display: flex;

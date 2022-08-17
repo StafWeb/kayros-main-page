@@ -117,6 +117,7 @@
           width: 100%;
           height: 100%;
           object-fit: cover;
+          
         }
       }
     }
@@ -170,7 +171,8 @@
     margin-bottom: 25px;
     & > img {
       width: 100%;
-      height: 100%;
+      // height: 100%;
+      transition: transform 0.4s ease-in-out;
     }
   }
   &__descr {
@@ -328,12 +330,13 @@
   }
   .cards__image:hover > img {
     transform: scale(1.05);
-    transition: transform 0.4s;
+    transition: transform 0.4s ease-in-out;
   }
   .cards {
     &__filter-sort:hover,
     &__filter-link:hover {
       color: #333333;
+      transition: color 0.3s ease;
     }
   }
 }

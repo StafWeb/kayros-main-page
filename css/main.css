@@ -2095,7 +2095,7 @@ input[type=search]::-webkit-search-results-decoration {
 }
 .cards__image > img {
   width: 100%;
-  height: 100%;
+  transition: transform 0.4s ease-in-out;
 }
 .cards__descr {
   font-size: 16px;
@@ -2241,10 +2241,11 @@ input[type=search]::-webkit-search-results-decoration {
   }
   .cards__image:hover > img {
     transform: scale(1.05);
-    transition: transform 0.4s;
+    transition: transform 0.4s ease-in-out;
   }
   .cards__filter-sort:hover, .cards__filter-link:hover {
     color: #333333;
+    transition: color 0.3s ease;
   }
 }
 .info {

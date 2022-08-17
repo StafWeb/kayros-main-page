@@ -71,15 +71,11 @@
     }
   }
   &__text {
-    width: 100%;
-    height: 100%;
-  }
-  &__text {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    padding: 0px 90px;
-    padding-bottom: 20%;
+    width: 100%;
+    height: 100%;
+    padding: 330px 250px;
     &-title {
       font-family: "Playfair Display", serif;
       font-weight: 400;
@@ -88,7 +84,7 @@
       letter-spacing: 0.1em;
       text-transform: uppercase;
       color: #333333;
-      margin-bottom: 80px;
+      margin-bottom: 340px;
     }
     &-descr {
       font-size: 21px;
@@ -96,12 +92,12 @@
       letter-spacing: 0.1em;
       text-transform: uppercase;
       color: #777777;
-      margin-bottom: 120px;
+      margin-bottom: 300px;
     }
     &-progress {
       overflow: hidden;
       position: relative;
-      width: 290px;
+      width: 581px;
       height: 2px;
       background: rgba(176, 151, 110, 0.4);
       &::before {
@@ -142,7 +138,22 @@
     background: rgba(176, 151, 110, 0.9);
   }
 }
-
+@media(max-width:3300px){
+  .gallery{
+    &__text{
+      padding: 120px 90px;
+      &-title{
+        margin-bottom: 80px;
+      }
+      &-descr{
+        margin-bottom: 120px;
+      }
+      &-progress{
+        width: 210px;
+      }
+    }
+  }
+}
 @media (max-width: 1650px) {
   .gallery {
     &__slide-title {

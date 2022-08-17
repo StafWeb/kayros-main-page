@@ -19,11 +19,17 @@ document.addEventListener('DOMContentLoaded', () => {
     let c = imgload++;
     counter.textContent = a;
     prelInner.style.width = `${a}` + '%';
-    if (a >= 99 || c == imgCount) {
-      preloader.classList.add('preloader_hide');
-      if (window.innerWidth >= 1000) {
-        headerAnim();
-      }
+    window.onload = () => {
+      setTimeout(() => {
+        if (a >= 99 || c == imgCount) {
+          preloader.classList.add('preloader_hide');
+          if (window.innerWidth >= 1000) {
+            headerAnim();
+          }
+        }
+      }, 100);
+      
     }
+    
   }
 });

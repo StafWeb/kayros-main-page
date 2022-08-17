@@ -206,7 +206,7 @@ input[type=search]::-webkit-search-results-decoration {
   display: flex;
   align-items: center;
   justify-content: center;
-  top: -3px;
+  top: -1px;
   left: 0;
   font-weight: 400;
   font-size: 200px;
@@ -215,13 +215,21 @@ input[type=search]::-webkit-search-results-decoration {
   z-index: -1;
 }
 
-.preloader--hide {
+.preloader_hide {
   opacity: 0;
   visibility: hidden;
-  z-index: -1;
+  z-index: -9999;
   transition: all 0.3s ease;
 }
 
+@media (max-width: 1000px) {
+  .preloader__count {
+    font-size: 150px;
+  }
+  .preloader__loader {
+    padding: 0 20px;
+  }
+}
 .header {
   position: relative;
   height: 100vh;

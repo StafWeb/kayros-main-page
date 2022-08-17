@@ -27,6 +27,22 @@
 //   };
 // });
 // });
+lightGallery(document.getElementById('animated-thumbnails-gallery'), {
+  // animateThumb: false,
+  // zoomFromOrigin: false,
+  // allowMediaOverlap: true,
+  licenseKey: "0000-0000-000-0000",
+  toggleThumb: true,
+  plugins: [lgZoom, lgThumbnail],
+  // mobileSettings: {
+  //   controls: false,
+  //   showCloseIcon: false,
+  //   download: false,
+  //   rotate: false
+  // }
+});
+
+
 gsap.registerPlugin(ScrollTrigger);
 let pageContainer = document.querySelector("#viewport");
 /* SMOOTH SCROLL */

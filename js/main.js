@@ -1,46 +1,19 @@
-// document.addEventListener('DOMContentLoaded', () => {
-
-// let mediaFiles = document.querySelectorAll('img');
-// let i = 0;
-// Array.from(mediaFiles).forEach((file, index) => {
-//   file.onload = () => {
-//     i++;
-//     // let count = ((i * 100) / mediaFiles.length).toFixed();
-//     let a = percents.textContent = ((i * 100) / mediaFiles.length).toFixed();
-//     console.log(a)
-//     window.onload = () => {
-//       // console.log(i);
-//       console.log(mediaFiles.length);
-//       setTimeout(() => {
-//         preloader.classList.add('preloader--hide');
-//         percents.textContent = '100';
-//         if (window.innerWidth > 1000) {
-//           console.log("message");
-//           return headerAnim();
-//         }
-//       }, 300);
-//     };
-
-//   };
-//   file.onerror = () => {
-//     console.log(file, index)
-//   };
-// });
-// });
-// lightGallery(document.getElementById('animated-thumbnails-gallery'), {
-//   // animateThumb: false,
-//   // zoomFromOrigin: false,
-//   // allowMediaOverlap: true,
-//   licenseKey: "0000-0000-000-0000",
-//   toggleThumb: true,
-//   plugins: [lgZoom, lgThumbnail],
-//   // mobileSettings: {
-//   //   controls: false,
-//   //   showCloseIcon: false,
-//   //   download: false,
-//   //   rotate: false
-//   // }
-// });
+export function headerAnim() {
+  let headAnim = gsap.timeline({ delay: 0.2, ease: "power1.out" });
+  headAnim.fromTo(".header__background", { opacity: 0, scale: 1.2 }, { opacity: 1, scale: 1, duration: 1 })
+    .from(".header__logo", { opacity: 0, duration: 0.6 })
+    .from(".header__item-img", { opacity: 0, rotate: -90, duration: 0.4 }, "-=0.4")
+    .from(".item1", { opacity: 0, duration: 0.5 }, "-=0.4")
+    .from(".items", { opacity: 0, x: -5, duration: 0.6 }, "-=0.4")
+    .from(".header__form", { opacity: 0, x: -5, duration: 0.6 }, "-=0.5")
+    .from(".header__user", { opacity: 0, x: -5, duration: 0.6 }, "-=0.5")
+    .from(".header__cart", { opacity: 0, x: -5, duration: 0.6 }, "-=0.5")
+    .from(".header__burger", { opacity: 0, x: -5, duration: 0.6 }, "-=0.5")
+    .from(".header__title", { opacity: 0, y: 40, duration: 0.6 }, "-=0.6")
+    .from(".header__descr", { opacity: 0, y: 30, duration: 0.6 }, "-=0.5")
+    .from(".header__thumb", { opacity: 0, y: 20, duration: 0.6 }, "-=0.5");
+  return headAnim;
+}
 jQuery(function ($) {
   $('.popup-gallery').magnificPopup({
     delegate: 'a',
@@ -92,23 +65,6 @@ ScrollTrigger.defaults({
   // },
 });
 if (window.innerWidth > 1000) {
-  function headerAnim() {
-    let headAnim = gsap.timeline({ delay: 0.2, ease: "power1.out" });
-    headAnim.fromTo(".header__background", { opacity: 0, scale: 1.2 }, { opacity: 1, scale: 1, duration: 1 })
-      .from(".header__logo", { opacity: 0, duration: 0.6 })
-      .from(".header__item-img", { opacity: 0, rotate: -90, duration: 0.4 }, "-=0.4")
-      .from(".item1", { opacity: 0, duration: 0.5 }, "-=0.4")
-      .from(".items", { opacity: 0, x: -5, duration: 0.6 }, "-=0.4")
-      .from(".header__form", { opacity: 0, x: -5, duration: 0.6 }, "-=0.5")
-      .from(".header__user", { opacity: 0, x: -5, duration: 0.6 }, "-=0.5")
-      .from(".header__cart", { opacity: 0, x: -5, duration: 0.6 }, "-=0.5")
-      .from(".header__burger", { opacity: 0, x: -5, duration: 0.6 }, "-=0.5")
-      .from(".header__title", { opacity: 0, y: 40, duration: 0.6 }, "-=0.6")
-      .from(".header__descr", { opacity: 0, y: 30, duration: 0.6 }, "-=0.5")
-      .from(".header__thumb", { opacity: 0, y: 20, duration: 0.6 }, "-=0.5");
-    return headAnim;
-  };
-  headerAnim();
   let pinBoxes = document.querySelectorAll(".pin-wrap > *");
   let pinWrap = document.querySelector(".pin-wrap");
   let pinWrapWidth = pinWrap.offsetWidth;

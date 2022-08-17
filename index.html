@@ -10,23 +10,16 @@
   <link rel="stylesheet" href="./css/commponents/magnific-popup.css">
   <link rel="stylesheet" href="./css/commponents/locomotive-scroll.min.css">
   <link href="./css/main.css" rel="stylesheet">
+  <script type="module" src="./js/preloader.js"></script>
   <title>Kayros</title>
 </head>
 
 <body>
-  <div id="preloader" class="preloader none">
+  <div class="preloader">
     <div class="preloader__loader">
-      <div class="loadingio-spinner-rolling-wopxwk46ahe">
-        <div class="ldio-zgxx64th47">
-          <div></div>
-        </div>
-      </div>
-
-      <span class="preloader__percents">
-        <span id="percents">0</span>%
-      </span>
+     <div class="preloader__progress"><div class="preloader__inner"></div></div>
+     <div class="preloader__count">0</div>
     </div>
-    <!-- /.preloader__loader -->
   </div>
   <div class="scrolsmooth" id="viewport">
     <header class="header">
@@ -944,7 +937,7 @@
   <script src="./js/libs/jquery-3.6.0.min.js"></script>
   <script src="./js/libs/jquery.magnific-popup.min.js"></script>
   <script src="./js/libs/locomotive-scroll.min.js"></script>
-  <script src="./js/main.js"></script>
+  <script type="module" src="./js/main.js"></script>
   <style type="text/css">
     ::-webkit-scrollbar {
       width: 0px;

@@ -226,3 +226,14 @@ burgerBtn.forEach(function (btn) {
 
   })
 });
+
+let loginModal = document.querySelector(".login-modal");
+let loginContainer = document.querySelector(".login-modal__container");
+let loginBtn = document.querySelector(".header__user > a");
+let loginModalClose = document.querySelectorAll(".login-modal__close");
+let loginClose = (modal) => { modal.classList.remove("card-modal_active"); body.classList.remove('stop-scroll'); stop1.classList.remove('stop-scroll'); };
+let loginOpen = (modal) => { modal.classList.add("card-modal_active"); body.classList.add('stop-scroll'); stop1.classList.add('stop-scroll'); };
+loginBtn.addEventListener('click', () => { loginOpen(loginModal); });
+loginContainer.addEventListener('click', (evt) => { evt.stopPropagation(); });
+loginModal.addEventListener('click', () => { loginClose(loginModal); });
+loginModalClose.forEach(el => { el.addEventListener('click', () => { loginClose(loginModal); }) });

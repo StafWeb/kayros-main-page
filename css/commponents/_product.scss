@@ -19,7 +19,7 @@
     letter-spacing: 0.05em;
     text-transform: uppercase;
     color: #333333;
-    margin-bottom: 35px;
+    margin-bottom: 30px;
   }
   &__top {
     display: flex;
@@ -29,7 +29,6 @@
   .cards {
     width: max-content;
     margin: 0;
-    // margin-right: auto;
     margin-bottom: 50px;
     &__top {
       display: flex;
@@ -153,13 +152,12 @@
         position: relative;
         display: flex;
         align-items: center;
-        padding: 0 16px 0 24px;
-        height: 40px;
+        padding: 8px 20px 10px 24px;
         background-color: #e7e7e7;
         border-radius: 4px;
         transition: all 0.3s ease;
         font-weight: 400;
-        font-size: 15px;
+        font-size: 16px;
         line-height: 140%;
         color: #333333;
         cursor: pointer;
@@ -176,13 +174,7 @@
     }
     &__list {
       grid-template-columns: repeat(4, 344px);
-      // display: flex;
-      // flex-wrap: wrap;
       gap: 50px 17px;
-    }
-    &__item {
-      // width: 344px;
-      // opacity: 0;
     }
     &__item-color {
       transition: all 0.3s ease;
@@ -251,7 +243,7 @@
     span {
       font-weight: 400;
       font-size: 11px;
-      line-height: 120%;
+      line-height: 121%;
       color: #333333;
       cursor: pointer;
     }

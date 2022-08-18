@@ -884,6 +884,115 @@ input[type=search]::-webkit-search-results-decoration {
           animation: burger-anim 0.4s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
+.login-modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+  opacity: 0;
+  z-index: -1;
+  transition: all 0.3s cubic-bezier(0.8, 0, 0.8, 1);
+}
+.login-modal__container {
+  display: flex;
+  flex-direction: column;
+  max-width: 520px;
+  background-color: #ffffff;
+  position: relative;
+}
+.login-modal__title {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 120%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #333333;
+  margin: 30px;
+}
+.login-modal__header {
+  display: none;
+}
+.login-modal__entry {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.login-modal__entry > a {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 120%;
+  color: #333333;
+  border-bottom: 1px solid rgba(176, 151, 110, 0.5);
+  transition: all 0.3s ease;
+}
+.login-modal__close {
+  position: absolute;
+  top: 27px;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login-modal__close > span:first-child {
+  display: none;
+}
+.login-modal__close > span:last-child {
+  display: flex;
+  width: 14px;
+  height: 14px;
+  background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='1.39996' y='3.05176e-05' width='17.8191' height='1.9799' transform='rotate(45 1.39996 3.05176e-05)' fill='%23333333'/%3E%3Crect x='0.00012207' y='12.6' width='17.8191' height='1.9799' transform='rotate(-45 0.00012207 12.6)' fill='%23333333'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.login-modal__wrapper {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  gap: 20px;
+  align-items: center;
+  padding: 30px;
+  margin-top: 30px;
+  background-color: #f5f5f5;
+}
+.login-modal__wrapper > p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  color: rgba(51, 51, 51, 0.7);
+}
+.login-modal__reg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 40px;
+  height: 62px;
+  border: 1px solid #b0976e;
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 120%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #b0976e;
+}
+.login-modal .order-form {
+  padding: 0px 30px;
+}
+.login-modal .order-form__group, .login-modal .order-form__inner {
+  width: 100%;
+}
+
 .header-logo-top,
 .header-logo-end,
 .item-logo,
@@ -1219,6 +1328,62 @@ input[type=search]::-webkit-search-results-decoration {
   .burger-menu__header {
     height: 61px;
   }
+  .login-modal__container {
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+  }
+  .login-modal__wrapper {
+    background-color: transparent;
+    border-top: 1px solid rgba(51, 51, 51, 0.1);
+    padding: 30px 15px;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+  }
+  .login-modal__close {
+    top: 10px;
+    gap: 13px;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+  }
+  .login-modal__close > span:first-child {
+    display: flex;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 140%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.7);
+  }
+  .login-modal__header {
+    display: flex;
+    height: 60px;
+    align-items: center;
+    padding: 0px 15px;
+    border-bottom: 1px solid rgba(51, 51, 51, 0.1);
+  }
+  .login-modal__logo {
+    width: 74px;
+    height: 36.16px;
+  }
+  .login-modal__title {
+    margin: 25px 15px 30px;
+    font-size: 25px;
+  }
+  .login-modal .order-form {
+    padding: 0px 15px;
+  }
+}
+@media (max-width: 378px) {
+  .login-modal__wrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .login-modal__wrapper > p {
+    text-align: center;
+  }
 }
 @media (min-width: 1000px) {
   .header__top:hover .header__hover {
@@ -1348,6 +1513,10 @@ input[type=search]::-webkit-search-results-decoration {
   .burger-menu__tel:active {
     color: #927d54;
     transition: color 0.3s ease;
+  }
+  .login-modal__entry > a:hover {
+    border-color: transparent;
+    transition: all 0.3s ease;
   }
 }
 .burger__list_active {
@@ -2851,7 +3020,7 @@ input[type=search]::-webkit-search-results-decoration {
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: #333333;
-  margin-bottom: 35px;
+  margin-bottom: 30px;
 }
 .product__top {
   display: flex;
@@ -2982,13 +3151,12 @@ input[type=search]::-webkit-search-results-decoration {
   position: relative;
   display: flex;
   align-items: center;
-  padding: 0 16px 0 24px;
-  height: 40px;
+  padding: 8px 20px 10px 24px;
   background-color: #e7e7e7;
   border-radius: 4px;
   transition: all 0.3s ease;
   font-weight: 400;
-  font-size: 15px;
+  font-size: 16px;
   line-height: 140%;
   color: #333333;
   cursor: pointer;
@@ -3072,7 +3240,7 @@ input[type=search]::-webkit-search-results-decoration {
 .breadcrumbs__item span {
   font-weight: 400;
   font-size: 11px;
-  line-height: 120%;
+  line-height: 121%;
   color: #333333;
   cursor: pointer;
 }
@@ -3464,7 +3632,7 @@ input[type=search]::-webkit-search-results-decoration {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 16px;
+  gap: 15px;
   overflow: hidden;
   max-height: 0;
   transition: all 0.4s ease;
@@ -3481,10 +3649,13 @@ input[type=search]::-webkit-search-results-decoration {
   color: #333333;
 }
 .filters__list > li:last-child {
-  margin-bottom: 42px;
+  margin-bottom: 40px;
 }
 .filters__list label {
   cursor: pointer;
+}
+.filters__category-item, .filters__collection-item {
+  height: 21px;
 }
 .filters__catalog-item {
   display: flex;
@@ -3649,7 +3820,7 @@ input[type=search]::-webkit-search-results-decoration {
   align-items: center;
   justify-content: center;
   position: relative;
-  padding: 0 26px;
+  width: 73px;
   height: 40px;
   font-weight: 400;
   font-size: 13px;

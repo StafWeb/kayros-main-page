@@ -640,6 +640,118 @@
 .burger-anim {
   animation: burger-anim 0.4s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
+
+.login-modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+  opacity: 0;
+  z-index: -1;
+  transition: all 0.3s cubic-bezier(0.8, 0, 0.8, 1);
+  &__container {
+    display: flex;
+    flex-direction: column;
+    max-width: 520px;
+    background-color: #ffffff;
+    // padding: 30px;
+    position: relative;
+  }
+  &__title {
+    font-family: "Playfair Display";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 120%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #333333;
+    margin: 30px;
+  }
+  &__header {
+    display: none;
+  }
+  &__entry {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    & > a {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 120%;
+      color: #333333;
+      border-bottom: 1px solid rgba(176, 151, 110, 0.5);
+      transition: all 0.3s ease;
+    }
+  }
+  &__close {
+    position: absolute;
+    top: 27px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    & > span:first-child {
+      display: none;
+    }
+    & > span:last-child {
+      display: flex;
+      width: 14px;
+      height: 14px;
+      background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='1.39996' y='3.05176e-05' width='17.8191' height='1.9799' transform='rotate(45 1.39996 3.05176e-05)' fill='%23333333'/%3E%3Crect x='0.00012207' y='12.6' width='17.8191' height='1.9799' transform='rotate(-45 0.00012207 12.6)' fill='%23333333'/%3E%3C/svg%3E%0A");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+  }
+  &__wrapper {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    gap: 20px;
+    align-items: center;
+    padding: 30px;
+    margin-top: 30px;
+    background-color: #f5f5f5;
+    & > p {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 140%;
+      color: rgba(51, 51, 51, 0.7);
+    }
+  }
+  &__reg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 40px;
+    height: 62px;
+    border: 1px solid #b0976e;
+    border-radius: 4px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 120%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #b0976e;
+  }
+  .order-form {
+    padding: 0px 30px;
+    &__group,
+    &__inner {
+      width: 100%;
+    }
+  }
+}
+
 .header-logo-top,
 .header-logo-end,
 .item-logo,
@@ -706,7 +818,7 @@
       margin-top: 0;
       padding-bottom: 0;
       height: 40px;
-      & > a span{
+      & > a span {
         display: none;
       }
     }
@@ -990,6 +1102,60 @@
       height: 61px;
     }
   }
+  .login-modal {
+    &__container {
+      max-width: 100%;
+      width: 100%;
+      height: 100%;
+    }
+    &__wrapper {
+      background-color: transparent;
+      border-top: 1px solid rgba(51, 51, 51, 0.1);
+      padding: 30px 15px;
+      height: max-content;
+    }
+    &__close {
+      top: 10px;
+      gap: 13px;
+      width: max-content;
+      & > span:first-child {
+        display: flex;
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 140%;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: rgba(0, 0, 0, 0.7);
+      }
+    }
+    &__header {
+      display: flex;
+      height: 60px;
+      align-items: center;
+      padding: 0px 15px;
+      border-bottom: 1px solid rgba(51, 51, 51, 0.1);
+    }
+    &__logo {
+      width: 74px;
+      height: 36.16px;
+    }
+    &__title{
+      margin: 25px 15px 30px;
+      font-size: 25px;
+    }
+    .order-form{
+      padding: 0px 15px;
+    }
+  }
+}
+@media(max-width:378px){
+  .login-modal__wrapper{
+    flex-wrap: wrap;
+    justify-content: center;
+    & > p{
+      text-align: center;
+    }
+  }
 }
 @media (min-width: 1000px) {
   .header__top {
@@ -1148,6 +1314,10 @@
   .burger-menu__tel:active {
     color: #927d54;
     transition: color 0.3s ease;
+  }
+  .login-modal__entry > a:hover {
+    border-color: transparent;
+    transition: all 0.3s ease;
   }
 }
 .burger__list_active {

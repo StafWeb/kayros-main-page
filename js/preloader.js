@@ -2,12 +2,12 @@ import { headerAnim } from './main.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   let preloader = document.querySelector(".preloader"),
-      imgCount = document.querySelectorAll("img").length,
-      prelInner = document.querySelector(".preloader__inner"),
-      counter = document.querySelector(".preloader__count"),
-      percent = 100 / imgCount,
-      count = 0,
-      imgload = 0;
+    imgCount = document.querySelectorAll("img").length,
+    prelInner = document.querySelector(".preloader__inner"),
+    counter = document.querySelector(".preloader__count"),
+    percent = 100 / imgCount,
+    count = 0,
+    imgload = 0;
   for (let i = 0; i < imgCount; i++) {
     let imgCopy = new Image();
     imgCopy.src = document.images[i].src;
@@ -19,12 +19,10 @@ document.addEventListener('DOMContentLoaded', () => {
     let c = imgload++;
     counter.textContent = a;
     prelInner.style.width = `${a}` + '%';
-    window.onload = () => {
-      if (a >= 99 || c == imgCount) {
-        preloader.classList.add('preloader_hide');
-        if (window.innerWidth >= 1000) {
-          headerAnim();
-        }
+    if (a >= 99 || c == imgCount) {
+      preloader.classList.add('preloader_hide');
+      if (window.innerWidth >= 1000) {
+        headerAnim();
       }
     }
   };

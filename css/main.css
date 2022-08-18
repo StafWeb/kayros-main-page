@@ -2595,6 +2595,10 @@ input[type=search]::-webkit-search-results-decoration {
 }
 
 /* overlay animate in */
+.mfp-zoom-out-cur {
+  overflow: hidden;
+}
+
 .mfp-fade.mfp-bg.mfp-ready {
   opacity: 0.8;
 }

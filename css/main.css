@@ -3611,11 +3611,12 @@ input[type=search]::-webkit-search-results-decoration {
   cursor: pointer;
   margin-bottom: 25px;
 }
-.filters__btn_active > svg {
+.filters__btn > svg {
   transform: rotate(180deg);
   transition: transform 0.3s ease-in-out;
 }
-.filters__btn > svg {
+.filters__btn_active > svg {
+  transform: rotate(0);
   transition: transform 0.3s ease-in-out;
 }
 .filters__title {

@@ -14,6 +14,8 @@ export function headerAnim() {
     .from(".header__thumb", { opacity: 0, y: 20, duration: 0.6 }, "-=0.5");
   return headAnim;
 }
+import { burger, footerMenu, burgerMenu } from './commponents/menu.js';
+import { loginModal } from './commponents/modal.js';
 jQuery(function ($) {
   $('.popup-gallery').magnificPopup({
     delegate: 'a',
@@ -30,7 +32,7 @@ jQuery(function ($) {
 gsap.registerPlugin(ScrollTrigger);
 let pageContainer = document.querySelector("#viewport");
 /* SMOOTH SCROLL */
-const scroller = new LocomotiveScroll({
+let scroller = new LocomotiveScroll({
   el: pageContainer,
   smooth: true,
   getSpeed: true,
@@ -64,11 +66,10 @@ ScrollTrigger.defaults({
   // },
 });
 if (window.innerWidth > 1000) {
-  let pinBoxes = document.querySelectorAll(".pin-wrap > *");
   let pinWrap = document.querySelector(".pin-wrap");
   let pinWrapWidth = pinWrap.offsetWidth;
   let horizontalScrollLength = pinWrapWidth - window.innerWidth;
-  let mySwiperBlock = gsap.to(".gallery__wrapper", {
+  gsap.to(".gallery__wrapper", {
     x: - pinWrapWidth / 2,
     ease: "none",
     scrollTrigger: {
@@ -96,7 +97,6 @@ if (window.innerWidth > 1000) {
   swiperAnim.from(".gallery__text-title", { opacity: 0, y: 30, duration: 0.6 })
     .from(".gallery__text-descr", { opacity: 0, y: 30, duration: 0.6 }, "-=0.5")
     .fromTo(".gallery__slide-img", { opacity: 0, scale: 1.1 }, { opacity: 1, scale: 1, stagger: 0.1 }, "-=0.5")
-    // .fromTo(".link-slide::after", {scale:0}, {scale: 1, duration:0.4} )
     .from(".gallery__slide-title", { opacity: 0, y: 10 });
 
   let colletctionTl = gsap.timeline({
@@ -172,67 +172,8 @@ if (window.innerWidth > 1000) {
 ScrollTrigger.addEventListener("refresh", () => scroller.update());
 ScrollTrigger.refresh();
 
+burger();
+burgerMenu();
+footerMenu();
+loginModal();
 
-const burger = document?.querySelector('[data-burger]');
-const nav = document?.querySelector('[data-burger-menu]');
-const burgerLog = document.querySelector('.burger__logo');
-const navItems = nav?.querySelectorAll('.burger-menu__item');
-const body = document.body;
-const headerItem = document.querySelectorAll('.header__item');
-const headerLog = document.querySelector('.header__logo')
-const burgerInner = document.querySelector('[data-burger-inner]');
-let stop1 = document.documentElement;
-burger.addEventListener('click', () => {
-  stop1.classList.toggle('stop-scroll');
-  body.classList.toggle('stop-scroll');
-  burger.classList.toggle('burger_active');
-  nav.classList.toggle('burger-menu_active');
-  burgerLog.classList.toggle('burger__logo_active');
-  burgerInner.classList.toggle('burger_active')
-});
-burgerInner.addEventListener('click', () => {
-  stop1.classList.remove('stop-scroll');
-  body.classList.remove('stop-scroll');
-  burgerInner.classList.remove('burger_active')
-  burger.classList.remove('burger_active');
-  nav.classList.remove('burger-menu_active');
-  burgerLog.classList.remove('burger__logo_active');
-})
-navItems.forEach(el => {
-  el.addEventListener('click', () => {
-    stop1.classList.remove('stop-scroll');
-    body.classList.remove('stop-scroll');
-    burgerInner.classList.remove('burger_active')
-    burger.classList.remove('burger_active');
-    nav.classList.remove('burger-menu_active');
-    burgerLog.classList.remove('burger__logo_active');
-  });
-});
-
-const footerBtn = document.querySelectorAll("[data-menu]");
-footerBtn.forEach(function (btn) {
-  btn.addEventListener("click", function () {
-    btn.classList.toggle('btn-mob_active');
-    this.nextElementSibling.classList.toggle("footer__list_active");
-  });
-});
-
-const burgerBtn = document.querySelectorAll(".inner-btn");
-burgerBtn.forEach(function (btn) {
-  btn.addEventListener('click', function () {
-    btn.classList.toggle('inner-btn_active');
-    this.nextElementSibling.classList.toggle("burger__list_active");
-
-  })
-});
-
-let loginModal = document.querySelector(".login-modal");
-let loginContainer = document.querySelector(".login-modal__container");
-let loginBtn = document.querySelector(".header__user > a");
-let loginModalClose = document.querySelectorAll(".login-modal__close");
-let loginClose = (modal) => { modal.classList.remove("card-modal_active"); body.classList.remove('stop-scroll'); stop1.classList.remove('stop-scroll'); };
-let loginOpen = (modal) => { modal.classList.add("card-modal_active"); body.classList.add('stop-scroll'); stop1.classList.add('stop-scroll'); };
-loginBtn.addEventListener('click', () => { loginOpen(loginModal); });
-loginContainer.addEventListener('click', (evt) => { evt.stopPropagation(); });
-loginModal.addEventListener('click', () => { loginClose(loginModal); });
-loginModalClose.forEach(el => { el.addEventListener('click', () => { loginClose(loginModal); }) });

@@ -1359,14 +1359,14 @@ input[type=search]::-webkit-search-results-decoration {
   }
   .login-modal__header {
     display: flex;
-    height: 60px;
+    height: 61px;
     align-items: center;
-    padding: 0px 15px;
+    padding: 0px 20px;
     border-bottom: 1px solid rgba(51, 51, 51, 0.1);
   }
   .login-modal__logo {
     width: 74px;
-    height: 36.16px;
+    height: 36px;
   }
   .login-modal__title {
     margin: 25px 15px 30px;

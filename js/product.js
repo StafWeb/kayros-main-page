@@ -1,3 +1,5 @@
+import { burger, footerMenu, burgerMenu } from './commponents/menu.js';
+import { loginModal } from './commponents/modal.js'
 gsap.registerPlugin(ScrollTrigger);
 ScrollTrigger.defaults({
   // toggleActions: "restart complete reverse reset",
@@ -30,8 +32,6 @@ if (window.innerWidth > 1000) {
       scrollTrigger: {
         trigger: trig,
         start: "28% 90%",
-        // end: "bottom bottom",
-        // toggleActions: "play none none reset"
       }
     });
   };
@@ -41,8 +41,6 @@ if (window.innerWidth > 1000) {
       trigger: ".footer",
       start: "20% 85%",
       toggleActions: "play none none none",
-      // endTrigger: ".footer",
-      // end: "bottom bottom",
       scrub: false,
     }
   });
@@ -66,60 +64,17 @@ if (window.innerWidth > 1000) {
     });
   };
 };
-
 ScrollTrigger.refresh();
 
-let burger = document?.querySelector('[data-burger]');
-let nav = document?.querySelector('[data-burger-menu]');
-let burgerLog = document.querySelector('.burger__logo');
-let navItems = nav?.querySelectorAll('.burger-menu__item');
-let burgerInner = document.querySelector('[data-burger-inner]');
-let stop1 = document.documentElement;
-let body = document.body;
-burger.addEventListener('click', () => {
-  stop1.classList.toggle('stop-scroll');
-  body.classList.toggle('stop-scroll');
-  burger.classList.toggle('burger_active');
-  nav.classList.toggle('burger-menu_active');
-  burgerLog.classList.toggle('burger__logo_active');
-  burgerInner.classList.toggle('burger_active')
-});
-burgerInner.addEventListener('click', () => {
-  stop1.classList.remove('stop-scroll');
-  body.classList.remove('stop-scroll');
-  burgerInner.classList.remove('burger_active')
-  burger.classList.remove('burger_active');
-  nav.classList.remove('burger-menu_active');
-  burgerLog.classList.remove('burger__logo_active');
-})
-navItems.forEach(el => {
-  el.addEventListener('click', () => {
-    stop1.classList.remove('stop-scroll');
-    body.classList.remove('stop-scroll');
-    burger.classList.remove('burger_active');
-    nav.classList.remove('burger-menu_active');
-    burgerLog.classList.remove('burger__logo_active');
-  });
-});
+burger();
+footerMenu();
+burgerMenu();
+loginModal();
 
 document.querySelectorAll(".filters").forEach(el => {
   new SimpleBar(el);
 });
 
-let footerBtn = document.querySelectorAll("[data-menu]");
-footerBtn.forEach(function (btn) {
-  btn.addEventListener("click", function () {
-    btn.classList.toggle('btn-mob_active');
-    this.nextElementSibling.classList.toggle("footer__list_active");
-  });
-});
-let burgerBtn = document.querySelectorAll(".inner-btn");
-burgerBtn.forEach(function (btn) {
-  btn.addEventListener('click', function () {
-    btn.classList.toggle('inner-btn_active');
-    this.nextElementSibling.classList.toggle("burger__list_active");
-  })
-});
 
 let filtersBtn = document.querySelectorAll(".filters__btn");
 filtersBtn.forEach(function (btn) {
@@ -129,13 +84,15 @@ filtersBtn.forEach(function (btn) {
   })
 });
 
-let sortBtn = document.querySelector(".cards__sort-btn");
-let sortList = document.querySelector(".cards__sort-list");
-let sort = document.querySelector(".cards__sort");
-let sortItem = document.querySelectorAll(".cards__sort-item");
-let sortInner = document.querySelectorAll(".cards__sort-inner");
-let a = document.querySelector(".cards__sort-inner > input[checked]");
-let b = a.parentNode;
+let sortBtn = document.querySelector(".cards__sort-btn"),
+  sortList = document.querySelector(".cards__sort-list"),
+  sort = document.querySelector(".cards__sort"),
+  sortItem = document.querySelectorAll(".cards__sort-item"),
+  sortInner = document.querySelectorAll(".cards__sort-inner"),
+  a = document.querySelector(".cards__sort-inner > input[checked]"),
+  body = document.body,
+  stop1 = document.documentElement,
+  b = a.parentNode;
 sortBtn.textContent = b.textContent;
 sortBtn.addEventListener('click', () => {
   sortList.classList.add("cards__sort-list_active");
@@ -156,10 +113,11 @@ sortInner.forEach(el => {
     sortBtn.textContent = el.textContent;
   })
 });
-let filter = document.querySelector(".filters");
-let filterBtn = document.querySelector(".filter-btn");
-let filterShow = document.querySelector(".filters__btn-show");
-let filterClose = document.querySelector(".filters__btn-close");
+
+let filter = document.querySelector(".filters"),
+  filterBtn = document.querySelector(".filter-btn"),
+  filterShow = document.querySelector(".filters__btn-show"),
+  filterClose = document.querySelector(".filters__btn-close");
 filterBtn.addEventListener('click', function () {
   stop1.classList.add('stop-scroll');
   body.classList.add('stop-scroll');
@@ -171,7 +129,6 @@ filterShow.addEventListener('click', function () {
   body.classList.remove('stop-scroll');
   filter.classList.remove("filters_active");
 });
-
 filterClose.addEventListener('click', function () {
   stop1.classList.remove('stop-scroll');
   body.classList.remove('stop-scroll');

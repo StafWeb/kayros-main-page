@@ -279,12 +279,13 @@
 }
 .btn-1 {
   border: 1px solid #b0976e;
-  transition: all 0.4s ease;
   color: #b0976e;
+  transition: all 0.3s ease;
 }
 .btn-2 {
   background: #b0976e;
   border: 1px solid #b0976e;
+  transition: all 0.3s ease;
 }
 @media (min-width: 1000px) {
   .social-link:hover {
@@ -326,10 +327,12 @@
   background: #927d54;
   border-color: #927d54;
   color: #ffffff;
+  transition: all 0.3s ease;
 }
 .btn-2:active {
   background: #77623a;
   border-color: #77623a;
+  transition: all 0.3s ease;
 }
 .stop-scroll {
   overflow: hidden;

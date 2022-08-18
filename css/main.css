@@ -2938,13 +2938,14 @@ input[type=search]::-webkit-search-results-decoration {
 
 .btn-1 {
   border: 1px solid #b0976e;
-  transition: all 0.4s ease;
   color: #b0976e;
+  transition: all 0.3s ease;
 }
 
 .btn-2 {
   background: #b0976e;
   border: 1px solid #b0976e;
+  transition: all 0.3s ease;
 }
 
 @media (min-width: 1000px) {
@@ -2985,11 +2986,13 @@ input[type=search]::-webkit-search-results-decoration {
   background: #927d54;
   border-color: #927d54;
   color: #ffffff;
+  transition: all 0.3s ease;
 }
 
 .btn-2:active {
   background: #77623a;
   border-color: #77623a;
+  transition: all 0.3s ease;
 }
 
 .stop-scroll {
@@ -6115,12 +6118,6 @@ input[type=search]::-webkit-search-results-decoration {
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: #ffffff;
-  opacity: 1;
-  transition: opacity 0.3s ease;
-}
-.order-form__btn:disabled {
-  opacity: 0.8;
-  transition: opacity 0.3s ease;
 }
 .order-form__deliveryInfo > p {
   font-weight: 700;

@@ -2282,7 +2282,17 @@ input[type=search]::-webkit-search-results-decoration {
     grid-template-columns: repeat(4, 1fr);
   }
 }
+@media (max-width: 1200px) {
+  .offer {
+    margin: 0;
+    margin-bottom: 120px;
+  }
+}
 @media (max-width: 1000px) {
+  .offer {
+    margin-top: 70px;
+    margin-bottom: 70px;
+  }
   .offer__button {
     display: none;
   }
@@ -2330,8 +2340,9 @@ input[type=search]::-webkit-search-results-decoration {
   }
 }
 @media (max-width: 750px) {
-  .offer .container {
-    padding: 50px 0px;
+  .offer {
+    margin-top: 50px;
+    margin-bottom: 50px;
   }
   .offer__title {
     font-size: 27px;

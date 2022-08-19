@@ -52,7 +52,7 @@ ul, li {
 }
 
 img, svg {
-  vertical-align: top;
+  vertical-align: middle;
   max-width: 100%;
   height: auto;
   -o-object-fit: cover;
@@ -1607,7 +1607,6 @@ input[type=search]::-webkit-search-results-decoration {
 .collection {
   position: relative;
   background-color: #ffffff;
-  overflow: hidden;
 }
 .collection__title {
   font-family: "Playfair Display", sans-serif;
@@ -1637,34 +1636,32 @@ input[type=search]::-webkit-search-results-decoration {
 }
 .collection__list {
   display: grid;
-  grid-template-columns: repeat(3, 550px);
+  grid-template-columns: repeat(3, 1fr);
   justify-content: center;
   gap: 45px;
   scrollbar-width: none;
 }
 .collection__item {
+  display: block;
   position: relative;
   width: 100%;
-  overflow: hidden;
-  height: 825px;
+  height: 100%;
+  max-height: 825px;
 }
 .collection__item::after {
   position: absolute;
   content: "";
   z-index: 1;
   top: 0;
+  left: 0;
   width: 99.9%;
   height: 100%;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 69.79%, rgba(0, 0, 0, 0.35) 100%);
 }
 .collection__item-img {
-  position: absolute;
-  top: 0;
-  left: 0;
   -o-object-fit: cover;
      object-fit: cover;
   width: 99.9%;
-  height: 100%;
   transition: all 0.4s ease;
 }
 .collection__item-link {
@@ -1693,11 +1690,7 @@ input[type=search]::-webkit-search-results-decoration {
 
 @media (max-width: 1900px) {
   .collection__list {
-    grid-template-columns: repeat(3, 380px);
     gap: 40px;
-  }
-  .collection__item {
-    height: 570px;
   }
   .collection__item-link {
     bottom: 35px;
@@ -1709,12 +1702,6 @@ input[type=search]::-webkit-search-results-decoration {
     font-size: 26px;
     bottom: 41px;
     left: 35px;
-  }
-  .collection__list {
-    grid-template-columns: repeat(3, 288px);
-  }
-  .collection__item {
-    height: 432px;
   }
 }
 @media (max-width: 1000px) {

@@ -2,7 +2,6 @@
 .collection {
   position: relative;
   background-color: #ffffff;
-  overflow: hidden;
   &__title {
     font-family: "Playfair Display", sans-serif;
     font-style: normal;
@@ -32,21 +31,24 @@
   }
   &__list {
     display: grid;
-    grid-template-columns: repeat(3, 550px);
+    grid-template-columns: repeat(3, 1fr);
     justify-content: center;
     gap: 45px;
     scrollbar-width: none;
   }
   &__item {
+    display: block;
     position: relative;
     width: 100%;
-    overflow: hidden;
-    height: 825px;
+    height: 100%;
+    // overflow: hidden;
+    max-height: 825px;
     &::after {
       position: absolute;
       content: "";
       z-index: 1;
       top: 0;
+      left: 0;
       width: 99.9%;
       height: 100%;
       background: linear-gradient(
@@ -56,12 +58,8 @@
       );
     }
     &-img {
-      position: absolute;
-      top: 0;
-      left: 0;
       object-fit: cover;
       width: 99.9%;
-      height: 100%;
       transition: all 0.4s ease;
     }
     &-link {
@@ -94,11 +92,10 @@
   //   max-width: 1400px;
   // }
   .collection__list {
-    grid-template-columns: repeat(3, 380px);
     gap: 40px;
   }
   .collection__item {
-    height: 570px;
+  //  max-height: 570px;
     &-link {
       bottom: 35px;
       left: 40px;
@@ -111,11 +108,8 @@
     bottom: 41px;
     left: 35px;
   }
-  .collection__list{
-    grid-template-columns: repeat(3, 288px);
-  }
   .collection__item {
-    height: 432px;
+    // max-height: 432px;
   }
 }
 @media (max-width: 1000px) {

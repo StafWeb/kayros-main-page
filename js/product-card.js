@@ -1,4 +1,4 @@
-import { sliderAndZoom } from './commponents/slider.js';
+import { slider } from './commponents/slider.js';
 import { burger, burgerMenu, footerMenu } from './commponents/menu.js';
 import { tableModal, loginModal } from './commponents/modal.js';
 if (window.innerWidth > 1000) {
@@ -12,7 +12,8 @@ if (window.innerWidth > 1000) {
     .from(".header__cart", { opacity: 0, x: -5, duration: 0.6 }, "-=0.5")
     .from(".header__burger", { opacity: 0, x: -5, duration: 0.6 }, "-=0.5");
 };
-sliderAndZoom();
+
+slider();
 burger();
 burgerMenu();
 footerMenu();

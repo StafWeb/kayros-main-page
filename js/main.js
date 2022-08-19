@@ -16,18 +16,19 @@ export function headerAnim() {
 }
 import { burger, footerMenu, burgerMenu } from './commponents/menu.js';
 import { loginModal } from './commponents/modal.js';
-jQuery(function ($) {
-  $('.popup-gallery').magnificPopup({
-    delegate: 'a',
-    type: 'image',
-    gallery: {
-      enabled: true,
-      navigateByImgClick: true,
-    },
-    removalDelay: 300,
-    mainClass: 'mfp-fade'
-  });
-});
+// jQuery(function ($) {
+//   $('.popup-gallery').magnificPopup({
+//     delegate: 'a',
+//     type: 'image',
+//     gallery: {
+//       enabled: true,
+//       navigateByImgClick: true,
+//     },
+//     removalDelay: 300,
+//     mainClass: 'mfp-fade'
+//   });
+// });
+
 
 gsap.registerPlugin(ScrollTrigger);
 let pageContainer = document.querySelector("#viewport");
@@ -168,6 +169,7 @@ if (window.innerWidth > 1000) {
     .from(".footer__nav", { opacity: 0, y: 10, duration: 0.65 }, "-=0.65")
     .from(".footer__bottom-btn", { opacity: 0, y: 30, duration: 0.65 }, "+=0.8")
     .from(".footer__bottom-descr", { opacity: 0, y: 30, duration: 0.65 }, "-=0.8");
+    
 };
 ScrollTrigger.addEventListener("refresh", () => scroller.update());
 ScrollTrigger.refresh();
@@ -176,4 +178,10 @@ burger();
 burgerMenu();
 footerMenu();
 loginModal();
+
+ if (window.innerWidth <= 1000){
+  document.querySelectorAll(".burger-menu__wrapper").forEach(el => {
+    new SimpleBar(el);
+  });
+ };
 

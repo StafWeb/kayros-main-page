@@ -141,5 +141,10 @@ cardsBreadcumbsBtn.forEach(el => {
     el.remove();
   });
 });
+if (window.innerWidth <= 1000){
+  document.querySelectorAll(".burger-menu__wrapper").forEach(el => {
+    new SimpleBar(el);
+  });
+ };
 
 

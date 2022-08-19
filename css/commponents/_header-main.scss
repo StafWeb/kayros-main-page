@@ -754,8 +754,8 @@
   }
 }
 
-.header-logo-top,
-.header-logo-end,
+.header__logo-top,
+.header__logo-end,
 .item-logo,
 .header__form-search,
 .search-logo,
@@ -1167,11 +1167,11 @@
       transform: translateY(0);
       transition: transform 0.4s ease-in-out;
     }
-    &:hover .header-logo-top {
+    &:hover .header__logo-top {
       fill: #333333;
       transition: all 0.3s ease;
     }
-    &:hover .header-logo-end,
+    &:hover .header__logo-end,
     &:hover .item-logo {
       fill: #b0976e;
       transition: all 0.3s ease;
@@ -1339,11 +1339,11 @@
     transition: visibility 0.2s ease,
       transform 0.65s cubic-bezier(0.8, 0, 0.8, 1);
   }
-  .header-logo-top {
+  .header__logo-top {
     fill: #333333;
     transition: fill 0.3s ease;
   }
-  .header-logo-end,
+  .header__logo-end,
   .item-logo {
     fill: #b0976e;
     transition: fill 0.3 ease;

@@ -995,8 +995,8 @@ input[type=search]::-webkit-search-results-decoration {
   width: 100%;
 }
 
-.header-logo-top,
-.header-logo-end,
+.header__logo-top,
+.header__logo-end,
 .item-logo,
 .header__form-search,
 .search-logo,
@@ -1396,11 +1396,11 @@ input[type=search]::-webkit-search-results-decoration {
     transform: translateY(0);
     transition: transform 0.4s ease-in-out;
   }
-  .header__top:hover .header-logo-top {
+  .header__top:hover .header__logo-top {
     fill: #333333;
     transition: all 0.3s ease;
   }
-  .header__top:hover .header-logo-end, .header__top:hover .item-logo {
+  .header__top:hover .header__logo-end, .header__top:hover .item-logo {
     fill: #b0976e;
     transition: all 0.3s ease;
   }
@@ -1540,11 +1540,11 @@ input[type=search]::-webkit-search-results-decoration {
   transform: translateY(0);
   transition: visibility 0.2s ease, transform 0.65s cubic-bezier(0.8, 0, 0.8, 1);
 }
-.header-product .header-logo-top {
+.header-product .header__logo-top {
   fill: #333333;
   transition: fill 0.3s ease;
 }
-.header-product .header-logo-end,
+.header-product .header__logo-end,
 .header-product .item-logo {
   fill: #b0976e;
   transition: fill 0.3 ease;
@@ -3790,7 +3790,7 @@ input[type=search]::-webkit-search-results-decoration {
   color: #b0976e;
 }
 
-@media (max-width: 1020px) {
+@media (max-width: 1000px) {
   .filters {
     display: flex;
     opacity: 0;

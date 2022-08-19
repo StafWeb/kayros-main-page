@@ -34,7 +34,7 @@ ul, li {
 }
 
 img, svg {
-  vertical-align: top;
+  vertical-align: middle;
   max-width: 100%;
   height: auto;
   -o-object-fit: cover;

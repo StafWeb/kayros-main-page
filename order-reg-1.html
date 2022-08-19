@@ -72,19 +72,19 @@
           <form class="order-form" action="/">
             <div class="order-form__group ">
               <div class="order-form__inner">
-                <input class="required" type="email" placeholder=" ">
+                <input class="mailfield" type="text" placeholder=" ">
                 <label>Email <span>*</span></label>
               </div>
               <div class="order-form__error">Это поле обязательно для заполнения</div>
             </div>
             <div class="order-form__group">
               <div class="order-form__inner">
-                <input class="required" type="password" autocomplete="off" placeholder=" ">
+                <input class="passfield" type="password" autocomplete="off" placeholder=" ">
                 <label>Пароль <span>*</span></label>
               </div>
               <div class="order-form__error">Это поле обязательно для заполнения</div>
             </div>
-            <a href="#" class="order-form__btn btn-2" data-reg-1>Войти</a>
+            <button class="order-form__btn btn-2" data-reg-1>Войти</button>
           </form>
           <a href="#">Забыли пароль?</a>
           <p>Впервые на нашем сайте? Пожалуйста, <a href="#">зарегистрируйтесь.</a></p>
@@ -146,8 +146,7 @@
       <div class="footer__bottom-descr">Вверх</div>
     </div>
   </footer>
-  <script src="./js/order-reg-1.js"></script>
-  <script src="./js/phoneinput.js"></script>
+  <script type="module" src="./js/order-reg-1.js"></script>
   <script type="text/javascript">
     let fields = document.querySelectorAll("input");
     fields.forEach(el => {

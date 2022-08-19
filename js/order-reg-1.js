@@ -1,12 +1,21 @@
-let orderForm = document.querySelector(".order-form");
-let orderFormBtn = orderForm.querySelector(".order-form__btn");
-let reqFields = orderForm.querySelectorAll(".required");
-let chekForm = (elem) => {
-  let elWrapper = elem.parentNode;
-  let fieldWrapper = elWrapper.parentNode;
-  elem.value.length < 4 ? (fieldWrapper.classList.add("required_active"), console.log("focusout1")) : (fieldWrapper.classList.remove("required_active"), console.log("focusout2"));
-};
-let btnDis = () => { for (let i = 0; i < reqFields.length; i++) { reqFields[i].value.length < 4 ? orderFormBtn.href = '#' : orderFormBtn.href = './order-reg-2.html'; } };
-orderFormBtn.addEventListener('click', () => { for (let i = 0; i < reqFields.length; i++) { let elem = reqFields[i]; chekForm(elem); }; btnDis();});
-reqFields.forEach(el => { el.addEventListener('focusout', () => { chekForm(el); btnDis(); }) });
+import { mailValid, passValid } from './commponents/validate.js';
+let orderFormBtn = document.querySelector(".order-form__btn"),
+  mailField = document.querySelector(".mailfield"),
+  passField = document.querySelector(".passfield");
 
+passField.addEventListener('focusout', () => {
+  passValid();
+});
+mailField.addEventListener('focusout', () => {
+  mailValid();
+});
+orderFormBtn.addEventListener('click', (evt) => {
+  evt.preventDefault();
+  mailValid();
+  passValid();
+  if (mailValid() == 'true' && passValid() == 'true') {
+    console.log("valid")
+  } else {
+    console.log("invalid")
+  }
+});

@@ -2942,7 +2942,7 @@ input[type=search]::-webkit-search-results-decoration {
   flex-wrap: nowrap;
   margin: 0 auto;
   max-width: 1920px;
-  padding: 70px 90px 0px;
+  padding: 70px 90px 90px;
 }
 .product__content {
   width: 100%;
@@ -3131,9 +3131,6 @@ input[type=search]::-webkit-search-results-decoration {
   text-align: center;
   color: rgba(51, 51, 51, 0.7);
 }
-.product__info {
-  margin-bottom: 90px;
-}
 .product__info > h2 {
   font-weight: 400;
   font-size: 35px;
@@ -3198,7 +3195,7 @@ input[type=search]::-webkit-search-results-decoration {
 }
 .breadcrumbs__item:last-child a,
 .breadcrumbs__item:last-child span {
-  color: #BFAA88;
+  color: #bfaa88;
   cursor: default;
 }
 
@@ -3252,8 +3249,8 @@ input[type=search]::-webkit-search-results-decoration {
   display: none;
   color: rgba(119, 119, 119, 0.7);
   text-decoration: line-through;
-  -webkit-text-decoration-color: #D83244;
-          text-decoration-color: #D83244;
+  -webkit-text-decoration-color: #d83244;
+          text-decoration-color: #d83244;
   margin-left: 15px;
 }
 .cards__price_sale > span {
@@ -3261,11 +3258,13 @@ input[type=search]::-webkit-search-results-decoration {
 }
 
 @media (max-width: 1450px) {
-  .product {
-    padding: 70px 40px 0px;
-  }
   .product .cards__list {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 1200px) {
+  .product {
+    padding: 70px 40px 120px;
   }
 }
 @media (max-width: 1000px) {
@@ -3356,20 +3355,17 @@ input[type=search]::-webkit-search-results-decoration {
     line-height: 33px;
     letter-spacing: 0.05em;
   }
-  .product__info > p:nth-child(2), .product__info > p:nth-child(5) {
-    margin-bottom: 25px;
-  }
-  .product__info > p:nth-child(4) {
-    margin-bottom: 10px;
-  }
-  .product__info > h2 {
-    font-size: 23px;
-  }
-  .product__info > p {
+  .product__info p {
     line-height: 140%;
   }
-  .product__info > p:last-child, .product__info p:nth-child(7) {
+  .product__info p:last-child, .product__info p:nth-child(7) {
     line-height: 150%;
+  }
+  .product__info p:nth-child(2), .product__info p:nth-child(5) {
+    margin-bottom: 25px;
+  }
+  .product__info p:nth-child(4) {
+    margin-bottom: 10px;
   }
   .product .count-page__list {
     width: 100%;
@@ -3386,6 +3382,7 @@ input[type=search]::-webkit-search-results-decoration {
     margin-bottom: 25px;
   }
   .product .cards__list {
+    width: 100%;
     grid-template-columns: repeat(2, 1fr);
     gap: 25px 14px;
   }

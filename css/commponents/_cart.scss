@@ -811,6 +811,19 @@
   .order-opt {
     margin-bottom: 50px;
   }
+}
+
+@media(max-width:800px){
+  .order-opt {
+    .order__descr {
+      position: relative;
+      top: 0;
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+}
+@media(max-width:650px){
   .modal-cart {
     &__container {
       width: 100%;
@@ -879,17 +892,6 @@
     &__btn {
       max-width: 320px;
       margin: 0 auto;
-    }
-  }
-}
-
-@media(max-width:800px){
-  .order-opt {
-    .order__descr {
-      position: relative;
-      top: 0;
-      max-width: 100%;
-      width: 100%;
     }
   }
 }

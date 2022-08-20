@@ -2938,13 +2938,6 @@ input[type=search]::-webkit-search-results-decoration {
   overflow: hidden;
 }
 
-@media (max-width: 1000px) {
-  .stop-scroll {
-    position: fixed;
-    height: 100%;
-    width: 100%;
-  }
-}
 .product {
   display: flex;
   flex-wrap: nowrap;

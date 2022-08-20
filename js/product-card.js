@@ -37,9 +37,9 @@ cardModalBtn.forEach(el => { el.addEventListener('click', () => { modalClose(car
 
 
 
-// document.querySelectorAll(".simpScroll").forEach(el => {
-//   new SimpleBar(el, { autoHide: false });
-// });
+document.querySelectorAll(".simpScroll").forEach(el => {
+  new SimpleBar(el, { autoHide: false });
+});
 if (window.innerWidth <= 1000){
   document.querySelectorAll(".burger-menu__wrapper").forEach(el => {
     new SimpleBar(el);

@@ -2309,7 +2309,6 @@ input[type=search]::-webkit-search-results-decoration {
     gap: 16px;
     overflow: hidden;
     overflow-x: auto;
-    margin-left: 20px;
     scrollbar-width: none;
     -ms-overflow-style: none;
     overflow: -moz-scrollbars-none;
@@ -4444,9 +4443,6 @@ input[type=search]::-webkit-search-results-decoration {
   }
   .slider__col {
     display: none;
-  }
-  .slider .swiper-wrapper {
-    z-index: 2;
   }
   .slider .swiper-slide {
     max-width: 330px;

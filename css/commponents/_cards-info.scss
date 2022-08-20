@@ -191,6 +191,9 @@
       list-style: disc;
     }
   }
+  .filters__size-item label > span{
+    width: 67px;
+  }
 }
 .add-product {
   display: flex;

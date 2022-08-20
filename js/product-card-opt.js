@@ -19,7 +19,8 @@ footerMenu();
 tableModal();
 loginModal();
 
-let butUp = document.querySelectorAll(".step-up"),
+let
+  butUp = document.querySelectorAll(".step-up"),
   butDown = document.querySelectorAll(".step-down"),
   modalClose = document.querySelectorAll("[data-modal-close]"),
   modalLim = document.querySelector("[data-modal-limit]"),
@@ -58,8 +59,8 @@ modalClose.forEach(el => {
 document.querySelectorAll(".simpScroll").forEach(el => {
   new SimpleBar(el, { autoHide: false });
 });
-if (window.innerWidth <= 1000){
+if (window.innerWidth <= 1000) {
   document.querySelectorAll(".burger-menu__wrapper").forEach(el => {
     new SimpleBar(el);
   });
- };
+};

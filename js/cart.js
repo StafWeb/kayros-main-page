@@ -1,4 +1,5 @@
-let delProductBtn = document.querySelectorAll(".order-card__btn"),
+let
+  delProductBtn = document.querySelectorAll(".order-card__btn"),
   modalClose = document.querySelectorAll("[data-modal-close]"),
   modalAll = document.querySelectorAll(".modal-cart"),
   modalDel = document.querySelector("[data-modal-delete]"),

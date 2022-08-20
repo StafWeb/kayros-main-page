@@ -20,7 +20,8 @@ footerMenu();
 tableModal();
 loginModal();
 
-let addCartBtn = document.querySelector(".add-product"),
+let
+  addCartBtn = document.querySelector(".add-product"),
   cardModal = document.querySelector(".card-modal"),
   cardModalContain = document.querySelector(".card-modal__container"),
   cardModalClose = document.querySelectorAll(".card-modal__close"),
@@ -40,8 +41,8 @@ cardModalBtn.forEach(el => { el.addEventListener('click', () => { modalClose(car
 document.querySelectorAll(".simpScroll").forEach(el => {
   new SimpleBar(el, { autoHide: false });
 });
-if (window.innerWidth <= 1000){
+if (window.innerWidth <= 1000) {
   document.querySelectorAll(".burger-menu__wrapper").forEach(el => {
     new SimpleBar(el);
   });
- };
+};

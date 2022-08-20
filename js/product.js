@@ -84,7 +84,8 @@ filtersBtn.forEach(function (btn) {
   })
 });
 
-let sortBtn = document.querySelector(".cards__sort-btn"),
+let
+  sortBtn = document.querySelector(".cards__sort-btn"),
   sortList = document.querySelector(".cards__sort-list"),
   sort = document.querySelector(".cards__sort"),
   sortItem = document.querySelectorAll(".cards__sort-item"),
@@ -114,7 +115,8 @@ sortInner.forEach(el => {
   })
 });
 
-let filter = document.querySelector(".filters"),
+let
+  filter = document.querySelector(".filters"),
   filterBtn = document.querySelector(".filter-btn"),
   filterShow = document.querySelector(".filters__btn-show"),
   filterClose = document.querySelector(".filters__btn-close");
@@ -141,10 +143,10 @@ cardsBreadcumbsBtn.forEach(el => {
     el.remove();
   });
 });
-if (window.innerWidth <= 1000){
+if (window.innerWidth <= 1000) {
   document.querySelectorAll(".burger-menu__wrapper").forEach(el => {
     new SimpleBar(el);
   });
- };
+};
 
 

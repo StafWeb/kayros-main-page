@@ -1,7 +1,8 @@
 import { headerAnim } from './main.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-  let preloader = document.querySelector(".preloader"),
+  let
+    preloader = document.querySelector(".preloader"),
     imgCount = document.querySelectorAll("img").length,
     prelInner = document.querySelector(".preloader__inner"),
     counter = document.querySelector(".preloader__count"),

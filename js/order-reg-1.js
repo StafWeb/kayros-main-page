@@ -1,5 +1,6 @@
 import { mailValid, passValid } from './commponents/validate.js';
-let orderFormBtn = document.querySelector(".order-form__btn"),
+let
+  orderFormBtn = document.querySelector(".order-form__btn"),
   mailField = document.querySelector(".mailfield"),
   passField = document.querySelector(".passfield");
 

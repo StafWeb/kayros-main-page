@@ -3542,7 +3542,6 @@ input[type=search]::-webkit-search-results-decoration {
   overflow-y: auto;
   width: 235px;
   height: auto;
-  padding-bottom: 70px;
 }
 .filters__btn {
   flex-shrink: 0;
@@ -4158,6 +4157,9 @@ input[type=search]::-webkit-search-results-decoration {
   line-height: 160%;
   color: #333333;
   list-style: disc;
+}
+.cards-info .filters__size-item label > span {
+  width: 67px;
 }
 
 .add-product {

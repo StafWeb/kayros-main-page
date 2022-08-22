@@ -3157,7 +3157,7 @@ input[type=search]::-webkit-search-results-decoration {
 
 .breadcrumbs {
   width: 100%;
-  margin-bottom: 32px;
+  margin-bottom: 30px;
 }
 .breadcrumbs__list {
   display: flex;

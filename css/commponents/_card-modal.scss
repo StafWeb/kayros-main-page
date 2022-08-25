@@ -10,7 +10,6 @@
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  z-index: -1;
   transition: all 0.3s cubic-bezier(0.8, 0, 0.8, 1);
   &__container {
     min-width: 600px;
@@ -93,9 +92,11 @@
       font-weight: 400;
       font-size: 16px;
       line-height: 120%;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
       color: #333333;
+      &:first-child{
+        text-transform: uppercase;
+      letter-spacing: 0.05em;
+      }
     }
     & > *:nth-child(2),
     & > *:nth-child(3) {
@@ -151,7 +152,6 @@
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  z-index: -1;
   transition: all 0.3s cubic-bezier(0.8, 0, 0.8, 1);
   &__container {
     min-width: 918px;
@@ -177,7 +177,7 @@
       height: 3px;
       &:before {
         background: #d9d9d9;
-        border-radius: 0px;
+        border-radius: 100px;
       }
     }
   }
@@ -344,6 +344,7 @@
       overflow-y: auto;
       & > p {
         display: block;
+        margin-left: 20px;
       }
     }
     &__header {
@@ -406,6 +407,8 @@
     &__btns {
       flex-direction: column;
       height: auto;
+      gap: 15px;
+      padding: 0 20px;
       & > * {
         height: 52px;
       }
@@ -413,9 +416,10 @@
     &__product {
       margin-bottom: 30px;
       gap: 20px;
+      padding: 0 20px;
     }
     &__btn {
-      max-width: 320px;
+      max-width: 100%;
     }
   }
 }

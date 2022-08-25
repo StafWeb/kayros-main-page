@@ -434,6 +434,7 @@
       font-size: 25px;
       line-height: 33px;
       letter-spacing: 0.05em;
+      margin-bottom: 20px;
     }
     &__info {
       p {
@@ -449,6 +450,9 @@
         &:nth-child(4) {
           margin-bottom: 10px;
         }
+      }
+      h2{
+        font-size: 23px;
       }
     }
     .count-page__list {

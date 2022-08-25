@@ -16,7 +16,10 @@
     color: #333333;
   }
   .order__descr {
-    width: 387px;
+    max-width: 400px;
+    &-total{
+      margin-bottom: 0;
+    }
   }
 }
 .login {

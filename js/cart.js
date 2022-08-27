@@ -32,7 +32,12 @@ modalAll.forEach(el => {
     modalRemove();
   })
 });
-
+document.addEventListener('keydown', (e) => {
+  let keyCode = e.key;
+  if (keyCode === 'Escape') {
+    modalRemove();
+  }
+});
 
 butUp.forEach(el => {
   el.addEventListener('click', () => {

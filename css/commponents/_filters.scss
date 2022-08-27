@@ -575,6 +575,13 @@
     width: 8px !important;
   }
 }
+@media(max-width:750px){
+  .filters{
+    &__container{
+      padding: 70px 15px;
+    }
+  }
+}
 @media (max-width: 420px) {
   .filters {
     &__header-title {

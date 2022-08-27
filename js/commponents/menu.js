@@ -32,6 +32,17 @@ function burger() {
       burgerLog.classList.remove('burger__logo_active');
     });
   });
+  document.addEventListener('keydown', (e) => {
+    let keyCode = e.key;
+    if (keyCode === 'Escape') {
+      stop1.classList.remove('stop-scroll');
+      body.classList.remove('stop-scroll');
+      burgerBtn.classList.remove('burger_active')
+      burger.classList.remove('burger_active');
+      nav.classList.remove('burger-menu_active');
+      burgerLog.classList.remove('burger__logo_active');
+    }
+  });
 };
 function footerMenu() {
   let footerBtn = document.querySelectorAll("[data-menu]");

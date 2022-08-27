@@ -259,8 +259,14 @@
   .offer {
     margin-top: 50px;
     margin-bottom: 50px;
+    .container{
+      padding: 0;
+    }
     &__title {
       font-size: 27px;
+    }
+    .cards__item:first-child{
+      margin-left: 15px;
     }
   }
   .cards {
@@ -272,6 +278,7 @@
       margin-bottom: 40px;
       overflow: hidden;
       overflow-x: auto;
+      padding: 0px 15px;
       -ms-overflow-style: none;
       overflow: -moz-scrollbars-none;
       scrollbar-width: none;

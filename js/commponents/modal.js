@@ -11,6 +11,12 @@ function loginModal() {
   loginContainer.addEventListener('click', (evt) => { evt.stopPropagation(); });
   loginModal.addEventListener('click', () => { loginClose(loginModal); });
   loginModalClose.forEach(el => { el.addEventListener('click', () => { loginClose(loginModal); }) });
+  document.addEventListener('keydown', (e) => {
+    let keyCode = e.key;
+    if (keyCode === 'Escape') {
+      loginClose(loginModal);
+    }
+  });
 };
 function tableModal(){
   let tableModal = document.querySelector(".table-modal");
@@ -23,6 +29,12 @@ tableBtn.addEventListener('click', () => { tableOpen(tableModal); });
 tableContainer.addEventListener('click', (evt) => { evt.stopPropagation(); });
 tableModal.addEventListener('click', () => { tableClose(tableModal); });
 cardModalClose.forEach(el => { el.addEventListener('click', () => { tableClose(tableModal); }) });
+document.addEventListener('keydown', (e) => {
+  let keyCode = e.key;
+  if (keyCode === 'Escape') {
+    tableClose(tableModal);
+  }
+});
 };
 
 export { loginModal, tableModal };

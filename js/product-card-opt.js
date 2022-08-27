@@ -12,12 +12,41 @@ if (window.innerWidth > 1000) {
     .from(".header__cart", { opacity: 0, x: -5, duration: 0.6 }, "-=0.5")
     .from(".header__burger", { opacity: 0, x: -5, duration: 0.6 }, "-=0.5");
 };
+function modalAdd(){
+  let 
+  addModal = document.querySelector(".modal-add"),
+  btnmodal = document.querySelectorAll(".add-cart"),
+  modalClose = document.querySelector(".modal-add__close");
+  let close = () => { addModal.classList.remove('modal-add_active')};
+  btnmodal.forEach(el =>{
+    if(!el.classList.contains('added')){
+      el.addEventListener('click', () =>{
+        addModal.classList.add('modal-add_active');
+        el.textContent = "в корзине";
+        el.classList.add('added');
+        setTimeout(() => {
+         close();
+        }, 5000);
+      });
+    }
+  });
+  modalClose.addEventListener('click', () => {
+    close();
+  });
+  document.addEventListener('keydown', (e) => {
+    let keyCode = e.key;
+    if (keyCode === 'Escape') {
+      close();
+    }
+  });
+};
 slider();
 burger();
 burgerMenu();
 footerMenu();
 tableModal();
 loginModal();
+modalAdd();
 
 let
   butUp = document.querySelectorAll(".step-up"),
@@ -54,7 +83,12 @@ modalClose.forEach(el => {
     modalRemove();
   })
 });
-
+document.addEventListener('keydown', (e) => {
+  let keyCode = e.key;
+  if (keyCode === 'Escape') {
+    modalRemove();
+  }
+});
 
 document.querySelectorAll(".simpScroll").forEach(el => {
   new SimpleBar(el, { autoHide: false });

@@ -35,7 +35,12 @@ cardModalContain.addEventListener('click', (evt) => { evt.stopPropagation(); });
 cardModal.addEventListener('click', () => { modalClose(cardModal) });
 cardModalClose.forEach(el => { el.addEventListener('click', () => { modalClose(cardModal) }) });
 cardModalBtn.forEach(el => { el.addEventListener('click', () => { modalClose(cardModal) }) });
-
+document.addEventListener('keydown', (e) => {
+  let keyCode = e.key;
+  if (keyCode === 'Escape') {
+    modalClose(cardModal);
+  }
+});
 
 
 document.querySelectorAll(".simpScroll").forEach(el => {

@@ -290,9 +290,9 @@
     width: 100%;
     margin-top: 20px;
     &__sizes {
-      max-width: 100%;
-      width: 100%;
+      max-width: none;
       overflow-x: auto;
+      position: relative;
     }
     h1 {
       font-size: 25px;
@@ -320,6 +320,8 @@
       }
       &__wrapper {
         width: max-content;
+        max-width: none;
+        padding-right: 15px;
       }
     }
   }

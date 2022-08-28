@@ -11,7 +11,7 @@ let
   body = document.body;
 delProductBtn.forEach(el => {
   el.addEventListener('click', () => {
-    modalDel.classList.add("modal-cart_active")
+    modalDel.classList.add("modal-cart_active");
     body.classList.add('stop-scroll');
     stop1.classList.add('stop-scroll');
   })

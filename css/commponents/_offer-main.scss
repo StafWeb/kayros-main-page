@@ -1,4 +1,3 @@
-//  Offer main //
 .offer {
   background-color: #ffffff;
   position: relative;
@@ -36,6 +35,7 @@
     }
   }
 }
+
 .cards {
   margin: 70px 0px;
   &__filter {
@@ -199,12 +199,14 @@
     grid-template-columns: repeat(4, 1fr);
   }
 }
+
 @media (max-width: 1200px){
 .offer{
   margin: 0;
   margin-bottom: 120px;
 }
 }
+
 @media (max-width: 1000px) {
   .offer {
     margin-top: 70px;
@@ -255,6 +257,7 @@
     }
   }
 }
+
 @media (max-width: 750px) {
   .offer {
     margin-top: 50px;

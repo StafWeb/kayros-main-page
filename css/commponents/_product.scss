@@ -1,4 +1,3 @@
-// Product //
 .product {
   display: flex;
   flex-wrap: nowrap;
@@ -225,6 +224,7 @@
     }
   }
 }
+
 .breadcrumbs {
   width: 100%;
   margin-bottom: 30px;
@@ -271,6 +271,7 @@
     }
   }
 }
+
 .count-page {
   display: flex;
   flex-direction: column;
@@ -316,6 +317,7 @@
     }
   }
 }
+
 .cards__price {
   & > span {
     display: none;
@@ -340,11 +342,13 @@
     }
   }
 }
+
 @media (max-width: 1200px) {
   .product {
     padding: 70px 40px 120px;
   }
 }
+
 @media (max-width: 1000px) {
   .product {
     display: block;
@@ -420,6 +424,7 @@
     margin-bottom: 40px;
   }
 }
+
 @media (max-width: 750px) {
   .product {
     padding: 20px 15px 50px;
@@ -520,6 +525,7 @@
     margin-bottom: 25px;
   }
 }
+
 @media (max-width: 388px) {
   .product {
     .offer__button {
@@ -532,6 +538,7 @@
     }
   }
 }
+
 @media (min-width: 1000px) {
   .cards {
     &__item-color:not(.cards__item-color_active):hover {
@@ -548,6 +555,7 @@
     transition: all 0.3s ease;
   }
 }
+
 .breadcrumbs__item:not(:last-child):hover {
   border-bottom: 1px solid transparent;
   transition: all 0.3s ease;

@@ -8,6 +8,7 @@
     display: none;
   }
 }
+
 .slider {
   margin-right: 78px;
   max-height: 968px;
@@ -121,9 +122,11 @@
     z-index: 0;
   }
 }
+
 .zindex {
   z-index: 2;
 }
+
 @media (max-width: 1995px) {
   .slider__zoom_active {
     .swiper-container {
@@ -131,6 +134,7 @@
     }
   }
 }
+
 @media (max-width: 1600px) {
   .slider {
     // .slider {
@@ -153,6 +157,7 @@
     }
   }
 }
+
 @media (max-width: 1350px) {
   .slider {
     position: sticky;
@@ -173,6 +178,7 @@
     }
   }
 }
+
 @media (max-width: 1000px) {
   .card-product {
     flex-direction: column;
@@ -213,6 +219,7 @@
     }
   }
 }
+
 @media (max-width: 750px) {
   .card-product{
     margin-top: 20px;
@@ -246,6 +253,7 @@
     }
   }
 }
+
 @media (min-width: 1000px) {
   .slider__thumbs .slider__image:hover::after {
     border: 2px solid #b0976e;

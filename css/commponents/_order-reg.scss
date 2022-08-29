@@ -19,6 +19,7 @@
     max-width: 400px;
   }
 }
+
 .login {
   display: flex;
   justify-content: space-between;
@@ -55,6 +56,7 @@
     }
   }
 }
+
 .order-form {
   display: flex;
   flex-direction: column;
@@ -294,6 +296,7 @@
     }
   }
 }
+
 .label-inner {
   position: relative;
   width: 20px;
@@ -337,6 +340,7 @@
     }
   }
 }
+
 .required_active {
   .order-form {
     &__error {
@@ -360,6 +364,7 @@
     }
   }
 }
+
 .footer-order {
   .footer__contacts {
     margin: auto;
@@ -482,6 +487,7 @@
     }
   }
 }
+
 .form-data {
   display: flex;
   flex-direction: column;
@@ -528,6 +534,7 @@
     margin-bottom: 40px;
   }
 }
+
 .change-btn {
   display: flex;
   align-items: center;
@@ -550,12 +557,14 @@
     transition: all 0.3s ease;
   }
 }
+
 .groupDelivery {
   width: 100%;
   .order-form__inner {
     width: 100%;
   }
 }
+
 .groupNote {
   width: 100%;
   .order-form__inner {
@@ -597,10 +606,12 @@
     }
   }
 }
+
 .change-delivery {
   margin-top: 10px;
   margin-bottom: 40px;
 }
+
 .order__descr-opt {
   padding: 30px;
   padding-bottom: 40px;
@@ -610,6 +621,7 @@
     }
   }
 }
+
 .orderReg-final-opt {
   .order__descr-wrapper {
     margin-bottom: 0;
@@ -641,6 +653,7 @@
     margin-top: 0;
   }
 }
+
 @media (max-width: 1200px) {
   .orderReg__inner .order-form {
     margin-left: 0px;
@@ -652,6 +665,7 @@
     margin-left: 0;
   }
 }
+
 @media (max-width: 1000px) {
   .order-reg {
     margin-top: 40px;
@@ -727,6 +741,7 @@
     margin-bottom: 50px;
   }
 }
+
 @media (max-width: 750px) {
   .order-reg {
     margin-top: 20px;
@@ -808,6 +823,7 @@
     margin-bottom: 20px;
   }
 }
+
 @media (min-width: 1000px) {
   .login__wrapper {
     & > a:hover,

@@ -1,4 +1,3 @@
-// Collection
 .collection {
   position: relative;
   background-color: #ffffff;
@@ -87,31 +86,27 @@
     transform: scaleY(0);
   }
 }
+
 @media (max-width: 1900px) {
-  // .container {
-  //   max-width: 1400px;
-  // }
   .collection__list {
     gap: 40px;
   }
   .collection__item {
-  //  max-height: 570px;
     &-link {
       bottom: 35px;
       left: 40px;
     }
   }
 }
+
 @media (max-width: 1350px) {
   .collection__item-link {
     font-size: 26px;
     bottom: 41px;
     left: 35px;
   }
-  .collection__item {
-    // max-height: 432px;
-  }
 }
+
 @media (max-width: 1000px) {
   .collection {
     &__title {
@@ -150,6 +145,7 @@
     }
   }
 }
+
 @media (max-width: 780px) {
   .collection {
     .container {
@@ -182,6 +178,7 @@
     }
   }
 }
+
 @media (min-width: 1000px) {
   .collection__item:hover {
     .collection__item-img {

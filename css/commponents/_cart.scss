@@ -74,6 +74,9 @@
     color: #333333;
     margin-top: 30px;
   }
+  .order__descr-btn{
+    margin-top: 25px;
+  }
 }
 
 .order {
@@ -377,7 +380,7 @@
   display: flex;
   text-align: center;
   justify-content: flex-start;
-  & > label {
+  &__group {
     position: relative;
     width: 260px;
     height: 52px;
@@ -395,16 +398,33 @@
       font-size: 16px;
       line-height: 160%;
       padding: 0px 20px;
+      padding-top: 10px;
       color: #333333;
-      &::placeholder {
-        color: #333333;
-        opacity: 1;
+      &:focus ~ label,
+      &:not(:placeholder-shown) ~ label {
+        top: 5px;
+        left: 20px;
+        font-size: 12px;
+        line-height: 120%;
+        color: #928c8c;
         transition: all 0.3s ease;
       }
-      &:focus::placeholder {
-        opacity: 0.5;
-        transition: all 0.3s ease;
+      &:focus,
+      &:not(:placeholder-shown) {
+        background-color: #ffffff;
+        transition: background-color 0.3s ease;
       }
+    }
+    & > label {
+      position: absolute;
+      top: 13px;
+      left: 16px;
+      pointer-events: none;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 160%;
+      color: #333333;
+      transition: all 0.3s ease;
     }
   }
   &__btn {

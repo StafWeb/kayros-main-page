@@ -5358,6 +5358,9 @@ input[type=search]::-webkit-search-results-decoration {
   color: #333333;
   margin-top: 30px;
 }
+.cart .order__descr-btn {
+  margin-top: 25px;
+}
 
 .order {
   display: flex;
@@ -5661,7 +5664,7 @@ input[type=search]::-webkit-search-results-decoration {
   text-align: center;
   justify-content: flex-start;
 }
-.promo-disc > label {
+.promo-disc__group {
   position: relative;
   width: 260px;
   height: 52px;
@@ -5669,7 +5672,7 @@ input[type=search]::-webkit-search-results-decoration {
   border-radius: 4px;
   margin-right: 12px;
 }
-.promo-disc > label > input {
+.promo-disc__group > input {
   position: absolute;
   content: "";
   top: 0;
@@ -5680,37 +5683,58 @@ input[type=search]::-webkit-search-results-decoration {
   font-size: 16px;
   line-height: 160%;
   padding: 0px 20px;
+  padding-top: 10px;
   color: #333333;
 }
-.promo-disc > label > input::-moz-placeholder {
-  color: #333333;
-  opacity: 1;
+.promo-disc__group > input:not(:-moz-placeholder-shown) ~ label {
+  top: 5px;
+  left: 20px;
+  font-size: 12px;
+  line-height: 120%;
+  color: #928c8c;
   -moz-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-.promo-disc > label > input:-ms-input-placeholder {
-  color: #333333;
-  opacity: 1;
+.promo-disc__group > input:not(:-ms-input-placeholder) ~ label {
+  top: 5px;
+  left: 20px;
+  font-size: 12px;
+  line-height: 120%;
+  color: #928c8c;
   -ms-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-.promo-disc > label > input::placeholder {
+.promo-disc__group > input:focus ~ label, .promo-disc__group > input:not(:placeholder-shown) ~ label {
+  top: 5px;
+  left: 20px;
+  font-size: 12px;
+  line-height: 120%;
+  color: #928c8c;
+  transition: all 0.3s ease;
+}
+.promo-disc__group > input:not(:-moz-placeholder-shown) {
+  background-color: #ffffff;
+  -moz-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+.promo-disc__group > input:not(:-ms-input-placeholder) {
+  background-color: #ffffff;
+  -ms-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+.promo-disc__group > input:focus, .promo-disc__group > input:not(:placeholder-shown) {
+  background-color: #ffffff;
+  transition: background-color 0.3s ease;
+}
+.promo-disc__group > label {
+  position: absolute;
+  top: 13px;
+  left: 16px;
+  pointer-events: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
   color: #333333;
-  opacity: 1;
-  transition: all 0.3s ease;
-}
-.promo-disc > label > input:focus::-moz-placeholder {
-  opacity: 0.5;
-  -moz-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-.promo-disc > label > input:focus:-ms-input-placeholder {
-  opacity: 0.5;
-  -ms-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-.promo-disc > label > input:focus::placeholder {
-  opacity: 0.5;
   transition: all 0.3s ease;
 }
 .promo-disc__btn {

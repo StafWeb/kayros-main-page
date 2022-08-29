@@ -5341,6 +5341,7 @@ input[type=search]::-webkit-search-results-decoration {
 }
 .cart .order__descr-btn {
   margin-top: 25px;
+  margin-bottom: 0;
 }
 
 .order {
@@ -5932,7 +5933,7 @@ input[type=search]::-webkit-search-results-decoration {
   .order-card__photo {
     height: 160px;
   }
-  .promo-disc > label {
+  .promo-disc__group {
     margin: 0;
     width: 100%;
   }

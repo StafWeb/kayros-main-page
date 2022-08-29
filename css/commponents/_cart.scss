@@ -80,6 +80,7 @@
   }
   .order__descr-btn{
     margin-top: 25px;
+    margin-bottom: 0;
   }
 }
 
@@ -669,7 +670,7 @@
     }
   }
   .promo-disc {
-    & > label {
+    &__group{
       margin: 0;
       width: 100%;
     }

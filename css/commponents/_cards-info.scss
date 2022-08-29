@@ -215,6 +215,9 @@
   color: #ffffff;
   margin-bottom: 50px;
   transition: all 0.4 ease;
+  &-fixed{
+    display: none;
+  }
 }
 
 .size-opt__wrapper {
@@ -282,6 +285,24 @@
   .add-product {
     margin-bottom: 40px;
     max-width: 100%;
+    &-fixed{
+      display: flex;
+      position: fixed;
+      bottom: -100%;
+      left: 0;
+      right: 0;
+      max-width: 100vw;
+      width: 90vw;
+      margin: 0 auto ;
+      z-index: 2;
+      border-radius: 4px;
+      transition: bottom .5s ease-in-out, width .4s ease .5s, border-radius .3s ease .5s;
+      &_active{
+        bottom: 0;
+        width: 100vw;
+        border-radius: 0px;
+      }
+    }
   }
   .size-opt__wrapper{
     max-width: 369px;

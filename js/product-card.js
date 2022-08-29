@@ -1,6 +1,21 @@
+gsap.registerPlugin(ScrollTrigger);
 import { slider } from './commponents/slider.js';
 import { burger, burgerMenu, footerMenu } from './commponents/menu.js';
 import { tableModal, loginModal } from './commponents/modal.js';
+function fixBtn(){
+  let btnViewport = document.querySelector(".add-product-viewport");
+  let btnFixed = document.querySelector(".add-product-fixed");
+  ScrollTrigger.create({
+    start: 0,
+    end: "max",
+    onUpdate: upValue
+  });
+  function upValue(){
+   let a = ScrollTrigger.isInViewport(btnViewport);
+   a == true ? btnFixed.classList.remove('add-product-fixed_active') : btnFixed.classList.add('add-product-fixed_active');
+  };
+};
+
 if (window.innerWidth > 1000) {
   let headAnim = gsap.timeline({ delay: 0.5, ease: "power1.out" });
   headAnim.from(".header__logo", { opacity: 0, duration: 0.6 })
@@ -21,7 +36,7 @@ tableModal();
 loginModal();
 
 let
-  addCartBtn = document.querySelector(".add-product"),
+  addCartBtn = document.querySelectorAll(".add-product"),
   cardModal = document.querySelector(".card-modal"),
   cardModalContain = document.querySelector(".card-modal__container"),
   cardModalClose = document.querySelectorAll(".card-modal__close"),
@@ -30,7 +45,7 @@ let
   stop1 = document.documentElement;
 let modalClose = (modal) => { modal.classList.remove("card-modal_active"); body.classList.remove('stop-scroll'); stop1.classList.remove('stop-scroll'); };
 let modalOpen = (modal) => { modal.classList.add("card-modal_active"); body.classList.add('stop-scroll'); stop1.classList.add('stop-scroll'); };
-addCartBtn.addEventListener('click', () => { modalOpen(cardModal) });
+addCartBtn.forEach(el => { el.addEventListener('click', () => { modalOpen(cardModal) }) });
 cardModalContain.addEventListener('click', (evt) => { evt.stopPropagation(); });
 cardModal.addEventListener('click', () => { modalClose(cardModal) });
 cardModalClose.forEach(el => { el.addEventListener('click', () => { modalClose(cardModal) }) });
@@ -42,12 +57,16 @@ document.addEventListener('keydown', (e) => {
   }
 });
 
-
 document.querySelectorAll(".simpScroll").forEach(el => {
   new SimpleBar(el, { autoHide: false });
 });
+
 if (window.innerWidth <= 1000) {
   document.querySelectorAll(".burger-menu__wrapper").forEach(el => {
     new SimpleBar(el);
   });
+  fixBtn();
 };
+
+
+

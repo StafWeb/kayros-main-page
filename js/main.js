@@ -16,19 +16,6 @@ export function headerAnim() {
 }
 import { burger, footerMenu, burgerMenu } from './commponents/menu.js';
 import { loginModal } from './commponents/modal.js';
-// jQuery(function ($) {
-//   $('.popup-gallery').magnificPopup({
-//     delegate: 'a',
-//     type: 'image',
-//     gallery: {
-//       enabled: true,
-//       navigateByImgClick: true,
-//     },
-//     removalDelay: 300,
-//     mainClass: 'mfp-fade'
-//   });
-// });
-
 
 gsap.registerPlugin(ScrollTrigger);
 let pageContainer = document.querySelector("#viewport");

@@ -40,6 +40,7 @@
     & > a {
       color: #333333;
       border-bottom: 1px solid rgba(176, 151, 110, 0.5);
+      margin-top: 20px;
       &:active {
         border-color: transparent;
       }
@@ -53,6 +54,9 @@
           border-color: transparent;
         }
       }
+    }
+    .order-form{
+      margin-top: 0px;
     }
   }
 }
@@ -409,7 +413,7 @@
   }
   &__inner {
     border-bottom: 1px solid rgba(51, 51, 51, 0.1);
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     .order-form {
       margin-left: 65px;
       &__btn {
@@ -422,7 +426,7 @@
     flex-direction: column;
     align-items: flex-start;
     margin-left: 65px;
-    margin-top: 42px;
+    margin-top: 35px;
   }
   &__pay-group {
     display: flex;
@@ -724,9 +728,6 @@
         margin-left: 0px;
       }
     }
-    &__pay-wrapper {
-      margin: 0;
-    }
     &__pay-group {
       flex-direction: column;
       margin-bottom: 30px;
@@ -761,6 +762,9 @@
       font-size: 23px;
       gap: 10px;
       margin-bottom: 20px;
+    }
+    &__pay-wrapper{
+      margin-top: 25px;
     }
     &__num {
       width: 26px;
@@ -797,6 +801,7 @@
   }
   .form-data {
     margin: 0;
+    margin-top: 25px;
     &__wrapper {
       gap: 15px;
     }
@@ -816,6 +821,12 @@
     }
     &__delivery-group:not(:last-child) {
       margin-bottom: 30px;
+    }
+    &__delivery{
+      margin-top: 0;
+    }
+    .groupNote{
+      margin-bottom: 5px;
     }
   }
   .change-delivery {

@@ -2843,6 +2843,9 @@ input[type=search]::-webkit-search-results-decoration {
   .footer__bottom-btn {
     margin-bottom: 20px;
   }
+  .footer-pad {
+    padding-bottom: 122px;
+  }
   .btn-mob {
     display: flex;
     width: 100%;

@@ -79,6 +79,7 @@
   &__partner {
     display: flex;
     gap: 11px;
+    align-items: center;
     &--mob {
       display: none;
     }
@@ -132,7 +133,8 @@
 }
 
 .partner-img-wrapper {
-  padding-top: 5px;
+  width: 16px;
+  height: 16px;
 }
 
 @media (max-width: 1200px) {

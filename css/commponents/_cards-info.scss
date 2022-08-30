@@ -311,7 +311,7 @@
 
 @media (max-width: 750px) {
   .cards-info {
-    padding: 0px 15px;
+    padding: 0px;
     width: 100%;
     margin-top: 20px;
     &__sizes {
@@ -323,6 +323,7 @@
       font-size: 25px;
       line-height: 33px;
       margin-bottom: 20px;
+      padding: 0px 15px;
     }
     &__list{
       & > li {
@@ -346,8 +347,21 @@
       &__wrapper {
         width: max-content;
         max-width: none;
+        margin: 0px 15px;
       }
     }
+    &__price,
+    &__colors,
+    &__descr{
+      padding: 0px 15px;
+    }
+  }
+  .size-single{
+    padding: 0px 15px;
+  }
+  .add-product{
+    margin-left: 15px;
+    margin-right: 15px;
   }
 }
 

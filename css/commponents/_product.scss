@@ -18,7 +18,7 @@
     letter-spacing: 0.05em;
     text-transform: uppercase;
     color: #333333;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
   }
   &__top {
     display: flex;
@@ -356,6 +356,7 @@
     &__title {
       text-align: center;
       font-size: 35px;
+      margin-bottom: 0;
     }
     &__info {
       margin-bottom: 0;
@@ -415,7 +416,7 @@
     }
   }
   .breadcrumbs {
-    margin-bottom: 27px;
+    margin-bottom: 25px;
     &__list {
       justify-content: center;
     }
@@ -467,6 +468,9 @@
     .count-page__item {
       padding: 0px 19px;
       height: 46px;
+      &:nth-child(4){
+        display: none;
+      }
     }
     .count-page__top {
       display: none;

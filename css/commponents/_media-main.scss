@@ -15,11 +15,10 @@
   &__item {
     display: flex;
     position: relative;
-   width: 20vw;
-   height: 20vw;
+    width: 20vw;
+    height: 20vw;
     overflow: hidden;
-    will-change: auto;
-    & img{
+    & img {
       position: absolute;
       top: 0;
       left: 0;
@@ -28,7 +27,7 @@
       transform: scale(1.01);
       transition: transform 0.4s ease-in-out 0.4s;
     }
-    &::after{
+    &::after {
       position: absolute;
       content: "";
       top: 0;
@@ -45,7 +44,6 @@
     }
   }
 }
-
 
 @media (max-width: 1000px) {
   .media {
@@ -78,11 +76,11 @@
   }
 }
 
-@media(min-width:950px){
-  .media__item:hover img{
+@media (min-width: 950px) {
+  .media__item:hover img {
     transform: scale(1.03);
   }
-  .media__item:hover::after{
+  .media__item:hover::after {
     opacity: 1;
     transition: opacity 0.4s ease-in-out;
   }

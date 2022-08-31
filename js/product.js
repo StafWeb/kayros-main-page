@@ -46,8 +46,8 @@ if (window.innerWidth > 1000) {
   });
   footeTl.from(".footer__contacts", { opacity: 0, y: 10, duration: 0.65 })
     .from(".footer__nav", { opacity: 0, y: 10, duration: 0.65 }, "-=0.65")
-    .from(".footer__bottom-btn", { opacity: 0, y: 10, duration: 0.65 }, "+=0.8")
-    .from(".footer__bottom-descr", { opacity: 0, y: 10, duration: 0.65 }, "-=0.6");
+    .fromTo(".footer__bottom-btn", { y: 10, opacity: 0 }, { y:0, opacity:1, duration: 0.4 }, "+=0.2")
+    .from(".footer__bottom-descr", { opacity: 0, y: 10, duration: 0.4 });
 
   let infoTitles = document.querySelectorAll('.product__info > h2, p');
   for (let a = 0; a < infoTitles.length; a++) {

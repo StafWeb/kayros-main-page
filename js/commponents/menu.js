@@ -63,12 +63,17 @@ function burgerMenu() {
     })
   });
 };
-function catalogLink(){
+function catalogLink() {
   let catalogLink = document.querySelector(".catalog-link");
+  let body = document.body;
   let a = 0;
   catalogLink.addEventListener('click', (el) => {
     a++;
-    if(a <=1){el.preventDefault()};
+    el.stopPropagation();
+    if (a <= 1) { el.preventDefault() };
+  });
+  body.addEventListener('click', () => {
+    a = 0;
   });
 };
 export { burger, footerMenu, burgerMenu, catalogLink };

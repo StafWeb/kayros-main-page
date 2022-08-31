@@ -156,7 +156,6 @@ if (window.innerWidth > 1000) {
     .from(".footer__nav", { opacity: 0, y: 10, duration: 0.65 }, "-=0.65")
     .from(".footer__bottom-btn", { opacity: 0, y: 30, duration: 0.65 }, "+=0.8")
     .from(".footer__bottom-descr", { opacity: 0, y: 30, duration: 0.65 }, "-=0.8");
-
 };
 ScrollTrigger.addEventListener("refresh", () => scroller.update());
 ScrollTrigger.refresh();

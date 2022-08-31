@@ -64,13 +64,18 @@ function burgerMenu() {
   });
 };
 function catalogLink() {
-  let catalogLink = document.querySelector(".catalog-link");
-  let body = document.body;
-  let a = 0;
+  let
+    catalogLink = document.querySelector(".catalog-link"),
+    dropdown = document.querySelector(".dropdown"),
+    body = document.body,
+    a = 0;
   catalogLink.addEventListener('click', (el) => {
     a++;
     el.stopPropagation();
     if (a <= 1) { el.preventDefault() };
+  });
+  dropdown.addEventListener('click', (el) => {
+    el.stopPropagation();
   });
   body.addEventListener('click', () => {
     a = 0;

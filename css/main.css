@@ -1023,6 +1023,10 @@ input[type=search]::-webkit-search-results-decoration {
   width: 100%;
 }
 
+.header-link {
+  cursor: pointer;
+}
+
 .header__logo-top,
 .header__logo-end,
 .item-logo,
@@ -5355,7 +5359,6 @@ input[type=search]::-webkit-search-results-decoration {
   margin-left: 35px;
 }
 .cart-header__wrapper > a:last-child {
-  margin-right: 87px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   justify-self: end;
@@ -6572,7 +6575,7 @@ input[type=search]::-webkit-search-results-decoration {
   font-size: 16px;
   line-height: 140%;
   color: #333333;
-  margin-bottom: 4px;
+  margin-bottom: 2px;
 }
 .order-form__delivery-title > span {
   font-weight: 400;

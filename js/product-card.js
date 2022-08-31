@@ -1,6 +1,6 @@
 gsap.registerPlugin(ScrollTrigger);
 import { slider } from './commponents/slider.js';
-import { burger, burgerMenu, footerMenu } from './commponents/menu.js';
+import { burger, burgerMenu, footerMenu, catalogLink } from './commponents/menu.js';
 import { tableModal, loginModal } from './commponents/modal.js';
 function fixBtn(){
   let btnViewport = document.querySelector(".add-product-viewport");
@@ -34,7 +34,7 @@ burgerMenu();
 footerMenu();
 tableModal();
 loginModal();
-
+catalogLink();
 let
   addCartBtn = document.querySelectorAll(".add-product"),
   cardModal = document.querySelector(".card-modal"),

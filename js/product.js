@@ -1,4 +1,4 @@
-import { burger, footerMenu, burgerMenu } from './commponents/menu.js';
+import { burger, footerMenu, burgerMenu, catalogLink } from './commponents/menu.js';
 import { loginModal } from './commponents/modal.js'
 gsap.registerPlugin(ScrollTrigger);
 ScrollTrigger.defaults({
@@ -70,6 +70,7 @@ burger();
 footerMenu();
 burgerMenu();
 loginModal();
+catalogLink();
 
 document.querySelectorAll(".filters").forEach(el => {
   new SimpleBar(el);

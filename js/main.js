@@ -14,7 +14,7 @@ export function headerAnim() {
     .from(".header__thumb", { opacity: 0, y: 20, duration: 0.6 }, "-=0.5");
   return headAnim;
 }
-import { burger, footerMenu, burgerMenu } from './commponents/menu.js';
+import { burger, footerMenu, burgerMenu, catalogLink } from './commponents/menu.js';
 import { loginModal } from './commponents/modal.js';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -156,7 +156,7 @@ if (window.innerWidth > 1000) {
     .from(".footer__nav", { opacity: 0, y: 10, duration: 0.65 }, "-=0.65")
     .from(".footer__bottom-btn", { opacity: 0, y: 30, duration: 0.65 }, "+=0.8")
     .from(".footer__bottom-descr", { opacity: 0, y: 30, duration: 0.65 }, "-=0.8");
-    
+
 };
 ScrollTrigger.addEventListener("refresh", () => scroller.update());
 ScrollTrigger.refresh();
@@ -165,10 +165,13 @@ burger();
 burgerMenu();
 footerMenu();
 loginModal();
+catalogLink();
 
- if (window.innerWidth <= 1000){
+if (window.innerWidth <= 1000) {
   document.querySelectorAll(".burger-menu__wrapper").forEach(el => {
     new SimpleBar(el);
   });
- };
+};
+
+
 

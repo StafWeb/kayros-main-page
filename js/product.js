@@ -18,13 +18,13 @@ if (window.innerWidth > 1000) {
     .from(".cards__list", { opacity: 0, y: 5, duration: 1 }, "-=0.6")
     .from(".filters", { opacity: 0, duration: 1 }, "-=0.8")
     .from(".header__logo", { opacity: 0, duration: 0.6 }, "-=0.9")
-    .from(".header__item-img", { opacity: 0, rotate: -90, duration: 0.4 }, "-=0.6")
+    .from(".header__item-img", { opacity: 0, rotate: -90, duration: 0.4 }, "-=0.5")
     .from(".item1", { opacity: 0, duration: 0.5 }, "-=0.4")
     .from(".items", { opacity: 0, x: -5, duration: 0.6 }, "-=0.4")
     .from(".header__form", { opacity: 0, x: -5, duration: 0.6 }, "-=0.5")
-    .from(".header__user", { opacity: 0, x: -5, duration: 0.6 }, "-=0.5")
-    .from(".header__cart", { opacity: 0, x: -5, duration: 0.6 }, "-=0.5")
-    .from(".header__burger", { opacity: 0, x: -5, duration: 0.6 }, "-=0.5");
+    .from(".header__user", { opacity: 0, x: -5, duration: 0.6 }, "-=0.55")
+    .from(".header__cart", { opacity: 0, x: -5, duration: 0.6 }, "-=0.55")
+    .from(".header__burger", { opacity: 0, x: -5, duration: 0.6 }, "-=0.55");
   let cardItem = document.querySelectorAll('.cards__item');
   for (let a = 0; a < cardItem.length; a++) {
     let trig = cardItem[a];

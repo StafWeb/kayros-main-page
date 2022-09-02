@@ -15,6 +15,7 @@
   }
 
   &__descr {
+    max-width: 409px;
     font-weight: 400;
     font-size: 14px;
     line-height: 160%;
@@ -22,6 +23,7 @@
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: #777777;
+    margin: 0 auto;
     margin-top: 40px;
   }
   &__gallery {
@@ -146,7 +148,7 @@
   }
 }
 
-@media (max-width: 780px) {
+@media (max-width: 750px) {
   .collection {
     .container {
       padding: 0;

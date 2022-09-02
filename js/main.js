@@ -165,12 +165,29 @@ burgerMenu();
 footerMenu();
 loginModal();
 catalogLink();
+function burgerScroll() {
+  if (window.innerWidth <= 1000) {
+    let burger1 = document.querySelector(".burger-menu__wrapper");
 
-if (window.innerWidth <= 1000) {
-  document.querySelectorAll(".burger-menu__wrapper").forEach(el => {
-    new SimpleBar(el);
-  });
+    new SimpleBar(burger1);
+  } else {
+    let burger2 = document.querySelector(".burger-menu");
+    new SimpleBar(burger2);
+  };
 };
+burgerScroll();
+let wW = window.innerWidth;
+window.addEventListener('resize', () => {
+  let windowWidth = window.innerWidth;
+  console.log(windowWidth);
+  if (windowWidth >= wW * 1.3 || windowWidth <= wW * 0.7) {
+    location.reload();
+    return;
+  }
+});
+
+
+
 
 
 

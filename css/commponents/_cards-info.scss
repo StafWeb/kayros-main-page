@@ -11,12 +11,19 @@
     margin-bottom: 25px;
   }
   &__price {
+    display: flex;
+    align-items: center;
+    gap: 20px;
     font-weight: 400;
     font-size: 30px;
     line-height: 120%;
     letter-spacing: 0.03em;
     color: #d83244;
     margin-bottom: 25px;
+    & > span{
+      color: rgba(119, 119, 119, 0.7);
+      text-decoration: line-through;
+    }
   }
   &__colors {
     display: flex;

@@ -179,7 +179,6 @@ burgerScroll();
 let wW = window.innerWidth;
 window.addEventListener('resize', () => {
   let windowWidth = window.innerWidth;
-  console.log(windowWidth);
   if (windowWidth >= wW * 1.3 || windowWidth <= wW * 0.7) {
     location.reload();
     return;

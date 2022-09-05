@@ -490,7 +490,7 @@
     display: flex;
     gap: 11px;
     align-items: center;
-    margin-top: 30px;
+    margin-top: 35px;
     &-link {
       font-weight: 700;
       font-size: 16px;
@@ -506,7 +506,7 @@
   &__social {
     display: flex;
     flex-direction: column;
-    margin-top: 28px;
+    margin-top: 35px;
     &-link {
       width: 32px;
       height: 32px;
@@ -526,7 +526,7 @@
     line-height: 160%;
     letter-spacing: 0.05em;
     color: #333333;
-    margin-top: 27px;
+    margin-top: 30px;
     transition: color 0.3s ease;
   }
 }

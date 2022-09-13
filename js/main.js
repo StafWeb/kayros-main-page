@@ -14,6 +14,7 @@ export function headerAnim() {
     .from(".header__thumb", { opacity: 0, y: 20, duration: 0.6 }, "-=0.5");
   return headAnim;
 }
+
 import { burger, footerMenu, burgerMenu, catalogLink } from './commponents/menu.js';
 import { loginModal } from './commponents/modal.js';
 
@@ -165,6 +166,7 @@ burgerMenu();
 footerMenu();
 loginModal();
 catalogLink();
+
 function burgerScroll() {
   if (window.innerWidth <= 1000) {
     let burger1 = document.querySelector(".burger-menu__wrapper");
@@ -175,13 +177,17 @@ function burgerScroll() {
     new SimpleBar(burger2);
   };
 };
+
 burgerScroll();
+
 let wW = window.innerWidth;
 window.addEventListener('resize', () => {
   let windowWidth = window.innerWidth;
-  if (windowWidth >= wW * 1.3 || windowWidth <= wW * 0.7) {
-    location.reload();
-    return;
+  if (window.matchMedia("(min-width: 760px)").matches){
+    if (windowWidth >= wW * 1.3 || windowWidth <= wW * 0.7) {
+      location.reload();
+      return;
+    }
   }
 });
 

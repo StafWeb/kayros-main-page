@@ -1,3 +1,5 @@
+gsap.registerPlugin(ScrollTrigger);
+
 export function headerAnim() {
   let headAnim = gsap.timeline({ delay: 0.2, ease: "power1.out" });
   headAnim.fromTo(".header__background", { opacity: 0, scale: 1.2 }, { opacity: 1, scale: 1, duration: 1 })
@@ -18,7 +20,12 @@ export function headerAnim() {
 import { burger, footerMenu, burgerMenu, catalogLink } from './commponents/menu.js';
 import { loginModal } from './commponents/modal.js';
 
-gsap.registerPlugin(ScrollTrigger);
+burger();
+burgerMenu();
+footerMenu();
+loginModal();
+catalogLink();
+
 let pageContainer = document.querySelector("#viewport");
 /* SMOOTH SCROLL */
 let scroller = new LocomotiveScroll({
@@ -161,12 +168,6 @@ if (window.innerWidth > 1000) {
 ScrollTrigger.addEventListener("refresh", () => scroller.update());
 ScrollTrigger.refresh();
 
-burger();
-burgerMenu();
-footerMenu();
-loginModal();
-catalogLink();
-
 function burgerScroll() {
   if (window.innerWidth <= 1000) {
     let burger1 = document.querySelector(".burger-menu__wrapper");
@@ -183,10 +184,9 @@ burgerScroll();
 let wW = window.innerWidth;
 window.addEventListener('resize', () => {
   let windowWidth = window.innerWidth;
-  if (window.matchMedia("(min-width: 760px)").matches){
+  if (window.matchMedia("(min-width: 450px)").matches || wW <= 1050){
     if (windowWidth >= wW * 1.3 || windowWidth <= wW * 0.7) {
       location.reload();
-      return;
     }
   }
 });

@@ -1612,20 +1612,16 @@ input[type=search]::-webkit-search-results-decoration {
 .header-product .cart-logo,
 .header-product .user-logo-cir {
   stroke: #333333;
-  transition: 0.3 ease;
 }
 .header-product .search-logo-rec,
 .header-product .user-logo {
   fill: #333333;
-  transition: 0.3 ease;
 }
 .header-product .header-link:hover {
   color: #b0976e;
-  transition: 0.3 ease;
 }
 .header-product .header-link {
   color: #333333;
-  transition: 0.3 ease;
 }
 .header-product .header__burger-line,
 .header-product .header__burger::after,
@@ -1638,7 +1634,6 @@ input[type=search]::-webkit-search-results-decoration {
 }
 .header-product .header__user > a > span {
   color: #333333;
-  transition: all 0.3s ease;
 }
 .header-product .header__user:hover + .header-product {
   border-color: transparent;

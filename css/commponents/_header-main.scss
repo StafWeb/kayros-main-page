@@ -1403,20 +1403,16 @@
   .cart-logo,
   .user-logo-cir {
     stroke: #333333;
-    transition: 0.3 ease;
   }
   .search-logo-rec,
   .user-logo {
     fill: #333333;
-    transition: 0.3 ease;
   }
   .header-link:hover {
     color: #b0976e;
-    transition: 0.3 ease;
   }
   .header-link {
     color: #333333;
-    transition: 0.3 ease;
   }
   .header__burger-line,
   .header__burger::after,
@@ -1429,7 +1425,6 @@
   }
   .header__user > a > span {
     color: #333333;
-    transition: all 0.3s ease;
   }
   .header__user:hover + .header-product {
     border-color: transparent;

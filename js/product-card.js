@@ -2,7 +2,9 @@ gsap.registerPlugin(ScrollTrigger);
 import { slider } from './commponents/slider.js';
 import { burger, burgerMenu, footerMenu, catalogLink } from './commponents/menu.js';
 import { tableModal, loginModal } from './commponents/modal.js';
-function fixBtn(){
+import { windowResize, burgerScroll } from './commponents/function.js'
+
+function fixBtn() {
   let btnViewport = document.querySelector(".add-product-viewport");
   let btnFixed = document.querySelector(".add-product-fixed");
   ScrollTrigger.create({
@@ -10,9 +12,9 @@ function fixBtn(){
     end: "max",
     onUpdate: upValue
   });
-  function upValue(){
-   let a = ScrollTrigger.isInViewport(btnViewport);
-   a == true ? btnFixed.classList.remove('add-product-fixed_active') : btnFixed.classList.add('add-product-fixed_active');
+  function upValue() {
+    let a = ScrollTrigger.isInViewport(btnViewport);
+    a == true ? btnFixed.classList.remove('add-product-fixed_active') : btnFixed.classList.add('add-product-fixed_active');
   };
 };
 
@@ -35,6 +37,9 @@ footerMenu();
 tableModal();
 loginModal();
 catalogLink();
+windowResize();
+burgerScroll();
+
 let
   addCartBtn = document.querySelectorAll(".add-product"),
   cardModal = document.querySelector(".card-modal"),

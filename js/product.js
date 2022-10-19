@@ -1,17 +1,21 @@
 import { burger, footerMenu, burgerMenu, catalogLink } from './commponents/menu.js';
 import { loginModal } from './commponents/modal.js'
+import { windowResize, burgerScroll, preloader } from './commponents/function.js'
+
+document.addEventListener('DOMContentLoaded', () => {
+  // async function start(){
+  //   await preloader();
+  //   await headerAnim();
+  // }
+  // start();
+  let a = preloader();
+  let b = headerAnim(preloader);
+  });
+
 gsap.registerPlugin(ScrollTrigger);
-ScrollTrigger.defaults({
-  // toggleActions: "restart complete reverse reset",
-  toggleActions: "play none none none",
-  // markers: {
-  //   startColor: "green",
-  //   endColor: "red",
-  //   fontSize: "26px",
-  // },
-});
-if (window.innerWidth > 1000) {
-  let headAnim = gsap.timeline({ delay: 0.4, ease: "power1.out" });
+
+function headerAnim(){
+  let headAnim = gsap.timeline({ delay: 0.2, ease: "power1.out" });
   headAnim.from(".breadcrumbs", { opacity: 0, duration: 0.6 })
     .from(".product__title", { opacity: 0, duration: 0.6 }, "-=0.5")
     .from(".cards__top", { opacity: 0, duration: 0.6 }, "-=0.6")
@@ -25,6 +29,20 @@ if (window.innerWidth > 1000) {
     .from(".header__user", { opacity: 0, x: -5, duration: 0.6 }, "-=0.55")
     .from(".header__cart", { opacity: 0, x: -5, duration: 0.6 }, "-=0.55")
     .from(".header__burger", { opacity: 0, x: -5, duration: 0.6 }, "-=0.55");
+    return headAnim;
+};
+
+ScrollTrigger.defaults({
+  // toggleActions: "restart complete reverse reset",
+  toggleActions: "play none none none",
+  // markers: {
+  //   startColor: "green",
+  //   endColor: "red",
+  //   fontSize: "26px",
+  // },
+});
+
+if (window.innerWidth > 1000) {
   let cardItem = document.querySelectorAll('.cards__item');
   for (let a = 0; a < cardItem.length; a++) {
     let trig = cardItem[a];
@@ -68,6 +86,7 @@ if (window.innerWidth > 1000) {
     });
   };
 };
+
 ScrollTrigger.refresh();
 
 burger();
@@ -75,6 +94,8 @@ footerMenu();
 burgerMenu();
 loginModal();
 catalogLink();
+windowResize();
+burgerScroll();
 
 document.querySelectorAll(".filters").forEach(el => {
   new SimpleBar(el);
@@ -142,12 +163,13 @@ filterClose.addEventListener('click', function () {
   filter.classList.remove("filters_active");
 });
 
-let cardsBreadcumbsBtn = document.querySelectorAll(".cards__breadcrumbs-btn");
+let cardsBreadcumbsBtn = document?.querySelectorAll(".cards__breadcrumbs-btn");
 cardsBreadcumbsBtn.forEach(el => {
   el.addEventListener('click', () => {
     el.remove();
   });
 });
+
 if (window.innerWidth <= 1000) {
   document.querySelectorAll(".burger-menu__wrapper").forEach(el => {
     new SimpleBar(el);

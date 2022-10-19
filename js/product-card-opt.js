@@ -1,6 +1,8 @@
 import { slider } from './commponents/slider.js';
 import { burger, burgerMenu, footerMenu, catalogLink } from './commponents/menu.js';
 import { tableModal, loginModal } from './commponents/modal.js';
+import { windowResize, burgerScroll } from './commponents/function.js'
+
 if (window.innerWidth > 1000) {
   let headAnim = gsap.timeline({ delay: 0.5, ease: "power1.out" });
   headAnim.from(".header__logo", { opacity: 0, duration: 0.6 })
@@ -48,6 +50,8 @@ tableModal();
 loginModal();
 modalAdd();
 catalogLink();
+windowResize();
+burgerScroll();
 
 let
   butUp = document.querySelectorAll(".step-up"),

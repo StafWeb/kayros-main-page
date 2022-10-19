@@ -1,30 +1,46 @@
-gsap.registerPlugin(ScrollTrigger);
-
-export function headerAnim() {
-  let headAnim = gsap.timeline({ delay: 0.2, ease: "power1.out" });
-  headAnim.fromTo(".header__background", { opacity: 0, scale: 1.2 }, { opacity: 1, scale: 1, duration: 1 })
-    .from(".header__logo", { opacity: 0, duration: 0.6 })
-    .from(".header__item-img", { opacity: 0, rotate: -90, duration: 0.4 }, "-=0.4")
-    .from(".item1", { opacity: 0, duration: 0.5 }, "-=0.4")
-    .from(".items", { opacity: 0, x: -5, duration: 0.6 }, "-=0.4")
-    .from(".header__form", { opacity: 0, x: -5, duration: 0.6 }, "-=0.5")
-    .from(".header__user", { opacity: 0, x: -5, duration: 0.6 }, "-=0.5")
-    .from(".header__cart", { opacity: 0, x: -5, duration: 0.6 }, "-=0.5")
-    .from(".header__burger", { opacity: 0, x: -5, duration: 0.6 }, "-=0.5")
-    .from(".header__title", { opacity: 0, y: 40, duration: 0.6 }, "-=0.6")
-    .from(".header__descr", { opacity: 0, y: 30, duration: 0.6 }, "-=0.5")
-    .from(".header__thumb", { opacity: 0, y: 20, duration: 0.6 }, "-=0.5");
-  return headAnim;
-}
-
 import { burger, footerMenu, burgerMenu, catalogLink } from './commponents/menu.js';
 import { loginModal } from './commponents/modal.js';
+import { windowResize, burgerScroll, preloader } from './commponents/function.js'
+
+document.addEventListener('DOMContentLoaded', () => {
+  // async function start(){
+  //   await preloader();
+  //   await headerAnim();
+
+  // }
+  // start();
+  // preloader().then(function () {
+  //   return headerAnim();
+  // });
+  let a = preloader();
+  let b = headerAnim(preloader);
+});
+
+gsap.registerPlugin(ScrollTrigger);
+
+function headerAnim() {
+    let headAnim = gsap.timeline({ delay: 0.3, ease: "power1.out" });
+    headAnim.fromTo(".header__background", { opacity: 0, scale: 1.2 }, { opacity: 1, scale: 1, duration: 1 })
+      .from(".header__logo", { opacity: 0, duration: 0.6 })
+      .from(".header__item-img", { opacity: 0, rotate: -90, duration: 0.4 }, "-=0.4")
+      .from(".item1", { opacity: 0, duration: 0.5 }, "-=0.4")
+      .from(".items", { opacity: 0, x: -5, duration: 0.6 }, "-=0.4")
+      .from(".header__form", { opacity: 0, x: -5, duration: 0.6 }, "-=0.5")
+      .from(".header__user", { opacity: 0, x: -5, duration: 0.6 }, "-=0.5")
+      .from(".header__cart", { opacity: 0, x: -5, duration: 0.6 }, "-=0.5")
+      .from(".header__burger", { opacity: 0, x: -5, duration: 0.6 }, "-=0.5")
+      .from(".header__title", { opacity: 0, y: 40, duration: 0.6 }, "-=0.6")
+      .from(".header__descr", { opacity: 0, y: 30, duration: 0.6 }, "-=0.5")
+      .from(".header__thumb", { opacity: 0, y: 20, duration: 0.6 }, "-=0.5");
+};
 
 burger();
 burgerMenu();
 footerMenu();
 loginModal();
 catalogLink();
+windowResize();
+burgerScroll();
 
 let pageContainer = document.querySelector("#viewport");
 /* SMOOTH SCROLL */
@@ -61,6 +77,7 @@ ScrollTrigger.defaults({
   //   fontSize: "26px",
   // },
 });
+
 if (window.innerWidth > 1000) {
   let pinWrap = document.querySelector(".pin-wrap");
   let pinWrapWidth = pinWrap.offsetWidth;
@@ -165,31 +182,11 @@ if (window.innerWidth > 1000) {
     .from(".footer__bottom-btn", { opacity: 0, y: 10, duration: 0.65 }, "+=1")
     .from(".footer__bottom-descr", { opacity: 0, y: 10, duration: 0.65 });
 };
+
 ScrollTrigger.addEventListener("refresh", () => scroller.update());
 ScrollTrigger.refresh();
 
-function burgerScroll() {
-  if (window.innerWidth <= 1000) {
-    let burger1 = document.querySelector(".burger-menu__wrapper");
 
-    new SimpleBar(burger1);
-  } else {
-    let burger2 = document.querySelector(".burger-menu");
-    new SimpleBar(burger2);
-  };
-};
-
-burgerScroll();
-
-let wW = window.innerWidth;
-window.addEventListener('resize', () => {
-  let windowWidth = window.innerWidth;
-  if (window.matchMedia("(min-width: 450px)").matches || wW <= 1050){
-    if (windowWidth >= wW * 1.3 || windowWidth <= wW * 0.7) {
-      location.reload();
-    }
-  }
-});
 
 
 

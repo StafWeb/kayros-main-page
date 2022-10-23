@@ -4,8 +4,9 @@ import { tableModal, loginModal } from './commponents/modal.js';
 import { windowResize, burgerScroll } from './commponents/function.js'
 
 if (window.innerWidth > 1000) {
-  let headAnim = gsap.timeline({ delay: 0.5, ease: "power1.out" });
-  headAnim.from(".header__logo", { opacity: 0, duration: 0.6 })
+  let headAnim = gsap.timeline({ ease: "power1.out" });
+  headAnim.to(".anim", { opacity: 1, duration: 0.2 })
+    .from(".header__logo", { opacity: 0, duration: 0.6 })
     .from(".header__item-img", { opacity: 0, rotate: -90, duration: 0.4 }, "-=0.4")
     .from(".item1", { opacity: 0, duration: 0.5 }, "-=0.4")
     .from(".items", { opacity: 0, x: -5, duration: 0.6 }, "-=0.4")
@@ -14,20 +15,20 @@ if (window.innerWidth > 1000) {
     .from(".header__cart", { opacity: 0, x: -5, duration: 0.6 }, "-=0.5")
     .from(".header__burger", { opacity: 0, x: -5, duration: 0.6 }, "-=0.5");
 };
-function modalAdd(){
-  let 
-  addModal = document.querySelector(".modal-add"),
-  btnmodal = document.querySelectorAll(".add-cart"),
-  modalClose = document.querySelector(".modal-add__close");
-  let close = () => { addModal.classList.remove('modal-add_active')};
-  btnmodal.forEach(el =>{
-    if(!el.classList.contains('added')){
-      el.addEventListener('click', () =>{
+function modalAdd() {
+  let
+    addModal = document.querySelector(".modal-add"),
+    btnmodal = document.querySelectorAll(".add-cart"),
+    modalClose = document.querySelector(".modal-add__close");
+  let close = () => { addModal.classList.remove('modal-add_active') };
+  btnmodal.forEach(el => {
+    if (!el.classList.contains('added')) {
+      el.addEventListener('click', () => {
         addModal.classList.add('modal-add_active');
         el.textContent = "в корзине";
         el.classList.add('added');
         setTimeout(() => {
-         close();
+          close();
         }, 5000);
       });
     }

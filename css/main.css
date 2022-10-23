@@ -160,6 +160,15 @@ i {
   margin: 0 auto;
 }
 
+.anim {
+  opacity: 0;
+}
+@media (max-width: 1000px) {
+  .anim {
+    opacity: 1;
+  }
+}
+
 main {
   flex-grow: 1;
 }
@@ -3096,6 +3105,7 @@ input[type=search]::-webkit-search-results-decoration {
   text-align: right;
   color: #333333;
   padding-right: 39px;
+  cursor: pointer;
 }
 .product .cards__sort-inner input {
   position: absolute;

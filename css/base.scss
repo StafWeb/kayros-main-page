@@ -38,6 +38,12 @@ i{
   padding: 0 90px;
   margin: 0 auto;
 }
+.anim{
+  opacity: 0;
+  @media(max-width:1000px){
+    opacity: 1;
+  }
+}
 main {
   flex-grow: 1;
 }

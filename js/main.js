@@ -3,35 +3,31 @@ import { loginModal } from './commponents/modal.js';
 import { windowResize, burgerScroll, preloader } from './commponents/function.js'
 
 document.addEventListener('DOMContentLoaded', () => {
-  // async function start(){
-  //   await preloader();
-  //   await headerAnim();
-
-  // }
-  // start();
-  // preloader().then(function () {
-  //   return headerAnim();
-  // });
-  let a = preloader();
-  let b = headerAnim(preloader);
+  async function start() {
+    await preloader();
+    if (window.innerWidth > 1000) {
+      await headerAnim();
+    }
+  }
+  start();
 });
 
 gsap.registerPlugin(ScrollTrigger);
 
-function headerAnim() {
-    let headAnim = gsap.timeline({ delay: 0.3, ease: "power1.out" });
-    headAnim.fromTo(".header__background", { opacity: 0, scale: 1.2 }, { opacity: 1, scale: 1, duration: 1 })
-      .from(".header__logo", { opacity: 0, duration: 0.6 })
-      .from(".header__item-img", { opacity: 0, rotate: -90, duration: 0.4 }, "-=0.4")
-      .from(".item1", { opacity: 0, duration: 0.5 }, "-=0.4")
-      .from(".items", { opacity: 0, x: -5, duration: 0.6 }, "-=0.4")
-      .from(".header__form", { opacity: 0, x: -5, duration: 0.6 }, "-=0.5")
-      .from(".header__user", { opacity: 0, x: -5, duration: 0.6 }, "-=0.5")
-      .from(".header__cart", { opacity: 0, x: -5, duration: 0.6 }, "-=0.5")
-      .from(".header__burger", { opacity: 0, x: -5, duration: 0.6 }, "-=0.5")
-      .from(".header__title", { opacity: 0, y: 40, duration: 0.6 }, "-=0.6")
-      .from(".header__descr", { opacity: 0, y: 30, duration: 0.6 }, "-=0.5")
-      .from(".header__thumb", { opacity: 0, y: 20, duration: 0.6 }, "-=0.5");
+async function headerAnim() {
+  let headAnim = gsap.timeline({ delay: 0.3, ease: "power1.out" });
+  headAnim.fromTo(".header__background", { opacity: 0, scale: 1.2 }, { opacity: 1, scale: 1, duration: 1 })
+    .from(".header__logo", { opacity: 0, duration: 0.6 })
+    .from(".header__item-img", { opacity: 0, rotate: -90, duration: 0.4 }, "-=0.4")
+    .from(".item1", { opacity: 0, duration: 0.5 }, "-=0.4")
+    .from(".items", { opacity: 0, x: -5, duration: 0.6 }, "-=0.4")
+    .from(".header__form", { opacity: 0, x: -5, duration: 0.6 }, "-=0.5")
+    .from(".header__user", { opacity: 0, x: -5, duration: 0.6 }, "-=0.5")
+    .from(".header__cart", { opacity: 0, x: -5, duration: 0.6 }, "-=0.5")
+    .from(".header__burger", { opacity: 0, x: -5, duration: 0.6 }, "-=0.5")
+    .from(".header__title", { opacity: 0, y: 40, duration: 0.6 }, "-=0.6")
+    .from(".header__descr", { opacity: 0, y: 30, duration: 0.6 }, "-=0.5")
+    .from(".header__thumb", { opacity: 0, y: 20, duration: 0.6 }, "-=0.5");
 };
 
 burger();

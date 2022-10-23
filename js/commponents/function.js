@@ -12,11 +12,9 @@ function windowResize() {
   let wW = window.innerWidth;
   window.addEventListener('resize', () => {
     let windowWidth = window.innerWidth;
-    // if (window.matchMedia("(min-width: 450px)").matches || wW <= 1050) {
       if (windowWidth >= wW * 1.3 || windowWidth <= wW * 0.7) {
         location.reload();
       }
-    // }
   });
 };
 

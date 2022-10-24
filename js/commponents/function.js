@@ -11,11 +11,13 @@ function burgerScroll() {
 function windowResize() {
   let wW = window.innerWidth;
   window.addEventListener('resize', () => {
-    let windowWidth = window.innerWidth;
-      if (windowWidth >= wW * 1.3 || windowWidth <= wW * 0.7) {
-        location.reload();
-      }
+    let wW1 = window.innerWidth
+    if (window.matchMedia("(min-width: 650px)").matches && window.matchMedia("(max-width: 1250px)").matches)  {
+      if (wW1 >= wW * 1.2 || wW1 <= wW * 0.8)
+      location.reload()
+    }
   });
+
 };
 
 async function preloader() {

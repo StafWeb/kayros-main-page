@@ -1,26 +1,8 @@
 import { burger, footerMenu, burgerMenu, catalogLink } from './commponents/menu.js';
 import { loginModal } from './commponents/modal.js'
-import { windowResize, burgerScroll } from './commponents/function.js'
+import { burgerScroll, windowResize } from './commponents/function.js'
 
 gsap.registerPlugin(ScrollTrigger);
-
-
-let headAnim = gsap.timeline({ delay: 0.2, ease: "power1.out" });
-headAnim.to("body",  { opacity: 1, duration: 0.2 })
-  .from(".breadcrumbs", { opacity: 0, duration: 0.6 })
-  .from(".product__title", { opacity: 0, duration: 0.6 }, "-=0.5")
-  .from(".cards__top", { opacity: 0, duration: 0.6 }, "-=0.6")
-  .from(".cards__list", { opacity: 0, y: 5, duration: 1 }, "-=0.6")
-  .from(".filters", { opacity: 0, duration: 1 }, "-=0.8")
-  .from(".header__logo", { opacity: 0, duration: 0.6 }, "-=0.9")
-  .from(".header__item-img", { opacity: 0, rotate: -90, duration: 0.4 }, "-=0.5")
-  .from(".item1", { opacity: 0, duration: 0.5 }, "-=0.4")
-  .from(".items", { opacity: 0, x: -5, duration: 0.6 }, "-=0.4")
-  .from(".header__form", { opacity: 0, x: -5, duration: 0.6 }, "-=0.5")
-  .from(".header__user", { opacity: 0, x: -5, duration: 0.6 }, "-=0.55")
-  .from(".header__cart", { opacity: 0, x: -5, duration: 0.6 }, "-=0.55")
-  .from(".header__burger", { opacity: 0, x: -5, duration: 0.6 }, "-=0.55");
-
 
 ScrollTrigger.defaults({
   // toggleActions: "restart complete reverse reset",
@@ -32,7 +14,23 @@ ScrollTrigger.defaults({
   // },
 });
 
-if (window.innerWidth > 1000) {
+if (window.matchMedia("(min-width: 1001px)").matches) {
+  document.body.classList.add("anim");
+  let headAnim = gsap.timeline({ delay: 0.2, ease: "power1.out" });
+  headAnim.to("body", { opacity: 1, duration: 0.2 })
+    .from(".breadcrumbs", { opacity: 0, duration: 0.6 })
+    .from(".product__title", { opacity: 0, duration: 0.6 }, "-=0.5")
+    .from(".cards__top", { opacity: 0, duration: 0.6 }, "-=0.6")
+    .from(".cards__list", { opacity: 0, y: 5, duration: 1 }, "-=0.6")
+    .from(".filters", { opacity: 0, duration: 1 }, "-=0.8")
+    .from(".header__logo", { opacity: 0, duration: 0.6 }, "-=0.9")
+    .from(".header__item-img", { opacity: 0, rotate: -90, duration: 0.4 }, "-=0.5")
+    .from(".item1", { opacity: 0, duration: 0.5 }, "-=0.4")
+    .from(".items", { opacity: 0, x: -5, duration: 0.6 }, "-=0.4")
+    .from(".header__form", { opacity: 0, x: -5, duration: 0.6 }, "-=0.5")
+    .from(".header__user", { opacity: 0, x: -5, duration: 0.6 }, "-=0.55")
+    .from(".header__cart", { opacity: 0, x: -5, duration: 0.6 }, "-=0.55")
+    .from(".header__burger", { opacity: 0, x: -5, duration: 0.6 }, "-=0.55");
   let cardItem = document.querySelectorAll('.cards__item');
   for (let a = 0; a < cardItem.length; a++) {
     let trig = cardItem[a];

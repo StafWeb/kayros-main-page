@@ -35,8 +35,8 @@ burgerMenu();
 footerMenu();
 loginModal();
 catalogLink();
-windowResize();
 burgerScroll();
+windowResize();
 
 let pageContainer = document.querySelector("#viewport");
 /* SMOOTH SCROLL */
@@ -74,7 +74,7 @@ ScrollTrigger.defaults({
   // },
 });
 
-if (window.innerWidth > 1000) {
+if (window.matchMedia("(min-width: 1001px)").matches) {
   let pinWrap = document.querySelector(".pin-wrap");
   let pinWrapWidth = pinWrap.offsetWidth;
   let horizontalScrollLength = pinWrapWidth - window.innerWidth;
@@ -178,6 +178,9 @@ if (window.innerWidth > 1000) {
     .from(".footer__bottom-btn", { opacity: 0, y: 10, duration: 0.65 }, "+=1")
     .from(".footer__bottom-descr", { opacity: 0, y: 10, duration: 0.65 });
 };
+
+
+
 
 ScrollTrigger.addEventListener("refresh", () => scroller.update());
 ScrollTrigger.refresh();

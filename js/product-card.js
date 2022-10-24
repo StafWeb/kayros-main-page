@@ -18,7 +18,8 @@ function fixBtn() {
   };
 };
 
-if (window.innerWidth > 1000) {
+if (window.matchMedia("(min-width: 1001px)").matches) {
+  document.body.classList.add("anim");
   let headAnim = gsap.timeline({ ease: "power1.out" });
   headAnim.to(".anim", { opacity: 1, duration: 0.2 })
     .from(".header__logo", { opacity: 0, duration: 0.6 })

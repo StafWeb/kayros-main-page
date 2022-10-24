@@ -3897,7 +3897,7 @@ input[type=search]::-webkit-search-results-decoration {
 @media (max-width: 1000px) {
   .filters {
     display: flex;
-    opacity: 0;
+    opacity: 0 !important;
     position: fixed !important;
     z-index: -1;
     top: 0;
@@ -3906,7 +3906,7 @@ input[type=search]::-webkit-search-results-decoration {
     height: 100%;
     margin: 0;
     background: #ffffff;
-    transition: all 0.4s ease;
+    transition: all 0.3s ease;
   }
   .filters__header {
     display: flex;
@@ -3914,9 +3914,9 @@ input[type=search]::-webkit-search-results-decoration {
     transition: opacity 0.1s;
   }
   .filters_active {
-    opacity: 1;
+    opacity: 1 !important;
     z-index: 10;
-    transition: all 0.4s ease;
+    transition: all 0.3s ease;
     transition-delay: 0.1s;
   }
   .filters_active .filters__header {

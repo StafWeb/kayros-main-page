@@ -391,7 +391,7 @@
 @media (max-width: 1000px) {
   .filters {
     display: flex;
-    opacity: 0;
+    opacity: 0 !important;
     position: fixed !important;
     z-index: -1;
     top: 0;
@@ -400,16 +400,16 @@
     height: 100%;
     margin: 0;
     background: #ffffff;
-    transition: all 0.4s ease;
+    transition: all 0.3s ease;
     &__header {
       display: flex;
       opacity: 0;
       transition: opacity 0.1s;
     }
     &_active {
-      opacity: 1;
+      opacity: 1 !important;
       z-index: 10;
-      transition: all 0.4s ease;
+      transition: all 0.3s ease;
       transition-delay: 0.1s;
       & .filters__header {
         opacity: 1;

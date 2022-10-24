@@ -15,7 +15,12 @@ if (window.matchMedia("(min-width: 1001px)").matches) {
     .from(".header__user", { opacity: 0, x: -5, duration: 0.6 }, "-=0.5")
     .from(".header__cart", { opacity: 0, x: -5, duration: 0.6 }, "-=0.5")
     .from(".header__burger", { opacity: 0, x: -5, duration: 0.6 }, "-=0.5");
+} else {
+  document.querySelectorAll(".burger-menu__wrapper").forEach(el => {
+    new SimpleBar(el);
+  });
 };
+
 function modalAdd() {
   let
     addModal = document.querySelector(".modal-add"),
@@ -44,6 +49,7 @@ function modalAdd() {
     }
   });
 };
+
 slider();
 burger();
 burgerMenu();
@@ -100,8 +106,3 @@ document.addEventListener('keydown', (e) => {
 document.querySelectorAll(".simpScroll").forEach(el => {
   new SimpleBar(el, { autoHide: false });
 });
-if (window.innerWidth <= 1000) {
-  document.querySelectorAll(".burger-menu__wrapper").forEach(el => {
-    new SimpleBar(el);
-  });
-};

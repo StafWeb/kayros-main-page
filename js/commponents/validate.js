@@ -20,7 +20,7 @@ function passValid() {
     fieldValue = field.value.length,
     passVal = '',
     wrapper = field.parentNode.parentNode;
-  if (fieldValue < 4) {
+  if (fieldValue < 6) {
     passVal = 'false';
     wrapper.classList.add("required_active");
   } else {

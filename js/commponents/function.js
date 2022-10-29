@@ -2,9 +2,11 @@ function burgerScroll() {
   if (window.innerWidth <= 1000) {
     let burger1 = document.querySelector(".burger-menu__wrapper");
     new SimpleBar(burger1);
+    console.log("1")
   } else {
     let burger2 = document.querySelector(".burger-menu");
     new SimpleBar(burger2);
+    console.log('2')
   };
 };
 

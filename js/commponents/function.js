@@ -47,4 +47,5 @@ async function preloader() {
     }
   };
 };
+
 export { burgerScroll, windowResize, preloader }

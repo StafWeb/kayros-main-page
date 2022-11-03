@@ -10,24 +10,38 @@ windowResize();
 burgerScroll();
 
 let
-  showPassBtn = document.querySelectorAll(".show-pass"),
-  passField = document.querySelector(".passfield"),
-  passConfirmation = document.querySelector(".passConf"),
-  mailfield = document.querySelector(".mailfield");
-
-mailfield.addEventListener('focusout', () => {
+  showPassBtn = document?.querySelectorAll(".show-pass"),
+  passField = document?.querySelector(".passfield"),
+  passConfirmation = document?.querySelector(".passConf"),
+  mailField = document?.querySelector(".mailfield"),
+  telField = document?.querySelector(".tel"),
+  fullName = document?.querySelectorAll(".fullName"),
+  saveFormBtn = document?.querySelector(".save-form");
+let regex = /[0-9]/g;
+for (let i = 0; i < fullName.length; i++) {
+  let a = fullName[i];
+  a.oninput = function () { this.value = this.value.replace(regex, '') }
+};
+fullName.forEach(function (field){
+  field.addEventListener('focusout', function(){
+    fullNameValid();
+  })
+})
+mailField?.addEventListener('focusout', () => {
   mailValid();
 });
-
-passField.addEventListener('focusout', () => {
+telField.addEventListener('focusout', () => {
+ telValid();
+});
+passField?.addEventListener('focusout', () => {
   passValid();
 });
 
-passConfirmation.addEventListener('focusout', () => {
+passConfirmation?.addEventListener('focusout', () => {
   comparisonPassword();
 });
 
-showPassBtn.forEach(function (btn) {
+showPassBtn?.forEach(function (btn) {
   btn.addEventListener('click', function () {
     btn.classList.toggle('show-pass_active')
     let input = this.previousElementSibling;
@@ -37,6 +51,14 @@ showPassBtn.forEach(function (btn) {
       input.type = 'password'
     }
   })
+});
+
+saveFormBtn.addEventListener('click', (el) => {
+  el.preventDefault();
+  fullNameValid()
+  mailValid();
+  telValid()
+  passValid();
 });
 
 function comparisonPassword() {
@@ -49,4 +71,18 @@ function comparisonPassword() {
   } else {
     wrapper.classList.remove('required_active')
   }
+}
+
+function fullNameValid(){
+  for (let field of fullName){
+    if(field.value < 2){
+      field.parentNode.parentNode.classList.add("required_active")
+    }else{
+      field.parentNode.parentNode.classList.remove("required_active")
+    }
+  }
+}
+
+function telValid(){
+  telField.value < 10 ? telField.parentNode.parentNode.classList.add("required_active") : telField.parentNode.parentNode.classList.remove("required_active");
 }

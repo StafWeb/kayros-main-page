@@ -366,7 +366,7 @@
       display: flex;
       align-items: center;
       .order-card__price > *:last-child {
-        display: flex;
+        display: block;
       }
     }
   }

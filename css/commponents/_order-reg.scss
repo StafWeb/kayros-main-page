@@ -71,7 +71,8 @@
     width: 500px;
     height: 62px;
     position: relative;
-    input {
+    input,
+    textarea {
       position: absolute;
       width: 100%;
       height: 100%;
@@ -86,6 +87,7 @@
       color: #333333;
       padding: 31px 35px 12px 20px;
       transition: background-color 0.3s ease;
+      resize: none;
       &:-webkit-autofill,
       &:-webkit-autofill:hover,
       &:-webkit-autofill:focus {

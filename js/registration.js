@@ -1,6 +1,6 @@
 import { burgerScroll, windowResize } from './commponents/function.js'
 import { burger, footerMenu, burgerMenu, catalogLink } from './commponents/menu.js'
-import { passValid, mailValid } from './commponents/validate.js'
+import { passValid, mailValid, telValid, fullNameValid } from './commponents/validate.js'
 
 burger();
 footerMenu();
@@ -73,16 +73,5 @@ function comparisonPassword() {
   }
 }
 
-function fullNameValid(){
-  for (let field of fullName){
-    if(field.value < 2){
-      field.parentNode.parentNode.classList.add("required_active")
-    }else{
-      field.parentNode.parentNode.classList.remove("required_active")
-    }
-  }
-}
 
-function telValid(){
-  telField.value < 10 ? telField.parentNode.parentNode.classList.add("required_active") : telField.parentNode.parentNode.classList.remove("required_active");
-}
+

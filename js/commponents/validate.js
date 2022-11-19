@@ -29,4 +29,18 @@ function passValid() {
   }
   return passVal;
 };
-export { mailValid, passValid };
+function telValid(){
+  let telField = document?.querySelector(".tel");
+  telField.value < 10 ? telField.parentNode.parentNode.classList.add("required_active") : telField.parentNode.parentNode.classList.remove("required_active");
+};
+function fullNameValid(){
+  let fullName = document?.querySelectorAll(".fullName");
+  for (let field of fullName){
+    if(field.value < 2){
+      field.parentNode.parentNode.classList.add("required_active")
+    }else{
+      field.parentNode.parentNode.classList.remove("required_active")
+    }
+  }
+};
+export { mailValid, passValid, telValid, fullNameValid };

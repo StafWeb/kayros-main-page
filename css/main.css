@@ -7296,22 +7296,19 @@ input[type=search]::-webkit-search-results-decoration {
   max-width: 500px;
   margin: 0 auto;
 }
-.registration__confirmation {
-  display: flex;
-}
 .registration__confirmation-btn {
+  display: flex;
   position: relative;
-  width: 20px;
-  height: 20px;
-  flex-shrink: 0;
-  margin-right: 16px;
+  padding-left: 36px;
+  cursor: pointer;
 }
 .registration__confirmation-btn span {
   position: absolute;
-  width: 100%;
-  height: 100%;
+  width: 20px;
+  height: 20px;
+  top: 2px;
+  left: 0;
   border: 1px solid #bbbbbb;
-  margin-right: 10px;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 50% 50%;
@@ -7336,6 +7333,29 @@ input[type=search]::-webkit-search-results-decoration {
 }
 .registration .btn-2 {
   max-width: 173px;
+}
+
+.recaptcha__top {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.recaptcha__img {
+  width: 180px;
+  height: 40px;
+  margin-right: 12px;
+}
+.recaptcha__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+}
+.recaptcha__desc {
+  font-size: 12px;
+  line-height: 120%;
+  letter-spacing: 0.004em;
 }
 
 .title {

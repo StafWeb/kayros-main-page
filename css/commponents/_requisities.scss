@@ -279,6 +279,15 @@
       font-size: 20px;
       margin-bottom: 25px;
     }
+    .requisites__group {
+      &:nth-child(5),
+      &:nth-child(6),
+      &:nth-child(7),
+      &:nth-child(8),
+      &:nth-child(9) {
+        display: none;
+      }
+    }
   }
   .contacts {
     &__subtitle {

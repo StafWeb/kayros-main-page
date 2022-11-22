@@ -30,7 +30,7 @@ fullName.forEach(function (field){
 mailField?.addEventListener('focusout', () => {
   mailValid();
 });
-telField.addEventListener('focusout', () => {
+telField?.addEventListener('focusout', () => {
  telValid();
 });
 passField?.addEventListener('focusout', () => {
@@ -53,7 +53,7 @@ showPassBtn?.forEach(function (btn) {
   })
 });
 
-saveFormBtn.addEventListener('click', (el) => {
+saveFormBtn?.addEventListener('click', (el) => {
   el.preventDefault();
   fullNameValid()
   mailValid();

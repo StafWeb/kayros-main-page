@@ -240,11 +240,13 @@
     position: relative;
     display: flex;
     align-items: center;
+    min-height: 16px;
     a,
     span {
       font-weight: 400;
       font-size: 11px;
-      line-height: 130%;
+      line-height: 120%;
+      letter-spacing: 0.004em;
       color: #333333;
       cursor: pointer;
     }
@@ -300,6 +302,7 @@
     height: 38px;
     background-color: #e7e7e7;
     border-radius: 4px;
+    transition: all .3s ease;
     cursor: pointer;
     & > a {
       font-weight: 400;

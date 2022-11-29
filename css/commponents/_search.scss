@@ -1,6 +1,6 @@
 .search {
-  padding-top: 70px;
-  padding-bottom: 90px;
+  margin-top: 70px;
+  margin-bottom: 90px;
   .title {
     text-align: left;
   }
@@ -152,20 +152,18 @@
       }
     }
   }
-  .offer__button {
-    display: flex;
-    width: 100%;
-    max-width: 344px;
-    margin-bottom: 30px;
-  }
+
 }
 
 @media (max-width: 1000px) {
   .search {
-    padding-top: 40px;
-    padding-bottom: 70px;
+    margin-top: 40px;
+    margin-bottom: 70px;
     &__form {
       padding: 30px;
+    }
+    &__item {
+      padding: 15px 30px;
     }
     &__list {
       margin-bottom: 40px;
@@ -178,6 +176,8 @@
 
 @media (max-width: 750px) {
   .search {
+    margin-top: 30px;
+    margin-bottom: 50px;
     &__item {
       display: block;
       padding: 25px;
@@ -186,7 +186,6 @@
         display: none;
       }
       &-wrapper {
-        justify-content: flex-start;
         width: 100%;
         .search__item-price,
         .btn-1 {
@@ -251,6 +250,9 @@
       &__sort {
         margin-bottom: 15px;
       }
+    }
+    .breadcrumbs {
+      margin-bottom: 25px;
     }
   }
 }

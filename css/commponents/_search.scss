@@ -71,7 +71,6 @@
   }
   &__list {
     border: 1px solid #ebebeb;
-    margin-bottom: 50px;
   }
   &__item {
     display: flex;
@@ -154,9 +153,6 @@
     }
     &__item {
       padding: 15px 30px;
-    }
-    &__list {
-      margin-bottom: 40px;
     }
     .breadcrumbs__list {
       justify-content: flex-start;

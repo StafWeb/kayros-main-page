@@ -3229,6 +3229,39 @@ input[type=search]::-webkit-search-results-decoration {
   margin-bottom: 40px;
 }
 
+.tooltip {
+  position: absolute;
+  pointer-events: none;
+  top: -36px;
+  left: 0px;
+  right: 0px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 3px 10px;
+  border-radius: 4px;
+  background-color: #ffffff;
+  box-shadow: 0px 2px 23px -8px rgba(0, 0, 0, 0.51);
+  font-size: 14px;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.tooltip::after {
+  position: absolute;
+  content: "";
+  display: block;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: -4px;
+  width: 10px;
+  height: 10px;
+  background-color: #ffffff;
+  transform: rotate(45deg);
+}
+
 .breadcrumbs {
   width: 100%;
   margin-bottom: 30px;
@@ -3530,6 +3563,9 @@ input[type=search]::-webkit-search-results-decoration {
   .cards__breadcrumbs-btn:hover {
     background-color: rgba(51, 51, 51, 0.2);
     transition: all 0.3s ease;
+  }
+  .cards__breadcrumbs-btn:hover .tooltip {
+    opacity: 1;
   }
   .count-page__item:not(.count-page__item_active):hover {
     background-color: rgba(51, 51, 51, 0.2);

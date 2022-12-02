@@ -22,38 +22,6 @@ function windowResize() {
 
 };
 
-function sortList() {
-  let
-  sortBtn = document.querySelector(".cards__sort-btn"),
-  sortList = document.querySelector(".cards__sort-list"),
-  sort = document.querySelector(".cards__sort"),
-  sortItem = document.querySelectorAll(".cards__sort-item"),
-  sortInner = document.querySelectorAll(".cards__sort-inner"),
-  a = document.querySelector(".cards__sort-inner > input[checked]"),
-  body = document.body,
-  b = a.parentNode;
-sortBtn.textContent = b.textContent;
-sortBtn.addEventListener('click', () => {
-  sortList.classList.add("cards__sort-list_active");
-});
-body.addEventListener("click", function () {
-  sortList.classList.remove("cards__sort-list_active");
-});
-sort.addEventListener("click", function (evt) {
-  evt.stopPropagation();
-});
-sortItem.forEach(function (btn) {
-  btn.addEventListener("click", function () {
-    sortList.classList.remove('cards__sort-list_active');
-  });
-});
-sortInner.forEach(el => {
-  el.addEventListener('click', () => {
-    sortBtn.textContent = el.textContent;
-  })
-});
-}
-
 async function preloader() {
   let
     preloader = document.querySelector(".preloader"),
@@ -80,4 +48,4 @@ async function preloader() {
   };
 };
 
-export { burgerScroll, windowResize, preloader, sortList }
+export { burgerScroll, windowResize, preloader }

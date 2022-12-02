@@ -99,41 +99,12 @@ filtersBtn.forEach(function (btn) {
 });
 
 let
-  sortBtn = document.querySelector(".cards__sort-btn"),
-  sortList = document.querySelector(".cards__sort-list"),
-  sort = document.querySelector(".cards__sort"),
-  sortItem = document.querySelectorAll(".cards__sort-item"),
-  sortInner = document.querySelectorAll(".cards__sort-inner"),
-  a = document.querySelector(".cards__sort-inner > input[checked]"),
-  body = document.body,
-  stop1 = document.documentElement,
-  b = a.parentNode;
-sortBtn.textContent = b.textContent;
-sortBtn.addEventListener('click', () => {
-  sortList.classList.add("cards__sort-list_active");
-});
-body.addEventListener("click", function () {
-  sortList.classList.remove("cards__sort-list_active");
-});
-sort.addEventListener("click", function (evt) {
-  evt.stopPropagation();
-});
-sortItem.forEach(function (btn) {
-  btn.addEventListener("click", function () {
-    sortList.classList.remove('cards__sort-list_active');
-  });
-});
-sortInner.forEach(el => {
-  el.addEventListener('click', () => {
-    sortBtn.textContent = el.textContent;
-  })
-});
-
-let
   filter = document.querySelector(".filters"),
   filterBtn = document.querySelector(".filter-btn"),
   filterShow = document.querySelector(".filters__btn-show"),
-  filterClose = document.querySelector(".filters__btn-close");
+  filterClose = document.querySelector(".filters__btn-close"),
+  body = document.body,
+  stop1 = document.documentElement;
 filterBtn.addEventListener('click', function () {
   stop1.classList.add('stop-scroll');
   body.classList.add('stop-scroll');

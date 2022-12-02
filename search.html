@@ -200,20 +200,12 @@
             </svg>
           </button>
         </form>
-        <div class="cards__sort">
-          <span>Сортировать:</span>
-          <button class="cards__sort-btn"></button>
-          <ul class="cards__sort-list">
-            <li class="cards__sort-item"><label class="cards__sort-inner"><input type="radio" name="sort" checked>По
-                названию <span></span></label></li>
-            <li class="cards__sort-item"><label class="cards__sort-inner"><input type="radio" name="sort"> По
-                популярности <span></span> </label></li>
-            <li class="cards__sort-item"><label class="cards__sort-inner"><input type="radio" name="sort"> Сначала
-                дешевле <span></span> </label></li>
-            <li class="cards__sort-item"><label class="cards__sort-inner"><input type="radio" name="sort"> Сначала
-                дороже <span></span> </label></li>
-          </ul>
-        </div>
+        <ul class="cards__sort">
+          <li class="cards__sort-item cards__sort-item_active"><i></i> <input type="radio" name="sort" checked> <span>По названию</span></li>
+          <li class="cards__sort-item"><input type="radio" name="sort"> <span>По популярности</span></li>
+          <li class="cards__sort-item"><input type="radio" name="sort"> <span>Сначала дешевле</span></li>
+          <li class="cards__sort-item"><input type="radio" name="sort"> <span>Сначала дороже</span></li>
+        </ul>
         <ul class="search__list">
           <li class="search__item">
             <div class="search__item-desc">

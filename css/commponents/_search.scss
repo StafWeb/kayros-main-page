@@ -79,16 +79,6 @@
         }
       }
     }
-    .btn-1 {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      max-width: 157px;
-      height: 52px;
-      border: 1px solid rgba(176, 151, 110, 0.5);
-      border-radius: 4px;
-    }
     &-wrapper {
       display: flex;
       flex-direction: column;
@@ -150,6 +140,8 @@
         }
         & > .btn-1 {
           width: 100%;
+          padding: 0 15px;
+          max-width: 157px;
         }
       }
       &-desc {

@@ -130,7 +130,7 @@ body {
   overflow-y: overlay;
   overflow-x: hidden;
   scrollbar-width: none;
-  min-width: 320px;
+  min-width: 340px;
 }
 body ::-webkit-scrollbar {
   height: 0px;
@@ -3152,7 +3152,6 @@ input[type=search]::-webkit-search-results-decoration {
   line-height: 120%;
   letter-spacing: 0.03em;
   color: rgba(51, 51, 51, 0.5);
-  transition: all 0.3s ease;
 }
 .cards__sort-item i {
   background-image: url("data:image/svg+xml,%3Csvg width='14' height='10' viewBox='0 0 14 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 10V8H5V10H0ZM0 6V4H9V6H0ZM0 2V0H14V2H0Z' fill='%23333333'/%3E%3C/svg%3E%0A");
@@ -3162,22 +3161,27 @@ input[type=search]::-webkit-search-results-decoration {
   background-position: center;
   background-size: 14px;
   margin-right: 11px;
+  transition: all 0.2s ease;
 }
 .cards__sort-item:not(:last-child) {
   margin-right: 20px;
 }
 
+.name-sort_toggle i {
+  transform: scale(1, -1);
+}
+
 .tooltip {
   position: absolute;
   pointer-events: none;
-  top: -36px;
+  top: -45px;
   left: 0px;
   right: 0px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   margin: 0 auto;
-  padding: 3px 10px;
+  padding: 7px 15px;
   border-radius: 4px;
   background-color: #ffffff;
   box-shadow: 0px 2px 23px -8px rgba(0, 0, 0, 0.51);
@@ -4699,6 +4703,7 @@ input[type=search]::-webkit-search-results-decoration {
     margin-right: 15px;
   }
   .slider__zoom {
+    min-width: 340px;
     height: 495px;
   }
   .slider .swiper-slide {
@@ -5527,13 +5532,13 @@ input[type=search]::-webkit-search-results-decoration {
   position: relative;
   display: flex;
   justify-content: space-between;
-  height: 160px;
-  margin-bottom: 60px;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
 }
 .order-card::after {
   position: absolute;
   content: "";
-  bottom: -30px;
+  bottom: 0px;
   left: 0;
   width: 100%;
   height: 1px;
@@ -5544,7 +5549,7 @@ input[type=search]::-webkit-search-results-decoration {
 }
 .order-card__photo {
   width: 106px;
-  height: 100%;
+  height: 160px;
   margin-right: 20px;
   flex-shrink: 0;
 }
@@ -5555,7 +5560,7 @@ input[type=search]::-webkit-search-results-decoration {
 .order-card__descr {
   display: flex;
   flex-direction: column;
-  flex-shrink: 0;
+  max-width: 250px;
 }
 .order-card__descr > * {
   font-weight: 400;
@@ -5992,7 +5997,6 @@ input[type=search]::-webkit-search-results-decoration {
     justify-content: flex-start;
     align-items: stretch;
     gap: 20px;
-    height: auto;
   }
   .order-card__wrapper {
     margin: 0;
@@ -6003,6 +6007,9 @@ input[type=search]::-webkit-search-results-decoration {
   }
   .order-card__photo {
     height: 160px;
+  }
+  .order-card__descr {
+    max-width: inherit;
   }
   .promo-disc__group {
     margin: 0;
@@ -6075,12 +6082,12 @@ input[type=search]::-webkit-search-results-decoration {
 }
 
 .order-card-opt {
-  height: 95px;
   margin: 0;
   border-bottom: 1px solid rgba(51, 51, 51, 0.1);
   justify-content: flex-start;
   align-items: center;
   flex-direction: row;
+  padding: 15px 0px;
 }
 .order-card-opt:first-child {
   border-top: 1px solid rgba(51, 51, 51, 0.1);
@@ -6199,6 +6206,9 @@ input[type=search]::-webkit-search-results-decoration {
     margin-left: 30px;
     margin-right: 40px;
   }
+  .order-card-opt .order-card__descr {
+    max-width: 180px;
+  }
 }
 @media (max-width: 750px) {
   .order-opt {
@@ -6213,16 +6223,18 @@ input[type=search]::-webkit-search-results-decoration {
   .order-opt .order-card__product .order-card__btn {
     display: flex;
     margin-left: auto;
+    flex-shrink: 0;
   }
   .order-opt .order-card__count {
     margin: 0px 10px;
   }
   .order-card-opt {
     flex-direction: column;
-    height: auto;
     gap: 25px;
     align-items: stretch;
     border-bottom: 1px solid rgba(51, 51, 51, 0.1);
+    padding-top: 0;
+    padding-bottom: 25px;
   }
   .order-card-opt:not(:last-child) {
     margin-bottom: 25px;
@@ -6235,7 +6247,6 @@ input[type=search]::-webkit-search-results-decoration {
   }
   .order-card__wrapper-opt {
     justify-content: space-between;
-    margin-bottom: 25px;
   }
   .modal-cart__container {
     width: 100%;
@@ -7377,6 +7388,9 @@ input[type=search]::-webkit-search-results-decoration {
   border-color: transparent;
   pointer-events: none;
 }
+.personal-data__link_active-second {
+  color: #b0976e;
+}
 .personal-data__link:not(:last-child) {
   margin-bottom: 16px;
 }
@@ -7561,7 +7575,7 @@ input[type=search]::-webkit-search-results-decoration {
   display: grid;
   grid-template-columns: 1.5fr 1fr 1.5fr;
   justify-self: end;
-  max-width: 500px;
+  max-width: 400px;
   width: 100%;
 }
 .order-product .order-opt__titles-wrapper span {
@@ -7575,7 +7589,7 @@ input[type=search]::-webkit-search-results-decoration {
   display: grid;
   grid-template-columns: 1.5fr 1fr 1.5fr;
   justify-self: end;
-  max-width: 500px;
+  max-width: 400px;
   width: 100%;
 }
 .order-product .order-card__price > * {
@@ -7614,6 +7628,8 @@ input[type=search]::-webkit-search-results-decoration {
   pointer-events: none;
 }
 .order-one .order-form__btn {
+  margin: 0;
+  max-width: inherit;
   margin-top: 14px;
   margin-bottom: 25px;
   transition: all 0.3s ease;
@@ -7671,7 +7687,7 @@ input[type=search]::-webkit-search-results-decoration {
   }
   .order-product .order-card-opt {
     flex-direction: row;
-    height: 95px;
+    padding: 15px 0px;
     gap: 0px;
   }
   .order-product .order-card-opt:not(:last-child) {
@@ -8298,16 +8314,6 @@ input[type=search]::-webkit-search-results-decoration {
   -webkit-text-decoration-color: #d83244;
           text-decoration-color: #d83244;
 }
-.search__item .btn-1 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  max-width: 157px;
-  height: 52px;
-  border: 1px solid rgba(176, 151, 110, 0.5);
-  border-radius: 4px;
-}
 .search__item-wrapper {
   display: flex;
   flex-direction: column;
@@ -8369,6 +8375,8 @@ input[type=search]::-webkit-search-results-decoration {
   }
   .search__item-wrapper > .btn-1 {
     width: 100%;
+    padding: 0 15px;
+    max-width: 157px;
   }
   .search__item-desc img {
     width: 106px;

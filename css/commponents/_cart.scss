@@ -186,12 +186,12 @@
   position: relative;
   display: flex;
   justify-content: space-between;
-  height: 160px;
-  margin-bottom: 60px;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
   &::after {
     position: absolute;
     content: "";
-    bottom: -30px;
+    bottom: 0px;
     left: 0;
     width: 100%;
     height: 1px;
@@ -202,7 +202,7 @@
   }
   &__photo {
     width: 106px;
-    height: 100%;
+    height: 160px;
     margin-right: 20px;
     flex-shrink: 0;
     & > img {
@@ -213,7 +213,7 @@
   &__descr {
     display: flex;
     flex-direction: column;
-    flex-shrink: 0;
+    max-width: 250px;
     & > * {
       font-weight: 400;
       font-size: 16px;
@@ -648,7 +648,6 @@
     justify-content: flex-start;
     align-items: stretch;
     gap: 20px;
-    height: auto;
     &__wrapper {
       margin: 0;
       max-width: 100%;
@@ -658,6 +657,9 @@
     }
     &__photo {
       height: 160px;
+    }
+    &__descr{
+      max-width: inherit;
     }
   }
   .promo-disc {
@@ -733,12 +735,12 @@
 }
 
 .order-card-opt {
-  height: 95px;
   margin: 0;
   border-bottom: 1px solid rgba(51, 51, 51, 0.1);
   justify-content: flex-start;
   align-items: center;
   flex-direction: row;
+  padding: 15px 0px;
   &:first-child {
     border-top: 1px solid rgba(51, 51, 51, 0.1);
   }
@@ -881,6 +883,13 @@
       }
     }
   }
+  .order-card-opt {
+    .order-card {
+      &__descr{
+        max-width: 180px;
+      }
+    }
+  }
 }
 
 @media (max-width: 750px) {
@@ -894,6 +903,7 @@
       .order-card__btn {
         display: flex;
         margin-left: auto;
+        flex-shrink: 0;
       }
     }
     .order-card__count {
@@ -903,10 +913,11 @@
   .order-card {
     &-opt {
       flex-direction: column;
-      height: auto;
       gap: 25px;
       align-items: stretch;
       border-bottom: 1px solid rgba(51, 51, 51, 0.1);
+      padding-top: 0;
+      padding-bottom: 25px;
       &:not(:last-child) {
         margin-bottom: 25px;
       }
@@ -919,7 +930,6 @@
     }
     &__wrapper-opt {
       justify-content: space-between;
-      margin-bottom: 25px;
     }
   }
   .modal-cart {

@@ -1,6 +1,6 @@
 import { burger, footerMenu, burgerMenu, catalogLink } from './commponents/menu.js';
 import { loginModal } from './commponents/modal.js'
-import { burgerScroll, windowResize } from './commponents/function.js'
+import { burgerScroll, toggleSort, windowResize } from './commponents/function.js'
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -84,6 +84,8 @@ loginModal();
 catalogLink();
 windowResize();
 burgerScroll();
+toggleSort();
+
 
 document.querySelectorAll(".filters").forEach(el => {
   new SimpleBar(el);
@@ -128,5 +130,6 @@ cardsBreadcumbsBtn.forEach(el => {
     el.remove();
   });
 });
+
 
 

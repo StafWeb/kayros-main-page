@@ -2,11 +2,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 200px 0px;
-  @media(max-height: 790px) {
-    padding: 100px 0px;
-  }
-  @media(max-height: 700px) {
+  padding: 100px 0px;
+  @media(max-width: 750px) {
     padding: 40px 0px;
   }
   &__logo {

@@ -39,7 +39,10 @@ p {
   font-weight: inherit;
   line-height: inherit;
 }
- 
+
+/* p + p{
+    margin-top: 6px;
+} */
 ul,
 li {
   list-style: none;

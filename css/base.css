@@ -12,7 +12,7 @@ body {
   overflow-y: overlay;
   overflow-x: hidden;
   scrollbar-width: none;
-  min-width: 340px;
+  min-width: 360px;
 }
 body ::-webkit-scrollbar {
   height: 0px;
@@ -28,7 +28,10 @@ body ::-webkit-scrollbar {
 
 h1,
 h2,
-h3 {
+h3,
+h4,
+h5,
+h6 {
   font-family: "Playfair Display", serif;
 }
 

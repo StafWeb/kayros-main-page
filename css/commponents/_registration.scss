@@ -186,6 +186,11 @@
     justify-content: flex-start;
   }
 }
+@media(max-width: 1250px) {
+  .personal-data__nav {
+    margin-right: 50px;
+  }
+}
 @media (max-width: 1000px) {
   .settings {
     margin-left: 0;

@@ -7333,6 +7333,11 @@ input[type=search]::-webkit-search-results-decoration {
   justify-content: flex-start;
 }
 
+@media (max-width: 1250px) {
+  .personal-data__nav {
+    margin-right: 50px;
+  }
+}
 @media (max-width: 1000px) {
   .settings {
     margin-left: 0;
@@ -8450,6 +8455,7 @@ input[type=search]::-webkit-search-results-decoration {
 .content h6 {
   line-height: 120%;
   margin: 30px 0 20px;
+  word-wrap: break-word;
 }
 .content h1 {
   font-size: 50px;
@@ -8506,8 +8512,10 @@ input[type=search]::-webkit-search-results-decoration {
   border-collapse: collapse;
 }
 .content tr {
-  background-color: rgba(217, 217, 217, 0.2);
   transition: background-color 0.2s ease;
+}
+.content tr:nth-child(odd) {
+  background-color: rgba(217, 217, 217, 0.2);
 }
 .content tr:hover {
   background-color: rgba(232, 232, 232, 0.7);
@@ -8530,7 +8538,8 @@ input[type=search]::-webkit-search-results-decoration {
   border-color: transparent;
 }
 .content hr {
-  border: 0.5px solid #eaeaea;
+  height: 1px;
+  background-color: #eaeaea;
 }
 .content blockquote {
   font-weight: 700;
@@ -8591,6 +8600,8 @@ input[type=search]::-webkit-search-results-decoration {
     overflow-x: scroll;
     margin: 0 -15px;
     padding: 0 15px 8px;
+    scrollbar-width: thin;
+    scrollbar-color: rgb(192, 192, 192) transparent;
   }
   .content .table::-webkit-scrollbar {
     height: 6px;

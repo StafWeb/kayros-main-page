@@ -8616,6 +8616,11 @@ input[type=search]::-webkit-search-results-decoration {
     min-width: 730px;
   }
 }
+@media (min-width: 1001px) {
+  .content .h1-small {
+    font-size: 45px;
+  }
+}
 
 @keyframes burger-anim {
   0% {

@@ -87,6 +87,9 @@
     position: relative;
     &-color {
       position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       width: 20px;
       height: 20px;
       border-radius: 50%;
@@ -95,19 +98,11 @@
         border: 1px solid rgba(176, 151, 110, 0.7);
       }
       &-inner {
-        position: absolute;
         overflow: hidden;
-        content: "";
-        left: 1px;
-        top: 1px;
-        width: 16px;
-        height: 16px;
+        width: 15px;
+        height: 15px;
         border-radius: 50%;
         background-color: rgba(176, 151, 110);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        object-fit: cover;
         cursor: pointer;
         & > img {
           width: 100%;

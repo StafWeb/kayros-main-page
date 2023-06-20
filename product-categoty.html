@@ -12,7 +12,17 @@
   <link href="./images/favicon.png" rel="shortcut icon" type="image/x-icon">
 </head>
 
-<body>
+<body class="anim">
+  <div class="banner">
+    <p>График рабты Kayros в майские праздники</p>
+    <a href="#" class="btn-1">Подробнее</a>
+    <div class="banner__close">
+      <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="14.3999" y="13" width="17.8191" height="1.9799" transform="rotate(45 14.3999 13)" fill="white" />
+        <rect x="13" y="25.6" width="17.8191" height="1.9799" transform="rotate(-45 13 25.6)" fill="white" />
+      </svg>
+    </div>
+  </div>
   <header class="header header-product" id="header">
     <div class="container">
       <div class="header__top">
@@ -137,7 +147,7 @@
             </button>
           </form>
           <div class="header__user">
-            <a href="#">
+            <a href="#" class="open-login-modal">
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path class="user-logo" fill-rule="evenodd" clip-rule="evenodd"
                   d="M18 20H20C20 15.5817 15.5228 12 10 12C4.47715 12 0 15.5817 0 20H2C2 17.0797 5.14219 14 10 14C14.8578 14 18 17.0797 18 20Z"
@@ -485,7 +495,8 @@
         <div class="cards">
           <div class="cards__top">
             <ul class="cards__sort">
-              <li class="cards__sort-item name-sort"><i></i> <input type="radio" name="sort" checked> <span>По названию</span></li>
+              <li class="cards__sort-item name-sort"><i></i> <input type="radio" name="sort" checked> <span>По
+                  названию</span></li>
               <li class="cards__sort-item all-sort"><input type="radio" name="sort"> <span>По популярности</span></li>
               <li class="cards__sort-item all-sort"><input type="radio" name="sort"> <span>Сначала дешевле</span></li>
               <li class="cards__sort-item all-sort"><input type="radio" name="sort"> <span>Сначала дороже</span></li>
@@ -981,7 +992,7 @@
             </svg>
           </button>
         </form>
-        <button class="burger-menu__account">
+        <button class="burger-menu__item burger-menu__account open-login-modal">
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd"
               d="M18 20H20C20 15.5817 15.5228 12 10 12C4.47715 12 0 15.5817 0 20H2C2 17.0797 5.14219 14 10 14C14.8578 14 18 17.0797 18 20Z"
@@ -1263,6 +1274,15 @@
         <a class="login-modal__reg btn-1" href="#">Регистрация</a>
         <p>Впервые на нашем сайте? Пожалуйста, зарегистрируйтесь.</p>
       </div>
+    </div>
+  </div>
+  <div class="cookie">
+    <p>Сайт использует куки. <a href="#">Зачем?</a></p>
+    <div class="cookie__close">
+      <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="14.3999" y="13" width="17.8191" height="1.9799" transform="rotate(45 14.3999 13)" fill="white" />
+        <rect x="13" y="25.6" width="17.8191" height="1.9799" transform="rotate(-45 13 25.6)" fill="white" />
+      </svg>
     </div>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>

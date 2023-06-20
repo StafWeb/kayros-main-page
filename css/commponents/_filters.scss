@@ -186,7 +186,7 @@
       }
       & > span {
         display: inline-flex;
-        align-items: center;
+        align-items: end;
         user-select: none;
         &::before {
           content: "";
@@ -220,7 +220,7 @@
       }
       & > span {
         display: inline-flex;
-        align-items: center;
+        align-items: end;
         user-select: none;
         &::before {
           content: "";

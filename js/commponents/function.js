@@ -2,7 +2,6 @@ function burgerScroll() {
   if (window.innerWidth <= 1000) {
     let burger1 = document.querySelector(".burger-menu__wrapper");
     new SimpleBar(burger1);
-    console.log("1")
   } else {
     let burger2 = document.querySelector(".burger-menu");
     new SimpleBar(burger2);
@@ -67,4 +66,19 @@ async function preloader() {
   };
 };
 
-export { burgerScroll, windowResize, preloader, toggleSort }
+function isCookie() {
+  const cookieBlock = document.querySelector('.cookie');
+  const cookieClose = document.querySelector('.cookie__close');
+  const getCookie = localStorage.getItem('kayros_cookie');
+
+  if (!getCookie) {
+    cookieBlock.classList.add('cookie_active');
+
+    cookieClose.addEventListener('click', () => {
+      localStorage.setItem('kayros_cookie', 1);
+      cookieBlock.classList.remove('cookie_active');
+    })
+  }
+}
+
+export { burgerScroll, windowResize, preloader, toggleSort, isCookie }

@@ -1,6 +1,6 @@
 import { burger, footerMenu, burgerMenu, catalogLink } from './commponents/menu.js';
 import { loginModal } from './commponents/modal.js'
-import { burgerScroll, toggleSort, windowResize } from './commponents/function.js'
+import { burgerScroll, toggleSort, windowResize, isCookie } from './commponents/function.js'
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -13,12 +13,10 @@ ScrollTrigger.defaults({
   //   fontSize: "26px",
   // },
 });
-
+let headAnim = gsap.timeline({ ease: "power1.out" });
+  headAnim.to(".anim", { opacity: 1, duration: 0.2 })
 if (window.matchMedia("(min-width: 1001px)").matches) {
-  document.body.classList.add("anim");
-  let headAnim = gsap.timeline({ delay: 0.2, ease: "power1.out" });
-  headAnim.to("body", { opacity: 1, duration: 0.2 })
-    .from(".breadcrumbs", { opacity: 0, duration: 0.6 })
+  headAnim.from(".breadcrumbs", { opacity: 0, duration: 0.6 })
     .from(".product__title", { opacity: 0, duration: 0.6 }, "-=0.5")
     .from(".cards__top", { opacity: 0, duration: 0.6 }, "-=0.6")
     .from(".cards__list", { opacity: 0, y: 5, duration: 1 }, "-=0.6")
@@ -85,7 +83,7 @@ catalogLink();
 windowResize();
 burgerScroll();
 toggleSort();
-
+isCookie();
 
 document.querySelectorAll(".filters").forEach(el => {
   new SimpleBar(el);

@@ -146,15 +146,6 @@
     .container {
       padding: 120px 40px;
     }
-    // &__contacts {
-    //   margin-right: 40px;
-    // }
-    // &__nav-wrapper:first-child {
-    //   margin-right: 95px;
-    // }
-    // &__nav-wrapper:last-child {
-    //   margin-left: 49px;
-    // }
   }
 }
 
@@ -240,7 +231,7 @@
       margin-bottom: 20px;
     }
     &-pad{
-      padding-bottom: 122px;
+      padding-bottom: 122px !important;
     }
   }
   .btn-mob {

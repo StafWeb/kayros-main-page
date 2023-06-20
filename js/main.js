@@ -1,6 +1,6 @@
 import { burger, footerMenu, burgerMenu, catalogLink } from './commponents/menu.js';
 import { loginModal } from './commponents/modal.js';
-import { windowResize, burgerScroll, preloader } from './commponents/function.js'
+import { windowResize, burgerScroll, preloader, isCookie } from './commponents/function.js'
 
 document.addEventListener('DOMContentLoaded', () => {
   async function start() {
@@ -30,6 +30,7 @@ async function headerAnim() {
     .from(".header__thumb", { opacity: 0, y: 20, duration: 0.6 }, "-=0.5");
 };
 
+isCookie();
 burger();
 burgerMenu();
 footerMenu();

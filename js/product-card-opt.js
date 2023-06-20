@@ -3,11 +3,10 @@ import { burger, burgerMenu, footerMenu, catalogLink } from './commponents/menu.
 import { tableModal, loginModal } from './commponents/modal.js';
 import { windowResize, burgerScroll } from './commponents/function.js'
 
-if (window.matchMedia("(min-width: 1001px)").matches) {
-  document.body.classList.add("anim");
-  let headAnim = gsap.timeline({ ease: "power1.out" });
+let headAnim = gsap.timeline({ ease: "power1.out" });
   headAnim.to(".anim", { opacity: 1, duration: 0.2 })
-    .from(".header__logo", { opacity: 0, duration: 0.6 })
+if (window.matchMedia("(min-width: 1001px)").matches) {
+  headAnim.from(".header__logo", { opacity: 0, duration: 0.6 })
     .from(".header__item-img", { opacity: 0, rotate: -90, duration: 0.4 }, "-=0.4")
     .from(".item1", { opacity: 0, duration: 0.5 }, "-=0.4")
     .from(".items", { opacity: 0, x: -5, duration: 0.6 }, "-=0.4")

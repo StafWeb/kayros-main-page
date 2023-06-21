@@ -167,11 +167,11 @@
       font-size: 16px;
       line-height: 160%;
       color: #333333;
-      &:nth-child(2) {
-        margin-bottom: 15px;
+      & + * {
+        margin-top: 35px;
       }
-      &:nth-child(3) {
-        margin-bottom: 35px;
+      & + p {
+        margin-top: 15px;
       }
     }
     span {
@@ -188,8 +188,8 @@
   &__list {
     list-style: disc;
     margin-left: 25px;
-    &:not(:last-child) {
-      margin-bottom: 35px;
+    & + * {
+      margin-top: 35px;
     }
     & > li {
       font-weight: 400;
@@ -295,6 +295,7 @@
       &_active {
         opacity: 1;
         width: 100vw;
+        min-width: 360px;
         pointer-events: all;
       }
     }

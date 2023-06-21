@@ -176,6 +176,7 @@
     width: 100%;
     height: 100%;
     margin-top: 30px;
+    padding-bottom: 10px;
     .simplebar-scrollbar {
       height: 3px;
       &:before {
@@ -187,8 +188,8 @@
   tbody {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    height: 100%;
+    width: fit-content;
+    height: fit-content;
     border: 1px solid #e7e7e7;
   }
   tr {
@@ -409,15 +410,6 @@
       & > p {
         display: block;
       }
-    }
-    table {
-      // width: fit-content;
-      // height: fit-content;
-      padding-bottom: 10px;
-    }
-    tbody {
-      width: fit-content;
-      height: fit-content;
     }
     .card-modal {
       &__header {

@@ -1,6 +1,6 @@
 import { burger, footerMenu, burgerMenu, catalogLink } from './commponents/menu.js';
 import { loginModal } from './commponents/modal.js';
-import { windowResize, burgerScroll, preloader, isCookie } from './commponents/function.js'
+import { windowResize, burgerScroll, preloader, isCookie, closeBanner } from './commponents/function.js'
 
 document.addEventListener('DOMContentLoaded', () => {
   async function start() {
@@ -38,6 +38,7 @@ loginModal();
 catalogLink();
 burgerScroll();
 windowResize();
+closeBanner();
 
 let pageContainer = document.querySelector("#viewport");
 /* SMOOTH SCROLL */
@@ -90,7 +91,6 @@ if (window.matchMedia("(min-width: 1001px)").matches) {
       pin: true,
       end: pinWrapWidth,
       onUpdate() {
-        console.log("Update")
       }
     }
   });
@@ -120,7 +120,6 @@ if (window.matchMedia("(min-width: 1001px)").matches) {
       end: "bottom 95%",
       scrub: 1,
       onUpdate() {
-        console.log("Update2")
       }
     }
   });
@@ -139,7 +138,6 @@ if (window.matchMedia("(min-width: 1001px)").matches) {
       end: "bottom bottom",
       scrub: 1,
       onUpdate() {
-        console.log("Update2")
       }
     }
   });

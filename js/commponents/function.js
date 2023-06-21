@@ -22,22 +22,22 @@ function windowResize() {
 
 function toggleSort() {
   let
-  sortItem = document.querySelectorAll(".all-sort"),
-  nameSort = document.querySelector(".name-sort"),
-  clickOn = 0,
-  thumb = nameSort.querySelector("i");
-sortItem.forEach(el => {
-  el.addEventListener('click', () => {
-    clickOn = 0
-    thumb.style.display = 'none'
-    nameSort.classList.remove('name-sort_toggle')
-  })
-});
-nameSort.addEventListener('click', () => {
-  clickOn++
-  thumb.style.display = 'block'
-  clickOn > 1 ? nameSort.classList.toggle('name-sort_toggle') : ''
-});
+    sortItem = document.querySelectorAll(".all-sort"),
+    nameSort = document.querySelector(".name-sort"),
+    clickOn = 0,
+    thumb = nameSort.querySelector("i");
+  sortItem.forEach(el => {
+    el.addEventListener('click', () => {
+      clickOn = 0
+      thumb.style.display = 'none'
+      nameSort.classList.remove('name-sort_toggle')
+    })
+  });
+  nameSort.addEventListener('click', () => {
+    clickOn++
+    thumb.style.display = 'block'
+    clickOn > 1 ? nameSort.classList.toggle('name-sort_toggle') : ''
+  });
 }
 
 async function preloader() {
@@ -79,6 +79,12 @@ function isCookie() {
       cookieBlock.classList.remove('cookie_active');
     })
   }
+}
+
+export const closeBanner = () => {
+  const banner = document.querySelector(".banner");
+  const btn = document.querySelector(".banner__close");
+  btn.addEventListener('click', () => banner.classList.remove('banner_active'));
 }
 
 export { burgerScroll, windowResize, preloader, toggleSort, isCookie }

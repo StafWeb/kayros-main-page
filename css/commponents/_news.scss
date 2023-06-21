@@ -12,18 +12,18 @@
     border-bottom: 1px solid #eaeaea;
     &-img {
       flex-shrink: 0;
-      width: 360px;
-      height: 250px;
+      max-width: 250px;
+      width: 100%;
       margin-right: 30px;
       margin-top: 9px;
+      img {
+        width: 100%;
+      }
     }
     &-desc {
       display: grid;
       gap: 20px;
-      h2 {
-        font-size: 27px;
-        line-height: 120%;
-      }
+
       & > span {
         font-size: 14px;
         line-height: 120%;
@@ -37,6 +37,20 @@
       }
       .info__company {
         margin-top: 0;
+      }
+    }
+    &-title {
+      font-size: 27px;
+      line-height: 120%;
+      color: #333333;
+      transition: .2s ease;
+      &:active {
+        color: #b0976e;
+      }
+      @media(min-width: 1000px) {
+        &:hover {
+          color: #b0976e;
+        }
       }
     }
   }
@@ -156,17 +170,8 @@
     }
     &__item {
       padding-bottom: 25px;
-      &-img {
-        width: 100%;
-        height: fit-content;
-        img {
-          width: 100%;
-        }
-      }
-      &-desc {
-        h2 {
-          font-size: 23px;
-        }
+      &-title {
+        font-size: 23px;
       }
     }
     .breadcrumbs {
@@ -186,8 +191,8 @@
         margin-bottom: 25px;
       }
       &:last-child {
-          margin-top: 25px;
-        }
+        margin-top: 25px;
+      }
     }
     &__text {
       margin-bottom: 25px;

@@ -111,6 +111,14 @@
     display: flex;
     align-items: center;
     height: 100%;
+    &-anim {
+      display: flex;
+      align-items: center;
+      z-index: 1;
+      .header-link {
+        margin-right: 25px;
+      }
+    }
   }
   &__form {
     position: relative;
@@ -802,11 +810,18 @@
 }
 
 @media (max-width: 1650px) {
-  .header__title {
-    font-size: 72px;
-  }
-  .header__descr {
-    font-size: 14px;
+  .header {
+    &__title {
+      font-size: 72px;
+    }
+    &__descr {
+      font-size: 14px;
+    }
+    &__end-anim {
+      .header-link {
+        display: none;
+      }
+    }
   }
   .burger-menu__wrapper {
     max-width: 840px;

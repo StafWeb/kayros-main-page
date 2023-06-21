@@ -10,7 +10,7 @@ if (window.matchMedia("(min-width: 1001px)").matches) {
     .from(".header__item-img", { opacity: 0, rotate: -90, duration: 0.4 }, "-=0.4")
     .from(".item1", { opacity: 0, duration: 0.5 }, "-=0.4")
     .from(".items", { opacity: 0, x: -5, duration: 0.6 }, "-=0.4")
-    .from(".header__form", { opacity: 0, x: -5, duration: 0.6 }, "-=0.5")
+    .from(".header__end-anim", { opacity: 0, x: -5, duration: 0.6 }, "-=0.5")
     .from(".header__user", { opacity: 0, x: -5, duration: 0.6 }, "-=0.5")
     .from(".header__cart", { opacity: 0, x: -5, duration: 0.6 }, "-=0.5")
     .from(".header__burger", { opacity: 0, x: -5, duration: 0.6 }, "-=0.5");
@@ -100,8 +100,4 @@ document.addEventListener('keydown', (e) => {
   if (keyCode === 'Escape') {
     modalRemove();
   }
-});
-
-document.querySelectorAll(".simpScroll").forEach(el => {
-  new SimpleBar(el, { autoHide: false });
 });

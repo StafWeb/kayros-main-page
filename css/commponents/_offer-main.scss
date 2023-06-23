@@ -34,10 +34,53 @@
       transition: all 250ms ease;
     }
   }
+  &__wrapper {
+    display: none;
+    &.current-offer {
+      display: block;
+    }
+    .swiper-wrapper {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 40px 19px;
+      animation: offer-anim 0.5s ease;
+      margin: 70px 0px;
+    }
+    .swiper-download-btn {
+      display: none;
+    }
+  }
+  &-item {
+    display: block;
+    .cards__item {
+      animation: offer-anim 0.4s ease;
+    }
+    &_hide {
+      display: none;
+    }
+  }
 }
 
+@keyframes offer-item-anim {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes offer-anim {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .cards {
-  margin: 70px 0px;
   &__filter {
     display: flex;
     justify-content: space-between;
@@ -134,8 +177,7 @@
     }
   }
   &__button {
-    display: none;
-    flex-shrink: 0;
+    display: flex;
     flex-direction: column;
     align-items: center;
     & > svg {
@@ -187,12 +229,50 @@
     line-height: 120%;
     color: rgba(51, 51, 51, 0.7);
   }
-  .download-btn {
-    display: none;
+}
+.download-btn {
+  &_hide {
+    display: none !important;
   }
 }
-
 @media (max-width: 1550px) {
+  .offer {
+    &__wrapper {
+      overflow: hidden;
+      margin: 0 -90px;
+      padding: 0 90px;
+      .swiper-wrapper {
+        display: flex;
+        gap: initial;
+        margin: 0 0 17px;
+      }
+      .swiper-slide {
+        max-width: 292px;
+      }
+      .swiper-download-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 438px;
+        border: 1px solid #e7e7e7;
+        cursor: pointer;
+      }
+    }
+    &-scrollbar {
+      height: 12px;
+      cursor: grab;
+      &:active {
+        cursor: grabbing;
+      }
+      .swiper-scrollbar-drag {
+        background: rgba(136, 136, 136, 0.5);
+        border-radius: 0;
+      }
+    }
+    &__button {
+      display: none;
+    }
+  }
   .cards__list {
     grid-template-columns: repeat(4, 1fr);
   }
@@ -202,6 +282,10 @@
   .offer {
     margin: 0;
     margin-bottom: 120px;
+    &__wrapper {
+      margin: 0 -40px;
+      padding: 0 40px;
+    }
   }
 }
 
@@ -209,8 +293,18 @@
   .offer {
     margin-top: 70px;
     margin-bottom: 70px;
-    &__button {
-      display: none;
+    &__wrapper {
+      margin: 0 -20px;
+      padding: 0 20px;
+      .swiper-slide {
+        max-width: 224px;
+      }
+      .swiper-download-btn {
+        height: 336px;
+      }
+    }
+    &-scrollbar {
+      height: 6px;
     }
   }
   .cards {
@@ -237,20 +331,7 @@
       width: 224px;
       flex-shrink: 0;
     }
-    .download-btn {
-      display: flex;
-      width: 224px;
-      height: 336px;
-      align-items: center;
-      justify-content: center;
-      margin-right: 20px;
-      border: 1px solid #e7e7e7;
-    }
-    &__button {
-      display: flex;
-      margin: 0;
-      padding: 0;
-    }
+
     &__image {
       width: 100%;
     }
@@ -259,24 +340,18 @@
 
 @media (max-width: 750px) {
   .offer {
+    &__wrapper {
+      margin: 0 -15px;
+      padding: 0 15px;
+    }
     margin-top: 50px;
     margin-bottom: 50px;
-    .container {
-      padding: 0;
-    }
     &__title {
       font-size: 27px;
-      padding: 0px 15px;
-    }
-    .cards__item:first-child {
-      margin-left: 15px;
     }
   }
   .cards {
     margin-top: 30px;
-    &__item {
-      width: 224px;
-    }
     &__filter {
       margin-bottom: 40px;
       overflow: hidden;

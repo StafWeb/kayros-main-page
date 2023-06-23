@@ -934,6 +934,34 @@
       <div class="footer__bottom-descr">Создание сайта: <a href="#">Criteria.RU</a></div>
     </div>
   </footer>
+  <div class="loader-inner">
+    <div class="lds-default">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  <script type="text/javascript">
+    const btn = document.querySelectorAll(".cards__sort-item");
+    const loader = document.querySelector(".loader-inner");
+    btn.forEach(el => {
+      el.addEventListener('click', () => {
+        loader.classList.add('loader-inner_active');
+        setTimeout(() => {
+          loader.classList.remove('loader-inner_active');
+        }, 500);
+      })
+    })
+  </script>
   <div class="burger-menu" data-burger-menu>
     <div class="burger-menu__container">
       <div class="burger-menu__header">
@@ -1294,8 +1322,8 @@
       </svg>
     </div>
   </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
   <script src="./js/libs/simplebar.min.js"></script>
   <script type="module" src="./js/product.js"></script>
 </body>

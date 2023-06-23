@@ -7,7 +7,7 @@ let headAnim = gsap.timeline({ ease: "power1.out" });
   headAnim.to(".anim", { opacity: 1, duration: 0.2 })
 if (window.matchMedia("(min-width: 1001px)").matches) {
   headAnim.from(".header__logo", { opacity: 0, duration: 0.6 })
-    .from(".header__item-img", { opacity: 0, rotate: -90, duration: 0.4 }, "-=0.4")
+    .fromTo(".header__item-img", { opacity: 0, rotate: -90, duration: 0.4 }, { opacity:1, rotate: 0 }, "-=0.4")
     .from(".item1", { opacity: 0, duration: 0.5 }, "-=0.4")
     .from(".items", { opacity: 0, x: -5, duration: 0.6 }, "-=0.4")
     .from(".header__end-anim", { opacity: 0, x: -5, duration: 0.6 }, "-=0.5")

@@ -13,12 +13,13 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 gsap.registerPlugin(ScrollTrigger);
+let mm = gsap.matchMedia();
 
 async function headerAnim() {
   let headAnim = gsap.timeline({ delay: 0.3, ease: "power1.out" });
   headAnim.fromTo(".header__background", { opacity: 0, scale: 1.2 }, { opacity: 1, scale: 1, duration: 1 })
     .from(".header__logo", { opacity: 0, duration: 0.6 })
-    .from(".header__item-img", { opacity: 0, rotate: -90, duration: 0.4 }, "-=0.4")
+    .fromTo(".header__item-img", { opacity: 0, rotate: -90, duration: 0.4 }, { opacity:1, rotate: 0 }, "-=0.4")
     .from(".item1", { opacity: 0, duration: 0.5 }, "-=0.4")
     .from(".items", { opacity: 0, x: -5, duration: 0.6 }, "-=0.4")
     .from(".header__end-anim", { opacity: 0, x: -5, duration: 0.6 }, "-=0.5")
@@ -38,6 +39,14 @@ loginModal();
 catalogLink();
 burgerScroll();
 windowResize();
+
+let downloadBtn = document.querySelectorAll(".download-btn"),
+  tabsBtn = document.querySelectorAll('.cards__filter-sort'),
+  tabsContent = document.querySelectorAll('.offer__wrapper'),
+  tabsHandler = (path) => {
+    tabsContent.forEach(el => { el.classList.remove('current-offer') });
+    document.querySelector(`[data-offer-target="${path}"]`).classList.add('current-offer');
+  };
 
 let pageContainer = document.querySelector("#viewport");
 /* SMOOTH SCROLL */
@@ -75,7 +84,7 @@ ScrollTrigger.defaults({
   // },
 });
 
-if (window.matchMedia("(min-width: 1001px)").matches) {
+mm.add("(min-width: 1001px)", () => {
   let pinWrap = document.querySelector(".pin-wrap");
   let pinWrapWidth = pinWrap.offsetWidth;
   let horizontalScrollLength = pinWrapWidth - window.innerWidth;
@@ -128,22 +137,6 @@ if (window.matchMedia("(min-width: 1001px)").matches) {
     .from(".collection__item", { opacity: 0, y: 40, transformOrigin: "center top", duration: 0.7, stagger: 0.1 }, "-=0.65")
     .from(".collection__item-link", { opacity: 0, y: 15, stagger: 0.1, duration: 0.5 }, "-=0.55");
 
-  let offerTl = gsap.timeline({
-    ease: "none",
-    scrollTrigger: {
-      trigger: ".offer",
-      start: "top bottom",
-      scroller: pageContainer,
-      end: "bottom bottom",
-      scrub: 1,
-      onUpdate() {
-      }
-    }
-  });
-  offerTl.from(".offer__title", { opacity: 0, y: 20, duration: 1 })
-    .from(".cards__filter-link", { opacity: 0, y: 15, duration: 0.6 }, "-=0.8")
-    .from(".cards__item", { opacity: 0, y: 20, duration: 0.6, stagger: 0.1 }, "-=0.8");
-
   let infoTl = gsap.timeline({
     ease: "none",
     scrollTrigger: {
@@ -173,18 +166,92 @@ if (window.matchMedia("(min-width: 1001px)").matches) {
   });
   footeTl.from(".footer__contacts", { opacity: 0, y: 10, duration: 0.65 })
     .from(".footer__nav", { opacity: 0, y: 10, duration: 0.65 }, "-=0.65")
-    .from(".footer__bottom-btn", { opacity: 0, y: 10, duration: 0.65 }, "+=1")
+    .fromTo(".footer__bottom-btn", { opacity: 0, y: 10, duration: 0.65 }, {opacity: 1, y: 0},  "+=1")
     .from(".footer__bottom-descr", { opacity: 0, y: 10, duration: 0.65 });
-};
+})
 
+mm.add("(min-width: 1551px)", () => {
+  downloadBtn.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const offetItem = document.querySelectorAll(".current-offer .offer-item");
+      gsap.from(".current-offer .offer-item_hide", { opacity: 0, y: 10, duration: 0.6, stagger: 0.1 });
+      offetItem.forEach(item => {
+        item.classList.remove('offer-item_hide')
+      });
+      btn.classList.add('download-btn_hide');
+    })
+  });
+});
 
+mm.add("(max-width: 1550px)", () => {
+  const swiper_1 = new Swiper('.swiper_1', {
+    slidesPerView: 'auto',
+    spaceBetween: 16,
+    freeMode: true,
+    watchSlidesProgress: true,
 
+    scrollbar: {
+      el: '.offer-scrollbar',
+      hide: false,
+      draggable: true,
+    },
+  });
+
+  const swiper_2 = new Swiper('.swiper_2', {
+    slidesPerView: 'auto',
+    spaceBetween: 16,
+    freeMode: true,
+    watchSlidesProgress: true,
+
+    scrollbar: {
+      el: '.offer-scrollbar',
+      hide: false,
+      draggable: true,
+    },
+  });
+  
+  const swiper_3 = new Swiper('.swiper_3', {
+    slidesPerView: 'auto',
+    spaceBetween: 16,
+    freeMode: true,
+    watchSlidesProgress: true,
+
+    scrollbar: {
+      el: '.offer-scrollbar',
+      hide: false,
+      draggable: true,
+    },
+  });
+
+  downloadBtn.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const offetItem = document.querySelectorAll(".current-offer .offer-item");
+      offetItem.forEach(item => {
+        item.classList.remove('offer-item_hide')
+      });
+      btn.classList.add('download-btn_hide');
+      swiper_1.update();
+      swiper_2.update();
+      swiper_3.update();
+    })
+  });
+});
+
+tabsBtn.forEach(el => {
+  el.addEventListener('click', (el) => {
+    let tabsPath = el.target.dataset.offerPath;
+    tabsBtn.forEach(el => el.classList.remove('cards__filter-sort_active'));
+    document.querySelector(`[data-offer-path="${tabsPath}"]`).classList.add('cards__filter-sort_active');
+    let targetActive = document.querySelector(`[data-offer-target="${tabsPath}"]`)
+      if (!targetActive.classList.contains('current-offer')) {
+        tabsHandler(tabsPath);
+        gsap.from(".current-offer .offer-item", { opacity: 0, y: 10, duration: 0.6, stagger: 0.1 });
+      }
+  })
+});
 
 ScrollTrigger.addEventListener("refresh", () => scroller.update());
 ScrollTrigger.refresh();
-
-
-
 
 
 

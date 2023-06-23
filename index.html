@@ -9,6 +9,7 @@
   <link href="./images/favicon.png" rel="shortcut icon" type="image/x-icon">
   <link rel="stylesheet" href="./css/libs/locomotive-scroll.min.css">
   <link rel="stylesheet" href="./css/libs/simplebar.min.css">
+  <link rel="stylesheet" href="./css/libs/swiper-bundle.min.css">
   <link href="./css/main.css" rel="stylesheet">
   <title>Kayros</title>
 </head>
@@ -147,8 +148,8 @@
                 <button class="header__form-btn">
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle class="search-logo" cx="6.5" cy="6.5" r="5.5" stroke="white" stroke-width="2" />
-                    <rect class="search-logo-rec" x="9" y="10.4142" width="2" height="7" transform="rotate(-45 9 10.4142)"
-                      fill="white" />
+                    <rect class="search-logo-rec" x="9" y="10.4142" width="2" height="7"
+                      transform="rotate(-45 9 10.4142)" fill="white" />
                   </svg>
                 </button>
               </form>
@@ -296,185 +297,1402 @@
           <div class="cards">
             <div class="cards__filter">
               <div class="cards__filter-start">
-                <span class="cards__filter-sort cards__filter-sort_active">Хит</span>
-                <span class="cards__filter-sort">Новинка</span>
-                <span class="cards__filter-sort">Акция</span>
+                <span class="cards__filter-sort cards__filter-sort_active" data-offer-path="item_1">Хит</span>
+                <span class="cards__filter-sort" data-offer-path="item_2">Новинка</span>
+                <span class="cards__filter-sort" data-offer-path="item_3">Акция</span>
               </div>
               <a class="cards__filter-link" href="./product-categoty.html">Весь каталог</a>
             </div>
-            <ul class="cards__list">
-              <li class="cards__item">
-                <a class="cards__image" href="./product-cards.html"><img src="./images/offer-1.png" alt=""></a>
-                <div class="cards__offer">
-                  <span>ХИТ</span>
-                  <span>Новинка</span>
-                  <span>Акция</span>
+            <div class="offer__wrapper swiper_1 current-offer" data-offer-target="item_1">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide offer-item">
+                  <div class="cards__item">
+                    <a class="cards__image" href="./product-cards.html"><img src="./images/offer-1.png" alt=""></a>
+                    <div class="cards__offer">
+                      <span>ХИТ</span>
+                      <span>Новинка</span>
+                      <span>Акция</span>
+                    </div>
+                    <ul class="cards__list-colors">
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 1"> <img
+                            src="./images/offer-colors1.png" alt="Цвет 1"> </a> </li>
+                      <li class="cards__item-color cards__item-color_active"> <a class="cards__item-color-inner"
+                          title="Цвет 2"> <img src="./images/offer-colors2.png" alt="Цвет 2"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 3"> <img
+                            src="./images/offer-colors3.png" alt="Цвет 3"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 4"> <img
+                            src="./images/offer-colors4.png" alt="Цвет 4"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 5"> <img
+                            src="./images/offer-colors5.png" alt="Цвет 5"> </a> </li>
+                    </ul>
+                    <span class="cards__descr">9/1 платье</span>
+                    <span class="cards__price">11 000 руб.</span>
+                    <span class="cards__colors">3 цвета</span>
+                  </div>
                 </div>
-                <ul class="cards__list-colors">
-                  <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 1"> <img
-                        src="./images/offer-colors1.png" alt="Цвет 1"> </a> </li>
-                  <li class="cards__item-color cards__item-color_active"> <a class="cards__item-color-inner"
-                      title="Цвет 2"> <img src="./images/offer-colors2.png" alt="Цвет 2"> </a> </li>
-                  <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 3"> <img
-                        src="./images/offer-colors3.png" alt="Цвет 3"> </a> </li>
-                  <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 4"> <img
-                        src="./images/offer-colors4.png" alt="Цвет 4"> </a> </li>
-                  <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 5"> <img
-                        src="./images/offer-colors5.png" alt="Цвет 5"> </a> </li>
-                </ul>
-                <span class="cards__descr">9/1 платье</span>
-                <span class="cards__price">11 000 руб.</span>
-                <span class="cards__colors">3 цвета</span>
-              </li>
-              <li class="cards__item">
-                <a class="cards__image" href="./product-cards.html"><img src="./images/offer-3.png" alt=""></a>
-                <div class="cards__offer">
-                  <span>ХИТ</span>
+                <div class="swiper-slide offer-item">
+                  <div class="cards__item">
+                    <a class="cards__image" href="./product-cards.html"><img src="./images/offer-3.png" alt=""></a>
+                    <div class="cards__offer">
+                      <span>ХИТ</span>
+                    </div>
+                    <ul class="cards__list-colors">
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 1"> <img
+                            src="./images/offer-colors1.png" alt="Цвет 1"> </a> </li>
+                      <li class="cards__item-color cards__item-color_active"> <a class="cards__item-color-inner"
+                          title="Цвет 2"> <img src="./images/offer-colors2.png" alt="Цвет 2"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 3"> <img
+                            src="./images/offer-colors3.png" alt="Цвет 3"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 4"> <img
+                            src="./images/offer-colors4.png" alt="Цвет 4"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 5"> <img
+                            src="./images/offer-colors5.png" alt="Цвет 5"> </a> </li>
+                    </ul>
+                    <span class="cards__descr">9/1 платье</span>
+                    <span class="cards__price">11 000 руб.</span>
+                    <span class="cards__colors">3 цвета</span>
+                  </div>
                 </div>
-                <ul class="cards__list-colors">
-                  <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 1"> <img
-                        src="./images/offer-colors1.png" alt="Цвет 1"> </a> </li>
-                  <li class="cards__item-color cards__item-color_active"> <a class="cards__item-color-inner"
-                      title="Цвет 2"> <img src="./images/offer-colors2.png" alt="Цвет 2"> </a> </li>
-                  <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 3"> <img
-                        src="./images/offer-colors3.png" alt="Цвет 3"> </a> </li>
-                  <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 4"> <img
-                        src="./images/offer-colors4.png" alt="Цвет 4"> </a> </li>
-                  <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 5"> <img
-                        src="./images/offer-colors5.png" alt="Цвет 5"> </a> </li>
-                </ul>
-                <span class="cards__descr">9/1 платье</span>
-                <span class="cards__price">11 000 руб.</span>
-                <span class="cards__colors">3 цвета</span>
-              </li>
-              <li class="cards__item">
-                <a class="cards__image" href="./product-cards.html"><img src="./images/offer-2.png" alt=""></a>
-                <div class="cards__offer">
-                  <span>ХИТ</span>
-                  <span>Новинка</span>
+                <div class="swiper-slide offer-item">
+                  <div class="cards__item">
+                    <a class="cards__image" href="./product-cards.html"><img src="./images/offer-2.png" alt=""></a>
+                    <div class="cards__offer">
+                      <span>ХИТ</span>
+                      <span>Новинка</span>
+                    </div>
+                    <ul class="cards__list-colors">
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 1"> <img
+                            src="./images/offer-colors1.png" alt="Цвет 1"> </a> </li>
+                      <li class="cards__item-color cards__item-color_active"> <a class="cards__item-color-inner"
+                          title="Цвет 2"> <img src="./images/offer-colors2.png" alt="Цвет 2"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 3"> <img
+                            src="./images/offer-colors3.png" alt="Цвет 3"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 4"> <img
+                            src="./images/offer-colors4.png" alt="Цвет 4"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 5"> <img
+                            src="./images/offer-colors5.png" alt="Цвет 5"> </a> </li>
+                    </ul>
+                    <span class="cards__descr">9/1 платье</span>
+                    <span class="cards__price">11 000 руб.</span>
+                    <span class="cards__colors">3 цвета</span>
+                  </div>
                 </div>
-                <ul class="cards__list-colors">
-                  <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 1"> <img
-                        src="./images/offer-colors1.png" alt="Цвет 1"> </a> </li>
-                  <li class="cards__item-color cards__item-color_active"> <a class="cards__item-color-inner"
-                      title="Цвет 2"> <img src="./images/offer-colors2.png" alt="Цвет 2"> </a> </li>
-                  <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 3"> <img
-                        src="./images/offer-colors3.png" alt="Цвет 3"> </a> </li>
-                  <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 4"> <img
-                        src="./images/offer-colors4.png" alt="Цвет 4"> </a> </li>
-                  <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 5"> <img
-                        src="./images/offer-colors5.png" alt="Цвет 5"> </a> </li>
-                </ul>
-                <span class="cards__descr">9/1 платье</span>
-                <span class="cards__price">11 000 руб.</span>
-                <span class="cards__colors">3 цвета</span>
-              </li>
-              <li class="cards__item">
-                <a class="cards__image" href="./product-cards.html"><img src="./images/offer-5.png" alt=""></a>
-                <div class="cards__offer">
-                  <span>Акция</span>
+                <div class="swiper-slide offer-item">
+                  <div class="cards__item">
+                    <a class="cards__image" href="./product-cards.html"><img src="./images/offer-5.png" alt=""></a>
+                    <div class="cards__offer">
+                      <span>Акция</span>
+                    </div>
+                    <ul class="cards__list-colors">
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 1"> <img
+                            src="./images/offer-colors1.png" alt="Цвет 1"> </a> </li>
+                      <li class="cards__item-color cards__item-color_active"> <a class="cards__item-color-inner"
+                          title="Цвет 2"> <img src="./images/offer-colors2.png" alt="Цвет 2"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 3"> <img
+                            src="./images/offer-colors3.png" alt="Цвет 3"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 4"> <img
+                            src="./images/offer-colors4.png" alt="Цвет 4"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 5"> <img
+                            src="./images/offer-colors5.png" alt="Цвет 5"> </a> </li>
+                    </ul>
+                    <span class="cards__descr">9/1 платье</span>
+                    <span class="cards__price">11 000 руб.</span>
+                    <span class="cards__colors">3 цвета</span>
+                  </div>
                 </div>
-                <ul class="cards__list-colors">
-                  <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 1"> <img
-                        src="./images/offer-colors1.png" alt="Цвет 1"> </a> </li>
-                  <li class="cards__item-color cards__item-color_active"> <a class="cards__item-color-inner"
-                      title="Цвет 2"> <img src="./images/offer-colors2.png" alt="Цвет 2"> </a> </li>
-                  <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 3"> <img
-                        src="./images/offer-colors3.png" alt="Цвет 3"> </a> </li>
-                  <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 4"> <img
-                        src="./images/offer-colors4.png" alt="Цвет 4"> </a> </li>
-                  <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 5"> <img
-                        src="./images/offer-colors5.png" alt="Цвет 5"> </a> </li>
-                </ul>
-                <span class="cards__descr">9/1 платье</span>
-                <span class="cards__price">11 000 руб.</span>
-                <span class="cards__colors">3 цвета</span>
-              </li>
-              <li class="cards__item">
-                <a class="cards__image" href="./product-cards.html"><img src="./images/offer-4.png" alt=""></a>
-                <ul class="cards__list-colors">
-                  <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 1"> <img
-                        src="./images/offer-colors1.png" alt="Цвет 1"> </a> </li>
-                  <li class="cards__item-color cards__item-color_active"> <a class="cards__item-color-inner"
-                      title="Цвет 2"> <img src="./images/offer-colors2.png" alt="Цвет 2"> </a> </li>
-                  <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 3"> <img
-                        src="./images/offer-colors3.png" alt="Цвет 3"> </a> </li>
-                  <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 4"> <img
-                        src="./images/offer-colors4.png" alt="Цвет 4"> </a> </li>
-                  <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 5"> <img
-                        src="./images/offer-colors5.png" alt="Цвет 5"> </a> </li>
-                </ul>
-                <span class="cards__descr">9/1 платье</span>
-                <span class="cards__price">11 000 руб.</span>
-                <span class="cards__colors">3 цвета</span>
-              </li>
-              <li class="cards__item">
-                <a class="cards__image" href="./product-cards.html"><img src="./images/offer-3.png" alt=""></a>
-                <ul class="cards__list-colors">
-                  <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 1"> <img
-                        src="./images/offer-colors1.png" alt="Цвет 1"> </a> </li>
-                  <li class="cards__item-color cards__item-color_active"> <a class="cards__item-color-inner"
-                      title="Цвет 2"> <img src="./images/offer-colors2.png" alt="Цвет 2"> </a> </li>
-                  <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 3"> <img
-                        src="./images/offer-colors3.png" alt="Цвет 3"> </a> </li>
-                  <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 4"> <img
-                        src="./images/offer-colors4.png" alt="Цвет 4"> </a> </li>
-                  <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 5"> <img
-                        src="./images/offer-colors5.png" alt="Цвет 5"> </a> </li>
-                </ul>
-                <span class="cards__descr">9/1 платье</span>
-                <span class="cards__price">11 000 руб.</span>
-                <span class="cards__colors">3 цвета</span>
-              </li>
-              <li class="cards__item">
-                <a class="cards__image" href="./product-cards.html"><img src="./images/offer-2.png" alt=""></a>
-                <ul class="cards__list-colors">
-                  <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 1"> <img
-                        src="./images/offer-colors1.png" alt="Цвет 1"> </a> </li>
-                  <li class="cards__item-color cards__item-color_active"> <a class="cards__item-color-inner"
-                      title="Цвет 2"> <img src="./images/offer-colors2.png" alt="Цвет 2"> </a> </li>
-                  <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 3"> <img
-                        src="./images/offer-colors3.png" alt="Цвет 3"> </a> </li>
-                  <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 4"> <img
-                        src="./images/offer-colors4.png" alt="Цвет 4"> </a> </li>
-                  <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 5"> <img
-                        src="./images/offer-colors5.png" alt="Цвет 5"> </a> </li>
-                </ul>
-                <span class="cards__descr">9/1 платье</span>
-                <span class="cards__price">11 000 руб.</span>
-                <span class="cards__colors">3 цвета</span>
-              </li>
-              <li class="cards__item">
-                <a class="cards__image" href="./product-cards.html"><img src="./images/offer-1.png" alt=""></a>
-                <ul class="cards__list-colors">
-                  <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 1"> <img
-                        src="./images/offer-colors1.png" alt="Цвет 1"> </a> </li>
-                  <li class="cards__item-color cards__item-color_active"> <a class="cards__item-color-inner"
-                      title="Цвет 2"> <img src="./images/offer-colors2.png" alt="Цвет 2"> </a> </li>
-                  <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 3"> <img
-                        src="./images/offer-colors3.png" alt="Цвет 3"> </a> </li>
-                  <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 4"> <img
-                        src="./images/offer-colors4.png" alt="Цвет 4"> </a> </li>
-                  <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 5"> <img
-                        src="./images/offer-colors5.png" alt="Цвет 5"> </a> </li>
-                </ul>
-                <span class="cards__descr">9/1 платье</span>
-                <span class="cards__price">11 000 руб.</span>
-                <span class="cards__colors">3 цвета</span>
-              </li>
-              <li class="cards__item download-btn">
-                <button class="cards__button">
-                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M20 27.3L27.3 20L20 12.7L17.9 14.8L21.6 18.5H12.5V21.5H21.6L17.9 25.2L20 27.3ZM20 40C17.2667 40 14.6833 39.475 12.25 38.425C9.81667 37.375 7.69167 35.9417 5.875 34.125C4.05833 32.3083 2.625 30.1833 1.575 27.75C0.525 25.3167 0 22.7333 0 20C0 17.2333 0.525 14.6333 1.575 12.2C2.625 9.76667 4.05833 7.65 5.875 5.85C7.69167 4.05 9.81667 2.625 12.25 1.575C14.6833 0.525 17.2667 0 20 0C22.7667 0 25.3667 0.525 27.8 1.575C30.2333 2.625 32.35 4.05 34.15 5.85C35.95 7.65 37.375 9.76667 38.425 12.2C39.475 14.6333 40 17.2333 40 20C40 22.7333 39.475 25.3167 38.425 27.75C37.375 30.1833 35.95 32.3083 34.15 34.125C32.35 35.9417 30.2333 37.375 27.8 38.425C25.3667 39.475 22.7667 40 20 40ZM20 37C24.7333 37 28.75 35.3417 32.05 32.025C35.35 28.7083 37 24.7 37 20C37 15.2667 35.35 11.25 32.05 7.95C28.75 4.65 24.7333 3 20 3C15.3 3 11.2917 4.65 7.975 7.95C4.65833 11.25 3 15.2667 3 20C3 24.7 4.65833 28.7083 7.975 32.025C11.2917 35.3417 15.3 37 20 37Z"
-                      fill="#E3DDD4"></path>
-                  </svg>
-                  <span class="cards__button-text">Загрузить ещё</span>
-                </button>
-              </li>
-            </ul>
+                <div class="swiper-slide offer-item">
+                  <div class="cards__item">
+                    <a class="cards__image" href="./product-cards.html"><img src="./images/offer-4.png" alt=""></a>
+                    <ul class="cards__list-colors">
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 1"> <img
+                            src="./images/offer-colors1.png" alt="Цвет 1"> </a> </li>
+                      <li class="cards__item-color cards__item-color_active"> <a class="cards__item-color-inner"
+                          title="Цвет 2"> <img src="./images/offer-colors2.png" alt="Цвет 2"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 3"> <img
+                            src="./images/offer-colors3.png" alt="Цвет 3"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 4"> <img
+                            src="./images/offer-colors4.png" alt="Цвет 4"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 5"> <img
+                            src="./images/offer-colors5.png" alt="Цвет 5"> </a> </li>
+                    </ul>
+                    <span class="cards__descr">9/1 платье</span>
+                    <span class="cards__price">11 000 руб.</span>
+                    <span class="cards__colors">3 цвета</span>
+                  </div>
+                </div>
+                <div class="swiper-slide offer-item">
+                  <div class="cards__item">
+                    <a class="cards__image" href="./product-cards.html"><img src="./images/offer-3.png" alt=""></a>
+                    <ul class="cards__list-colors">
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 1"> <img
+                            src="./images/offer-colors1.png" alt="Цвет 1"> </a> </li>
+                      <li class="cards__item-color cards__item-color_active"> <a class="cards__item-color-inner"
+                          title="Цвет 2"> <img src="./images/offer-colors2.png" alt="Цвет 2"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 3"> <img
+                            src="./images/offer-colors3.png" alt="Цвет 3"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 4"> <img
+                            src="./images/offer-colors4.png" alt="Цвет 4"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 5"> <img
+                            src="./images/offer-colors5.png" alt="Цвет 5"> </a> </li>
+                    </ul>
+                    <span class="cards__descr">9/1 платье</span>
+                    <span class="cards__price">11 000 руб.</span>
+                    <span class="cards__colors">3 цвета</span>
+                  </div>
+                </div>
+                <div class="swiper-slide offer-item">
+                  <div class="cards__item">
+                    <a class="cards__image" href="./product-cards.html"><img src="./images/offer-2.png" alt=""></a>
+                    <ul class="cards__list-colors">
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 1"> <img
+                            src="./images/offer-colors1.png" alt="Цвет 1"> </a> </li>
+                      <li class="cards__item-color cards__item-color_active"> <a class="cards__item-color-inner"
+                          title="Цвет 2"> <img src="./images/offer-colors2.png" alt="Цвет 2"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 3"> <img
+                            src="./images/offer-colors3.png" alt="Цвет 3"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 4"> <img
+                            src="./images/offer-colors4.png" alt="Цвет 4"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 5"> <img
+                            src="./images/offer-colors5.png" alt="Цвет 5"> </a> </li>
+                    </ul>
+                    <span class="cards__descr">9/1 платье</span>
+                    <span class="cards__price">11 000 руб.</span>
+                    <span class="cards__colors">3 цвета</span>
+                  </div>
+                </div>
+                <div class="swiper-slide offer-item">
+                  <div class="cards__item">
+                    <a class="cards__image" href="./product-cards.html"><img src="./images/offer-1.png" alt=""></a>
+                    <ul class="cards__list-colors">
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 1"> <img
+                            src="./images/offer-colors1.png" alt="Цвет 1"> </a> </li>
+                      <li class="cards__item-color cards__item-color_active"> <a class="cards__item-color-inner"
+                          title="Цвет 2"> <img src="./images/offer-colors2.png" alt="Цвет 2"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 3"> <img
+                            src="./images/offer-colors3.png" alt="Цвет 3"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 4"> <img
+                            src="./images/offer-colors4.png" alt="Цвет 4"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 5"> <img
+                            src="./images/offer-colors5.png" alt="Цвет 5"> </a> </li>
+                    </ul>
+                    <span class="cards__descr">9/1 платье</span>
+                    <span class="cards__price">11 000 руб.</span>
+                    <span class="cards__colors">3 цвета</span>
+                  </div>
+                </div>
+                <div class="swiper-slide offer-item">
+                  <div class="cards__item">
+                    <a class="cards__image" href="./product-cards.html"><img src="./images/offer-1.png" alt=""></a>
+                    <div class="cards__offer">
+                      <span>ХИТ</span>
+                      <span>Новинка</span>
+                      <span>Акция</span>
+                    </div>
+                    <ul class="cards__list-colors">
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 1"> <img
+                            src="./images/offer-colors1.png" alt="Цвет 1"> </a> </li>
+                      <li class="cards__item-color cards__item-color_active"> <a class="cards__item-color-inner"
+                          title="Цвет 2"> <img src="./images/offer-colors2.png" alt="Цвет 2"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 3"> <img
+                            src="./images/offer-colors3.png" alt="Цвет 3"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 4"> <img
+                            src="./images/offer-colors4.png" alt="Цвет 4"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 5"> <img
+                            src="./images/offer-colors5.png" alt="Цвет 5"> </a> </li>
+                    </ul>
+                    <span class="cards__descr">9/1 платье</span>
+                    <span class="cards__price">11 000 руб.</span>
+                    <span class="cards__colors">3 цвета</span>
+                  </div>
+                </div>
+                <div class="swiper-slide offer-item">
+                  <div class="cards__item">
+                    <a class="cards__image" href="./product-cards.html"><img src="./images/offer-3.png" alt=""></a>
+                    <div class="cards__offer">
+                      <span>ХИТ</span>
+                    </div>
+                    <ul class="cards__list-colors">
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 1"> <img
+                            src="./images/offer-colors1.png" alt="Цвет 1"> </a> </li>
+                      <li class="cards__item-color cards__item-color_active"> <a class="cards__item-color-inner"
+                          title="Цвет 2"> <img src="./images/offer-colors2.png" alt="Цвет 2"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 3"> <img
+                            src="./images/offer-colors3.png" alt="Цвет 3"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 4"> <img
+                            src="./images/offer-colors4.png" alt="Цвет 4"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 5"> <img
+                            src="./images/offer-colors5.png" alt="Цвет 5"> </a> </li>
+                    </ul>
+                    <span class="cards__descr">9/1 платье</span>
+                    <span class="cards__price">11 000 руб.</span>
+                    <span class="cards__colors">3 цвета</span>
+                  </div>
+                </div>
+                <div class="swiper-slide offer-item offer-item_hide">
+                  <div class="cards__item">
+                    <a class="cards__image" href="./product-cards.html"><img src="./images/offer-1.png" alt=""></a>
+                    <div class="cards__offer">
+                      <span>ХИТ</span>
+                      <span>Новинка</span>
+                      <span>Акция</span>
+                    </div>
+                    <ul class="cards__list-colors">
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 1"> <img
+                            src="./images/offer-colors1.png" alt="Цвет 1"> </a> </li>
+                      <li class="cards__item-color cards__item-color_active"> <a class="cards__item-color-inner"
+                          title="Цвет 2"> <img src="./images/offer-colors2.png" alt="Цвет 2"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 3"> <img
+                            src="./images/offer-colors3.png" alt="Цвет 3"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 4"> <img
+                            src="./images/offer-colors4.png" alt="Цвет 4"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 5"> <img
+                            src="./images/offer-colors5.png" alt="Цвет 5"> </a> </li>
+                    </ul>
+                    <span class="cards__descr">9/1 платье</span>
+                    <span class="cards__price">11 000 руб.</span>
+                    <span class="cards__colors">3 цвета</span>
+                  </div>
+                </div>
+                <div class="swiper-slide offer-item offer-item_hide">
+                  <div class="cards__item">
+                    <a class="cards__image" href="./product-cards.html"><img src="./images/offer-3.png" alt=""></a>
+                    <div class="cards__offer">
+                      <span>ХИТ</span>
+                    </div>
+                    <ul class="cards__list-colors">
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 1"> <img
+                            src="./images/offer-colors1.png" alt="Цвет 1"> </a> </li>
+                      <li class="cards__item-color cards__item-color_active"> <a class="cards__item-color-inner"
+                          title="Цвет 2"> <img src="./images/offer-colors2.png" alt="Цвет 2"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 3"> <img
+                            src="./images/offer-colors3.png" alt="Цвет 3"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 4"> <img
+                            src="./images/offer-colors4.png" alt="Цвет 4"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 5"> <img
+                            src="./images/offer-colors5.png" alt="Цвет 5"> </a> </li>
+                    </ul>
+                    <span class="cards__descr">9/1 платье</span>
+                    <span class="cards__price">11 000 руб.</span>
+                    <span class="cards__colors">3 цвета</span>
+                  </div>
+                </div>
+                <div class="swiper-slide offer-item offer-item_hide">
+                  <div class="cards__item">
+                    <a class="cards__image" href="./product-cards.html"><img src="./images/offer-2.png" alt=""></a>
+                    <div class="cards__offer">
+                      <span>ХИТ</span>
+                      <span>Новинка</span>
+                    </div>
+                    <ul class="cards__list-colors">
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 1"> <img
+                            src="./images/offer-colors1.png" alt="Цвет 1"> </a> </li>
+                      <li class="cards__item-color cards__item-color_active"> <a class="cards__item-color-inner"
+                          title="Цвет 2"> <img src="./images/offer-colors2.png" alt="Цвет 2"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 3"> <img
+                            src="./images/offer-colors3.png" alt="Цвет 3"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 4"> <img
+                            src="./images/offer-colors4.png" alt="Цвет 4"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 5"> <img
+                            src="./images/offer-colors5.png" alt="Цвет 5"> </a> </li>
+                    </ul>
+                    <span class="cards__descr">9/1 платье</span>
+                    <span class="cards__price">11 000 руб.</span>
+                    <span class="cards__colors">3 цвета</span>
+                  </div>
+                </div>
+                <div class="swiper-slide offer-item offer-item_hide">
+                  <div class="cards__item">
+                    <a class="cards__image" href="./product-cards.html"><img src="./images/offer-5.png" alt=""></a>
+                    <div class="cards__offer">
+                      <span>Акция</span>
+                    </div>
+                    <ul class="cards__list-colors">
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 1"> <img
+                            src="./images/offer-colors1.png" alt="Цвет 1"> </a> </li>
+                      <li class="cards__item-color cards__item-color_active"> <a class="cards__item-color-inner"
+                          title="Цвет 2"> <img src="./images/offer-colors2.png" alt="Цвет 2"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 3"> <img
+                            src="./images/offer-colors3.png" alt="Цвет 3"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 4"> <img
+                            src="./images/offer-colors4.png" alt="Цвет 4"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 5"> <img
+                            src="./images/offer-colors5.png" alt="Цвет 5"> </a> </li>
+                    </ul>
+                    <span class="cards__descr">9/1 платье</span>
+                    <span class="cards__price">11 000 руб.</span>
+                    <span class="cards__colors">3 цвета</span>
+                  </div>
+                </div>
+                <div class="swiper-slide offer-item offer-item_hide">
+                  <div class="cards__item">
+                    <a class="cards__image" href="./product-cards.html"><img src="./images/offer-4.png" alt=""></a>
+                    <ul class="cards__list-colors">
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 1"> <img
+                            src="./images/offer-colors1.png" alt="Цвет 1"> </a> </li>
+                      <li class="cards__item-color cards__item-color_active"> <a class="cards__item-color-inner"
+                          title="Цвет 2"> <img src="./images/offer-colors2.png" alt="Цвет 2"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 3"> <img
+                            src="./images/offer-colors3.png" alt="Цвет 3"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 4"> <img
+                            src="./images/offer-colors4.png" alt="Цвет 4"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 5"> <img
+                            src="./images/offer-colors5.png" alt="Цвет 5"> </a> </li>
+                    </ul>
+                    <span class="cards__descr">9/1 платье</span>
+                    <span class="cards__price">11 000 руб.</span>
+                    <span class="cards__colors">3 цвета</span>
+                  </div>
+                </div>
+                <div class="swiper-slide offer-item offer-item_hide">
+                  <div class="cards__item">
+                    <a class="cards__image" href="./product-cards.html"><img src="./images/offer-3.png" alt=""></a>
+                    <ul class="cards__list-colors">
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 1"> <img
+                            src="./images/offer-colors1.png" alt="Цвет 1"> </a> </li>
+                      <li class="cards__item-color cards__item-color_active"> <a class="cards__item-color-inner"
+                          title="Цвет 2"> <img src="./images/offer-colors2.png" alt="Цвет 2"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 3"> <img
+                            src="./images/offer-colors3.png" alt="Цвет 3"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 4"> <img
+                            src="./images/offer-colors4.png" alt="Цвет 4"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 5"> <img
+                            src="./images/offer-colors5.png" alt="Цвет 5"> </a> </li>
+                    </ul>
+                    <span class="cards__descr">9/1 платье</span>
+                    <span class="cards__price">11 000 руб.</span>
+                    <span class="cards__colors">3 цвета</span>
+                  </div>
+                </div>
+                <div class="swiper-slide offer-item offer-item_hide">
+                  <div class="cards__item">
+                    <a class="cards__image" href="./product-cards.html"><img src="./images/offer-2.png" alt=""></a>
+                    <ul class="cards__list-colors">
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 1"> <img
+                            src="./images/offer-colors1.png" alt="Цвет 1"> </a> </li>
+                      <li class="cards__item-color cards__item-color_active"> <a class="cards__item-color-inner"
+                          title="Цвет 2"> <img src="./images/offer-colors2.png" alt="Цвет 2"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 3"> <img
+                            src="./images/offer-colors3.png" alt="Цвет 3"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 4"> <img
+                            src="./images/offer-colors4.png" alt="Цвет 4"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 5"> <img
+                            src="./images/offer-colors5.png" alt="Цвет 5"> </a> </li>
+                    </ul>
+                    <span class="cards__descr">9/1 платье</span>
+                    <span class="cards__price">11 000 руб.</span>
+                    <span class="cards__colors">3 цвета</span>
+                  </div>
+                </div>
+                <div class="swiper-slide offer-item offer-item_hide">
+                  <div class="cards__item">
+                    <a class="cards__image" href="./product-cards.html"><img src="./images/offer-1.png" alt=""></a>
+                    <ul class="cards__list-colors">
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 1"> <img
+                            src="./images/offer-colors1.png" alt="Цвет 1"> </a> </li>
+                      <li class="cards__item-color cards__item-color_active"> <a class="cards__item-color-inner"
+                          title="Цвет 2"> <img src="./images/offer-colors2.png" alt="Цвет 2"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 3"> <img
+                            src="./images/offer-colors3.png" alt="Цвет 3"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 4"> <img
+                            src="./images/offer-colors4.png" alt="Цвет 4"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 5"> <img
+                            src="./images/offer-colors5.png" alt="Цвет 5"> </a> </li>
+                    </ul>
+                    <span class="cards__descr">9/1 платье</span>
+                    <span class="cards__price">11 000 руб.</span>
+                    <span class="cards__colors">3 цвета</span>
+                  </div>
+                </div>
+                <div class="swiper-slide offer-item offer-item_hide">
+                  <div class="cards__item">
+                    <a class="cards__image" href="./product-cards.html"><img src="./images/offer-1.png" alt=""></a>
+                    <div class="cards__offer">
+                      <span>ХИТ</span>
+                      <span>Новинка</span>
+                      <span>Акция</span>
+                    </div>
+                    <ul class="cards__list-colors">
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 1"> <img
+                            src="./images/offer-colors1.png" alt="Цвет 1"> </a> </li>
+                      <li class="cards__item-color cards__item-color_active"> <a class="cards__item-color-inner"
+                          title="Цвет 2"> <img src="./images/offer-colors2.png" alt="Цвет 2"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 3"> <img
+                            src="./images/offer-colors3.png" alt="Цвет 3"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 4"> <img
+                            src="./images/offer-colors4.png" alt="Цвет 4"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 5"> <img
+                            src="./images/offer-colors5.png" alt="Цвет 5"> </a> </li>
+                    </ul>
+                    <span class="cards__descr">9/1 платье</span>
+                    <span class="cards__price">11 000 руб.</span>
+                    <span class="cards__colors">3 цвета</span>
+                  </div>
+                </div>
+                <div class="swiper-slide offer-item offer-item_hide">
+                  <div class="cards__item">
+                    <a class="cards__image" href="./product-cards.html"><img src="./images/offer-3.png" alt=""></a>
+                    <div class="cards__offer">
+                      <span>ХИТ</span>
+                    </div>
+                    <ul class="cards__list-colors">
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 1"> <img
+                            src="./images/offer-colors1.png" alt="Цвет 1"> </a> </li>
+                      <li class="cards__item-color cards__item-color_active"> <a class="cards__item-color-inner"
+                          title="Цвет 2"> <img src="./images/offer-colors2.png" alt="Цвет 2"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 3"> <img
+                            src="./images/offer-colors3.png" alt="Цвет 3"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 4"> <img
+                            src="./images/offer-colors4.png" alt="Цвет 4"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 5"> <img
+                            src="./images/offer-colors5.png" alt="Цвет 5"> </a> </li>
+                    </ul>
+                    <span class="cards__descr">9/1 платье</span>
+                    <span class="cards__price">11 000 руб.</span>
+                    <span class="cards__colors">3 цвета</span>
+                  </div>
+                </div>
+
+                <div class="swiper-slide swiper-download-btn download-btn">
+                  <button class="cards__button">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M20 27.3L27.3 20L20 12.7L17.9 14.8L21.6 18.5H12.5V21.5H21.6L17.9 25.2L20 27.3ZM20 40C17.2667 40 14.6833 39.475 12.25 38.425C9.81667 37.375 7.69167 35.9417 5.875 34.125C4.05833 32.3083 2.625 30.1833 1.575 27.75C0.525 25.3167 0 22.7333 0 20C0 17.2333 0.525 14.6333 1.575 12.2C2.625 9.76667 4.05833 7.65 5.875 5.85C7.69167 4.05 9.81667 2.625 12.25 1.575C14.6833 0.525 17.2667 0 20 0C22.7667 0 25.3667 0.525 27.8 1.575C30.2333 2.625 32.35 4.05 34.15 5.85C35.95 7.65 37.375 9.76667 38.425 12.2C39.475 14.6333 40 17.2333 40 20C40 22.7333 39.475 25.3167 38.425 27.75C37.375 30.1833 35.95 32.3083 34.15 34.125C32.35 35.9417 30.2333 37.375 27.8 38.425C25.3667 39.475 22.7667 40 20 40ZM20 37C24.7333 37 28.75 35.3417 32.05 32.025C35.35 28.7083 37 24.7 37 20C37 15.2667 35.35 11.25 32.05 7.95C28.75 4.65 24.7333 3 20 3C15.3 3 11.2917 4.65 7.975 7.95C4.65833 11.25 3 15.2667 3 20C3 24.7 4.65833 28.7083 7.975 32.025C11.2917 35.3417 15.3 37 20 37Z"
+                        fill="#E3DDD4"></path>
+                    </svg>
+                    <span class="cards__button-text">Загрузить ещё</span>
+                  </button>
+                </div>
+              </div>
+              <div class="offer-scrollbar"></div>
+              <button class="offer__button download-btn">Показать еще</button>
+            </div>
+            <div class="offer__wrapper swiper_2" data-offer-target="item_2">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide offer-item">
+                  <div class="cards__item">
+                    <a class="cards__image" href="./product-cards.html"><img src="./images/offer-1.png" alt=""></a>
+                    <div class="cards__offer">
+                      <span>ХИТ</span>
+                      <span>Новинка</span>
+                      <span>Акция</span>
+                    </div>
+                    <ul class="cards__list-colors">
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 1"> <img
+                            src="./images/offer-colors1.png" alt="Цвет 1"> </a> </li>
+                      <li class="cards__item-color cards__item-color_active"> <a class="cards__item-color-inner"
+                          title="Цвет 2"> <img src="./images/offer-colors2.png" alt="Цвет 2"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 3"> <img
+                            src="./images/offer-colors3.png" alt="Цвет 3"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 4"> <img
+                            src="./images/offer-colors4.png" alt="Цвет 4"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 5"> <img
+                            src="./images/offer-colors5.png" alt="Цвет 5"> </a> </li>
+                    </ul>
+                    <span class="cards__descr">9/1 платье</span>
+                    <span class="cards__price">11 000 руб.</span>
+                    <span class="cards__colors">3 цвета</span>
+                  </div>
+                </div>
+                <div class="swiper-slide offer-item">
+                  <div class="cards__item">
+                    <a class="cards__image" href="./product-cards.html"><img src="./images/offer-3.png" alt=""></a>
+                    <div class="cards__offer">
+                      <span>ХИТ</span>
+                    </div>
+                    <ul class="cards__list-colors">
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 1"> <img
+                            src="./images/offer-colors1.png" alt="Цвет 1"> </a> </li>
+                      <li class="cards__item-color cards__item-color_active"> <a class="cards__item-color-inner"
+                          title="Цвет 2"> <img src="./images/offer-colors2.png" alt="Цвет 2"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 3"> <img
+                            src="./images/offer-colors3.png" alt="Цвет 3"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 4"> <img
+                            src="./images/offer-colors4.png" alt="Цвет 4"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 5"> <img
+                            src="./images/offer-colors5.png" alt="Цвет 5"> </a> </li>
+                    </ul>
+                    <span class="cards__descr">9/1 платье</span>
+                    <span class="cards__price">11 000 руб.</span>
+                    <span class="cards__colors">3 цвета</span>
+                  </div>
+                </div>
+                <div class="swiper-slide offer-item">
+                  <div class="cards__item">
+                    <a class="cards__image" href="./product-cards.html"><img src="./images/offer-2.png" alt=""></a>
+                    <div class="cards__offer">
+                      <span>ХИТ</span>
+                      <span>Новинка</span>
+                    </div>
+                    <ul class="cards__list-colors">
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 1"> <img
+                            src="./images/offer-colors1.png" alt="Цвет 1"> </a> </li>
+                      <li class="cards__item-color cards__item-color_active"> <a class="cards__item-color-inner"
+                          title="Цвет 2"> <img src="./images/offer-colors2.png" alt="Цвет 2"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 3"> <img
+                            src="./images/offer-colors3.png" alt="Цвет 3"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 4"> <img
+                            src="./images/offer-colors4.png" alt="Цвет 4"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 5"> <img
+                            src="./images/offer-colors5.png" alt="Цвет 5"> </a> </li>
+                    </ul>
+                    <span class="cards__descr">9/1 платье</span>
+                    <span class="cards__price">11 000 руб.</span>
+                    <span class="cards__colors">3 цвета</span>
+                  </div>
+                </div>
+                <div class="swiper-slide offer-item">
+                  <div class="cards__item">
+                    <a class="cards__image" href="./product-cards.html"><img src="./images/offer-5.png" alt=""></a>
+                    <div class="cards__offer">
+                      <span>Акция</span>
+                    </div>
+                    <ul class="cards__list-colors">
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 1"> <img
+                            src="./images/offer-colors1.png" alt="Цвет 1"> </a> </li>
+                      <li class="cards__item-color cards__item-color_active"> <a class="cards__item-color-inner"
+                          title="Цвет 2"> <img src="./images/offer-colors2.png" alt="Цвет 2"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 3"> <img
+                            src="./images/offer-colors3.png" alt="Цвет 3"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 4"> <img
+                            src="./images/offer-colors4.png" alt="Цвет 4"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 5"> <img
+                            src="./images/offer-colors5.png" alt="Цвет 5"> </a> </li>
+                    </ul>
+                    <span class="cards__descr">9/1 платье</span>
+                    <span class="cards__price">11 000 руб.</span>
+                    <span class="cards__colors">3 цвета</span>
+                  </div>
+                </div>
+                <div class="swiper-slide offer-item">
+                  <div class="cards__item">
+                    <a class="cards__image" href="./product-cards.html"><img src="./images/offer-4.png" alt=""></a>
+                    <ul class="cards__list-colors">
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 1"> <img
+                            src="./images/offer-colors1.png" alt="Цвет 1"> </a> </li>
+                      <li class="cards__item-color cards__item-color_active"> <a class="cards__item-color-inner"
+                          title="Цвет 2"> <img src="./images/offer-colors2.png" alt="Цвет 2"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 3"> <img
+                            src="./images/offer-colors3.png" alt="Цвет 3"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 4"> <img
+                            src="./images/offer-colors4.png" alt="Цвет 4"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 5"> <img
+                            src="./images/offer-colors5.png" alt="Цвет 5"> </a> </li>
+                    </ul>
+                    <span class="cards__descr">9/1 платье</span>
+                    <span class="cards__price">11 000 руб.</span>
+                    <span class="cards__colors">3 цвета</span>
+                  </div>
+                </div>
+                <div class="swiper-slide offer-item">
+                  <div class="cards__item">
+                    <a class="cards__image" href="./product-cards.html"><img src="./images/offer-3.png" alt=""></a>
+                    <ul class="cards__list-colors">
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 1"> <img
+                            src="./images/offer-colors1.png" alt="Цвет 1"> </a> </li>
+                      <li class="cards__item-color cards__item-color_active"> <a class="cards__item-color-inner"
+                          title="Цвет 2"> <img src="./images/offer-colors2.png" alt="Цвет 2"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 3"> <img
+                            src="./images/offer-colors3.png" alt="Цвет 3"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 4"> <img
+                            src="./images/offer-colors4.png" alt="Цвет 4"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 5"> <img
+                            src="./images/offer-colors5.png" alt="Цвет 5"> </a> </li>
+                    </ul>
+                    <span class="cards__descr">9/1 платье</span>
+                    <span class="cards__price">11 000 руб.</span>
+                    <span class="cards__colors">3 цвета</span>
+                  </div>
+                </div>
+                <div class="swiper-slide offer-item">
+                  <div class="cards__item">
+                    <a class="cards__image" href="./product-cards.html"><img src="./images/offer-2.png" alt=""></a>
+                    <ul class="cards__list-colors">
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 1"> <img
+                            src="./images/offer-colors1.png" alt="Цвет 1"> </a> </li>
+                      <li class="cards__item-color cards__item-color_active"> <a class="cards__item-color-inner"
+                          title="Цвет 2"> <img src="./images/offer-colors2.png" alt="Цвет 2"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 3"> <img
+                            src="./images/offer-colors3.png" alt="Цвет 3"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 4"> <img
+                            src="./images/offer-colors4.png" alt="Цвет 4"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 5"> <img
+                            src="./images/offer-colors5.png" alt="Цвет 5"> </a> </li>
+                    </ul>
+                    <span class="cards__descr">9/1 платье</span>
+                    <span class="cards__price">11 000 руб.</span>
+                    <span class="cards__colors">3 цвета</span>
+                  </div>
+                </div>
+                <div class="swiper-slide offer-item">
+                  <div class="cards__item">
+                    <a class="cards__image" href="./product-cards.html"><img src="./images/offer-1.png" alt=""></a>
+                    <ul class="cards__list-colors">
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 1"> <img
+                            src="./images/offer-colors1.png" alt="Цвет 1"> </a> </li>
+                      <li class="cards__item-color cards__item-color_active"> <a class="cards__item-color-inner"
+                          title="Цвет 2"> <img src="./images/offer-colors2.png" alt="Цвет 2"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 3"> <img
+                            src="./images/offer-colors3.png" alt="Цвет 3"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 4"> <img
+                            src="./images/offer-colors4.png" alt="Цвет 4"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 5"> <img
+                            src="./images/offer-colors5.png" alt="Цвет 5"> </a> </li>
+                    </ul>
+                    <span class="cards__descr">9/1 платье</span>
+                    <span class="cards__price">11 000 руб.</span>
+                    <span class="cards__colors">3 цвета</span>
+                  </div>
+                </div>
+                <div class="swiper-slide offer-item">
+                  <div class="cards__item">
+                    <a class="cards__image" href="./product-cards.html"><img src="./images/offer-1.png" alt=""></a>
+                    <div class="cards__offer">
+                      <span>ХИТ</span>
+                      <span>Новинка</span>
+                      <span>Акция</span>
+                    </div>
+                    <ul class="cards__list-colors">
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 1"> <img
+                            src="./images/offer-colors1.png" alt="Цвет 1"> </a> </li>
+                      <li class="cards__item-color cards__item-color_active"> <a class="cards__item-color-inner"
+                          title="Цвет 2"> <img src="./images/offer-colors2.png" alt="Цвет 2"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 3"> <img
+                            src="./images/offer-colors3.png" alt="Цвет 3"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 4"> <img
+                            src="./images/offer-colors4.png" alt="Цвет 4"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 5"> <img
+                            src="./images/offer-colors5.png" alt="Цвет 5"> </a> </li>
+                    </ul>
+                    <span class="cards__descr">9/1 платье</span>
+                    <span class="cards__price">11 000 руб.</span>
+                    <span class="cards__colors">3 цвета</span>
+                  </div>
+                </div>
+                <div class="swiper-slide offer-item">
+                  <div class="cards__item">
+                    <a class="cards__image" href="./product-cards.html"><img src="./images/offer-3.png" alt=""></a>
+                    <div class="cards__offer">
+                      <span>ХИТ</span>
+                    </div>
+                    <ul class="cards__list-colors">
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 1"> <img
+                            src="./images/offer-colors1.png" alt="Цвет 1"> </a> </li>
+                      <li class="cards__item-color cards__item-color_active"> <a class="cards__item-color-inner"
+                          title="Цвет 2"> <img src="./images/offer-colors2.png" alt="Цвет 2"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 3"> <img
+                            src="./images/offer-colors3.png" alt="Цвет 3"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 4"> <img
+                            src="./images/offer-colors4.png" alt="Цвет 4"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 5"> <img
+                            src="./images/offer-colors5.png" alt="Цвет 5"> </a> </li>
+                    </ul>
+                    <span class="cards__descr">9/1 платье</span>
+                    <span class="cards__price">11 000 руб.</span>
+                    <span class="cards__colors">3 цвета</span>
+                  </div>
+                </div>
+                <div class="swiper-slide offer-item offer-item_hide">
+                  <div class="cards__item">
+                    <a class="cards__image" href="./product-cards.html"><img src="./images/offer-1.png" alt=""></a>
+                    <div class="cards__offer">
+                      <span>ХИТ</span>
+                      <span>Новинка</span>
+                      <span>Акция</span>
+                    </div>
+                    <ul class="cards__list-colors">
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 1"> <img
+                            src="./images/offer-colors1.png" alt="Цвет 1"> </a> </li>
+                      <li class="cards__item-color cards__item-color_active"> <a class="cards__item-color-inner"
+                          title="Цвет 2"> <img src="./images/offer-colors2.png" alt="Цвет 2"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 3"> <img
+                            src="./images/offer-colors3.png" alt="Цвет 3"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 4"> <img
+                            src="./images/offer-colors4.png" alt="Цвет 4"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 5"> <img
+                            src="./images/offer-colors5.png" alt="Цвет 5"> </a> </li>
+                    </ul>
+                    <span class="cards__descr">9/1 платье</span>
+                    <span class="cards__price">11 000 руб.</span>
+                    <span class="cards__colors">3 цвета</span>
+                  </div>
+                </div>
+                <div class="swiper-slide offer-item offer-item_hide">
+                  <div class="cards__item">
+                    <a class="cards__image" href="./product-cards.html"><img src="./images/offer-3.png" alt=""></a>
+                    <div class="cards__offer">
+                      <span>ХИТ</span>
+                    </div>
+                    <ul class="cards__list-colors">
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 1"> <img
+                            src="./images/offer-colors1.png" alt="Цвет 1"> </a> </li>
+                      <li class="cards__item-color cards__item-color_active"> <a class="cards__item-color-inner"
+                          title="Цвет 2"> <img src="./images/offer-colors2.png" alt="Цвет 2"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 3"> <img
+                            src="./images/offer-colors3.png" alt="Цвет 3"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 4"> <img
+                            src="./images/offer-colors4.png" alt="Цвет 4"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 5"> <img
+                            src="./images/offer-colors5.png" alt="Цвет 5"> </a> </li>
+                    </ul>
+                    <span class="cards__descr">9/1 платье</span>
+                    <span class="cards__price">11 000 руб.</span>
+                    <span class="cards__colors">3 цвета</span>
+                  </div>
+                </div>
+                <div class="swiper-slide offer-item offer-item_hide">
+                  <div class="cards__item">
+                    <a class="cards__image" href="./product-cards.html"><img src="./images/offer-2.png" alt=""></a>
+                    <div class="cards__offer">
+                      <span>ХИТ</span>
+                      <span>Новинка</span>
+                    </div>
+                    <ul class="cards__list-colors">
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 1"> <img
+                            src="./images/offer-colors1.png" alt="Цвет 1"> </a> </li>
+                      <li class="cards__item-color cards__item-color_active"> <a class="cards__item-color-inner"
+                          title="Цвет 2"> <img src="./images/offer-colors2.png" alt="Цвет 2"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 3"> <img
+                            src="./images/offer-colors3.png" alt="Цвет 3"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 4"> <img
+                            src="./images/offer-colors4.png" alt="Цвет 4"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 5"> <img
+                            src="./images/offer-colors5.png" alt="Цвет 5"> </a> </li>
+                    </ul>
+                    <span class="cards__descr">9/1 платье</span>
+                    <span class="cards__price">11 000 руб.</span>
+                    <span class="cards__colors">3 цвета</span>
+                  </div>
+                </div>
+                <div class="swiper-slide offer-item offer-item_hide">
+                  <div class="cards__item">
+                    <a class="cards__image" href="./product-cards.html"><img src="./images/offer-5.png" alt=""></a>
+                    <div class="cards__offer">
+                      <span>Акция</span>
+                    </div>
+                    <ul class="cards__list-colors">
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 1"> <img
+                            src="./images/offer-colors1.png" alt="Цвет 1"> </a> </li>
+                      <li class="cards__item-color cards__item-color_active"> <a class="cards__item-color-inner"
+                          title="Цвет 2"> <img src="./images/offer-colors2.png" alt="Цвет 2"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 3"> <img
+                            src="./images/offer-colors3.png" alt="Цвет 3"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 4"> <img
+                            src="./images/offer-colors4.png" alt="Цвет 4"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 5"> <img
+                            src="./images/offer-colors5.png" alt="Цвет 5"> </a> </li>
+                    </ul>
+                    <span class="cards__descr">9/1 платье</span>
+                    <span class="cards__price">11 000 руб.</span>
+                    <span class="cards__colors">3 цвета</span>
+                  </div>
+                </div>
+                <div class="swiper-slide offer-item offer-item_hide">
+                  <div class="cards__item">
+                    <a class="cards__image" href="./product-cards.html"><img src="./images/offer-4.png" alt=""></a>
+                    <ul class="cards__list-colors">
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 1"> <img
+                            src="./images/offer-colors1.png" alt="Цвет 1"> </a> </li>
+                      <li class="cards__item-color cards__item-color_active"> <a class="cards__item-color-inner"
+                          title="Цвет 2"> <img src="./images/offer-colors2.png" alt="Цвет 2"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 3"> <img
+                            src="./images/offer-colors3.png" alt="Цвет 3"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 4"> <img
+                            src="./images/offer-colors4.png" alt="Цвет 4"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 5"> <img
+                            src="./images/offer-colors5.png" alt="Цвет 5"> </a> </li>
+                    </ul>
+                    <span class="cards__descr">9/1 платье</span>
+                    <span class="cards__price">11 000 руб.</span>
+                    <span class="cards__colors">3 цвета</span>
+                  </div>
+                </div>
+                <div class="swiper-slide offer-item offer-item_hide">
+                  <div class="cards__item">
+                    <a class="cards__image" href="./product-cards.html"><img src="./images/offer-3.png" alt=""></a>
+                    <ul class="cards__list-colors">
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 1"> <img
+                            src="./images/offer-colors1.png" alt="Цвет 1"> </a> </li>
+                      <li class="cards__item-color cards__item-color_active"> <a class="cards__item-color-inner"
+                          title="Цвет 2"> <img src="./images/offer-colors2.png" alt="Цвет 2"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 3"> <img
+                            src="./images/offer-colors3.png" alt="Цвет 3"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 4"> <img
+                            src="./images/offer-colors4.png" alt="Цвет 4"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 5"> <img
+                            src="./images/offer-colors5.png" alt="Цвет 5"> </a> </li>
+                    </ul>
+                    <span class="cards__descr">9/1 платье</span>
+                    <span class="cards__price">11 000 руб.</span>
+                    <span class="cards__colors">3 цвета</span>
+                  </div>
+                </div>
+                <div class="swiper-slide offer-item offer-item_hide">
+                  <div class="cards__item">
+                    <a class="cards__image" href="./product-cards.html"><img src="./images/offer-2.png" alt=""></a>
+                    <ul class="cards__list-colors">
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 1"> <img
+                            src="./images/offer-colors1.png" alt="Цвет 1"> </a> </li>
+                      <li class="cards__item-color cards__item-color_active"> <a class="cards__item-color-inner"
+                          title="Цвет 2"> <img src="./images/offer-colors2.png" alt="Цвет 2"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 3"> <img
+                            src="./images/offer-colors3.png" alt="Цвет 3"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 4"> <img
+                            src="./images/offer-colors4.png" alt="Цвет 4"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 5"> <img
+                            src="./images/offer-colors5.png" alt="Цвет 5"> </a> </li>
+                    </ul>
+                    <span class="cards__descr">9/1 платье</span>
+                    <span class="cards__price">11 000 руб.</span>
+                    <span class="cards__colors">3 цвета</span>
+                  </div>
+                </div>
+                <div class="swiper-slide offer-item offer-item_hide">
+                  <div class="cards__item">
+                    <a class="cards__image" href="./product-cards.html"><img src="./images/offer-1.png" alt=""></a>
+                    <ul class="cards__list-colors">
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 1"> <img
+                            src="./images/offer-colors1.png" alt="Цвет 1"> </a> </li>
+                      <li class="cards__item-color cards__item-color_active"> <a class="cards__item-color-inner"
+                          title="Цвет 2"> <img src="./images/offer-colors2.png" alt="Цвет 2"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 3"> <img
+                            src="./images/offer-colors3.png" alt="Цвет 3"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 4"> <img
+                            src="./images/offer-colors4.png" alt="Цвет 4"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 5"> <img
+                            src="./images/offer-colors5.png" alt="Цвет 5"> </a> </li>
+                    </ul>
+                    <span class="cards__descr">9/1 платье</span>
+                    <span class="cards__price">11 000 руб.</span>
+                    <span class="cards__colors">3 цвета</span>
+                  </div>
+                </div>
+                <div class="swiper-slide offer-item offer-item_hide">
+                  <div class="cards__item">
+                    <a class="cards__image" href="./product-cards.html"><img src="./images/offer-1.png" alt=""></a>
+                    <div class="cards__offer">
+                      <span>ХИТ</span>
+                      <span>Новинка</span>
+                      <span>Акция</span>
+                    </div>
+                    <ul class="cards__list-colors">
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 1"> <img
+                            src="./images/offer-colors1.png" alt="Цвет 1"> </a> </li>
+                      <li class="cards__item-color cards__item-color_active"> <a class="cards__item-color-inner"
+                          title="Цвет 2"> <img src="./images/offer-colors2.png" alt="Цвет 2"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 3"> <img
+                            src="./images/offer-colors3.png" alt="Цвет 3"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 4"> <img
+                            src="./images/offer-colors4.png" alt="Цвет 4"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 5"> <img
+                            src="./images/offer-colors5.png" alt="Цвет 5"> </a> </li>
+                    </ul>
+                    <span class="cards__descr">9/1 платье</span>
+                    <span class="cards__price">11 000 руб.</span>
+                    <span class="cards__colors">3 цвета</span>
+                  </div>
+                </div>
+                <div class="swiper-slide offer-item offer-item_hide">
+                  <div class="cards__item">
+                    <a class="cards__image" href="./product-cards.html"><img src="./images/offer-3.png" alt=""></a>
+                    <div class="cards__offer">
+                      <span>ХИТ</span>
+                    </div>
+                    <ul class="cards__list-colors">
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 1"> <img
+                            src="./images/offer-colors1.png" alt="Цвет 1"> </a> </li>
+                      <li class="cards__item-color cards__item-color_active"> <a class="cards__item-color-inner"
+                          title="Цвет 2"> <img src="./images/offer-colors2.png" alt="Цвет 2"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 3"> <img
+                            src="./images/offer-colors3.png" alt="Цвет 3"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 4"> <img
+                            src="./images/offer-colors4.png" alt="Цвет 4"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 5"> <img
+                            src="./images/offer-colors5.png" alt="Цвет 5"> </a> </li>
+                    </ul>
+                    <span class="cards__descr">9/1 платье</span>
+                    <span class="cards__price">11 000 руб.</span>
+                    <span class="cards__colors">3 цвета</span>
+                  </div>
+                </div>
+
+                <div class="swiper-slide swiper-download-btn download-btn">
+                  <button class="cards__button">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M20 27.3L27.3 20L20 12.7L17.9 14.8L21.6 18.5H12.5V21.5H21.6L17.9 25.2L20 27.3ZM20 40C17.2667 40 14.6833 39.475 12.25 38.425C9.81667 37.375 7.69167 35.9417 5.875 34.125C4.05833 32.3083 2.625 30.1833 1.575 27.75C0.525 25.3167 0 22.7333 0 20C0 17.2333 0.525 14.6333 1.575 12.2C2.625 9.76667 4.05833 7.65 5.875 5.85C7.69167 4.05 9.81667 2.625 12.25 1.575C14.6833 0.525 17.2667 0 20 0C22.7667 0 25.3667 0.525 27.8 1.575C30.2333 2.625 32.35 4.05 34.15 5.85C35.95 7.65 37.375 9.76667 38.425 12.2C39.475 14.6333 40 17.2333 40 20C40 22.7333 39.475 25.3167 38.425 27.75C37.375 30.1833 35.95 32.3083 34.15 34.125C32.35 35.9417 30.2333 37.375 27.8 38.425C25.3667 39.475 22.7667 40 20 40ZM20 37C24.7333 37 28.75 35.3417 32.05 32.025C35.35 28.7083 37 24.7 37 20C37 15.2667 35.35 11.25 32.05 7.95C28.75 4.65 24.7333 3 20 3C15.3 3 11.2917 4.65 7.975 7.95C4.65833 11.25 3 15.2667 3 20C3 24.7 4.65833 28.7083 7.975 32.025C11.2917 35.3417 15.3 37 20 37Z"
+                        fill="#E3DDD4"></path>
+                    </svg>
+                    <span class="cards__button-text">Загрузить ещё</span>
+                  </button>
+                </div>
+              </div>
+              <div class="offer-scrollbar"></div>
+              <button class="offer__button download-btn">Показать еще</button>
+            </div>
+            <div class="offer__wrapper swiper_3" data-offer-target="item_3">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide offer-item">
+                  <div class="cards__item">
+                    <a class="cards__image" href="./product-cards.html"><img src="./images/offer-1.png" alt=""></a>
+                    <div class="cards__offer">
+                      <span>ХИТ</span>
+                      <span>Новинка</span>
+                      <span>Акция</span>
+                    </div>
+                    <ul class="cards__list-colors">
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 1"> <img
+                            src="./images/offer-colors1.png" alt="Цвет 1"> </a> </li>
+                      <li class="cards__item-color cards__item-color_active"> <a class="cards__item-color-inner"
+                          title="Цвет 2"> <img src="./images/offer-colors2.png" alt="Цвет 2"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 3"> <img
+                            src="./images/offer-colors3.png" alt="Цвет 3"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 4"> <img
+                            src="./images/offer-colors4.png" alt="Цвет 4"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 5"> <img
+                            src="./images/offer-colors5.png" alt="Цвет 5"> </a> </li>
+                    </ul>
+                    <span class="cards__descr">9/1 платье</span>
+                    <span class="cards__price">11 000 руб.</span>
+                    <span class="cards__colors">3 цвета</span>
+                  </div>
+                </div>
+                <div class="swiper-slide offer-item">
+                  <div class="cards__item">
+                    <a class="cards__image" href="./product-cards.html"><img src="./images/offer-3.png" alt=""></a>
+                    <div class="cards__offer">
+                      <span>ХИТ</span>
+                    </div>
+                    <ul class="cards__list-colors">
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 1"> <img
+                            src="./images/offer-colors1.png" alt="Цвет 1"> </a> </li>
+                      <li class="cards__item-color cards__item-color_active"> <a class="cards__item-color-inner"
+                          title="Цвет 2"> <img src="./images/offer-colors2.png" alt="Цвет 2"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 3"> <img
+                            src="./images/offer-colors3.png" alt="Цвет 3"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 4"> <img
+                            src="./images/offer-colors4.png" alt="Цвет 4"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 5"> <img
+                            src="./images/offer-colors5.png" alt="Цвет 5"> </a> </li>
+                    </ul>
+                    <span class="cards__descr">9/1 платье</span>
+                    <span class="cards__price">11 000 руб.</span>
+                    <span class="cards__colors">3 цвета</span>
+                  </div>
+                </div>
+                <div class="swiper-slide offer-item">
+                  <div class="cards__item">
+                    <a class="cards__image" href="./product-cards.html"><img src="./images/offer-2.png" alt=""></a>
+                    <div class="cards__offer">
+                      <span>ХИТ</span>
+                      <span>Новинка</span>
+                    </div>
+                    <ul class="cards__list-colors">
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 1"> <img
+                            src="./images/offer-colors1.png" alt="Цвет 1"> </a> </li>
+                      <li class="cards__item-color cards__item-color_active"> <a class="cards__item-color-inner"
+                          title="Цвет 2"> <img src="./images/offer-colors2.png" alt="Цвет 2"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 3"> <img
+                            src="./images/offer-colors3.png" alt="Цвет 3"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 4"> <img
+                            src="./images/offer-colors4.png" alt="Цвет 4"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 5"> <img
+                            src="./images/offer-colors5.png" alt="Цвет 5"> </a> </li>
+                    </ul>
+                    <span class="cards__descr">9/1 платье</span>
+                    <span class="cards__price">11 000 руб.</span>
+                    <span class="cards__colors">3 цвета</span>
+                  </div>
+                </div>
+                <div class="swiper-slide offer-item">
+                  <div class="cards__item">
+                    <a class="cards__image" href="./product-cards.html"><img src="./images/offer-5.png" alt=""></a>
+                    <div class="cards__offer">
+                      <span>Акция</span>
+                    </div>
+                    <ul class="cards__list-colors">
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 1"> <img
+                            src="./images/offer-colors1.png" alt="Цвет 1"> </a> </li>
+                      <li class="cards__item-color cards__item-color_active"> <a class="cards__item-color-inner"
+                          title="Цвет 2"> <img src="./images/offer-colors2.png" alt="Цвет 2"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 3"> <img
+                            src="./images/offer-colors3.png" alt="Цвет 3"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 4"> <img
+                            src="./images/offer-colors4.png" alt="Цвет 4"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 5"> <img
+                            src="./images/offer-colors5.png" alt="Цвет 5"> </a> </li>
+                    </ul>
+                    <span class="cards__descr">9/1 платье</span>
+                    <span class="cards__price">11 000 руб.</span>
+                    <span class="cards__colors">3 цвета</span>
+                  </div>
+                </div>
+                <div class="swiper-slide offer-item">
+                  <div class="cards__item">
+                    <a class="cards__image" href="./product-cards.html"><img src="./images/offer-4.png" alt=""></a>
+                    <ul class="cards__list-colors">
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 1"> <img
+                            src="./images/offer-colors1.png" alt="Цвет 1"> </a> </li>
+                      <li class="cards__item-color cards__item-color_active"> <a class="cards__item-color-inner"
+                          title="Цвет 2"> <img src="./images/offer-colors2.png" alt="Цвет 2"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 3"> <img
+                            src="./images/offer-colors3.png" alt="Цвет 3"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 4"> <img
+                            src="./images/offer-colors4.png" alt="Цвет 4"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 5"> <img
+                            src="./images/offer-colors5.png" alt="Цвет 5"> </a> </li>
+                    </ul>
+                    <span class="cards__descr">9/1 платье</span>
+                    <span class="cards__price">11 000 руб.</span>
+                    <span class="cards__colors">3 цвета</span>
+                  </div>
+                </div>
+                <div class="swiper-slide offer-item">
+                  <div class="cards__item">
+                    <a class="cards__image" href="./product-cards.html"><img src="./images/offer-3.png" alt=""></a>
+                    <ul class="cards__list-colors">
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 1"> <img
+                            src="./images/offer-colors1.png" alt="Цвет 1"> </a> </li>
+                      <li class="cards__item-color cards__item-color_active"> <a class="cards__item-color-inner"
+                          title="Цвет 2"> <img src="./images/offer-colors2.png" alt="Цвет 2"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 3"> <img
+                            src="./images/offer-colors3.png" alt="Цвет 3"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 4"> <img
+                            src="./images/offer-colors4.png" alt="Цвет 4"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 5"> <img
+                            src="./images/offer-colors5.png" alt="Цвет 5"> </a> </li>
+                    </ul>
+                    <span class="cards__descr">9/1 платье</span>
+                    <span class="cards__price">11 000 руб.</span>
+                    <span class="cards__colors">3 цвета</span>
+                  </div>
+                </div>
+                <div class="swiper-slide offer-item">
+                  <div class="cards__item">
+                    <a class="cards__image" href="./product-cards.html"><img src="./images/offer-2.png" alt=""></a>
+                    <ul class="cards__list-colors">
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 1"> <img
+                            src="./images/offer-colors1.png" alt="Цвет 1"> </a> </li>
+                      <li class="cards__item-color cards__item-color_active"> <a class="cards__item-color-inner"
+                          title="Цвет 2"> <img src="./images/offer-colors2.png" alt="Цвет 2"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 3"> <img
+                            src="./images/offer-colors3.png" alt="Цвет 3"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 4"> <img
+                            src="./images/offer-colors4.png" alt="Цвет 4"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 5"> <img
+                            src="./images/offer-colors5.png" alt="Цвет 5"> </a> </li>
+                    </ul>
+                    <span class="cards__descr">9/1 платье</span>
+                    <span class="cards__price">11 000 руб.</span>
+                    <span class="cards__colors">3 цвета</span>
+                  </div>
+                </div>
+                <div class="swiper-slide offer-item">
+                  <div class="cards__item">
+                    <a class="cards__image" href="./product-cards.html"><img src="./images/offer-1.png" alt=""></a>
+                    <ul class="cards__list-colors">
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 1"> <img
+                            src="./images/offer-colors1.png" alt="Цвет 1"> </a> </li>
+                      <li class="cards__item-color cards__item-color_active"> <a class="cards__item-color-inner"
+                          title="Цвет 2"> <img src="./images/offer-colors2.png" alt="Цвет 2"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 3"> <img
+                            src="./images/offer-colors3.png" alt="Цвет 3"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 4"> <img
+                            src="./images/offer-colors4.png" alt="Цвет 4"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 5"> <img
+                            src="./images/offer-colors5.png" alt="Цвет 5"> </a> </li>
+                    </ul>
+                    <span class="cards__descr">9/1 платье</span>
+                    <span class="cards__price">11 000 руб.</span>
+                    <span class="cards__colors">3 цвета</span>
+                  </div>
+                </div>
+                <div class="swiper-slide offer-item">
+                  <div class="cards__item">
+                    <a class="cards__image" href="./product-cards.html"><img src="./images/offer-1.png" alt=""></a>
+                    <div class="cards__offer">
+                      <span>ХИТ</span>
+                      <span>Новинка</span>
+                      <span>Акция</span>
+                    </div>
+                    <ul class="cards__list-colors">
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 1"> <img
+                            src="./images/offer-colors1.png" alt="Цвет 1"> </a> </li>
+                      <li class="cards__item-color cards__item-color_active"> <a class="cards__item-color-inner"
+                          title="Цвет 2"> <img src="./images/offer-colors2.png" alt="Цвет 2"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 3"> <img
+                            src="./images/offer-colors3.png" alt="Цвет 3"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 4"> <img
+                            src="./images/offer-colors4.png" alt="Цвет 4"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 5"> <img
+                            src="./images/offer-colors5.png" alt="Цвет 5"> </a> </li>
+                    </ul>
+                    <span class="cards__descr">9/1 платье</span>
+                    <span class="cards__price">11 000 руб.</span>
+                    <span class="cards__colors">3 цвета</span>
+                  </div>
+                </div>
+                <div class="swiper-slide offer-item">
+                  <div class="cards__item">
+                    <a class="cards__image" href="./product-cards.html"><img src="./images/offer-3.png" alt=""></a>
+                    <div class="cards__offer">
+                      <span>ХИТ</span>
+                    </div>
+                    <ul class="cards__list-colors">
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 1"> <img
+                            src="./images/offer-colors1.png" alt="Цвет 1"> </a> </li>
+                      <li class="cards__item-color cards__item-color_active"> <a class="cards__item-color-inner"
+                          title="Цвет 2"> <img src="./images/offer-colors2.png" alt="Цвет 2"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 3"> <img
+                            src="./images/offer-colors3.png" alt="Цвет 3"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 4"> <img
+                            src="./images/offer-colors4.png" alt="Цвет 4"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 5"> <img
+                            src="./images/offer-colors5.png" alt="Цвет 5"> </a> </li>
+                    </ul>
+                    <span class="cards__descr">9/1 платье</span>
+                    <span class="cards__price">11 000 руб.</span>
+                    <span class="cards__colors">3 цвета</span>
+                  </div>
+                </div>
+                <div class="swiper-slide offer-item offer-item_hide">
+                  <div class="cards__item">
+                    <a class="cards__image" href="./product-cards.html"><img src="./images/offer-1.png" alt=""></a>
+                    <div class="cards__offer">
+                      <span>ХИТ</span>
+                      <span>Новинка</span>
+                      <span>Акция</span>
+                    </div>
+                    <ul class="cards__list-colors">
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 1"> <img
+                            src="./images/offer-colors1.png" alt="Цвет 1"> </a> </li>
+                      <li class="cards__item-color cards__item-color_active"> <a class="cards__item-color-inner"
+                          title="Цвет 2"> <img src="./images/offer-colors2.png" alt="Цвет 2"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 3"> <img
+                            src="./images/offer-colors3.png" alt="Цвет 3"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 4"> <img
+                            src="./images/offer-colors4.png" alt="Цвет 4"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 5"> <img
+                            src="./images/offer-colors5.png" alt="Цвет 5"> </a> </li>
+                    </ul>
+                    <span class="cards__descr">9/1 платье</span>
+                    <span class="cards__price">11 000 руб.</span>
+                    <span class="cards__colors">3 цвета</span>
+                  </div>
+                </div>
+                <div class="swiper-slide offer-item offer-item_hide">
+                  <div class="cards__item">
+                    <a class="cards__image" href="./product-cards.html"><img src="./images/offer-3.png" alt=""></a>
+                    <div class="cards__offer">
+                      <span>ХИТ</span>
+                    </div>
+                    <ul class="cards__list-colors">
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 1"> <img
+                            src="./images/offer-colors1.png" alt="Цвет 1"> </a> </li>
+                      <li class="cards__item-color cards__item-color_active"> <a class="cards__item-color-inner"
+                          title="Цвет 2"> <img src="./images/offer-colors2.png" alt="Цвет 2"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 3"> <img
+                            src="./images/offer-colors3.png" alt="Цвет 3"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 4"> <img
+                            src="./images/offer-colors4.png" alt="Цвет 4"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 5"> <img
+                            src="./images/offer-colors5.png" alt="Цвет 5"> </a> </li>
+                    </ul>
+                    <span class="cards__descr">9/1 платье</span>
+                    <span class="cards__price">11 000 руб.</span>
+                    <span class="cards__colors">3 цвета</span>
+                  </div>
+                </div>
+                <div class="swiper-slide offer-item offer-item_hide">
+                  <div class="cards__item">
+                    <a class="cards__image" href="./product-cards.html"><img src="./images/offer-2.png" alt=""></a>
+                    <div class="cards__offer">
+                      <span>ХИТ</span>
+                      <span>Новинка</span>
+                    </div>
+                    <ul class="cards__list-colors">
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 1"> <img
+                            src="./images/offer-colors1.png" alt="Цвет 1"> </a> </li>
+                      <li class="cards__item-color cards__item-color_active"> <a class="cards__item-color-inner"
+                          title="Цвет 2"> <img src="./images/offer-colors2.png" alt="Цвет 2"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 3"> <img
+                            src="./images/offer-colors3.png" alt="Цвет 3"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 4"> <img
+                            src="./images/offer-colors4.png" alt="Цвет 4"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 5"> <img
+                            src="./images/offer-colors5.png" alt="Цвет 5"> </a> </li>
+                    </ul>
+                    <span class="cards__descr">9/1 платье</span>
+                    <span class="cards__price">11 000 руб.</span>
+                    <span class="cards__colors">3 цвета</span>
+                  </div>
+                </div>
+                <div class="swiper-slide offer-item offer-item_hide">
+                  <div class="cards__item">
+                    <a class="cards__image" href="./product-cards.html"><img src="./images/offer-5.png" alt=""></a>
+                    <div class="cards__offer">
+                      <span>Акция</span>
+                    </div>
+                    <ul class="cards__list-colors">
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 1"> <img
+                            src="./images/offer-colors1.png" alt="Цвет 1"> </a> </li>
+                      <li class="cards__item-color cards__item-color_active"> <a class="cards__item-color-inner"
+                          title="Цвет 2"> <img src="./images/offer-colors2.png" alt="Цвет 2"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 3"> <img
+                            src="./images/offer-colors3.png" alt="Цвет 3"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 4"> <img
+                            src="./images/offer-colors4.png" alt="Цвет 4"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 5"> <img
+                            src="./images/offer-colors5.png" alt="Цвет 5"> </a> </li>
+                    </ul>
+                    <span class="cards__descr">9/1 платье</span>
+                    <span class="cards__price">11 000 руб.</span>
+                    <span class="cards__colors">3 цвета</span>
+                  </div>
+                </div>
+                <div class="swiper-slide offer-item offer-item_hide">
+                  <div class="cards__item">
+                    <a class="cards__image" href="./product-cards.html"><img src="./images/offer-4.png" alt=""></a>
+                    <ul class="cards__list-colors">
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 1"> <img
+                            src="./images/offer-colors1.png" alt="Цвет 1"> </a> </li>
+                      <li class="cards__item-color cards__item-color_active"> <a class="cards__item-color-inner"
+                          title="Цвет 2"> <img src="./images/offer-colors2.png" alt="Цвет 2"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 3"> <img
+                            src="./images/offer-colors3.png" alt="Цвет 3"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 4"> <img
+                            src="./images/offer-colors4.png" alt="Цвет 4"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 5"> <img
+                            src="./images/offer-colors5.png" alt="Цвет 5"> </a> </li>
+                    </ul>
+                    <span class="cards__descr">9/1 платье</span>
+                    <span class="cards__price">11 000 руб.</span>
+                    <span class="cards__colors">3 цвета</span>
+                  </div>
+                </div>
+                <div class="swiper-slide offer-item offer-item_hide">
+                  <div class="cards__item">
+                    <a class="cards__image" href="./product-cards.html"><img src="./images/offer-3.png" alt=""></a>
+                    <ul class="cards__list-colors">
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 1"> <img
+                            src="./images/offer-colors1.png" alt="Цвет 1"> </a> </li>
+                      <li class="cards__item-color cards__item-color_active"> <a class="cards__item-color-inner"
+                          title="Цвет 2"> <img src="./images/offer-colors2.png" alt="Цвет 2"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 3"> <img
+                            src="./images/offer-colors3.png" alt="Цвет 3"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 4"> <img
+                            src="./images/offer-colors4.png" alt="Цвет 4"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 5"> <img
+                            src="./images/offer-colors5.png" alt="Цвет 5"> </a> </li>
+                    </ul>
+                    <span class="cards__descr">9/1 платье</span>
+                    <span class="cards__price">11 000 руб.</span>
+                    <span class="cards__colors">3 цвета</span>
+                  </div>
+                </div>
+                <div class="swiper-slide offer-item offer-item_hide">
+                  <div class="cards__item">
+                    <a class="cards__image" href="./product-cards.html"><img src="./images/offer-2.png" alt=""></a>
+                    <ul class="cards__list-colors">
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 1"> <img
+                            src="./images/offer-colors1.png" alt="Цвет 1"> </a> </li>
+                      <li class="cards__item-color cards__item-color_active"> <a class="cards__item-color-inner"
+                          title="Цвет 2"> <img src="./images/offer-colors2.png" alt="Цвет 2"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 3"> <img
+                            src="./images/offer-colors3.png" alt="Цвет 3"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 4"> <img
+                            src="./images/offer-colors4.png" alt="Цвет 4"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 5"> <img
+                            src="./images/offer-colors5.png" alt="Цвет 5"> </a> </li>
+                    </ul>
+                    <span class="cards__descr">9/1 платье</span>
+                    <span class="cards__price">11 000 руб.</span>
+                    <span class="cards__colors">3 цвета</span>
+                  </div>
+                </div>
+                <div class="swiper-slide offer-item offer-item_hide">
+                  <div class="cards__item">
+                    <a class="cards__image" href="./product-cards.html"><img src="./images/offer-1.png" alt=""></a>
+                    <ul class="cards__list-colors">
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 1"> <img
+                            src="./images/offer-colors1.png" alt="Цвет 1"> </a> </li>
+                      <li class="cards__item-color cards__item-color_active"> <a class="cards__item-color-inner"
+                          title="Цвет 2"> <img src="./images/offer-colors2.png" alt="Цвет 2"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 3"> <img
+                            src="./images/offer-colors3.png" alt="Цвет 3"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 4"> <img
+                            src="./images/offer-colors4.png" alt="Цвет 4"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 5"> <img
+                            src="./images/offer-colors5.png" alt="Цвет 5"> </a> </li>
+                    </ul>
+                    <span class="cards__descr">9/1 платье</span>
+                    <span class="cards__price">11 000 руб.</span>
+                    <span class="cards__colors">3 цвета</span>
+                  </div>
+                </div>
+                <div class="swiper-slide offer-item offer-item_hide">
+                  <div class="cards__item">
+                    <a class="cards__image" href="./product-cards.html"><img src="./images/offer-1.png" alt=""></a>
+                    <div class="cards__offer">
+                      <span>ХИТ</span>
+                      <span>Новинка</span>
+                      <span>Акция</span>
+                    </div>
+                    <ul class="cards__list-colors">
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 1"> <img
+                            src="./images/offer-colors1.png" alt="Цвет 1"> </a> </li>
+                      <li class="cards__item-color cards__item-color_active"> <a class="cards__item-color-inner"
+                          title="Цвет 2"> <img src="./images/offer-colors2.png" alt="Цвет 2"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 3"> <img
+                            src="./images/offer-colors3.png" alt="Цвет 3"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 4"> <img
+                            src="./images/offer-colors4.png" alt="Цвет 4"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 5"> <img
+                            src="./images/offer-colors5.png" alt="Цвет 5"> </a> </li>
+                    </ul>
+                    <span class="cards__descr">9/1 платье</span>
+                    <span class="cards__price">11 000 руб.</span>
+                    <span class="cards__colors">3 цвета</span>
+                  </div>
+                </div>
+                <div class="swiper-slide offer-item offer-item_hide">
+                  <div class="cards__item">
+                    <a class="cards__image" href="./product-cards.html"><img src="./images/offer-3.png" alt=""></a>
+                    <div class="cards__offer">
+                      <span>ХИТ</span>
+                    </div>
+                    <ul class="cards__list-colors">
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 1"> <img
+                            src="./images/offer-colors1.png" alt="Цвет 1"> </a> </li>
+                      <li class="cards__item-color cards__item-color_active"> <a class="cards__item-color-inner"
+                          title="Цвет 2"> <img src="./images/offer-colors2.png" alt="Цвет 2"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 3"> <img
+                            src="./images/offer-colors3.png" alt="Цвет 3"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 4"> <img
+                            src="./images/offer-colors4.png" alt="Цвет 4"> </a> </li>
+                      <li class="cards__item-color"> <a class="cards__item-color-inner" title="Цвет 5"> <img
+                            src="./images/offer-colors5.png" alt="Цвет 5"> </a> </li>
+                    </ul>
+                    <span class="cards__descr">9/1 платье</span>
+                    <span class="cards__price">11 000 руб.</span>
+                    <span class="cards__colors">3 цвета</span>
+                  </div>
+                </div>
+
+                <div class="swiper-slide swiper-download-btn download-btn">
+                  <button class="cards__button">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M20 27.3L27.3 20L20 12.7L17.9 14.8L21.6 18.5H12.5V21.5H21.6L17.9 25.2L20 27.3ZM20 40C17.2667 40 14.6833 39.475 12.25 38.425C9.81667 37.375 7.69167 35.9417 5.875 34.125C4.05833 32.3083 2.625 30.1833 1.575 27.75C0.525 25.3167 0 22.7333 0 20C0 17.2333 0.525 14.6333 1.575 12.2C2.625 9.76667 4.05833 7.65 5.875 5.85C7.69167 4.05 9.81667 2.625 12.25 1.575C14.6833 0.525 17.2667 0 20 0C22.7667 0 25.3667 0.525 27.8 1.575C30.2333 2.625 32.35 4.05 34.15 5.85C35.95 7.65 37.375 9.76667 38.425 12.2C39.475 14.6333 40 17.2333 40 20C40 22.7333 39.475 25.3167 38.425 27.75C37.375 30.1833 35.95 32.3083 34.15 34.125C32.35 35.9417 30.2333 37.375 27.8 38.425C25.3667 39.475 22.7667 40 20 40ZM20 37C24.7333 37 28.75 35.3417 32.05 32.025C35.35 28.7083 37 24.7 37 20C37 15.2667 35.35 11.25 32.05 7.95C28.75 4.65 24.7333 3 20 3C15.3 3 11.2917 4.65 7.975 7.95C4.65833 11.25 3 15.2667 3 20C3 24.7 4.65833 28.7083 7.975 32.025C11.2917 35.3417 15.3 37 20 37Z"
+                        fill="#E3DDD4"></path>
+                    </svg>
+                    <span class="cards__button-text">Загрузить ещё</span>
+                  </button>
+                </div>
+              </div>
+              <div class="offer-scrollbar"></div>
+              <button class="offer__button download-btn">Показать еще</button>
+            </div>
           </div>
-          <button class="offer__button" id="offer-button">Показать еще</button>
         </div>
       </section>
       <section class="info">
@@ -1042,8 +2260,9 @@
       </svg>
     </div>
   </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+  <script src="./js/libs/swiper-bundle.min.js"></script>
   <script src="./js/libs//fslightbox.js"></script>
   <script src="./js/libs/simplebar.min.js"></script>
   <script src="./js/libs/locomotive-scroll.min.js"></script>

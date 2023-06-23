@@ -19,6 +19,7 @@ function slider() {
     },
     breakpoints: {
       0: {
+        freeMode: true,
         direction: 'horizontal',
         slidesPerView: 'auto',
         spaceBetween: 10,

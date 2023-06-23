@@ -1,6 +1,6 @@
 import { burger, footerMenu, burgerMenu, catalogLink } from './commponents/menu.js';
 import { loginModal } from './commponents/modal.js';
-import { windowResize, burgerScroll, preloader, isCookie, closeBanner } from './commponents/function.js'
+import { windowResize, burgerScroll, preloader, isCookie } from './commponents/function.js'
 
 document.addEventListener('DOMContentLoaded', () => {
   async function start() {
@@ -38,7 +38,6 @@ loginModal();
 catalogLink();
 burgerScroll();
 windowResize();
-closeBanner();
 
 let pageContainer = document.querySelector("#viewport");
 /* SMOOTH SCROLL */

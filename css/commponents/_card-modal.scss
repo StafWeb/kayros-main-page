@@ -377,15 +377,11 @@
 }
 
 .banner {
-  position: relative;
-  display: none;
+  display: flex;
   align-items: center;
   justify-content: center;
   padding: 16px;
   background: #87b447;
-  &_active {
-    display: flex;
-  }
   p {
     font-size: 16px;
     line-height: 140%;

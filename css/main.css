@@ -3923,6 +3923,7 @@ input[type=search]::-webkit-search-results-decoration {
     width: 100%;
     position: fixed;
     bottom: 0;
+    left: 0;
   }
   .filters__btn {
     display: flex;
@@ -5179,15 +5180,11 @@ input[type=search]::-webkit-search-results-decoration {
 }
 
 .banner {
-  position: relative;
-  display: none;
+  display: flex;
   align-items: center;
   justify-content: center;
   padding: 16px;
   background: #87b447;
-}
-.banner_active {
-  display: flex;
 }
 .banner p {
   font-size: 16px;

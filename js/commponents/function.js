@@ -81,10 +81,5 @@ function isCookie() {
   }
 }
 
-export const closeBanner = () => {
-  const banner = document.querySelector(".banner");
-  const btn = document.querySelector(".banner__close");
-  btn.addEventListener('click', () => banner.classList.remove('banner_active'));
-}
 
 export { burgerScroll, windowResize, preloader, toggleSort, isCookie }

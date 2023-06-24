@@ -5378,6 +5378,7 @@ input[type=search]::-webkit-search-results-decoration {
   font-size: 16px;
   line-height: 140%;
   color: #ffffff;
+  text-align: center;
 }
 .banner__close {
   position: absolute;
@@ -5576,11 +5577,7 @@ input[type=search]::-webkit-search-results-decoration {
     bottom: 15px;
   }
   .banner {
-    justify-content: start;
-    padding: 16px 150px 16px 16px;
-  }
-  .banner__close {
-    right: 16px;
+    padding: 16px;
   }
   .banner .btn-1 {
     display: none;

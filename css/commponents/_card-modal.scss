@@ -386,6 +386,7 @@
     font-size: 16px;
     line-height: 140%;
     color: #ffffff;
+    text-align: center;
   }
 
   &__close {
@@ -592,11 +593,7 @@
     bottom: 15px;
   }
   .banner {
-    justify-content: start;
-    padding: 16px 150px 16px 16px;
-    &__close {
-      right: 16px;
-    }
+    padding: 16px;
     .btn-1 {
       display: none;
     }

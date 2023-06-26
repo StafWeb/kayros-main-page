@@ -178,6 +178,7 @@ mm.add("(min-width: 1551px)", () => {
       offetItem.forEach(item => {
         item.classList.remove('offer-item_hide')
       });
+      ScrollTrigger.refresh();
       btn.classList.add('download-btn_hide');
     })
   });

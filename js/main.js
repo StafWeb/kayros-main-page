@@ -185,7 +185,7 @@ mm.add("(min-width: 1551px)", () => {
 });
 
 mm.add("(max-width: 1550px)", () => {
-  const swiper_1 = new Swiper('.swiper_1', {
+  const swiperOptions = {
     slidesPerView: 'auto',
     spaceBetween: 16,
     freeMode: true,
@@ -196,33 +196,13 @@ mm.add("(max-width: 1550px)", () => {
       hide: false,
       draggable: true,
     },
-  });
-
-  const swiper_2 = new Swiper('.swiper_2', {
-    slidesPerView: 'auto',
-    spaceBetween: 16,
-    freeMode: true,
-    watchSlidesProgress: true,
-
-    scrollbar: {
-      el: '.offer-scrollbar',
-      hide: false,
-      draggable: true,
-    },
-  });
+  };
   
-  const swiper_3 = new Swiper('.swiper_3', {
-    slidesPerView: 'auto',
-    spaceBetween: 16,
-    freeMode: true,
-    watchSlidesProgress: true,
+  const swiper_1 = new Swiper('.swiper_1', {...swiperOptions});
 
-    scrollbar: {
-      el: '.offer-scrollbar',
-      hide: false,
-      draggable: true,
-    },
-  });
+  const swiper_2 = new Swiper('.swiper_2', {...swiperOptions});
+  
+  const swiper_3 = new Swiper('.swiper_3', {...swiperOptions});
 
   downloadBtn.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -247,6 +227,7 @@ tabsBtn.forEach(el => {
       if (!targetActive.classList.contains('current-offer')) {
         tabsHandler(tabsPath);
         gsap.from(".current-offer .offer-item", { opacity: 0, y: 10, duration: 0.6, stagger: 0.1 });
+        ScrollTrigger.refresh();
       }
   })
 });

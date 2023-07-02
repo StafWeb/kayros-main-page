@@ -19,7 +19,7 @@ async function headerAnim() {
   let headAnim = gsap.timeline({ delay: 0.3, ease: "power1.out" });
   headAnim.fromTo(".header__background", { opacity: 0, scale: 1.2 }, { opacity: 1, scale: 1, duration: 1 })
     .from(".header__logo", { opacity: 0, duration: 0.6 })
-    .fromTo(".header__item-img", { opacity: 0, rotate: -90, duration: 0.4 }, { opacity:1, rotate: 0 }, "-=0.4")
+    .fromTo(".header__item-img", { opacity: 0, rotate: -90, duration: 0.4 }, { opacity: 1, rotate: 0 }, "-=0.4")
     .from(".item1", { opacity: 0, duration: 0.5 }, "-=0.4")
     .from(".items", { opacity: 0, x: -5, duration: 0.6 }, "-=0.4")
     .from(".header__end-anim", { opacity: 0, x: -5, duration: 0.6 }, "-=0.5")
@@ -166,7 +166,7 @@ mm.add("(min-width: 1001px)", () => {
   });
   footeTl.from(".footer__contacts", { opacity: 0, y: 10, duration: 0.65 })
     .from(".footer__nav", { opacity: 0, y: 10, duration: 0.65 }, "-=0.65")
-    .fromTo(".footer__bottom-btn", { opacity: 0, y: 10, duration: 0.65 }, {opacity: 1, y: 0},  "+=1")
+    .fromTo(".footer__bottom-btn", { opacity: 0, y: 10, duration: 0.65 }, { opacity: 1, y: 0 }, "+=1")
     .from(".footer__bottom-descr", { opacity: 0, y: 10, duration: 0.65 });
 })
 
@@ -180,6 +180,20 @@ mm.add("(min-width: 1551px)", () => {
       });
       ScrollTrigger.refresh();
       btn.classList.add('download-btn_hide');
+    })
+  });
+
+  tabsBtn.forEach(el => {
+    el.addEventListener('click', (el) => {
+      let tabsPath = el.target.dataset.offerPath;
+      tabsBtn.forEach(el => el.classList.remove('cards__filter-sort_active'));
+      document.querySelector(`[data-offer-path="${tabsPath}"]`).classList.add('cards__filter-sort_active');
+      let targetActive = document.querySelector(`[data-offer-target="${tabsPath}"]`)
+      if (!targetActive.classList.contains('current-offer')) {
+        tabsHandler(tabsPath);
+        gsap.from(".current-offer .offer-item", { opacity: 0, y: 10, duration: 0.6, stagger: 0.1 });
+        ScrollTrigger.refresh();
+      }
     })
   });
 });
@@ -197,12 +211,10 @@ mm.add("(max-width: 1550px)", () => {
       draggable: true,
     },
   };
-  
-  const swiper_1 = new Swiper('.swiper_1', {...swiperOptions});
 
-  const swiper_2 = new Swiper('.swiper_2', {...swiperOptions});
-  
-  const swiper_3 = new Swiper('.swiper_3', {...swiperOptions});
+  const swiper_1 = new Swiper('.swiper_1', { ...swiperOptions });
+  const swiper_2 = new Swiper('.swiper_2', { ...swiperOptions });
+  const swiper_3 = new Swiper('.swiper_3', { ...swiperOptions });
 
   downloadBtn.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -216,20 +228,22 @@ mm.add("(max-width: 1550px)", () => {
       swiper_3.update();
     })
   });
-});
 
-tabsBtn.forEach(el => {
-  el.addEventListener('click', (el) => {
-    let tabsPath = el.target.dataset.offerPath;
-    tabsBtn.forEach(el => el.classList.remove('cards__filter-sort_active'));
-    document.querySelector(`[data-offer-path="${tabsPath}"]`).classList.add('cards__filter-sort_active');
-    let targetActive = document.querySelector(`[data-offer-target="${tabsPath}"]`)
+  tabsBtn.forEach(el => {
+    el.addEventListener('click', (el) => {
+      let tabsPath = el.target.dataset.offerPath;
+      tabsBtn.forEach(el => el.classList.remove('cards__filter-sort_active'));
+      document.querySelector(`[data-offer-path="${tabsPath}"]`).classList.add('cards__filter-sort_active');
+      let targetActive = document.querySelector(`[data-offer-target="${tabsPath}"]`)
       if (!targetActive.classList.contains('current-offer')) {
         tabsHandler(tabsPath);
+        swiper_1.slideTo(0);
+        swiper_2.slideTo(0);
+        swiper_3.slideTo(0);
         gsap.from(".current-offer .offer-item", { opacity: 0, y: 10, duration: 0.6, stagger: 0.1 });
-        ScrollTrigger.refresh();
       }
-  })
+    })
+  });
 });
 
 ScrollTrigger.addEventListener("refresh", () => scroller.update());
